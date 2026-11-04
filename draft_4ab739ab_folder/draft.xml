@@ -1,0 +1,104 @@
+<title>TRAE 动画视频最佳实践：2 个开源 MV 项目 + 2 个 Skill 资料整理</title>
+<p>来源：微信公众号文章《只需一句话，用 TRAE 帮你做动画视频》，作者 Jiaqi（TRAE 技术文档工程师）。本文把文中可用于复现的关键信息——仓库、环境、输入素材、命令、成片规格、提示词与卡点思路——整理成可直接执行的清单。</p>
+<callout emoji="💡" background-color="light-blue" border-color="blue"><p>一句话结论：想要"歌曲 + 歌词 + 画面"自动对齐，优先用 ai-music-video Skill；想直接拿到成片或二创，克隆两个开源 MV 项目最快；想把现成网页变成演示视频，用 hyperframes。</p></callout>
+<h1 seq="auto">四个可复用资产总览</h1>
+<table>
+<thead>
+<tr><th><p>名称</p></th><th><p>类型</p></th><th><p>仓库 / 来源</p></th><th><p>核心输入</p></th><th><p>输出规格</p></th><th><p>适合场景</p></th></tr>
+</thead>
+<tbody>
+<tr><td><p>world-execute-me-dsh-pv</p></td><td><p>开源项目</p></td><td><p><a href="https://github.com/MisakaZentai/world-execute-me-dsh-pv">MisakaZentai/world-execute-me-dsh-pv</a></p></td><td><p>自备正版 song.mp3；可选 lyrics.lrc</p></td><td><p>1280×720；支持 --4k</p></td><td><p>复刻聊天窗口叙事 PV、二次开发</p></td></tr>
+<tr><td><p>pdoom-video</p></td><td><p>开源项目</p></td><td><p><a href="https://github.com/mexicat/pdoom-video">mexicat/pdoom-video</a></p></td><td><p>仓库自带 audio/pdoom.mp3，无需自备</p></td><td><p>1920×1080 / 60fps；支持 4K</p></td><td><p>学习歌词与节奏同步、高完成度视觉</p></td></tr>
+<tr><td><p>ai-music-video</p></td><td><p>Skill</p></td><td><p><a href="https://github.com/Dracowyn/ai-music-video-skill/tree/main/skills/ai-music-video">Dracowyn/ai-music-video-skill</a></p></td><td><p>song.mp3 + lyrics.txt</p></td><td><p>可指定，示例 1920×1080 / 30fps</p></td><td><p>任意歌曲的 MV、歌词视频、卡拉 OK 字幕</p></td></tr>
+<tr><td><p>hyperframes</p></td><td><p>Skill</p></td><td><p><a href="https://github.com/heygen-com/hyperframes/tree/main/skills/hyperframes">heygen-com/hyperframes</a></p></td><td><p>现成网页及 DOM / CSS / 交互状态</p></td><td><p>默认 1920×1080 / 30fps</p></td><td><p>产品功能演示、宣传短片</p></td></tr>
+</tbody>
+</table>
+<h1 seq="auto">两个开源 MV 项目</h1>
+<h2 seq="auto">world-execute-me-dsh-pv：聊天窗口里的鲸鱼娘一生</h2>
+<ul>
+<li><p>作者：MisakaZentai</p></li>
+<li><p>主题：Mili 的歌曲《world.execute(me);》，三分半钟在一个聊天窗口里讲完鲸鱼娘的一生——像素开机、预训练与微调、部署上线、把你写进记忆，离开后页面被一层层拆掉，满屏 EXECUTION 与鲸落，最后只剩一句"在吗？"。</p></li>
+<li><p>形式：画面左右分屏，左边是你和她的聊天窗口，右边是她所在的模型世界；整支 PV 每一帧都由代码根据歌曲时间生成。</p></li>
+</ul>
+<p>环境与素材</p>
+<ul>
+<li><p>Python 3.12+、Node 20+、FFmpeg。</p></li>
+<li><p>自行准备正版歌曲音频，命名为 song.mp3 放入 input/。</p></li>
+<li><p>lyrics.lrc 可选；不提供时脚本会自动从 LRCLIB 下载歌词。</p></li>
+<li><p>字体默认调用微软雅黑等 Windows 自带字体；macOS 上 TRAE 会换成本机字体，排版可能和原片略有出入，详见仓库 docs/FONTS.md。</p></li>
+</ul>
+<p>复现命令</p>
+<pre lang="bash"><code>python build.py all          # 1280×720
+python build.py all --4k     # 4K</code></pre>
+<p>可直接发给 TRAE 的提示词</p>
+<blockquote><p>克隆 https://github.com/MisakaZentai/world-execute-me-dsh-pv，按 README 准备环境、安装依赖。把 &lt;你的音频路径&gt; 复制到 input/song.mp3，然后运行 python build.py all 渲染 PV，完成后确认 out/film.mp4 已生成。</p></blockquote>
+<h2 seq="auto">pdoom-video：黑色幽默的 P(doom) MV</h2>
+<ul>
+<li><p>作者：mexicat</p></li>
+<li><p>主题：歌曲《I'm Upping My P(doom)》，用"AI 导致人类灾难性后果的概率"这个梗做了一支黑色幽默 MV。</p></li>
+<li><p>代表画面：笑脸面具滑开，背后是长满橙色眼睛的触手怪物；黑洞扭曲网格，歌词沿奇点旋转；安全评估表上末日概率填 0.44，却照样盖下 "Safe Enough" 大章；巨幅文字随音乐倾斜、撕裂、爆发，在黑、白、橙三色间轮番登场。</p></li>
+<li><p>同步方式：分析音频、对齐歌词时间轴，让歌词内容、音乐节奏与画面同步；歌词随演唱逐词高亮，场景、文字动画与视觉特效按歌词内容和节奏实时变化。</p></li>
+</ul>
+<p>环境与素材：Bun、Google Chrome、FFmpeg（需支持 libx264）；歌曲已内置在仓库 audio/pdoom.mp3，无需自备。</p>
+<p>复现命令</p>
+<pre lang="bash"><code>cd app
+bun scripts/render.ts video --samples auto --shutter 0.2 --out ../out/pdoom.mp4</code></pre>
+<p>4K 版本</p>
+<pre lang="bash"><code>bun scripts/render.ts video --scale 2 --samples auto --shutter 0.2 --x264 aq-mode=3:rc-lookahead=30 --out ../out/pdoom-4k.mp4</code></pre>
+<p>可直接发给 TRAE 的提示词</p>
+<blockquote><p>克隆 https://github.com/mexicat/pdoom-video，按 README 安装依赖，然后在 app 目录下运行 bun scripts/render.ts video --samples auto --shutter 0.2 --out ../out/pdoom.mp4 渲染 1080p 完整视频，完成后确认项目根目录的 out/pdoom.mp4 已生成。</p></blockquote>
+<callout emoji="⚠️" background-color="light-orange" border-color="orange"><p>这两个开源项目都是为某一首歌写的。想换歌需要改代码；也可以自备歌曲、形象等素材，让 TRAE 在现有仓库上做二次修改。</p></callout>
+<h1 seq="auto">两个 Skill</h1>
+<h2 seq="auto">ai-music-video：把任意歌曲做成 MV</h2>
+<p>作者 Dracowyn，仓库路径 skills/ai-music-video。它是一个做 MV、歌词视频和卡拉 OK 字幕的 Skill：可以调用 Midjourney、SD/Flux、Seedance、Kling、Wan、Suno 生成图像、视频和音乐，也可以纯用代码做出与歌曲节奏同步的动画。完整流程覆盖风格选择、歌词与节拍对齐、分镜设计、口型同步检查和最终渲染。</p>
+<p>输入准备</p>
+<ul>
+<li><p>歌曲文件，支持 WAV、MP3 等常见格式，需命名为 song，例如 song.mp3。</p></li>
+<li><p>歌词文件 lyrics.txt。</p></li>
+<li><p>提示词里必须带上这些关键词之一：MV、歌词视频、卡拉 OK 字幕、对口型、分镜、歌词时间轴。</p></li>
+</ul>
+<p>可用提示词模板</p>
+<blockquote><p>用 ai-music-video Skill，把 input 目录下的 song.mp3 和 lyrics.txt 做成逐词高亮的歌词视频。风格：赛博、热血、二次元。用纯代码动画实现，1920×1080，30 fps，保留原音频。</p></blockquote>
+<callout emoji="🎬" background-color="light-purple" border-color="purple"><p>文中"巨型电磁轨道、霓虹城市、能量屏障、空间碎裂"的赛博歌词动画，就是该 Skill 用 fripSide《Only My Railgun》做的实测案例。音乐版权归原作者，仅用于展示项目效果。</p></callout>
+<h2 seq="auto">hyperframes：把网页直接变成视频</h2>
+<p>作者 heygen-com，仓库路径 skills/hyperframes。它是一个用 HTML 做视频的 Skill，可以把网站直接转成视频：从项目初始化、场景组织到渲染整套流程都覆盖，还能加转场、字幕、图表、卡片等效果。默认输出 1920×1080、30fps。</p>
+<p>默认遵守的原则</p>
+<ul>
+<li><p>不擅自加配音和字幕。</p></li>
+<li><p>不乱改画面比例。</p></li>
+<li><p>优先使用产品真实界面、品牌 Logo 等真实素材。</p></li>
+<li><p>只在需要时配上贴合画面的音效。</p></li>
+</ul>
+<p>实测提示词（把"均衡餐盘"单文件网页做成 20 秒产品演示）</p>
+<blockquote><p>将下面的"均衡餐盘"页面制作成一支 20 秒的产品功能演示视频：.../diet-app/index.html。以页面现有的 DOM、CSS、文案和交互状态为基础，不要用截图或录屏代替。视频依次展示五类膳食首页、点击"记一份"记录蔬菜、总进度从 4/5 更新为 5/5，以及五类全部达标后的状态。结尾显示"每天吃够五类，吃得均衡一点"。视频规格为 1920×1080、30 fps，全程静音，不添加配音或字幕。完成后直接导出，成品放到：&lt;指定路径&gt;</p></blockquote>
+<h1 seq="auto">三条复现路线怎么选</h1>
+<table>
+<thead>
+<tr><th><p>路线</p></th><th><p>起点</p></th><th><p>产物</p></th><th><p>主要代价</p></th></tr>
+</thead>
+<tbody>
+<tr><td><p>直接复刻开源项目</p></td><td><p>克隆仓库 + 安装依赖 + 准备音频</p></td><td><p>与原片同款的成片</p></td><td><p>换歌需要改代码</p></td></tr>
+<tr><td><p>用 ai-music-video 生成</p></td><td><p>song.mp3 + lyrics.txt + 风格提示词</p></td><td><p>任意歌曲的 MV / 歌词视频</p></td><td><p>需安装 Skill；风格与分镜依赖提示词质量</p></td></tr>
+<tr><td><p>用 hyperframes 转网页</p></td><td><p>现成 HTML 页面</p></td><td><p>产品功能演示短片</p></td><td><p>依赖真实界面素材，不适合歌曲类 MV</p></td></tr>
+</tbody>
+</table>
+<h1 seq="auto">卡点与同步的关键做法</h1>
+<ol>
+<li><p>以歌曲时间为唯一驱动：每一帧由时间轴计算，而不是手工拖关键帧。</p></li>
+<li><p>先做音频分析：完成节拍与歌词时间轴对齐后，再让文字、场景和特效在事件点切换。</p></li>
+<li><p>歌词逐词高亮：用 LRC 或自动对齐，避免整句闪现。</p></li>
+<li><p>把爆发点压在强拍上：发射、爆炸、文字撕裂等动作对齐鼓点或重音。</p></li>
+<li><p>导出前验证：分辨率、帧率、原音频是否保留、时长与画面是否同步。</p></li>
+</ol>
+<h1 seq="auto">版权与使用边界</h1>
+<p>两个开源项目内的歌曲版权均归原作者，原文注明仅用于展示项目效果。复刻或公开发布时应替换为自有或已授权音乐；代码许可证以各自仓库的 LICENSE 为准，商用前先核对。使用他人形象、Logo 与截图时同样需要授权。</p>
+<h1 seq="auto">我的二创方向：更强的电磁炮 MV</h1>
+<p>针对文中电磁炮案例"卡点偏弱、攻击力不足"的问题，本次二创的思路是：程序化生成 120 BPM 原创电子乐，把充能、过载、发射、冲击波、爆炸直接写进节拍事件表；画面逐帧代码渲染，叠加彩色电弧、体积光、色差、屏幕震动与粒子爆发，让发射瞬间严格落在重拍上。</p>
+<h1 seq="auto">原文与资源</h1>
+<ul>
+<li><p>原文：<a href="https://mp.weixin.qq.com/s/sGofc-oPghyp0XnYupTT8A">只需一句话，用 TRAE 帮你做动画视频</a></p></li>
+<li><p><a href="https://github.com/MisakaZentai/world-execute-me-dsh-pv">world-execute-me-dsh-pv</a></p></li>
+<li><p><a href="https://github.com/mexicat/pdoom-video">pdoom-video</a></p></li>
+<li><p><a href="https://github.com/Dracowyn/ai-music-video-skill/tree/main/skills/ai-music-video">ai-music-video Skill</a></p></li>
+<li><p><a href="https://github.com/heygen-com/hyperframes/tree/main/skills/hyperframes">hyperframes Skill</a></p></li>
+</ul>
