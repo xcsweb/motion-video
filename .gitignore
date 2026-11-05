@@ -12,3 +12,10 @@ frames/
 previews/
 out/
 music.wav
+v4/frames/
+v4/previews/
+v4/assets/web/
+v4/assets/audio/
+v4/out_*.mp4
+v4/check_*.png
+v4/check/

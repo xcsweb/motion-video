@@ -9,6 +9,7 @@
 | v4（最终版） | 85 秒 | 39 个镜头：22 张 AI 插画 + 11 段网页特效（10 个页面）+ 6 发炮击 | [GitHub Release](https://github.com/xcsweb/motion-video/releases/tag/railgun-v1) |
 | v3 | 85 秒 | 22 个镜头，12 发炮击，4 种转场 | [GitHub Release](https://github.com/xcsweb/motion-video/releases/tag/railgun-v1) |
 | v4 540p 预览 | 85 秒 | 960×540 | [media/railgun_omr_v4_preview.mp4](media/railgun_omr_v4_preview.mp4) |
+| v4 复刻版（重写源码） | 85 秒 | 用 `v4/` 重新生成素材并渲染 | [v4-rebuild Release](https://github.com/xcsweb/motion-video/releases/tag/v4-rebuild) |
 
 飞书归档：[MV 主文档](https://my.feishu.cn/docx/XUoLdqWzDoKvdOxCAkXcCg0rnHf)
 
@@ -24,13 +25,18 @@
 │   └── douyin_copy.md                 # 抖音发布文案（最终版）
 ├── media/
 │   └── railgun_omr_v4_preview.mp4     # 540p 预览
+├── v4/                        # v4 复刻版源码（可运行）
+│   ├── config/                # 39 镜头时间轴 + 歌词
+│   ├── pages/                 # 10 个 HTML 特效页
+│   ├── build/                 # 截帧 / 合成 / 编码
+│   └── assets/ai/             # 16 张 AI 插画
 ├── events.json                 # audio.py 生成的事件表（镜头/发射/段落）
 └── README.md
 ```
 
 v3 / v4 的完整成片体积较大（129–207 MB），放在 GitHub Release，不进入 Git 历史。
 
-> 说明：v3 / v4 的渲染工程源码在本次归档时未能恢复，仓库保留的是 v1 完整源码；v4 的结构、实现思路与可复用代码片段已整理进 `docs/`。
+> 说明：原始 v3 / v4 工程源码未能恢复；`v4/` 是按相同原理重写的可运行版本（重新生成插画、重写 10 个网页页、重新对齐歌词），见 [v4/README.md](v4/README.md)。
 
 ## 快速开始（v1，24 秒版本）
 

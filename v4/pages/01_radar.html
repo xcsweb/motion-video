@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>01 / TACTICAL RADAR</title>
+<link rel="stylesheet" href="base.css">
+<style>
+  canvas { position: absolute; inset: 0; }
+  .roster { position: absolute; right: 72px; top: 168px; width: 430px; }
+  .roster .row { display: flex; justify-content: space-between; padding: 13px 0; border-bottom: 1px solid rgba(0,225,255,.13); font-family: "Fira Code", monospace; font-size: 17px; color: var(--dim); }
+  .roster .row b { color: var(--ink); font-weight: 500; }
+  .roster .row.hot b { color: var(--gold); }
+  .logs { position: absolute; left: 72px; bottom: 62px; width: 760px; font-family: "Fira Code", monospace; font-size: 15px; line-height: 1.9; color: #6f8fa8; }
+  .logs .ok { color: var(--cyan); }
+  .logs .warn { color: var(--gold); }
+  .mode { position: absolute; left: 72px; top: 168px; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="grid"></div>
+  <canvas id="cv" width="1920" height="1080"></canvas>
+
+  <div class="hud-top">
+    <div>
+      <div class="hud-title">ACADEMY CITY</div>
+      <div class="hud-sub label">TACTICAL SURVEILLANCE / SECTOR 07</div>
+    </div>
+    <div class="hud-right">
+      <div class="label" id="clock">00:00:00</div>
+      <div class="hud-sub"><span class="tag">SCAN 62°</span></div>
+    </div>
+  </div>
+
+  <div class="mode"><span class="tag">MODE / ACTIVE</span></div>
+  <div class="roster" id="roster"></div>
+  <div class="logs" id="logs"></div>
+</div>
+
+<script src="app.js"></script>
+<script>
+const DUR = 2.36;
+const cv = document.getElementById('cv');
+const ctx = cv.getContext('2d');
+const CX = 820, CY = 566, R = 332;
+
+const targets = [
+  { a: -0.62, r: .46, id: 'TGT-01', name: 'UNKNOWN', tag: 'HOSTILE' },
+  { a: 0.52, r: .78, id: 'TGT-02', name: 'VEHICLE', tag: 'TRACK' },
+  { a: 1.85, r: .58, id: 'TGT-03', name: 'UNKNOWN', tag: 'HOSTILE' },
+  { a: 2.42, r: .30, id: 'TGT-04', name: 'DRONE', tag: 'TRACK' },
+  { a: -1.42, r: .86, id: 'TGT-05', name: 'BARRIER', tag: 'WARN' },
+];
+
+function polar(a, r) { return [CX + Math.cos(a) * R * r, CY + Math.sin(a) * R * r]; }
+
+function drawGrid(t) {
+  ctx.save();
+  ctx.translate(CX, CY);
+  ctx.strokeStyle = 'rgba(0,225,255,.20)';
+  ctx.lineWidth = 1;
+  for (let r = 1; r <= 4; r++) {
+    ctx.beginPath(); ctx.arc(0, 0, R * r / 4, 0, Math.PI * 2); ctx.stroke();
+  }
+  for (let a = 0; a < 360; a += 15) {
+    const rad = a * Math.PI / 180;
+    ctx.strokeStyle = a % 45 === 0 ? 'rgba(0,225,255,.26)' : 'rgba(0,225,255,.09)';
+    ctx.beginPath();
+    ctx.moveTo(Math.cos(rad) * R * .06, Math.sin(rad) * R * .06);
+    ctx.lineTo(Math.cos(rad) * R, Math.sin(rad) * R);
+    ctx.stroke();
+  }
+  // 扫描扇面：62°，越靠近前沿越亮
+  const sweep = -Math.PI / 2 + t * Math.PI * 2 / 1.18;
+  ctx.save();
+  ctx.rotate(sweep);
+  const span = 62 * Math.PI / 180;
+  for (let i = 0; i < 62; i++) {
+    const a = -i * (span / 62);
+    ctx.fillStyle = `rgba(0,225,255,${0.26 * Math.pow(1 - i / 62, 2.4)})`;
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
+    ctx.arc(0, 0, R, a - span / 62, a + .001);
+    ctx.fill();
+  }
+  ctx.strokeStyle = 'rgba(180,255,255,.85)';
+  ctx.lineWidth = 2;
+  ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(R, 0); ctx.stroke();
+  ctx.restore();
+  ctx.restore();
+}
+
+function drawTargets(t) {
+  const sweep = -Math.PI / 2 + t * Math.PI * 2 / 1.18;
+  targets.forEach((tg, i) => {
+    const [x, y] = polar(tg.a, tg.r);
+    const diff = Math.abs(((sweep - tg.a + Math.PI * 3) % (Math.PI * 2)) - Math.PI);
+    const lock = Math.max(0, 1 - diff / .5);
+    const hot = lock > .25;
+    ctx.strokeStyle = hot ? `rgba(255,190,70,${.35 + .65 * lock})` : 'rgba(0,225,255,.28)';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.arc(x, y, 7 + 5 * lock, 0, Math.PI * 2); ctx.stroke();
+    if (lock > .25) {
+      const s = 34 + 8 * (1 - lock);
+      const c = tg.tag === 'HOSTILE' ? 'rgba(255,46,209,' : 'rgba(0,225,255,';
+      ctx.strokeStyle = c + (.45 + .5 * lock) + ')';
+      ctx.lineWidth = 2;
+      [[x - s, y - s, 18, 0], [x + s, y - s, -18, 0], [x - s, y + s, 18, 0], [x + s, y + s, -18, 0]].forEach(([px, py, dx]) => {
+        ctx.beginPath(); ctx.moveTo(px, py); ctx.lineTo(px + dx, py); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(px, py); ctx.lineTo(px, py + (py < y ? 18 : -18)); ctx.stroke();
+      });
+      ctx.font = '15px "Fira Code"';
+      ctx.fillStyle = tg.tag === 'HOSTILE' ? 'rgb(255,180,225)' : 'rgb(160,245,255)';
+      const left = x > CX;
+      ctx.textAlign = left ? 'right' : 'left';
+      ctx.fillText(`${tg.id} · ${tg.tag}`, left ? x - s - 8 : x + s + 8, y + 5);
+    }
+  });
+}
+
+function drawPulse(t) {
+  const p = (t % 1.18) / 1.18;
+  if (p < .5) {
+    ctx.strokeStyle = `rgba(0,225,255,${.5 * (1 - p * 2)})`;
+    ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.arc(CX, CY, R * p * 2, 0, Math.PI * 2); ctx.stroke();
+  }
+}
+
+const roster = document.getElementById('roster');
+const logs = document.getElementById('logs');
+const rows = targets.map(tg => {
+  const d = (tg.r * 1.42).toFixed(2);
+  return `<div class="row${tg.tag === 'HOSTILE' ? ' hot' : ''}"><span>${tg.id}</span><b>${tg.name}</b><span>${d} km</span></div>`;
+}).join('');
+
+function ui(t) {
+  document.getElementById('clock').textContent = RG.fmt(t + 7.4);
+  roster.innerHTML = rows;
+  roster.style.opacity = RG.smooth(t / .25);
+  roster.style.transform = `translateX(${24 * (1 - RG.smooth(t / .3))}px)`;
+  const lines = [
+    '[00:07:04] <span class="ok">SCAN START</span> · SECTOR 07',
+    '[00:07:09] <span class="ok">TGT-01 LOCKED</span> · 0.46 km',
+    '[00:07:13] <span class="warn">WARNING</span> · UNKNOWN SIGNATURE',
+    '[00:07:17] <span class="ok">TGT-04 TRACKING</span>',
+    '[00:07:21] <span class="warn">BARRIER DETECTED</span> · TGT-05',
+  ];
+  const n = Math.min(lines.length, Math.floor(t * 6) + 1);
+  logs.innerHTML = lines.slice(0, n).join('<br>');
+}
+
+function frame(t) {
+  ctx.clearRect(0, 0, 1920, 1080);
+  drawGrid(t); drawPulse(t); drawTargets(t); ui(t);
+}
+__boot(frame, DUR);
+</script>
+</body>
+</html>
