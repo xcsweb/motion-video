@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>08 / PROFILE</title>
+<link rel="stylesheet" href="base.css">
+<style>
+  .portrait { position: absolute; left: 96px; top: 168px; width: 720px; height: 800px; overflow: hidden; border: 1px solid rgba(0,225,255,.30); }
+  .portrait img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.25) brightness(.85); }
+  .duo { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,90,160,.55), rgba(255,46,209,.32)); mix-blend-mode: color; }
+  .scan { position: absolute; inset: 0; background: repeating-linear-gradient(0deg, rgba(0,225,255,.10) 0 1px, transparent 1px 4px); }
+  .bracket { position: absolute; width: 46px; height: 46px; border: 2px solid rgba(0,225,255,.75); }
+  .info { position: absolute; left: 900px; top: 196px; width: 900px; }
+  .name { font-family: "Lato", sans-serif; font-weight: 900; font-size: 92px; letter-spacing: .10em; line-height: 1; }
+  .jp { font-size: 32px; letter-spacing: .28em; color: var(--cyan); margin-top: 18px; }
+  .desc { margin-top: 32px; font-size: 21px; line-height: 1.9; color: rgba(220,240,250,.72); max-width: 780px; }
+  .stats { position: absolute; left: 900px; top: 700px; width: 860px; font-family: "Fira Code"; font-size: 16px; }
+  .stats .row { display: flex; align-items: center; gap: 18px; padding: 9px 0; border-bottom: 1px solid rgba(0,225,255,.12); color: var(--dim); }
+  .stats .row span:first-child { width: 120px; }
+  .stats .meter { flex: 1; height: 7px; background: rgba(0,225,255,.08); }
+  .stats .meter i { display: block; height: 100%; background: linear-gradient(90deg, var(--cyan), var(--mag)); width: 0; }
+  .stats b { width: 74px; text-align: right; color: var(--ink); font-weight: 400; }
+  .level { position: absolute; right: 92px; top: 168px; font-family: "Lato", sans-serif; font-weight: 900; font-size: 62px; line-height: 1; color: transparent; -webkit-text-stroke: 2px rgba(255,190,70,.85); transform: rotate(-6deg); opacity: .9; }
+  .level small { display: block; font-family: "Fira Code"; font-size: 13px; letter-spacing: .3em; -webkit-text-stroke: 0; color: var(--gold); text-align: right; margin-bottom: 6px; }
+  .thumbs { position: absolute; left: 96px; top: 996px; display: flex; gap: 10px; }
+  .thumb { width: 108px; height: 54px; border: 1px solid rgba(0,225,255,.25); background: #0a1622; overflow: hidden; filter: grayscale(1); }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; opacity: .7; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="grid" style="opacity:.35"></div>
+  <div class="hud-top">
+    <div><div class="hud-title">PERSONNEL FILE</div><div class="hud-sub label">ACADEMY CITY / LEVEL 5 REGISTRY</div></div>
+    <div class="hud-right"><div class="label" id="clock">00:00:00</div><div class="hud-sub"><span class="tag">CONFIDENTIAL</span></div></div>
+  </div>
+
+  <div class="portrait" id="portrait">
+    <img src="../assets/ai/10_face_closeup.jpg" alt="">
+    <div class="duo"></div><div class="scan"></div>
+    <div class="bracket" style="left:14px;top:14px;border-right:0;border-bottom:0"></div>
+    <div class="bracket" style="right:14px;top:14px;border-left:0;border-bottom:0"></div>
+    <div class="bracket" style="left:14px;bottom:14px;border-right:0;border-top:0"></div>
+    <div class="bracket" style="right:14px;bottom:14px;border-left:0;border-top:0"></div>
+  </div>
+
+  <div class="info">
+    <div class="name">MISAKA</div>
+    <div class="jp">御 坂 美 琴</div>
+    <div class="desc">常盤台中学二年生。学園都市第三位「超電磁砲」。可操控十亿伏特电流，以硬币为弹丸射出超电磁炮。</div>
+  </div>
+
+  <div class="stats" id="stats"></div>
+  <div class="level"><small>ABILITY RANK</small>LEVEL 5</div>
+
+  <div class="thumbs">
+    <div class="thumb"><img src="../assets/ai/06_rooftop.jpg"></div>
+    <div class="thumb"><img src="../assets/ai/09_alley.jpg"></div>
+    <div class="thumb"><img src="../assets/ai/11_coin.jpg"></div>
+    <div class="thumb"><img src="../assets/ai/15_school_gate.jpg"></div>
+  </div>
+</div>
+<script src="app.js"></script>
+<script>
+const DUR = 1.22;
+const rows = [['POWER', 98], ['SPEED', 92], ['RANGE', 84], ['CONTROL', 96], ['STAMINA', 71]];
+document.getElementById('stats').innerHTML = rows.map(([k, v]) =>
+  `<div class="row"><span>${k}</span><div class="meter"><i data-v="${v}"></i></div><b>${v}%</b></div>`).join('');
+
+function frame(t) {
+  document.getElementById('clock').textContent = RG.fmt(t + 3.6);
+  const p = RG.smooth(t / .9);
+  document.getElementById('portrait').style.opacity = RG.smooth(t / .35);
+  document.getElementById('portrait').style.transform = `scale(${1.04 - .04 * p}) translateY(${8 * (1 - p)}px)`;
+  document.querySelectorAll('.meter i').forEach((el, i) => {
+    const v = Number(el.dataset.v);
+    const q = RG.smooth((t - .12 - i * .07) / .55);
+    el.style.width = (v * q) + '%';
+  });
+  document.querySelector('.level').style.opacity = RG.smooth((t - .3) / .4);
+}
+__boot(frame, DUR);
+</script>
+</body>
+</html>

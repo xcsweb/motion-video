@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>05 / SIGNAL LOST</title>
+<link rel="stylesheet" href="base.css">
+<style>
+  #stage { background: #030508; }
+  .noise { position: absolute; inset: 0; opacity: .18; background-image:
+    repeating-linear-gradient(0deg, rgba(255,255,255,.12) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(90deg, rgba(0,225,255,.06) 0 2px, transparent 2px 6px); }
+  .center { position: absolute; inset: 0; display: grid; place-items: center; }
+  .word { position: relative; font-family: "Lato", sans-serif; font-weight: 900; font-size: 190px; letter-spacing: .04em; line-height: .9; color: #fff; }
+  .layers { position: absolute; inset: 0; }
+  .layers span { position: absolute; left: 0; right: 0; text-align: center; font-family: "Lato", sans-serif; font-weight: 900; font-size: 190px; letter-spacing: .04em; color: #fff; }
+  .sub { position: absolute; left: 50%; top: 62%; transform: translateX(-50%); font-family: "Fira Code"; font-size: 19px; letter-spacing: .34em; color: var(--cyan); }
+  .code { position: absolute; right: 132px; top: 268px; font-family: "Fira Code"; font-size: 15px; line-height: 1.9; color: rgba(0,225,255,.55); }
+  .side { position: absolute; left: 112px; bottom: 112px; font-family: "Fira Code"; font-size: 14px; line-height: 2; color: rgba(0,225,255,.45); }
+  .flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+  .tear { position: absolute; left: 0; right: 0; height: 6px; background: rgba(255,46,209,.55); mix-blend-mode: screen; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="grid" style="opacity:.35"></div>
+  <div class="noise"></div>
+  <div class="center">
+    <div class="layers" id="layers"></div>
+    <div class="word" id="word" style="visibility:hidden">SIGNAL LOST</div>
+  </div>
+  <div class="sub" id="sub">CONNECTION INTERRUPTED / RE-ACQUIRE</div>
+  <div class="code" id="code"></div>
+  <div class="side" id="side"></div>
+  <div class="flash" id="flash"></div>
+  <div id="tears"></div>
+</div>
+<script src="app.js"></script>
+<script>
+const DUR = 3.44;
+const word = document.getElementById('word');
+const layers = document.getElementById('layers');
+function frame(t) {
+  const base = 'SIGNAL LOST';
+  let html = '', tears = '';
+  const n = 7;
+  for (let i = 0; i < n; i++) {
+    const y = (i + .5) * 12.5;
+    const dx = (RG.hash(i * 13 + Math.floor(t * 12)) - .5) * (70 + 100 * Math.max(0, .4 - t));
+    const op = .35 + .55 * RG.hash(i * 7.3 + t * 3);
+    html += `<span style="clip-path:inset(${y}% 0 ${100 - y - 12.5}% 0);transform:translateX(${dx}px);opacity:${op};color:${i % 3 === 0 ? '#00e1ff' : i % 3 === 1 ? '#ff2ed1' : '#ffffff'};mix-blend-mode:screen">${base}</span>`;
+  }
+  layers.innerHTML = html;
+
+  const wob = RG.hash(Math.floor(t * 9)) * 22;
+  word.style.transform = `translate(${wob}px, ${(RG.hash(Math.floor(t * 7) + 3) - .5) * 12}px) scaleY(${1 + .03 * (RG.hash(Math.floor(t * 11)) - .5)})`;
+
+  for (let i = 0; i < 4; i++) {
+    const yy = RG.hash(i * 9 + Math.floor(t * 14)) * 100;
+    const hh = 2 + RG.hash(i + Math.floor(t * 6)) * 14;
+    tears += `<div class="tear" style="top:${yy}%;height:${hh}px;opacity:${.25 + .5 * RG.hash(i + 3)};background:${i % 2 ? 'rgba(0,225,255,.45)' : 'rgba(255,46,209,.55)'}"></div>`;
+  }
+  document.getElementById('tears').innerHTML = tears;
+
+  document.getElementById('flash').style.opacity = Math.max(0, .5 * Math.exp(-t * 8)) + (t > 2.2 ? .18 * RG.hash(Math.floor(t * 20)) : 0);
+  document.getElementById('sub').style.opacity = .35 + .5 * RG.hash(Math.floor(t * 10));
+  document.getElementById('code').innerHTML = [
+    'ERR / 0x7F · FRAME SYNC LOST',
+    `T=${(t).toFixed(3)}  F=${String(1800 + Math.floor(t * 30)).padStart(4, '0')}`,
+    'REBUILDING KEYFRAME ...',
+    `PACKET LOSS ${(1.2 + RG.hash(Math.floor(t * 5)) * 9).toFixed(1)}%`,
+  ].join('<br>');
+  document.getElementById('side').innerHTML = [
+    '[CH-01] ——— 00.0 dB',
+    '[CH-02] ——— 00.0 dB',
+    '[CH-03] ——— 00.0 dB',
+    'AUTO REACQUIRE: ON',
+  ].join('<br>');
+}
+__boot(frame, DUR);
+</script>
+</body>
+</html>

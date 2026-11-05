@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>09 / ABILITY MATRIX</title>
+<link rel="stylesheet" href="base.css">
+<style>
+  canvas { position: absolute; inset: 0; }
+  .kpi { position: absolute; right: 92px; top: 180px; text-align: right; }
+  .kpi b { font-family: "Lato"; font-weight: 900; font-size: 86px; line-height: 1; }
+  .kpi span { font-family: "Fira Code"; font-size: 14px; letter-spacing: .24em; color: var(--dim); }
+  .legend { position: absolute; left: 88px; bottom: 66px; font-family: "Fira Code"; font-size: 14px; line-height: 2; color: var(--dim); }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="grid" style="opacity:.3"></div>
+  <canvas id="cv" width="1920" height="1080"></canvas>
+  <div class="hud-top">
+    <div><div class="hud-title">ABILITY MATRIX</div><div class="hud-sub label">POWER / SPEED / RANGE / CONTROL</div></div>
+    <div class="hud-right"><div class="label" id="clock">00:00:00</div><div class="hud-sub"><span class="tag">SAMPLING 60Hz</span></div></div>
+  </div>
+  <div class="kpi"><b id="val">00.0</b><br><span>GW OUTPUT</span></div>
+  <div class="legend" id="legend"></div>
+</div>
+<script src="app.js"></script>
+<script>
+const DUR = 1.72;
+const cv = document.getElementById('cv'), ctx = cv.getContext('2d');
+const CX = 620, CY = 580, R = 270, N = 6;
+const labels = ['POWER', 'SPEED', 'RANGE', 'CONTROL', 'PRECISION', 'STAMINA'];
+const base = [.92, .84, .78, .88, .95, .62];
+
+function radar(t) {
+  ctx.save();
+  ctx.translate(CX, CY);
+  ctx.strokeStyle = 'rgba(0,225,255,.16)';
+  for (let r = 1; r <= 4; r++) {
+    ctx.beginPath();
+    for (let i = 0; i <= N; i++) {
+      const a = -Math.PI / 2 + i * Math.PI * 2 / N;
+      const x = Math.cos(a) * R * r / 4, y = Math.sin(a) * R * r / 4;
+      i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+    }
+    ctx.stroke();
+  }
+  for (let i = 0; i < N; i++) {
+    const a = -Math.PI / 2 + i * Math.PI * 2 / N;
+    ctx.strokeStyle = 'rgba(0,225,255,.22)';
+    ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(Math.cos(a) * R, Math.sin(a) * R); ctx.stroke();
+    ctx.fillStyle = 'rgba(170,225,240,.85)';
+    ctx.font = '15px "Fira Code"';
+    ctx.textAlign = 'center';
+    ctx.fillText(labels[i], Math.cos(a) * (R + 42), Math.sin(a) * (R + 42) + 6);
+  }
+  ctx.beginPath();
+  for (let i = 0; i <= N; i++) {
+    const k = i % N;
+    const a = -Math.PI / 2 + k * Math.PI * 2 / N;
+    const v = base[k] * (.92 + .10 * Math.sin(t * 6 + k * 1.2)) * RG.smooth((t - k * .06) / .8);
+    const x = Math.cos(a) * R * v, y = Math.sin(a) * R * v;
+    i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+  }
+  ctx.fillStyle = 'rgba(255,46,209,.16)';
+  ctx.fill();
+  ctx.strokeStyle = 'rgba(255,140,235,.85)';
+  ctx.lineWidth = 2;
+  ctx.stroke();
+  ctx.restore();
+}
+
+function oscope(t) {
+  ctx.strokeStyle = 'rgba(0,225,255,.18)';
+  ctx.strokeRect(1070, 280, 740, 250);
+  ctx.beginPath();
+  for (let x = 0; x < 740; x++) {
+    const v = Math.sin(x / 22 + t * 14) * .5 + Math.sin(x / 7 - t * 9) * .22 + Math.sin(x / 3.3) * .05;
+    const y = 405 + v * 78;
+    x ? ctx.lineTo(1070 + x, y) : ctx.moveTo(1070 + x, y);
+  }
+  ctx.strokeStyle = 'rgba(120,255,235,.9)';
+  ctx.lineWidth = 1.5;
+  ctx.stroke();
+  ctx.fillStyle = 'rgba(140,200,220,.6)';
+  ctx.font = '13px "Fira Code"';
+  ctx.fillText('CH-01 / RAIL CURRENT', 1092, 310);
+}
+
+function spectrum(t) {
+  const x0 = 1070, y0 = 880, w = 740, h = 210;
+  ctx.fillStyle = 'rgba(0,225,255,.06)';
+  ctx.fillRect(x0, y0 - h, w, h);
+  const bars = 48;
+  for (let i = 0; i < bars; i++) {
+    const v = .12 + .8 * Math.abs(Math.sin(i * .42 + t * 8) * Math.cos(i * .13 - t * 3));
+    const bw = w / bars - 3;
+    const bh = v * h;
+    const g = ctx.createLinearGradient(0, y0 - bh, 0, y0);
+    g.addColorStop(0, 'rgba(255,46,209,.9)');
+    g.addColorStop(1, 'rgba(0,225,255,.35)');
+    ctx.fillStyle = g;
+    ctx.fillRect(x0 + i * (w / bars) + 1, y0 - bh, bw, bh);
+  }
+  ctx.fillStyle = 'rgba(140,200,220,.55)';
+  ctx.font = '13px "Fira Code"';
+  ctx.fillText('SPECTRUM / 20 Hz — 20 kHz', x0 + 22, y0 - h - 14);
+}
+
+document.getElementById('legend').innerHTML =
+`POWER 98 · SPEED 92 · RANGE 84<br>CONTROL 96 · PRECISION 95 · STAMINA 71`;
+
+function frame(t) {
+  ctx.clearRect(0, 0, 1920, 1080);
+  radar(t); oscope(t); spectrum(t);
+  document.getElementById('clock').textContent = RG.fmt(t + 43.3);
+  const v = 61 + 27 * Math.abs(Math.sin(t * 4.2)) + RG.hash(Math.floor(t * 20)) * .9;
+  document.getElementById('val').textContent = v.toFixed(1);
+}
+__boot(frame, DUR);
+</script>
+</body>
+</html>

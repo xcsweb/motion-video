@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>07 / CIRCUIT</title>
+<link rel="stylesheet" href="base.css">
+<style>
+  canvas { position: absolute; inset: 0; }
+  .dump { position: absolute; right: 76px; bottom: 64px; width: 520px; font-family: "Fira Code"; font-size: 14px; line-height: 1.85; color: rgba(0,225,255,.55); white-space: pre; }
+  .side { position: absolute; left: 76px; bottom: 64px; font-family: "Fira Code"; font-size: 14px; line-height: 1.9; color: rgba(0,225,255,.42); }
+  .title { position: absolute; left: 76px; top: 168px; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="grid" style="opacity:.25"></div>
+  <canvas id="cv" width="1920" height="1080"></canvas>
+  <div class="hud-top">
+    <div><div class="hud-title">CONTROL BOARD</div><div class="hud-sub label">PCB / RAIL CURRENT DRIVER</div></div>
+    <div class="hud-right"><div class="label" id="clock">00:00:00</div><div class="hud-sub"><span class="tag">TX ACTIVE</span></div></div>
+  </div>
+  <div class="title"><span class="tag">MB-07 · REV C</span></div>
+  <div class="dump" id="dump"></div>
+  <div class="side" id="side"></div>
+</div>
+<script src="app.js"></script>
+<script>
+const DUR = 2.05;
+const cv = document.getElementById('cv'), ctx = cv.getContext('2d');
+
+const chips = [
+  { x: 760, y: 380, w: 210, h: 150, name: 'PWR-DRV' },
+  { x: 1240, y: 300, w: 170, h: 120, name: 'MCU-07' },
+  { x: 1090, y: 640, w: 150, h: 110, name: 'COIL' },
+];
+
+const paths = [
+  { pts: [[300, 300], [420, 300], [470, 360], [700, 360]], sp: .9 },
+  { pts: [[520, 840], [720, 840], [780, 760], [900, 760], [940, 660]], sp: 1.2 },
+  { pts: [[1180, 460], [1100, 520], [980, 520], [950, 560]], sp: .7 },
+  { pts: [[1410, 420], [1500, 500], [1640, 500], [1690, 560]], sp: 1.0 },
+  { pts: [[1240, 740], [1180, 800], [1000, 800], [960, 760]], sp: .8 },
+  { pts: [[260, 620], [430, 620], [500, 690], [560, 690]], sp: 1.1 },
+];
+
+function seg(path, u) {
+  const segs = [];
+  let total = 0;
+  for (let i = 0; i < path.pts.length - 1; i++) {
+    const [x0, y0] = path.pts[i], [x1, y1] = path.pts[i + 1];
+    const d = Math.hypot(x1 - x0, y1 - y0);
+    segs.push({ x0, y0, x1, y1, d }); total += d;
+  }
+  let target = u * total;
+  for (const s of segs) {
+    if (target <= s.d) {
+      const k = target / s.d;
+      return [s.x0 + (s.x1 - s.x0) * k, s.y0 + (s.y1 - s.y0) * k];
+    }
+    target -= s.d;
+  }
+  return path.pts[path.pts.length - 1];
+}
+
+function board() {
+  ctx.save();
+  ctx.fillStyle = 'rgba(5,12,18,.55)';
+  ctx.strokeStyle = 'rgba(0,225,255,.14)';
+  ctx.lineWidth = 1;
+  ctx.fillRect(120, 250, 1680, 700);
+  ctx.strokeRect(120, 250, 1680, 700);
+  // 焊盘网格
+  ctx.fillStyle = 'rgba(0,225,255,.10)';
+  for (let x = 180; x < 1760; x += 40)
+    for (let y = 300; y < 920; y += 40) {
+      ctx.beginPath(); ctx.arc(x, y, 1.2, 0, Math.PI * 2); ctx.fill();
+    }
+  ctx.restore();
+}
+
+function trace(t) {
+  paths.forEach((p, i) => {
+    ctx.strokeStyle = 'rgba(0,225,255,.30)';
+    ctx.lineWidth = 4;
+    ctx.beginPath();
+    p.pts.forEach(([x, y], k) => k ? ctx.lineTo(x, y) : ctx.moveTo(x, y));
+    ctx.stroke();
+    ctx.strokeStyle = 'rgba(140,255,220,.85)';
+    ctx.lineWidth = 1.2;
+    ctx.beginPath();
+    p.pts.forEach(([x, y], k) => k ? ctx.lineTo(x, y) : ctx.moveTo(x, y));
+    ctx.stroke();
+
+    const u = (t * p.sp + i * .23) % 1;
+    const [x, y] = seg(p, u);
+    const g = ctx.createRadialGradient(x, y, 0, x, y, 18);
+    g.addColorStop(0, 'rgba(200,255,240,.95)');
+    g.addColorStop(.4, 'rgba(0,225,255,.45)');
+    g.addColorStop(1, 'transparent');
+    ctx.fillStyle = g;
+    ctx.beginPath(); ctx.arc(x, y, 18, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = '#eaffff';
+    ctx.beginPath(); ctx.arc(x, y, 3, 0, Math.PI * 2); ctx.fill();
+  });
+}
+
+function chipsDraw(t) {
+  chips.forEach((c, i) => {
+    ctx.fillStyle = i === 0 ? 'rgba(10,26,40,.95)' : 'rgba(8,20,30,.95)';
+    ctx.strokeStyle = 'rgba(0,225,255,.55)';
+    ctx.lineWidth = 1.5;
+    ctx.fillRect(c.x, c.y, c.w, c.h);
+    ctx.strokeRect(c.x, c.y, c.w, c.h);
+    // pins
+    ctx.fillStyle = 'rgba(0,225,255,.35)';
+    for (let k = 0; k < 7; k++) {
+      const px = c.x + 18 + k * (c.w - 36) / 6;
+      ctx.fillRect(px, c.y - 8, 8, 8);
+      ctx.fillRect(px, c.y + c.h, 8, 8);
+    }
+    ctx.strokeStyle = 'rgba(0,225,255,.28)';
+    ctx.beginPath(); ctx.moveTo(c.x + 24, c.y + 30); ctx.lineTo(c.x + c.w - 24, c.y + 30); ctx.stroke();
+    ctx.fillStyle = 'rgba(160,240,255,.85)';
+    ctx.font = '14px "Fira Code"';
+    ctx.fillText(c.name, c.x + 18, c.y + 58);
+    ctx.fillStyle = 'rgba(0,225,255,.55)';
+    ctx.font = '11px "Fira Code"';
+    ctx.fillText('U' + (i + 1) + '  SN 0x7F' + (i + 2), c.x + 18, c.y + 78);
+  });
+}
+
+document.getElementById('dump').textContent =
+`0000  4F 4E 4C 59 4D 59 52 41 49 4C 47 55 4E 21 00
+0010  43 4F 49 4C 2D 30 31 20 43 48 41 52 47 45 00
+0020  54 47 54 2D 30 31 20 4C 4F 43 4B 45 44 00 00
+0030  56 4F 4C 54 20 33 32 30 30 20 4D 2F 53 00 00
+0040  46 49 52 45 20 53 45 51 55 45 4E 43 45 20 4F
+0050  4B 20 2D 2D 20 53 54 41 4E 44 42 59 00 00 00`;
+document.getElementById('side').innerHTML =
+`RAIL CURRENT 1.84 MA<br>BUS VOLTAGE 12.0 V<br>CAP TEMP 38.4 C<br>LOOP STATUS / LOCKED<br>CLOCK 143 BPM · 30 FPS`;
+
+function frame(t) {
+  ctx.clearRect(0, 0, 1920, 1080);
+  board(); trace(t); chipsDraw(t);
+  document.getElementById('clock').textContent = RG.fmt(t + 14.2);
+}
+__boot(frame, DUR);
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>06 / MESSAGE</title>
+<link rel="stylesheet" href="base.css">
+<style>
+  .phone { position: absolute; left: 168px; top: 122px; width: 620px; height: 880px; border-radius: 54px; border: 2px solid rgba(0,225,255,.35); background: linear-gradient(180deg, #0a1420, #05090f); box-shadow: 0 30px 80px rgba(0,0,0,.6), 0 0 60px rgba(0,225,255,.12) inset; overflow: hidden; }
+  .notch { position: absolute; left: 50%; top: 18px; width: 190px; height: 26px; margin-left: -95px; border-radius: 20px; background: #02040a; }
+  .ph-head { position: absolute; left: 0; right: 0; top: 62px; padding: 0 34px 18px; border-bottom: 1px solid rgba(0,225,255,.16); display: flex; justify-content: space-between; font-family: "Fira Code"; font-size: 15px; color: var(--dim); }
+  .chat { position: absolute; left: 26px; right: 26px; top: 136px; bottom: 34px; display: flex; flex-direction: column; gap: 14px; }
+  .msg { max-width: 78%; padding: 13px 17px; border-radius: 16px; font-size: 21px; line-height: 1.45; opacity: 0; transform: translateY(10px); }
+  .them { align-self: flex-start; background: rgba(0,225,255,.10); border: 1px solid rgba(0,225,255,.28); border-bottom-left-radius: 4px; }
+  .me { align-self: flex-end; background: rgba(255,46,209,.12); border: 1px solid rgba(255,46,209,.34); border-bottom-right-radius: 4px; color: #ffd9f4; }
+  .typing { align-self: flex-start; color: var(--dim); font-family: "Fira Code"; font-size: 15px; letter-spacing: .18em; opacity: 0; }
+  .big { position: absolute; right: 82px; top: 340px; max-width: 1030px; font-weight: 900; font-size: 150px; line-height: 1.06; white-space: nowrap; text-align: right; color: #fff; text-shadow: 10px 10px 0 rgba(255,46,209,.35), -8px -6px 0 rgba(0,225,255,.3); }
+  .big small { display: block; font-family: "Fira Code"; font-size: 19px; letter-spacing: .3em; color: var(--cyan); text-shadow: none; margin-top: 22px; }
+  .meta { position: absolute; right: 104px; bottom: 118px; font-family: "Fira Code"; font-size: 15px; line-height: 2; letter-spacing: .16em; color: var(--dim); text-align: right; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="grid" style="opacity:.5"></div>
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="ph-head"><span>MISAKA · 08:41</span><span>3 UNREAD</span></div>
+    <div class="chat" id="chat">
+      <div class="msg them">もう、どこにいるの？</div>
+      <div class="msg them">みんな待ってるよ</div>
+      <div class="msg me">ごめん、ちょっと寄り道</div>
+      <div class="msg them">また何か企んでるでしょ</div>
+      <div class="msg me">うん。ちょっとだけ。</div>
+      <div class="msg them">ほどほどにね</div>
+      <div class="typing" id="typing">TYPING ...</div>
+    </div>
+  </div>
+
+  <div class="big" id="big">い、行くよ。<small>READY / SET / GO</small></div>
+  <div class="meta">INBOX 06 / 12<br>DELIVERED 08:41:07<br>ENCRYPTED · AES-256</div>
+</div>
+<script src="app.js"></script>
+<script>
+const DUR = 2.78;
+const msgs = [...document.querySelectorAll('.msg')];
+function frame(t) {
+  msgs.forEach((el, i) => {
+    const d = .18 + i * .34;
+    const q = RG.smooth((t - d) / .16);
+    el.style.opacity = q;
+    el.style.transform = `translateY(${10 * (1 - q)}px)`;
+  });
+  const q = RG.smooth((t - 2.2) / .2);
+  document.getElementById('typing').style.opacity = q;
+  document.getElementById('big').style.opacity = RG.smooth((t - .55) / .4);
+  document.getElementById('big').style.transform = `translateX(${40 * (1 - RG.smooth((t - .55) / .5))}px)`;
+}
+__boot(frame, DUR);
+</script>
+</body>
+</html>

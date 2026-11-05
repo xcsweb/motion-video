@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>03 / POSTER</title>
+<link rel="stylesheet" href="base.css">
+<style>
+  .paper { position: absolute; inset: 0; background:
+    radial-gradient(900px 600px at 78% 30%, rgba(255,46,209,.18), transparent 60%),
+    radial-gradient(700px 500px at 18% 80%, rgba(0,225,255,.14), transparent 62%); }
+  .halftone { position: absolute; inset: 0;
+    background-image: radial-gradient(rgba(0,225,255,.30) 1.2px, transparent 1.3px);
+    background-size: 22px 22px;
+    mask-image: radial-gradient(ellipse at 35% 55%, #000 20%, transparent 68%);
+    opacity: .5; }
+  .huge { position: absolute; left: 96px; top: 198px; font-family: "Noto Sans CJK JP", sans-serif; font-weight: 900; font-size: 300px; line-height: 1; letter-spacing: .01em; color: #fff; text-shadow: 12px 12px 0 rgba(255,46,209,.55), -10px -8px 0 rgba(0,225,255,.45); }
+  .huge small { display: block; font-size: 34px; letter-spacing: .5em; color: var(--cyan); text-shadow: none; margin-top: 28px; }
+  .line2 { position: absolute; left: 104px; top: 640px; font-size: 76px; font-weight: 900; letter-spacing: .08em; color: rgba(234,246,255,.92); }
+  .line3 { position: absolute; left: 104px; top: 742px; font-size: 76px; font-weight: 900; letter-spacing: .08em; color: rgba(234,246,255,.45); }
+  .vertical { position: absolute; right: 150px; top: 186px; writing-mode: vertical-rl; font-family: "Lato", sans-serif; font-weight: 900; font-size: 52px; letter-spacing: .26em; color: transparent; -webkit-text-stroke: 1px rgba(0,225,255,.8); }
+  .stamp { position: absolute; right: 292px; bottom: 186px; width: 170px; height: 170px; border: 3px solid rgba(255,190,70,.85); border-radius: 50%; display: grid; place-items: center; transform: rotate(9deg); }
+  .stamp div { text-align: center; font-family: "Fira Code", monospace; color: var(--gold); letter-spacing: .14em; }
+  .stamp b { display: block; font-size: 44px; }
+  .bar { position: absolute; left: 104px; bottom: 112px; height: 3px; background: linear-gradient(90deg, var(--cyan), var(--mag)); }
+  .foot { position: absolute; left: 104px; bottom: 74px; font-family: "Fira Code", monospace; font-size: 15px; letter-spacing: .24em; color: var(--dim); }
+  .mk { position: absolute; right: 118px; top: 92px; font-family: "Fira Code", monospace; font-size: 13px; letter-spacing: .3em; color: var(--dim); }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="paper"></div><div class="halftone"></div><div class="grid" style="opacity:.35"></div>
+
+  <div class="huge" id="huge">放て！<small>ONLY MY RAILGUN</small></div>
+  <div class="line2" id="l2">心に刻んだ夢を</div>
+  <div class="line3" id="l3">未来さえ置きに来て</div>
+  <div class="vertical">超電磁砲</div>
+
+  <div class="stamp"><div><b>143</b>BPM</div></div>
+  <div class="bar" id="bar" style="width: 0"></div>
+  <div class="foot">ACADEMY CITY · SECTOR 07 · 2026</div>
+  <div class="mk">POSTER / A2 SIZE</div>
+</div>
+<script src="app.js"></script>
+<script>
+const DUR = 2.5;
+const huge = document.getElementById('huge');
+function frame(t) {
+  const p = RG.smooth(t / .55);
+  const q = RG.smooth((t - .35) / .5);
+  huge.style.transform = `translateY(${60 * (1 - p)}px) scale(${.92 + .08 * p})`;
+  huge.style.opacity = p;
+  document.getElementById('l2').style.opacity = q;
+  document.getElementById('l2').style.transform = `translateX(${90 * (1 - q)}px)`;
+  const r = RG.smooth((t - .72) / .5);
+  document.getElementById('l3').style.opacity = r * .8;
+  document.getElementById('l3').style.transform = `translateX(${90 * (1 - r)}px)`;
+  document.getElementById('bar').style.width = (920 * RG.easeOut(t / DUR)) + 'px';
+  document.querySelector('.stamp').style.transform = `rotate(${9 - 14 * (1 - RG.smooth(t / .8))}deg) scale(${.7 + .3 * RG.smooth(t / .6)})`;
+}
+__boot(frame, DUR);
+</script>
+</body>
+</html>
