@@ -30,6 +30,8 @@
 
 v3 / v4 的完整成片体积较大（129–207 MB），放在 GitHub Release，不进入 Git 历史。
 
+> 说明：v3 / v4 的渲染工程源码在本次归档时未能恢复，仓库保留的是 v1 完整源码；v4 的结构、实现思路与可复用代码片段已整理进 `docs/`。
+
 ## 快速开始（v1，24 秒版本）
 
 依赖：Python 3、ffmpeg，以及三套字体（Lato Black、Fira Code Bold、Noto Sans CJK Black，路径写在脚本顶部）。
