@@ -12,6 +12,13 @@ AI 音乐视频实验仓库：用「AI 插画 + 程序化合成 + 排版页面�
 - 制作复盘：[docs/production_notes.md](jianghu/docs/production_notes.md)
 - 成片与文案：[飞书文档](https://my.feishu.cn/docx/Qi2QduAyooNQQJxWXWbcKnBBnuf)
 
+### 我不甘心 · 为什么不是我（2026）
+
+15 秒程序员焦虑短片。AI 8.2 秒写完他三天的代码，凌晨三点只剩一句“那我呢？”。人物一致性用黑卫衣剪影贯穿：开场只露一次脸，之后全部是过肩、背影和手部特写。
+
+- 工程与文案：[ainight/](ainight/)、[交付说明](ainight/docs/delivery.md)
+- 成片与文案：[飞书文档](https://my.feishu.cn/docx/CB8Od61CWofYkix8c0fcadt1nLf)
+
 ### 电磁炮 / railgun（2024）
 
 早期程序化电磁炮 MV 实验，保留在 `railgun/`。
