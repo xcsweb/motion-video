@@ -706,15 +706,7 @@ def render_room(s, t):
 
 
 def render_reflect(s, t):
-    im = image_shot(s, t)
-
-    def dyn(dr):
-        local = t - s["t0"]
-        a = int(40 * smoothstep(0.2, 0.6, local))
-        # faint scan band sweeping across the screen side
-        x = int(W * 0.45 + (W * 0.35) * smoothstep(0.0, 1.0, local))
-        dr.line((x, 0, x - 60, H), fill=(140, 235, 255, a), width=2)
-    return overlay(im, dyn)
+    return image_shot(s, t)
 
 
 # ---- dawn / final
