@@ -45,17 +45,17 @@
   - [ ] SubTask 7.3: 实现保留完整音频的低分辨率代理 MP4。
   - [ ] SubTask 7.4: 对同一工程比较预览与正式渲染代表帧，验证字幕和跨轨合成一致。
 
-- [ ] Task 8: 实现排错命令和 Vue TUI 终端诊断仪表盘，使失败可定位而不是只返回“渲染失败”。
-  - [ ] SubTask 8.1: 实现 `doctor`、`logs`、`diagnose`、`--verbose`、`--debug` 和脱敏诊断目录。
-  - [ ] SubTask 8.2: 使用 Vue TUI 稳定 CLI runtime 和基础组件实现 jobs、进度、诊断文件位置、预览文件位置及修订差异视图，并处理 TTY、resize 和终端清理。
-  - [ ] SubTask 8.3: 将实验性 `TLogView`/append-only log store 隔离在有界日志适配器中，保留普通 `logs --follow` 后备路径；取消/重试统一调用核心任务服务。
-  - [ ] SubTask 8.4: 用 headless terminal 测试验证 TUI/CLI 状态一致、键盘操作和日志洪峰；验证非 TTY 明确报错、CI 无 TUI 全功能可用、退出观察界面不取消 detached job。
+- [x] Task 8: 实现排错命令和 Vue TUI 终端诊断仪表盘，使失败可定位而不是只返回“渲染失败”。
+  - [x] SubTask 8.1: 实现 `doctor`、`logs`、`diagnose`、`--verbose`、`--debug` 和脱敏诊断目录。
+  - [x] SubTask 8.2: 使用 Vue TUI 稳定 CLI runtime 和基础组件实现 jobs、进度、诊断文件位置、预览文件位置及修订差异视图，并处理 TTY、resize 和终端清理。
+  - [x] SubTask 8.3: 将实验性 `TLogView`/append-only log store 隔离在有界日志适配器中，保留普通 `logs --follow` 后备路径；取消/重试统一调用核心任务服务。
+  - [x] SubTask 8.4: 用 headless terminal 测试验证 TUI/CLI 状态一致、键盘操作和日志洪峰；验证非 TTY 明确报错、CI 无 TUI 全功能可用、退出观察界面不取消 detached job。
 
-- [ ] Task 9: 提供从空工程到成品的完整示例和离线端到端测试。
-  - [ ] SubTask 9.1: 新增使用 `media/railgun_omr_v4_preview.mp4` 的示例工程及可重放 CLI 操作序列。
-  - [ ] SubTask 9.2: 串联素材登记/分析、结构化编辑、多轨字幕与音频、历史、异步任务、三类预览和渲染。
-  - [ ] SubTask 9.3: 用 ffprobe、完整解码、代表帧、音频、job 记录和工程差异验证结果，不只检查退出码。
-  - [ ] SubTask 9.4: 注入取消、超时、崩溃、日志洪峰和锁冲突，验证诊断、覆盖保护、撤销/重做及无网络运行。
+- [x] Task 9: 提供从空工程到成品的完整示例和离线端到端测试。
+  - [x] SubTask 9.1: 新增使用 `media/railgun_omr_v4_preview.mp4` 的示例工程及可重放 CLI 操作序列。
+  - [x] SubTask 9.2: 串联素材登记/分析、结构化编辑、多轨字幕与音频、历史、异步任务、三类预览和渲染。
+  - [x] SubTask 9.3: 用 ffprobe、完整解码、代表帧、音频、job 记录和工程差异验证结果，不只检查退出码。
+  - [x] SubTask 9.4: 注入取消、超时、崩溃、日志洪峰和锁冲突，验证诊断、覆盖保护、撤销/重做及无网络运行。
 
 - [ ] Task 10: 按清单系统验收并检查旧工程回归。
   - [ ] SubTask 10.1: 逐项验证 `checklist.md`；失败项新增修复任务并由子代理修复后复验。

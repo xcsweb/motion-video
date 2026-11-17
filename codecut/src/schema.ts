@@ -478,6 +478,47 @@ Object.assign(RenderPlanSchema, {
   $id: 'https://codecut.local/schemas/render-plan-v1.json',
 });
 
+export const DoctorCheckSchema = object({
+  name: Type.String({ minLength: 1 }),
+  status: Type.Union([Type.Literal('ok'), Type.Literal('warning'), Type.Literal('error')]),
+  message: Type.String({ minLength: 1 }),
+  path: Type.Optional(Type.String({ minLength: 1 })),
+  details: Type.Optional(Type.Unknown()),
+});
+
+export const DoctorResultSchema = object({
+  ok: Type.Boolean(),
+  projectDirectory: Type.String({ minLength: 1 }),
+  checks: Type.Array(DoctorCheckSchema),
+});
+
+export const JobLogEntrySchema = object({
+  jobId: IdentifierSchema,
+  stage: Type.String({ minLength: 1 }),
+  level: Type.Union([Type.Literal('debug'), Type.Literal('info'), Type.Literal('warn'), Type.Literal('error')]),
+  stream: Type.Union([Type.Literal('stdout'), Type.Literal('stderr'), Type.Literal('progress')]),
+  line: Type.String(),
+  at: Type.Optional(Type.String({ format: 'date-time' })),
+});
+
+export const LogQuerySchema = object({
+  jobId: IdentifierSchema,
+  stage: Type.Optional(Type.String({ minLength: 1 })),
+  level: Type.Optional(Type.Union([Type.Literal('debug'), Type.Literal('info'), Type.Literal('warn'), Type.Literal('error')])),
+  stream: Type.Optional(Type.Union([Type.Literal('stdout'), Type.Literal('stderr'), Type.Literal('progress')])),
+  tail: Type.Optional(Type.Integer({ minimum: 0, default: 100 })),
+  follow: Type.Optional(Type.Boolean({ default: false })),
+});
+
+export const DiagnoseResultSchema = object({
+  jobId: IdentifierSchema,
+  directory: Type.String({ minLength: 1 }),
+  files: Type.Array(Type.String({ minLength: 1 })),
+  redacted: Type.Literal(true),
+  sourceMediaIncluded: Type.Literal(false),
+  environmentVariablesIncluded: Type.Literal(false),
+});
+
 export const ErrorPayloadSchema = object({
   code: Type.String({ minLength: 1 }),
   message: Type.String({ minLength: 1 }),

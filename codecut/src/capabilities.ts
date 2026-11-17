@@ -90,13 +90,14 @@ export const CAPABILITIES = {
       'render',
       'preview frame/sheet/proxy',
       'jobs list/show/wait/cancel/retry',
+      'doctor',
+      'logs',
+      'diagnose',
+      'ui',
       'schema',
       'capabilities',
     ],
-    planned: [
-      'doctor/logs/diagnose',
-      'ui',
-    ],
+    planned: [],
   },
   commandDetails: {
     'asset add': {
@@ -187,9 +188,36 @@ export const CAPABILITIES = {
       options: ['--project PATH', '--dry-run', '--json'],
       output: ['diff', 'revision on real commits', 'timeline', 'project'],
     },
+    'doctor': {
+      options: ['--project PATH', '--json'],
+      output: ['ok', 'Node, FFmpeg/ffprobe, filters, fonts, directory permissions, temporary space, and lock checks'],
+    },
+    'logs': {
+      arguments: ['JOB_ID or --job JOB_ID'],
+      options: ['--stage STAGE', '--level debug|info|warn|error', '--stream stdout|stderr|progress', '--tail N', '--follow', '--project PATH', '--json'],
+      output: ['bounded matching log entries', 'newline-delimited JSON entries in --follow --json mode'],
+    },
+    'diagnose': {
+      arguments: ['JOB_ID'],
+      options: ['--project PATH', '--output DIRECTORY', '--json'],
+      output: ['redacted diagnostic directory and manifest', 'environment, error, arguments, filter graph, logs, progress, revisions, and asset metadata'],
+    },
+    'ui': {
+      options: ['--project PATH', '--job JOB_ID'],
+      output: ['interactive Vue TUI dashboard; non-TTY is a usage error'],
+      keyboard: ['up/down or j/k select job', 'c cancel', 'r retry detached', 'R refresh', 'q or Ctrl-C dispose UI only'],
+    },
+  },
+  diagnostics: {
+    globalVerbosity: ['normal', '--verbose', '--debug'],
+    debugStacks: 'stderr only; JSON stdout remains pure',
+    logRetention: 'complete files on disk with bounded in-memory tails and bounded TUI retention',
+    diagnose: 'Selective recursive redaction; no source media and no process environment dump',
+    ui: '@simon_he/vue-tui/cli stable runtime; experimental log API isolated behind a bounded fallback adapter',
   },
   automation: {
     jsonFlag: '--json',
+    globalFlags: ['--json', '--verbose', '--debug'],
     stdout: 'result JSON or documented text only',
     stderr: 'diagnostics and errors only',
     stdin: 'Only edit apply with an explicit "-" operation source reads non-interactive stdin',

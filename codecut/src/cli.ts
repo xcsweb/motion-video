@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { once } from 'node:events';
 import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -11,6 +12,14 @@ import {
   removeAsset,
 } from './assets.js';
 import { CAPABILITIES } from './capabilities.js';
+import {
+  diagnoseJob,
+  followJobLogs,
+  readJobLogs,
+  runDoctor,
+  type JobLogLevel,
+  type JobLogStream,
+} from './diagnostics.js';
 import { applyEdit } from './edit.js';
 import {
   diffRevisions,
@@ -45,6 +54,10 @@ import {
   AssetPreviewResultSchema,
   AssetSchema,
   EditOperationSchema,
+  DiagnoseResultSchema,
+  DoctorResultSchema,
+  JobLogEntrySchema,
+  LogQuerySchema,
   JobSchema,
   ProjectSchema,
   RenderPlanSchema,
@@ -89,6 +102,10 @@ Usage:
   codecut jobs wait JOB_ID [--project PATH] [--json]
   codecut jobs cancel JOB_ID [--project PATH] [--json]
   codecut jobs retry JOB_ID [--project PATH] [--detach] [--json]
+  codecut doctor [--project PATH] [--json]
+  codecut logs [JOB_ID] [--job JOB_ID] [--stage STAGE] [--level debug|info|warn|error] [--stream stdout|stderr|progress] [--tail N] [--follow] [--project PATH] [--json]
+  codecut diagnose JOB_ID [--project PATH] [--output DIRECTORY] [--json]
+  codecut ui [--project PATH] [--job JOB_ID]
   codecut schema [--json]
   codecut capabilities [--json]
 
@@ -101,7 +118,9 @@ Options:
   --dry-run       Return an edit diff, render plan, or timeline preview plan without starting a job
   --summary TEXT  Override the edit revision summary
   --detach        Run an asset preview/analysis, timeline preview, render, or retried job in a detached worker
-  --json          Emit one machine-readable JSON result; diagnostics stay on stderr
+  --json          Emit machine-readable JSON; logs --follow emits one JSON object per line
+  --verbose       Write command/stage details to stderr without changing JSON stdout
+  --debug         Include internal details and error stacks on stderr (implies --verbose)
   --force         Replace an existing project.json, preview, or rendered output
   --help          Show this help
   --version       Show the CLI version
@@ -113,6 +132,7 @@ interface CommandResult {
   text?: string;
   alwaysJson?: boolean;
   exitCode?: ExitCode;
+  emit?: (json: boolean) => Promise<void>;
 }
 
 interface ProjectOptions {
@@ -565,6 +585,9 @@ function jobText(job: JobRecord): string {
   if (job.error) lines.push(`Error: ${job.error.code}: ${job.error.message}`);
   lines.push(`stdout log: ${job.logs.stdout}`, `stderr log: ${job.logs.stderr}`);
   if (job.logs.progress) lines.push(`progress log: ${job.logs.progress}`);
+  lines.push(`diagnostics: ${job.diagnostics.directory}`);
+  const previewPath = job.result?.outputPath ?? job.outputPath;
+  if (previewPath) lines.push(`preview/output: ${previewPath}`);
   return `${lines.join('\n')}\n`;
 }
 
@@ -1037,6 +1060,192 @@ async function executePreview(args: string[]): Promise<CommandResult> {
   };
 }
 
+function parseProjectOnly(args: string[], stage: string): string {
+  let project = '.';
+  for (let index = 0; index < args.length; index += 1) {
+    const argument = args[index];
+    if (argument === undefined) continue;
+    if (argument === '--project' || argument === '-p') {
+      project = optionValue(args, index, argument);
+      index += 1;
+    } else if (argument.startsWith('--project=')) {
+      project = argument.slice('--project='.length);
+      if (!project) throw usageError('--project requires a value', stage);
+    } else throw usageError(`Unknown option for ${stage}: ${argument}`, stage);
+  }
+  return project;
+}
+
+async function executeDoctor(args: string[]): Promise<CommandResult> {
+  const project = parseProjectOnly(args, 'doctor');
+  const report = await runDoctor(project);
+  return {
+    command: 'doctor',
+    data: { ...report },
+    text: `${report.checks.map((entry) => `[${entry.status}] ${entry.name}: ${entry.message}${entry.path ? `\n  ${entry.path}` : ''}`).join('\n')}\n`,
+    exitCode: report.ok ? ExitCode.Success : ExitCode.Media,
+  };
+}
+
+interface LogsOptions {
+  project: string;
+  jobId: string;
+  stage?: string;
+  level?: JobLogLevel;
+  stream?: JobLogStream;
+  tail: number;
+  follow: boolean;
+}
+
+function parseLogsOptions(args: string[]): LogsOptions {
+  let project = '.';
+  let jobId: string | undefined;
+  let stage: string | undefined;
+  let level: JobLogLevel | undefined;
+  let stream: JobLogStream | undefined;
+  let tail = 100;
+  let follow = false;
+  const setJob = (value: string) => {
+    if (jobId !== undefined) throw usageError('Provide exactly one job ID, either positional or with --job', 'logs');
+    jobId = value;
+  };
+  for (let index = 0; index < args.length; index += 1) {
+    const argument = args[index];
+    if (argument === undefined) continue;
+    if (argument === '--project' || argument === '-p') {
+      project = optionValue(args, index, argument);
+      index += 1;
+      continue;
+    }
+    if (argument === '--follow') {
+      follow = true;
+      continue;
+    }
+    if (!argument.startsWith('-')) {
+      setJob(argument);
+      continue;
+    }
+    const separator = argument.indexOf('=');
+    const option = separator < 0 ? argument : argument.slice(0, separator);
+    const value = separator < 0 ? optionValue(args, index, option) : argument.slice(separator + 1);
+    if (separator < 0) index += 1;
+    if (!value) throw usageError(`${option} requires a value`, 'logs');
+    if (option === '--project') project = value;
+    else if (option === '--job') setJob(value);
+    else if (option === '--stage') stage = value;
+    else if (option === '--level') {
+      if (!['debug', 'info', 'warn', 'error'].includes(value)) throw usageError(`Unknown log level: ${value}`, 'logs');
+      level = value as JobLogLevel;
+    } else if (option === '--stream') {
+      if (!['stdout', 'stderr', 'progress'].includes(value)) throw usageError(`Unknown log stream: ${value}`, 'logs');
+      stream = value as JobLogStream;
+    } else if (option === '--tail') {
+      if (!/^\d+$/.test(value) || !Number.isSafeInteger(Number(value))) throw usageError('--tail requires a non-negative integer', 'logs');
+      tail = Number(value);
+    } else throw usageError(`Unknown option for logs: ${option}`, 'logs');
+  }
+  if (!jobId) throw usageError('logs requires JOB_ID or --job JOB_ID', 'logs');
+  return {
+    project, jobId, tail, follow,
+    ...(stage === undefined ? {} : { stage }),
+    ...(level === undefined ? {} : { level }),
+    ...(stream === undefined ? {} : { stream }),
+  };
+}
+
+async function writeStandardOutput(value: string): Promise<void> {
+  if (!process.stdout.write(value)) await once(process.stdout, 'drain');
+}
+
+async function executeLogs(args: string[]): Promise<CommandResult> {
+  const options = parseLogsOptions(args);
+  const query = {
+    jobId: options.jobId,
+    tail: options.tail,
+    ...(options.stage === undefined ? {} : { stage: options.stage }),
+    ...(options.level === undefined ? {} : { level: options.level }),
+    ...(options.stream === undefined ? {} : { stream: options.stream }),
+  };
+  if (options.follow) {
+    return {
+      command: 'logs',
+      data: {},
+      emit: async (json) => {
+        const controller = new AbortController();
+        const stop = () => controller.abort();
+        process.once('SIGINT', stop);
+        try {
+          for await (const entry of followJobLogs(options.project, { ...query, signal: controller.signal })) {
+            if (json) await writeStandardOutput(`${JSON.stringify({ ok: true, command: 'logs', ...entry })}\n`);
+            else await writeStandardOutput(`[${entry.stage}] [${entry.level}] ${entry.stream}: ${entry.line}\n`);
+          }
+        } finally {
+          process.removeListener('SIGINT', stop);
+        }
+      },
+    };
+  }
+  const result = await readJobLogs(options.project, query);
+  return {
+    command: 'logs',
+    data: { job: result.job, logs: result.logs, truncated: result.truncated },
+    text: `${result.truncated ? '[... earlier matching output truncated ...]\n' : ''}${result.logs.map((entry) => `[${entry.stage}] [${entry.level}] ${entry.stream}: ${entry.line}`).join('\n')}${result.logs.length > 0 ? '\n' : ''}`,
+  };
+}
+
+async function executeDiagnose(args: string[]): Promise<CommandResult> {
+  let project = '.';
+  let output: string | undefined;
+  let jobId: string | undefined;
+  for (let index = 0; index < args.length; index += 1) {
+    const argument = args[index];
+    if (argument === undefined) continue;
+    if (!argument.startsWith('-')) {
+      if (jobId) throw usageError('Only one job ID is allowed', 'diagnose');
+      jobId = argument;
+      continue;
+    }
+    const separator = argument.indexOf('=');
+    const option = separator < 0 ? argument : argument.slice(0, separator);
+    const value = separator < 0 ? optionValue(args, index, option) : argument.slice(separator + 1);
+    if (separator < 0) index += 1;
+    if (!value) throw usageError(`${option} requires a value`, 'diagnose');
+    if (option === '--project' || option === '-p') project = value;
+    else if (option === '--output') output = value;
+    else throw usageError(`Unknown option for diagnose: ${option}`, 'diagnose');
+  }
+  if (!jobId) throw usageError('diagnose requires JOB_ID', 'diagnose');
+  const result = await diagnoseJob({ projectDirectory: project, jobId, ...(output === undefined ? {} : { output }) });
+  return {
+    command: 'diagnose',
+    data: { ...result },
+    text: `Diagnostic directory: ${result.directory}\n${result.files.map((file) => `  ${file}`).join('\n')}\nSource media and environment variables were not collected; copied values were redacted.\n`,
+  };
+}
+
+async function executeUi(args: string[]): Promise<CommandResult> {
+  if (!process.stdin.isTTY || !process.stdout.isTTY) {
+    throw usageError('codecut ui requires an interactive TTY; use codecut jobs list --json and codecut logs --json instead', 'ui');
+  }
+  let project = '.';
+  let jobId: string | undefined;
+  for (let index = 0; index < args.length; index += 1) {
+    const argument = args[index];
+    if (argument === undefined) continue;
+    const separator = argument.indexOf('=');
+    const option = separator < 0 ? argument : argument.slice(0, separator);
+    const value = separator < 0 ? optionValue(args, index, option) : argument.slice(separator + 1);
+    if (separator < 0) index += 1;
+    if (!value) throw usageError(`${option} requires a value`, 'ui');
+    if (option === '--project' || option === '-p') project = value;
+    else if (option === '--job') jobId = value;
+    else throw usageError(`Unknown option for ui: ${option}`, 'ui');
+  }
+  const { runTerminalUi } = await import('./ui.js');
+  await runTerminalUi({ projectDirectory: project, ...(jobId === undefined ? {} : { jobId }) });
+  return { command: 'ui', data: { closed: true }, text: '' };
+}
+
 async function execute(args: string[]): Promise<CommandResult> {
   const [command, ...rest] = args;
   if (!command) throw usageError('Missing command; use --help for usage');
@@ -1047,6 +1256,10 @@ async function execute(args: string[]): Promise<CommandResult> {
   if (command === 'render') return executeRender(rest);
   if (command === 'preview') return executePreview(rest);
   if (command === 'jobs') return executeJobs(rest);
+  if (command === 'doctor') return executeDoctor(rest);
+  if (command === 'logs') return executeLogs(rest);
+  if (command === 'diagnose') return executeDiagnose(rest);
+  if (command === 'ui') return executeUi(rest);
   if (command === 'schema') {
     if (rest.length > 0) throw usageError('schema does not accept arguments', 'schema');
     return {
@@ -1060,6 +1273,10 @@ async function execute(args: string[]): Promise<CommandResult> {
         assetAnalysisRequest: AssetAnalysisRequestSchema,
         assetAnalysisResult: AssetAnalysisResultSchema,
         editOperation: EditOperationSchema,
+        doctorResult: DoctorResultSchema,
+        jobLogEntry: JobLogEntrySchema,
+        logQuery: LogQuerySchema,
+        diagnoseResult: DiagnoseResultSchema,
         job: JobSchema,
         renderRequest: RenderRequestSchema,
         renderPlan: RenderPlanSchema,
@@ -1077,9 +1294,23 @@ async function execute(args: string[]): Promise<CommandResult> {
   throw usageError(`Unknown command: ${command}`);
 }
 
+function debugErrorDetails(error: CodeCutError): string {
+  const stacks: string[] = [];
+  let current: unknown = error;
+  const seen = new Set<unknown>();
+  while (current instanceof Error && !seen.has(current)) {
+    seen.add(current);
+    stacks.push(current.stack ?? `${current.name}: ${current.message}`);
+    current = current.cause;
+  }
+  return `${stacks.join('\nCaused by: ')}\n`;
+}
+
 export async function run(argv: string[] = process.argv.slice(2)): Promise<number> {
   const json = argv.includes('--json');
-  const args = argv.filter((argument) => argument !== '--json');
+  const verbose = argv.includes('--verbose') || argv.includes('--debug');
+  const debug = argv.includes('--debug');
+  const args = argv.filter((argument) => !['--json', '--verbose', '--debug'].includes(argument));
   try {
     if (args.includes('--help') || args.includes('-h')) {
       if (json) {
@@ -1097,16 +1328,25 @@ export async function run(argv: string[] = process.argv.slice(2)): Promise<numbe
     }
 
     const result = await execute(args);
-    if (json || result.alwaysJson) {
+    if (result.emit) {
+      await result.emit(json);
+    } else if (json || result.alwaysJson) {
       process.stdout.write(`${JSON.stringify({ ok: true, command: result.command, ...result.data }, null, 2)}\n`);
     } else {
       process.stdout.write(result.text ?? '');
     }
+    if (verbose) process.stderr.write(`[verbose] ${result.command} completed\n`);
+    if (debug) process.stderr.write(`[debug] result fields: ${Object.keys(result.data).join(', ') || '(streaming or none)'}\n`);
     return result.exitCode ?? ExitCode.Success;
   } catch (error) {
     const normalized = asCodeCutError(error);
     if (json) process.stderr.write(`${JSON.stringify({ error: normalized.toJSON() }, null, 2)}\n`);
     else process.stderr.write(formatTextError(normalized));
+    if (verbose) {
+      process.stderr.write(`[verbose] stage=${normalized.stage} retryable=${normalized.retryable ?? false}\n`);
+      if (normalized.diagnostics !== undefined) process.stderr.write(`[verbose] diagnostics=${JSON.stringify(normalized.diagnostics)}\n`);
+    }
+    if (debug) process.stderr.write(`[debug]\n${debugErrorDetails(normalized)}`);
     return normalized.exitCode;
   }
 }
