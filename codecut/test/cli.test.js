@@ -107,7 +107,12 @@ test('schema and capabilities are complete, compilable, and consistent', async (
   assert.ok(capabilities.commandDetails['asset sheet'].options.includes('--interval SECONDS'));
   assert.ok(capabilities.commandDetails['asset analyze silence'].options.includes('--noise-db DB'));
   assert.ok(capabilities.commandDetails['edit apply'].options.includes('--dry-run'));
-  assert.ok(capabilities.commands.planned.includes('render'));
+  assert.ok(capabilities.commands.available.includes('render'));
+  assert.ok(capabilities.commands.available.includes('doctor'));
+  assert.ok(capabilities.commands.available.includes('logs'));
+  assert.ok(capabilities.commands.available.includes('diagnose'));
+  assert.ok(capabilities.commands.available.includes('ui'));
+  assert.deepEqual(capabilities.commands.planned, []);
   assert.deepEqual(Object.values(capabilities.exitCodes), [0, 1, 2, 3, 4, 5, 6]);
 });
 

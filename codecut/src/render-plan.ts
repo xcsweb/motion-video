@@ -426,13 +426,14 @@ function appendPostprocess(
   }
   if (postprocess.type === 'sheet') {
     const sampleCount = postprocess.sampleTimes.length;
+    const timecodeFontSize = Math.max(8, Math.min(18, Math.floor((postprocess.width - 4) / 7)));
     graph.add(['[vout]'], [
       `trim=start=${number(postprocess.start)}:end=${number(postprocess.end)}`,
       'setpts=PTS-STARTPTS',
       `fps=fps=${number(1 / postprocess.interval)}:start_time=0:round=near`,
       ...fitFilters(postprocess.width, postprocess.height, 'rgb24'),
       `setpts=PTS+${number(postprocess.start)}/TB`,
-      "drawtext=text='%{pts\\:hms}':fontcolor=white:fontsize=18:box=1:boxcolor=black@0.65:boxborderw=4:x=6:y=6",
+      `drawtext=text='%{pts\\:hms}':fontcolor=white:fontsize=${timecodeFontSize}:box=1:boxcolor=black@0.65:boxborderw=1:x=2:y=4`,
       `tile=${postprocess.columns}x${postprocess.rows}:nb_frames=${sampleCount}:margin=8:padding=4:color=0x202020`,
     ], '[preview_vout]');
     return;
