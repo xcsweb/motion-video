@@ -1,0 +1,41 @@
+{
+  "type": "sheet",
+  "outputPath": "/workspace/demo/guichu-beat/.codecut/previews/sheet-r1.png",
+  "revision": 1,
+  "parameters": {
+    "type": "sheet",
+    "start": 0,
+    "end": 24,
+    "interval": 1,
+    "columns": 6,
+    "rows": 4,
+    "width": 240,
+    "height": 180,
+    "sampleTimes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ]
+  }
+}

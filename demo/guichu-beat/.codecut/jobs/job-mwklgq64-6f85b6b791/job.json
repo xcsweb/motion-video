@@ -1,0 +1,68 @@
+{
+  "id": "job-mwklgq64-6f85b6b791",
+  "kind": "preview.sheet",
+  "status": "failed",
+  "health": "ok",
+  "stage": "jobs.preflight",
+  "projectRevision": 1,
+  "createdAt": "2026-11-17T11:13:40.732Z",
+  "outputPath": "/workspace/demo/guichu-beat/.codecut/previews/sheet-r1.png",
+  "temporaryOutputPath": "/workspace/demo/guichu-beat/.codecut/jobs/job-mwklgq64-6f85b6b791/temporary-output.png",
+  "preview": {
+    "type": "sheet",
+    "parameters": {
+      "type": "sheet",
+      "start": 0,
+      "end": 6,
+      "interval": 0.5,
+      "columns": 4,
+      "rows": 3,
+      "width": 240,
+      "height": 180,
+      "sampleTimes": [
+        0,
+        0.5,
+        1,
+        1.5,
+        2,
+        2.5,
+        3,
+        3.5,
+        4,
+        4.5,
+        5,
+        5.5
+      ]
+    }
+  },
+  "logs": {
+    "stdout": "/workspace/demo/guichu-beat/.codecut/jobs/job-mwklgq64-6f85b6b791/logs/stdout.log",
+    "stderr": "/workspace/demo/guichu-beat/.codecut/jobs/job-mwklgq64-6f85b6b791/logs/stderr.log",
+    "progress": "/workspace/demo/guichu-beat/.codecut/jobs/job-mwklgq64-6f85b6b791/logs/progress.log",
+    "progressEvents": "/workspace/demo/guichu-beat/.codecut/jobs/job-mwklgq64-6f85b6b791/logs/progress.jsonl"
+  },
+  "diagnostics": {
+    "directory": "/workspace/demo/guichu-beat/.codecut/jobs/job-mwklgq64-6f85b6b791/diagnostics",
+    "request": "/workspace/demo/guichu-beat/.codecut/jobs/job-mwklgq64-6f85b6b791/request.json",
+    "snapshot": "/workspace/demo/guichu-beat/.codecut/jobs/job-mwklgq64-6f85b6b791/snapshot.json",
+    "arguments": "/workspace/demo/guichu-beat/.codecut/jobs/job-mwklgq64-6f85b6b791/diagnostics/arguments.json",
+    "filterGraph": "/workspace/demo/guichu-beat/.codecut/jobs/job-mwklgq64-6f85b6b791/diagnostics/filter_complex.txt",
+    "plan": "/workspace/demo/guichu-beat/.codecut/jobs/job-mwklgq64-6f85b6b791/diagnostics/plan.json",
+    "textFiles": []
+  },
+  "workerPid": 152513,
+  "heartbeatAt": "2026-11-17T11:13:40.784Z",
+  "finishedAt": "2026-11-17T11:13:40.784Z",
+  "logTail": {
+    "stdout": "",
+    "stderr": ""
+  },
+  "error": {
+    "code": "OUTPUT_EXISTS",
+    "message": "Output already exists; enable overwrite to replace it",
+    "stage": "jobs.preflight",
+    "jobId": "job-mwklgq64-6f85b6b791",
+    "path": "/workspace/demo/guichu-beat/.codecut/previews/sheet-r1.png",
+    "retryable": false
+  }
+}

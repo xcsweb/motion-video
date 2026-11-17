@@ -1,0 +1,41 @@
+{
+  "id": "job-mwklfxf5-529fe4e14c",
+  "kind": "render",
+  "status": "failed",
+  "health": "ok",
+  "stage": "jobs.preflight",
+  "projectRevision": 1,
+  "createdAt": "2026-11-17T11:13:03.474Z",
+  "outputPath": "/workspace/demo/guichu-beat/guichu-beat.mp4",
+  "temporaryOutputPath": "/workspace/demo/guichu-beat/.codecut/jobs/job-mwklfxf5-529fe4e14c/temporary-output.mp4",
+  "logs": {
+    "stdout": "/workspace/demo/guichu-beat/.codecut/jobs/job-mwklfxf5-529fe4e14c/logs/stdout.log",
+    "stderr": "/workspace/demo/guichu-beat/.codecut/jobs/job-mwklfxf5-529fe4e14c/logs/stderr.log",
+    "progress": "/workspace/demo/guichu-beat/.codecut/jobs/job-mwklfxf5-529fe4e14c/logs/progress.log",
+    "progressEvents": "/workspace/demo/guichu-beat/.codecut/jobs/job-mwklfxf5-529fe4e14c/logs/progress.jsonl"
+  },
+  "diagnostics": {
+    "directory": "/workspace/demo/guichu-beat/.codecut/jobs/job-mwklfxf5-529fe4e14c/diagnostics",
+    "request": "/workspace/demo/guichu-beat/.codecut/jobs/job-mwklfxf5-529fe4e14c/request.json",
+    "snapshot": "/workspace/demo/guichu-beat/.codecut/jobs/job-mwklfxf5-529fe4e14c/snapshot.json",
+    "arguments": "/workspace/demo/guichu-beat/.codecut/jobs/job-mwklfxf5-529fe4e14c/diagnostics/arguments.json",
+    "filterGraph": "/workspace/demo/guichu-beat/.codecut/jobs/job-mwklfxf5-529fe4e14c/diagnostics/filter_complex.txt",
+    "plan": "/workspace/demo/guichu-beat/.codecut/jobs/job-mwklfxf5-529fe4e14c/diagnostics/plan.json",
+    "textFiles": []
+  },
+  "workerPid": 150647,
+  "heartbeatAt": "2026-11-17T11:13:03.500Z",
+  "finishedAt": "2026-11-17T11:13:03.500Z",
+  "logTail": {
+    "stdout": "",
+    "stderr": ""
+  },
+  "error": {
+    "code": "OUTPUT_EXISTS",
+    "message": "Output already exists; enable overwrite to replace it",
+    "stage": "jobs.preflight",
+    "jobId": "job-mwklfxf5-529fe4e14c",
+    "path": "/workspace/demo/guichu-beat/guichu-beat.mp4",
+    "retryable": false
+  }
+}

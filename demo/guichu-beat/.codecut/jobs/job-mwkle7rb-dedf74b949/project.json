@@ -1,0 +1,395 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "name": "鬼畜节奏实验 - 120BPM",
+  "assets": [
+    {
+      "id": "zuotian",
+      "kind": "video",
+      "path": "../../.tmp-guichu/zuotian.mp4"
+    },
+    {
+      "id": "beat",
+      "kind": "audio",
+      "path": "assets/beat.wav"
+    },
+    {
+      "id": "vocals",
+      "kind": "audio",
+      "path": "assets/vocals-comp.wav"
+    },
+    {
+      "id": "sub1",
+      "kind": "image",
+      "path": "assets/sub1.png"
+    },
+    {
+      "id": "sub2",
+      "kind": "image",
+      "path": "assets/sub2.png"
+    },
+    {
+      "id": "sub3",
+      "kind": "image",
+      "path": "assets/sub3.png"
+    },
+    {
+      "id": "sub4",
+      "kind": "image",
+      "path": "assets/sub4.png"
+    },
+    {
+      "id": "sub5",
+      "kind": "image",
+      "path": "assets/sub5.png"
+    },
+    {
+      "id": "sub6",
+      "kind": "image",
+      "path": "assets/sub6.png"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "v1",
+      "kind": "video",
+      "name": "分镜",
+      "clips": [
+        {
+          "id": "shot01",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 0,
+          "duration": 1,
+          "sourceStart": 180.2,
+          "volume": 0,
+          "scale": 1
+        },
+        {
+          "id": "shot02",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 1,
+          "duration": 1,
+          "sourceStart": 181.2,
+          "volume": 0,
+          "scale": 1.12,
+          "position": {
+            "x": -58,
+            "y": -43
+          }
+        },
+        {
+          "id": "shot03",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 2,
+          "duration": 2,
+          "sourceStart": 187,
+          "volume": 0,
+          "scale": 1
+        },
+        {
+          "id": "shot04",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 4,
+          "duration": 2,
+          "sourceStart": 199,
+          "volume": 0,
+          "scale": 1
+        },
+        {
+          "id": "shot05",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 6,
+          "duration": 1,
+          "sourceStart": 203.5,
+          "volume": 0,
+          "scale": 1.12,
+          "position": {
+            "x": -58,
+            "y": -43
+          }
+        },
+        {
+          "id": "shot06",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 7,
+          "duration": 1,
+          "sourceStart": 206,
+          "volume": 0,
+          "scale": 1.05,
+          "position": {
+            "x": -24,
+            "y": -18
+          }
+        },
+        {
+          "id": "shot07",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 8,
+          "duration": 1,
+          "sourceStart": 213,
+          "volume": 0,
+          "scale": 1
+        },
+        {
+          "id": "shot08",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 9,
+          "duration": 1,
+          "sourceStart": 217,
+          "volume": 0,
+          "scale": 1.12,
+          "position": {
+            "x": -58,
+            "y": -43
+          }
+        },
+        {
+          "id": "shot09",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 10,
+          "duration": 2,
+          "sourceStart": 219,
+          "volume": 0,
+          "scale": 1
+        },
+        {
+          "id": "shot10",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 12,
+          "duration": 2,
+          "sourceStart": 222,
+          "volume": 0,
+          "scale": 1.2,
+          "position": {
+            "x": -96,
+            "y": -72
+          }
+        },
+        {
+          "id": "shot11",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 14,
+          "duration": 1,
+          "sourceStart": 223.2,
+          "volume": 0,
+          "scale": 1
+        },
+        {
+          "id": "shot12",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 15,
+          "duration": 1,
+          "sourceStart": 227,
+          "volume": 0,
+          "scale": 1.12,
+          "position": {
+            "x": -58,
+            "y": -43
+          }
+        },
+        {
+          "id": "shot13",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 16,
+          "duration": 2,
+          "sourceStart": 232,
+          "volume": 0,
+          "scale": 1
+        },
+        {
+          "id": "shot14",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 18,
+          "duration": 1,
+          "sourceStart": 211,
+          "volume": 0,
+          "scale": 1
+        },
+        {
+          "id": "shot15",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 19,
+          "duration": 1,
+          "sourceStart": 236,
+          "volume": 0,
+          "scale": 1.05,
+          "position": {
+            "x": -24,
+            "y": -18
+          }
+        },
+        {
+          "id": "shot16",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 20,
+          "duration": 2,
+          "sourceStart": 220,
+          "volume": 0,
+          "scale": 1.2,
+          "position": {
+            "x": -96,
+            "y": -72
+          }
+        },
+        {
+          "id": "shot17",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 22,
+          "duration": 1,
+          "sourceStart": 181,
+          "volume": 0,
+          "scale": 1.25,
+          "position": {
+            "x": -120,
+            "y": -90
+          }
+        },
+        {
+          "id": "shot18",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 23,
+          "duration": 1,
+          "sourceStart": 182.1,
+          "volume": 0,
+          "scale": 1
+        }
+      ]
+    },
+    {
+      "id": "v2",
+      "kind": "video",
+      "name": "字幕",
+      "clips": [
+        {
+          "id": "sub1",
+          "type": "image",
+          "assetId": "sub1",
+          "start": 0,
+          "duration": 4,
+          "position": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "sub2",
+          "type": "image",
+          "assetId": "sub2",
+          "start": 4,
+          "duration": 4,
+          "position": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "sub3",
+          "type": "image",
+          "assetId": "sub3",
+          "start": 8,
+          "duration": 4,
+          "position": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "sub4",
+          "type": "image",
+          "assetId": "sub4",
+          "start": 12,
+          "duration": 4,
+          "position": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "sub5",
+          "type": "image",
+          "assetId": "sub5",
+          "start": 16,
+          "duration": 4,
+          "position": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "sub6",
+          "type": "image",
+          "assetId": "sub6",
+          "start": 20,
+          "duration": 4,
+          "position": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "a1",
+      "kind": "audio",
+      "name": "伴奏",
+      "clips": [
+        {
+          "id": "beat",
+          "type": "audio",
+          "assetId": "beat",
+          "start": 0,
+          "duration": 24,
+          "sourceStart": 0,
+          "volume": 0.58,
+          "fadeOut": 0.2
+        }
+      ]
+    },
+    {
+      "id": "a2",
+      "kind": "audio",
+      "name": "人声",
+      "clips": [
+        {
+          "id": "vocals",
+          "type": "audio",
+          "assetId": "vocals",
+          "start": 0,
+          "duration": 24,
+          "sourceStart": 0,
+          "volume": 0.92
+        }
+      ]
+    }
+  ],
+  "output": {
+    "path": "guichu-beat.mp4",
+    "format": "mp4",
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "width": 960,
+    "height": 720,
+    "frameRate": 30,
+    "pixelFormat": "yuv420p",
+    "audioSampleRate": 48000,
+    "audioChannels": 2
+  }
+}
