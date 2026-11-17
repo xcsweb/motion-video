@@ -1,0 +1,1389 @@
+{
+  "kind": "render",
+  "projectPath": "/workspace/demo/guichu-v2/project.json",
+  "projectRevision": 1,
+  "process": {
+    "command": "ffmpeg",
+    "args": [
+      "-hide_banner",
+      "-nostdin",
+      "-progress",
+      "pipe:1",
+      "-nostats",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot01.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot02.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot03.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot04.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot05.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot06.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot07.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot08.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot09.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot10.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot11.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot12.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot13.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot14.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot15.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot16.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot17.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot18.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot19.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot20.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot21.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot22.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot23.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot24.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot25.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot26.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot27.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot28.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot29.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot30.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot31.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot32.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot33.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot34.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot35.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot36.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot37.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot38.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot39.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot40.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot41.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot42.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot43.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot44.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot45.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot46.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot47.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot48.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot49.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot50.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot51.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot52.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot53.mp4",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/shots/shot54.mp4",
+      "-loop",
+      "1",
+      "-framerate",
+      "30",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/sub1.png",
+      "-loop",
+      "1",
+      "-framerate",
+      "30",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/sub2.png",
+      "-loop",
+      "1",
+      "-framerate",
+      "30",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/sub3.png",
+      "-loop",
+      "1",
+      "-framerate",
+      "30",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/sub4.png",
+      "-loop",
+      "1",
+      "-framerate",
+      "30",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/sub5.png",
+      "-loop",
+      "1",
+      "-framerate",
+      "30",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/sub6.png",
+      "-loop",
+      "1",
+      "-framerate",
+      "30",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/sub7.png",
+      "-loop",
+      "1",
+      "-framerate",
+      "30",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/sub8.png",
+      "-i",
+      "/workspace/demo/guichu-v2/assets/audio.wav",
+      "-filter_complex_script",
+      "{jobDirectory}/diagnostics/filter_complex.txt",
+      "-map",
+      "[vout]",
+      "-map",
+      "[aout]",
+      "-c:v",
+      "libx264",
+      "-preset",
+      "veryfast",
+      "-crf",
+      "18",
+      "-pix_fmt",
+      "yuv420p",
+      "-r",
+      "30",
+      "-video_track_timescale",
+      "90000",
+      "-c:a",
+      "aac",
+      "-b:a",
+      "192k",
+      "-ar",
+      "48000",
+      "-ac",
+      "2",
+      "-movflags",
+      "+faststart",
+      "-t",
+      "36.4085",
+      "-f",
+      "mp4",
+      "-y",
+      "{output}"
+    ],
+    "cwd": "/workspace/demo/guichu-v2",
+    "progress": "ffmpeg",
+    "durationSeconds": 36.4085
+  },
+  "output": {
+    "path": "/workspace/demo/guichu-v2/guichu-v2.mp4",
+    "overwrite": true,
+    "validation": "ffprobe"
+  },
+  "render": {
+    "plan": {
+      "version": 1,
+      "revision": 1,
+      "command": "ffmpeg",
+      "durationSeconds": 36.4085,
+      "inputs": [
+        {
+          "index": 0,
+          "assetId": "shot01",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot01.mp4",
+          "fingerprint": {
+            "size": 238062,
+            "mtimeMs": 1794916060528.8752
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot01"
+          ]
+        },
+        {
+          "index": 1,
+          "assetId": "shot02",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot02.mp4",
+          "fingerprint": {
+            "size": 102542,
+            "mtimeMs": 1794916060772.8777
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot02"
+          ]
+        },
+        {
+          "index": 2,
+          "assetId": "shot03",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot03.mp4",
+          "fingerprint": {
+            "size": 73487,
+            "mtimeMs": 1794916060972.8796
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot03"
+          ]
+        },
+        {
+          "index": 3,
+          "assetId": "shot04",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot04.mp4",
+          "fingerprint": {
+            "size": 223112,
+            "mtimeMs": 1794916061204.8818
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot04"
+          ]
+        },
+        {
+          "index": 4,
+          "assetId": "shot05",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot05.mp4",
+          "fingerprint": {
+            "size": 133239,
+            "mtimeMs": 1794916061448.8843
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot05"
+          ]
+        },
+        {
+          "index": 5,
+          "assetId": "shot06",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot06.mp4",
+          "fingerprint": {
+            "size": 108929,
+            "mtimeMs": 1794916061720.887
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot06"
+          ]
+        },
+        {
+          "index": 6,
+          "assetId": "shot07",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot07.mp4",
+          "fingerprint": {
+            "size": 226196,
+            "mtimeMs": 1794916062024.89
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot07"
+          ]
+        },
+        {
+          "index": 7,
+          "assetId": "shot08",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot08.mp4",
+          "fingerprint": {
+            "size": 111530,
+            "mtimeMs": 1794916062252.8923
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot08"
+          ]
+        },
+        {
+          "index": 8,
+          "assetId": "shot09",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot09.mp4",
+          "fingerprint": {
+            "size": 60612,
+            "mtimeMs": 1794916062496.8948
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot09"
+          ]
+        },
+        {
+          "index": 9,
+          "assetId": "shot10",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot10.mp4",
+          "fingerprint": {
+            "size": 86580,
+            "mtimeMs": 1794916062712.8967
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot10"
+          ]
+        },
+        {
+          "index": 10,
+          "assetId": "shot11",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot11.mp4",
+          "fingerprint": {
+            "size": 55866,
+            "mtimeMs": 1794916062908.8987
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot11"
+          ]
+        },
+        {
+          "index": 11,
+          "assetId": "shot12",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot12.mp4",
+          "fingerprint": {
+            "size": 110514,
+            "mtimeMs": 1794916063108.9006
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot12"
+          ]
+        },
+        {
+          "index": 12,
+          "assetId": "shot13",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot13.mp4",
+          "fingerprint": {
+            "size": 51341,
+            "mtimeMs": 1794916063300.9026
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot13"
+          ]
+        },
+        {
+          "index": 13,
+          "assetId": "shot14",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot14.mp4",
+          "fingerprint": {
+            "size": 98637,
+            "mtimeMs": 1794916063520.9048
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot14"
+          ]
+        },
+        {
+          "index": 14,
+          "assetId": "shot15",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot15.mp4",
+          "fingerprint": {
+            "size": 62867,
+            "mtimeMs": 1794916063744.907
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot15"
+          ]
+        },
+        {
+          "index": 15,
+          "assetId": "shot16",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot16.mp4",
+          "fingerprint": {
+            "size": 118461,
+            "mtimeMs": 1794916063976.9092
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot16"
+          ]
+        },
+        {
+          "index": 16,
+          "assetId": "shot17",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot17.mp4",
+          "fingerprint": {
+            "size": 193405,
+            "mtimeMs": 1794916064292.9124
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot17"
+          ]
+        },
+        {
+          "index": 17,
+          "assetId": "shot18",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot18.mp4",
+          "fingerprint": {
+            "size": 74925,
+            "mtimeMs": 1794916064524.9146
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot18"
+          ]
+        },
+        {
+          "index": 18,
+          "assetId": "shot19",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot19.mp4",
+          "fingerprint": {
+            "size": 129587,
+            "mtimeMs": 1794916064768.917
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot19"
+          ]
+        },
+        {
+          "index": 19,
+          "assetId": "shot20",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot20.mp4",
+          "fingerprint": {
+            "size": 129315,
+            "mtimeMs": 1794916065032.9197
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot20"
+          ]
+        },
+        {
+          "index": 20,
+          "assetId": "shot21",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot21.mp4",
+          "fingerprint": {
+            "size": 80519,
+            "mtimeMs": 1794916065232.9216
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot21"
+          ]
+        },
+        {
+          "index": 21,
+          "assetId": "shot22",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot22.mp4",
+          "fingerprint": {
+            "size": 96081,
+            "mtimeMs": 1794916065444.9236
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot22"
+          ]
+        },
+        {
+          "index": 22,
+          "assetId": "shot23",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot23.mp4",
+          "fingerprint": {
+            "size": 65471,
+            "mtimeMs": 1794916065648.9258
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot23"
+          ]
+        },
+        {
+          "index": 23,
+          "assetId": "shot24",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot24.mp4",
+          "fingerprint": {
+            "size": 64342,
+            "mtimeMs": 1794916065904.9282
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot24"
+          ]
+        },
+        {
+          "index": 24,
+          "assetId": "shot25",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot25.mp4",
+          "fingerprint": {
+            "size": 74784,
+            "mtimeMs": 1794916066148.9307
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot25"
+          ]
+        },
+        {
+          "index": 25,
+          "assetId": "shot26",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot26.mp4",
+          "fingerprint": {
+            "size": 72555,
+            "mtimeMs": 1794916066384.9329
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot26"
+          ]
+        },
+        {
+          "index": 26,
+          "assetId": "shot27",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot27.mp4",
+          "fingerprint": {
+            "size": 51650,
+            "mtimeMs": 1794916066596.935
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot27"
+          ]
+        },
+        {
+          "index": 27,
+          "assetId": "shot28",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot28.mp4",
+          "fingerprint": {
+            "size": 72280,
+            "mtimeMs": 1794916066824.9373
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot28"
+          ]
+        },
+        {
+          "index": 28,
+          "assetId": "shot29",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot29.mp4",
+          "fingerprint": {
+            "size": 73585,
+            "mtimeMs": 1794916067040.9395
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot29"
+          ]
+        },
+        {
+          "index": 29,
+          "assetId": "shot30",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot30.mp4",
+          "fingerprint": {
+            "size": 58268,
+            "mtimeMs": 1794916067240.9414
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot30"
+          ]
+        },
+        {
+          "index": 30,
+          "assetId": "shot31",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot31.mp4",
+          "fingerprint": {
+            "size": 86437,
+            "mtimeMs": 1794916067456.9436
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot31"
+          ]
+        },
+        {
+          "index": 31,
+          "assetId": "shot32",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot32.mp4",
+          "fingerprint": {
+            "size": 124201,
+            "mtimeMs": 1794916067720.946
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot32"
+          ]
+        },
+        {
+          "index": 32,
+          "assetId": "shot33",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot33.mp4",
+          "fingerprint": {
+            "size": 130483,
+            "mtimeMs": 1794916068004.949
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot33"
+          ]
+        },
+        {
+          "index": 33,
+          "assetId": "shot34",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot34.mp4",
+          "fingerprint": {
+            "size": 62553,
+            "mtimeMs": 1794916068248.9514
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot34"
+          ]
+        },
+        {
+          "index": 34,
+          "assetId": "shot35",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot35.mp4",
+          "fingerprint": {
+            "size": 101593,
+            "mtimeMs": 1794916068528.954
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot35"
+          ]
+        },
+        {
+          "index": 35,
+          "assetId": "shot36",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot36.mp4",
+          "fingerprint": {
+            "size": 107109,
+            "mtimeMs": 1794916068768.9563
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot36"
+          ]
+        },
+        {
+          "index": 36,
+          "assetId": "shot37",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot37.mp4",
+          "fingerprint": {
+            "size": 56470,
+            "mtimeMs": 1794916068972.9585
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot37"
+          ]
+        },
+        {
+          "index": 37,
+          "assetId": "shot38",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot38.mp4",
+          "fingerprint": {
+            "size": 117653,
+            "mtimeMs": 1794916069168.9604
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot38"
+          ]
+        },
+        {
+          "index": 38,
+          "assetId": "shot39",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot39.mp4",
+          "fingerprint": {
+            "size": 295814,
+            "mtimeMs": 1794916069428.963
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot39"
+          ]
+        },
+        {
+          "index": 39,
+          "assetId": "shot40",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot40.mp4",
+          "fingerprint": {
+            "size": 44839,
+            "mtimeMs": 1794916069640.965
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot40"
+          ]
+        },
+        {
+          "index": 40,
+          "assetId": "shot41",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot41.mp4",
+          "fingerprint": {
+            "size": 116048,
+            "mtimeMs": 1794916069848.967
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot41"
+          ]
+        },
+        {
+          "index": 41,
+          "assetId": "shot42",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot42.mp4",
+          "fingerprint": {
+            "size": 62148,
+            "mtimeMs": 1794916070052.969
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot42"
+          ]
+        },
+        {
+          "index": 42,
+          "assetId": "shot43",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot43.mp4",
+          "fingerprint": {
+            "size": 129166,
+            "mtimeMs": 1794916070320.9717
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot43"
+          ]
+        },
+        {
+          "index": 43,
+          "assetId": "shot44",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot44.mp4",
+          "fingerprint": {
+            "size": 129771,
+            "mtimeMs": 1794916070572.974
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot44"
+          ]
+        },
+        {
+          "index": 44,
+          "assetId": "shot45",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot45.mp4",
+          "fingerprint": {
+            "size": 73439,
+            "mtimeMs": 1794916070804.9766
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot45"
+          ]
+        },
+        {
+          "index": 45,
+          "assetId": "shot46",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot46.mp4",
+          "fingerprint": {
+            "size": 104287,
+            "mtimeMs": 1794916071024.9785
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot46"
+          ]
+        },
+        {
+          "index": 46,
+          "assetId": "shot47",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot47.mp4",
+          "fingerprint": {
+            "size": 63615,
+            "mtimeMs": 1794916071224.9807
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot47"
+          ]
+        },
+        {
+          "index": 47,
+          "assetId": "shot48",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot48.mp4",
+          "fingerprint": {
+            "size": 50691,
+            "mtimeMs": 1794916071420.9824
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot48"
+          ]
+        },
+        {
+          "index": 48,
+          "assetId": "shot49",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot49.mp4",
+          "fingerprint": {
+            "size": 86660,
+            "mtimeMs": 1794916071656.9849
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot49"
+          ]
+        },
+        {
+          "index": 49,
+          "assetId": "shot50",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot50.mp4",
+          "fingerprint": {
+            "size": 68167,
+            "mtimeMs": 1794916071888.987
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot50"
+          ]
+        },
+        {
+          "index": 50,
+          "assetId": "shot51",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot51.mp4",
+          "fingerprint": {
+            "size": 104722,
+            "mtimeMs": 1794916072116.9895
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot51"
+          ]
+        },
+        {
+          "index": 51,
+          "assetId": "shot52",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot52.mp4",
+          "fingerprint": {
+            "size": 116158,
+            "mtimeMs": 1794916072380.992
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot52"
+          ]
+        },
+        {
+          "index": 52,
+          "assetId": "shot53",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot53.mp4",
+          "fingerprint": {
+            "size": 51983,
+            "mtimeMs": 1794916072600.9941
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot53"
+          ]
+        },
+        {
+          "index": 53,
+          "assetId": "shot54",
+          "kind": "video",
+          "path": "/workspace/demo/guichu-v2/assets/shots/shot54.mp4",
+          "fingerprint": {
+            "size": 134039,
+            "mtimeMs": 1794916072848.9966
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot54"
+          ]
+        },
+        {
+          "index": 54,
+          "assetId": "sub1",
+          "kind": "image",
+          "path": "/workspace/demo/guichu-v2/assets/sub1.png",
+          "fingerprint": {
+            "size": 13333,
+            "mtimeMs": 1794916060032.8704
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "sub1"
+          ]
+        },
+        {
+          "index": 55,
+          "assetId": "sub2",
+          "kind": "image",
+          "path": "/workspace/demo/guichu-v2/assets/sub2.png",
+          "fingerprint": {
+            "size": 13333,
+            "mtimeMs": 1794916060052.8706
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "sub2"
+          ]
+        },
+        {
+          "index": 56,
+          "assetId": "sub3",
+          "kind": "image",
+          "path": "/workspace/demo/guichu-v2/assets/sub3.png",
+          "fingerprint": {
+            "size": 21767,
+            "mtimeMs": 1794916060072.8708
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "sub3"
+          ]
+        },
+        {
+          "index": 57,
+          "assetId": "sub4",
+          "kind": "image",
+          "path": "/workspace/demo/guichu-v2/assets/sub4.png",
+          "fingerprint": {
+            "size": 21767,
+            "mtimeMs": 1794916060096.871
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "sub4"
+          ]
+        },
+        {
+          "index": 58,
+          "assetId": "sub5",
+          "kind": "image",
+          "path": "/workspace/demo/guichu-v2/assets/sub5.png",
+          "fingerprint": {
+            "size": 17173,
+            "mtimeMs": 1794916060116.8713
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "sub5"
+          ]
+        },
+        {
+          "index": 59,
+          "assetId": "sub6",
+          "kind": "image",
+          "path": "/workspace/demo/guichu-v2/assets/sub6.png",
+          "fingerprint": {
+            "size": 22531,
+            "mtimeMs": 1794916060136.8713
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "sub6"
+          ]
+        },
+        {
+          "index": 60,
+          "assetId": "sub7",
+          "kind": "image",
+          "path": "/workspace/demo/guichu-v2/assets/sub7.png",
+          "fingerprint": {
+            "size": 21050,
+            "mtimeMs": 1794916060160.8716
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "sub7"
+          ]
+        },
+        {
+          "index": 61,
+          "assetId": "sub8",
+          "kind": "image",
+          "path": "/workspace/demo/guichu-v2/assets/sub8.png",
+          "fingerprint": {
+            "size": 21767,
+            "mtimeMs": 1794916060188.8718
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "sub8"
+          ]
+        },
+        {
+          "index": 62,
+          "assetId": "mix",
+          "kind": "audio",
+          "path": "/workspace/demo/guichu-v2/assets/audio.wav",
+          "fingerprint": {
+            "size": 6990498,
+            "mtimeMs": 1794915597360.3157
+          },
+          "hasVideo": false,
+          "hasAudio": true,
+          "clips": [
+            "mix"
+          ]
+        }
+      ],
+      "args": [
+        "-hide_banner",
+        "-nostdin",
+        "-progress",
+        "pipe:1",
+        "-nostats",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot01.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot02.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot03.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot04.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot05.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot06.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot07.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot08.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot09.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot10.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot11.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot12.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot13.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot14.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot15.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot16.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot17.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot18.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot19.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot20.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot21.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot22.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot23.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot24.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot25.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot26.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot27.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot28.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot29.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot30.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot31.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot32.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot33.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot34.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot35.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot36.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot37.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot38.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot39.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot40.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot41.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot42.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot43.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot44.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot45.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot46.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot47.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot48.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot49.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot50.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot51.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot52.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot53.mp4",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/shots/shot54.mp4",
+        "-loop",
+        "1",
+        "-framerate",
+        "30",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/sub1.png",
+        "-loop",
+        "1",
+        "-framerate",
+        "30",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/sub2.png",
+        "-loop",
+        "1",
+        "-framerate",
+        "30",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/sub3.png",
+        "-loop",
+        "1",
+        "-framerate",
+        "30",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/sub4.png",
+        "-loop",
+        "1",
+        "-framerate",
+        "30",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/sub5.png",
+        "-loop",
+        "1",
+        "-framerate",
+        "30",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/sub6.png",
+        "-loop",
+        "1",
+        "-framerate",
+        "30",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/sub7.png",
+        "-loop",
+        "1",
+        "-framerate",
+        "30",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/sub8.png",
+        "-i",
+        "/workspace/demo/guichu-v2/assets/audio.wav",
+        "-filter_complex_script",
+        "{jobDirectory}/diagnostics/filter_complex.txt",
+        "-map",
+        "[vout]",
+        "-map",
+        "[aout]",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "veryfast",
+        "-crf",
+        "18",
+        "-pix_fmt",
+        "yuv420p",
+        "-r",
+        "30",
+        "-video_track_timescale",
+        "90000",
+        "-c:a",
+        "aac",
+        "-b:a",
+        "192k",
+        "-ar",
+        "48000",
+        "-ac",
+        "2",
+        "-movflags",
+        "+faststart",
+        "-t",
+        "36.4085",
+        "-f",
+        "mp4",
+        "-y",
+        "{output}"
+      ],
+      "filter_graph": "[0:v:0]trim=start=0:end=2.2755,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=2.2755,setpts=PTS-STARTPTS[cc_clip_0];\ncolor=c=black@0.0:s=960x720:r=30:d=2.2755,format=rgba,setpts=PTS-STARTPTS[cc_transparent_1];\n[cc_transparent_1][cc_clip_0]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=2.2755,setpts=PTS-STARTPTS[cc_positioned_2];\n[1:v:0]trim=start=0:end=0.5689,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.08/2)*2):h=max(2\\,trunc(ih*1.08/2)*2):eval=frame,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_3];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_4];\n[cc_transparent_4][cc_clip_3]overlay=x=-38:y=-29:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_5];\n[cc_positioned_2][cc_positioned_5]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_6];\n[2:v:0]trim=start=0:end=0.5689,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_7];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_8];\n[cc_transparent_8][cc_clip_7]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_9];\n[cc_concat_6][cc_positioned_9]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_10];\n[3:v:0]trim=start=0:end=1.1378,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_clip_11];\ncolor=c=black@0.0:s=960x720:r=30:d=1.1378,format=rgba,setpts=PTS-STARTPTS[cc_transparent_12];\n[cc_transparent_12][cc_clip_11]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_positioned_13];\n[cc_concat_10][cc_positioned_13]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_14];\n[4:v:0]trim=start=0:end=1.1377,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1.1377,setpts=PTS-STARTPTS[cc_clip_15];\ncolor=c=black@0.0:s=960x720:r=30:d=1.1377,format=rgba,setpts=PTS-STARTPTS[cc_transparent_16];\n[cc_transparent_16][cc_clip_15]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1.1377,setpts=PTS-STARTPTS[cc_positioned_17];\n[cc_concat_14][cc_positioned_17]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_18];\n[5:v:0]trim=start=0:end=1.1378,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.12/2)*2):h=max(2\\,trunc(ih*1.12/2)*2):eval=frame,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_clip_19];\ncolor=c=black@0.0:s=960x720:r=30:d=1.1378,format=rgba,setpts=PTS-STARTPTS[cc_transparent_20];\n[cc_transparent_20][cc_clip_19]overlay=x=-58:y=-43:shortest=1:format=auto,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_positioned_21];\n[cc_concat_18][cc_positioned_21]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_22];\n[6:v:0]trim=start=0:end=1.1378,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_clip_23];\ncolor=c=black@0.0:s=960x720:r=30:d=1.1378,format=rgba,setpts=PTS-STARTPTS[cc_transparent_24];\n[cc_transparent_24][cc_clip_23]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_positioned_25];\n[cc_concat_22][cc_positioned_25]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_26];\n[7:v:0]trim=start=0:end=1.1377,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.08/2)*2):h=max(2\\,trunc(ih*1.08/2)*2):eval=frame,trim=duration=1.1377,setpts=PTS-STARTPTS[cc_clip_27];\ncolor=c=black@0.0:s=960x720:r=30:d=1.1377,format=rgba,setpts=PTS-STARTPTS[cc_transparent_28];\n[cc_transparent_28][cc_clip_27]overlay=x=-38:y=-29:shortest=1:format=auto,trim=duration=1.1377,setpts=PTS-STARTPTS[cc_positioned_29];\n[cc_concat_26][cc_positioned_29]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_30];\n[8:v:0]trim=start=0:end=0.2845,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.2845,setpts=PTS-STARTPTS[cc_clip_31];\ncolor=c=black@0.0:s=960x720:r=30:d=0.2845,format=rgba,setpts=PTS-STARTPTS[cc_transparent_32];\n[cc_transparent_32][cc_clip_31]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.2845,setpts=PTS-STARTPTS[cc_positioned_33];\n[cc_concat_30][cc_positioned_33]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_34];\n[9:v:0]trim=start=0:end=0.2844,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.2844,setpts=PTS-STARTPTS[cc_clip_35];\ncolor=c=black@0.0:s=960x720:r=30:d=0.2844,format=rgba,setpts=PTS-STARTPTS[cc_transparent_36];\n[cc_transparent_36][cc_clip_35]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.2844,setpts=PTS-STARTPTS[cc_positioned_37];\n[cc_concat_34][cc_positioned_37]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_38];\n[10:v:0]trim=start=0:end=0.5689,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_39];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_40];\n[cc_transparent_40][cc_clip_39]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_41];\n[cc_concat_38][cc_positioned_41]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_42];\n[11:v:0]trim=start=0:end=0.5689,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.1/2)*2):h=max(2\\,trunc(ih*1.1/2)*2):eval=frame,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_43];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_44];\n[cc_transparent_44][cc_clip_43]overlay=x=-48:y=-36:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_45];\n[cc_concat_42][cc_positioned_45]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_46];\n[12:v:0]trim=start=0:end=0.5688,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5688,setpts=PTS-STARTPTS[cc_clip_47];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5688,format=rgba,setpts=PTS-STARTPTS[cc_transparent_48];\n[cc_transparent_48][cc_clip_47]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5688,setpts=PTS-STARTPTS[cc_positioned_49];\n[cc_concat_46][cc_positioned_49]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_50];\n[13:v:0]trim=start=0:end=0.2845,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.06/2)*2):h=max(2\\,trunc(ih*1.06/2)*2):eval=frame,trim=duration=0.2845,setpts=PTS-STARTPTS[cc_clip_51];\ncolor=c=black@0.0:s=960x720:r=30:d=0.2845,format=rgba,setpts=PTS-STARTPTS[cc_transparent_52];\n[cc_transparent_52][cc_clip_51]overlay=x=-29:y=-22:shortest=1:format=auto,trim=duration=0.2845,setpts=PTS-STARTPTS[cc_positioned_53];\n[cc_concat_50][cc_positioned_53]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_54];\n[14:v:0]trim=start=0:end=0.2844,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.12/2)*2):h=max(2\\,trunc(ih*1.12/2)*2):eval=frame,trim=duration=0.2844,setpts=PTS-STARTPTS[cc_clip_55];\ncolor=c=black@0.0:s=960x720:r=30:d=0.2844,format=rgba,setpts=PTS-STARTPTS[cc_transparent_56];\n[cc_transparent_56][cc_clip_55]overlay=x=-58:y=-43:shortest=1:format=auto,trim=duration=0.2844,setpts=PTS-STARTPTS[cc_positioned_57];\n[cc_concat_54][cc_positioned_57]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_58];\n[15:v:0]trim=start=0:end=0.5689,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.06/2)*2):h=max(2\\,trunc(ih*1.06/2)*2):eval=frame,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_59];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_60];\n[cc_transparent_60][cc_clip_59]overlay=x=-29:y=-22:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_61];\n[cc_concat_58][cc_positioned_61]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_62];\n[16:v:0]trim=start=0:end=1.1378,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_clip_63];\ncolor=c=black@0.0:s=960x720:r=30:d=1.1378,format=rgba,setpts=PTS-STARTPTS[cc_transparent_64];\n[cc_transparent_64][cc_clip_63]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_positioned_65];\n[cc_concat_62][cc_positioned_65]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_66];\n[17:v:0]trim=start=0:end=0.5689,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.06/2)*2):h=max(2\\,trunc(ih*1.06/2)*2):eval=frame,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_67];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_68];\n[cc_transparent_68][cc_clip_67]overlay=x=-29:y=-22:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_69];\n[cc_concat_66][cc_positioned_69]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_70];\n[18:v:0]trim=start=0:end=0.5688,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5688,setpts=PTS-STARTPTS[cc_clip_71];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5688,format=rgba,setpts=PTS-STARTPTS[cc_transparent_72];\n[cc_transparent_72][cc_clip_71]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5688,setpts=PTS-STARTPTS[cc_positioned_73];\n[cc_concat_70][cc_positioned_73]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_74];\n[19:v:0]trim=start=0:end=1.1378,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.06/2)*2):h=max(2\\,trunc(ih*1.06/2)*2):eval=frame,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_clip_75];\ncolor=c=black@0.0:s=960x720:r=30:d=1.1378,format=rgba,setpts=PTS-STARTPTS[cc_transparent_76];\n[cc_transparent_76][cc_clip_75]overlay=x=-29:y=-22:shortest=1:format=auto,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_positioned_77];\n[cc_concat_74][cc_positioned_77]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_78];\n[20:v:0]trim=start=0:end=0.5689,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.12/2)*2):h=max(2\\,trunc(ih*1.12/2)*2):eval=frame,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_79];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_80];\n[cc_transparent_80][cc_clip_79]overlay=x=-58:y=-43:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_81];\n[cc_concat_78][cc_positioned_81]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_82];\n[21:v:0]trim=start=0:end=0.5689,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.06/2)*2):h=max(2\\,trunc(ih*1.06/2)*2):eval=frame,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_83];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_84];\n[cc_transparent_84][cc_clip_83]overlay=x=-29:y=-22:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_85];\n[cc_concat_82][cc_positioned_85]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_86];\n[22:v:0]trim=start=0:end=0.5688,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.08/2)*2):h=max(2\\,trunc(ih*1.08/2)*2):eval=frame,trim=duration=0.5688,setpts=PTS-STARTPTS[cc_clip_87];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5688,format=rgba,setpts=PTS-STARTPTS[cc_transparent_88];\n[cc_transparent_88][cc_clip_87]overlay=x=-38:y=-29:shortest=1:format=auto,trim=duration=0.5688,setpts=PTS-STARTPTS[cc_positioned_89];\n[cc_concat_86][cc_positioned_89]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_90];\n[23:v:0]trim=start=0:end=0.5689,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.1/2)*2):h=max(2\\,trunc(ih*1.1/2)*2):eval=frame,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_91];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_92];\n[cc_transparent_92][cc_clip_91]overlay=x=-48:y=-36:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_93];\n[cc_concat_90][cc_positioned_93]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_94];\n[24:v:0]trim=start=0:end=0.2845,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.2845,setpts=PTS-STARTPTS[cc_clip_95];\ncolor=c=black@0.0:s=960x720:r=30:d=0.2845,format=rgba,setpts=PTS-STARTPTS[cc_transparent_96];\n[cc_transparent_96][cc_clip_95]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.2845,setpts=PTS-STARTPTS[cc_positioned_97];\n[cc_concat_94][cc_positioned_97]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_98];\n[25:v:0]trim=start=0:end=0.2844,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.06/2)*2):h=max(2\\,trunc(ih*1.06/2)*2):eval=frame,trim=duration=0.2844,setpts=PTS-STARTPTS[cc_clip_99];\ncolor=c=black@0.0:s=960x720:r=30:d=0.2844,format=rgba,setpts=PTS-STARTPTS[cc_transparent_100];\n[cc_transparent_100][cc_clip_99]overlay=x=-29:y=-22:shortest=1:format=auto,trim=duration=0.2844,setpts=PTS-STARTPTS[cc_positioned_101];\n[cc_concat_98][cc_positioned_101]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_102];\n[26:v:0]trim=start=0:end=0.5689,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.12/2)*2):h=max(2\\,trunc(ih*1.12/2)*2):eval=frame,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_103];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_104];\n[cc_transparent_104][cc_clip_103]overlay=x=-58:y=-43:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_105];\n[cc_concat_102][cc_positioned_105]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_106];\n[27:v:0]trim=start=0:end=0.5689,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_107];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_108];\n[cc_transparent_108][cc_clip_107]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_109];\n[cc_concat_106][cc_positioned_109]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_110];\n[28:v:0]trim=start=0:end=0.5689,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_111];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_112];\n[cc_transparent_112][cc_clip_111]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_113];\n[cc_concat_110][cc_positioned_113]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_114];\n[29:v:0]trim=start=0:end=0.2844,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.12/2)*2):h=max(2\\,trunc(ih*1.12/2)*2):eval=frame,trim=duration=0.2844,setpts=PTS-STARTPTS[cc_clip_115];\ncolor=c=black@0.0:s=960x720:r=30:d=0.2844,format=rgba,setpts=PTS-STARTPTS[cc_transparent_116];\n[cc_transparent_116][cc_clip_115]overlay=x=-58:y=-43:shortest=1:format=auto,trim=duration=0.2844,setpts=PTS-STARTPTS[cc_positioned_117];\n[cc_concat_114][cc_positioned_117]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_118];\n[30:v:0]trim=start=0:end=0.2844,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.2844,setpts=PTS-STARTPTS[cc_clip_119];\ncolor=c=black@0.0:s=960x720:r=30:d=0.2844,format=rgba,setpts=PTS-STARTPTS[cc_transparent_120];\n[cc_transparent_120][cc_clip_119]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.2844,setpts=PTS-STARTPTS[cc_positioned_121];\n[cc_concat_118][cc_positioned_121]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_122];\n[31:v:0]trim=start=0:end=0.5689,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.08/2)*2):h=max(2\\,trunc(ih*1.08/2)*2):eval=frame,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_123];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_124];\n[cc_transparent_124][cc_clip_123]overlay=x=-38:y=-29:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_125];\n[cc_concat_122][cc_positioned_125]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_126];\n[32:v:0]trim=start=0:end=1.1378,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_clip_127];\ncolor=c=black@0.0:s=960x720:r=30:d=1.1378,format=rgba,setpts=PTS-STARTPTS[cc_transparent_128];\n[cc_transparent_128][cc_clip_127]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_positioned_129];\n[cc_concat_126][cc_positioned_129]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_130];\n[33:v:0]trim=start=0:end=0.5689,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_131];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_132];\n[cc_transparent_132][cc_clip_131]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_133];\n[cc_concat_130][cc_positioned_133]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_134];\n[34:v:0]trim=start=0:end=0.5689,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_135];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_136];\n[cc_transparent_136][cc_clip_135]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_137];\n[cc_concat_134][cc_positioned_137]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_138];\n[35:v:0]trim=start=0:end=1.1377,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.12/2)*2):h=max(2\\,trunc(ih*1.12/2)*2):eval=frame,trim=duration=1.1377,setpts=PTS-STARTPTS[cc_clip_139];\ncolor=c=black@0.0:s=960x720:r=30:d=1.1377,format=rgba,setpts=PTS-STARTPTS[cc_transparent_140];\n[cc_transparent_140][cc_clip_139]overlay=x=-58:y=-43:shortest=1:format=auto,trim=duration=1.1377,setpts=PTS-STARTPTS[cc_positioned_141];\n[cc_concat_138][cc_positioned_141]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_142];\n[36:v:0]trim=start=0:end=0.5689,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_143];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_144];\n[cc_transparent_144][cc_clip_143]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_145];\n[cc_concat_142][cc_positioned_145]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_146];\n[37:v:0]trim=start=0:end=0.5689,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.08/2)*2):h=max(2\\,trunc(ih*1.08/2)*2):eval=frame,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_147];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_148];\n[cc_transparent_148][cc_clip_147]overlay=x=-38:y=-29:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_149];\n[cc_concat_146][cc_positioned_149]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_150];\n[38:v:0]trim=start=0:end=1.1377,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1.1377,setpts=PTS-STARTPTS[cc_clip_151];\ncolor=c=black@0.0:s=960x720:r=30:d=1.1377,format=rgba,setpts=PTS-STARTPTS[cc_transparent_152];\n[cc_transparent_152][cc_clip_151]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1.1377,setpts=PTS-STARTPTS[cc_positioned_153];\n[cc_concat_150][cc_positioned_153]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_154];\n[39:v:0]trim=start=0:end=0.2845,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.2845,setpts=PTS-STARTPTS[cc_clip_155];\ncolor=c=black@0.0:s=960x720:r=30:d=0.2845,format=rgba,setpts=PTS-STARTPTS[cc_transparent_156];\n[cc_transparent_156][cc_clip_155]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.2845,setpts=PTS-STARTPTS[cc_positioned_157];\n[cc_concat_154][cc_positioned_157]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_158];\n[40:v:0]trim=start=0:end=0.5689,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_159];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_160];\n[cc_transparent_160][cc_clip_159]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_161];\n[cc_concat_158][cc_positioned_161]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_162];\n[41:v:0]trim=start=0:end=0.2844,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.12/2)*2):h=max(2\\,trunc(ih*1.12/2)*2):eval=frame,trim=duration=0.2844,setpts=PTS-STARTPTS[cc_clip_163];\ncolor=c=black@0.0:s=960x720:r=30:d=0.2844,format=rgba,setpts=PTS-STARTPTS[cc_transparent_164];\n[cc_transparent_164][cc_clip_163]overlay=x=-58:y=-43:shortest=1:format=auto,trim=duration=0.2844,setpts=PTS-STARTPTS[cc_positioned_165];\n[cc_concat_162][cc_positioned_165]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_166];\n[42:v:0]trim=start=0:end=1.1378,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_clip_167];\ncolor=c=black@0.0:s=960x720:r=30:d=1.1378,format=rgba,setpts=PTS-STARTPTS[cc_transparent_168];\n[cc_transparent_168][cc_clip_167]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_positioned_169];\n[cc_concat_166][cc_positioned_169]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_170];\n[43:v:0]trim=start=0:end=0.5689,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.08/2)*2):h=max(2\\,trunc(ih*1.08/2)*2):eval=frame,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_171];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_172];\n[cc_transparent_172][cc_clip_171]overlay=x=-38:y=-29:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_173];\n[cc_concat_170][cc_positioned_173]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_174];\n[44:v:0]trim=start=0:end=0.5688,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5688,setpts=PTS-STARTPTS[cc_clip_175];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5688,format=rgba,setpts=PTS-STARTPTS[cc_transparent_176];\n[cc_transparent_176][cc_clip_175]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5688,setpts=PTS-STARTPTS[cc_positioned_177];\n[cc_concat_174][cc_positioned_177]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_178];\n[45:v:0]trim=start=0:end=1.1378,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_clip_179];\ncolor=c=black@0.0:s=960x720:r=30:d=1.1378,format=rgba,setpts=PTS-STARTPTS[cc_transparent_180];\n[cc_transparent_180][cc_clip_179]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_positioned_181];\n[cc_concat_178][cc_positioned_181]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_182];\n[46:v:0]trim=start=0:end=0.2844,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.2844,setpts=PTS-STARTPTS[cc_clip_183];\ncolor=c=black@0.0:s=960x720:r=30:d=0.2844,format=rgba,setpts=PTS-STARTPTS[cc_transparent_184];\n[cc_transparent_184][cc_clip_183]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.2844,setpts=PTS-STARTPTS[cc_positioned_185];\n[cc_concat_182][cc_positioned_185]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_186];\n[47:v:0]trim=start=0:end=0.2845,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.12/2)*2):h=max(2\\,trunc(ih*1.12/2)*2):eval=frame,trim=duration=0.2845,setpts=PTS-STARTPTS[cc_clip_187];\ncolor=c=black@0.0:s=960x720:r=30:d=0.2845,format=rgba,setpts=PTS-STARTPTS[cc_transparent_188];\n[cc_transparent_188][cc_clip_187]overlay=x=-58:y=-43:shortest=1:format=auto,trim=duration=0.2845,setpts=PTS-STARTPTS[cc_positioned_189];\n[cc_concat_186][cc_positioned_189]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_190];\n[48:v:0]trim=start=0:end=0.5689,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_191];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_192];\n[cc_transparent_192][cc_clip_191]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_193];\n[cc_concat_190][cc_positioned_193]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_194];\n[49:v:0]trim=start=0:end=0.5688,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.1/2)*2):h=max(2\\,trunc(ih*1.1/2)*2):eval=frame,trim=duration=0.5688,setpts=PTS-STARTPTS[cc_clip_195];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5688,format=rgba,setpts=PTS-STARTPTS[cc_transparent_196];\n[cc_transparent_196][cc_clip_195]overlay=x=-48:y=-36:shortest=1:format=auto,trim=duration=0.5688,setpts=PTS-STARTPTS[cc_positioned_197];\n[cc_concat_194][cc_positioned_197]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_198];\n[50:v:0]trim=start=0:end=0.5689,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.12/2)*2):h=max(2\\,trunc(ih*1.12/2)*2):eval=frame,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_199];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_200];\n[cc_transparent_200][cc_clip_199]overlay=x=-58:y=-43:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_201];\n[cc_concat_198][cc_positioned_201]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_202];\n[51:v:0]trim=start=0:end=0.5689,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.06/2)*2):h=max(2\\,trunc(ih*1.06/2)*2):eval=frame,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_203];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_204];\n[cc_transparent_204][cc_clip_203]overlay=x=-29:y=-22:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_205];\n[cc_concat_202][cc_positioned_205]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_206];\n[52:v:0]trim=start=0:end=0.5689,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.08/2)*2):h=max(2\\,trunc(ih*1.08/2)*2):eval=frame,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_207];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_208];\n[cc_transparent_208][cc_clip_207]overlay=x=-38:y=-29:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_209];\n[cc_concat_206][cc_positioned_209]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_210];\n[53:v:0]trim=start=0:end=1.1378,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.06/2)*2):h=max(2\\,trunc(ih*1.06/2)*2):eval=frame,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_clip_211];\ncolor=c=black@0.0:s=960x720:r=30:d=1.1378,format=rgba,setpts=PTS-STARTPTS[cc_transparent_212];\n[cc_transparent_212][cc_clip_211]overlay=x=-29:y=-22:shortest=1:format=auto,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_positioned_213];\n[cc_concat_210][cc_positioned_213]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_214];\ncolor=c=0x000000:s=960x720:r=30:d=0.1,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.8,trim=duration=0.1,setpts=PTS-STARTPTS[cc_clip_215];\ncolor=c=black@0.0:s=960x720:r=30:d=0.1,format=rgba,setpts=PTS-STARTPTS[cc_transparent_216];\n[cc_transparent_216][cc_clip_215]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.1,setpts=PTS-STARTPTS[cc_positioned_217];\ncolor=c=0x000000:s=960x720:r=30:d=0.1,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.5,trim=duration=0.1,setpts=PTS-STARTPTS[cc_clip_218];\ncolor=c=black@0.0:s=960x720:r=30:d=0.1,format=rgba,setpts=PTS-STARTPTS[cc_transparent_219];\n[cc_transparent_219][cc_clip_218]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.1,setpts=PTS-STARTPTS[cc_positioned_220];\n[cc_positioned_217][cc_positioned_220]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_221];\ncolor=c=0x000000:s=960x720:r=30:d=0.1,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.2,trim=duration=0.1,setpts=PTS-STARTPTS[cc_clip_222];\ncolor=c=black@0.0:s=960x720:r=30:d=0.1,format=rgba,setpts=PTS-STARTPTS[cc_transparent_223];\n[cc_transparent_223][cc_clip_222]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.1,setpts=PTS-STARTPTS[cc_positioned_224];\n[cc_concat_221][cc_positioned_224]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_225];\ncolor=c=0xFFFFFF:s=960x720:r=30:d=0.067,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.7,trim=duration=0.067,setpts=PTS-STARTPTS[cc_clip_226];\ncolor=c=black@0.0:s=960x720:r=30:d=0.067,format=rgba,setpts=PTS-STARTPTS[cc_transparent_227];\n[cc_transparent_227][cc_clip_226]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.067,setpts=PTS-STARTPTS[cc_positioned_228];\ncolor=c=black@0.0:s=960x720:r=30:d=8.8021,format=rgba,setpts=PTS-STARTPTS[cc_transparent_229];\n[cc_concat_225][cc_transparent_229]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_230];\n[cc_concat_230][cc_positioned_228]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_231];\ncolor=c=0xFFFFFF:s=960x720:r=30:d=0.067,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.7,trim=duration=0.067,setpts=PTS-STARTPTS[cc_clip_232];\ncolor=c=black@0.0:s=960x720:r=30:d=0.067,format=rgba,setpts=PTS-STARTPTS[cc_transparent_233];\n[cc_transparent_233][cc_clip_232]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.067,setpts=PTS-STARTPTS[cc_positioned_234];\ncolor=c=black@0.0:s=960x720:r=30:d=22.6883,format=rgba,setpts=PTS-STARTPTS[cc_transparent_235];\n[cc_concat_231][cc_transparent_235]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_236];\n[cc_concat_236][cc_positioned_234]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_237];\ncolor=c=0x000000:s=960x720:r=30:d=0.12,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.25,trim=duration=0.12,setpts=PTS-STARTPTS[cc_clip_238];\ncolor=c=black@0.0:s=960x720:r=30:d=0.12,format=rgba,setpts=PTS-STARTPTS[cc_transparent_239];\n[cc_transparent_239][cc_clip_238]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.12,setpts=PTS-STARTPTS[cc_positioned_240];\ncolor=c=black@0.0:s=960x720:r=30:d=4.0041,format=rgba,setpts=PTS-STARTPTS[cc_transparent_241];\n[cc_concat_237][cc_transparent_241]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_242];\n[cc_concat_242][cc_positioned_240]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_243];\ncolor=c=0x000000:s=960x720:r=30:d=0.12,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.5,trim=duration=0.12,setpts=PTS-STARTPTS[cc_clip_244];\ncolor=c=black@0.0:s=960x720:r=30:d=0.12,format=rgba,setpts=PTS-STARTPTS[cc_transparent_245];\n[cc_transparent_245][cc_clip_244]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.12,setpts=PTS-STARTPTS[cc_positioned_246];\n[cc_concat_243][cc_positioned_246]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_247];\ncolor=c=0x000000:s=960x720:r=30:d=0.12,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.75,trim=duration=0.12,setpts=PTS-STARTPTS[cc_clip_248];\ncolor=c=black@0.0:s=960x720:r=30:d=0.12,format=rgba,setpts=PTS-STARTPTS[cc_transparent_249];\n[cc_transparent_249][cc_clip_248]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.12,setpts=PTS-STARTPTS[cc_positioned_250];\n[cc_concat_247][cc_positioned_250]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_251];\ncolor=c=0x000000:s=960x720:r=30:d=0.12,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.12,setpts=PTS-STARTPTS[cc_clip_252];\ncolor=c=black@0.0:s=960x720:r=30:d=0.12,format=rgba,setpts=PTS-STARTPTS[cc_transparent_253];\n[cc_transparent_253][cc_clip_252]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.12,setpts=PTS-STARTPTS[cc_positioned_254];\n[cc_concat_251][cc_positioned_254]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_255];\n[54:v:0]trim=duration=4.5511,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=4.5511,setpts=PTS-STARTPTS[cc_clip_256];\ncolor=c=black@0.0:s=960x720:r=30:d=4.5511,format=rgba,setpts=PTS-STARTPTS[cc_transparent_257];\n[cc_transparent_257][cc_clip_256]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.5511,setpts=PTS-STARTPTS[cc_positioned_258];\n[55:v:0]trim=duration=4.551,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=4.551,setpts=PTS-STARTPTS[cc_clip_259];\ncolor=c=black@0.0:s=960x720:r=30:d=4.551,format=rgba,setpts=PTS-STARTPTS[cc_transparent_260];\n[cc_transparent_260][cc_clip_259]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.551,setpts=PTS-STARTPTS[cc_positioned_261];\n[cc_positioned_258][cc_positioned_261]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_262];\n[56:v:0]trim=duration=4.5511,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=4.5511,setpts=PTS-STARTPTS[cc_clip_263];\ncolor=c=black@0.0:s=960x720:r=30:d=4.5511,format=rgba,setpts=PTS-STARTPTS[cc_transparent_264];\n[cc_transparent_264][cc_clip_263]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.5511,setpts=PTS-STARTPTS[cc_positioned_265];\n[cc_concat_262][cc_positioned_265]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_266];\n[57:v:0]trim=duration=4.551,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=4.551,setpts=PTS-STARTPTS[cc_clip_267];\ncolor=c=black@0.0:s=960x720:r=30:d=4.551,format=rgba,setpts=PTS-STARTPTS[cc_transparent_268];\n[cc_transparent_268][cc_clip_267]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.551,setpts=PTS-STARTPTS[cc_positioned_269];\n[cc_concat_266][cc_positioned_269]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_270];\n[58:v:0]trim=duration=4.5511,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=4.5511,setpts=PTS-STARTPTS[cc_clip_271];\ncolor=c=black@0.0:s=960x720:r=30:d=4.5511,format=rgba,setpts=PTS-STARTPTS[cc_transparent_272];\n[cc_transparent_272][cc_clip_271]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.5511,setpts=PTS-STARTPTS[cc_positioned_273];\n[cc_concat_270][cc_positioned_273]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_274];\n[59:v:0]trim=duration=4.551,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=4.551,setpts=PTS-STARTPTS[cc_clip_275];\ncolor=c=black@0.0:s=960x720:r=30:d=4.551,format=rgba,setpts=PTS-STARTPTS[cc_transparent_276];\n[cc_transparent_276][cc_clip_275]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.551,setpts=PTS-STARTPTS[cc_positioned_277];\n[cc_concat_274][cc_positioned_277]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_278];\n[60:v:0]trim=duration=4.5511,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=4.5511,setpts=PTS-STARTPTS[cc_clip_279];\ncolor=c=black@0.0:s=960x720:r=30:d=4.5511,format=rgba,setpts=PTS-STARTPTS[cc_transparent_280];\n[cc_transparent_280][cc_clip_279]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.5511,setpts=PTS-STARTPTS[cc_positioned_281];\n[cc_concat_278][cc_positioned_281]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_282];\n[61:v:0]trim=duration=4.5511,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=4.5511,setpts=PTS-STARTPTS[cc_clip_283];\ncolor=c=black@0.0:s=960x720:r=30:d=4.5511,format=rgba,setpts=PTS-STARTPTS[cc_transparent_284];\n[cc_transparent_284][cc_clip_283]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.5511,setpts=PTS-STARTPTS[cc_positioned_285];\n[cc_concat_282][cc_positioned_285]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_286];\ncolor=c=black:s=960x720:r=30:d=36.4085,format=rgba,setpts=PTS-STARTPTS[cc_black_287];\n[cc_black_287][cc_concat_214]overlay=x=0:y=0:eof_action=pass:repeatlast=0:format=auto,setpts=PTS-STARTPTS[cc_composite_288];\n[cc_composite_288][cc_concat_255]overlay=x=0:y=0:eof_action=pass:repeatlast=0:format=auto,setpts=PTS-STARTPTS[cc_composite_289];\n[cc_composite_289][cc_concat_286]overlay=x=0:y=0:eof_action=pass:repeatlast=0:format=auto,setpts=PTS-STARTPTS[cc_composite_290];\n[cc_composite_290]fps=30,trim=duration=36.4085,format=yuv420p,setpts=PTS-STARTPTS[vout];\n[62:a:0]atrim=start=0:end=36.4085,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,apad=pad_dur=36.4085,atrim=duration=36.4085,adelay=delays=0:all=1,asetpts=PTS-STARTPTS[cc_audio_291];\nanullsrc=r=48000:cl=stereo:d=36.4085[cc_silence_292];\n[cc_silence_292][cc_audio_291]amix=inputs=2:duration=longest:dropout_transition=0:normalize=0,aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,atrim=duration=36.4085,asetpts=PTS-STARTPTS[aout]\n",
+      "output": {
+        "path": "/workspace/demo/guichu-v2/guichu-v2.mp4",
+        "temporaryPath": "{output}",
+        "format": "mp4",
+        "overwrite": true
+      },
+      "media": {
+        "durationSeconds": 36.4085,
+        "width": 960,
+        "height": 720,
+        "frameRate": 30,
+        "pixelFormat": "yuv420p",
+        "videoCodec": "h264",
+        "audioCodec": "aac",
+        "audioSampleRate": 48000,
+        "audioChannels": 2
+      },
+      "warnings": [],
+      "textFiles": []
+    }
+  }
+}

@@ -1,0 +1,1149 @@
+{
+  "version": 1,
+  "createdAt": "2026-11-17T11:52:43.390Z",
+  "projectRevision": 1,
+  "project": {
+    "schemaVersion": 1,
+    "revision": 1,
+    "name": "鬼畜 v2 - 音频优先 105.47BPM",
+    "assets": [
+      {
+        "id": "sub1",
+        "kind": "image",
+        "path": "assets/sub1.png"
+      },
+      {
+        "id": "sub2",
+        "kind": "image",
+        "path": "assets/sub2.png"
+      },
+      {
+        "id": "sub3",
+        "kind": "image",
+        "path": "assets/sub3.png"
+      },
+      {
+        "id": "sub4",
+        "kind": "image",
+        "path": "assets/sub4.png"
+      },
+      {
+        "id": "sub5",
+        "kind": "image",
+        "path": "assets/sub5.png"
+      },
+      {
+        "id": "sub6",
+        "kind": "image",
+        "path": "assets/sub6.png"
+      },
+      {
+        "id": "sub7",
+        "kind": "image",
+        "path": "assets/sub7.png"
+      },
+      {
+        "id": "sub8",
+        "kind": "image",
+        "path": "assets/sub8.png"
+      },
+      {
+        "id": "mix",
+        "kind": "audio",
+        "path": "assets/audio.wav"
+      },
+      {
+        "id": "shot01",
+        "kind": "video",
+        "path": "assets/shots/shot01.mp4"
+      },
+      {
+        "id": "shot02",
+        "kind": "video",
+        "path": "assets/shots/shot02.mp4"
+      },
+      {
+        "id": "shot03",
+        "kind": "video",
+        "path": "assets/shots/shot03.mp4"
+      },
+      {
+        "id": "shot04",
+        "kind": "video",
+        "path": "assets/shots/shot04.mp4"
+      },
+      {
+        "id": "shot05",
+        "kind": "video",
+        "path": "assets/shots/shot05.mp4"
+      },
+      {
+        "id": "shot06",
+        "kind": "video",
+        "path": "assets/shots/shot06.mp4"
+      },
+      {
+        "id": "shot07",
+        "kind": "video",
+        "path": "assets/shots/shot07.mp4"
+      },
+      {
+        "id": "shot08",
+        "kind": "video",
+        "path": "assets/shots/shot08.mp4"
+      },
+      {
+        "id": "shot09",
+        "kind": "video",
+        "path": "assets/shots/shot09.mp4"
+      },
+      {
+        "id": "shot10",
+        "kind": "video",
+        "path": "assets/shots/shot10.mp4"
+      },
+      {
+        "id": "shot11",
+        "kind": "video",
+        "path": "assets/shots/shot11.mp4"
+      },
+      {
+        "id": "shot12",
+        "kind": "video",
+        "path": "assets/shots/shot12.mp4"
+      },
+      {
+        "id": "shot13",
+        "kind": "video",
+        "path": "assets/shots/shot13.mp4"
+      },
+      {
+        "id": "shot14",
+        "kind": "video",
+        "path": "assets/shots/shot14.mp4"
+      },
+      {
+        "id": "shot15",
+        "kind": "video",
+        "path": "assets/shots/shot15.mp4"
+      },
+      {
+        "id": "shot16",
+        "kind": "video",
+        "path": "assets/shots/shot16.mp4"
+      },
+      {
+        "id": "shot17",
+        "kind": "video",
+        "path": "assets/shots/shot17.mp4"
+      },
+      {
+        "id": "shot18",
+        "kind": "video",
+        "path": "assets/shots/shot18.mp4"
+      },
+      {
+        "id": "shot19",
+        "kind": "video",
+        "path": "assets/shots/shot19.mp4"
+      },
+      {
+        "id": "shot20",
+        "kind": "video",
+        "path": "assets/shots/shot20.mp4"
+      },
+      {
+        "id": "shot21",
+        "kind": "video",
+        "path": "assets/shots/shot21.mp4"
+      },
+      {
+        "id": "shot22",
+        "kind": "video",
+        "path": "assets/shots/shot22.mp4"
+      },
+      {
+        "id": "shot23",
+        "kind": "video",
+        "path": "assets/shots/shot23.mp4"
+      },
+      {
+        "id": "shot24",
+        "kind": "video",
+        "path": "assets/shots/shot24.mp4"
+      },
+      {
+        "id": "shot25",
+        "kind": "video",
+        "path": "assets/shots/shot25.mp4"
+      },
+      {
+        "id": "shot26",
+        "kind": "video",
+        "path": "assets/shots/shot26.mp4"
+      },
+      {
+        "id": "shot27",
+        "kind": "video",
+        "path": "assets/shots/shot27.mp4"
+      },
+      {
+        "id": "shot28",
+        "kind": "video",
+        "path": "assets/shots/shot28.mp4"
+      },
+      {
+        "id": "shot29",
+        "kind": "video",
+        "path": "assets/shots/shot29.mp4"
+      },
+      {
+        "id": "shot30",
+        "kind": "video",
+        "path": "assets/shots/shot30.mp4"
+      },
+      {
+        "id": "shot31",
+        "kind": "video",
+        "path": "assets/shots/shot31.mp4"
+      },
+      {
+        "id": "shot32",
+        "kind": "video",
+        "path": "assets/shots/shot32.mp4"
+      },
+      {
+        "id": "shot33",
+        "kind": "video",
+        "path": "assets/shots/shot33.mp4"
+      },
+      {
+        "id": "shot34",
+        "kind": "video",
+        "path": "assets/shots/shot34.mp4"
+      }
+    ],
+    "tracks": [
+      {
+        "id": "v1",
+        "kind": "video",
+        "name": "分镜",
+        "clips": [
+          {
+            "id": "shot01",
+            "type": "video",
+            "assetId": "shot01",
+            "start": 0,
+            "duration": 2.2755,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1
+          },
+          {
+            "id": "shot02",
+            "type": "video",
+            "assetId": "shot02",
+            "start": 2.2755,
+            "duration": 2.2756,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1.08,
+            "position": {
+              "x": -38,
+              "y": -29
+            }
+          },
+          {
+            "id": "shot03",
+            "type": "video",
+            "assetId": "shot03",
+            "start": 4.5511,
+            "duration": 1.1377,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1
+          },
+          {
+            "id": "shot04",
+            "type": "video",
+            "assetId": "shot04",
+            "start": 5.6888,
+            "duration": 1.1378,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1
+          },
+          {
+            "id": "shot05",
+            "type": "video",
+            "assetId": "shot05",
+            "start": 6.8266,
+            "duration": 2.2755,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1
+          },
+          {
+            "id": "shot06",
+            "type": "video",
+            "assetId": "shot06",
+            "start": 9.1021,
+            "duration": 0.5689,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1.12,
+            "position": {
+              "x": -58,
+              "y": -43
+            }
+          },
+          {
+            "id": "shot07",
+            "type": "video",
+            "assetId": "shot07",
+            "start": 9.671,
+            "duration": 0.5689,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1
+          },
+          {
+            "id": "shot08",
+            "type": "video",
+            "assetId": "shot08",
+            "start": 10.2399,
+            "duration": 1.1377,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1.08,
+            "position": {
+              "x": -38,
+              "y": -29
+            }
+          },
+          {
+            "id": "shot09",
+            "type": "video",
+            "assetId": "shot09",
+            "start": 11.3776,
+            "duration": 1.1378,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1
+          },
+          {
+            "id": "shot10",
+            "type": "video",
+            "assetId": "shot10",
+            "start": 12.5154,
+            "duration": 1.1378,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1
+          },
+          {
+            "id": "shot11",
+            "type": "video",
+            "assetId": "shot11",
+            "start": 13.6532,
+            "duration": 0.5689,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1
+          },
+          {
+            "id": "shot12",
+            "type": "video",
+            "assetId": "shot12",
+            "start": 14.2221,
+            "duration": 0.5688,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1.12,
+            "position": {
+              "x": -58,
+              "y": -43
+            }
+          },
+          {
+            "id": "shot13",
+            "type": "video",
+            "assetId": "shot13",
+            "start": 14.7909,
+            "duration": 1.1378,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1
+          },
+          {
+            "id": "shot14",
+            "type": "video",
+            "assetId": "shot14",
+            "start": 15.9287,
+            "duration": 2.2755,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1.08,
+            "position": {
+              "x": -38,
+              "y": -29
+            }
+          },
+          {
+            "id": "shot15",
+            "type": "video",
+            "assetId": "shot15",
+            "start": 18.2042,
+            "duration": 0.5689,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1
+          },
+          {
+            "id": "shot16",
+            "type": "video",
+            "assetId": "shot16",
+            "start": 18.7731,
+            "duration": 0.5689,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1
+          },
+          {
+            "id": "shot17",
+            "type": "video",
+            "assetId": "shot17",
+            "start": 19.342,
+            "duration": 0.5689,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1
+          },
+          {
+            "id": "shot18",
+            "type": "video",
+            "assetId": "shot18",
+            "start": 19.9109,
+            "duration": 0.5689,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1
+          },
+          {
+            "id": "shot19",
+            "type": "video",
+            "assetId": "shot19",
+            "start": 20.4798,
+            "duration": 1.1377,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1
+          },
+          {
+            "id": "shot20",
+            "type": "video",
+            "assetId": "shot20",
+            "start": 21.6175,
+            "duration": 1.1378,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1.06,
+            "position": {
+              "x": -29,
+              "y": -22
+            }
+          },
+          {
+            "id": "shot21",
+            "type": "video",
+            "assetId": "shot21",
+            "start": 22.7553,
+            "duration": 1.1378,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1.12,
+            "position": {
+              "x": -58,
+              "y": -43
+            }
+          },
+          {
+            "id": "shot22",
+            "type": "video",
+            "assetId": "shot22",
+            "start": 23.8931,
+            "duration": 1.1377,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1.06,
+            "position": {
+              "x": -29,
+              "y": -22
+            }
+          },
+          {
+            "id": "shot23",
+            "type": "video",
+            "assetId": "shot23",
+            "start": 25.0308,
+            "duration": 2.2755,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1.08,
+            "position": {
+              "x": -38,
+              "y": -29
+            }
+          },
+          {
+            "id": "shot24",
+            "type": "video",
+            "assetId": "shot24",
+            "start": 27.3063,
+            "duration": 0.5689,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1.06,
+            "position": {
+              "x": -29,
+              "y": -22
+            }
+          },
+          {
+            "id": "shot25",
+            "type": "video",
+            "assetId": "shot25",
+            "start": 27.8752,
+            "duration": 0.5689,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1
+          },
+          {
+            "id": "shot26",
+            "type": "video",
+            "assetId": "shot26",
+            "start": 28.4441,
+            "duration": 1.1378,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1.06,
+            "position": {
+              "x": -29,
+              "y": -22
+            }
+          },
+          {
+            "id": "shot27",
+            "type": "video",
+            "assetId": "shot27",
+            "start": 29.5819,
+            "duration": 1.1377,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1.12,
+            "position": {
+              "x": -58,
+              "y": -43
+            }
+          },
+          {
+            "id": "shot28",
+            "type": "video",
+            "assetId": "shot28",
+            "start": 30.7196,
+            "duration": 1.1378,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1.06,
+            "position": {
+              "x": -29,
+              "y": -22
+            }
+          },
+          {
+            "id": "shot29",
+            "type": "video",
+            "assetId": "shot29",
+            "start": 31.8574,
+            "duration": 0.5689,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1.08,
+            "position": {
+              "x": -38,
+              "y": -29
+            }
+          },
+          {
+            "id": "shot30",
+            "type": "video",
+            "assetId": "shot30",
+            "start": 32.4263,
+            "duration": 0.5689,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1.12,
+            "position": {
+              "x": -58,
+              "y": -43
+            }
+          },
+          {
+            "id": "shot31",
+            "type": "video",
+            "assetId": "shot31",
+            "start": 32.9952,
+            "duration": 0.5688,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1
+          },
+          {
+            "id": "shot32",
+            "type": "video",
+            "assetId": "shot32",
+            "start": 33.564,
+            "duration": 0.5689,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1.08,
+            "position": {
+              "x": -38,
+              "y": -29
+            }
+          },
+          {
+            "id": "shot33",
+            "type": "video",
+            "assetId": "shot33",
+            "start": 34.1329,
+            "duration": 1.1378,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1.12,
+            "position": {
+              "x": -58,
+              "y": -43
+            }
+          },
+          {
+            "id": "shot34",
+            "type": "video",
+            "assetId": "shot34",
+            "start": 35.2707,
+            "duration": 1.1378,
+            "sourceStart": 0,
+            "volume": 0,
+            "scale": 1
+          }
+        ]
+      },
+      {
+        "id": "v2",
+        "kind": "video",
+        "name": "特效",
+        "clips": [
+          {
+            "id": "flash0",
+            "type": "color",
+            "color": "#FFFFFF",
+            "start": 9.1021,
+            "duration": 0.067,
+            "opacity": 0.7
+          },
+          {
+            "id": "flash1",
+            "type": "color",
+            "color": "#FFFFFF",
+            "start": 31.8574,
+            "duration": 0.067,
+            "opacity": 0.7
+          },
+          {
+            "id": "fadein0",
+            "type": "color",
+            "color": "#000000",
+            "start": 0,
+            "duration": 0.1,
+            "opacity": 0.8
+          },
+          {
+            "id": "fadein1",
+            "type": "color",
+            "color": "#000000",
+            "start": 0.1,
+            "duration": 0.1,
+            "opacity": 0.5
+          },
+          {
+            "id": "fadein2",
+            "type": "color",
+            "color": "#000000",
+            "start": 0.2,
+            "duration": 0.1,
+            "opacity": 0.2
+          },
+          {
+            "id": "fadeout0",
+            "type": "color",
+            "color": "#000000",
+            "start": 35.9285,
+            "duration": 0.12,
+            "opacity": 0.25
+          },
+          {
+            "id": "fadeout1",
+            "type": "color",
+            "color": "#000000",
+            "start": 36.0485,
+            "duration": 0.12,
+            "opacity": 0.5
+          },
+          {
+            "id": "fadeout2",
+            "type": "color",
+            "color": "#000000",
+            "start": 36.1685,
+            "duration": 0.12,
+            "opacity": 0.75
+          },
+          {
+            "id": "fadeout3",
+            "type": "color",
+            "color": "#000000",
+            "start": 36.2885,
+            "duration": 0.12,
+            "opacity": 1
+          }
+        ]
+      },
+      {
+        "id": "v3",
+        "kind": "video",
+        "name": "字幕",
+        "clips": [
+          {
+            "id": "sub1",
+            "type": "image",
+            "assetId": "sub1",
+            "start": 0,
+            "duration": 4.5511,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "id": "sub2",
+            "type": "image",
+            "assetId": "sub2",
+            "start": 4.5511,
+            "duration": 4.551,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "id": "sub3",
+            "type": "image",
+            "assetId": "sub3",
+            "start": 9.1021,
+            "duration": 4.5511,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "id": "sub4",
+            "type": "image",
+            "assetId": "sub4",
+            "start": 13.6532,
+            "duration": 4.551,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "id": "sub5",
+            "type": "image",
+            "assetId": "sub5",
+            "start": 18.2042,
+            "duration": 4.5511,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "id": "sub6",
+            "type": "image",
+            "assetId": "sub6",
+            "start": 22.7553,
+            "duration": 4.551,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "id": "sub7",
+            "type": "image",
+            "assetId": "sub7",
+            "start": 27.3063,
+            "duration": 4.5511,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "id": "sub8",
+            "type": "image",
+            "assetId": "sub8",
+            "start": 31.8574,
+            "duration": 4.5511,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "a1",
+        "kind": "audio",
+        "name": "成品音频",
+        "clips": [
+          {
+            "id": "mix",
+            "type": "audio",
+            "assetId": "mix",
+            "start": 0,
+            "duration": 36.4085,
+            "sourceStart": 0,
+            "volume": 0.88
+          }
+        ]
+      }
+    ],
+    "output": {
+      "path": "guichu-v2.mp4",
+      "format": "mp4",
+      "videoCodec": "h264",
+      "audioCodec": "aac",
+      "width": 960,
+      "height": 720,
+      "frameRate": 30,
+      "pixelFormat": "yuv420p",
+      "audioSampleRate": 48000,
+      "audioChannels": 2
+    }
+  },
+  "assets": [
+    {
+      "id": "sub1",
+      "path": "assets/sub1.png",
+      "exists": true,
+      "size": 13333,
+      "mtimeMs": 1794916347151.698
+    },
+    {
+      "id": "sub2",
+      "path": "assets/sub2.png",
+      "exists": true,
+      "size": 13333,
+      "mtimeMs": 1794916347171.698
+    },
+    {
+      "id": "sub3",
+      "path": "assets/sub3.png",
+      "exists": true,
+      "size": 21767,
+      "mtimeMs": 1794916347191.6982
+    },
+    {
+      "id": "sub4",
+      "path": "assets/sub4.png",
+      "exists": true,
+      "size": 21767,
+      "mtimeMs": 1794916347215.6985
+    },
+    {
+      "id": "sub5",
+      "path": "assets/sub5.png",
+      "exists": true,
+      "size": 17173,
+      "mtimeMs": 1794916347231.6987
+    },
+    {
+      "id": "sub6",
+      "path": "assets/sub6.png",
+      "exists": true,
+      "size": 22531,
+      "mtimeMs": 1794916347255.699
+    },
+    {
+      "id": "sub7",
+      "path": "assets/sub7.png",
+      "exists": true,
+      "size": 21050,
+      "mtimeMs": 1794916347275.6992
+    },
+    {
+      "id": "sub8",
+      "path": "assets/sub8.png",
+      "exists": true,
+      "size": 21767,
+      "mtimeMs": 1794916347295.6992
+    },
+    {
+      "id": "mix",
+      "path": "assets/audio.wav",
+      "exists": true,
+      "size": 6990498,
+      "mtimeMs": 1794915597360.3157
+    },
+    {
+      "id": "shot01",
+      "path": "assets/shots/shot01.mp4",
+      "exists": true,
+      "size": 377079,
+      "mtimeMs": 1794916347655.703
+    },
+    {
+      "id": "shot02",
+      "path": "assets/shots/shot02.mp4",
+      "exists": true,
+      "size": 439037,
+      "mtimeMs": 1794916348047.7068
+    },
+    {
+      "id": "shot03",
+      "path": "assets/shots/shot03.mp4",
+      "exists": true,
+      "size": 164647,
+      "mtimeMs": 1794916348335.7095
+    },
+    {
+      "id": "shot04",
+      "path": "assets/shots/shot04.mp4",
+      "exists": true,
+      "size": 98037,
+      "mtimeMs": 1794916348587.712
+    },
+    {
+      "id": "shot05",
+      "path": "assets/shots/shot05.mp4",
+      "exists": true,
+      "size": 296586,
+      "mtimeMs": 1794916348947.7156
+    },
+    {
+      "id": "shot06",
+      "path": "assets/shots/shot06.mp4",
+      "exists": true,
+      "size": 67308,
+      "mtimeMs": 1794916349139.7175
+    },
+    {
+      "id": "shot07",
+      "path": "assets/shots/shot07.mp4",
+      "exists": true,
+      "size": 90928,
+      "mtimeMs": 1794916349347.7195
+    },
+    {
+      "id": "shot08",
+      "path": "assets/shots/shot08.mp4",
+      "exists": true,
+      "size": 103993,
+      "mtimeMs": 1794916349599.722
+    },
+    {
+      "id": "shot09",
+      "path": "assets/shots/shot09.mp4",
+      "exists": true,
+      "size": 176361,
+      "mtimeMs": 1794916349859.7246
+    },
+    {
+      "id": "shot10",
+      "path": "assets/shots/shot10.mp4",
+      "exists": true,
+      "size": 119930,
+      "mtimeMs": 1794916350127.7273
+    },
+    {
+      "id": "shot11",
+      "path": "assets/shots/shot11.mp4",
+      "exists": true,
+      "size": 64160,
+      "mtimeMs": 1794916350355.7295
+    },
+    {
+      "id": "shot12",
+      "path": "assets/shots/shot12.mp4",
+      "exists": true,
+      "size": 89145,
+      "mtimeMs": 1794916350583.7317
+    },
+    {
+      "id": "shot13",
+      "path": "assets/shots/shot13.mp4",
+      "exists": true,
+      "size": 110254,
+      "mtimeMs": 1794916350819.7341
+    },
+    {
+      "id": "shot14",
+      "path": "assets/shots/shot14.mp4",
+      "exists": true,
+      "size": 257360,
+      "mtimeMs": 1794916351095.7368
+    },
+    {
+      "id": "shot15",
+      "path": "assets/shots/shot15.mp4",
+      "exists": true,
+      "size": 92625,
+      "mtimeMs": 1794916351291.7388
+    },
+    {
+      "id": "shot16",
+      "path": "assets/shots/shot16.mp4",
+      "exists": true,
+      "size": 64583,
+      "mtimeMs": 1794916351483.7405
+    },
+    {
+      "id": "shot17",
+      "path": "assets/shots/shot17.mp4",
+      "exists": true,
+      "size": 83200,
+      "mtimeMs": 1794916351711.7427
+    },
+    {
+      "id": "shot18",
+      "path": "assets/shots/shot18.mp4",
+      "exists": true,
+      "size": 106108,
+      "mtimeMs": 1794916351939.745
+    },
+    {
+      "id": "shot19",
+      "path": "assets/shots/shot19.mp4",
+      "exists": true,
+      "size": 221860,
+      "mtimeMs": 1794916352223.7478
+    },
+    {
+      "id": "shot20",
+      "path": "assets/shots/shot20.mp4",
+      "exists": true,
+      "size": 179349,
+      "mtimeMs": 1794916352471.7502
+    },
+    {
+      "id": "shot21",
+      "path": "assets/shots/shot21.mp4",
+      "exists": true,
+      "size": 89214,
+      "mtimeMs": 1794916352703.7524
+    },
+    {
+      "id": "shot22",
+      "path": "assets/shots/shot22.mp4",
+      "exists": true,
+      "size": 82111,
+      "mtimeMs": 1794916352943.755
+    },
+    {
+      "id": "shot23",
+      "path": "assets/shots/shot23.mp4",
+      "exists": true,
+      "size": 208632,
+      "mtimeMs": 1794916353187.7573
+    },
+    {
+      "id": "shot24",
+      "path": "assets/shots/shot24.mp4",
+      "exists": true,
+      "size": 89569,
+      "mtimeMs": 1794916353399.7595
+    },
+    {
+      "id": "shot25",
+      "path": "assets/shots/shot25.mp4",
+      "exists": true,
+      "size": 94552,
+      "mtimeMs": 1794916353615.7615
+    },
+    {
+      "id": "shot26",
+      "path": "assets/shots/shot26.mp4",
+      "exists": true,
+      "size": 148971,
+      "mtimeMs": 1794916353871.7642
+    },
+    {
+      "id": "shot27",
+      "path": "assets/shots/shot27.mp4",
+      "exists": true,
+      "size": 155169,
+      "mtimeMs": 1794916354147.7668
+    },
+    {
+      "id": "shot28",
+      "path": "assets/shots/shot28.mp4",
+      "exists": true,
+      "size": 108582,
+      "mtimeMs": 1794916354407.7693
+    },
+    {
+      "id": "shot29",
+      "path": "assets/shots/shot29.mp4",
+      "exists": true,
+      "size": 88931,
+      "mtimeMs": 1794916354623.7715
+    },
+    {
+      "id": "shot30",
+      "path": "assets/shots/shot30.mp4",
+      "exists": true,
+      "size": 91534,
+      "mtimeMs": 1794916354831.7734
+    },
+    {
+      "id": "shot31",
+      "path": "assets/shots/shot31.mp4",
+      "exists": true,
+      "size": 68810,
+      "mtimeMs": 1794916355007.7751
+    },
+    {
+      "id": "shot32",
+      "path": "assets/shots/shot32.mp4",
+      "exists": true,
+      "size": 92333,
+      "mtimeMs": 1794916355203.777
+    },
+    {
+      "id": "shot33",
+      "path": "assets/shots/shot33.mp4",
+      "exists": true,
+      "size": 108048,
+      "mtimeMs": 1794916355423.7793
+    },
+    {
+      "id": "shot34",
+      "path": "assets/shots/shot34.mp4",
+      "exists": true,
+      "size": 97448,
+      "mtimeMs": 1794916355643.7815
+    }
+  ]
+}

@@ -1,0 +1,392 @@
+{
+ "bpm": 105.47,
+ "bars": 16,
+ "dur": 36.40845738124585,
+ "events": [
+  {
+   "bar": 0,
+   "beat": 0,
+   "char": "改",
+   "midi": 67,
+   "hits": 1
+  },
+  {
+   "bar": 0,
+   "beat": 1,
+   "char": "革",
+   "midi": 67,
+   "hits": 1
+  },
+  {
+   "bar": 0,
+   "beat": 2,
+   "char": "春",
+   "midi": 67,
+   "hits": 1
+  },
+  {
+   "bar": 0,
+   "beat": 3,
+   "char": "风",
+   "midi": 67,
+   "hits": 1
+  },
+  {
+   "bar": 1,
+   "beat": 0,
+   "char": "春",
+   "midi": 55,
+   "hits": 2
+  },
+  {
+   "bar": 1,
+   "beat": 2,
+   "char": "风",
+   "midi": 51,
+   "hits": 2
+  },
+  {
+   "bar": 2,
+   "beat": 0,
+   "char": "改",
+   "midi": 55,
+   "hits": 4
+  },
+  {
+   "bar": 2,
+   "beat": 1,
+   "char": "革",
+   "midi": 55,
+   "hits": 4
+  },
+  {
+   "bar": 2,
+   "beat": 2,
+   "char": "春",
+   "midi": 51,
+   "hits": 5
+  },
+  {
+   "bar": 2,
+   "beat": 3,
+   "char": "风",
+   "midi": 53,
+   "hits": 5
+  },
+  {
+   "bar": 3,
+   "beat": 0,
+   "char": "改",
+   "midi": 55,
+   "hits": 5
+  },
+  {
+   "bar": 3,
+   "beat": 1,
+   "char": "革",
+   "midi": 55,
+   "hits": 5
+  },
+  {
+   "bar": 3,
+   "beat": 2,
+   "char": "春",
+   "midi": 51,
+   "hits": 5
+  },
+  {
+   "bar": 4,
+   "beat": 0,
+   "char": "改",
+   "midi": 55,
+   "hits": 5
+  },
+  {
+   "bar": 4,
+   "beat": 1,
+   "char": "革",
+   "midi": 55,
+   "hits": 4
+  },
+  {
+   "bar": 4,
+   "beat": 2,
+   "char": "春",
+   "midi": 55,
+   "hits": 4
+  },
+  {
+   "bar": 4,
+   "beat": 3,
+   "char": "风",
+   "midi": 55,
+   "hits": 5
+  },
+  {
+   "bar": 4,
+   "beat": 4,
+   "char": "吹",
+   "midi": 51,
+   "hits": 4
+  },
+  {
+   "bar": 4,
+   "beat": 5,
+   "char": "满",
+   "midi": 53,
+   "hits": 4
+  },
+  {
+   "bar": 4,
+   "beat": 6,
+   "char": "地",
+   "midi": 55,
+   "hits": 5
+  },
+  {
+   "bar": 6,
+   "beat": 0,
+   "char": "改",
+   "midi": 55,
+   "hits": 5
+  },
+  {
+   "bar": 6,
+   "beat": 1,
+   "char": "革",
+   "midi": 55,
+   "hits": 4
+  },
+  {
+   "bar": 6,
+   "beat": 2,
+   "char": "春",
+   "midi": 55,
+   "hits": 4
+  },
+  {
+   "bar": 6,
+   "beat": 3,
+   "char": "风",
+   "midi": 55,
+   "hits": 5
+  },
+  {
+   "bar": 6,
+   "beat": 4,
+   "char": "吹",
+   "midi": 51,
+   "hits": 4
+  },
+  {
+   "bar": 6,
+   "beat": 5,
+   "char": "满",
+   "midi": 53,
+   "hits": 4
+  },
+  {
+   "bar": 6,
+   "beat": 6,
+   "char": "地",
+   "midi": 55,
+   "hits": 5
+  },
+  {
+   "bar": 8,
+   "beat": 0,
+   "char": "中",
+   "midi": 55,
+   "hits": 5
+  },
+  {
+   "bar": 8,
+   "beat": 1,
+   "char": "国",
+   "midi": 55,
+   "hits": 4
+  },
+  {
+   "bar": 8,
+   "beat": 2,
+   "char": "人",
+   "midi": 51,
+   "hits": 4
+  },
+  {
+   "bar": 8,
+   "beat": 3,
+   "char": "民",
+   "midi": 51,
+   "hits": 5
+  },
+  {
+   "bar": 8,
+   "beat": 4,
+   "char": "真",
+   "midi": 53,
+   "hits": 4
+  },
+  {
+   "bar": 8,
+   "beat": 5,
+   "char": "争",
+   "midi": 53,
+   "hits": 4
+  },
+  {
+   "bar": 8,
+   "beat": 6,
+   "char": "气",
+   "midi": 55,
+   "hits": 5
+  },
+  {
+   "bar": 10,
+   "beat": 0,
+   "char": "齐",
+   "midi": 55,
+   "hits": 5
+  },
+  {
+   "bar": 10,
+   "beat": 1,
+   "char": "心",
+   "midi": 55,
+   "hits": 4
+  },
+  {
+   "bar": 10,
+   "beat": 2,
+   "char": "协",
+   "midi": 51,
+   "hits": 4
+  },
+  {
+   "bar": 10,
+   "beat": 3,
+   "char": "力",
+   "midi": 51,
+   "hits": 5
+  },
+  {
+   "bar": 10,
+   "beat": 4,
+   "char": "跨",
+   "midi": 53,
+   "hits": 4
+  },
+  {
+   "bar": 10,
+   "beat": 5,
+   "char": "世",
+   "midi": 53,
+   "hits": 4
+  },
+  {
+   "bar": 10,
+   "beat": 6,
+   "char": "纪",
+   "midi": 55,
+   "hits": 5
+  },
+  {
+   "bar": 12,
+   "beat": 0,
+   "char": "一",
+   "midi": 55,
+   "hits": 5
+  },
+  {
+   "bar": 12,
+   "beat": 1,
+   "char": "场",
+   "midi": 55,
+   "hits": 4
+  },
+  {
+   "bar": 12,
+   "beat": 2,
+   "char": "大",
+   "midi": 51,
+   "hits": 4
+  },
+  {
+   "bar": 12,
+   "beat": 3,
+   "char": "水",
+   "midi": 51,
+   "hits": 5
+  },
+  {
+   "bar": 12,
+   "beat": 4,
+   "char": "没",
+   "midi": 53,
+   "hits": 4
+  },
+  {
+   "bar": 12,
+   "beat": 5,
+   "char": "咋",
+   "midi": 53,
+   "hits": 4
+  },
+  {
+   "bar": 12,
+   "beat": 6,
+   "char": "地",
+   "midi": 55,
+   "hits": 5
+  },
+  {
+   "bar": 14,
+   "beat": 0,
+   "char": "改",
+   "midi": 55,
+   "hits": 5
+  },
+  {
+   "bar": 14,
+   "beat": 1,
+   "char": "革",
+   "midi": 55,
+   "hits": 5
+  },
+  {
+   "bar": 14,
+   "beat": 2,
+   "char": "春",
+   "midi": 51,
+   "hits": 5
+  },
+  {
+   "bar": 14,
+   "beat": 3,
+   "char": "风",
+   "midi": 53,
+   "hits": 5
+  },
+  {
+   "bar": 15,
+   "beat": 0,
+   "char": "吹",
+   "midi": 51,
+   "hits": 5
+  },
+  {
+   "bar": 15,
+   "beat": 1,
+   "char": "满",
+   "midi": 53,
+   "hits": 5
+  },
+  {
+   "bar": 15,
+   "beat": 2,
+   "char": "地",
+   "midi": 55,
+   "hits": 4
+  }
+ ]
+}

@@ -1,0 +1,125 @@
+/workspace/.tmp-analysis/analyze_audio.py:79: RuntimeWarning: invalid value encountered in cast
+  pc = np.mod(np.round(midi).astype(int), 12)
+/root/.pyenv/versions/3.14.8/lib/python3.14/site-packages/pyworld/__init__.py:13: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+dur 152.04426303854876 sr 22050
+bpm est 103.359375 lag 25
+bpm 105.47 period 0.5688821465819665 phase 0.4650611548307576 beats 266
+n beats 267 n bars 67
+tuning offset cents -3.285516802024091
+
+--- per-bar chords ---
+00@  0.47 Bm  (0.58) BAA#  01@  2.74 F#  (0.64) C#G#A#  02@  5.02 F#  (0.59) A#BG#  03@  7.29 A#  (0.59) A#FE  04@  9.57 A#  (0.59) FA#E  05@ 11.84 A#  (0.60) A#FB
+06@ 14.12 Gm  (0.55) GFG#  07@ 16.39 Gm  (0.60) A#GG#  08@ 18.67 Gm  (0.63) A#GD  09@ 20.95 A#  (0.59) DFG  10@ 23.22 A#  (0.62) FF#D  11@ 25.50 Gm  (0.62) DGA#
+12@ 27.77 Gm  (0.67) A#GF  13@ 30.05 Gm  (0.66) GDA#  14@ 32.32 Gm  (0.68) GDF  15@ 34.60 Gm  (0.68) GDA#  16@ 36.87 Gm  (0.68) GDA#  17@ 39.15 Gm  (0.68) A#DG
+18@ 41.42 A#  (0.66) FA#G  19@ 43.70 A#  (0.67) DA#F  20@ 45.98 A#  (0.64) A#FD  21@ 48.25 Gm  (0.67) DA#G  22@ 50.53 A#  (0.64) A#FG  23@ 52.80 A#  (0.68) A#DF
+24@ 55.08 Dm  (0.61) FGA  25@ 57.35 Gm  (0.69) GA#D  26@ 59.63 A#  (0.63) FGD  27@ 61.90 Gm  (0.60) GDF  28@ 64.18 A#  (0.58) FGF#  29@ 66.45 Gm  (0.68) GA#D
+30@ 68.73 Gm  (0.64) GA#C  31@ 71.01 Gm  (0.59) GCD  32@ 73.28 Gm  (0.62) A#GD  33@ 75.56 Gm  (0.66) DA#G  34@ 77.83 Gm  (0.65) DA#G  35@ 80.11 Gm  (0.66) GA#D
+36@ 82.38 Gm  (0.67) GDA#  37@ 84.66 Gm  (0.63) GDA#  38@ 86.94 Gm  (0.61) A#DG  39@ 89.21 Gm  (0.61) DA#G  40@ 91.49 Gm  (0.66) A#GF  41@ 93.76 Gm  (0.66) GDF
+42@ 96.04 Gm  (0.69) GDA#  43@ 98.31 Gm  (0.67) GDA#  44@100.59 Gm  (0.68) GDA#  45@102.86 Gm  (0.69) DA#G  46@105.14 A#  (0.63) FA#G  47@107.42 Gm  (0.63) DA#G
+48@109.69 A#  (0.61) A#DF  49@111.97 A#  (0.63) DA#F  50@114.24 Gm  (0.62) A#GD  51@116.52 A#  (0.64) DA#F  52@118.79 A#  (0.63) DA#F  53@121.07 Gm  (0.62) DA#G
+54@123.34 A#  (0.63) FDA#  55@125.62 Gm  (0.60) GFD  56@127.89 A#  (0.59) FGF#  57@130.17 Gm  (0.68) GA#D  58@132.45 Gm  (0.65) GA#C  59@134.72 Gm  (0.60) GCA#
+60@137.00 Gm  (0.62) A#GD  61@139.27 Gm  (0.64) A#DG  62@141.55 Gm  (0.65) A#DG  63@143.82 Gm  (0.65) GA#D  64@146.10 Gm  (0.55) A#G#G  65@148.37 Gm  (0.57) A#GF
+66@150.65 A#  (0.56) FEF#
+
+--- bar features: rms / bands / chord ---
+bar00   0.47s Bm   rms -14.0 sub0.06 low0.35 mid0.50 hi0.09 air0.00
+bar01   2.74s F#   rms -19.1 sub0.04 low0.29 mid0.58 hi0.08 air0.00
+bar02   5.02s F#   rms -47.0 sub0.12 low0.39 mid0.41 hi0.08 air0.00
+bar03   7.29s A#   rms -17.1 sub0.07 low0.28 mid0.56 hi0.10 air0.00
+bar04   9.57s A#   rms -13.8 sub0.08 low0.17 mid0.64 hi0.12 air0.00
+bar05  11.84s A#   rms -13.2 sub0.06 low0.08 mid0.63 hi0.23 air0.00
+bar06  14.12s Gm   rms -13.8 sub0.07 low0.08 mid0.64 hi0.20 air0.00
+bar07  16.39s Gm   rms -12.9 sub0.23 low0.20 mid0.49 hi0.08 air0.00
+bar08  18.67s Gm   rms -12.5 sub0.36 low0.20 mid0.40 hi0.04 air0.00
+bar09  20.95s A#   rms -12.4 sub0.33 low0.16 mid0.48 hi0.03 air0.00
+bar10  23.22s A#   rms -11.7 sub0.33 low0.15 mid0.49 hi0.03 air0.00
+bar11  25.50s Gm   rms -11.5 sub0.25 low0.09 mid0.56 hi0.09 air0.00
+bar12  27.77s Gm   rms -12.5 sub0.33 low0.17 mid0.25 hi0.25 air0.00
+bar13  30.05s Gm   rms -12.7 sub0.37 low0.17 mid0.34 hi0.12 air0.00
+bar14  32.32s Gm   rms -12.9 sub0.36 low0.16 mid0.28 hi0.20 air0.00
+bar15  34.60s Gm   rms -12.4 sub0.34 low0.15 mid0.44 hi0.08 air0.00
+bar16  36.87s Gm   rms -11.7 sub0.27 low0.13 mid0.54 hi0.06 air0.00
+bar17  39.15s Gm   rms -11.4 sub0.27 low0.12 mid0.48 hi0.12 air0.00
+bar18  41.42s A#   rms -11.0 sub0.30 low0.14 mid0.51 hi0.06 air0.00
+bar19  43.70s A#   rms -11.4 sub0.28 low0.13 mid0.54 hi0.05 air0.00
+bar20  45.98s A#   rms -12.4 sub0.32 low0.23 mid0.41 hi0.05 air0.00
+bar21  48.25s Gm   rms -12.1 sub0.32 low0.15 mid0.47 hi0.06 air0.00
+bar22  50.53s A#   rms -11.6 sub0.27 low0.13 mid0.55 hi0.04 air0.00
+bar23  52.80s A#   rms -12.7 sub0.37 low0.17 mid0.40 hi0.06 air0.00
+bar24  55.08s Dm   rms -11.4 sub0.24 low0.15 mid0.53 hi0.07 air0.00
+bar25  57.35s Gm   rms -11.4 sub0.27 low0.13 mid0.53 hi0.08 air0.00
+bar26  59.63s A#   rms -12.1 sub0.21 low0.15 mid0.50 hi0.13 air0.01
+bar27  61.90s Gm   rms -13.1 sub0.12 low0.10 mid0.62 hi0.16 air0.01
+bar28  64.18s A#   rms -12.3 sub0.24 low0.12 mid0.56 hi0.09 air0.00
+bar29  66.45s Gm   rms -11.8 sub0.30 low0.13 mid0.50 hi0.07 air0.00
+bar30  68.73s Gm   rms -12.2 sub0.32 low0.14 mid0.48 hi0.06 air0.00
+bar31  71.01s Gm   rms -12.1 sub0.32 low0.12 mid0.51 hi0.05 air0.00
+bar32  73.28s Gm   rms -11.7 sub0.28 low0.16 mid0.49 hi0.07 air0.00
+bar33  75.56s Gm   rms -11.8 sub0.30 low0.12 mid0.53 hi0.05 air0.00
+bar34  77.83s Gm   rms -11.4 sub0.34 low0.12 mid0.47 hi0.06 air0.00
+bar35  80.11s Gm   rms -11.7 sub0.15 low0.12 mid0.58 hi0.15 air0.01
+bar36  82.38s Gm   rms -12.0 sub0.31 low0.18 mid0.40 hi0.10 air0.00
+bar37  84.66s Gm   rms -11.9 sub0.33 low0.15 mid0.42 hi0.10 air0.00
+bar38  86.94s Gm   rms -11.4 sub0.37 low0.17 mid0.36 hi0.10 air0.00
+bar39  89.21s Gm   rms -12.4 sub0.21 low0.11 mid0.49 hi0.18 air0.00
+bar40  91.49s Gm   rms -12.3 sub0.34 low0.14 mid0.26 hi0.25 air0.00
+bar41  93.76s Gm   rms -13.0 sub0.39 low0.16 mid0.36 hi0.09 air0.00
+bar42  96.04s Gm   rms -12.6 sub0.36 low0.15 mid0.27 hi0.22 air0.00
+bar43  98.31s Gm   rms -12.6 sub0.35 low0.16 mid0.41 hi0.09 air0.00
+bar44 100.59s Gm   rms -11.7 sub0.30 low0.12 mid0.53 hi0.05 air0.00
+bar45 102.86s Gm   rms -11.6 sub0.28 low0.14 mid0.49 hi0.10 air0.00
+bar46 105.14s A#   rms -10.9 sub0.31 low0.11 mid0.49 hi0.08 air0.00
+bar47 107.42s Gm   rms -11.5 sub0.26 low0.14 mid0.54 hi0.06 air0.00
+bar48 109.69s A#   rms -12.4 sub0.35 low0.15 mid0.45 hi0.05 air0.00
+bar49 111.97s A#   rms -12.5 sub0.33 low0.17 mid0.44 hi0.05 air0.00
+bar50 114.24s Gm   rms -12.5 sub0.35 low0.16 mid0.43 hi0.06 air0.00
+bar51 116.52s A#   rms -11.6 sub0.28 low0.14 mid0.52 hi0.06 air0.00
+bar52 118.79s A#   rms -11.7 sub0.30 low0.12 mid0.51 hi0.07 air0.00
+bar53 121.07s Gm   rms -11.3 sub0.26 low0.14 mid0.52 hi0.07 air0.00
+bar54 123.34s A#   rms -12.6 sub0.28 low0.18 mid0.44 hi0.09 air0.01
+bar55 125.62s Gm   rms -14.0 sub0.14 low0.11 mid0.64 hi0.10 air0.01
+bar56 127.89s A#   rms -12.3 sub0.23 low0.12 mid0.56 hi0.09 air0.00
+bar57 130.17s Gm   rms -11.7 sub0.31 low0.12 mid0.50 hi0.07 air0.00
+bar58 132.45s Gm   rms -12.4 sub0.33 low0.14 mid0.47 hi0.05 air0.00
+bar59 134.72s Gm   rms -12.1 sub0.32 low0.17 mid0.46 hi0.05 air0.00
+bar60 137.00s Gm   rms -11.5 sub0.28 low0.20 mid0.46 hi0.06 air0.00
+bar61 139.27s Gm   rms -11.6 sub0.28 low0.13 mid0.54 hi0.06 air0.00
+bar62 141.55s Gm   rms -12.0 sub0.30 low0.13 mid0.50 hi0.06 air0.00
+bar63 143.82s Gm   rms -11.6 sub0.19 low0.11 mid0.57 hi0.12 air0.01
+bar64 146.10s Gm   rms -18.2 sub0.00 low0.19 mid0.67 hi0.14 air0.00
+bar65 148.37s Gm   rms -30.9 sub0.00 low0.35 mid0.50 hi0.15 air0.00
+bar66 150.65s A#   rms -66.7 sub0.01 low0.16 mid0.72 hi0.11 air0.00
+
+--- stereo width per 8 bars ---
+   0.5s width 0.268
+  18.7s width 0.237
+  36.9s width 0.248
+  55.1s width 0.269
+  73.3s width 0.302
+  91.5s width 0.207
+ 109.7s width 0.208
+ 127.9s width 0.308
+ 146.1s width 0.246
+
+vocal sr 44100 dur 152.0442857142857
+vocal onsets 958 density 6.300794881072083
+vocal onset 16th histogram [0.91, 0.58, 0.67, 0.88, 0.66, 0.72, 0.61, 0.61, 0.87, 0.97, 0.88, 0.67, 0.89, 0.79, 0.89, 1.0]
+
+--- section: vocal onset/s, rms, sub/high ---
+   0.0-   6.2s  onsets/s  2.90  n=18
+   6.2-   9.0s  onsets/s  0.71  n=2
+   9.0-  27.2s  onsets/s  5.82  n=106
+  27.2-  33.5s  onsets/s  7.62  n=48
+  33.5-  42.6s  onsets/s  6.48  n=59
+  42.6-  45.4s  onsets/s  7.86  n=22
+  45.4-  60.2s  onsets/s  7.09  n=105
+  60.2- 103.4s  onsets/s  6.69  n=289
+ 103.4- 152.0s  onsets/s  6.35  n=309
+voiced frac 0.7645511344952318
+notes 623
+note dur median 0.12 p10 0.06 p90 0.29
+pitch class hist (C..B) [59, 46, 55, 54, 52, 57, 54, 55, 46, 47, 41, 57]
+adjacent repeated-note events 9 (1.4%)
+
+saved json

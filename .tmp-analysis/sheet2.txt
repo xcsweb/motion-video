@@ -1,0 +1,12 @@
+0 0.00s type MED dur 0.47 beat 0.82 sub False bright 25.2
+1 9.27s type MED dur 0.20 beat 0.35 sub True bright 57.8
+2 11.53s type MED dur 0.87 beat 1.52 sub False bright 63.0
+3 13.53s type MED dur 0.30 beat 0.53 sub False bright 54.1
+4 15.13s type MED dur 1.70 beat 2.99 sub True bright 74.0
+5 22.10s type MED dur 4.57 beat 8.03 sub True bright 67.1
+6 39.77s type CU dur 2.33 beat 4.10 sub False bright 52.4
+7 53.77s type CU dur 2.63 beat 4.63 sub False bright 58.9
+8 63.23s type MED dur 1.30 beat 2.29 sub True bright 79.3
+9 70.10s type MED dur 2.27 beat 3.99 sub True bright 80.1
+10 90.67s type MED dur 4.33 beat 7.62 sub False bright 80.4
+11 106.07s type WIDE dur 0.60 beat 1.05 sub True bright 108.4

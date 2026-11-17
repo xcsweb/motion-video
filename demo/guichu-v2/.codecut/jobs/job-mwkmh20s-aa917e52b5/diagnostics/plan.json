@@ -1,0 +1,324 @@
+{
+  "version": 1,
+  "revision": 1,
+  "command": "ffmpeg",
+  "durationSeconds": 36.4085,
+  "inputs": [
+    {
+      "index": 0,
+      "assetId": "zuotian",
+      "kind": "video",
+      "path": "/workspace/.tmp-guichu/zuotian.mp4",
+      "fingerprint": {
+        "size": 58140562,
+        "mtimeMs": 1794911715170.185
+      },
+      "hasVideo": true,
+      "hasAudio": true,
+      "clips": [
+        "shot01",
+        "shot02",
+        "shot03",
+        "shot04",
+        "shot05",
+        "shot06",
+        "shot07",
+        "shot08",
+        "shot09",
+        "shot10",
+        "shot11",
+        "shot12",
+        "shot13",
+        "shot14",
+        "shot15",
+        "shot16",
+        "shot17",
+        "shot18",
+        "shot19",
+        "shot20",
+        "shot21",
+        "shot22",
+        "shot23",
+        "shot24",
+        "shot25",
+        "shot26",
+        "shot27",
+        "shot28",
+        "shot29",
+        "shot30",
+        "shot31",
+        "shot32",
+        "shot33",
+        "shot34",
+        "shot35",
+        "shot36",
+        "shot37",
+        "shot38",
+        "shot39",
+        "shot40",
+        "shot41",
+        "shot42",
+        "shot43",
+        "shot44",
+        "shot45",
+        "shot46",
+        "shot47",
+        "shot48",
+        "shot49",
+        "shot50",
+        "shot51",
+        "shot52",
+        "shot53",
+        "shot54"
+      ]
+    },
+    {
+      "index": 1,
+      "assetId": "sub1",
+      "kind": "image",
+      "path": "/workspace/demo/guichu-v2/assets/sub1.png",
+      "fingerprint": {
+        "size": 13333,
+        "mtimeMs": 1794915709033.4143
+      },
+      "hasVideo": true,
+      "hasAudio": false,
+      "clips": [
+        "sub1"
+      ]
+    },
+    {
+      "index": 2,
+      "assetId": "sub2",
+      "kind": "image",
+      "path": "/workspace/demo/guichu-v2/assets/sub2.png",
+      "fingerprint": {
+        "size": 13333,
+        "mtimeMs": 1794915709053.4146
+      },
+      "hasVideo": true,
+      "hasAudio": false,
+      "clips": [
+        "sub2"
+      ]
+    },
+    {
+      "index": 3,
+      "assetId": "sub3",
+      "kind": "image",
+      "path": "/workspace/demo/guichu-v2/assets/sub3.png",
+      "fingerprint": {
+        "size": 21767,
+        "mtimeMs": 1794915709077.4148
+      },
+      "hasVideo": true,
+      "hasAudio": false,
+      "clips": [
+        "sub3"
+      ]
+    },
+    {
+      "index": 4,
+      "assetId": "sub4",
+      "kind": "image",
+      "path": "/workspace/demo/guichu-v2/assets/sub4.png",
+      "fingerprint": {
+        "size": 21767,
+        "mtimeMs": 1794915709101.415
+      },
+      "hasVideo": true,
+      "hasAudio": false,
+      "clips": [
+        "sub4"
+      ]
+    },
+    {
+      "index": 5,
+      "assetId": "sub5",
+      "kind": "image",
+      "path": "/workspace/demo/guichu-v2/assets/sub5.png",
+      "fingerprint": {
+        "size": 17173,
+        "mtimeMs": 1794915709121.4153
+      },
+      "hasVideo": true,
+      "hasAudio": false,
+      "clips": [
+        "sub5"
+      ]
+    },
+    {
+      "index": 6,
+      "assetId": "sub6",
+      "kind": "image",
+      "path": "/workspace/demo/guichu-v2/assets/sub6.png",
+      "fingerprint": {
+        "size": 22531,
+        "mtimeMs": 1794915709141.4155
+      },
+      "hasVideo": true,
+      "hasAudio": false,
+      "clips": [
+        "sub6"
+      ]
+    },
+    {
+      "index": 7,
+      "assetId": "sub7",
+      "kind": "image",
+      "path": "/workspace/demo/guichu-v2/assets/sub7.png",
+      "fingerprint": {
+        "size": 21050,
+        "mtimeMs": 1794915709165.4155
+      },
+      "hasVideo": true,
+      "hasAudio": false,
+      "clips": [
+        "sub7"
+      ]
+    },
+    {
+      "index": 8,
+      "assetId": "sub8",
+      "kind": "image",
+      "path": "/workspace/demo/guichu-v2/assets/sub8.png",
+      "fingerprint": {
+        "size": 21767,
+        "mtimeMs": 1794915709185.4158
+      },
+      "hasVideo": true,
+      "hasAudio": false,
+      "clips": [
+        "sub8"
+      ]
+    },
+    {
+      "index": 9,
+      "assetId": "mix",
+      "kind": "audio",
+      "path": "/workspace/demo/guichu-v2/assets/audio.wav",
+      "fingerprint": {
+        "size": 6990498,
+        "mtimeMs": 1794915597360.3157
+      },
+      "hasVideo": false,
+      "hasAudio": true,
+      "clips": [
+        "mix"
+      ]
+    }
+  ],
+  "args": [
+    "-hide_banner",
+    "-nostdin",
+    "-progress",
+    "pipe:1",
+    "-nostats",
+    "-i",
+    "/workspace/.tmp-guichu/zuotian.mp4",
+    "-loop",
+    "1",
+    "-framerate",
+    "30",
+    "-i",
+    "/workspace/demo/guichu-v2/assets/sub1.png",
+    "-loop",
+    "1",
+    "-framerate",
+    "30",
+    "-i",
+    "/workspace/demo/guichu-v2/assets/sub2.png",
+    "-loop",
+    "1",
+    "-framerate",
+    "30",
+    "-i",
+    "/workspace/demo/guichu-v2/assets/sub3.png",
+    "-loop",
+    "1",
+    "-framerate",
+    "30",
+    "-i",
+    "/workspace/demo/guichu-v2/assets/sub4.png",
+    "-loop",
+    "1",
+    "-framerate",
+    "30",
+    "-i",
+    "/workspace/demo/guichu-v2/assets/sub5.png",
+    "-loop",
+    "1",
+    "-framerate",
+    "30",
+    "-i",
+    "/workspace/demo/guichu-v2/assets/sub6.png",
+    "-loop",
+    "1",
+    "-framerate",
+    "30",
+    "-i",
+    "/workspace/demo/guichu-v2/assets/sub7.png",
+    "-loop",
+    "1",
+    "-framerate",
+    "30",
+    "-i",
+    "/workspace/demo/guichu-v2/assets/sub8.png",
+    "-i",
+    "/workspace/demo/guichu-v2/assets/audio.wav",
+    "-filter_complex_script",
+    "{jobDirectory}/diagnostics/filter_complex.txt",
+    "-map",
+    "[vout]",
+    "-map",
+    "[aout]",
+    "-c:v",
+    "libx264",
+    "-preset",
+    "veryfast",
+    "-crf",
+    "18",
+    "-pix_fmt",
+    "yuv420p",
+    "-r",
+    "30",
+    "-video_track_timescale",
+    "90000",
+    "-c:a",
+    "aac",
+    "-b:a",
+    "192k",
+    "-ar",
+    "48000",
+    "-ac",
+    "2",
+    "-movflags",
+    "+faststart",
+    "-t",
+    "36.4085",
+    "-f",
+    "mp4",
+    "-y",
+    "{output}"
+  ],
+  "filter_graph": "[0:v:0]trim=start=40:end=42.2755,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=2.2755,setpts=PTS-STARTPTS[cc_clip_0];\ncolor=c=black@0.0:s=960x720:r=30:d=2.2755,format=rgba,setpts=PTS-STARTPTS[cc_transparent_1];\n[cc_transparent_1][cc_clip_0]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=2.2755,setpts=PTS-STARTPTS[cc_positioned_2];\n[0:v:0]trim=start=100.91:end=101.4789,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.08/2)*2):h=max(2\\,trunc(ih*1.08/2)*2):eval=frame,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_3];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_4];\n[cc_transparent_4][cc_clip_3]overlay=x=-38:y=-29:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_5];\n[cc_positioned_2][cc_positioned_5]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_6];\n[0:v:0]trim=start=42.39:end=42.9589,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_7];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_8];\n[cc_transparent_8][cc_clip_7]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_9];\n[cc_concat_6][cc_positioned_9]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_10];\n[0:v:0]trim=start=103.3:end=104.4378,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_clip_11];\ncolor=c=black@0.0:s=960x720:r=30:d=1.1378,format=rgba,setpts=PTS-STARTPTS[cc_transparent_12];\n[cc_transparent_12][cc_clip_11]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_positioned_13];\n[cc_concat_10][cc_positioned_13]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_14];\n[0:v:0]trim=start=180.78:end=181.9177,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1.1377,setpts=PTS-STARTPTS[cc_clip_15];\ncolor=c=black@0.0:s=960x720:r=30:d=1.1377,format=rgba,setpts=PTS-STARTPTS[cc_transparent_16];\n[cc_transparent_16][cc_clip_15]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1.1377,setpts=PTS-STARTPTS[cc_positioned_17];\n[cc_concat_14][cc_positioned_17]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_18];\n[0:v:0]trim=start=430.26:end=431.3978,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.12/2)*2):h=max(2\\,trunc(ih*1.12/2)*2):eval=frame,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_clip_19];\ncolor=c=black@0.0:s=960x720:r=30:d=1.1378,format=rgba,setpts=PTS-STARTPTS[cc_transparent_20];\n[cc_transparent_20][cc_clip_19]overlay=x=-58:y=-43:shortest=1:format=auto,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_positioned_21];\n[cc_concat_18][cc_positioned_21]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_22];\n[0:v:0]trim=start=183.17:end=184.3078,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_clip_23];\ncolor=c=black@0.0:s=960x720:r=30:d=1.1378,format=rgba,setpts=PTS-STARTPTS[cc_transparent_24];\n[cc_transparent_24][cc_clip_23]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_positioned_25];\n[cc_concat_22][cc_positioned_25]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_26];\n[0:v:0]trim=start=432.65:end=433.7877,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.08/2)*2):h=max(2\\,trunc(ih*1.08/2)*2):eval=frame,trim=duration=1.1377,setpts=PTS-STARTPTS[cc_clip_27];\ncolor=c=black@0.0:s=960x720:r=30:d=1.1377,format=rgba,setpts=PTS-STARTPTS[cc_transparent_28];\n[cc_transparent_28][cc_clip_27]overlay=x=-38:y=-29:shortest=1:format=auto,trim=duration=1.1377,setpts=PTS-STARTPTS[cc_positioned_29];\n[cc_concat_26][cc_positioned_29]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_30];\n[0:v:0]trim=start=720.13:end=720.4145,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.2845,setpts=PTS-STARTPTS[cc_clip_31];\ncolor=c=black@0.0:s=960x720:r=30:d=0.2845,format=rgba,setpts=PTS-STARTPTS[cc_transparent_32];\n[cc_transparent_32][cc_clip_31]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.2845,setpts=PTS-STARTPTS[cc_positioned_33];\n[cc_concat_30][cc_positioned_33]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_34];\n[0:v:0]trim=start=521.04:end=521.3244,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.2844,setpts=PTS-STARTPTS[cc_clip_35];\ncolor=c=black@0.0:s=960x720:r=30:d=0.2844,format=rgba,setpts=PTS-STARTPTS[cc_transparent_36];\n[cc_transparent_36][cc_clip_35]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.2844,setpts=PTS-STARTPTS[cc_positioned_37];\n[cc_concat_34][cc_positioned_37]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_38];\n[0:v:0]trim=start=722.52:end=723.0889,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_39];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_40];\n[cc_transparent_40][cc_clip_39]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_41];\n[cc_concat_38][cc_positioned_41]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_42];\n[0:v:0]trim=start=260:end=260.5689,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.1/2)*2):h=max(2\\,trunc(ih*1.1/2)*2):eval=frame,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_43];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_44];\n[cc_transparent_44][cc_clip_43]overlay=x=-48:y=-36:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_45];\n[cc_concat_42][cc_positioned_45]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_46];\n[0:v:0]trim=start=522.91:end=523.4788,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5688,setpts=PTS-STARTPTS[cc_clip_47];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5688,format=rgba,setpts=PTS-STARTPTS[cc_transparent_48];\n[cc_transparent_48][cc_clip_47]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5688,setpts=PTS-STARTPTS[cc_positioned_49];\n[cc_concat_46][cc_positioned_49]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_50];\n[0:v:0]trim=start=830.39:end=830.6745,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.06/2)*2):h=max(2\\,trunc(ih*1.06/2)*2):eval=frame,trim=duration=0.2845,setpts=PTS-STARTPTS[cc_clip_51];\ncolor=c=black@0.0:s=960x720:r=30:d=0.2845,format=rgba,setpts=PTS-STARTPTS[cc_transparent_52];\n[cc_transparent_52][cc_clip_51]overlay=x=-29:y=-22:shortest=1:format=auto,trim=duration=0.2845,setpts=PTS-STARTPTS[cc_positioned_53];\n[cc_concat_50][cc_positioned_53]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_54];\n[0:v:0]trim=start=101.3:end=101.5844,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.12/2)*2):h=max(2\\,trunc(ih*1.12/2)*2):eval=frame,trim=duration=0.2844,setpts=PTS-STARTPTS[cc_clip_55];\ncolor=c=black@0.0:s=960x720:r=30:d=0.2844,format=rgba,setpts=PTS-STARTPTS[cc_transparent_56];\n[cc_transparent_56][cc_clip_55]overlay=x=-58:y=-43:shortest=1:format=auto,trim=duration=0.2844,setpts=PTS-STARTPTS[cc_positioned_57];\n[cc_concat_54][cc_positioned_57]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_58];\n[0:v:0]trim=start=832.78:end=833.3489,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.06/2)*2):h=max(2\\,trunc(ih*1.06/2)*2):eval=frame,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_59];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_60];\n[cc_transparent_60][cc_clip_59]overlay=x=-29:y=-22:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_61];\n[cc_concat_58][cc_positioned_61]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_62];\n[0:v:0]trim=start=262.26:end=263.3978,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_clip_63];\ncolor=c=black@0.0:s=960x720:r=30:d=1.1378,format=rgba,setpts=PTS-STARTPTS[cc_transparent_64];\n[cc_transparent_64][cc_clip_63]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_positioned_65];\n[cc_concat_62][cc_positioned_65]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_66];\n[0:v:0]trim=start=931.17:end=931.7389,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.06/2)*2):h=max(2\\,trunc(ih*1.06/2)*2):eval=frame,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_67];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_68];\n[cc_transparent_68][cc_clip_67]overlay=x=-29:y=-22:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_69];\n[cc_concat_66][cc_positioned_69]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_70];\n[0:v:0]trim=start=102.65:end=103.2188,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5688,setpts=PTS-STARTPTS[cc_clip_71];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5688,format=rgba,setpts=PTS-STARTPTS[cc_transparent_72];\n[cc_transparent_72][cc_clip_71]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5688,setpts=PTS-STARTPTS[cc_positioned_73];\n[cc_concat_70][cc_positioned_73]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_74];\n[0:v:0]trim=start=932.13:end=933.2678,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.06/2)*2):h=max(2\\,trunc(ih*1.06/2)*2):eval=frame,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_clip_75];\ncolor=c=black@0.0:s=960x720:r=30:d=1.1378,format=rgba,setpts=PTS-STARTPTS[cc_transparent_76];\n[cc_transparent_76][cc_clip_75]overlay=x=-29:y=-22:shortest=1:format=auto,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_positioned_77];\n[cc_concat_74][cc_positioned_77]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_78];\n[0:v:0]trim=start=431.04:end=431.6089,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.12/2)*2):h=max(2\\,trunc(ih*1.12/2)*2):eval=frame,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_79];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_80];\n[cc_transparent_80][cc_clip_79]overlay=x=-58:y=-43:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_81];\n[cc_concat_78][cc_positioned_81]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_82];\n[0:v:0]trim=start=1000.52:end=1001.0889,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.06/2)*2):h=max(2\\,trunc(ih*1.06/2)*2):eval=frame,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_83];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_84];\n[cc_transparent_84][cc_clip_83]overlay=x=-29:y=-22:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_85];\n[cc_concat_82][cc_positioned_85]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_86];\n[0:v:0]trim=start=432:end=432.5688,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.08/2)*2):h=max(2\\,trunc(ih*1.08/2)*2):eval=frame,trim=duration=0.5688,setpts=PTS-STARTPTS[cc_clip_87];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5688,format=rgba,setpts=PTS-STARTPTS[cc_transparent_88];\n[cc_transparent_88][cc_clip_87]overlay=x=-38:y=-29:shortest=1:format=auto,trim=duration=0.5688,setpts=PTS-STARTPTS[cc_positioned_89];\n[cc_concat_86][cc_positioned_89]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_90];\n[0:v:0]trim=start=620.91:end=621.4789,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.1/2)*2):h=max(2\\,trunc(ih*1.1/2)*2):eval=frame,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_91];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_92];\n[cc_transparent_92][cc_clip_91]overlay=x=-48:y=-36:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_93];\n[cc_concat_90][cc_positioned_93]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_94];\n[0:v:0]trim=start=520.39:end=520.6745,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.2845,setpts=PTS-STARTPTS[cc_clip_95];\ncolor=c=black@0.0:s=960x720:r=30:d=0.2845,format=rgba,setpts=PTS-STARTPTS[cc_transparent_96];\n[cc_transparent_96][cc_clip_95]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.2845,setpts=PTS-STARTPTS[cc_positioned_97];\n[cc_concat_94][cc_positioned_97]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_98];\n[0:v:0]trim=start=1003.3:end=1003.5844,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.06/2)*2):h=max(2\\,trunc(ih*1.06/2)*2):eval=frame,trim=duration=0.2844,setpts=PTS-STARTPTS[cc_clip_99];\ncolor=c=black@0.0:s=960x720:r=30:d=0.2844,format=rgba,setpts=PTS-STARTPTS[cc_transparent_100];\n[cc_transparent_100][cc_clip_99]overlay=x=-29:y=-22:shortest=1:format=auto,trim=duration=0.2844,setpts=PTS-STARTPTS[cc_positioned_101];\n[cc_concat_98][cc_positioned_101]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_102];\n[0:v:0]trim=start=522.78:end=523.3489,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.12/2)*2):h=max(2\\,trunc(ih*1.12/2)*2):eval=frame,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_103];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_104];\n[cc_transparent_104][cc_clip_103]overlay=x=-58:y=-43:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_105];\n[cc_concat_102][cc_positioned_105]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_106];\n[0:v:0]trim=start=350.26:end=350.8289,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_107];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_108];\n[cc_transparent_108][cc_clip_107]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_109];\n[cc_concat_106][cc_positioned_109]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_110];\n[0:v:0]trim=start=181.17:end=181.7389,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_111];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_112];\n[cc_transparent_112][cc_clip_111]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_113];\n[cc_concat_110][cc_positioned_113]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_114];\n[0:v:0]trim=start=100.65:end=100.9344,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.12/2)*2):h=max(2\\,trunc(ih*1.12/2)*2):eval=frame,trim=duration=0.2844,setpts=PTS-STARTPTS[cc_clip_115];\ncolor=c=black@0.0:s=960x720:r=30:d=0.2844,format=rgba,setpts=PTS-STARTPTS[cc_transparent_116];\n[cc_transparent_116][cc_clip_115]overlay=x=-58:y=-43:shortest=1:format=auto,trim=duration=0.2844,setpts=PTS-STARTPTS[cc_positioned_117];\n[cc_concat_114][cc_positioned_117]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_118];\n[0:v:0]trim=start=182.13:end=182.4144,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.2844,setpts=PTS-STARTPTS[cc_clip_119];\ncolor=c=black@0.0:s=960x720:r=30:d=0.2844,format=rgba,setpts=PTS-STARTPTS[cc_transparent_120];\n[cc_transparent_120][cc_clip_119]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.2844,setpts=PTS-STARTPTS[cc_positioned_121];\n[cc_concat_118][cc_positioned_121]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_122];\n[0:v:0]trim=start=103.04:end=103.6089,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.08/2)*2):h=max(2\\,trunc(ih*1.08/2)*2):eval=frame,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_123];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_124];\n[cc_transparent_124][cc_clip_123]overlay=x=-38:y=-29:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_125];\n[cc_concat_122][cc_positioned_125]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_126];\n[0:v:0]trim=start=352.52:end=353.6578,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_clip_127];\ncolor=c=black@0.0:s=960x720:r=30:d=1.1378,format=rgba,setpts=PTS-STARTPTS[cc_transparent_128];\n[cc_transparent_128][cc_clip_127]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_positioned_129];\n[cc_concat_126][cc_positioned_129]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_130];\n[0:v:0]trim=start=430:end=430.5689,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_131];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_132];\n[cc_transparent_132][cc_clip_131]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_133];\n[cc_concat_130][cc_positioned_133]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_134];\n[0:v:0]trim=start=720.91:end=721.4789,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_135];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_136];\n[cc_transparent_136][cc_clip_135]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_137];\n[cc_concat_134][cc_positioned_137]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_138];\n[0:v:0]trim=start=432.39:end=433.5277,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.12/2)*2):h=max(2\\,trunc(ih*1.12/2)*2):eval=frame,trim=duration=1.1377,setpts=PTS-STARTPTS[cc_clip_139];\ncolor=c=black@0.0:s=960x720:r=30:d=1.1377,format=rgba,setpts=PTS-STARTPTS[cc_transparent_140];\n[cc_transparent_140][cc_clip_139]overlay=x=-58:y=-43:shortest=1:format=auto,trim=duration=1.1377,setpts=PTS-STARTPTS[cc_positioned_141];\n[cc_concat_138][cc_positioned_141]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_142];\n[0:v:0]trim=start=723.3:end=723.8689,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_143];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_144];\n[cc_transparent_144][cc_clip_143]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_145];\n[cc_concat_142][cc_positioned_145]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_146];\n[0:v:0]trim=start=520.78:end=521.3489,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.08/2)*2):h=max(2\\,trunc(ih*1.08/2)*2):eval=frame,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_147];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_148];\n[cc_transparent_148][cc_clip_147]overlay=x=-38:y=-29:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_149];\n[cc_concat_146][cc_positioned_149]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_150];\n[0:v:0]trim=start=830.26:end=831.3977,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1.1377,setpts=PTS-STARTPTS[cc_clip_151];\ncolor=c=black@0.0:s=960x720:r=30:d=1.1377,format=rgba,setpts=PTS-STARTPTS[cc_transparent_152];\n[cc_transparent_152][cc_clip_151]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1.1377,setpts=PTS-STARTPTS[cc_positioned_153];\n[cc_concat_150][cc_positioned_153]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_154];\n[0:v:0]trim=start=523.17:end=523.4545,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.2845,setpts=PTS-STARTPTS[cc_clip_155];\ncolor=c=black@0.0:s=960x720:r=30:d=0.2845,format=rgba,setpts=PTS-STARTPTS[cc_transparent_156];\n[cc_transparent_156][cc_clip_155]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.2845,setpts=PTS-STARTPTS[cc_positioned_157];\n[cc_concat_154][cc_positioned_157]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_158];\n[0:v:0]trim=start=832.65:end=833.2189,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_159];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_160];\n[cc_transparent_160][cc_clip_159]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_161];\n[cc_concat_158][cc_positioned_161]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_162];\n[0:v:0]trim=start=100.13:end=100.4144,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.12/2)*2):h=max(2\\,trunc(ih*1.12/2)*2):eval=frame,trim=duration=0.2844,setpts=PTS-STARTPTS[cc_clip_163];\ncolor=c=black@0.0:s=960x720:r=30:d=0.2844,format=rgba,setpts=PTS-STARTPTS[cc_transparent_164];\n[cc_transparent_164][cc_clip_163]overlay=x=-58:y=-43:shortest=1:format=auto,trim=duration=0.2844,setpts=PTS-STARTPTS[cc_positioned_165];\n[cc_concat_162][cc_positioned_165]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_166];\n[0:v:0]trim=start=41.04:end=42.1778,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_clip_167];\ncolor=c=black@0.0:s=960x720:r=30:d=1.1378,format=rgba,setpts=PTS-STARTPTS[cc_transparent_168];\n[cc_transparent_168][cc_clip_167]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_positioned_169];\n[cc_concat_166][cc_positioned_169]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_170];\n[0:v:0]trim=start=102.52:end=103.0889,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.08/2)*2):h=max(2\\,trunc(ih*1.08/2)*2):eval=frame,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_171];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_172];\n[cc_transparent_172][cc_clip_171]overlay=x=-38:y=-29:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_173];\n[cc_concat_170][cc_positioned_173]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_174];\n[0:v:0]trim=start=930:end=930.5688,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5688,setpts=PTS-STARTPTS[cc_clip_175];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5688,format=rgba,setpts=PTS-STARTPTS[cc_transparent_176];\n[cc_transparent_176][cc_clip_175]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5688,setpts=PTS-STARTPTS[cc_positioned_177];\n[cc_concat_174][cc_positioned_177]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_178];\n[0:v:0]trim=start=430.91:end=432.0478,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_clip_179];\ncolor=c=black@0.0:s=960x720:r=30:d=1.1378,format=rgba,setpts=PTS-STARTPTS[cc_transparent_180];\n[cc_transparent_180][cc_clip_179]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_positioned_181];\n[cc_concat_178][cc_positioned_181]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_182];\n[0:v:0]trim=start=932.39:end=932.6744,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.2844,setpts=PTS-STARTPTS[cc_clip_183];\ncolor=c=black@0.0:s=960x720:r=30:d=0.2844,format=rgba,setpts=PTS-STARTPTS[cc_transparent_184];\n[cc_transparent_184][cc_clip_183]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.2844,setpts=PTS-STARTPTS[cc_positioned_185];\n[cc_concat_182][cc_positioned_185]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_186];\n[0:v:0]trim=start=433.3:end=433.5845,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.12/2)*2):h=max(2\\,trunc(ih*1.12/2)*2):eval=frame,trim=duration=0.2845,setpts=PTS-STARTPTS[cc_clip_187];\ncolor=c=black@0.0:s=960x720:r=30:d=0.2845,format=rgba,setpts=PTS-STARTPTS[cc_transparent_188];\n[cc_transparent_188][cc_clip_187]overlay=x=-58:y=-43:shortest=1:format=auto,trim=duration=0.2845,setpts=PTS-STARTPTS[cc_positioned_189];\n[cc_concat_186][cc_positioned_189]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_190];\n[0:v:0]trim=start=1000.78:end=1001.3489,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_191];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_192];\n[cc_transparent_192][cc_clip_191]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_193];\n[cc_concat_190][cc_positioned_193]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_194];\n[0:v:0]trim=start=622.26:end=622.8288,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.1/2)*2):h=max(2\\,trunc(ih*1.1/2)*2):eval=frame,trim=duration=0.5688,setpts=PTS-STARTPTS[cc_clip_195];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5688,format=rgba,setpts=PTS-STARTPTS[cc_transparent_196];\n[cc_transparent_196][cc_clip_195]overlay=x=-48:y=-36:shortest=1:format=auto,trim=duration=0.5688,setpts=PTS-STARTPTS[cc_positioned_197];\n[cc_concat_194][cc_positioned_197]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_198];\n[0:v:0]trim=start=521.17:end=521.7389,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.12/2)*2):h=max(2\\,trunc(ih*1.12/2)*2):eval=frame,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_199];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_200];\n[cc_transparent_200][cc_clip_199]overlay=x=-58:y=-43:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_201];\n[cc_concat_198][cc_positioned_201]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_202];\n[0:v:0]trim=start=1002.65:end=1003.2189,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.06/2)*2):h=max(2\\,trunc(ih*1.06/2)*2):eval=frame,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_203];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_204];\n[cc_transparent_204][cc_clip_203]overlay=x=-29:y=-22:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_205];\n[cc_concat_202][cc_positioned_205]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_206];\n[0:v:0]trim=start=522.13:end=522.6989,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.08/2)*2):h=max(2\\,trunc(ih*1.08/2)*2):eval=frame,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_clip_207];\ncolor=c=black@0.0:s=960x720:r=30:d=0.5689,format=rgba,setpts=PTS-STARTPTS[cc_transparent_208];\n[cc_transparent_208][cc_clip_207]overlay=x=-38:y=-29:shortest=1:format=auto,trim=duration=0.5689,setpts=PTS-STARTPTS[cc_positioned_209];\n[cc_concat_206][cc_positioned_209]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_210];\n[0:v:0]trim=start=181.04:end=182.1778,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.06/2)*2):h=max(2\\,trunc(ih*1.06/2)*2):eval=frame,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_clip_211];\ncolor=c=black@0.0:s=960x720:r=30:d=1.1378,format=rgba,setpts=PTS-STARTPTS[cc_transparent_212];\n[cc_transparent_212][cc_clip_211]overlay=x=-29:y=-22:shortest=1:format=auto,trim=duration=1.1378,setpts=PTS-STARTPTS[cc_positioned_213];\n[cc_concat_210][cc_positioned_213]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_214];\ncolor=c=0x000000:s=960x720:r=30:d=0.1,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.8,trim=duration=0.1,setpts=PTS-STARTPTS[cc_clip_215];\ncolor=c=black@0.0:s=960x720:r=30:d=0.1,format=rgba,setpts=PTS-STARTPTS[cc_transparent_216];\n[cc_transparent_216][cc_clip_215]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.1,setpts=PTS-STARTPTS[cc_positioned_217];\ncolor=c=0x000000:s=960x720:r=30:d=0.1,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.5,trim=duration=0.1,setpts=PTS-STARTPTS[cc_clip_218];\ncolor=c=black@0.0:s=960x720:r=30:d=0.1,format=rgba,setpts=PTS-STARTPTS[cc_transparent_219];\n[cc_transparent_219][cc_clip_218]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.1,setpts=PTS-STARTPTS[cc_positioned_220];\n[cc_positioned_217][cc_positioned_220]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_221];\ncolor=c=0x000000:s=960x720:r=30:d=0.1,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.2,trim=duration=0.1,setpts=PTS-STARTPTS[cc_clip_222];\ncolor=c=black@0.0:s=960x720:r=30:d=0.1,format=rgba,setpts=PTS-STARTPTS[cc_transparent_223];\n[cc_transparent_223][cc_clip_222]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.1,setpts=PTS-STARTPTS[cc_positioned_224];\n[cc_concat_221][cc_positioned_224]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_225];\ncolor=c=0xFFFFFF:s=960x720:r=30:d=0.067,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.7,trim=duration=0.067,setpts=PTS-STARTPTS[cc_clip_226];\ncolor=c=black@0.0:s=960x720:r=30:d=0.067,format=rgba,setpts=PTS-STARTPTS[cc_transparent_227];\n[cc_transparent_227][cc_clip_226]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.067,setpts=PTS-STARTPTS[cc_positioned_228];\ncolor=c=black@0.0:s=960x720:r=30:d=8.8021,format=rgba,setpts=PTS-STARTPTS[cc_transparent_229];\n[cc_concat_225][cc_transparent_229]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_230];\n[cc_concat_230][cc_positioned_228]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_231];\ncolor=c=0xFFFFFF:s=960x720:r=30:d=0.067,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.7,trim=duration=0.067,setpts=PTS-STARTPTS[cc_clip_232];\ncolor=c=black@0.0:s=960x720:r=30:d=0.067,format=rgba,setpts=PTS-STARTPTS[cc_transparent_233];\n[cc_transparent_233][cc_clip_232]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.067,setpts=PTS-STARTPTS[cc_positioned_234];\ncolor=c=black@0.0:s=960x720:r=30:d=22.6883,format=rgba,setpts=PTS-STARTPTS[cc_transparent_235];\n[cc_concat_231][cc_transparent_235]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_236];\n[cc_concat_236][cc_positioned_234]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_237];\ncolor=c=0x000000:s=960x720:r=30:d=0.12,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.25,trim=duration=0.12,setpts=PTS-STARTPTS[cc_clip_238];\ncolor=c=black@0.0:s=960x720:r=30:d=0.12,format=rgba,setpts=PTS-STARTPTS[cc_transparent_239];\n[cc_transparent_239][cc_clip_238]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.12,setpts=PTS-STARTPTS[cc_positioned_240];\ncolor=c=black@0.0:s=960x720:r=30:d=4.0041,format=rgba,setpts=PTS-STARTPTS[cc_transparent_241];\n[cc_concat_237][cc_transparent_241]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_242];\n[cc_concat_242][cc_positioned_240]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_243];\ncolor=c=0x000000:s=960x720:r=30:d=0.12,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.5,trim=duration=0.12,setpts=PTS-STARTPTS[cc_clip_244];\ncolor=c=black@0.0:s=960x720:r=30:d=0.12,format=rgba,setpts=PTS-STARTPTS[cc_transparent_245];\n[cc_transparent_245][cc_clip_244]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.12,setpts=PTS-STARTPTS[cc_positioned_246];\n[cc_concat_243][cc_positioned_246]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_247];\ncolor=c=0x000000:s=960x720:r=30:d=0.12,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.75,trim=duration=0.12,setpts=PTS-STARTPTS[cc_clip_248];\ncolor=c=black@0.0:s=960x720:r=30:d=0.12,format=rgba,setpts=PTS-STARTPTS[cc_transparent_249];\n[cc_transparent_249][cc_clip_248]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.12,setpts=PTS-STARTPTS[cc_positioned_250];\n[cc_concat_247][cc_positioned_250]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_251];\ncolor=c=0x000000:s=960x720:r=30:d=0.12,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.12,setpts=PTS-STARTPTS[cc_clip_252];\ncolor=c=black@0.0:s=960x720:r=30:d=0.12,format=rgba,setpts=PTS-STARTPTS[cc_transparent_253];\n[cc_transparent_253][cc_clip_252]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.12,setpts=PTS-STARTPTS[cc_positioned_254];\n[cc_concat_251][cc_positioned_254]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_255];\n[1:v:0]trim=duration=4.5511,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=4.5511,setpts=PTS-STARTPTS[cc_clip_256];\ncolor=c=black@0.0:s=960x720:r=30:d=4.5511,format=rgba,setpts=PTS-STARTPTS[cc_transparent_257];\n[cc_transparent_257][cc_clip_256]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.5511,setpts=PTS-STARTPTS[cc_positioned_258];\n[2:v:0]trim=duration=4.551,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=4.551,setpts=PTS-STARTPTS[cc_clip_259];\ncolor=c=black@0.0:s=960x720:r=30:d=4.551,format=rgba,setpts=PTS-STARTPTS[cc_transparent_260];\n[cc_transparent_260][cc_clip_259]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.551,setpts=PTS-STARTPTS[cc_positioned_261];\n[cc_positioned_258][cc_positioned_261]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_262];\n[3:v:0]trim=duration=4.5511,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=4.5511,setpts=PTS-STARTPTS[cc_clip_263];\ncolor=c=black@0.0:s=960x720:r=30:d=4.5511,format=rgba,setpts=PTS-STARTPTS[cc_transparent_264];\n[cc_transparent_264][cc_clip_263]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.5511,setpts=PTS-STARTPTS[cc_positioned_265];\n[cc_concat_262][cc_positioned_265]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_266];\n[4:v:0]trim=duration=4.551,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=4.551,setpts=PTS-STARTPTS[cc_clip_267];\ncolor=c=black@0.0:s=960x720:r=30:d=4.551,format=rgba,setpts=PTS-STARTPTS[cc_transparent_268];\n[cc_transparent_268][cc_clip_267]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.551,setpts=PTS-STARTPTS[cc_positioned_269];\n[cc_concat_266][cc_positioned_269]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_270];\n[5:v:0]trim=duration=4.5511,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=4.5511,setpts=PTS-STARTPTS[cc_clip_271];\ncolor=c=black@0.0:s=960x720:r=30:d=4.5511,format=rgba,setpts=PTS-STARTPTS[cc_transparent_272];\n[cc_transparent_272][cc_clip_271]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.5511,setpts=PTS-STARTPTS[cc_positioned_273];\n[cc_concat_270][cc_positioned_273]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_274];\n[6:v:0]trim=duration=4.551,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=4.551,setpts=PTS-STARTPTS[cc_clip_275];\ncolor=c=black@0.0:s=960x720:r=30:d=4.551,format=rgba,setpts=PTS-STARTPTS[cc_transparent_276];\n[cc_transparent_276][cc_clip_275]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.551,setpts=PTS-STARTPTS[cc_positioned_277];\n[cc_concat_274][cc_positioned_277]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_278];\n[7:v:0]trim=duration=4.5511,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=4.5511,setpts=PTS-STARTPTS[cc_clip_279];\ncolor=c=black@0.0:s=960x720:r=30:d=4.5511,format=rgba,setpts=PTS-STARTPTS[cc_transparent_280];\n[cc_transparent_280][cc_clip_279]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.5511,setpts=PTS-STARTPTS[cc_positioned_281];\n[cc_concat_278][cc_positioned_281]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_282];\n[8:v:0]trim=duration=4.5511,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=4.5511,setpts=PTS-STARTPTS[cc_clip_283];\ncolor=c=black@0.0:s=960x720:r=30:d=4.5511,format=rgba,setpts=PTS-STARTPTS[cc_transparent_284];\n[cc_transparent_284][cc_clip_283]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.5511,setpts=PTS-STARTPTS[cc_positioned_285];\n[cc_concat_282][cc_positioned_285]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_286];\ncolor=c=black:s=960x720:r=30:d=36.4085,format=rgba,setpts=PTS-STARTPTS[cc_black_287];\n[cc_black_287][cc_concat_214]overlay=x=0:y=0:eof_action=pass:repeatlast=0:format=auto,setpts=PTS-STARTPTS[cc_composite_288];\n[cc_composite_288][cc_concat_255]overlay=x=0:y=0:eof_action=pass:repeatlast=0:format=auto,setpts=PTS-STARTPTS[cc_composite_289];\n[cc_composite_289][cc_concat_286]overlay=x=0:y=0:eof_action=pass:repeatlast=0:format=auto,setpts=PTS-STARTPTS[cc_composite_290];\n[cc_composite_290]fps=30,trim=duration=36.4085,format=yuv420p,setpts=PTS-STARTPTS[vout];\n[0:a:0]atrim=start=40:end=42.2755,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=2.2755,atrim=duration=2.2755,adelay=delays=0:all=1,asetpts=PTS-STARTPTS[cc_source_audio_291];\n[0:a:0]atrim=start=100.91:end=101.4789,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5689,atrim=duration=0.5689,adelay=delays=2275.5:all=1,asetpts=PTS-STARTPTS[cc_source_audio_292];\n[0:a:0]atrim=start=42.39:end=42.9589,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5689,atrim=duration=0.5689,adelay=delays=2844.4:all=1,asetpts=PTS-STARTPTS[cc_source_audio_293];\n[0:a:0]atrim=start=103.3:end=104.4378,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=1.1378,atrim=duration=1.1378,adelay=delays=3413.3:all=1,asetpts=PTS-STARTPTS[cc_source_audio_294];\n[0:a:0]atrim=start=180.78:end=181.9177,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=1.1377,atrim=duration=1.1377,adelay=delays=4551.1:all=1,asetpts=PTS-STARTPTS[cc_source_audio_295];\n[0:a:0]atrim=start=430.26:end=431.3978,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=1.1378,atrim=duration=1.1378,adelay=delays=5688.8:all=1,asetpts=PTS-STARTPTS[cc_source_audio_296];\n[0:a:0]atrim=start=183.17:end=184.3078,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=1.1378,atrim=duration=1.1378,adelay=delays=6826.6:all=1,asetpts=PTS-STARTPTS[cc_source_audio_297];\n[0:a:0]atrim=start=432.65:end=433.7877,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=1.1377,atrim=duration=1.1377,adelay=delays=7964.4:all=1,asetpts=PTS-STARTPTS[cc_source_audio_298];\n[0:a:0]atrim=start=720.13:end=720.4145,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.2845,atrim=duration=0.2845,adelay=delays=9102.1:all=1,asetpts=PTS-STARTPTS[cc_source_audio_299];\n[0:a:0]atrim=start=521.04:end=521.3244,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.2844,atrim=duration=0.2844,adelay=delays=9386.6:all=1,asetpts=PTS-STARTPTS[cc_source_audio_300];\n[0:a:0]atrim=start=722.52:end=723.0889,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5689,atrim=duration=0.5689,adelay=delays=9671:all=1,asetpts=PTS-STARTPTS[cc_source_audio_301];\n[0:a:0]atrim=start=260:end=260.5689,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5689,atrim=duration=0.5689,adelay=delays=10239.9:all=1,asetpts=PTS-STARTPTS[cc_source_audio_302];\n[0:a:0]atrim=start=522.91:end=523.4788,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5688,atrim=duration=0.5688,adelay=delays=10808.8:all=1,asetpts=PTS-STARTPTS[cc_source_audio_303];\n[0:a:0]atrim=start=830.39:end=830.6745,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.2845,atrim=duration=0.2845,adelay=delays=11377.6:all=1,asetpts=PTS-STARTPTS[cc_source_audio_304];\n[0:a:0]atrim=start=101.3:end=101.5844,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.2844,atrim=duration=0.2844,adelay=delays=11662.1:all=1,asetpts=PTS-STARTPTS[cc_source_audio_305];\n[0:a:0]atrim=start=832.78:end=833.3489,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5689,atrim=duration=0.5689,adelay=delays=11946.5:all=1,asetpts=PTS-STARTPTS[cc_source_audio_306];\n[0:a:0]atrim=start=262.26:end=263.3978,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=1.1378,atrim=duration=1.1378,adelay=delays=12515.4:all=1,asetpts=PTS-STARTPTS[cc_source_audio_307];\n[0:a:0]atrim=start=931.17:end=931.7389,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5689,atrim=duration=0.5689,adelay=delays=13653.2:all=1,asetpts=PTS-STARTPTS[cc_source_audio_308];\n[0:a:0]atrim=start=102.65:end=103.2188,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5688,atrim=duration=0.5688,adelay=delays=14222.1:all=1,asetpts=PTS-STARTPTS[cc_source_audio_309];\n[0:a:0]atrim=start=932.13:end=933.2678,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=1.1378,atrim=duration=1.1378,adelay=delays=14790.9:all=1,asetpts=PTS-STARTPTS[cc_source_audio_310];\n[0:a:0]atrim=start=431.04:end=431.6089,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5689,atrim=duration=0.5689,adelay=delays=15928.7:all=1,asetpts=PTS-STARTPTS[cc_source_audio_311];\n[0:a:0]atrim=start=1000.52:end=1001.0889,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5689,atrim=duration=0.5689,adelay=delays=16497.6:all=1,asetpts=PTS-STARTPTS[cc_source_audio_312];\n[0:a:0]atrim=start=432:end=432.5688,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5688,atrim=duration=0.5688,adelay=delays=17066.5:all=1,asetpts=PTS-STARTPTS[cc_source_audio_313];\n[0:a:0]atrim=start=620.91:end=621.4789,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5689,atrim=duration=0.5689,adelay=delays=17635.3:all=1,asetpts=PTS-STARTPTS[cc_source_audio_314];\n[0:a:0]atrim=start=520.39:end=520.6745,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.2845,atrim=duration=0.2845,adelay=delays=18204.2:all=1,asetpts=PTS-STARTPTS[cc_source_audio_315];\n[0:a:0]atrim=start=1003.3:end=1003.5844,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.2844,atrim=duration=0.2844,adelay=delays=18488.7:all=1,asetpts=PTS-STARTPTS[cc_source_audio_316];\n[0:a:0]atrim=start=522.78:end=523.3489,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5689,atrim=duration=0.5689,adelay=delays=18773.1:all=1,asetpts=PTS-STARTPTS[cc_source_audio_317];\n[0:a:0]atrim=start=350.26:end=350.8289,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5689,atrim=duration=0.5689,adelay=delays=19342:all=1,asetpts=PTS-STARTPTS[cc_source_audio_318];\n[0:a:0]atrim=start=181.17:end=181.7389,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5689,atrim=duration=0.5689,adelay=delays=19910.9:all=1,asetpts=PTS-STARTPTS[cc_source_audio_319];\n[0:a:0]atrim=start=100.65:end=100.9344,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.2844,atrim=duration=0.2844,adelay=delays=20479.8:all=1,asetpts=PTS-STARTPTS[cc_source_audio_320];\n[0:a:0]atrim=start=182.13:end=182.4144,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.2844,atrim=duration=0.2844,adelay=delays=20764.2:all=1,asetpts=PTS-STARTPTS[cc_source_audio_321];\n[0:a:0]atrim=start=103.04:end=103.6089,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5689,atrim=duration=0.5689,adelay=delays=21048.6:all=1,asetpts=PTS-STARTPTS[cc_source_audio_322];\n[0:a:0]atrim=start=352.52:end=353.6578,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=1.1378,atrim=duration=1.1378,adelay=delays=21617.5:all=1,asetpts=PTS-STARTPTS[cc_source_audio_323];\n[0:a:0]atrim=start=430:end=430.5689,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5689,atrim=duration=0.5689,adelay=delays=22755.3:all=1,asetpts=PTS-STARTPTS[cc_source_audio_324];\n[0:a:0]atrim=start=720.91:end=721.4789,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5689,atrim=duration=0.5689,adelay=delays=23324.2:all=1,asetpts=PTS-STARTPTS[cc_source_audio_325];\n[0:a:0]atrim=start=432.39:end=433.5277,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=1.1377,atrim=duration=1.1377,adelay=delays=23893.1:all=1,asetpts=PTS-STARTPTS[cc_source_audio_326];\n[0:a:0]atrim=start=723.3:end=723.8689,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5689,atrim=duration=0.5689,adelay=delays=25030.8:all=1,asetpts=PTS-STARTPTS[cc_source_audio_327];\n[0:a:0]atrim=start=520.78:end=521.3489,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5689,atrim=duration=0.5689,adelay=delays=25599.7:all=1,asetpts=PTS-STARTPTS[cc_source_audio_328];\n[0:a:0]atrim=start=830.26:end=831.3977,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=1.1377,atrim=duration=1.1377,adelay=delays=26168.6:all=1,asetpts=PTS-STARTPTS[cc_source_audio_329];\n[0:a:0]atrim=start=523.17:end=523.4545,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.2845,atrim=duration=0.2845,adelay=delays=27306.3:all=1,asetpts=PTS-STARTPTS[cc_source_audio_330];\n[0:a:0]atrim=start=832.65:end=833.2189,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5689,atrim=duration=0.5689,adelay=delays=27590.8:all=1,asetpts=PTS-STARTPTS[cc_source_audio_331];\n[0:a:0]atrim=start=100.13:end=100.4144,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.2844,atrim=duration=0.2844,adelay=delays=28159.7:all=1,asetpts=PTS-STARTPTS[cc_source_audio_332];\n[0:a:0]atrim=start=41.04:end=42.1778,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=1.1378,atrim=duration=1.1378,adelay=delays=28444.1:all=1,asetpts=PTS-STARTPTS[cc_source_audio_333];\n[0:a:0]atrim=start=102.52:end=103.0889,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5689,atrim=duration=0.5689,adelay=delays=29581.9:all=1,asetpts=PTS-STARTPTS[cc_source_audio_334];\n[0:a:0]atrim=start=930:end=930.5688,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5688,atrim=duration=0.5688,adelay=delays=30150.8:all=1,asetpts=PTS-STARTPTS[cc_source_audio_335];\n[0:a:0]atrim=start=430.91:end=432.0478,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=1.1378,atrim=duration=1.1378,adelay=delays=30719.6:all=1,asetpts=PTS-STARTPTS[cc_source_audio_336];\n[0:a:0]atrim=start=932.39:end=932.6744,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.2844,atrim=duration=0.2844,adelay=delays=31857.4:all=1,asetpts=PTS-STARTPTS[cc_source_audio_337];\n[0:a:0]atrim=start=433.3:end=433.5845,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.2845,atrim=duration=0.2845,adelay=delays=32141.8:all=1,asetpts=PTS-STARTPTS[cc_source_audio_338];\n[0:a:0]atrim=start=1000.78:end=1001.3489,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5689,atrim=duration=0.5689,adelay=delays=32426.3:all=1,asetpts=PTS-STARTPTS[cc_source_audio_339];\n[0:a:0]atrim=start=622.26:end=622.8288,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5688,atrim=duration=0.5688,adelay=delays=32995.2:all=1,asetpts=PTS-STARTPTS[cc_source_audio_340];\n[0:a:0]atrim=start=521.17:end=521.7389,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5689,atrim=duration=0.5689,adelay=delays=33564:all=1,asetpts=PTS-STARTPTS[cc_source_audio_341];\n[0:a:0]atrim=start=1002.65:end=1003.2189,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5689,atrim=duration=0.5689,adelay=delays=34132.9:all=1,asetpts=PTS-STARTPTS[cc_source_audio_342];\n[0:a:0]atrim=start=522.13:end=522.6989,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5689,atrim=duration=0.5689,adelay=delays=34701.8:all=1,asetpts=PTS-STARTPTS[cc_source_audio_343];\n[0:a:0]atrim=start=181.04:end=182.1778,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=1.1378,atrim=duration=1.1378,adelay=delays=35270.7:all=1,asetpts=PTS-STARTPTS[cc_source_audio_344];\n[9:a:0]atrim=start=0:end=36.4085,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,apad=pad_dur=36.4085,atrim=duration=36.4085,adelay=delays=0:all=1,asetpts=PTS-STARTPTS[cc_audio_345];\nanullsrc=r=48000:cl=stereo:d=36.4085[cc_silence_346];\n[cc_silence_346][cc_source_audio_291][cc_source_audio_292][cc_source_audio_293][cc_source_audio_294][cc_source_audio_295][cc_source_audio_296][cc_source_audio_297][cc_source_audio_298][cc_source_audio_299][cc_source_audio_300][cc_source_audio_301][cc_source_audio_302][cc_source_audio_303][cc_source_audio_304][cc_source_audio_305][cc_source_audio_306][cc_source_audio_307][cc_source_audio_308][cc_source_audio_309][cc_source_audio_310][cc_source_audio_311][cc_source_audio_312][cc_source_audio_313][cc_source_audio_314][cc_source_audio_315][cc_source_audio_316][cc_source_audio_317][cc_source_audio_318][cc_source_audio_319][cc_source_audio_320][cc_source_audio_321][cc_source_audio_322][cc_source_audio_323][cc_source_audio_324][cc_source_audio_325][cc_source_audio_326][cc_source_audio_327][cc_source_audio_328][cc_source_audio_329][cc_source_audio_330][cc_source_audio_331][cc_source_audio_332][cc_source_audio_333][cc_source_audio_334][cc_source_audio_335][cc_source_audio_336][cc_source_audio_337][cc_source_audio_338][cc_source_audio_339][cc_source_audio_340][cc_source_audio_341][cc_source_audio_342][cc_source_audio_343][cc_source_audio_344][cc_audio_345]amix=inputs=56:duration=longest:dropout_transition=0:normalize=0,aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,atrim=duration=36.4085,asetpts=PTS-STARTPTS[aout]\n",
+  "output": {
+    "path": "/workspace/demo/guichu-v2/guichu-v2.mp4",
+    "temporaryPath": "{output}",
+    "format": "mp4",
+    "overwrite": true
+  },
+  "media": {
+    "durationSeconds": 36.4085,
+    "width": 960,
+    "height": 720,
+    "frameRate": 30,
+    "pixelFormat": "yuv420p",
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "audioSampleRate": 48000,
+    "audioChannels": 2
+  },
+  "warnings": [],
+  "textFiles": []
+}
