@@ -1,0 +1,88 @@
+<title>白云黑土说唱 · 鬼畜成品与调音交付</title>
+
+<p>本页汇总当前版本的成品视频、调音音频、逐音分析报告和画面概览，方便直接试听与评审。</p>
+
+<callout emoji="🎧" background-color="light-blue"><p>试听重点：整句韵腹是否对齐、辅音是否自然、以及第 14–16 秒“没／咋／地”一段是否仍有吞字或错位。音高数值接近目标不代表听感已达标。</p></callout>
+
+<h1>成品文件</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th background-color="light-gray"><p>类型</p></th>
+      <th background-color="light-gray"><p>文件</p></th>
+      <th background-color="light-gray"><p>说明</p></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>视频</p></td>
+      <td><p><a href="https://my.feishu.cn/file/AGSjbdvu4oPD1Jx4tkvcmisUnIB">guichu-song-smooth.mp4</a></p></td>
+      <td><p>24 秒成品，画面与平滑版人声合成</p></td>
+    </tr>
+    <tr>
+      <td><p>音频</p></td>
+      <td><p><a href="https://my.feishu.cn/file/SJY8bBuynozeVJxajjqcm8Senud">song-vocals-autotuned.wav</a></p></td>
+      <td><p>调音后人声，48 kHz 单声道，24 秒</p></td>
+    </tr>
+    <tr>
+      <td><p>报告</p></td>
+      <td><p><a href="https://my.feishu.cn/file/NZlwb0xq4ouEyBxzfVrcbZMLnWd">song-vocals-autotuned.report.json</a></p></td>
+      <td><p>42 个音的逐音对齐、音高与置信度</p></td>
+    </tr>
+    <tr>
+      <td><p>画面</p></td>
+      <td><p><a href="https://my.feishu.cn/file/HBhhb7Y2hoLo4IxwZSKcI2g9nKd">guichu-song-sheet.png</a></p></td>
+      <td><p>分镜缩略图</p></td>
+    </tr>
+  </tbody>
+</table>
+
+<h1>视频</h1>
+
+<figure view-type="Card"><source token="AGSjbdvu4oPD1Jx4tkvcmisUnIB" name="guichu-song-smooth.mp4"/></figure>
+
+<h1>调音音频</h1>
+
+<figure view-type="Card"><source token="SJY8bBuynozeVJxajjqcm8Senud" name="song-vocals-autotuned.wav"/></figure>
+
+<h1>本轮调音改动</h1>
+
+<ul>
+  <li><p>时间码改为搜索先验，不再当作不可越界的硬切点。</p></li>
+  <li><p>整句检测韵腹峰并按顺序分配，避免每字各自抢到前一字的尾音。</p></li>
+  <li><p>按辅音、起音、延音、尾音分段映射，主要拉长延音区。</p></li>
+  <li><p>保留人工 <code>source.vowelStart</code> 锚点，并支持重复素材的源时间回退。</p></li>
+  <li><p>转音围绕元音起点，不再在辅音阶段提前完成。</p></li>
+</ul>
+
+<h1>报告摘要与边界</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th background-color="light-gray"><p>指标</p></th>
+      <th background-color="light-gray"><p>数值</p></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><p>音符数</p></td><td><p>42</p></td></tr>
+    <tr><td><p>自动对齐回退数</p></td><td><p>0</p></td></tr>
+    <tr><td><p>低置信度音符</p></td><td><p>30</p></td></tr>
+    <tr><td><p>警告数</p></td><td><p>59</p></td></tr>
+    <tr><td><p>中位音高误差</p></td><td><p>0.91 cents</p></td></tr>
+    <tr><td><p>中位起音误差</p></td><td><p>20 ms</p></td></tr>
+  </tbody>
+</table>
+
+<callout emoji="⚠️" background-color="light-yellow"><p>已知边界：末句“没／咋／地”仍存在自动对齐歧义；30 个音被标为低置信度。报告中的中位音高误差只统计可靠帧，不能作为听感合格的证明。</p></callout>
+
+<h1>迭代记录</h1>
+
+<p>旧版已提交在 <code>45e7e23</code>，本轮 v2 改动提交在 <code>55f6338</code>，未推送。项目 <code>project.json</code> 保持 revision 8，未重渲视频以外的时间线。</p>
+
+<p>下一步建议：先试听并标记问题字，再为这些字补人工 <code>source.vowelStart</code> 锚点，而不是继续盲目调整 WORLD 参数。</p>
+
+<h1>画面概览</h1>
+
+<img path="@./demo/guichu-song/guichu-song-sheet.png" caption="分镜缩略图"/>
