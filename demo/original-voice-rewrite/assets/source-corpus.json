@@ -1,0 +1,186 @@
+[
+  {
+    "index": 1,
+    "unitId": "heitu",
+    "text": "我叫黑土",
+    "speaker": "黑土",
+    "source": {
+      "file": "/workspace/.tmp-guichu/zuotian.mp4",
+      "start": 92.17,
+      "end": 93.62
+    },
+    "sourceDuration": 1.4500000000000028,
+    "output": {
+      "start": 0.0,
+      "end": 1.137764293163933
+    },
+    "backingChordTone": "Eb4",
+    "sourceMedianF0Hz": 227.18,
+    "appliedPitchSemitones": -2.0,
+    "tempoFactor": 1.27443,
+    "processing": "whole-phrase Rubber Band; formants preserved; no WORLD synthesis",
+    "originalUnit": "assets/units/01-heitu-original.wav",
+    "tunedUnit": "assets/units/01-heitu-tuned.wav"
+  },
+  {
+    "index": 2,
+    "unitId": "baiyun",
+    "text": "我叫白云",
+    "speaker": "白云",
+    "source": {
+      "file": "/workspace/.tmp-guichu/zuotian.mp4",
+      "start": 90.73,
+      "end": 92.28
+    },
+    "sourceDuration": 1.5499999999999972,
+    "output": {
+      "start": 1.137764293163933,
+      "end": 2.275528586327866
+    },
+    "backingChordTone": "G4",
+    "sourceMedianF0Hz": 145.775,
+    "appliedPitchSemitones": 2.0,
+    "tempoFactor": 1.36232,
+    "processing": "whole-phrase Rubber Band; formants preserved; no WORLD synthesis",
+    "originalUnit": "assets/units/02-baiyun-original.wav",
+    "tunedUnit": "assets/units/02-baiyun-tuned.wav"
+  },
+  {
+    "index": 3,
+    "unitId": "laomu",
+    "text": "这是我老母",
+    "speaker": "黑土",
+    "source": {
+      "file": "/workspace/.tmp-guichu/zuotian.mp4",
+      "start": 99.55,
+      "end": 100.7
+    },
+    "sourceDuration": 1.1500000000000057,
+    "output": {
+      "start": 2.275528586327866,
+      "end": 3.4132928794917987
+    },
+    "backingChordTone": "F4",
+    "sourceMedianF0Hz": 268.996,
+    "appliedPitchSemitones": -1.0,
+    "tempoFactor": 1.01075,
+    "processing": "whole-phrase Rubber Band; formants preserved; no WORLD synthesis",
+    "originalUnit": "assets/units/03-laomu-original.wav",
+    "tunedUnit": "assets/units/03-laomu-tuned.wav"
+  },
+  {
+    "index": 4,
+    "unitId": "laogong",
+    "text": "这是我老公",
+    "speaker": "白云",
+    "source": {
+      "file": "/workspace/.tmp-guichu/zuotian.mp4",
+      "start": 98.43,
+      "end": 99.66
+    },
+    "sourceDuration": 1.2299999999999898,
+    "output": {
+      "start": 3.4132928794917987,
+      "end": 4.551057172655732
+    },
+    "backingChordTone": "D4",
+    "sourceMedianF0Hz": 174.251,
+    "appliedPitchSemitones": 2.0,
+    "tempoFactor": 1.08107,
+    "processing": "whole-phrase Rubber Band; formants preserved; no WORLD synthesis",
+    "originalUnit": "assets/units/04-laogong-original.wav",
+    "tunedUnit": "assets/units/04-laogong-tuned.wav"
+  },
+  {
+    "index": 5,
+    "unitId": "qishiwu",
+    "text": "我七十五",
+    "speaker": "黑土",
+    "source": {
+      "file": "/workspace/.tmp-guichu/zuotian.mp4",
+      "start": 95.51,
+      "end": 96.58
+    },
+    "sourceDuration": 1.0699999999999932,
+    "output": {
+      "start": 4.551057172655732,
+      "end": 5.6888214658196645
+    },
+    "backingChordTone": "C4",
+    "sourceMedianF0Hz": 255.708,
+    "appliedPitchSemitones": -2.0,
+    "tempoFactor": 0.94044,
+    "processing": "whole-phrase Rubber Band; formants preserved; no WORLD synthesis",
+    "originalUnit": "assets/units/05-qishiwu-original.wav",
+    "tunedUnit": "assets/units/05-qishiwu-tuned.wav"
+  },
+  {
+    "index": 6,
+    "unitId": "qishiyi",
+    "text": "我七十一",
+    "speaker": "白云",
+    "source": {
+      "file": "/workspace/.tmp-guichu/zuotian.mp4",
+      "start": 94.03,
+      "end": 95.62
+    },
+    "sourceDuration": 1.5900000000000034,
+    "output": {
+      "start": 5.6888214658196645,
+      "end": 6.826585758983597
+    },
+    "backingChordTone": "A4",
+    "sourceMedianF0Hz": 114.26,
+    "appliedPitchSemitones": 2.0,
+    "tempoFactor": 1.39748,
+    "processing": "whole-phrase Rubber Band; formants preserved; no WORLD synthesis",
+    "originalUnit": "assets/units/06-qishiyi-original.wav",
+    "tunedUnit": "assets/units/06-qishiyi-tuned.wav"
+  },
+  {
+    "index": 7,
+    "unitId": "shuhu",
+    "text": "我属虎",
+    "speaker": "黑土",
+    "source": {
+      "file": "/workspace/.tmp-guichu/zuotian.mp4",
+      "start": 97.51,
+      "end": 98.54
+    },
+    "sourceDuration": 1.0300000000000011,
+    "output": {
+      "start": 6.826585758983597,
+      "end": 7.96435005214753
+    },
+    "backingChordTone": "D4",
+    "sourceMedianF0Hz": 232.758,
+    "appliedPitchSemitones": 0.0,
+    "tempoFactor": 0.90528,
+    "processing": "whole-phrase Rubber Band; formants preserved; no WORLD synthesis",
+    "originalUnit": "assets/units/07-shuhu-original.wav",
+    "tunedUnit": "assets/units/07-shuhu-tuned.wav"
+  },
+  {
+    "index": 8,
+    "unitId": "shuji",
+    "text": "我属鸡",
+    "speaker": "白云",
+    "source": {
+      "file": "/workspace/.tmp-guichu/zuotian.mp4",
+      "start": 96.47,
+      "end": 97.62
+    },
+    "sourceDuration": 1.1500000000000057,
+    "output": {
+      "start": 7.96435005214753,
+      "end": 9.102114345311463
+    },
+    "backingChordTone": "Bb4",
+    "sourceMedianF0Hz": 173.429,
+    "appliedPitchSemitones": 3.0,
+    "tempoFactor": 1.01075,
+    "processing": "whole-phrase Rubber Band; formants preserved; no WORLD synthesis",
+    "originalUnit": "assets/units/08-shuji-original.wav",
+    "tunedUnit": "assets/units/08-shuji-tuned.wav"
+  }
+]
