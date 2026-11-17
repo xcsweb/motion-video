@@ -20,7 +20,7 @@
 - [ ] stdout/stderr 持续消费，日志洪峰不会造成 PIPE 阻塞或无界内存增长，日志截断有明确标记。
 - [ ] Ctrl-C、SIGTERM、超时和 jobs cancel 均进入终止流程，宽限期后强杀并等待子进程退出。
 - [ ] 取消、超时、启动失败、FFmpeg 非零退出、写盘失败、非法进度和 worker 崩溃有不同错误类型。
-- [ ] job 心跳与进程检查能把意外退出标为 interrupted，不会永久显示 running。
+- [ ] 心跳过期只标记 health=stale；确认 worker 消失后才标记 interrupted，存活但卡住的任务可由超时或显式取消终止。
 - [ ] 取消/失败会清理临时文件并保留旧输出；retry 新建 job 且保留旧诊断，默认不自动重试。
 
 ## CLI 排错与终端诊断仪表盘

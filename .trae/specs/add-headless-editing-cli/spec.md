@@ -22,6 +22,112 @@
 - 提供使用仓库现有素材的完整示例，以及覆盖异步与异常路径的离线端到端测试。
 - 保留现有 Python v1、v4 和 20 秒示例的行为，不重写旧工程。
 
+## 业务流程与状态流
+
+以下流程是实现边界：AI 始终通过 JSON/CLI 驱动，TUI 只是同一核心服务的观察与显式操作入口。
+
+### 1. AI 剪辑主流程
+
+```mermaid
+flowchart TD
+  A[发现 Schema 与 capabilities] --> B[初始化或打开工程]
+  B --> C[登记素材并探测元数据]
+  C --> D[异步分析场景 静音 缩略图与联系表]
+  D --> E[构造操作并执行 edit apply --dry-run]
+  E --> F{校验与差异可接受}
+  F -- 否 --> G[调整操作或撤销 重做] --> E
+  F -- 是 --> H[提交事务并生成不可变修订]
+  H --> I[生成 frame sheet proxy 预览]
+  I --> J{画面 音频与时间线正确}
+  J -- 否 --> G
+  J -- 是 --> K[启动异步正式渲染]
+  K --> L{输出校验通过}
+  L -- 是 --> M[原子发布成片并返回媒体信息]
+  L -- 否 --> N[jobs logs diagnose 定位问题]
+  N --> O{问题属于哪一层}
+  O -- 工程内容 --> G
+  O -- 环境或执行 --> P[按需修复环境并 jobs retry 创建新 job]
+  P --> Q[新 job 重新预检与渲染] --> L
+```
+
+### 2. 事务编辑与修订流程
+
+```mermaid
+flowchart LR
+  A[接收操作列表] --> B[获取项目写锁]
+  B --> C[在内存副本顺序执行并校验]
+  C --> D{全部操作成功}
+  D -- 否 --> E[丢弃副本 返回 operationIndex 不写文件] --> Z[释放项目写锁]
+  D -- 是 --> F{是否 dry-run}
+  F -- 是 --> G[只返回结构化差异 不产生修订] --> Z
+  F -- 否 --> H[原子写入新修订与 project.json] --> I[返回 revision 与差异] --> Z
+  J[undo 或 redo] --> B
+```
+
+undo/redo 也走同一项目写锁和事务写入；撤销后的新编辑截断重做分支，渲染和分析不进入编辑历史。
+
+### 3. 异步 job 生命周期
+
+```mermaid
+stateDiagram-v2
+  [*] --> queued
+  queued --> running: worker 启动
+  queued --> cancelled: 启动前取消
+  queued --> failed: worker 启动或预检失败
+  running --> stopping: cancel SIGINT SIGTERM 或超时
+  running --> succeeded: 输出校验与原子发布完成
+  running --> failed: 媒体 写盘或校验失败
+  running --> interrupted: 确认 worker 已消失
+  running --> running: 心跳过期仅标记 health=stale
+  stopping --> cancelled: 主动取消且终止清理完成
+  stopping --> timedOut: 超时且终止清理完成
+  stopping --> failed: 无法确认终止或清理失败
+  succeeded --> [*]
+  failed --> [*]
+  cancelled --> [*]
+  timedOut --> [*]
+  interrupted --> [*]
+```
+
+`retry` 不把旧 job 改回 `queued`，而是创建带 `retryOf` 的新 job，默认重放原工程修订和素材快照并重新预检；旧状态、日志和诊断永久保留。`jobs wait` 只等待现有 job，不创建新任务。`render --dry-run` 只生成执行计划，不创建 job、不启动编码。
+
+### 4. 排错与 Vue TUI 观察流程
+
+```mermaid
+flowchart TD
+  A[命令或 job 失败] --> B[返回结构化 code stage jobId]
+  B --> C[jobs show 与 logs 定位阶段]
+  C --> D{需要完整复现材料}
+  D -- 是 --> E[diagnose 保存参数 滤镜 stderr 环境与修订]
+  D -- 否 --> F{问题层级}
+  E --> F
+  F -- 工程 --> G[修正操作 新修订或撤销]
+  F -- 环境 --> H[doctor 检查工具 字体 权限与锁]
+  F -- 执行 --> I[jobs retry 创建新 job]
+  G --> J[重新预览或渲染]
+  H --> I
+  I --> J
+  K[codecut ui] --> L{交互式 TTY}
+  L -- 否 --> M[用法错误并提示 jobs logs --json]
+  L -- 是 --> N[Vue TUI 订阅同一核心服务]
+  N --> O[查看任务 日志 差异或显式取消 重试]
+  O --> P[退出只恢复终端 不取消 detached job]
+```
+
+### 流程一致性检查结论
+
+| 检查点 | 结论与约束 |
+| --- | --- |
+| AI 与 UI 边界 | 主流程不经过浏览器或 TUI；除 `codecut ui` 外均可非交互执行并返回 JSON。 |
+| dry-run 与只读操作 | edit dry-run 不写文件、不产生修订；render dry-run 不创建 job、不编码；分析和渲染不产生编辑修订。 |
+| 修订一致性 | 编辑只在项目写锁内修改权威工程；渲染固定不可变修订与素材状态，允许后续编辑而不污染进行中的输出。 |
+| 锁与死锁 | 不嵌套持有项目写锁和输出路径锁；编辑只持项目写锁，渲染固定修订后仅争用输出路径锁。 |
+| 任务终态 | succeeded、failed、cancelled、timedOut、interrupted 互不混用；只有完成输出校验和原子发布才能 succeeded。 |
+| 心跳与崩溃 | 心跳过期只设置 `health=stale` 并告警；确认 worker 消失后才设置 interrupted，存活但卡住的任务由超时或显式取消处理。 |
+| 取消与重试 |  queued 可直接取消，running/stopping 必须确认子进程终止并清理；retry 永远是新 job，默认不自动重试。 |
+| 输出安全 | 所有发布都走临时文件和原子替换；失败、取消、超时和中断保留旧目标，不留下伪装成功的残缺输出。 |
+| TUI 与实验 API | 退出观察界面不取消 detached job；Vue TUI 实验日志适配器失败不影响普通 CLI、任务控制或诊断。 |
+
 ## 范围决策：做什么、为什么
 
 | 要做的能力 | 对 AI 的实际价值 |
@@ -89,15 +195,15 @@
 - `jobs list/show/wait/cancel/retry` 使用同一持久化 job store；retry 创建新 job，不覆盖旧诊断记录。
 - 同类 I/O 任务使用有界并发，不使用无界 `Promise.all` 一次启动全部 FFmpeg。
 - 工程写操作按项目串行加锁；渲染固定到不可变修订和素材状态快照，避免编辑中的工程导致半新半旧输出。
-- 同一输出路径加锁，默认拒绝覆盖；并发任务不能互相替换目标文件。
+- 同一输出路径加锁，默认拒绝覆盖；并发任务不能互相替换目标文件。项目写锁与输出路径锁不得嵌套持有，避免编辑与渲染互相等待。
 
 ### 取消、超时和崩溃恢复
 
 - FFmpeg 使用 `-progress` 的机器可读输出报告帧数、时间、速度和结束状态；stderr 单独保存，二者不混成不可解析文本。
 - stdout/stderr 持续消费并写文件，内存只保留有界尾部；日志截断必须显式标记。
-- 前台收到 Ctrl-C/SIGINT、终止信号或任务超时时进入取消流程：先请求终止，超过宽限期再强杀，等待子进程退出后清理临时文件。
+- 前台收到 Ctrl-C/SIGINT、终止信号或任务超时时进入统一 `stopping` 流程：先请求终止，超过宽限期再强杀，等待子进程退出并清理后分别落到 `cancelled` 或 `timedOut`。
 - 取消、超时、FFmpeg 非零退出、工具启动失败、磁盘写入失败、非法进度输出和 worker 意外退出分别映射为稳定错误类型。
-- job 定期写心跳；进程消失或心跳失效时标记 `interrupted`，不能永远显示 `running`。原目标和工程保持可用。
+- job 定期写心跳；心跳过期只设置 `health=stale` 并告警，确认 worker 进程消失后才标记 `interrupted`。存活但卡住的任务由超时或显式取消处理，原目标和工程保持可用。
 - 自动重试默认关闭，避免重复写入；AI 可查看失败原因后显式 `jobs retry`。
 
 ### CLI 排错入口
