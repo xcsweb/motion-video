@@ -1,0 +1,385 @@
+{
+  "version": 1,
+  "createdAt": "2026-11-17T05:52:49.629Z",
+  "projectRevision": 8,
+  "project": {
+    "schemaVersion": 1,
+    "revision": 8,
+    "name": "Above the Clouds - Himalayan Trek",
+    "assets": [
+      {
+        "id": "aerial",
+        "kind": "video",
+        "path": "../../.tmp-travel/16130.mp4",
+        "metadata": {
+          "probedAt": "2026-11-17T05:47:29.313Z",
+          "fingerprint": {
+            "size": 13064821,
+            "mtimeMs": 1794894366505.5967
+          },
+          "duration": 42.167125,
+          "size": 13064821,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 2478674,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1280,
+              "height": 720,
+              "frameRate": 23.976023976023978,
+              "duration": 42.167125,
+              "bitRate": 2476144
+            }
+          ]
+        }
+      },
+      {
+        "id": "range",
+        "kind": "video",
+        "path": "../../.tmp-travel/14016.mp4",
+        "metadata": {
+          "probedAt": "2026-11-17T05:47:30.271Z",
+          "fingerprint": {
+            "size": 8931268,
+            "mtimeMs": 1794894374613.6863
+          },
+          "duration": 27.68,
+          "size": 8931268,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 2581291,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1280,
+              "height": 720,
+              "frameRate": 25,
+              "duration": 27.68,
+              "bitRate": 2578583
+            }
+          ]
+        }
+      },
+      {
+        "id": "climb",
+        "kind": "video",
+        "path": "../../.tmp-travel/16120.mp4",
+        "metadata": {
+          "probedAt": "2026-11-17T05:47:31.209Z",
+          "fingerprint": {
+            "size": 5418200,
+            "mtimeMs": 1794894370021.6355
+          },
+          "duration": 16.76675,
+          "size": 5418200,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 2585211,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1280,
+              "height": 720,
+              "frameRate": 23.976023976023978,
+              "duration": 16.76675,
+              "bitRate": 2582446
+            }
+          ]
+        }
+      },
+      {
+        "id": "poles",
+        "kind": "video",
+        "path": "../../.tmp-travel/16119.mp4",
+        "metadata": {
+          "probedAt": "2026-11-17T05:47:32.228Z",
+          "fingerprint": {
+            "size": 7611916,
+            "mtimeMs": 1794894371425.651
+          },
+          "duration": 21.938583,
+          "size": 7611916,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 2775718,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1280,
+              "height": 720,
+              "frameRate": 23.976023976023978,
+              "duration": 21.938583,
+              "bitRate": 2773046
+            }
+          ]
+        }
+      },
+      {
+        "id": "summit",
+        "kind": "video",
+        "path": "../../.tmp-travel/16118.mp4",
+        "metadata": {
+          "probedAt": "2026-11-17T05:47:33.072Z",
+          "fingerprint": {
+            "size": 4699744,
+            "mtimeMs": 1794894373697.676
+          },
+          "duration": 15.181833,
+          "size": 4699744,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 2476509,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1280,
+              "height": 720,
+              "frameRate": 23.976023976023978,
+              "duration": 15.181833,
+              "bitRate": 2473701
+            }
+          ]
+        }
+      },
+      {
+        "id": "score",
+        "kind": "audio",
+        "path": "../../.tmp-travel/vastness.mp3",
+        "metadata": {
+          "probedAt": "2026-11-17T05:47:34.071Z",
+          "fingerprint": {
+            "size": 7356125,
+            "mtimeMs": 1794894427570.271
+          },
+          "duration": 229.851429,
+          "size": 7356125,
+          "formatName": "mp3",
+          "bitRate": 256030,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "audio",
+              "codecName": "mp3",
+              "sampleRate": 44100,
+              "channels": 2,
+              "channelLayout": "stereo",
+              "duration": 229.851429,
+              "bitRate": 256000
+            }
+          ]
+        }
+      }
+    ],
+    "tracks": [
+      {
+        "id": "v1",
+        "kind": "video",
+        "name": "Video 1",
+        "clips": [
+          {
+            "id": "opening-aerial",
+            "type": "video",
+            "assetId": "aerial",
+            "start": 0,
+            "duration": 3.5,
+            "sourceStart": 2
+          },
+          {
+            "id": "mountain-reveal",
+            "type": "video",
+            "assetId": "range",
+            "start": 2.9,
+            "duration": 3.2,
+            "sourceStart": 4,
+            "scale": 1.05,
+            "transition": {
+              "type": "xfade",
+              "duration": 0.6,
+              "name": "fade"
+            }
+          },
+          {
+            "id": "snow-approach",
+            "type": "video",
+            "assetId": "climb",
+            "start": 6.1,
+            "duration": 3.5,
+            "sourceStart": 0.5
+          },
+          {
+            "id": "ridge-traverse",
+            "type": "video",
+            "assetId": "poles",
+            "start": 9.6,
+            "duration": 3,
+            "sourceStart": 0.5,
+            "speed": 1.15
+          },
+          {
+            "id": "snow-ascent",
+            "type": "video",
+            "assetId": "climb",
+            "start": 12.6,
+            "duration": 3.2,
+            "sourceStart": 9
+          },
+          {
+            "id": "summit-celebration",
+            "type": "video",
+            "assetId": "summit",
+            "start": 15.4,
+            "duration": 4.5,
+            "sourceStart": 2,
+            "transition": {
+              "type": "xfade",
+              "duration": 0.4,
+              "name": "fade"
+            }
+          },
+          {
+            "id": "closing-aerial",
+            "type": "video",
+            "assetId": "aerial",
+            "start": 19.1,
+            "duration": 4.5,
+            "sourceStart": 26,
+            "transition": {
+              "type": "xfade",
+              "duration": 0.8,
+              "name": "fade"
+            }
+          }
+        ]
+      },
+      {
+        "id": "v2",
+        "kind": "video",
+        "name": "Video 2",
+        "clips": [
+          {
+            "id": "opening-title",
+            "type": "text",
+            "text": "ABOVE THE CLOUDS",
+            "start": 0.5,
+            "duration": 2.8,
+            "fontSize": 68,
+            "color": "#151515"
+          },
+          {
+            "id": "location",
+            "type": "text",
+            "text": "HIMALAYAS  /  WINTER TREK",
+            "start": 3.5,
+            "duration": 2.4,
+            "fontSize": 30,
+            "color": "#FFFFFF"
+          },
+          {
+            "id": "ascent-caption",
+            "type": "text",
+            "text": "ONE STEP AT A TIME",
+            "start": 12.9,
+            "duration": 2.5,
+            "fontSize": 42,
+            "color": "#151515"
+          },
+          {
+            "id": "closing-title",
+            "type": "text",
+            "text": "THE VIEW IS EARNED",
+            "start": 19.8,
+            "duration": 3,
+            "fontSize": 48,
+            "color": "#151515"
+          }
+        ]
+      },
+      {
+        "id": "a1",
+        "kind": "audio",
+        "name": "Audio 1",
+        "clips": [
+          {
+            "id": "vastness-score",
+            "type": "audio",
+            "assetId": "score",
+            "start": 0,
+            "duration": 23.6,
+            "sourceStart": 0,
+            "volume": 0.65,
+            "fadeIn": 1.2,
+            "fadeOut": 2.8
+          }
+        ]
+      },
+      {
+        "id": "a2",
+        "kind": "audio",
+        "name": "Audio 2",
+        "clips": []
+      }
+    ],
+    "output": {
+      "path": "output.mp4",
+      "format": "mp4",
+      "videoCodec": "h264",
+      "audioCodec": "aac",
+      "width": 1280,
+      "height": 720,
+      "frameRate": 24,
+      "pixelFormat": "yuv420p",
+      "audioSampleRate": 48000,
+      "audioChannels": 2
+    }
+  },
+  "assets": [
+    {
+      "id": "aerial",
+      "path": "../../.tmp-travel/16130.mp4",
+      "exists": true,
+      "size": 13064821,
+      "mtimeMs": 1794894366505.5967
+    },
+    {
+      "id": "range",
+      "path": "../../.tmp-travel/14016.mp4",
+      "exists": true,
+      "size": 8931268,
+      "mtimeMs": 1794894374613.6863
+    },
+    {
+      "id": "climb",
+      "path": "../../.tmp-travel/16120.mp4",
+      "exists": true,
+      "size": 5418200,
+      "mtimeMs": 1794894370021.6355
+    },
+    {
+      "id": "poles",
+      "path": "../../.tmp-travel/16119.mp4",
+      "exists": true,
+      "size": 7611916,
+      "mtimeMs": 1794894371425.651
+    },
+    {
+      "id": "summit",
+      "path": "../../.tmp-travel/16118.mp4",
+      "exists": true,
+      "size": 4699744,
+      "mtimeMs": 1794894373697.676
+    },
+    {
+      "id": "score",
+      "path": "../../.tmp-travel/vastness.mp3",
+      "exists": true,
+      "size": 7356125,
+      "mtimeMs": 1794894427570.271
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "type": "sheet",
+  "assetId": "aerial",
+  "outputPath": "/workspace/demo/travel-vlog/select-aerial.png",
+  "cacheKey": "d201da2c63d4238296b895bf96bc9db5c034bafb0c186b3ca4328edd9932dc2f",
+  "cacheHit": false,
+  "source": {
+    "path": "../../.tmp-travel/16130.mp4",
+    "size": 13064821,
+    "mtimeMs": 1794894366505.5967
+  },
+  "parameters": {
+    "start": 0,
+    "end": 41,
+    "interval": 8.2,
+    "columns": 3,
+    "rows": 2,
+    "width": 320,
+    "height": 180
+  }
+}

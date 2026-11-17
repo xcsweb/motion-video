@@ -1,0 +1,41 @@
+{
+  "id": "r4-6976a157c8",
+  "parentId": "r3-6416dc0032",
+  "projectRevision": 4,
+  "createdAt": "2026-11-17T05:47:32.242Z",
+  "summary": "Add asset poles",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "poles",
+        "kind": "video",
+        "path": "../../.tmp-travel/16119.mp4",
+        "metadata": {
+          "probedAt": "2026-11-17T05:47:32.228Z",
+          "fingerprint": {
+            "size": 7611916,
+            "mtimeMs": 1794894371425.651
+          },
+          "duration": 21.938583,
+          "size": 7611916,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 2775718,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1280,
+              "height": 720,
+              "frameRate": 23.976023976023978,
+              "duration": 21.938583,
+              "bitRate": 2773046
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r4-6976a157c8/project.json"
+}

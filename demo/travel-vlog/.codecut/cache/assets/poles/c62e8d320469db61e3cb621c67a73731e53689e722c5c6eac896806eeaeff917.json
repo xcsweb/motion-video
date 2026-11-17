@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "cacheKey": "3d170730ad5e070ae36fe197fa29bfb319ceb19075c5030697c85fd6bac8c410",
+  "outputPath": "/workspace/demo/travel-vlog/select-poles.png",
+  "source": {
+    "path": "../../.tmp-travel/16119.mp4",
+    "size": 7611916,
+    "mtimeMs": 1794894371425.651
+  },
+  "parameters": {
+    "start": 0,
+    "end": 21,
+    "interval": 4.2,
+    "columns": 3,
+    "rows": 2,
+    "width": 320,
+    "height": 180
+  }
+}

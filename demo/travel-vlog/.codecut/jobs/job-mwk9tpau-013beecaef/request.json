@@ -1,0 +1,83 @@
+{
+  "kind": "asset.sheet",
+  "process": {
+    "command": "ffmpeg",
+    "args": [
+      "-hide_banner",
+      "-nostdin",
+      "-progress",
+      "pipe:1",
+      "-nostats",
+      "-ss",
+      "0",
+      "-t",
+      "16",
+      "-i",
+      "/workspace/.tmp-travel/16120.mp4",
+      "-an",
+      "-vf",
+      "fps=1/3.2,scale=320:180,setpts=PTS+0/TB,drawtext=text='%{pts\\:hms}':fontcolor=white:fontsize=18:box=1:boxcolor=black@0.65:boxborderw=4:x=6:y=6,tile=3x2:margin=8:padding=4:color=0x202020",
+      "-frames:v",
+      "1",
+      "-update",
+      "1",
+      "-c:v",
+      "png",
+      "-f",
+      "image2",
+      "-n",
+      "{output}"
+    ],
+    "progress": "ffmpeg",
+    "durationSeconds": 16
+  },
+  "output": {
+    "path": "/workspace/demo/travel-vlog/select-climb.png",
+    "overwrite": false,
+    "validation": "nonEmpty"
+  },
+  "projectPath": "/workspace/demo/travel-vlog/project.json",
+  "result": {
+    "data": {
+      "type": "sheet",
+      "assetId": "climb",
+      "outputPath": "/workspace/demo/travel-vlog/select-climb.png",
+      "cacheKey": "7d2e58ff3665cfeb62d4b9edbc9874026c40804087fb4e24133a81bdcafcba7b",
+      "cacheHit": false,
+      "source": {
+        "path": "../../.tmp-travel/16120.mp4",
+        "size": 5418200,
+        "mtimeMs": 1794894370021.6355
+      },
+      "parameters": {
+        "start": 0,
+        "end": 16,
+        "interval": 3.2,
+        "columns": 3,
+        "rows": 2,
+        "width": 320,
+        "height": 180
+      }
+    },
+    "cacheManifestPath": "/workspace/demo/travel-vlog/.codecut/cache/assets/climb/41b6680d5706fccb5092def674b3da2898113e1a9e35663737dd13532bf67afe.json",
+    "cacheManifest": {
+      "version": 1,
+      "cacheKey": "7d2e58ff3665cfeb62d4b9edbc9874026c40804087fb4e24133a81bdcafcba7b",
+      "outputPath": "/workspace/demo/travel-vlog/select-climb.png",
+      "source": {
+        "path": "../../.tmp-travel/16120.mp4",
+        "size": 5418200,
+        "mtimeMs": 1794894370021.6355
+      },
+      "parameters": {
+        "start": 0,
+        "end": 16,
+        "interval": 3.2,
+        "columns": 3,
+        "rows": 2,
+        "width": 320,
+        "height": 180
+      }
+    }
+  }
+}

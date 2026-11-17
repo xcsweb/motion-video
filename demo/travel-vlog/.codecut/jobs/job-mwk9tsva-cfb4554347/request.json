@@ -1,0 +1,83 @@
+{
+  "kind": "asset.sheet",
+  "process": {
+    "command": "ffmpeg",
+    "args": [
+      "-hide_banner",
+      "-nostdin",
+      "-progress",
+      "pipe:1",
+      "-nostats",
+      "-ss",
+      "0",
+      "-t",
+      "14.5",
+      "-i",
+      "/workspace/.tmp-travel/16118.mp4",
+      "-an",
+      "-vf",
+      "fps=1/2.9,scale=320:180,setpts=PTS+0/TB,drawtext=text='%{pts\\:hms}':fontcolor=white:fontsize=18:box=1:boxcolor=black@0.65:boxborderw=4:x=6:y=6,tile=3x2:margin=8:padding=4:color=0x202020",
+      "-frames:v",
+      "1",
+      "-update",
+      "1",
+      "-c:v",
+      "png",
+      "-f",
+      "image2",
+      "-n",
+      "{output}"
+    ],
+    "progress": "ffmpeg",
+    "durationSeconds": 14.5
+  },
+  "output": {
+    "path": "/workspace/demo/travel-vlog/select-summit.png",
+    "overwrite": false,
+    "validation": "nonEmpty"
+  },
+  "projectPath": "/workspace/demo/travel-vlog/project.json",
+  "result": {
+    "data": {
+      "type": "sheet",
+      "assetId": "summit",
+      "outputPath": "/workspace/demo/travel-vlog/select-summit.png",
+      "cacheKey": "fadb765099d68ea0e86254a525903bb97cec90cc5fc5b8fb09bd1b02b0941d29",
+      "cacheHit": false,
+      "source": {
+        "path": "../../.tmp-travel/16118.mp4",
+        "size": 4699744,
+        "mtimeMs": 1794894373697.676
+      },
+      "parameters": {
+        "start": 0,
+        "end": 14.5,
+        "interval": 2.9,
+        "columns": 3,
+        "rows": 2,
+        "width": 320,
+        "height": 180
+      }
+    },
+    "cacheManifestPath": "/workspace/demo/travel-vlog/.codecut/cache/assets/summit/1b9b6de7f44fb05b7d1e1e7f807cb81e61a7289b53fbbbd24458394040322d33.json",
+    "cacheManifest": {
+      "version": 1,
+      "cacheKey": "fadb765099d68ea0e86254a525903bb97cec90cc5fc5b8fb09bd1b02b0941d29",
+      "outputPath": "/workspace/demo/travel-vlog/select-summit.png",
+      "source": {
+        "path": "../../.tmp-travel/16118.mp4",
+        "size": 4699744,
+        "mtimeMs": 1794894373697.676
+      },
+      "parameters": {
+        "start": 0,
+        "end": 14.5,
+        "interval": 2.9,
+        "columns": 3,
+        "rows": 2,
+        "width": 320,
+        "height": 180
+      }
+    }
+  }
+}

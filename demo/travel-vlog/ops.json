@@ -1,0 +1,14 @@
+[
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "opening-aerial", "type": "video", "assetId": "aerial", "start": 0, "duration": 3.5, "sourceStart": 2 } },
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "mountain-reveal", "type": "video", "assetId": "range", "start": 2.9, "duration": 3.2, "sourceStart": 4, "scale": 1.05, "transition": { "type": "xfade", "duration": 0.6, "name": "fade" } } },
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "snow-approach", "type": "video", "assetId": "climb", "start": 6.1, "duration": 3.5, "sourceStart": 0.5 } },
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "ridge-traverse", "type": "video", "assetId": "poles", "start": 9.6, "duration": 3, "sourceStart": 0.5, "speed": 1.15 } },
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "snow-ascent", "type": "video", "assetId": "climb", "start": 12.6, "duration": 3.2, "sourceStart": 9 } },
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "summit-celebration", "type": "video", "assetId": "summit", "start": 15.4, "duration": 4.5, "sourceStart": 2, "transition": { "type": "xfade", "duration": 0.4, "name": "fade" } } },
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "closing-aerial", "type": "video", "assetId": "aerial", "start": 19.1, "duration": 4.5, "sourceStart": 26, "transition": { "type": "xfade", "duration": 0.8, "name": "fade" } } },
+  { "type": "addText", "trackId": "v2", "clip": { "id": "opening-title", "type": "text", "text": "ABOVE THE CLOUDS", "start": 0.5, "duration": 2.8, "fontSize": 68, "color": "#FFFFFF" } },
+  { "type": "addText", "trackId": "v2", "clip": { "id": "location", "type": "text", "text": "HIMALAYAS  /  WINTER TREK", "start": 3.5, "duration": 2.4, "fontSize": 30, "color": "#FFFFFF" } },
+  { "type": "addText", "trackId": "v2", "clip": { "id": "ascent-caption", "type": "text", "text": "ONE STEP AT A TIME", "start": 12.9, "duration": 2.5, "fontSize": 42, "color": "#FFFFFF" } },
+  { "type": "addText", "trackId": "v2", "clip": { "id": "closing-title", "type": "text", "text": "THE VIEW IS EARNED", "start": 19.8, "duration": 3, "fontSize": 48, "color": "#FFFFFF" } },
+  { "type": "addClip", "trackId": "a1", "clip": { "id": "vastness-score", "type": "audio", "assetId": "score", "start": 0, "duration": 23.6, "sourceStart": 0, "volume": 0.65, "fadeIn": 1.2, "fadeOut": 2.8 } }
+]

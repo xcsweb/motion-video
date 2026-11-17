@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "cacheKey": "1d25741f7b3323bf3102f4ce5a6b848e4b08271b4429f2eee3bd4b2d9137b2c1",
+  "outputPath": "/workspace/demo/travel-vlog/select-range.png",
+  "source": {
+    "path": "../../.tmp-travel/14016.mp4",
+    "size": 8931268,
+    "mtimeMs": 1794894374613.6863
+  },
+  "parameters": {
+    "start": 0,
+    "end": 27,
+    "interval": 5.4,
+    "columns": 3,
+    "rows": 2,
+    "width": 320,
+    "height": 180
+  }
+}

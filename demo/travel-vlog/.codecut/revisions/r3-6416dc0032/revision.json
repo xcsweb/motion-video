@@ -1,0 +1,41 @@
+{
+  "id": "r3-6416dc0032",
+  "parentId": "r2-a1b0f4401b",
+  "projectRevision": 3,
+  "createdAt": "2026-11-17T05:47:31.220Z",
+  "summary": "Add asset climb",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "climb",
+        "kind": "video",
+        "path": "../../.tmp-travel/16120.mp4",
+        "metadata": {
+          "probedAt": "2026-11-17T05:47:31.209Z",
+          "fingerprint": {
+            "size": 5418200,
+            "mtimeMs": 1794894370021.6355
+          },
+          "duration": 16.76675,
+          "size": 5418200,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 2585211,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1280,
+              "height": 720,
+              "frameRate": 23.976023976023978,
+              "duration": 16.76675,
+              "bitRate": 2582446
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r3-6416dc0032/project.json"
+}

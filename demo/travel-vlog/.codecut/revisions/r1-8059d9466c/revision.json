@@ -1,0 +1,40 @@
+{
+  "id": "r1-8059d9466c",
+  "projectRevision": 1,
+  "createdAt": "2026-11-17T05:47:29.330Z",
+  "summary": "Add asset aerial",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "aerial",
+        "kind": "video",
+        "path": "../../.tmp-travel/16130.mp4",
+        "metadata": {
+          "probedAt": "2026-11-17T05:47:29.313Z",
+          "fingerprint": {
+            "size": 13064821,
+            "mtimeMs": 1794894366505.5967
+          },
+          "duration": 42.167125,
+          "size": 13064821,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 2478674,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1280,
+              "height": 720,
+              "frameRate": 23.976023976023978,
+              "duration": 42.167125,
+              "bitRate": 2476144
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r1-8059d9466c/project.json"
+}

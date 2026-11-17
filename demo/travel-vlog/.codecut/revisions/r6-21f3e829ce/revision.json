@@ -1,0 +1,41 @@
+{
+  "id": "r6-21f3e829ce",
+  "parentId": "r5-80cd582b72",
+  "projectRevision": 6,
+  "createdAt": "2026-11-17T05:47:34.080Z",
+  "summary": "Add asset score",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "score",
+        "kind": "audio",
+        "path": "../../.tmp-travel/vastness.mp3",
+        "metadata": {
+          "probedAt": "2026-11-17T05:47:34.071Z",
+          "fingerprint": {
+            "size": 7356125,
+            "mtimeMs": 1794894427570.271
+          },
+          "duration": 229.851429,
+          "size": 7356125,
+          "formatName": "mp3",
+          "bitRate": 256030,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "audio",
+              "codecName": "mp3",
+              "sampleRate": 44100,
+              "channels": 2,
+              "channelLayout": "stereo",
+              "duration": 229.851429,
+              "bitRate": 256000
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r6-21f3e829ce/project.json"
+}

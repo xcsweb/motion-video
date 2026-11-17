@@ -1,0 +1,21 @@
+{
+  "type": "sheet",
+  "assetId": "climb",
+  "outputPath": "/workspace/demo/travel-vlog/select-climb.png",
+  "cacheKey": "7d2e58ff3665cfeb62d4b9edbc9874026c40804087fb4e24133a81bdcafcba7b",
+  "cacheHit": false,
+  "source": {
+    "path": "../../.tmp-travel/16120.mp4",
+    "size": 5418200,
+    "mtimeMs": 1794894370021.6355
+  },
+  "parameters": {
+    "start": 0,
+    "end": 16,
+    "interval": 3.2,
+    "columns": 3,
+    "rows": 2,
+    "width": 320,
+    "height": 180
+  }
+}

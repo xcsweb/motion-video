@@ -1,0 +1,181 @@
+{
+  "version": 1,
+  "revision": 8,
+  "command": "ffmpeg",
+  "durationSeconds": 23.6,
+  "inputs": [
+    {
+      "index": 0,
+      "assetId": "aerial",
+      "kind": "video",
+      "path": "/workspace/.tmp-travel/16130.mp4",
+      "fingerprint": {
+        "size": 13064821,
+        "mtimeMs": 1794894366505.5967
+      },
+      "hasVideo": true,
+      "hasAudio": false,
+      "clips": [
+        "opening-aerial",
+        "closing-aerial"
+      ]
+    },
+    {
+      "index": 1,
+      "assetId": "range",
+      "kind": "video",
+      "path": "/workspace/.tmp-travel/14016.mp4",
+      "fingerprint": {
+        "size": 8931268,
+        "mtimeMs": 1794894374613.6863
+      },
+      "hasVideo": true,
+      "hasAudio": false,
+      "clips": [
+        "mountain-reveal"
+      ]
+    },
+    {
+      "index": 2,
+      "assetId": "climb",
+      "kind": "video",
+      "path": "/workspace/.tmp-travel/16120.mp4",
+      "fingerprint": {
+        "size": 5418200,
+        "mtimeMs": 1794894370021.6355
+      },
+      "hasVideo": true,
+      "hasAudio": false,
+      "clips": [
+        "snow-approach",
+        "snow-ascent"
+      ]
+    },
+    {
+      "index": 3,
+      "assetId": "poles",
+      "kind": "video",
+      "path": "/workspace/.tmp-travel/16119.mp4",
+      "fingerprint": {
+        "size": 7611916,
+        "mtimeMs": 1794894371425.651
+      },
+      "hasVideo": true,
+      "hasAudio": false,
+      "clips": [
+        "ridge-traverse"
+      ]
+    },
+    {
+      "index": 4,
+      "assetId": "summit",
+      "kind": "video",
+      "path": "/workspace/.tmp-travel/16118.mp4",
+      "fingerprint": {
+        "size": 4699744,
+        "mtimeMs": 1794894373697.676
+      },
+      "hasVideo": true,
+      "hasAudio": false,
+      "clips": [
+        "summit-celebration"
+      ]
+    },
+    {
+      "index": 5,
+      "assetId": "score",
+      "kind": "audio",
+      "path": "/workspace/.tmp-travel/vastness.mp3",
+      "fingerprint": {
+        "size": 7356125,
+        "mtimeMs": 1794894427570.271
+      },
+      "hasVideo": false,
+      "hasAudio": true,
+      "clips": [
+        "vastness-score"
+      ]
+    }
+  ],
+  "args": [
+    "-hide_banner",
+    "-nostdin",
+    "-progress",
+    "pipe:1",
+    "-nostats",
+    "-i",
+    "/workspace/.tmp-travel/16130.mp4",
+    "-i",
+    "/workspace/.tmp-travel/14016.mp4",
+    "-i",
+    "/workspace/.tmp-travel/16120.mp4",
+    "-i",
+    "/workspace/.tmp-travel/16119.mp4",
+    "-i",
+    "/workspace/.tmp-travel/16118.mp4",
+    "-i",
+    "/workspace/.tmp-travel/vastness.mp3",
+    "-filter_complex_script",
+    "{jobDirectory}/diagnostics/filter_complex.txt",
+    "-map",
+    "[preview_vout]",
+    "-an",
+    "-frames:v",
+    "1",
+    "-c:v",
+    "png",
+    "-update",
+    "1",
+    "-f",
+    "image2",
+    "-y",
+    "{output}"
+  ],
+  "filter_graph": "[0:v:0]trim=start=2:end=5.5,setpts=(PTS-STARTPTS)/1,fps=24,format=rgba,scale=w=1280:h=720:force_original_aspect_ratio=decrease,trim=duration=3.5,setpts=PTS-STARTPTS[cc_clip_0];\ncolor=c=black@0.0:s=1280x720:r=24:d=3.5,format=rgba,setpts=PTS-STARTPTS[cc_transparent_1];\n[cc_transparent_1][cc_clip_0]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=3.5,setpts=PTS-STARTPTS[cc_positioned_2];\n[1:v:0]trim=start=4:end=7.2,setpts=(PTS-STARTPTS)/1,fps=24,format=rgba,scale=w=1280:h=720:force_original_aspect_ratio=decrease,scale=w=max(2\\,trunc(iw*1.05/2)*2):h=max(2\\,trunc(ih*1.05/2)*2):eval=frame,trim=duration=3.2,setpts=PTS-STARTPTS[cc_clip_3];\ncolor=c=black@0.0:s=1280x720:r=24:d=3.2,format=rgba,setpts=PTS-STARTPTS[cc_transparent_4];\n[cc_transparent_4][cc_clip_3]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=3.2,setpts=PTS-STARTPTS[cc_positioned_5];\n[cc_positioned_2]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_left_7];\n[cc_positioned_5]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_right_8];\n[cc_xfade_left_7][cc_xfade_right_8]xfade=transition=fade:duration=0.6:offset=2.9,fps=24,setpts=PTS-STARTPTS[cc_xfade_6];\n[2:v:0]trim=start=0.5:end=4,setpts=(PTS-STARTPTS)/1,fps=24,format=rgba,scale=w=1280:h=720:force_original_aspect_ratio=decrease,trim=duration=3.5,setpts=PTS-STARTPTS[cc_clip_9];\ncolor=c=black@0.0:s=1280x720:r=24:d=3.5,format=rgba,setpts=PTS-STARTPTS[cc_transparent_10];\n[cc_transparent_10][cc_clip_9]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=3.5,setpts=PTS-STARTPTS[cc_positioned_11];\n[cc_xfade_6][cc_positioned_11]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_12];\n[3:v:0]trim=start=0.5:end=3.95,setpts=(PTS-STARTPTS)/1.15,fps=24,format=rgba,scale=w=1280:h=720:force_original_aspect_ratio=decrease,trim=duration=3,setpts=PTS-STARTPTS[cc_clip_13];\ncolor=c=black@0.0:s=1280x720:r=24:d=3,format=rgba,setpts=PTS-STARTPTS[cc_transparent_14];\n[cc_transparent_14][cc_clip_13]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=3,setpts=PTS-STARTPTS[cc_positioned_15];\n[cc_concat_12][cc_positioned_15]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_16];\n[2:v:0]trim=start=9:end=12.2,setpts=(PTS-STARTPTS)/1,fps=24,format=rgba,scale=w=1280:h=720:force_original_aspect_ratio=decrease,trim=duration=3.2,setpts=PTS-STARTPTS[cc_clip_17];\ncolor=c=black@0.0:s=1280x720:r=24:d=3.2,format=rgba,setpts=PTS-STARTPTS[cc_transparent_18];\n[cc_transparent_18][cc_clip_17]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=3.2,setpts=PTS-STARTPTS[cc_positioned_19];\n[cc_concat_16][cc_positioned_19]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_20];\n[4:v:0]trim=start=2:end=6.5,setpts=(PTS-STARTPTS)/1,fps=24,format=rgba,scale=w=1280:h=720:force_original_aspect_ratio=decrease,trim=duration=4.5,setpts=PTS-STARTPTS[cc_clip_21];\ncolor=c=black@0.0:s=1280x720:r=24:d=4.5,format=rgba,setpts=PTS-STARTPTS[cc_transparent_22];\n[cc_transparent_22][cc_clip_21]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.5,setpts=PTS-STARTPTS[cc_positioned_23];\n[cc_concat_20]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_left_25];\n[cc_positioned_23]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_right_26];\n[cc_xfade_left_25][cc_xfade_right_26]xfade=transition=fade:duration=0.4:offset=15.4,fps=24,setpts=PTS-STARTPTS[cc_xfade_24];\n[0:v:0]trim=start=26:end=30.5,setpts=(PTS-STARTPTS)/1,fps=24,format=rgba,scale=w=1280:h=720:force_original_aspect_ratio=decrease,trim=duration=4.5,setpts=PTS-STARTPTS[cc_clip_27];\ncolor=c=black@0.0:s=1280x720:r=24:d=4.5,format=rgba,setpts=PTS-STARTPTS[cc_transparent_28];\n[cc_transparent_28][cc_clip_27]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.5,setpts=PTS-STARTPTS[cc_positioned_29];\n[cc_xfade_24]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_left_31];\n[cc_positioned_29]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_right_32];\n[cc_xfade_left_31][cc_xfade_right_32]xfade=transition=fade:duration=0.8:offset=19.1,fps=24,setpts=PTS-STARTPTS[cc_xfade_30];\ncolor=c=black@0.0:s=1280x720:r=24:d=2.8,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-0.txt:expansion=none:fontsize=68:fontcolor=0x151515:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=sans,fps=24,format=rgba,scale=w=1280:h=720:force_original_aspect_ratio=decrease,trim=duration=2.8,setpts=PTS-STARTPTS[cc_clip_33];\ncolor=c=black@0.0:s=1280x720:r=24:d=2.8,format=rgba,setpts=PTS-STARTPTS[cc_transparent_34];\n[cc_transparent_34][cc_clip_33]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=2.8,setpts=PTS-STARTPTS[cc_positioned_35];\ncolor=c=black@0.0:s=1280x720:r=24:d=0.5,format=rgba,setpts=PTS-STARTPTS[cc_transparent_36];\n[cc_transparent_36][cc_positioned_35]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_37];\ncolor=c=black@0.0:s=1280x720:r=24:d=2.4,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-1.txt:expansion=none:fontsize=30:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=sans,fps=24,format=rgba,scale=w=1280:h=720:force_original_aspect_ratio=decrease,trim=duration=2.4,setpts=PTS-STARTPTS[cc_clip_38];\ncolor=c=black@0.0:s=1280x720:r=24:d=2.4,format=rgba,setpts=PTS-STARTPTS[cc_transparent_39];\n[cc_transparent_39][cc_clip_38]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=2.4,setpts=PTS-STARTPTS[cc_positioned_40];\ncolor=c=black@0.0:s=1280x720:r=24:d=0.2,format=rgba,setpts=PTS-STARTPTS[cc_transparent_41];\n[cc_concat_37][cc_transparent_41]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_42];\n[cc_concat_42][cc_positioned_40]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_43];\ncolor=c=black@0.0:s=1280x720:r=24:d=2.5,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-2.txt:expansion=none:fontsize=42:fontcolor=0x151515:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=sans,fps=24,format=rgba,scale=w=1280:h=720:force_original_aspect_ratio=decrease,trim=duration=2.5,setpts=PTS-STARTPTS[cc_clip_44];\ncolor=c=black@0.0:s=1280x720:r=24:d=2.5,format=rgba,setpts=PTS-STARTPTS[cc_transparent_45];\n[cc_transparent_45][cc_clip_44]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=2.5,setpts=PTS-STARTPTS[cc_positioned_46];\ncolor=c=black@0.0:s=1280x720:r=24:d=7,format=rgba,setpts=PTS-STARTPTS[cc_transparent_47];\n[cc_concat_43][cc_transparent_47]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_48];\n[cc_concat_48][cc_positioned_46]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_49];\ncolor=c=black@0.0:s=1280x720:r=24:d=3,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-3.txt:expansion=none:fontsize=48:fontcolor=0x151515:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=sans,fps=24,format=rgba,scale=w=1280:h=720:force_original_aspect_ratio=decrease,trim=duration=3,setpts=PTS-STARTPTS[cc_clip_50];\ncolor=c=black@0.0:s=1280x720:r=24:d=3,format=rgba,setpts=PTS-STARTPTS[cc_transparent_51];\n[cc_transparent_51][cc_clip_50]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=3,setpts=PTS-STARTPTS[cc_positioned_52];\ncolor=c=black@0.0:s=1280x720:r=24:d=4.4,format=rgba,setpts=PTS-STARTPTS[cc_transparent_53];\n[cc_concat_49][cc_transparent_53]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_54];\n[cc_concat_54][cc_positioned_52]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_55];\ncolor=c=black:s=1280x720:r=24:d=23.6,format=rgba,setpts=PTS-STARTPTS[cc_black_56];\n[cc_black_56][cc_xfade_30]overlay=x=0:y=0:eof_action=pass:repeatlast=0:format=auto,setpts=PTS-STARTPTS[cc_composite_57];\n[cc_composite_57][cc_concat_55]overlay=x=0:y=0:eof_action=pass:repeatlast=0:format=auto,setpts=PTS-STARTPTS[cc_composite_58];\n[cc_composite_58]fps=24,trim=duration=23.6,format=yuv420p,setpts=PTS-STARTPTS[vout];\n[5:a:0]atrim=start=0:end=23.6,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0.65,afade=t=in:st=0:d=1.2,afade=t=out:st=20.8:d=2.8,apad=pad_dur=23.6,atrim=duration=23.6,adelay=delays=0:all=1,asetpts=PTS-STARTPTS[cc_audio_59];\nanullsrc=r=48000:cl=stereo:d=23.6[cc_silence_60];\n[cc_silence_60][cc_audio_59]amix=inputs=2:duration=longest:dropout_transition=0:normalize=0,aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,atrim=duration=23.6,asetpts=PTS-STARTPTS[aout];\n[aout]anullsink;\n[vout]trim=start=21:end=23.6,setpts=PTS-STARTPTS,scale=w=1280:h=720:force_original_aspect_ratio=decrease,pad=1280:720:(ow-iw)/2:(oh-ih)/2:color=black,format=rgb24[preview_vout]\n",
+  "output": {
+    "path": "/workspace/demo/travel-vlog/closing-check.png",
+    "temporaryPath": "{output}",
+    "format": "png",
+    "overwrite": false
+  },
+  "media": {
+    "durationSeconds": 23.6,
+    "width": 1280,
+    "height": 720,
+    "frameRate": 24,
+    "pixelFormat": "yuv420p",
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "audioSampleRate": 48000,
+    "audioChannels": 2
+  },
+  "warnings": [],
+  "textFiles": [
+    {
+      "clipId": "opening-title",
+      "path": "{jobDirectory}/diagnostics/text-0.txt",
+      "content": "ABOVE THE CLOUDS"
+    },
+    {
+      "clipId": "location",
+      "path": "{jobDirectory}/diagnostics/text-1.txt",
+      "content": "HIMALAYAS  /  WINTER TREK"
+    },
+    {
+      "clipId": "ascent-caption",
+      "path": "{jobDirectory}/diagnostics/text-2.txt",
+      "content": "ONE STEP AT A TIME"
+    },
+    {
+      "clipId": "closing-title",
+      "path": "{jobDirectory}/diagnostics/text-3.txt",
+      "content": "THE VIEW IS EARNED"
+    }
+  ],
+  "preview": {
+    "type": "frame",
+    "at": 21,
+    "width": 1280,
+    "height": 720
+  }
+}

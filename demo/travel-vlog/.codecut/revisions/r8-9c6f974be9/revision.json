@@ -1,0 +1,61 @@
+{
+  "id": "r8-9c6f974be9",
+  "parentId": "r7-16ea947044",
+  "projectRevision": 8,
+  "createdAt": "2026-11-17T05:52:01.223Z",
+  "summary": "Improve title contrast on snow",
+  "operations": [
+    {
+      "type": "removeClip",
+      "clipId": "opening-title"
+    },
+    {
+      "type": "addText",
+      "trackId": "v2",
+      "clip": {
+        "id": "opening-title",
+        "type": "text",
+        "text": "ABOVE THE CLOUDS",
+        "start": 0.5,
+        "duration": 2.8,
+        "fontSize": 68,
+        "color": "#151515"
+      }
+    },
+    {
+      "type": "removeClip",
+      "clipId": "ascent-caption"
+    },
+    {
+      "type": "addText",
+      "trackId": "v2",
+      "clip": {
+        "id": "ascent-caption",
+        "type": "text",
+        "text": "ONE STEP AT A TIME",
+        "start": 12.9,
+        "duration": 2.5,
+        "fontSize": 42,
+        "color": "#151515"
+      }
+    },
+    {
+      "type": "removeClip",
+      "clipId": "closing-title"
+    },
+    {
+      "type": "addText",
+      "trackId": "v2",
+      "clip": {
+        "id": "closing-title",
+        "type": "text",
+        "text": "THE VIEW IS EARNED",
+        "start": 19.8,
+        "duration": 3,
+        "fontSize": 48,
+        "color": "#151515"
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r8-9c6f974be9/project.json"
+}

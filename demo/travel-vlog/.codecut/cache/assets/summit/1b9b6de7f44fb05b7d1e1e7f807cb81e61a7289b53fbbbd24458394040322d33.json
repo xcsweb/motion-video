@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "cacheKey": "fadb765099d68ea0e86254a525903bb97cec90cc5fc5b8fb09bd1b02b0941d29",
+  "outputPath": "/workspace/demo/travel-vlog/select-summit.png",
+  "source": {
+    "path": "../../.tmp-travel/16118.mp4",
+    "size": 4699744,
+    "mtimeMs": 1794894373697.676
+  },
+  "parameters": {
+    "start": 0,
+    "end": 14.5,
+    "interval": 2.9,
+    "columns": 3,
+    "rows": 2,
+    "width": 320,
+    "height": 180
+  }
+}

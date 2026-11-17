@@ -1,0 +1,83 @@
+{
+  "kind": "asset.sheet",
+  "process": {
+    "command": "ffmpeg",
+    "args": [
+      "-hide_banner",
+      "-nostdin",
+      "-progress",
+      "pipe:1",
+      "-nostats",
+      "-ss",
+      "0",
+      "-t",
+      "41",
+      "-i",
+      "/workspace/.tmp-travel/16130.mp4",
+      "-an",
+      "-vf",
+      "fps=1/8.2,scale=320:180,setpts=PTS+0/TB,drawtext=text='%{pts\\:hms}':fontcolor=white:fontsize=18:box=1:boxcolor=black@0.65:boxborderw=4:x=6:y=6,tile=3x2:margin=8:padding=4:color=0x202020",
+      "-frames:v",
+      "1",
+      "-update",
+      "1",
+      "-c:v",
+      "png",
+      "-f",
+      "image2",
+      "-n",
+      "{output}"
+    ],
+    "progress": "ffmpeg",
+    "durationSeconds": 41
+  },
+  "output": {
+    "path": "/workspace/demo/travel-vlog/select-aerial.png",
+    "overwrite": false,
+    "validation": "nonEmpty"
+  },
+  "projectPath": "/workspace/demo/travel-vlog/project.json",
+  "result": {
+    "data": {
+      "type": "sheet",
+      "assetId": "aerial",
+      "outputPath": "/workspace/demo/travel-vlog/select-aerial.png",
+      "cacheKey": "d201da2c63d4238296b895bf96bc9db5c034bafb0c186b3ca4328edd9932dc2f",
+      "cacheHit": false,
+      "source": {
+        "path": "../../.tmp-travel/16130.mp4",
+        "size": 13064821,
+        "mtimeMs": 1794894366505.5967
+      },
+      "parameters": {
+        "start": 0,
+        "end": 41,
+        "interval": 8.2,
+        "columns": 3,
+        "rows": 2,
+        "width": 320,
+        "height": 180
+      }
+    },
+    "cacheManifestPath": "/workspace/demo/travel-vlog/.codecut/cache/assets/aerial/4fd0b76a70a6b19c4a485c6ba489cfdc3ac1c05b563f07e2ea9b100806d6bfcb.json",
+    "cacheManifest": {
+      "version": 1,
+      "cacheKey": "d201da2c63d4238296b895bf96bc9db5c034bafb0c186b3ca4328edd9932dc2f",
+      "outputPath": "/workspace/demo/travel-vlog/select-aerial.png",
+      "source": {
+        "path": "../../.tmp-travel/16130.mp4",
+        "size": 13064821,
+        "mtimeMs": 1794894366505.5967
+      },
+      "parameters": {
+        "start": 0,
+        "end": 41,
+        "interval": 8.2,
+        "columns": 3,
+        "rows": 2,
+        "width": 320,
+        "height": 180
+      }
+    }
+  }
+}

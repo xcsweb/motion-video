@@ -1,0 +1,11 @@
+{
+  "type": "frame",
+  "outputPath": "/workspace/demo/travel-vlog/title-check.png",
+  "revision": 8,
+  "parameters": {
+    "type": "frame",
+    "at": 1.5,
+    "width": 1280,
+    "height": 720
+  }
+}
