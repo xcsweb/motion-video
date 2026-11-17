@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Measure the song tempo and beat phase from the actual accompaniment."""
+import argparse
 import json
 from pathlib import Path
 
@@ -14,7 +15,11 @@ HOP = 512
 
 
 def main():
-    y, sr = librosa.load(SONG, sr=SR, mono=True)
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--song', type=Path, default=SONG)
+    parser.add_argument('--output', type=Path, default=OUT)
+    args = parser.parse_args()
+    y, sr = librosa.load(args.song, sr=SR, mono=True)
     onset = librosa.onset.onset_strength(y=y, sr=sr, hop_length=HOP)
     tempo, frames = librosa.beat.beat_track(
         onset_envelope=onset, sr=sr, hop_length=HOP, units='frames'
@@ -42,7 +47,7 @@ def main():
 
     duration = len(y) / sr
     result = {
-        'source': str(SONG),
+        'source': str(args.song),
         'sampleRate': sr,
         'hopLength': HOP,
         'duration': duration,
@@ -56,7 +61,7 @@ def main():
         'trackedBeatCount': len(times),
         'firstTrackedBeats': [round(float(x), 6) for x in times[:32]],
     }
-    OUT.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
+    args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
     print(json.dumps(result, ensure_ascii=False, indent=2))
 
 

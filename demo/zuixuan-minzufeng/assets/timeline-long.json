@@ -1,0 +1,1364 @@
+{
+  "title": "白云黑土·最炫民族风（十六小节原声填词样）",
+  "bpm": 126.98819415849435,
+  "beatSeconds": 0.4724848667830792,
+  "barSeconds": 1.8899394671323169,
+  "duration": 30.23903147411707,
+  "sourceVideo": "/workspace/.tmp-guichu/zuotian.mp4",
+  "song": {
+    "title": "最炫民族风",
+    "artist": "凤凰传奇",
+    "instrumental": "/workspace/demo/zuixuan-minzufeng/assets/zuixuan-no-harmony-instrumental.mp3",
+    "sourceStart": 26.578867757539207,
+    "duration": 30.23903147411707,
+    "instrumentalPage": "https://5sing.kugou.com/bz/2845354.html",
+    "instrumentalLabel": "原版无和声纯伴奏",
+    "rightsNote": "仅作用户要求的非商业试样；公开发布或商业使用需另行确认歌曲、录音及原片授权。"
+  },
+  "method": [
+    "Eight sung phrases on a measured 16-bar, half-beat onset grid.",
+    "Original dialogue word groups and complete characters; no TTS or voice conversion.",
+    "One Rubber Band tempo/pitch transform per unit; formants preserved.",
+    "Sustained rhyme characters are isolated instead of stretching a whole sentence.",
+    "Subtitle times come from the final rendered event grid."
+  ],
+  "lyrics": [
+    "白云：秋波就是秋天的菠菜",
+    "黑土：白云黑土咱俩来谈恋爱",
+    "白云：我送你的秋波是最呀最可爱",
+    "黑土：你送我的猪肉才是最精彩",
+    "白云：这张旧船票从哪里来",
+    "黑土：能否登上你的破船回来",
+    "白云：昨天今天明天咱俩都要相爱",
+    "黑土：咱俩好好过日子才最自在"
+  ],
+  "vocalRms": 0.09768039733171463,
+  "backingRms": 0.2652152180671692,
+  "backingGain": 0.1227687184815262,
+  "lines": [
+    {
+      "speaker": "白云",
+      "text": "秋波就是秋天的菠菜",
+      "start": 0.0,
+      "end": 3.3073940674815545
+    },
+    {
+      "speaker": "黑土",
+      "text": "白云黑土咱俩来谈恋爱",
+      "start": 3.3073940674815545,
+      "end": 7.087273001746189
+    },
+    {
+      "speaker": "白云",
+      "text": "我送你的秋波是最呀最可爱",
+      "start": 7.087273001746189,
+      "end": 10.867151936010822
+    },
+    {
+      "speaker": "黑土",
+      "text": "你送我的猪肉才是最精彩",
+      "start": 10.867151936010822,
+      "end": 14.647030870275456
+    },
+    {
+      "speaker": "白云",
+      "text": "这张旧船票从哪里来",
+      "start": 14.647030870275456,
+      "end": 18.426909804540088
+    },
+    {
+      "speaker": "黑土",
+      "text": "能否登上你的破船回来",
+      "start": 18.426909804540088,
+      "end": 22.206788738804722
+    },
+    {
+      "speaker": "白云",
+      "text": "昨天今天明天咱俩都要相爱",
+      "start": 22.206788738804722,
+      "end": 25.986667673069356
+    },
+    {
+      "speaker": "黑土",
+      "text": "咱俩好好过日子才最自在",
+      "start": 25.986667673069356,
+      "end": 30.23903147411707
+    }
+  ],
+  "units": [
+    {
+      "line": 1,
+      "speaker": "白云",
+      "text": "秋波就是秋天的菠",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 553.928,
+        "end": 556.09,
+        "segmentId": 242,
+        "segmentText": "豬锅就是豬天地博菜",
+        "query": "豬锅就是豬天地博"
+      },
+      "output": {
+        "start": 0.0,
+        "end": 1.8899394671323169
+      },
+      "beat": 0.0,
+      "beats": 4,
+      "sourceMedianF0Hz": 265.822,
+      "targetMidi": 58.0,
+      "appliedPitchSemitones": -1.5,
+      "tempoFactor": 1.14395,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/01-01-秋波就是秋天的菠-original.wav",
+      "tunedUnit": "assets/units-long/01-01-秋波就是秋天的菠-tuned.wav"
+    },
+    {
+      "line": 1,
+      "speaker": "白云",
+      "text": "菜",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 556.048,
+        "end": 556.37,
+        "segmentId": 242,
+        "segmentText": "豬锅就是豬天地博菜",
+        "query": "博菜"
+      },
+      "output": {
+        "start": 1.8899394671323169,
+        "end": 3.3073940674815545
+      },
+      "beat": 4.0,
+      "beats": 3,
+      "sourceMedianF0Hz": 235.223,
+      "targetMidi": 61.0,
+      "appliedPitchSemitones": 1.5,
+      "tempoFactor": 0.22717,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/01-02-菜-original.wav",
+      "tunedUnit": "assets/units-long/01-02-菜-tuned.wav"
+    },
+    {
+      "line": 2,
+      "speaker": "黑土",
+      "text": "白云",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 813.178,
+        "end": 813.6,
+        "segmentId": 369,
+        "segmentText": "啊 白云",
+        "query": "白云"
+      },
+      "output": {
+        "start": 3.3073940674815545,
+        "end": 3.7798789342646337
+      },
+      "beat": 7.0,
+      "beats": 1,
+      "sourceMedianF0Hz": 112.21,
+      "targetMidi": 58.5,
+      "appliedPitchSemitones": 1.5,
+      "tempoFactor": 0.89316,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/02-01-白云-original.wav",
+      "tunedUnit": "assets/units-long/02-01-白云-tuned.wav"
+    },
+    {
+      "line": 2,
+      "speaker": "黑土",
+      "text": "黑土",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 92.928,
+        "end": 93.57,
+        "segmentId": 31,
+        "segmentText": "我叫黑土",
+        "query": "黑土"
+      },
+      "output": {
+        "start": 3.7798789342646337,
+        "end": 4.488606234439253
+      },
+      "beat": 8.0,
+      "beats": 1.5,
+      "sourceMedianF0Hz": 240.308,
+      "targetMidi": 58.5,
+      "appliedPitchSemitones": -0.029,
+      "tempoFactor": 0.90585,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/02-02-黑土-original.wav",
+      "tunedUnit": "assets/units-long/02-02-黑土-tuned.wav"
+    },
+    {
+      "line": 2,
+      "speaker": "黑土",
+      "text": "咱俩",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 672.708,
+        "end": 673.67,
+        "segmentId": 295,
+        "segmentText": "阿俩感情出现过危机以前",
+        "query": "阿俩"
+      },
+      "output": {
+        "start": 4.488606234439253,
+        "end": 4.9610911012223315
+      },
+      "beat": 9.5,
+      "beats": 1.0,
+      "sourceMedianF0Hz": 168.229,
+      "targetMidi": 59.5,
+      "appliedPitchSemitones": 1.5,
+      "tempoFactor": 2.03607,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/02-03-咱俩-original.wav",
+      "tunedUnit": "assets/units-long/02-03-咱俩-tuned.wav"
+    },
+    {
+      "line": 2,
+      "speaker": "黑土",
+      "text": "来",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 344.498,
+        "end": 344.77,
+        "segmentId": 145,
+        "segmentText": "把他写出来呢",
+        "query": "来"
+      },
+      "output": {
+        "start": 4.9610911012223315,
+        "end": 5.197333534613872
+      },
+      "beat": 10.5,
+      "beats": 0.5,
+      "sourceMedianF0Hz": 325.335,
+      "targetMidi": 62.0,
+      "appliedPitchSemitones": -1.5,
+      "tempoFactor": 1.15132,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/02-04-来-original.wav",
+      "tunedUnit": "assets/units-long/02-04-来-tuned.wav"
+    },
+    {
+      "line": 2,
+      "speaker": "黑土",
+      "text": "谈恋",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 430.598,
+        "end": 431.02,
+        "segmentId": 189,
+        "segmentText": "当时谈恋爱的时候是水晕的水",
+        "query": "谈恋"
+      },
+      "output": {
+        "start": 5.197333534613872,
+        "end": 5.669818401396951
+      },
+      "beat": 11.0,
+      "beats": 1,
+      "sourceMedianF0Hz": 283.583,
+      "targetMidi": 65.0,
+      "appliedPitchSemitones": 1.5,
+      "tempoFactor": 0.89316,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/02-05-谈恋-original.wav",
+      "tunedUnit": "assets/units-long/02-05-谈恋-tuned.wav"
+    },
+    {
+      "line": 2,
+      "speaker": "黑土",
+      "text": "爱",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 620.348,
+        "end": 620.65,
+        "segmentId": 271,
+        "segmentText": "他爱心眼太实",
+        "query": "爱"
+      },
+      "output": {
+        "start": 5.669818401396951,
+        "end": 7.087273001746189
+      },
+      "beat": 12.0,
+      "beats": 3,
+      "sourceMedianF0Hz": 296.144,
+      "targetMidi": 62.0,
+      "appliedPitchSemitones": -0.146,
+      "tempoFactor": 0.21306,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/02-06-爱-original.wav",
+      "tunedUnit": "assets/units-long/02-06-爱-tuned.wav"
+    },
+    {
+      "line": 3,
+      "speaker": "白云",
+      "text": "我",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 611.568,
+        "end": 612.09,
+        "segmentId": 268,
+        "segmentText": "对我天天罪名",
+        "query": "我"
+      },
+      "output": {
+        "start": 7.087273001746189,
+        "end": 7.5597578685292675
+      },
+      "beat": 15.0,
+      "beats": 1,
+      "sourceMedianF0Hz": 113.008,
+      "targetMidi": 65.0,
+      "appliedPitchSemitones": 1.5,
+      "tempoFactor": 1.10481,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/03-01-我-original.wav",
+      "tunedUnit": "assets/units-long/03-01-我-tuned.wav"
+    },
+    {
+      "line": 3,
+      "speaker": "白云",
+      "text": "送",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 580.308,
+        "end": 580.57,
+        "segmentId": 253,
+        "segmentText": "我这家送在这毛衣",
+        "query": "送"
+      },
+      "output": {
+        "start": 7.5597578685292675,
+        "end": 7.796000301920807
+      },
+      "beat": 16.0,
+      "beats": 0.5,
+      "sourceMedianF0Hz": 290.42,
+      "targetMidi": 70.0,
+      "appliedPitchSemitones": 1.5,
+      "tempoFactor": 1.10899,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/03-02-送-original.wav",
+      "tunedUnit": "assets/units-long/03-02-送-tuned.wav"
+    },
+    {
+      "line": 3,
+      "speaker": "白云",
+      "text": "你的",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 827.958,
+        "end": 828.44,
+        "segmentId": 376,
+        "segmentText": "还能否登上你的破船",
+        "query": "你的"
+      },
+      "output": {
+        "start": 7.796000301920807,
+        "end": 8.268485168703887
+      },
+      "beat": 16.5,
+      "beats": 1.0,
+      "sourceMedianF0Hz": 120.039,
+      "targetMidi": 70.0,
+      "appliedPitchSemitones": 1.5,
+      "tempoFactor": 1.02015,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/03-03-你的-original.wav",
+      "tunedUnit": "assets/units-long/03-03-你的-tuned.wav"
+    },
+    {
+      "line": 3,
+      "speaker": "白云",
+      "text": "秋波是",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 546.968,
+        "end": 547.71,
+        "segmentId": 236,
+        "segmentText": "豬锅是啥玩意呢",
+        "query": "豬锅是"
+      },
+      "output": {
+        "start": 8.268485168703887,
+        "end": 8.977212468878506
+      },
+      "beat": 17.5,
+      "beats": 1.5,
+      "sourceMedianF0Hz": 280.608,
+      "targetMidi": 66.0,
+      "appliedPitchSemitones": 1.5,
+      "tempoFactor": 1.04694,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/03-04-秋波是-original.wav",
+      "tunedUnit": "assets/units-long/03-04-秋波是-tuned.wav"
+    },
+    {
+      "line": 3,
+      "speaker": "白云",
+      "text": "最",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 395.148,
+        "end": 395.43,
+        "segmentId": 174,
+        "segmentText": "全是最要看的",
+        "query": "最"
+      },
+      "output": {
+        "start": 8.977212468878506,
+        "end": 9.213454902270044
+      },
+      "beat": 19.0,
+      "beats": 0.5,
+      "sourceMedianF0Hz": 312.347,
+      "targetMidi": 61.0,
+      "appliedPitchSemitones": -1.5,
+      "tempoFactor": 1.19365,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/03-05-最-original.wav",
+      "tunedUnit": "assets/units-long/03-05-最-tuned.wav"
+    },
+    {
+      "line": 3,
+      "speaker": "白云",
+      "text": "呀",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 321.548,
+        "end": 321.83,
+        "segmentId": 132,
+        "segmentText": "大叔的妈呀",
+        "query": "呀"
+      },
+      "output": {
+        "start": 9.213454902270044,
+        "end": 9.449697335661584
+      },
+      "beat": 19.5,
+      "beats": 0.5,
+      "sourceMedianF0Hz": 182.009,
+      "targetMidi": 58.0,
+      "appliedPitchSemitones": 1.5,
+      "tempoFactor": 1.19376,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/03-06-呀-original.wav",
+      "tunedUnit": "assets/units-long/03-06-呀-tuned.wav"
+    },
+    {
+      "line": 3,
+      "speaker": "白云",
+      "text": "最",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 395.148,
+        "end": 395.43,
+        "segmentId": 174,
+        "segmentText": "全是最要看的",
+        "query": "最"
+      },
+      "output": {
+        "start": 9.449697335661584,
+        "end": 9.685939769053125
+      },
+      "beat": 20.0,
+      "beats": 0.5,
+      "sourceMedianF0Hz": 312.347,
+      "targetMidi": 58.0,
+      "appliedPitchSemitones": -1.5,
+      "tempoFactor": 1.19365,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/03-07-最-original.wav",
+      "tunedUnit": "assets/units-long/03-07-最-tuned.wav"
+    },
+    {
+      "line": 3,
+      "speaker": "白云",
+      "text": "可",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 377.208,
+        "end": 377.49,
+        "segmentId": 166,
+        "segmentText": "就是人长的可恋点",
+        "query": "可"
+      },
+      "output": {
+        "start": 9.685939769053125,
+        "end": 9.922182202444663
+      },
+      "beat": 20.5,
+      "beats": 0.5,
+      "sourceMedianF0Hz": 266.208,
+      "targetMidi": 58.0,
+      "appliedPitchSemitones": -1.5,
+      "tempoFactor": 1.19365,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/03-08-可-original.wav",
+      "tunedUnit": "assets/units-long/03-08-可-tuned.wav"
+    },
+    {
+      "line": 3,
+      "speaker": "白云",
+      "text": "爱",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 620.348,
+        "end": 620.65,
+        "segmentId": 271,
+        "segmentText": "他爱心眼太实",
+        "query": "爱"
+      },
+      "output": {
+        "start": 9.922182202444663,
+        "end": 10.867151936010822
+      },
+      "beat": 21.0,
+      "beats": 2,
+      "sourceMedianF0Hz": 296.144,
+      "targetMidi": 57.5,
+      "appliedPitchSemitones": -1.5,
+      "tempoFactor": 0.31959,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/03-09-爱-original.wav",
+      "tunedUnit": "assets/units-long/03-09-爱-tuned.wav"
+    },
+    {
+      "line": 4,
+      "speaker": "黑土",
+      "text": "你",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 382.148,
+        "end": 382.67,
+        "segmentId": 167,
+        "segmentText": "你俩说什么",
+        "query": "你"
+      },
+      "output": {
+        "start": 10.867151936010822,
+        "end": 11.339636802793901
+      },
+      "beat": 23.0,
+      "beats": 1,
+      "sourceMedianF0Hz": 103.004,
+      "targetMidi": 65.0,
+      "appliedPitchSemitones": 1.5,
+      "tempoFactor": 1.10476,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/04-01-你-original.wav",
+      "tunedUnit": "assets/units-long/04-01-你-tuned.wav"
+    },
+    {
+      "line": 4,
+      "speaker": "黑土",
+      "text": "送",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 580.308,
+        "end": 580.57,
+        "segmentId": 253,
+        "segmentText": "我这家送在这毛衣",
+        "query": "送"
+      },
+      "output": {
+        "start": 11.339636802793901,
+        "end": 11.575879236185441
+      },
+      "beat": 24.0,
+      "beats": 0.5,
+      "sourceMedianF0Hz": 290.42,
+      "targetMidi": 65.0,
+      "appliedPitchSemitones": 1.5,
+      "tempoFactor": 1.10909,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/04-02-送-original.wav",
+      "tunedUnit": "assets/units-long/04-02-送-tuned.wav"
+    },
+    {
+      "line": 4,
+      "speaker": "黑土",
+      "text": "我的",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 732.358,
+        "end": 732.86,
+        "segmentId": 317,
+        "segmentText": "叫中翔是我的心中偶像",
+        "query": "我的"
+      },
+      "output": {
+        "start": 11.575879236185441,
+        "end": 12.04836410296852
+      },
+      "beat": 24.5,
+      "beats": 1.0,
+      "sourceMedianF0Hz": 266.766,
+      "targetMidi": 66.0,
+      "appliedPitchSemitones": 1.5,
+      "tempoFactor": 1.06248,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/04-03-我的-original.wav",
+      "tunedUnit": "assets/units-long/04-03-我的-tuned.wav"
+    },
+    {
+      "line": 4,
+      "speaker": "黑土",
+      "text": "猪肉",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 541.588,
+        "end": 542.05,
+        "segmentId": 233,
+        "segmentText": "送过豬肉",
+        "query": "豬肉"
+      },
+      "output": {
+        "start": 12.04836410296852,
+        "end": 12.520848969751599
+      },
+      "beat": 25.5,
+      "beats": 1.0,
+      "sourceMedianF0Hz": 283.568,
+      "targetMidi": 62.5,
+      "appliedPitchSemitones": 1.106,
+      "tempoFactor": 0.97778,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/04-04-猪肉-original.wav",
+      "tunedUnit": "assets/units-long/04-04-猪肉-tuned.wav"
+    },
+    {
+      "line": 4,
+      "speaker": "黑土",
+      "text": "才",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 660.528,
+        "end": 660.85,
+        "segmentId": 288,
+        "segmentText": "也没有什么像样的材理",
+        "query": "材理"
+      },
+      "output": {
+        "start": 12.520848969751599,
+        "end": 12.75709140314314
+      },
+      "beat": 26.5,
+      "beats": 0.5,
+      "sourceMedianF0Hz": 144.677,
+      "targetMidi": 62.0,
+      "appliedPitchSemitones": 1.5,
+      "tempoFactor": 1.36308,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/04-05-才-original.wav",
+      "tunedUnit": "assets/units-long/04-05-才-tuned.wav"
+    },
+    {
+      "line": 4,
+      "speaker": "黑土",
+      "text": "是",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 462.198,
+        "end": 462.48,
+        "segmentId": 203,
+        "segmentText": "这是正中的主要的俩",
+        "query": "是"
+      },
+      "output": {
+        "start": 12.75709140314314,
+        "end": 12.993333836534678
+      },
+      "beat": 27.0,
+      "beats": 0.5,
+      "sourceMedianF0Hz": 357.742,
+      "targetMidi": 59.0,
+      "appliedPitchSemitones": -1.5,
+      "tempoFactor": 1.19365,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/04-06-是-original.wav",
+      "tunedUnit": "assets/units-long/04-06-是-tuned.wav"
+    },
+    {
+      "line": 4,
+      "speaker": "黑土",
+      "text": "最",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 395.148,
+        "end": 395.43,
+        "segmentId": 174,
+        "segmentText": "全是最要看的",
+        "query": "最"
+      },
+      "output": {
+        "start": 12.993333836534678,
+        "end": 13.229576269926218
+      },
+      "beat": 27.5,
+      "beats": 0.5,
+      "sourceMedianF0Hz": 312.347,
+      "targetMidi": 58.0,
+      "appliedPitchSemitones": -1.5,
+      "tempoFactor": 1.19365,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/04-07-最-original.wav",
+      "tunedUnit": "assets/units-long/04-07-最-tuned.wav"
+    },
+    {
+      "line": 4,
+      "speaker": "黑土",
+      "text": "精",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 20.158,
+        "end": 20.44,
+        "segmentId": 7,
+        "segmentText": "一堆宝精仓仓的农民夫妇",
+        "query": "精"
+      },
+      "output": {
+        "start": 13.229576269926218,
+        "end": 13.702061136709297
+      },
+      "beat": 28.0,
+      "beats": 1,
+      "sourceMedianF0Hz": 119.257,
+      "targetMidi": 58.0,
+      "appliedPitchSemitones": 1.5,
+      "tempoFactor": 0.59685,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/04-08-精-original.wav",
+      "tunedUnit": "assets/units-long/04-08-精-tuned.wav"
+    },
+    {
+      "line": 4,
+      "speaker": "黑土",
+      "text": "彩",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 660.528,
+        "end": 660.85,
+        "segmentId": 288,
+        "segmentText": "也没有什么像样的材理",
+        "query": "材理"
+      },
+      "output": {
+        "start": 13.702061136709297,
+        "end": 14.647030870275456
+      },
+      "beat": 29.0,
+      "beats": 2,
+      "sourceMedianF0Hz": 144.677,
+      "targetMidi": 55.0,
+      "appliedPitchSemitones": 1.5,
+      "tempoFactor": 0.34076,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/04-09-彩-original.wav",
+      "tunedUnit": "assets/units-long/04-09-彩-tuned.wav"
+    },
+    {
+      "line": 5,
+      "speaker": "白云",
+      "text": "这张旧船票",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 825.218,
+        "end": 826.58,
+        "segmentId": 375,
+        "segmentText": "我这张旧传票",
+        "query": "这张旧传票"
+      },
+      "output": {
+        "start": 14.647030870275456,
+        "end": 16.300727904016235
+      },
+      "beat": 31.0,
+      "beats": 3.5,
+      "sourceMedianF0Hz": 248.378,
+      "targetMidi": 58.0,
+      "appliedPitchSemitones": -1.1,
+      "tempoFactor": 0.8236,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/05-01-这张旧船票-original.wav",
+      "tunedUnit": "assets/units-long/05-01-这张旧船票-tuned.wav"
+    },
+    {
+      "line": 5,
+      "speaker": "白云",
+      "text": "从",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 480.408,
+        "end": 480.69,
+        "segmentId": 210,
+        "segmentText": "从晚一眼又昏胜发道",
+        "query": "从"
+      },
+      "output": {
+        "start": 16.300727904016235,
+        "end": 16.536970337407773
+      },
+      "beat": 34.5,
+      "beats": 0.5,
+      "sourceMedianF0Hz": 352.496,
+      "targetMidi": 58.0,
+      "appliedPitchSemitones": -1.5,
+      "tempoFactor": 1.19365,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/05-02-从-original.wav",
+      "tunedUnit": "assets/units-long/05-02-从-tuned.wav"
+    },
+    {
+      "line": 5,
+      "speaker": "白云",
+      "text": "哪",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 161.868,
+        "end": 162.13,
+        "segmentId": 70,
+        "segmentText": "不是哪一天",
+        "query": "哪"
+      },
+      "output": {
+        "start": 16.536970337407773,
+        "end": 16.77321277079931
+      },
+      "beat": 35.0,
+      "beats": 0.5,
+      "sourceMedianF0Hz": 285.563,
+      "targetMidi": 58.0,
+      "appliedPitchSemitones": -1.5,
+      "tempoFactor": 1.10909,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/05-03-哪-original.wav",
+      "tunedUnit": "assets/units-long/05-03-哪-tuned.wav"
+    },
+    {
+      "line": 5,
+      "speaker": "白云",
+      "text": "里",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 870.498,
+        "end": 870.98,
+        "segmentId": 390,
+        "segmentText": "早在春风里准备跨四地",
+        "query": "里"
+      },
+      "output": {
+        "start": 16.77321277079931,
+        "end": 17.00945520419085
+      },
+      "beat": 35.5,
+      "beats": 0.5,
+      "sourceMedianF0Hz": 274.949,
+      "targetMidi": 58.0,
+      "appliedPitchSemitones": -1.5,
+      "tempoFactor": 2.04021,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/05-04-里-original.wav",
+      "tunedUnit": "assets/units-long/05-04-里-tuned.wav"
+    },
+    {
+      "line": 5,
+      "speaker": "白云",
+      "text": "来",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 816.018,
+        "end": 816.76,
+        "segmentId": 371,
+        "segmentText": "来到你们前",
+        "query": "来"
+      },
+      "output": {
+        "start": 17.00945520419085,
+        "end": 18.426909804540088
+      },
+      "beat": 36.0,
+      "beats": 3,
+      "sourceMedianF0Hz": 296.178,
+      "targetMidi": 58.0,
+      "appliedPitchSemitones": -1.5,
+      "tempoFactor": 0.52347,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/05-05-来-original.wav",
+      "tunedUnit": "assets/units-long/05-05-来-tuned.wav"
+    },
+    {
+      "line": 6,
+      "speaker": "黑土",
+      "text": "能否登上你的破船",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 826.858,
+        "end": 829.06,
+        "segmentId": 376,
+        "segmentText": "还能否登上你的破船",
+        "query": "能否登上你的破船"
+      },
+      "output": {
+        "start": 18.426909804540088,
+        "end": 20.553091705063945
+      },
+      "beat": 39.0,
+      "beats": 4.5,
+      "sourceMedianF0Hz": 265.094,
+      "targetMidi": 59.0,
+      "appliedPitchSemitones": -1.228,
+      "tempoFactor": 1.03567,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/06-01-能否登上你的破船-original.wav",
+      "tunedUnit": "assets/units-long/06-01-能否登上你的破船-tuned.wav"
+    },
+    {
+      "line": 6,
+      "speaker": "黑土",
+      "text": "回",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 533.428,
+        "end": 533.69,
+        "segmentId": 229,
+        "segmentText": "派总早接回向我按胜球部",
+        "query": "回"
+      },
+      "output": {
+        "start": 20.553091705063945,
+        "end": 20.789334138455487
+      },
+      "beat": 43.5,
+      "beats": 0.5,
+      "sourceMedianF0Hz": 114.353,
+      "targetMidi": 63.0,
+      "appliedPitchSemitones": 1.5,
+      "tempoFactor": 1.10899,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/06-02-回-original.wav",
+      "tunedUnit": "assets/units-long/06-02-回-tuned.wav"
+    },
+    {
+      "line": 6,
+      "speaker": "黑土",
+      "text": "来",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 816.018,
+        "end": 816.76,
+        "segmentId": 371,
+        "segmentText": "来到你们前",
+        "query": "来"
+      },
+      "output": {
+        "start": 20.789334138455487,
+        "end": 22.206788738804722
+      },
+      "beat": 44.0,
+      "beats": 3,
+      "sourceMedianF0Hz": 296.178,
+      "targetMidi": 61.0,
+      "appliedPitchSemitones": -1.148,
+      "tempoFactor": 0.52347,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/06-03-来-original.wav",
+      "tunedUnit": "assets/units-long/06-03-来-tuned.wav"
+    },
+    {
+      "line": 7,
+      "speaker": "白云",
+      "text": "昨天今天明天",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 154.388,
+        "end": 155.93,
+        "segmentId": 67,
+        "segmentText": "不是昨天今天明天是后天",
+        "query": "昨天今天明天"
+      },
+      "output": {
+        "start": 22.206788738804722,
+        "end": 24.09672820593704
+      },
+      "beat": 47.0,
+      "beats": 4,
+      "sourceMedianF0Hz": 233.742,
+      "targetMidi": 65.0,
+      "appliedPitchSemitones": 1.5,
+      "tempoFactor": 0.8159,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/07-01-昨天今天明天-original.wav",
+      "tunedUnit": "assets/units-long/07-01-昨天今天明天-tuned.wav"
+    },
+    {
+      "line": 7,
+      "speaker": "白云",
+      "text": "咱俩",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 672.708,
+        "end": 673.67,
+        "segmentId": 295,
+        "segmentText": "阿俩感情出现过危机以前",
+        "query": "阿俩"
+      },
+      "output": {
+        "start": 24.09672820593704,
+        "end": 24.569213072720117
+      },
+      "beat": 51.0,
+      "beats": 1,
+      "sourceMedianF0Hz": 168.229,
+      "targetMidi": 59.0,
+      "appliedPitchSemitones": 1.5,
+      "tempoFactor": 2.03607,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/07-02-咱俩-original.wav",
+      "tunedUnit": "assets/units-long/07-02-咱俩-tuned.wav"
+    },
+    {
+      "line": 7,
+      "speaker": "白云",
+      "text": "都",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 74.428,
+        "end": 74.71,
+        "segmentId": 20,
+        "segmentText": "刚来的演博室都会有点紧张",
+        "query": "都"
+      },
+      "output": {
+        "start": 24.569213072720117,
+        "end": 24.80545550611166
+      },
+      "beat": 52.0,
+      "beats": 0.5,
+      "sourceMedianF0Hz": 135.608,
+      "targetMidi": 58.0,
+      "appliedPitchSemitones": 1.5,
+      "tempoFactor": 1.19365,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/07-03-都-original.wav",
+      "tunedUnit": "assets/units-long/07-03-都-tuned.wav"
+    },
+    {
+      "line": 7,
+      "speaker": "白云",
+      "text": "要",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 292.908,
+        "end": 293.17,
+        "segmentId": 123,
+        "segmentText": "鬧完金融危機 又要彈劾領導",
+        "query": "要"
+      },
+      "output": {
+        "start": 24.80545550611166,
+        "end": 25.041697939503198
+      },
+      "beat": 52.5,
+      "beats": 0.5,
+      "sourceMedianF0Hz": 264.795,
+      "targetMidi": 58.0,
+      "appliedPitchSemitones": -1.5,
+      "tempoFactor": 1.10899,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/07-04-要-original.wav",
+      "tunedUnit": "assets/units-long/07-04-要-tuned.wav"
+    },
+    {
+      "line": 7,
+      "speaker": "白云",
+      "text": "相",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 420.468,
+        "end": 420.91,
+        "segmentId": 185,
+        "segmentText": "我们相约五八",
+        "query": "相约"
+      },
+      "output": {
+        "start": 25.041697939503198,
+        "end": 25.277940372894736
+      },
+      "beat": 53.0,
+      "beats": 0.5,
+      "sourceMedianF0Hz": 243.14,
+      "targetMidi": 61.0,
+      "appliedPitchSemitones": 1.5,
+      "tempoFactor": 1.87106,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/07-05-相-original.wav",
+      "tunedUnit": "assets/units-long/07-05-相-tuned.wav"
+    },
+    {
+      "line": 7,
+      "speaker": "白云",
+      "text": "爱",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 620.348,
+        "end": 620.65,
+        "segmentId": 271,
+        "segmentText": "他爱心眼太实",
+        "query": "爱"
+      },
+      "output": {
+        "start": 25.277940372894736,
+        "end": 25.986667673069356
+      },
+      "beat": 53.5,
+      "beats": 1.5,
+      "sourceMedianF0Hz": 296.144,
+      "targetMidi": 61.0,
+      "appliedPitchSemitones": -1.146,
+      "tempoFactor": 0.42611,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/07-06-爱-original.wav",
+      "tunedUnit": "assets/units-long/07-06-爱-tuned.wav"
+    },
+    {
+      "line": 8,
+      "speaker": "黑土",
+      "text": "咱俩",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 672.708,
+        "end": 673.67,
+        "segmentId": 295,
+        "segmentText": "阿俩感情出现过危机以前",
+        "query": "阿俩"
+      },
+      "output": {
+        "start": 25.986667673069356,
+        "end": 26.459152539852436
+      },
+      "beat": 55.0,
+      "beats": 1,
+      "sourceMedianF0Hz": 168.229,
+      "targetMidi": 45.0,
+      "appliedPitchSemitones": -1.5,
+      "tempoFactor": 2.03607,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/08-01-咱俩-original.wav",
+      "tunedUnit": "assets/units-long/08-01-咱俩-tuned.wav"
+    },
+    {
+      "line": 8,
+      "speaker": "黑土",
+      "text": "好",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 919.458,
+        "end": 919.73,
+        "segmentId": 415,
+        "segmentText": "现在生活好了",
+        "query": "好"
+      },
+      "output": {
+        "start": 26.459152539852436,
+        "end": 26.695394973243975
+      },
+      "beat": 56.0,
+      "beats": 0.5,
+      "sourceMedianF0Hz": 148.323,
+      "targetMidi": 53.0,
+      "appliedPitchSemitones": 1.5,
+      "tempoFactor": 1.15132,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/08-02-好-original.wav",
+      "tunedUnit": "assets/units-long/08-02-好-tuned.wav"
+    },
+    {
+      "line": 8,
+      "speaker": "黑土",
+      "text": "好",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 919.458,
+        "end": 919.73,
+        "segmentId": 415,
+        "segmentText": "现在生活好了",
+        "query": "好"
+      },
+      "output": {
+        "start": 26.695394973243975,
+        "end": 26.931637406635517
+      },
+      "beat": 56.5,
+      "beats": 0.5,
+      "sourceMedianF0Hz": 148.323,
+      "targetMidi": 53.0,
+      "appliedPitchSemitones": 1.5,
+      "tempoFactor": 1.15132,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/08-03-好-original.wav",
+      "tunedUnit": "assets/units-long/08-03-好-tuned.wav"
+    },
+    {
+      "line": 8,
+      "speaker": "黑土",
+      "text": "过",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 171.528,
+        "end": 171.81,
+        "segmentId": 75,
+        "segmentText": "那是过去现在和讲来",
+        "query": "过"
+      },
+      "output": {
+        "start": 26.931637406635517,
+        "end": 27.167879840027055
+      },
+      "beat": 57.0,
+      "beats": 0.5,
+      "sourceMedianF0Hz": 324.4,
+      "targetMidi": 53.0,
+      "appliedPitchSemitones": -1.5,
+      "tempoFactor": 1.19376,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/08-04-过-original.wav",
+      "tunedUnit": "assets/units-long/08-04-过-tuned.wav"
+    },
+    {
+      "line": 8,
+      "speaker": "黑土",
+      "text": "日子",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 893.738,
+        "end": 894.34,
+        "segmentId": 401,
+        "segmentText": "我们叫日子",
+        "query": "日子"
+      },
+      "output": {
+        "start": 27.167879840027055,
+        "end": 27.640364706810136
+      },
+      "beat": 57.5,
+      "beats": 1.0,
+      "sourceMedianF0Hz": 239.644,
+      "targetMidi": 52.0,
+      "appliedPitchSemitones": -1.5,
+      "tempoFactor": 1.27407,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/08-05-日子-original.wav",
+      "tunedUnit": "assets/units-long/08-05-日子-tuned.wav"
+    },
+    {
+      "line": 8,
+      "speaker": "黑土",
+      "text": "才",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 660.528,
+        "end": 660.85,
+        "segmentId": 288,
+        "segmentText": "也没有什么像样的材理",
+        "query": "材理"
+      },
+      "output": {
+        "start": 27.640364706810136,
+        "end": 27.876607140201674
+      },
+      "beat": 58.5,
+      "beats": 0.5,
+      "sourceMedianF0Hz": 144.677,
+      "targetMidi": 52.0,
+      "appliedPitchSemitones": 1.5,
+      "tempoFactor": 1.36308,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/08-06-才-original.wav",
+      "tunedUnit": "assets/units-long/08-06-才-tuned.wav"
+    },
+    {
+      "line": 8,
+      "speaker": "黑土",
+      "text": "最",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 395.148,
+        "end": 395.43,
+        "segmentId": 174,
+        "segmentText": "全是最要看的",
+        "query": "最"
+      },
+      "output": {
+        "start": 27.876607140201674,
+        "end": 28.112849573593213
+      },
+      "beat": 59.0,
+      "beats": 0.5,
+      "sourceMedianF0Hz": 312.347,
+      "targetMidi": 48.0,
+      "appliedPitchSemitones": -1.5,
+      "tempoFactor": 1.19365,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/08-07-最-original.wav",
+      "tunedUnit": "assets/units-long/08-07-最-tuned.wav"
+    },
+    {
+      "line": 8,
+      "speaker": "黑土",
+      "text": "自",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 995.038,
+        "end": 995.3,
+        "segmentId": 445,
+        "segmentText": "发自废服的",
+        "query": "自"
+      },
+      "output": {
+        "start": 28.112849573593213,
+        "end": 28.349092006984755
+      },
+      "beat": 59.5,
+      "beats": 0.5,
+      "sourceMedianF0Hz": 298.098,
+      "targetMidi": 45.0,
+      "appliedPitchSemitones": -1.5,
+      "tempoFactor": 1.10909,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/08-08-自-original.wav",
+      "tunedUnit": "assets/units-long/08-08-自-tuned.wav"
+    },
+    {
+      "line": 8,
+      "speaker": "黑土",
+      "text": "在",
+      "source": {
+        "file": "/workspace/.tmp-guichu/zuotian.mp4",
+        "start": 333.248,
+        "end": 333.95,
+        "segmentId": 139,
+        "segmentText": "在这儿就什么样",
+        "query": "在"
+      },
+      "output": {
+        "start": 28.349092006984755,
+        "end": 30.23903147411707
+      },
+      "beat": 60.0,
+      "beats": 4,
+      "sourceMedianF0Hz": 119.228,
+      "targetMidi": 45.0,
+      "appliedPitchSemitones": -1.395,
+      "tempoFactor": 0.37144,
+      "processing": "original word/whole-character Rubber Band; formants preserved; no WORLD synthesis",
+      "originalUnit": "assets/units-long/08-09-在-original.wav",
+      "tunedUnit": "assets/units-long/08-09-在-tuned.wav"
+    }
+  ]
+}
