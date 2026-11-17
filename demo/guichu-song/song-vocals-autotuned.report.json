@@ -3,7 +3,7 @@
   "engine": "WORLD",
   "source": "/workspace/.tmp-guichu/zuotian.mp4",
   "output": "/workspace/demo/guichu-song/song-vocals-autotuned.wav",
-  "generatedAt": "2026-11-17T07:26:36.586706Z",
+  "generatedAt": "2026-11-17T07:59:23.638219Z",
   "sampleRate": 48000,
   "duration": 24.0,
   "framePeriodMs": 5.0,
@@ -18,7 +18,7 @@
       "start": 0.0,
       "duration": 24.0,
       "noteCount": 42,
-      "voicedRatio": 0.962917
+      "voicedRatio": 0.930208
     }
   ],
   "notes": [
@@ -28,19 +28,19 @@
       "text": "改",
       "targetMidi": 52,
       "targetFrequencyHz": 164.813778,
-      "sourceVowelStart": 197.57,
+      "sourceVowelStart": 197.78,
       "sourceVowelDetection": "detected",
       "targetVowelStart": 0.025,
       "warnings": [],
       "measurement": {
-        "medianFrequencyHz": 165.068958,
-        "centsError": 2.678382,
-        "octaveFoldedCentsError": 2.678382,
-        "voicedCoverage": 0.890625,
+        "medianFrequencyHz": 164.624709,
+        "centsError": -1.987155,
+        "octaveFoldedCentsError": -1.987155,
+        "voicedCoverage": 1.0,
         "pitchConfidence": "high",
         "onsetConfidence": "high",
-        "voicedOnset": 0.01,
-        "onsetErrorMs": -15.0
+        "voicedOnset": 0.005,
+        "onsetErrorMs": -20.0
       }
     },
     {
@@ -49,21 +49,22 @@
       "text": "革",
       "targetMidi": 50,
       "targetFrequencyHz": 146.832384,
-      "sourceVowelStart": 197.94,
+      "sourceVowelStart": 198.15,
       "sourceVowelDetection": "detected",
-      "targetVowelStart": 0.525,
+      "targetVowelStart": 0.6,
       "warnings": [
+        "Detected vowel extends beyond the supplied source range; timestamps were treated as alignment priors. Verify this syllable and set source.vowelStart if needed.",
         "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
       ],
       "measurement": {
-        "medianFrequencyHz": 146.860762,
-        "centsError": 0.334561,
-        "octaveFoldedCentsError": 0.334561,
+        "medianFrequencyHz": 146.915331,
+        "centsError": 0.977716,
+        "octaveFoldedCentsError": 0.977716,
         "voicedCoverage": 1.0,
         "pitchConfidence": "high",
         "onsetConfidence": "low",
         "voicedOnset": 0.5,
-        "onsetErrorMs": -25.0
+        "onsetErrorMs": -100.0
       }
     },
     {
@@ -72,21 +73,21 @@
       "text": "春",
       "targetMidi": 52,
       "targetFrequencyHz": 164.813778,
-      "sourceVowelStart": 198.22,
+      "sourceVowelStart": 198.42,
       "sourceVowelDetection": "detected",
-      "targetVowelStart": 1.025,
+      "targetVowelStart": 1.045,
       "warnings": [
         "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
       ],
       "measurement": {
-        "medianFrequencyHz": 164.811007,
-        "centsError": -0.029106,
-        "octaveFoldedCentsError": -0.029106,
-        "voicedCoverage": 0.765625,
+        "medianFrequencyHz": 164.867757,
+        "centsError": 0.566916,
+        "octaveFoldedCentsError": 0.566916,
+        "voicedCoverage": 0.890625,
         "pitchConfidence": "high",
         "onsetConfidence": "low",
-        "voicedOnset": 1.0,
-        "onsetErrorMs": -25.0
+        "voicedOnset": 1.09,
+        "onsetErrorMs": 45.0
       }
     },
     {
@@ -95,21 +96,21 @@
       "text": "风",
       "targetMidi": 55,
       "targetFrequencyHz": 195.997718,
-      "sourceVowelStart": 198.76,
+      "sourceVowelStart": 198.83,
       "sourceVowelDetection": "detected",
       "targetVowelStart": 1.525,
       "warnings": [
         "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
       ],
       "measurement": {
-        "medianFrequencyHz": 196.050888,
-        "centsError": 0.469586,
-        "octaveFoldedCentsError": 0.469586,
-        "voicedCoverage": 0.890625,
+        "medianFrequencyHz": 195.557551,
+        "centsError": -3.892339,
+        "octaveFoldedCentsError": -3.892339,
+        "voicedCoverage": 0.578125,
         "pitchConfidence": "high",
         "onsetConfidence": "low",
-        "voicedOnset": 1.5,
-        "onsetErrorMs": -25.0
+        "voicedOnset": 1.505,
+        "onsetErrorMs": -20.0
       }
     },
     {
@@ -118,22 +119,21 @@
       "text": "吹",
       "targetMidi": 57,
       "targetFrequencyHz": 220.0,
-      "sourceVowelStart": 198.98,
+      "sourceVowelStart": 199.25,
       "sourceVowelDetection": "detected",
       "targetVowelStart": 2.025,
       "warnings": [
-        "Pitch measurement has low coverage or too few voiced frames; no automatic second-pass correction was applied.",
-        "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
+        "Pitch measurement has low coverage or too few voiced frames; no automatic second-pass correction was applied."
       ],
       "measurement": {
-        "medianFrequencyHz": 220.472743,
-        "centsError": 3.716139,
-        "octaveFoldedCentsError": 3.716139,
-        "voicedCoverage": 0.429825,
+        "medianFrequencyHz": 220.160671,
+        "centsError": 1.2639,
+        "octaveFoldedCentsError": 1.2639,
+        "voicedCoverage": 0.210526,
         "pitchConfidence": "low",
-        "onsetConfidence": "low",
-        "voicedOnset": 2.0,
-        "onsetErrorMs": -25.0
+        "onsetConfidence": "high",
+        "voicedOnset": 2.005,
+        "onsetErrorMs": -20.0
       }
     },
     {
@@ -142,19 +142,21 @@
       "text": "满",
       "targetMidi": 55,
       "targetFrequencyHz": 195.997718,
-      "sourceVowelStart": 199.52,
+      "sourceVowelStart": 199.505,
       "sourceVowelDetection": "detected",
       "targetVowelStart": 2.775,
-      "warnings": [],
+      "warnings": [
+        "Detected vowel extends beyond the supplied source range; timestamps were treated as alignment priors. Verify this syllable and set source.vowelStart if needed. Vowel onset was moved after the previous syllable peak to avoid overlapping source segments."
+      ],
       "measurement": {
-        "medianFrequencyHz": 195.723438,
-        "centsError": -2.424392,
-        "octaveFoldedCentsError": -2.424392,
-        "voicedCoverage": 0.953125,
+        "medianFrequencyHz": 196.078646,
+        "centsError": 0.71468,
+        "octaveFoldedCentsError": 0.71468,
+        "voicedCoverage": 0.921875,
         "pitchConfidence": "high",
         "onsetConfidence": "high",
-        "voicedOnset": 2.75,
-        "onsetErrorMs": -25.0
+        "voicedOnset": 2.795,
+        "onsetErrorMs": 20.0
       }
     },
     {
@@ -163,21 +165,22 @@
       "text": "地",
       "targetMidi": 52,
       "targetFrequencyHz": 164.813778,
-      "sourceVowelStart": 199.66,
+      "sourceVowelStart": 199.76,
       "sourceVowelDetection": "detected",
-      "targetVowelStart": 3.275,
+      "targetVowelStart": 3.355,
       "warnings": [
-        "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
+        "Pitch measurement has low coverage or too few voiced frames; no automatic second-pass correction was applied.",
+        "Reliable measured vowel onset differs from the target by more than 60 ms."
       ],
       "measurement": {
-        "medianFrequencyHz": 164.810002,
-        "centsError": -0.039661,
-        "octaveFoldedCentsError": -0.039661,
-        "voicedCoverage": 0.640351,
-        "pitchConfidence": "high",
-        "onsetConfidence": "low",
+        "medianFrequencyHz": 163.727185,
+        "centsError": -11.45156,
+        "octaveFoldedCentsError": -11.45156,
+        "voicedCoverage": 0.136364,
+        "pitchConfidence": "low",
+        "onsetConfidence": "high",
         "voicedOnset": 3.25,
-        "onsetErrorMs": -25.0
+        "onsetErrorMs": -105.0
       }
     },
     {
@@ -186,22 +189,21 @@
       "text": "中",
       "targetMidi": 52,
       "targetFrequencyHz": 164.813778,
-      "sourceVowelStart": 199.86,
+      "sourceVowelStart": 200.46,
       "sourceVowelDetection": "detected",
       "targetVowelStart": 4.025,
       "warnings": [
-        "Pitch measurement has low coverage or too few voiced frames; no automatic second-pass correction was applied.",
-        "Reliable measured vowel onset differs from the target by more than 60 ms."
+        "Detected vowel extends beyond the supplied source range; timestamps were treated as alignment priors. Verify this syllable and set source.vowelStart if needed."
       ],
       "measurement": {
-        "medianFrequencyHz": 163.892532,
-        "centsError": -9.704085,
-        "octaveFoldedCentsError": -9.704085,
-        "voicedCoverage": 0.28125,
-        "pitchConfidence": "low",
+        "medianFrequencyHz": 164.638532,
+        "centsError": -1.841799,
+        "octaveFoldedCentsError": -1.841799,
+        "voicedCoverage": 0.953125,
+        "pitchConfidence": "high",
         "onsetConfidence": "high",
-        "voicedOnset": 4.145,
-        "onsetErrorMs": 120.0
+        "voicedOnset": 4.04,
+        "onsetErrorMs": 15.0
       }
     },
     {
@@ -210,21 +212,22 @@
       "text": "国",
       "targetMidi": 52,
       "targetFrequencyHz": 164.813778,
-      "sourceVowelStart": 200.45,
+      "sourceVowelStart": 200.805,
       "sourceVowelDetection": "detected",
-      "targetVowelStart": 4.525,
+      "targetVowelStart": 4.53,
       "warnings": [
+        "Detected vowel extends beyond the supplied source range; timestamps were treated as alignment priors. Verify this syllable and set source.vowelStart if needed.",
         "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
       ],
       "measurement": {
-        "medianFrequencyHz": 164.707609,
-        "centsError": -1.115576,
-        "octaveFoldedCentsError": -1.115576,
-        "voicedCoverage": 0.96875,
+        "medianFrequencyHz": 164.823522,
+        "centsError": 0.102351,
+        "octaveFoldedCentsError": 0.102351,
+        "voicedCoverage": 1.0,
         "pitchConfidence": "high",
         "onsetConfidence": "low",
-        "voicedOnset": 4.56,
-        "onsetErrorMs": 35.0
+        "voicedOnset": 4.5,
+        "onsetErrorMs": -30.0
       }
     },
     {
@@ -233,17 +236,18 @@
       "text": "人",
       "targetMidi": 55,
       "targetFrequencyHz": 195.997718,
-      "sourceVowelStart": 200.84,
+      "sourceVowelStart": 201.055,
       "sourceVowelDetection": "detected",
       "targetVowelStart": 5.025,
       "warnings": [
+        "Vowel onset was moved after the previous syllable peak to avoid overlapping source segments.",
         "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
       ],
       "measurement": {
-        "medianFrequencyHz": 195.94703,
-        "centsError": -0.447778,
-        "octaveFoldedCentsError": -0.447778,
-        "voicedCoverage": 0.890625,
+        "medianFrequencyHz": 195.916527,
+        "centsError": -0.717299,
+        "octaveFoldedCentsError": -0.717299,
+        "voicedCoverage": 0.96875,
         "pitchConfidence": "high",
         "onsetConfidence": "low",
         "voicedOnset": 5.0,
@@ -256,17 +260,18 @@
       "text": "民",
       "targetMidi": 57,
       "targetFrequencyHz": 220.0,
-      "sourceVowelStart": 201.1,
+      "sourceVowelStart": 201.27,
       "sourceVowelDetection": "detected",
       "targetVowelStart": 5.525,
       "warnings": [
+        "Detected vowel extends beyond the supplied source range; timestamps were treated as alignment priors. Verify this syllable and set source.vowelStart if needed.",
         "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
       ],
       "measurement": {
-        "medianFrequencyHz": 219.937591,
-        "centsError": -0.49118,
-        "octaveFoldedCentsError": -0.49118,
-        "voicedCoverage": 0.9375,
+        "medianFrequencyHz": 219.419742,
+        "centsError": -4.572228,
+        "octaveFoldedCentsError": -4.572228,
+        "voicedCoverage": 0.5625,
         "pitchConfidence": "high",
         "onsetConfidence": "low",
         "voicedOnset": 5.5,
@@ -279,21 +284,19 @@
       "text": "真",
       "targetMidi": 55,
       "targetFrequencyHz": 195.997718,
-      "sourceVowelStart": 201.36,
+      "sourceVowelStart": 201.7,
       "sourceVowelDetection": "detected",
       "targetVowelStart": 6.025,
-      "warnings": [
-        "Reliable measured vowel onset differs from the target by more than 60 ms."
-      ],
+      "warnings": [],
       "measurement": {
-        "medianFrequencyHz": 196.258996,
-        "centsError": 2.306316,
-        "octaveFoldedCentsError": 2.306316,
-        "voicedCoverage": 0.736842,
+        "medianFrequencyHz": 195.957191,
+        "centsError": -0.35801,
+        "octaveFoldedCentsError": -0.35801,
+        "voicedCoverage": 0.649123,
         "pitchConfidence": "high",
         "onsetConfidence": "high",
-        "voicedOnset": 6.21,
-        "onsetErrorMs": 185.0
+        "voicedOnset": 6.04,
+        "onsetErrorMs": 15.0
       }
     },
     {
@@ -302,19 +305,21 @@
       "text": "争",
       "targetMidi": 52,
       "targetFrequencyHz": 164.813778,
-      "sourceVowelStart": 201.8,
+      "sourceVowelStart": 201.97,
       "sourceVowelDetection": "detected",
-      "targetVowelStart": 6.775,
-      "warnings": [],
+      "targetVowelStart": 6.78,
+      "warnings": [
+        "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
+      ],
       "measurement": {
-        "medianFrequencyHz": 164.406373,
-        "centsError": -4.284751,
-        "octaveFoldedCentsError": -4.284751,
-        "voicedCoverage": 0.84375,
+        "medianFrequencyHz": 164.602879,
+        "centsError": -2.216741,
+        "octaveFoldedCentsError": -2.216741,
+        "voicedCoverage": 0.984375,
         "pitchConfidence": "high",
-        "onsetConfidence": "high",
-        "voicedOnset": 6.79,
-        "onsetErrorMs": 15.0
+        "onsetConfidence": "low",
+        "voicedOnset": 6.75,
+        "onsetErrorMs": -30.0
       }
     },
     {
@@ -323,7 +328,7 @@
       "text": "气",
       "targetMidi": 50,
       "targetFrequencyHz": 146.832384,
-      "sourceVowelStart": 202.1,
+      "sourceVowelStart": 202.195,
       "sourceVowelDetection": "detected",
       "targetVowelStart": 7.275,
       "warnings": [
@@ -331,14 +336,12 @@
         "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
       ],
       "measurement": {
-        "medianFrequencyHz": 145.053464,
-        "centsError": -21.102533,
-        "octaveFoldedCentsError": -21.102533,
-        "voicedCoverage": 0.403509,
+        "medianFrequencyHz": 145.26534,
+        "centsError": -18.5756,
+        "octaveFoldedCentsError": -18.5756,
+        "voicedCoverage": 0.087719,
         "pitchConfidence": "low",
-        "onsetConfidence": "low",
-        "voicedOnset": 7.25,
-        "onsetErrorMs": -25.0
+        "onsetConfidence": "low"
       }
     },
     {
@@ -347,12 +350,23 @@
       "text": "齐",
       "targetMidi": 52,
       "targetFrequencyHz": 164.813778,
-      "sourceVowelStart": 202.36,
+      "sourceVowelStart": 202.875,
       "sourceVowelDetection": "detected",
       "targetVowelStart": 8.025,
       "warnings": [
-        "No reliable voiced frames were measured; no automatic second-pass correction was applied."
-      ]
+        "Pitch measurement has low coverage or too few voiced frames; no automatic second-pass correction was applied.",
+        "Reliable measured vowel onset differs from the target by more than 60 ms."
+      ],
+      "measurement": {
+        "medianFrequencyHz": 164.318413,
+        "centsError": -5.211239,
+        "octaveFoldedCentsError": -5.211239,
+        "voicedCoverage": 0.21875,
+        "pitchConfidence": "low",
+        "onsetConfidence": "high",
+        "voicedOnset": 8.36,
+        "onsetErrorMs": 335.0
+      }
     },
     {
       "id": "h3-02",
@@ -360,22 +374,13 @@
       "text": "心",
       "targetMidi": 55,
       "targetFrequencyHz": 195.997718,
-      "sourceVowelStart": 203.14,
+      "sourceVowelStart": 203.295,
       "sourceVowelDetection": "detected",
       "targetVowelStart": 8.525,
       "warnings": [
-        "Pitch measurement has low coverage or too few voiced frames; no automatic second-pass correction was applied."
-      ],
-      "measurement": {
-        "medianFrequencyHz": 196.322518,
-        "centsError": 2.866557,
-        "octaveFoldedCentsError": 2.866557,
-        "voicedCoverage": 0.09375,
-        "pitchConfidence": "low",
-        "onsetConfidence": "high",
-        "voicedOnset": 8.5,
-        "onsetErrorMs": -25.0
-      }
+        "Detected vowel extends beyond the supplied source range; timestamps were treated as alignment priors. Verify this syllable and set source.vowelStart if needed.",
+        "No reliable voiced frames were measured; no automatic second-pass correction was applied."
+      ]
     },
     {
       "id": "h3-03",
@@ -383,22 +388,22 @@
       "text": "合",
       "targetMidi": 57,
       "targetFrequencyHz": 220.0,
-      "sourceVowelStart": 203.36,
+      "sourceVowelStart": 203.675,
       "sourceVowelDetection": "detected",
-      "targetVowelStart": 9.025,
+      "targetVowelStart": 9.11,
       "warnings": [
-        "Pitch measurement has low coverage or too few voiced frames; no automatic second-pass correction was applied.",
+        "Detected vowel extends beyond the supplied source range; timestamps were treated as alignment priors. Verify this syllable and set source.vowelStart if needed.",
         "Reliable measured vowel onset differs from the target by more than 60 ms."
       ],
       "measurement": {
-        "medianFrequencyHz": 219.545629,
-        "centsError": -3.579253,
-        "octaveFoldedCentsError": -3.579253,
-        "voicedCoverage": 0.34375,
-        "pitchConfidence": "low",
+        "medianFrequencyHz": 220.162852,
+        "centsError": 1.281049,
+        "octaveFoldedCentsError": 1.281049,
+        "voicedCoverage": 1.0,
+        "pitchConfidence": "high",
         "onsetConfidence": "high",
-        "voicedOnset": 9.31,
-        "onsetErrorMs": 285.0
+        "voicedOnset": 9.015,
+        "onsetErrorMs": -95.0
       }
     },
     {
@@ -407,23 +412,12 @@
       "text": "力",
       "targetMidi": 55,
       "targetFrequencyHz": 195.997718,
-      "sourceVowelStart": 203.72,
+      "sourceVowelStart": 203.825,
       "sourceVowelDetection": "detected",
       "targetVowelStart": 9.525,
       "warnings": [
-        "Pitch measurement has low coverage or too few voiced frames; no automatic second-pass correction was applied.",
-        "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
-      ],
-      "measurement": {
-        "medianFrequencyHz": 195.838538,
-        "centsError": -1.406596,
-        "octaveFoldedCentsError": -1.406596,
-        "voicedCoverage": 0.515625,
-        "pitchConfidence": "low",
-        "onsetConfidence": "low",
-        "voicedOnset": 9.5,
-        "onsetErrorMs": -25.0
-      }
+        "No reliable voiced frames were measured; no automatic second-pass correction was applied."
+      ]
     },
     {
       "id": "h3-05",
@@ -431,21 +425,19 @@
       "text": "跨",
       "targetMidi": 52,
       "targetFrequencyHz": 164.813778,
-      "sourceVowelStart": 203.92,
+      "sourceVowelStart": 204.15,
       "sourceVowelDetection": "detected",
-      "targetVowelStart": 10.025,
-      "warnings": [
-        "Reliable measured vowel onset differs from the target by more than 60 ms."
-      ],
+      "targetVowelStart": 10.06,
+      "warnings": [],
       "measurement": {
-        "medianFrequencyHz": 165.096707,
-        "centsError": 2.96939,
-        "octaveFoldedCentsError": 2.96939,
-        "voicedCoverage": 0.710526,
+        "medianFrequencyHz": 164.957837,
+        "centsError": 1.512557,
+        "octaveFoldedCentsError": 1.512557,
+        "voicedCoverage": 1.0,
         "pitchConfidence": "high",
         "onsetConfidence": "high",
-        "voicedOnset": 10.23,
-        "onsetErrorMs": 205.0
+        "voicedOnset": 10.035,
+        "onsetErrorMs": -25.0
       }
     },
     {
@@ -454,22 +446,21 @@
       "text": "世",
       "targetMidi": 50,
       "targetFrequencyHz": 146.832384,
-      "sourceVowelStart": 204.26,
+      "sourceVowelStart": 204.39,
       "sourceVowelDetection": "detected",
       "targetVowelStart": 10.775,
       "warnings": [
-        "Pitch measurement has low coverage or too few voiced frames; no automatic second-pass correction was applied.",
-        "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
+        "Detected vowel extends beyond the supplied source range; timestamps were treated as alignment priors. Verify this syllable and set source.vowelStart if needed."
       ],
       "measurement": {
-        "medianFrequencyHz": 146.669783,
-        "centsError": -1.918215,
-        "octaveFoldedCentsError": -1.918215,
-        "voicedCoverage": 0.5,
-        "pitchConfidence": "low",
-        "onsetConfidence": "low",
-        "voicedOnset": 10.75,
-        "onsetErrorMs": -25.0
+        "medianFrequencyHz": 146.726062,
+        "centsError": -1.25405,
+        "octaveFoldedCentsError": -1.25405,
+        "voicedCoverage": 1.0,
+        "pitchConfidence": "high",
+        "onsetConfidence": "high",
+        "voicedOnset": 10.78,
+        "onsetErrorMs": 5.0
       }
     },
     {
@@ -478,21 +469,22 @@
       "text": "纪",
       "targetMidi": 48,
       "targetFrequencyHz": 130.812783,
-      "sourceVowelStart": 204.46,
+      "sourceVowelStart": 204.57,
       "sourceVowelDetection": "detected",
-      "targetVowelStart": 11.275,
+      "targetVowelStart": 11.28,
       "warnings": [
+        "Pitch measurement has low coverage or too few voiced frames; no automatic second-pass correction was applied.",
         "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
       ],
       "measurement": {
-        "medianFrequencyHz": 130.869112,
-        "centsError": 0.745328,
-        "octaveFoldedCentsError": 0.745328,
-        "voicedCoverage": 0.692982,
-        "pitchConfidence": "high",
+        "medianFrequencyHz": 131.125598,
+        "centsError": 4.134984,
+        "octaveFoldedCentsError": 4.134984,
+        "voicedCoverage": 0.236842,
+        "pitchConfidence": "low",
         "onsetConfidence": "low",
         "voicedOnset": 11.25,
-        "onsetErrorMs": -25.0
+        "onsetErrorMs": -30.0
       }
     },
     {
@@ -501,23 +493,12 @@
       "text": "一",
       "targetMidi": 50,
       "targetFrequencyHz": 146.832384,
-      "sourceVowelStart": 204.64,
+      "sourceVowelStart": 205.03,
       "sourceVowelDetection": "detected",
       "targetVowelStart": 12.025,
       "warnings": [
-        "Pitch measurement has low coverage or too few voiced frames; no automatic second-pass correction was applied.",
-        "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
-      ],
-      "measurement": {
-        "medianFrequencyHz": 145.73997,
-        "centsError": -12.928316,
-        "octaveFoldedCentsError": -12.928316,
-        "voicedCoverage": 0.265625,
-        "pitchConfidence": "low",
-        "onsetConfidence": "low",
-        "voicedOnset": 12.0,
-        "onsetErrorMs": -25.0
-      }
+        "No reliable voiced frames were measured; no automatic second-pass correction was applied."
+      ]
     },
     {
       "id": "h4-02",
@@ -525,22 +506,19 @@
       "text": "场",
       "targetMidi": 52,
       "targetFrequencyHz": 164.813778,
-      "sourceVowelStart": 205.18,
+      "sourceVowelStart": 205.31,
       "sourceVowelDetection": "detected",
       "targetVowelStart": 12.525,
-      "warnings": [
-        "Pitch measurement has low coverage or too few voiced frames; no automatic second-pass correction was applied.",
-        "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
-      ],
+      "warnings": [],
       "measurement": {
-        "medianFrequencyHz": 164.887899,
-        "centsError": 0.778409,
-        "octaveFoldedCentsError": 0.778409,
-        "voicedCoverage": 0.453125,
-        "pitchConfidence": "low",
-        "onsetConfidence": "low",
-        "voicedOnset": 12.5,
-        "onsetErrorMs": -25.0
+        "medianFrequencyHz": 164.694364,
+        "centsError": -1.2548,
+        "octaveFoldedCentsError": -1.2548,
+        "voicedCoverage": 0.96875,
+        "pitchConfidence": "high",
+        "onsetConfidence": "high",
+        "voicedOnset": 12.505,
+        "onsetErrorMs": -20.0
       }
     },
     {
@@ -549,16 +527,16 @@
       "text": "大",
       "targetMidi": 55,
       "targetFrequencyHz": 195.997718,
-      "sourceVowelStart": 205.4,
+      "sourceVowelStart": 205.605,
       "sourceVowelDetection": "detected",
       "targetVowelStart": 13.025,
       "warnings": [
         "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
       ],
       "measurement": {
-        "medianFrequencyHz": 196.048965,
-        "centsError": 0.452602,
-        "octaveFoldedCentsError": 0.452602,
+        "medianFrequencyHz": 195.980023,
+        "centsError": -0.156305,
+        "octaveFoldedCentsError": -0.156305,
         "voicedCoverage": 1.0,
         "pitchConfidence": "high",
         "onsetConfidence": "low",
@@ -572,21 +550,21 @@
       "text": "水",
       "targetMidi": 52,
       "targetFrequencyHz": 164.813778,
-      "sourceVowelStart": 205.74,
+      "sourceVowelStart": 205.855,
       "sourceVowelDetection": "detected",
       "targetVowelStart": 13.525,
       "warnings": [
         "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
       ],
       "measurement": {
-        "medianFrequencyHz": 164.622254,
-        "centsError": -2.012975,
-        "octaveFoldedCentsError": -2.012975,
-        "voicedCoverage": 0.71875,
+        "medianFrequencyHz": 164.85134,
+        "centsError": 0.39451,
+        "octaveFoldedCentsError": 0.39451,
+        "voicedCoverage": 1.0,
         "pitchConfidence": "high",
         "onsetConfidence": "low",
-        "voicedOnset": 13.5,
-        "onsetErrorMs": -25.0
+        "voicedOnset": 13.515,
+        "onsetErrorMs": -10.0
       }
     },
     {
@@ -595,21 +573,21 @@
       "text": "没",
       "targetMidi": 50,
       "targetFrequencyHz": 146.832384,
-      "sourceVowelStart": 205.94,
+      "sourceVowelStart": 206.245,
       "sourceVowelDetection": "detected",
-      "targetVowelStart": 14.025,
+      "targetVowelStart": 14.065,
       "warnings": [
         "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
       ],
       "measurement": {
-        "medianFrequencyHz": 146.932487,
-        "centsError": 1.179865,
-        "octaveFoldedCentsError": 1.179865,
-        "voicedCoverage": 1.0,
+        "medianFrequencyHz": 146.811241,
+        "centsError": -0.249302,
+        "octaveFoldedCentsError": -0.249302,
+        "voicedCoverage": 0.649123,
         "pitchConfidence": "high",
         "onsetConfidence": "low",
         "voicedOnset": 14.0,
-        "onsetErrorMs": -25.0
+        "onsetErrorMs": -65.0
       }
     },
     {
@@ -618,22 +596,19 @@
       "text": "咋",
       "targetMidi": 48,
       "targetFrequencyHz": 130.812783,
-      "sourceVowelStart": 206.32,
+      "sourceVowelStart": 206.42,
       "sourceVowelDetection": "detected",
       "targetVowelStart": 14.775,
-      "warnings": [
-        "Pitch measurement has low coverage or too few voiced frames; no automatic second-pass correction was applied.",
-        "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
-      ],
+      "warnings": [],
       "measurement": {
-        "medianFrequencyHz": 130.997137,
-        "centsError": 2.4381,
-        "octaveFoldedCentsError": 2.4381,
-        "voicedCoverage": 0.546875,
-        "pitchConfidence": "low",
-        "onsetConfidence": "low",
-        "voicedOnset": 14.75,
-        "onsetErrorMs": -25.0
+        "medianFrequencyHz": 130.828624,
+        "centsError": 0.209628,
+        "octaveFoldedCentsError": 0.209628,
+        "voicedCoverage": 1.0,
+        "pitchConfidence": "high",
+        "onsetConfidence": "high",
+        "voicedOnset": 14.765,
+        "onsetErrorMs": -10.0
       }
     },
     {
@@ -642,18 +617,19 @@
       "text": "地",
       "targetMidi": 50,
       "targetFrequencyHz": 146.832384,
-      "sourceVowelStart": 206.52,
+      "sourceVowelStart": 206.6,
       "sourceVowelDetection": "detected",
       "targetVowelStart": 15.275,
       "warnings": [
+        "Pitch measurement has low coverage or too few voiced frames; no automatic second-pass correction was applied.",
         "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
       ],
       "measurement": {
-        "medianFrequencyHz": 146.793273,
-        "centsError": -0.461205,
-        "octaveFoldedCentsError": -0.461205,
-        "voicedCoverage": 0.833333,
-        "pitchConfidence": "high",
+        "medianFrequencyHz": 146.446888,
+        "centsError": -4.551191,
+        "octaveFoldedCentsError": -4.551191,
+        "voicedCoverage": 0.508772,
+        "pitchConfidence": "low",
         "onsetConfidence": "low",
         "voicedOnset": 15.25,
         "onsetErrorMs": -25.0
@@ -665,21 +641,19 @@
       "text": "改",
       "targetMidi": 52,
       "targetFrequencyHz": 164.813778,
-      "sourceVowelStart": 197.57,
+      "sourceVowelStart": 197.78,
       "sourceVowelDetection": "detected",
       "targetVowelStart": 16.025,
-      "warnings": [
-        "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
-      ],
+      "warnings": [],
       "measurement": {
-        "medianFrequencyHz": 164.939744,
-        "centsError": 1.322667,
-        "octaveFoldedCentsError": 1.322667,
-        "voicedCoverage": 0.890625,
+        "medianFrequencyHz": 164.612991,
+        "centsError": -2.110388,
+        "octaveFoldedCentsError": -2.110388,
+        "voicedCoverage": 1.0,
         "pitchConfidence": "high",
-        "onsetConfidence": "low",
-        "voicedOnset": 16.035,
-        "onsetErrorMs": 10.0
+        "onsetConfidence": "high",
+        "voicedOnset": 16.0,
+        "onsetErrorMs": -25.0
       }
     },
     {
@@ -688,21 +662,22 @@
       "text": "革",
       "targetMidi": 50,
       "targetFrequencyHz": 146.832384,
-      "sourceVowelStart": 197.94,
+      "sourceVowelStart": 198.15,
       "sourceVowelDetection": "detected",
-      "targetVowelStart": 16.525,
+      "targetVowelStart": 16.6,
       "warnings": [
+        "Detected vowel extends beyond the supplied source range; timestamps were treated as alignment priors. Verify this syllable and set source.vowelStart if needed.",
         "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
       ],
       "measurement": {
-        "medianFrequencyHz": 146.820968,
-        "centsError": -0.134603,
-        "octaveFoldedCentsError": -0.134603,
+        "medianFrequencyHz": 146.909571,
+        "centsError": 0.909834,
+        "octaveFoldedCentsError": 0.909834,
         "voicedCoverage": 1.0,
         "pitchConfidence": "high",
         "onsetConfidence": "low",
         "voicedOnset": 16.5,
-        "onsetErrorMs": -25.0
+        "onsetErrorMs": -100.0
       }
     },
     {
@@ -711,21 +686,21 @@
       "text": "春",
       "targetMidi": 52,
       "targetFrequencyHz": 164.813778,
-      "sourceVowelStart": 198.22,
+      "sourceVowelStart": 198.42,
       "sourceVowelDetection": "detected",
-      "targetVowelStart": 17.025,
+      "targetVowelStart": 17.045,
       "warnings": [
         "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
       ],
       "measurement": {
-        "medianFrequencyHz": 164.820391,
-        "centsError": 0.069468,
-        "octaveFoldedCentsError": 0.069468,
-        "voicedCoverage": 0.75,
+        "medianFrequencyHz": 164.776519,
+        "centsError": -0.391418,
+        "octaveFoldedCentsError": -0.391418,
+        "voicedCoverage": 0.890625,
         "pitchConfidence": "high",
         "onsetConfidence": "low",
-        "voicedOnset": 17.0,
-        "onsetErrorMs": -25.0
+        "voicedOnset": 17.095,
+        "onsetErrorMs": 50.0
       }
     },
     {
@@ -734,21 +709,21 @@
       "text": "风",
       "targetMidi": 55,
       "targetFrequencyHz": 195.997718,
-      "sourceVowelStart": 198.76,
+      "sourceVowelStart": 198.83,
       "sourceVowelDetection": "detected",
       "targetVowelStart": 17.525,
       "warnings": [
         "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
       ],
       "measurement": {
-        "medianFrequencyHz": 196.063511,
-        "centsError": 0.581046,
-        "octaveFoldedCentsError": 0.581046,
-        "voicedCoverage": 0.9375,
+        "medianFrequencyHz": 195.97047,
+        "centsError": -0.2407,
+        "octaveFoldedCentsError": -0.2407,
+        "voicedCoverage": 0.640625,
         "pitchConfidence": "high",
         "onsetConfidence": "low",
-        "voicedOnset": 17.5,
-        "onsetErrorMs": -25.0
+        "voicedOnset": 17.51,
+        "onsetErrorMs": -15.0
       }
     },
     {
@@ -757,7 +732,7 @@
       "text": "吹",
       "targetMidi": 57,
       "targetFrequencyHz": 220.0,
-      "sourceVowelStart": 198.98,
+      "sourceVowelStart": 199.25,
       "sourceVowelDetection": "detected",
       "targetVowelStart": 18.025,
       "warnings": [
@@ -765,10 +740,10 @@
         "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
       ],
       "measurement": {
-        "medianFrequencyHz": 220.273672,
-        "centsError": 2.152255,
-        "octaveFoldedCentsError": 2.152255,
-        "voicedCoverage": 0.482456,
+        "medianFrequencyHz": 220.134306,
+        "centsError": 1.056561,
+        "octaveFoldedCentsError": 1.056561,
+        "voicedCoverage": 0.201754,
         "pitchConfidence": "low",
         "onsetConfidence": "low",
         "voicedOnset": 18.0,
@@ -781,19 +756,21 @@
       "text": "满",
       "targetMidi": 55,
       "targetFrequencyHz": 195.997718,
-      "sourceVowelStart": 199.52,
+      "sourceVowelStart": 199.505,
       "sourceVowelDetection": "detected",
       "targetVowelStart": 18.775,
-      "warnings": [],
+      "warnings": [
+        "Detected vowel extends beyond the supplied source range; timestamps were treated as alignment priors. Verify this syllable and set source.vowelStart if needed. Vowel onset was moved after the previous syllable peak to avoid overlapping source segments."
+      ],
       "measurement": {
-        "medianFrequencyHz": 195.710218,
-        "centsError": -2.541336,
-        "octaveFoldedCentsError": -2.541336,
+        "medianFrequencyHz": 196.070031,
+        "centsError": 0.638619,
+        "octaveFoldedCentsError": 0.638619,
         "voicedCoverage": 0.953125,
         "pitchConfidence": "high",
         "onsetConfidence": "high",
-        "voicedOnset": 18.75,
-        "onsetErrorMs": -25.0
+        "voicedOnset": 18.79,
+        "onsetErrorMs": 15.0
       }
     },
     {
@@ -802,21 +779,22 @@
       "text": "地",
       "targetMidi": 52,
       "targetFrequencyHz": 164.813778,
-      "sourceVowelStart": 199.66,
+      "sourceVowelStart": 199.76,
       "sourceVowelDetection": "detected",
-      "targetVowelStart": 19.275,
+      "targetVowelStart": 19.355,
       "warnings": [
-        "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
+        "Pitch measurement has low coverage or too few voiced frames; no automatic second-pass correction was applied.",
+        "Reliable measured vowel onset differs from the target by more than 60 ms."
       ],
       "measurement": {
-        "medianFrequencyHz": 164.847657,
-        "centsError": 0.355837,
-        "octaveFoldedCentsError": 0.355837,
-        "voicedCoverage": 0.640351,
-        "pitchConfidence": "high",
-        "onsetConfidence": "low",
+        "medianFrequencyHz": 163.874366,
+        "centsError": -9.895984,
+        "octaveFoldedCentsError": -9.895984,
+        "voicedCoverage": 0.181818,
+        "pitchConfidence": "low",
+        "onsetConfidence": "high",
         "voicedOnset": 19.25,
-        "onsetErrorMs": -25.0
+        "onsetErrorMs": -105.0
       }
     },
     {
@@ -825,22 +803,21 @@
       "text": "中",
       "targetMidi": 52,
       "targetFrequencyHz": 164.813778,
-      "sourceVowelStart": 199.86,
+      "sourceVowelStart": 200.46,
       "sourceVowelDetection": "detected",
       "targetVowelStart": 20.025,
       "warnings": [
-        "Pitch measurement has low coverage or too few voiced frames; no automatic second-pass correction was applied.",
-        "Reliable measured vowel onset differs from the target by more than 60 ms."
+        "Detected vowel extends beyond the supplied source range; timestamps were treated as alignment priors. Verify this syllable and set source.vowelStart if needed."
       ],
       "measurement": {
-        "medianFrequencyHz": 164.249836,
-        "centsError": -5.93391,
-        "octaveFoldedCentsError": -5.93391,
-        "voicedCoverage": 0.328125,
-        "pitchConfidence": "low",
+        "medianFrequencyHz": 164.66402,
+        "centsError": -1.573803,
+        "octaveFoldedCentsError": -1.573803,
+        "voicedCoverage": 0.9375,
+        "pitchConfidence": "high",
         "onsetConfidence": "high",
-        "voicedOnset": 20.14,
-        "onsetErrorMs": 115.0
+        "voicedOnset": 20.04,
+        "onsetErrorMs": 15.0
       }
     },
     {
@@ -849,21 +826,22 @@
       "text": "国",
       "targetMidi": 52,
       "targetFrequencyHz": 164.813778,
-      "sourceVowelStart": 200.45,
+      "sourceVowelStart": 200.805,
       "sourceVowelDetection": "detected",
-      "targetVowelStart": 20.525,
+      "targetVowelStart": 20.53,
       "warnings": [
+        "Detected vowel extends beyond the supplied source range; timestamps were treated as alignment priors. Verify this syllable and set source.vowelStart if needed.",
         "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
       ],
       "measurement": {
-        "medianFrequencyHz": 164.597301,
-        "centsError": -2.275408,
-        "octaveFoldedCentsError": -2.275408,
-        "voicedCoverage": 0.953125,
+        "medianFrequencyHz": 164.822807,
+        "centsError": 0.094843,
+        "octaveFoldedCentsError": 0.094843,
+        "voicedCoverage": 1.0,
         "pitchConfidence": "high",
         "onsetConfidence": "low",
-        "voicedOnset": 20.555,
-        "onsetErrorMs": 30.0
+        "voicedOnset": 20.5,
+        "onsetErrorMs": -30.0
       }
     },
     {
@@ -872,17 +850,18 @@
       "text": "人",
       "targetMidi": 55,
       "targetFrequencyHz": 195.997718,
-      "sourceVowelStart": 200.84,
+      "sourceVowelStart": 201.055,
       "sourceVowelDetection": "detected",
       "targetVowelStart": 21.025,
       "warnings": [
+        "Vowel onset was moved after the previous syllable peak to avoid overlapping source segments.",
         "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
       ],
       "measurement": {
-        "medianFrequencyHz": 195.976483,
-        "centsError": -0.187576,
-        "octaveFoldedCentsError": -0.187576,
-        "voicedCoverage": 0.890625,
+        "medianFrequencyHz": 195.878653,
+        "centsError": -1.052008,
+        "octaveFoldedCentsError": -1.052008,
+        "voicedCoverage": 0.9375,
         "pitchConfidence": "high",
         "onsetConfidence": "low",
         "voicedOnset": 21.0,
@@ -895,18 +874,20 @@
       "text": "民",
       "targetMidi": 57,
       "targetFrequencyHz": 220.0,
-      "sourceVowelStart": 201.1,
+      "sourceVowelStart": 201.27,
       "sourceVowelDetection": "detected",
       "targetVowelStart": 21.525,
       "warnings": [
+        "Detected vowel extends beyond the supplied source range; timestamps were treated as alignment priors. Verify this syllable and set source.vowelStart if needed.",
+        "Pitch measurement has low coverage or too few voiced frames; no automatic second-pass correction was applied.",
         "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
       ],
       "measurement": {
-        "medianFrequencyHz": 219.968806,
-        "centsError": -0.24549,
-        "octaveFoldedCentsError": -0.24549,
-        "voicedCoverage": 0.953125,
-        "pitchConfidence": "high",
+        "medianFrequencyHz": 219.342583,
+        "centsError": -5.181123,
+        "octaveFoldedCentsError": -5.181123,
+        "voicedCoverage": 0.515625,
+        "pitchConfidence": "low",
         "onsetConfidence": "low",
         "voicedOnset": 21.5,
         "onsetErrorMs": -25.0
@@ -918,21 +899,21 @@
       "text": "真",
       "targetMidi": 55,
       "targetFrequencyHz": 195.997718,
-      "sourceVowelStart": 201.36,
+      "sourceVowelStart": 201.7,
       "sourceVowelDetection": "detected",
       "targetVowelStart": 22.025,
       "warnings": [
-        "Reliable measured vowel onset differs from the target by more than 60 ms."
+        "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
       ],
       "measurement": {
-        "medianFrequencyHz": 196.434819,
-        "centsError": 3.856585,
-        "octaveFoldedCentsError": 3.856585,
-        "voicedCoverage": 0.780702,
+        "medianFrequencyHz": 195.942831,
+        "centsError": -0.484884,
+        "octaveFoldedCentsError": -0.484884,
+        "voicedCoverage": 0.622807,
         "pitchConfidence": "high",
-        "onsetConfidence": "high",
-        "voicedOnset": 22.195,
-        "onsetErrorMs": 170.0
+        "onsetConfidence": "low",
+        "voicedOnset": 22.035,
+        "onsetErrorMs": 10.0
       }
     },
     {
@@ -941,19 +922,21 @@
       "text": "争",
       "targetMidi": 52,
       "targetFrequencyHz": 164.813778,
-      "sourceVowelStart": 201.8,
+      "sourceVowelStart": 201.97,
       "sourceVowelDetection": "detected",
-      "targetVowelStart": 22.775,
-      "warnings": [],
+      "targetVowelStart": 22.78,
+      "warnings": [
+        "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
+      ],
       "measurement": {
-        "medianFrequencyHz": 164.28276,
-        "centsError": -5.586917,
-        "octaveFoldedCentsError": -5.586917,
-        "voicedCoverage": 0.796875,
+        "medianFrequencyHz": 164.624982,
+        "centsError": -1.984289,
+        "octaveFoldedCentsError": -1.984289,
+        "voicedCoverage": 0.953125,
         "pitchConfidence": "high",
-        "onsetConfidence": "high",
-        "voicedOnset": 22.79,
-        "onsetErrorMs": 15.0
+        "onsetConfidence": "low",
+        "voicedOnset": 22.75,
+        "onsetErrorMs": -30.0
       }
     },
     {
@@ -962,7 +945,7 @@
       "text": "气",
       "targetMidi": 48,
       "targetFrequencyHz": 130.812783,
-      "sourceVowelStart": 202.1,
+      "sourceVowelStart": 202.195,
       "sourceVowelDetection": "detected",
       "targetVowelStart": 23.275,
       "warnings": [
@@ -970,10 +953,10 @@
         "Voicing crosses this syllable boundary; F0 alone cannot reliably verify the new vowel onset."
       ],
       "measurement": {
-        "medianFrequencyHz": 130.766909,
-        "centsError": -0.607222,
-        "octaveFoldedCentsError": -0.607222,
-        "voicedCoverage": 0.22807,
+        "medianFrequencyHz": 128.480373,
+        "centsError": -31.146652,
+        "octaveFoldedCentsError": -31.146652,
+        "voicedCoverage": 0.149123,
         "pitchConfidence": "low",
         "onsetConfidence": "low",
         "voicedOnset": 23.25,
@@ -983,18 +966,20 @@
   ],
   "summary": {
     "noteCount": 42,
-    "measuredNoteCount": 41,
-    "reliablePitchNoteCount": 28,
-    "reliableOnsetNoteCount": 12,
-    "lowConfidenceNoteCount": 34,
-    "warningCount": 51,
-    "medianAbsoluteCentsError": 0.663187,
-    "p95AbsoluteCentsError": 4.134893,
-    "medianAbsoluteOnsetErrorMs": 70.0,
-    "p95AbsoluteOnsetErrorMs": 241.0
+    "measuredNoteCount": 39,
+    "reliablePitchNoteCount": 29,
+    "reliableOnsetNoteCount": 16,
+    "lowConfidenceNoteCount": 30,
+    "warningCount": 59,
+    "medianAbsoluteCentsError": 0.909834,
+    "p95AbsoluteCentsError": 3.2221,
+    "medianAbsoluteOnsetErrorMs": 20.0,
+    "p95AbsoluteOnsetErrorMs": 162.5
   },
   "warnings": [
-    "Note \"h3-01\" has no measurable voiced pitch.",
-    "Output peak was normalized from 2.019 to 0.95."
+    "Note \"h3-02\" has no measurable voiced pitch.",
+    "Note \"h3-04\" has no measurable voiced pitch.",
+    "Note \"h4-01\" has no measurable voiced pitch.",
+    "Output peak was normalized from 1.993 to 0.95."
   ]
 }

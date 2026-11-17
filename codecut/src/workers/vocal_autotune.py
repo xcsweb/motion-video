@@ -13,6 +13,7 @@ from datetime import datetime, timezone
 np = None
 pyworld = None
 uniform_filter1d = None
+find_peaks = None
 
 
 class WorkerFailure(Exception):
@@ -25,7 +26,7 @@ class WorkerFailure(Exception):
 
 
 def load_dependencies():
-    global np, pyworld, uniform_filter1d
+    global np, pyworld, uniform_filter1d, find_peaks
     missing = []
     try:
         import numpy
@@ -34,7 +35,9 @@ def load_dependencies():
         missing.append("numpy")
     try:
         from scipy.ndimage import uniform_filter1d as filter1d
+        from scipy.signal import find_peaks as signal_find_peaks
         uniform_filter1d = filter1d
+        find_peaks = signal_find_peaks
     except (ImportError, OSError):
         missing.append("scipy")
     try:
@@ -111,21 +114,274 @@ def fill_short_unvoiced(mask, maximum_frames=6):
     return result
 
 
-def source_vowel(note, f0, time_axis, energy, decode_start):
-    if note["source"].get("vowelStart") is not None:
-        return float(note["source"]["vowelStart"]), "provided", None
+def detect_vowel_peaks(f0, time_axis, energy, decode_start, frame_period):
+    smoothed = uniform_filter1d(energy, size=3, mode="nearest")
+    noise = float(np.percentile(smoothed, 10))
+    peak_energy = float(np.percentile(smoothed, 95))
+    dynamic_range = max(1e-7, peak_energy - noise)
+    distance = max(1, int(round(60 / frame_period)))
+    peaks, properties = find_peaks(
+        smoothed, distance=distance, prominence=max(1e-7, dynamic_range * 0.035),
+    )
+    candidates = []
+    for position, index in enumerate(peaks):
+        nearby_f0 = f0[max(0, index - 2):min(len(f0), index + 3)]
+        if np.count_nonzero(nearby_f0 > 0) < max(1, len(nearby_f0) * 0.4):
+            continue
+        if smoothed[index] < noise + dynamic_range * 0.06:
+            continue
+        candidates.append({
+            "index": int(index), "time": float(time_axis[index] + decode_start),
+            "prominence": float(properties["prominences"][position]),
+            "left": int(properties["left_bases"][position]),
+            "right": int(properties["right_bases"][position]),
+        })
+    return candidates, smoothed, noise, dynamic_range
+
+
+def ordered_peak_assignment(notes, peaks, dynamic_range, decode_start, decode_end, following_start=None):
+    """Assign one strictly ordered vowel peak per note; source ranges are only priors."""
+    candidate_lists = []
+    for index, note in enumerate(notes):
+        start = float(note["source"]["start"])
+        end = float(note["source"]["end"])
+        lower = max(decode_start, start - 0.12)
+        next_start = end
+        following = following_start if index + 1 == len(notes) else float(notes[index + 1]["source"]["start"])
+        if following is not None and following >= start:
+            next_start = following
+        upper = min(decode_end, max(end, next_start) + 0.28)
+        candidates = []
+        for peak in peaks:
+            if peak["time"] < lower or peak["time"] > upper:
+                continue
+            distance_cost = 0.25 * ((peak["time"] - end) / 0.22) ** 2
+            outside = max(start - peak["time"], peak["time"] - end, 0)
+            range_cost = 0.5 * (outside / 0.1) ** 2
+            strength = min(1.5, peak["prominence"] / dynamic_range)
+            candidates.append({**peak, "cost": distance_cost + range_cost - 2 * strength, "fallback": False})
+        candidates.append({
+            "index": None, "time": float(np.clip(end, lower, upper)),
+            "left": None, "right": None, "cost": 25.0, "fallback": True,
+        })
+        candidates.sort(key=lambda candidate: (candidate["time"], candidate["fallback"]))
+        candidate_lists.append(candidates)
+
+    costs = [candidate["cost"] for candidate in candidate_lists[0]]
+    parents = []
+    for index in range(1, len(candidate_lists)):
+        current_costs = [math.inf] * len(candidate_lists[index])
+        current_parents = [-1] * len(candidate_lists[index])
+        for current_index, candidate in enumerate(candidate_lists[index]):
+            for previous_index, previous in enumerate(candidate_lists[index - 1]):
+                if not math.isfinite(costs[previous_index]):
+                    continue
+                if candidate["time"] <= previous["time"] + 0.045:
+                    continue
+                cost = costs[previous_index] + candidate["cost"]
+                if cost < current_costs[current_index]:
+                    current_costs[current_index] = cost
+                    current_parents[current_index] = previous_index
+        costs = current_costs
+        parents.append(current_parents)
+
+    if not any(math.isfinite(cost) for cost in costs):
+        return [min(candidates, key=lambda candidate: candidate["cost"])
+                for candidates in candidate_lists], True
+    selected = [None] * len(candidate_lists)
+    current = min(range(len(costs)), key=lambda index: costs[index])
+    selected[-1] = candidate_lists[-1][current]
+    for index in range(len(candidate_lists) - 1, 0, -1):
+        current = parents[index - 1][current]
+        selected[index - 1] = candidate_lists[index - 1][current]
+    return selected, False
+
+
+def fallback_vowel(note, f0, absolute_times, energy):
     start = float(note["source"]["start"])
     end = float(note["source"]["end"])
-    absolute_times = time_axis + decode_start
     segment = (absolute_times >= start - 1e-6) & (absolute_times < end - 1e-6)
     voiced_energy = energy[segment & (f0 > 0)]
     threshold = max(1e-7, float(np.percentile(voiced_energy, 25)) * 0.35) if len(voiced_energy) else 1e-7
     candidates = np.flatnonzero(segment & (f0 > 0) & (energy >= threshold))
+    onset = start + min(0.08, (end - start) * 0.25)
     for index in candidates:
         if np.count_nonzero(f0[index:index + 5] > 0) >= 3:
-            return float(absolute_times[index]), "detected", None
-    fallback = start + min(0.08, (end - start) * 0.25)
-    return fallback, "fallback", "No stable voiced onset detected; used a source vowel fallback. Set source.vowelStart manually for precise control."
+            onset = float(absolute_times[index])
+            break
+    onset_index = int(np.argmin(np.abs(absolute_times - onset)))
+    right_index = int(np.argmin(np.abs(absolute_times - end)))
+    return {
+        "onset": onset, "peak": min(end, onset + min(0.12, (end - onset) * 0.35)),
+        "detection": "fallback", "left": max(0, onset_index - 1), "right": right_index,
+        "warning": "No reliable ordered vowel peak was found; used a source vowel fallback. Set source.vowelStart manually for precise control.",
+    }
+
+
+def provided_vowel(note, peaks, absolute_times):
+    onset = float(note["source"]["vowelStart"])
+    end = float(note["source"]["end"])
+    candidates = [peak for peak in peaks
+                  if onset + 0.01 <= peak["time"] <= min(end + 0.28, onset + 0.38)]
+    if candidates:
+        peak = min(candidates, key=lambda candidate: ((candidate["time"] - end) / 0.24) ** 2
+                   - min(1.5, candidate["prominence"]))
+        return {"onset": onset, "peak": peak["time"], "detection": "provided",
+                "left": peak["left"], "right": peak["right"], "warning": None}
+    onset_index = int(np.argmin(np.abs(absolute_times - onset)))
+    right_index = int(np.argmin(np.abs(absolute_times - end)))
+    return {"onset": onset, "peak": min(end, onset + 0.12), "detection": "provided",
+            "left": max(0, onset_index - 1), "right": right_index, "warning": None}
+
+
+def detected_vowel(note, peak, f0, absolute_times, smoothed, frame_period):
+    peak_index = peak["index"]
+    left = max(peak["left"], peak_index - int(round(0.32 * 1000 / frame_period)))
+    if left < peak_index:
+        left += int(np.argmin(smoothed[left:peak_index + 1]))
+    valley_energy = float(smoothed[left])
+    threshold = valley_energy + 0.14 * (float(smoothed[peak_index]) - valley_energy)
+    rises = np.flatnonzero(smoothed[left:peak_index + 1] >= threshold)
+    onset_index = left + int(rises[0]) if len(rises) else left
+    for index in range(onset_index, peak_index + 1):
+        if np.count_nonzero(f0[index:index + 5] > 0) >= 3:
+            onset_index = index
+            break
+    if onset_index >= peak_index:
+        onset_index = max(left, peak_index - 1)
+    onset = float(absolute_times[onset_index])
+    start = float(note["source"]["start"])
+    end = float(note["source"]["end"])
+    warning = None
+    if onset < start - 0.02 or onset > end + 0.02 or peak["time"] < start - 0.02 or peak["time"] > end + 0.02:
+        warning = "Detected vowel extends beyond the supplied source range; timestamps were treated as alignment priors. Verify this syllable and set source.vowelStart if needed."
+    return {"onset": onset, "peak": peak["time"], "detection": "detected",
+            "left": left, "right": peak["right"], "warning": warning}
+
+
+def align_sources(notes, f0, time_axis, energy, decode_start, frame_period):
+    absolute_times = time_axis + decode_start
+    decode_end = float(absolute_times[-1])
+    peaks, smoothed, noise, dynamic_range = detect_vowel_peaks(
+        f0, time_axis, energy, decode_start, frame_period,
+    )
+    alignments = [None] * len(notes)
+    index = 0
+    while index < len(notes):
+        if notes[index]["source"].get("vowelStart") is not None:
+            alignments[index] = provided_vowel(notes[index], peaks, absolute_times)
+            index += 1
+            continue
+        run_end = index + 1
+        while run_end < len(notes):
+            if notes[run_end]["source"].get("vowelStart") is not None:
+                break
+            if float(notes[run_end]["source"]["start"]) < float(notes[run_end - 1]["source"]["start"]):
+                break
+            run_end += 1
+        following_start = None
+        if run_end < len(notes):
+            candidate_start = float(notes[run_end]["source"]["start"])
+            if candidate_start >= float(notes[run_end - 1]["source"]["start"]):
+                following_start = candidate_start
+        selected, unordered = ordered_peak_assignment(
+            notes[index:run_end], peaks, dynamic_range, decode_start, decode_end, following_start,
+        )
+        for offset, peak in enumerate(selected):
+            note_index = index + offset
+            if peak["fallback"]:
+                alignments[note_index] = fallback_vowel(notes[note_index], f0, absolute_times, smoothed)
+            else:
+                alignments[note_index] = detected_vowel(
+                    notes[note_index], peak, f0, absolute_times, smoothed, frame_period,
+                )
+            if unordered:
+                warning = "Ordered vowel alignment was ambiguous; verify this source segment manually."
+                alignments[note_index]["warning"] = (
+                    alignments[note_index]["warning"] + " " + warning
+                    if alignments[note_index]["warning"] else warning
+                )
+        index = run_end
+
+    for index in range(1, len(alignments)):
+        previous = alignments[index - 1]
+        alignment = alignments[index]
+        minimum_onset = previous["peak"] + frame_period / 1000
+        if (alignment["detection"] == "provided" or alignment["peak"] <= previous["peak"]
+                or alignment["onset"] >= minimum_onset):
+            continue
+        left = int(np.argmin(np.abs(absolute_times - minimum_onset)))
+        peak_index = int(np.argmin(np.abs(absolute_times - alignment["peak"])))
+        if left >= peak_index:
+            continue
+        left += int(np.argmin(smoothed[left:peak_index + 1]))
+        valley_energy = float(smoothed[left])
+        threshold = valley_energy + 0.14 * (float(smoothed[peak_index]) - valley_energy)
+        rises = np.flatnonzero(smoothed[left:peak_index + 1] >= threshold)
+        onset_index = left + int(rises[0]) if len(rises) else left
+        for candidate in range(onset_index, peak_index + 1):
+            if np.count_nonzero(f0[candidate:candidate + 5] > 0) >= 3:
+                onset_index = candidate
+                break
+        alignment["onset"] = max(minimum_onset, float(absolute_times[onset_index]))
+        alignment["left"] = left
+        warning = "Vowel onset was moved after the previous syllable peak to avoid overlapping source segments."
+        alignment["warning"] = alignment["warning"] + " " + warning if alignment["warning"] else warning
+
+    for index, alignment in enumerate(alignments):
+        onset_index = int(np.argmin(np.abs(absolute_times - alignment["onset"])))
+        peak_index = int(np.argmin(np.abs(absolute_times - alignment["peak"])))
+        left_limit = max(0, alignment["left"], onset_index - int(round(0.18 * 1000 / frame_period)))
+        consonant_threshold = noise + 0.06 * max(0, float(smoothed[peak_index]) - noise)
+        start_index = onset_index
+        while start_index > left_limit and smoothed[start_index - 1] > consonant_threshold:
+            start_index -= 1
+        start_index = max(left_limit, start_index - 1)
+        alignment["sampleStart"] = min(alignment["onset"], float(absolute_times[start_index]))
+        right_index = max(alignment["right"], peak_index + 1)
+        right_index = min(right_index, len(absolute_times) - 1)
+        sample_end = min(float(absolute_times[right_index]), alignment["peak"] + 0.45)
+        alignment["sampleEnd"] = max(alignment["onset"] + 3 * frame_period / 1000, sample_end)
+
+    for index in range(len(alignments) - 1):
+        current = alignments[index]
+        following = alignments[index + 1]
+        if following["onset"] <= current["onset"]:
+            continue
+        boundary = following["sampleStart"]
+        if boundary > current["onset"] + 3 * frame_period / 1000:
+            current["sampleEnd"] = min(current["sampleEnd"], boundary)
+
+    for alignment in alignments:
+        duration = max(3 * frame_period / 1000, alignment["sampleEnd"] - alignment["onset"])
+        attack = min(0.12, max(2 * frame_period / 1000,
+                              (alignment["peak"] - alignment["onset"]) * 0.6), duration * 0.4)
+        release = min(0.08, max(2 * frame_period / 1000,
+                               (alignment["sampleEnd"] - alignment["peak"]) * 0.35), duration * 0.3)
+        if attack + release > duration * 0.7:
+            scale = duration * 0.7 / (attack + release)
+            attack *= scale
+            release *= scale
+        alignment["sustainStart"] = alignment["onset"] + attack
+        alignment["releaseStart"] = alignment["sampleEnd"] - release
+    return alignments
+
+
+def map_source_segment(local, target_anchors, source_anchors):
+    mapped = np.full(len(local), source_anchors[-1], dtype=np.float64)
+    for index in range(len(target_anchors) - 1):
+        target_start, target_end = target_anchors[index:index + 2]
+        source_start, source_end = source_anchors[index:index + 2]
+        selected = (local >= target_start - 1e-12) & (local < target_end - 1e-12)
+        if index == len(target_anchors) - 2:
+            selected |= local >= target_end - 1e-12
+        if target_end <= target_start + 1e-12:
+            mapped[selected] = source_start
+        else:
+            mapped[selected] = source_start + np.clip(
+                (local[selected] - target_start) / (target_end - target_start), 0, 1,
+            ) * (source_end - source_start)
+    return mapped
 
 
 def analyze_source(audio, sample_rate, frame_period, f0_floor, f0_ceil):
@@ -152,14 +408,15 @@ def analyze_source(audio, sample_rate, frame_period, f0_floor, f0_ceil):
 
 def synthesize_phrase(phrase, request, sample_rate, frame_period, f0_floor, f0_ceil):
     notes = phrase["notes"]
-    source_min = max(0.0, min(float(note["source"]["start"]) for note in notes) - 0.08)
-    source_max = max(float(note["source"]["end"]) for note in notes) + 0.12
+    original_source_end = max(float(note["source"]["end"]) for note in notes)
+    source_min = max(0.0, min(float(note["source"]["start"]) for note in notes) - 0.2)
+    source_max = original_source_end + 0.4
     audio = decode_audio(request["source"], source_min, source_max, sample_rate)
-    required_samples = int(math.ceil((max(float(note["source"]["end"]) for note in notes) - source_min) * sample_rate))
+    required_samples = int(math.ceil((original_source_end - source_min) * sample_rate))
     if len(audio) < required_samples - int(0.02 * sample_rate):
         raise WorkerFailure(
             "AUTOTUNE_SOURCE_RANGE_INVALID", "A note source range exceeds the decodable source media duration",
-            {"phraseId": phrase["id"], "sourceEnd": max(float(note["source"]["end"]) for note in notes),
+            {"phraseId": phrase["id"], "sourceEnd": original_source_end,
              "decodedDuration": len(audio) / sample_rate, "decodeStart": source_min},
         )
     source_f0, source_times, spectral, aperiodicity, energy = analyze_source(
@@ -168,6 +425,7 @@ def synthesize_phrase(phrase, request, sample_rate, frame_period, f0_floor, f0_c
     if len(source_f0) < 2:
         raise WorkerFailure("AUTOTUNE_SOURCE_RANGE_INVALID", "Phrase source range has too few analysis frames",
                             {"phraseId": phrase["id"]})
+    alignments = align_sources(notes, source_f0, source_times, energy, source_min, frame_period)
 
     phrase_start = float(notes[0]["target"]["start"])
     phrase_end = max(float(note["target"]["start"]) + float(note["target"]["duration"]) for note in notes)
@@ -179,30 +437,40 @@ def synthesize_phrase(phrase, request, sample_rate, frame_period, f0_floor, f0_c
     target_frequency = np.zeros(frame_count, dtype=np.float64)
     vibrato_cents = np.zeros(frame_count, dtype=np.float64)
     note_reports = []
+    target_vowels = []
     default_lead = float(request.get("consonantLeadMs", 25)) / 1000
     vibrato = request.get("vibrato")
 
-    for note in notes:
-        source_start = float(note["source"]["start"])
-        source_end = float(note["source"]["end"])
+    for note, alignment in zip(notes, alignments):
         target_start = float(note["target"]["start"])
         target_duration = float(note["target"]["duration"])
         target_end = target_start + target_duration
-        vowel_start, detection, warning = source_vowel(note, source_f0, source_times, energy, source_min)
+        vowel_start = alignment["onset"]
         vowel_offset = note["target"].get("vowelOffset")
         if vowel_offset is None:
-            vowel_offset = min(default_lead, target_duration * 0.25)
+            natural_lead = max(0, vowel_start - alignment["sampleStart"])
+            base_lead = min(default_lead, target_duration * 0.25)
+            vowel_offset = min(target_duration * 0.35, 0.18, max(base_lead, natural_lead))
         target_vowel = target_start + float(vowel_offset)
+        target_vowels.append(target_vowel)
+        target_attack_end = target_vowel + min(
+            alignment["sustainStart"] - vowel_start, (target_end - target_vowel) * 0.4,
+        )
+        target_release_start = target_end - min(
+            alignment["sampleEnd"] - alignment["releaseStart"],
+            max(0, target_end - target_attack_end) * 0.35,
+        )
+        if target_release_start <= target_attack_end:
+            target_release_start = (target_attack_end + target_end) / 2
         indices = np.flatnonzero((target_times >= target_start - 1e-9) & (target_times < target_end - 1e-9))
         local = target_times[indices]
-        before = local < target_vowel - 1e-12
-        mapped = np.empty(len(indices), dtype=np.float64)
-        if target_vowel > target_start + 1e-12:
-            mapped[before] = source_start + (local[before] - target_start) / (target_vowel - target_start) * (vowel_start - source_start)
-        else:
-            before[:] = False
-        mapped[~before] = vowel_start + (local[~before] - target_vowel) / (target_end - target_vowel) * (source_end - vowel_start)
-        source_positions_time[indices] = np.clip(mapped, source_start, source_end)
+        mapped = map_source_segment(
+            local,
+            [target_start, target_vowel, target_attack_end, target_release_start, target_end],
+            [alignment["sampleStart"], vowel_start, alignment["sustainStart"],
+             alignment["releaseStart"], alignment["sampleEnd"]],
+        )
+        source_positions_time[indices] = np.clip(mapped, alignment["sampleStart"], alignment["sampleEnd"])
         target_frequency[indices] = midi_frequency(int(note["target"]["midi"]))
         if vibrato and float(vibrato.get("depthCents", 0)) > 0:
             elapsed = local - target_vowel
@@ -212,12 +480,12 @@ def synthesize_phrase(phrase, request, sample_rate, frame_period, f0_floor, f0_c
                 float(vibrato.get("depthCents", 0)) * envelope
                 * np.sin(2 * np.pi * float(vibrato.get("rateHz", 5.2)) * np.maximum(elapsed, 0))
             )
-        warnings = [warning] if warning else []
+        warnings = [alignment["warning"]] if alignment["warning"] else []
         note_reports.append((target_start, {
             "id": note["id"], "phraseId": phrase["id"], "text": note["text"],
             "targetMidi": int(note["target"]["midi"]),
             "targetFrequencyHz": number(midi_frequency(int(note["target"]["midi"]))),
-            "sourceVowelStart": number(vowel_start), "sourceVowelDetection": detection,
+            "sourceVowelStart": number(vowel_start), "sourceVowelDetection": alignment["detection"],
             "targetVowelStart": number(target_vowel), "warnings": warnings,
         }))
 
@@ -238,8 +506,10 @@ def synthesize_phrase(phrase, request, sample_rate, frame_period, f0_floor, f0_c
             note = notes[index]
             start = float(note["target"]["start"])
             end = start + float(note["target"]["duration"])
-            affected = (target_times >= start - 1e-9) & (target_times < min(end, start + portamento) - 1e-9)
-            blend = np.clip((target_times[affected] - start) / portamento, 0, 1)
+            transition_start = max(start, target_vowels[index] - portamento * 0.35)
+            transition_end = min(end, transition_start + portamento)
+            affected = (target_times >= start - 1e-9) & (target_times < transition_end - 1e-9)
+            blend = np.clip((target_times[affected] - transition_start) / portamento, 0, 1)
             previous_log = math.log2(midi_frequency(int(previous["target"]["midi"])))
             current_log = math.log2(midi_frequency(int(note["target"]["midi"])))
             log_pitch[affected] = previous_log * (1 - blend) + current_log * blend

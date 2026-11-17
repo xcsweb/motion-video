@@ -18,7 +18,7 @@ export const CAPABILITIES = {
   vocal: {
     autotune: {
       requestSchemaVersion: 1,
-      engine: 'WORLD continuous-phrase resynthesis with source-vowel alignment, log-pitch portamento, optional vibrato, and independent DIO verification',
+      engine: 'WORLD continuous-phrase resynthesis with ordered vowel-peak alignment, OTO-style sustain stretching, vowel-centered portamento, optional vibrato, and independent DIO verification',
       input: 'versioned JSON with source media, phrases, per-note source/target timing, MIDI, and optional manual vowel anchors',
       output: ['mono PCM16 WAV', 'versioned per-note JSON report'],
       pathSemantics: 'Request source/output/report paths resolve relative to the request JSON; CLI overrides resolve relative to the current working directory.',

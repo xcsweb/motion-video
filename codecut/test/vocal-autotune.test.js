@@ -102,6 +102,49 @@ function syntheticWav() {
   return buffer;
 }
 
+function misalignedSyntheticWav() {
+  const sampleRate = 16000;
+  const duration = 2.3;
+  const samples = new Int16Array(sampleRate * duration);
+  const syllables = [
+    { onset: 0.10, frequency: 180 },
+    { onset: 0.72, frequency: 210 },
+    { onset: 1.25, frequency: 240 },
+    { onset: 1.75, frequency: 200 },
+  ];
+  for (let index = 0; index < samples.length; index += 1) {
+    const time = index / sampleRate;
+    let value = 0;
+    for (const syllable of syllables) {
+      const local = time - syllable.onset;
+      const length = 0.46;
+      if (local < 0 || local >= length) continue;
+      const envelope = local < 0.14 ? local / 0.14 : (length - local) / (length - 0.14);
+      value += 0.16 * envelope * (
+        Math.sin(2 * Math.PI * syllable.frequency * local)
+        + 0.3 * Math.sin(2 * Math.PI * syllable.frequency * 2 * local)
+        + 0.12 * Math.sin(2 * Math.PI * syllable.frequency * 3 * local)
+      );
+    }
+    samples[index] = Math.round(Math.max(-1, Math.min(1, value)) * 32767);
+  }
+  const buffer = Buffer.alloc(44 + samples.length * 2);
+  buffer.write('RIFF', 0);
+  buffer.writeUInt32LE(36 + samples.length * 2, 4);
+  buffer.write('WAVEfmt ', 8);
+  buffer.writeUInt32LE(16, 16);
+  buffer.writeUInt16LE(1, 20);
+  buffer.writeUInt16LE(1, 22);
+  buffer.writeUInt32LE(sampleRate, 24);
+  buffer.writeUInt32LE(sampleRate * 2, 28);
+  buffer.writeUInt16LE(2, 32);
+  buffer.writeUInt16LE(16, 34);
+  buffer.write('data', 36);
+  buffer.writeUInt32LE(samples.length * 2, 40);
+  Buffer.from(samples.buffer).copy(buffer, 44);
+  return buffer;
+}
+
 test('autotune schemas and capabilities are exposed and compilable', async () => {
   const schemas = JSON.parse((await cli(['schema', '--json'])).stdout);
   const ajv = new Ajv2020({ allErrors: true, strict: true });
@@ -192,4 +235,33 @@ test('WORLD autotune writes an exact-duration WAV and verified per-note report',
   assert.equal(wav.readUInt16LE(22), 1);
   assert.equal(wav.readUInt32LE(24), 16000);
   assert.ok(Math.abs(wav.readUInt32LE(40) / 2 / 16000 - 1.2) <= 1 / 16000);
+});
+
+test('ordered vowel alignment escapes bad timestamps and preserves manual anchors', {
+  skip: (!pythonDependencies || !ffmpegAvailable) && 'python numpy/scipy/pyworld and ffmpeg are required',
+  timeout: 180_000,
+}, async (t) => {
+  const directory = await temporaryDirectory(t);
+  await writeFile(join(directory, 'source.wav'), misalignedSyntheticWav());
+  const value = request();
+  value.duration = 1.6;
+  value.phrases[0].notes = [
+    { id: 'n1', text: '一', source: { start: 0, end: 0.45 }, target: { start: 0, duration: 0.4, midi: 60 } },
+    { id: 'n2', text: '二', source: { start: 0.45, end: 0.65 }, target: { start: 0.4, duration: 0.4, midi: 62 } },
+    { id: 'n3', text: '三', source: { start: 0.65, end: 1.10 }, target: { start: 0.8, duration: 0.4, midi: 64 } },
+    { id: 'n4', text: '四', source: { start: 1.30, end: 2.10, vowelStart: 1.75 }, target: { start: 1.2, duration: 0.4, midi: 65 } },
+  ];
+  const path = await writeRequest(directory, value);
+  const result = await cli(['vocal', 'autotune', path, '--json'], { timeout: 170_000 });
+  assert.equal(result.status, 0, result.stderr);
+  const report = JSON.parse(result.stdout).report;
+  assert.deepEqual(report.notes.slice(0, 3).map((note) => note.sourceVowelDetection), ['detected', 'detected', 'detected']);
+  assert.ok(report.notes[1].sourceVowelStart > 0.68, JSON.stringify(report.notes, null, 2));
+  assert.ok(report.notes[1].sourceVowelStart < 1.10);
+  assert.ok(report.notes[2].sourceVowelStart > 1.18);
+  assert.ok(report.notes[2].sourceVowelStart < 1.65);
+  assert.ok(report.notes[0].sourceVowelStart < report.notes[1].sourceVowelStart);
+  assert.ok(report.notes[1].sourceVowelStart < report.notes[2].sourceVowelStart);
+  assert.equal(report.notes[3].sourceVowelStart, 1.75);
+  assert.equal(report.notes[3].sourceVowelDetection, 'provided');
 });
