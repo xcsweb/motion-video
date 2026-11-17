@@ -1,0 +1,1283 @@
+{
+  "version": 1,
+  "createdAt": "2026-11-17T12:16:58.301Z",
+  "projectRevision": 1,
+  "project": {
+    "schemaVersion": 1,
+    "revision": 1,
+    "name": "鬼畜 v3 - 参考原声清晰重剪短样",
+    "assets": [
+      {
+        "id": "sub01",
+        "kind": "image",
+        "path": "assets/sub01.png"
+      },
+      {
+        "id": "sub02",
+        "kind": "image",
+        "path": "assets/sub02.png"
+      },
+      {
+        "id": "sub03",
+        "kind": "image",
+        "path": "assets/sub03.png"
+      },
+      {
+        "id": "sub04",
+        "kind": "image",
+        "path": "assets/sub04.png"
+      },
+      {
+        "id": "sub05",
+        "kind": "image",
+        "path": "assets/sub05.png"
+      },
+      {
+        "id": "sub06",
+        "kind": "image",
+        "path": "assets/sub06.png"
+      },
+      {
+        "id": "sub07",
+        "kind": "image",
+        "path": "assets/sub07.png"
+      },
+      {
+        "id": "sub08",
+        "kind": "image",
+        "path": "assets/sub08.png"
+      },
+      {
+        "id": "sub09",
+        "kind": "image",
+        "path": "assets/sub09.png"
+      },
+      {
+        "id": "sub10",
+        "kind": "image",
+        "path": "assets/sub10.png"
+      },
+      {
+        "id": "sub11",
+        "kind": "image",
+        "path": "assets/sub11.png"
+      },
+      {
+        "id": "sub12",
+        "kind": "image",
+        "path": "assets/sub12.png"
+      },
+      {
+        "id": "sub13",
+        "kind": "image",
+        "path": "assets/sub13.png"
+      },
+      {
+        "id": "sub14",
+        "kind": "image",
+        "path": "assets/sub14.png"
+      },
+      {
+        "id": "sub15",
+        "kind": "image",
+        "path": "assets/sub15.png"
+      },
+      {
+        "id": "sub16",
+        "kind": "image",
+        "path": "assets/sub16.png"
+      },
+      {
+        "id": "sub17",
+        "kind": "image",
+        "path": "assets/sub17.png"
+      },
+      {
+        "id": "sub18",
+        "kind": "image",
+        "path": "assets/sub18.png"
+      },
+      {
+        "id": "sub19",
+        "kind": "image",
+        "path": "assets/sub19.png"
+      },
+      {
+        "id": "sub20",
+        "kind": "image",
+        "path": "assets/sub20.png"
+      },
+      {
+        "id": "subtitleBand",
+        "kind": "image",
+        "path": "assets/subtitle-band.png"
+      },
+      {
+        "id": "label",
+        "kind": "image",
+        "path": "assets/label.png"
+      },
+      {
+        "id": "shot01",
+        "kind": "video",
+        "path": "assets/shots/shot01.mp4"
+      },
+      {
+        "id": "shot02",
+        "kind": "video",
+        "path": "assets/shots/shot02.mp4"
+      },
+      {
+        "id": "shot03",
+        "kind": "video",
+        "path": "assets/shots/shot03.mp4"
+      },
+      {
+        "id": "shot04",
+        "kind": "video",
+        "path": "assets/shots/shot04.mp4"
+      },
+      {
+        "id": "shot05",
+        "kind": "video",
+        "path": "assets/shots/shot05.mp4"
+      },
+      {
+        "id": "shot06",
+        "kind": "video",
+        "path": "assets/shots/shot06.mp4"
+      },
+      {
+        "id": "shot07",
+        "kind": "video",
+        "path": "assets/shots/shot07.mp4"
+      },
+      {
+        "id": "shot08",
+        "kind": "video",
+        "path": "assets/shots/shot08.mp4"
+      },
+      {
+        "id": "shot09",
+        "kind": "video",
+        "path": "assets/shots/shot09.mp4"
+      },
+      {
+        "id": "shot10",
+        "kind": "video",
+        "path": "assets/shots/shot10.mp4"
+      },
+      {
+        "id": "shot11",
+        "kind": "video",
+        "path": "assets/shots/shot11.mp4"
+      },
+      {
+        "id": "shot12",
+        "kind": "video",
+        "path": "assets/shots/shot12.mp4"
+      },
+      {
+        "id": "shot13",
+        "kind": "video",
+        "path": "assets/shots/shot13.mp4"
+      },
+      {
+        "id": "shot14",
+        "kind": "video",
+        "path": "assets/shots/shot14.mp4"
+      },
+      {
+        "id": "shot15",
+        "kind": "video",
+        "path": "assets/shots/shot15.mp4"
+      },
+      {
+        "id": "shot16",
+        "kind": "video",
+        "path": "assets/shots/shot16.mp4"
+      },
+      {
+        "id": "shot17",
+        "kind": "video",
+        "path": "assets/shots/shot17.mp4"
+      },
+      {
+        "id": "shot18",
+        "kind": "video",
+        "path": "assets/shots/shot18.mp4"
+      },
+      {
+        "id": "shot19",
+        "kind": "video",
+        "path": "assets/shots/shot19.mp4"
+      },
+      {
+        "id": "shot20",
+        "kind": "video",
+        "path": "assets/shots/shot20.mp4"
+      },
+      {
+        "id": "shot21",
+        "kind": "video",
+        "path": "assets/shots/shot21.mp4"
+      },
+      {
+        "id": "shot22",
+        "kind": "video",
+        "path": "assets/shots/shot22.mp4"
+      },
+      {
+        "id": "shot23",
+        "kind": "video",
+        "path": "assets/shots/shot23.mp4"
+      },
+      {
+        "id": "shot24",
+        "kind": "video",
+        "path": "assets/shots/shot24.mp4"
+      },
+      {
+        "id": "shot25",
+        "kind": "video",
+        "path": "assets/shots/shot25.mp4"
+      },
+      {
+        "id": "shot26",
+        "kind": "video",
+        "path": "assets/shots/shot26.mp4"
+      },
+      {
+        "id": "shot27",
+        "kind": "video",
+        "path": "assets/shots/shot27.mp4"
+      },
+      {
+        "id": "shot28",
+        "kind": "video",
+        "path": "assets/shots/shot28.mp4"
+      },
+      {
+        "id": "shot29",
+        "kind": "video",
+        "path": "assets/shots/shot29.mp4"
+      },
+      {
+        "id": "shot30",
+        "kind": "video",
+        "path": "assets/shots/shot30.mp4"
+      },
+      {
+        "id": "shot31",
+        "kind": "video",
+        "path": "assets/shots/shot31.mp4"
+      },
+      {
+        "id": "shot32",
+        "kind": "video",
+        "path": "assets/shots/shot32.mp4"
+      },
+      {
+        "id": "shot33",
+        "kind": "video",
+        "path": "assets/shots/shot33.mp4"
+      },
+      {
+        "id": "clearMix",
+        "kind": "audio",
+        "path": "assets/audio.wav"
+      }
+    ],
+    "tracks": [
+      {
+        "id": "v1",
+        "kind": "video",
+        "name": "鼓点分镜",
+        "clips": [
+          {
+            "id": "shot01",
+            "type": "video",
+            "assetId": "shot01",
+            "start": 0,
+            "duration": 0.442522,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot02",
+            "type": "video",
+            "assetId": "shot02",
+            "start": 0.442522,
+            "duration": 2.275529,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot03",
+            "type": "video",
+            "assetId": "shot03",
+            "start": 2.718051,
+            "duration": 1.137764,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot04",
+            "type": "video",
+            "assetId": "shot04",
+            "start": 3.855815,
+            "duration": 1.137764,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot05",
+            "type": "video",
+            "assetId": "shot05",
+            "start": 4.993579,
+            "duration": 2.275529,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot06",
+            "type": "video",
+            "assetId": "shot06",
+            "start": 7.269108,
+            "duration": 1.137764,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot07",
+            "type": "video",
+            "assetId": "shot07",
+            "start": 8.406872,
+            "duration": 1.137764,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot08",
+            "type": "video",
+            "assetId": "shot08",
+            "start": 9.544636,
+            "duration": 0.568883,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot09",
+            "type": "video",
+            "assetId": "shot09",
+            "start": 10.113519,
+            "duration": 0.568882,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot10",
+            "type": "video",
+            "assetId": "shot10",
+            "start": 10.682401,
+            "duration": 1.137764,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot11",
+            "type": "video",
+            "assetId": "shot11",
+            "start": 11.820165,
+            "duration": 1.137764,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot12",
+            "type": "video",
+            "assetId": "shot12",
+            "start": 12.957929,
+            "duration": 1.137765,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot13",
+            "type": "video",
+            "assetId": "shot13",
+            "start": 14.095694,
+            "duration": 0.568882,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot14",
+            "type": "video",
+            "assetId": "shot14",
+            "start": 14.664576,
+            "duration": 0.568882,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot15",
+            "type": "video",
+            "assetId": "shot15",
+            "start": 15.233458,
+            "duration": 0.568882,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot16",
+            "type": "video",
+            "assetId": "shot16",
+            "start": 15.80234,
+            "duration": 0.568882,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot17",
+            "type": "video",
+            "assetId": "shot17",
+            "start": 16.371222,
+            "duration": 2.275529,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot18",
+            "type": "video",
+            "assetId": "shot18",
+            "start": 18.646751,
+            "duration": 1.137764,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot19",
+            "type": "video",
+            "assetId": "shot19",
+            "start": 19.784515,
+            "duration": 1.137764,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot20",
+            "type": "video",
+            "assetId": "shot20",
+            "start": 20.922279,
+            "duration": 2.275529,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot21",
+            "type": "video",
+            "assetId": "shot21",
+            "start": 23.197808,
+            "duration": 1.137764,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot22",
+            "type": "video",
+            "assetId": "shot22",
+            "start": 24.335572,
+            "duration": 1.137764,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot23",
+            "type": "video",
+            "assetId": "shot23",
+            "start": 25.473336,
+            "duration": 0.568883,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot24",
+            "type": "video",
+            "assetId": "shot24",
+            "start": 26.042219,
+            "duration": 0.568882,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot25",
+            "type": "video",
+            "assetId": "shot25",
+            "start": 26.611101,
+            "duration": 1.137764,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot26",
+            "type": "video",
+            "assetId": "shot26",
+            "start": 27.748865,
+            "duration": 1.137764,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot27",
+            "type": "video",
+            "assetId": "shot27",
+            "start": 28.886629,
+            "duration": 1.137765,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot28",
+            "type": "video",
+            "assetId": "shot28",
+            "start": 30.024394,
+            "duration": 2.275528,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot29",
+            "type": "video",
+            "assetId": "shot29",
+            "start": 32.299922,
+            "duration": 0.568882,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot30",
+            "type": "video",
+            "assetId": "shot30",
+            "start": 32.868804,
+            "duration": 0.568883,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot31",
+            "type": "video",
+            "assetId": "shot31",
+            "start": 33.437687,
+            "duration": 1.137764,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot32",
+            "type": "video",
+            "assetId": "shot32",
+            "start": 34.575451,
+            "duration": 1.137764,
+            "sourceStart": 0,
+            "volume": 0
+          },
+          {
+            "id": "shot33",
+            "type": "video",
+            "assetId": "shot33",
+            "start": 35.713215,
+            "duration": 0.446785,
+            "sourceStart": 0,
+            "volume": 0
+          }
+        ]
+      },
+      {
+        "id": "v2",
+        "kind": "video",
+        "name": "遮挡原字幕",
+        "clips": [
+          {
+            "id": "subtitleBand",
+            "type": "image",
+            "assetId": "subtitleBand",
+            "start": 0,
+            "duration": 36.16,
+            "position": {
+              "x": 0,
+              "y": 590
+            }
+          }
+        ]
+      },
+      {
+        "id": "v3",
+        "kind": "video",
+        "name": "同步字幕",
+        "clips": [
+          {
+            "id": "sub01",
+            "type": "image",
+            "assetId": "sub01",
+            "start": 0.24,
+            "duration": 2,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "id": "sub02",
+            "type": "image",
+            "assetId": "sub02",
+            "start": 2.24,
+            "duration": 1,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "id": "sub03",
+            "type": "image",
+            "assetId": "sub03",
+            "start": 3.24,
+            "duration": 1.5,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "id": "sub04",
+            "type": "image",
+            "assetId": "sub04",
+            "start": 4.74,
+            "duration": 2.5,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "id": "sub05",
+            "type": "image",
+            "assetId": "sub05",
+            "start": 7.24,
+            "duration": 1,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "id": "sub06",
+            "type": "image",
+            "assetId": "sub06",
+            "start": 8.24,
+            "duration": 1,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "id": "sub07",
+            "type": "image",
+            "assetId": "sub07",
+            "start": 9.24,
+            "duration": 2.5,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "id": "sub08",
+            "type": "image",
+            "assetId": "sub08",
+            "start": 11.74,
+            "duration": 3,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "id": "sub09",
+            "type": "image",
+            "assetId": "sub09",
+            "start": 14.74,
+            "duration": 0.5,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "id": "sub10",
+            "type": "image",
+            "assetId": "sub10",
+            "start": 15.24,
+            "duration": 0.5,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "id": "sub11",
+            "type": "image",
+            "assetId": "sub11",
+            "start": 15.74,
+            "duration": 2.5,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "id": "sub12",
+            "type": "image",
+            "assetId": "sub12",
+            "start": 18.24,
+            "duration": 3.5,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "id": "sub13",
+            "type": "image",
+            "assetId": "sub13",
+            "start": 21.74,
+            "duration": 2,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "id": "sub14",
+            "type": "image",
+            "assetId": "sub14",
+            "start": 23.74,
+            "duration": 3,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "id": "sub15",
+            "type": "image",
+            "assetId": "sub15",
+            "start": 26.74,
+            "duration": 1,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "id": "sub16",
+            "type": "image",
+            "assetId": "sub16",
+            "start": 27.74,
+            "duration": 2,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "id": "sub17",
+            "type": "image",
+            "assetId": "sub17",
+            "start": 29.74,
+            "duration": 2.5,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "id": "sub18",
+            "type": "image",
+            "assetId": "sub18",
+            "start": 32.24,
+            "duration": 0.5,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "id": "sub19",
+            "type": "image",
+            "assetId": "sub19",
+            "start": 32.74,
+            "duration": 1.5,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "id": "sub20",
+            "type": "image",
+            "assetId": "sub20",
+            "start": 34.24,
+            "duration": 1.92,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "v4",
+        "kind": "video",
+        "name": "样片标识",
+        "clips": [
+          {
+            "id": "label",
+            "type": "image",
+            "assetId": "label",
+            "start": 0,
+            "duration": 36.16,
+            "position": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "a1",
+        "kind": "audio",
+        "name": "清晰参考原声",
+        "clips": [
+          {
+            "id": "clearMix",
+            "type": "audio",
+            "assetId": "clearMix",
+            "start": 0,
+            "duration": 36.16,
+            "sourceStart": 0,
+            "volume": 0.85
+          }
+        ]
+      }
+    ],
+    "output": {
+      "path": "guichu-v3-clear.mp4",
+      "format": "mp4",
+      "videoCodec": "h264",
+      "audioCodec": "aac",
+      "width": 1280,
+      "height": 720,
+      "frameRate": 30,
+      "pixelFormat": "yuv420p",
+      "audioSampleRate": 48000,
+      "audioChannels": 2
+    }
+  },
+  "assets": [
+    {
+      "id": "sub01",
+      "path": "assets/sub01.png",
+      "exists": true,
+      "size": 17841,
+      "mtimeMs": 1794917768777.7632
+    },
+    {
+      "id": "sub02",
+      "path": "assets/sub02.png",
+      "exists": true,
+      "size": 10731,
+      "mtimeMs": 1794917768797.7634
+    },
+    {
+      "id": "sub03",
+      "path": "assets/sub03.png",
+      "exists": true,
+      "size": 14573,
+      "mtimeMs": 1794917768821.7637
+    },
+    {
+      "id": "sub04",
+      "path": "assets/sub04.png",
+      "exists": true,
+      "size": 14025,
+      "mtimeMs": 1794917768841.7637
+    },
+    {
+      "id": "sub05",
+      "path": "assets/sub05.png",
+      "exists": true,
+      "size": 8708,
+      "mtimeMs": 1794917768861.764
+    },
+    {
+      "id": "sub06",
+      "path": "assets/sub06.png",
+      "exists": true,
+      "size": 12272,
+      "mtimeMs": 1794917768881.7642
+    },
+    {
+      "id": "sub07",
+      "path": "assets/sub07.png",
+      "exists": true,
+      "size": 18153,
+      "mtimeMs": 1794917768905.7644
+    },
+    {
+      "id": "sub08",
+      "path": "assets/sub08.png",
+      "exists": true,
+      "size": 20570,
+      "mtimeMs": 1794917768925.7646
+    },
+    {
+      "id": "sub09",
+      "path": "assets/sub09.png",
+      "exists": true,
+      "size": 11283,
+      "mtimeMs": 1794917768945.765
+    },
+    {
+      "id": "sub10",
+      "path": "assets/sub10.png",
+      "exists": true,
+      "size": 10161,
+      "mtimeMs": 1794917768965.765
+    },
+    {
+      "id": "sub11",
+      "path": "assets/sub11.png",
+      "exists": true,
+      "size": 20897,
+      "mtimeMs": 1794917768989.7651
+    },
+    {
+      "id": "sub12",
+      "path": "assets/sub12.png",
+      "exists": true,
+      "size": 24889,
+      "mtimeMs": 1794917769013.7654
+    },
+    {
+      "id": "sub13",
+      "path": "assets/sub13.png",
+      "exists": true,
+      "size": 10320,
+      "mtimeMs": 1794917769029.7656
+    },
+    {
+      "id": "sub14",
+      "path": "assets/sub14.png",
+      "exists": true,
+      "size": 21183,
+      "mtimeMs": 1794917769053.7659
+    },
+    {
+      "id": "sub15",
+      "path": "assets/sub15.png",
+      "exists": true,
+      "size": 11318,
+      "mtimeMs": 1794917769073.766
+    },
+    {
+      "id": "sub16",
+      "path": "assets/sub16.png",
+      "exists": true,
+      "size": 10151,
+      "mtimeMs": 1794917769093.7664
+    },
+    {
+      "id": "sub17",
+      "path": "assets/sub17.png",
+      "exists": true,
+      "size": 10863,
+      "mtimeMs": 1794917769113.7664
+    },
+    {
+      "id": "sub18",
+      "path": "assets/sub18.png",
+      "exists": true,
+      "size": 8638,
+      "mtimeMs": 1794917769129.7666
+    },
+    {
+      "id": "sub19",
+      "path": "assets/sub19.png",
+      "exists": true,
+      "size": 19043,
+      "mtimeMs": 1794917769153.7668
+    },
+    {
+      "id": "sub20",
+      "path": "assets/sub20.png",
+      "exists": true,
+      "size": 23163,
+      "mtimeMs": 1794917769173.767
+    },
+    {
+      "id": "subtitleBand",
+      "path": "assets/subtitle-band.png",
+      "exists": true,
+      "size": 1031,
+      "mtimeMs": 1794917769177.767
+    },
+    {
+      "id": "label",
+      "path": "assets/label.png",
+      "exists": true,
+      "size": 12017,
+      "mtimeMs": 1794917769201.7673
+    },
+    {
+      "id": "shot01",
+      "path": "assets/shots/shot01.mp4",
+      "exists": true,
+      "size": 188209,
+      "mtimeMs": 1794917769625.7715
+    },
+    {
+      "id": "shot02",
+      "path": "assets/shots/shot02.mp4",
+      "exists": true,
+      "size": 452601,
+      "mtimeMs": 1794917770517.7803
+    },
+    {
+      "id": "shot03",
+      "path": "assets/shots/shot03.mp4",
+      "exists": true,
+      "size": 365925,
+      "mtimeMs": 1794917771069.786
+    },
+    {
+      "id": "shot04",
+      "path": "assets/shots/shot04.mp4",
+      "exists": true,
+      "size": 230132,
+      "mtimeMs": 1794917771649.7915
+    },
+    {
+      "id": "shot05",
+      "path": "assets/shots/shot05.mp4",
+      "exists": true,
+      "size": 1602878,
+      "mtimeMs": 1794917773241.8074
+    },
+    {
+      "id": "shot06",
+      "path": "assets/shots/shot06.mp4",
+      "exists": true,
+      "size": 464280,
+      "mtimeMs": 1794917774153.8164
+    },
+    {
+      "id": "shot07",
+      "path": "assets/shots/shot07.mp4",
+      "exists": true,
+      "size": 138921,
+      "mtimeMs": 1794917774649.8213
+    },
+    {
+      "id": "shot08",
+      "path": "assets/shots/shot08.mp4",
+      "exists": true,
+      "size": 164300,
+      "mtimeMs": 1794917775077.8257
+    },
+    {
+      "id": "shot09",
+      "path": "assets/shots/shot09.mp4",
+      "exists": true,
+      "size": 149363,
+      "mtimeMs": 1794917775469.8296
+    },
+    {
+      "id": "shot10",
+      "path": "assets/shots/shot10.mp4",
+      "exists": true,
+      "size": 306646,
+      "mtimeMs": 1794917776049.8352
+    },
+    {
+      "id": "shot11",
+      "path": "assets/shots/shot11.mp4",
+      "exists": true,
+      "size": 575054,
+      "mtimeMs": 1794917776873.8435
+    },
+    {
+      "id": "shot12",
+      "path": "assets/shots/shot12.mp4",
+      "exists": true,
+      "size": 262644,
+      "mtimeMs": 1794917777533.8499
+    },
+    {
+      "id": "shot13",
+      "path": "assets/shots/shot13.mp4",
+      "exists": true,
+      "size": 153422,
+      "mtimeMs": 1794917778041.855
+    },
+    {
+      "id": "shot14",
+      "path": "assets/shots/shot14.mp4",
+      "exists": true,
+      "size": 156141,
+      "mtimeMs": 1794917778553.86
+    },
+    {
+      "id": "shot15",
+      "path": "assets/shots/shot15.mp4",
+      "exists": true,
+      "size": 341491,
+      "mtimeMs": 1794917779093.8655
+    },
+    {
+      "id": "shot16",
+      "path": "assets/shots/shot16.mp4",
+      "exists": true,
+      "size": 143354,
+      "mtimeMs": 1794917779565.87
+    },
+    {
+      "id": "shot17",
+      "path": "assets/shots/shot17.mp4",
+      "exists": true,
+      "size": 462449,
+      "mtimeMs": 1794917780537.8796
+    },
+    {
+      "id": "shot18",
+      "path": "assets/shots/shot18.mp4",
+      "exists": true,
+      "size": 128900,
+      "mtimeMs": 1794917781057.885
+    },
+    {
+      "id": "shot19",
+      "path": "assets/shots/shot19.mp4",
+      "exists": true,
+      "size": 188592,
+      "mtimeMs": 1794917781533.8896
+    },
+    {
+      "id": "shot20",
+      "path": "assets/shots/shot20.mp4",
+      "exists": true,
+      "size": 1185853,
+      "mtimeMs": 1794917782837.9026
+    },
+    {
+      "id": "shot21",
+      "path": "assets/shots/shot21.mp4",
+      "exists": true,
+      "size": 461195,
+      "mtimeMs": 1794917783545.9097
+    },
+    {
+      "id": "shot22",
+      "path": "assets/shots/shot22.mp4",
+      "exists": true,
+      "size": 182006,
+      "mtimeMs": 1794917784145.9155
+    },
+    {
+      "id": "shot23",
+      "path": "assets/shots/shot23.mp4",
+      "exists": true,
+      "size": 171015,
+      "mtimeMs": 1794917784765.9216
+    },
+    {
+      "id": "shot24",
+      "path": "assets/shots/shot24.mp4",
+      "exists": true,
+      "size": 154817,
+      "mtimeMs": 1794917785189.9258
+    },
+    {
+      "id": "shot25",
+      "path": "assets/shots/shot25.mp4",
+      "exists": true,
+      "size": 360429,
+      "mtimeMs": 1794917785881.9326
+    },
+    {
+      "id": "shot26",
+      "path": "assets/shots/shot26.mp4",
+      "exists": true,
+      "size": 246644,
+      "mtimeMs": 1794917786473.9387
+    },
+    {
+      "id": "shot27",
+      "path": "assets/shots/shot27.mp4",
+      "exists": true,
+      "size": 314257,
+      "mtimeMs": 1794917787149.9453
+    },
+    {
+      "id": "shot28",
+      "path": "assets/shots/shot28.mp4",
+      "exists": true,
+      "size": 382872,
+      "mtimeMs": 1794917787781.9517
+    },
+    {
+      "id": "shot29",
+      "path": "assets/shots/shot29.mp4",
+      "exists": true,
+      "size": 146734,
+      "mtimeMs": 1794917788377.9575
+    },
+    {
+      "id": "shot30",
+      "path": "assets/shots/shot30.mp4",
+      "exists": true,
+      "size": 102510,
+      "mtimeMs": 1794917788821.962
+    },
+    {
+      "id": "shot31",
+      "path": "assets/shots/shot31.mp4",
+      "exists": true,
+      "size": 270799,
+      "mtimeMs": 1794917789525.9688
+    },
+    {
+      "id": "shot32",
+      "path": "assets/shots/shot32.mp4",
+      "exists": true,
+      "size": 273682,
+      "mtimeMs": 1794917790229.9758
+    },
+    {
+      "id": "shot33",
+      "path": "assets/shots/shot33.mp4",
+      "exists": true,
+      "size": 303457,
+      "mtimeMs": 1794917790769.9812
+    },
+    {
+      "id": "clearMix",
+      "path": "assets/audio.wav",
+      "exists": true,
+      "size": 6942798,
+      "mtimeMs": 1794917619668.2847
+    }
+  ]
+}
