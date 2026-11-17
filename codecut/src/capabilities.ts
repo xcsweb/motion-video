@@ -15,6 +15,19 @@ export const CAPABILITIES = {
     cacheIdentity: ['assetId', 'relativePath', 'size', 'mtimeMs', 'previewType', 'generationParameters'],
     history: 'add, probe, and remove use project transactions; list/status and media jobs create no project revisions',
   },
+  vocal: {
+    autotune: {
+      requestSchemaVersion: 1,
+      engine: 'WORLD continuous-phrase resynthesis with source-vowel alignment, log-pitch portamento, optional vibrato, and independent DIO verification',
+      input: 'versioned JSON with source media, phrases, per-note source/target timing, MIDI, and optional manual vowel anchors',
+      output: ['mono PCM16 WAV', 'versioned per-note JSON report'],
+      pathSemantics: 'Request source/output/report paths resolve relative to the request JSON; CLI overrides resolve relative to the current working directory.',
+      verification: ['median cents error', 'octave-folded cents error', 'voiced coverage', 'vowel onset error', 'pitch/onset confidence', 'warnings without blind second-pass correction'],
+      dependencies: ['python3', 'numpy', 'scipy', 'pyworld', 'ffmpeg'],
+      pythonOption: '--python PATH or CODECUT_AUTOTUNE_PYTHON',
+      ffmpegOption: 'CODECUT_FFMPEG',
+    },
+  },
   jobKinds: ['asset.probe', 'asset.analyze', 'asset.thumbnail', 'asset.sheet', 'preview.frame', 'preview.sheet', 'preview.proxy', 'render'],
   trackKinds: ['video', 'audio'],
   clipTypes: ['video', 'audio', 'image', 'color', 'text'],
@@ -85,6 +98,7 @@ export const CAPABILITIES = {
       'asset add/list/status/probe/remove',
       'asset thumbnail/sheet',
       'asset analyze scenes/silence',
+      'vocal autotune',
       'edit apply',
       'history list/diff/undo/redo',
       'render',
@@ -143,6 +157,12 @@ export const CAPABILITIES = {
       arguments: ['ASSET_ID'],
       options: ['--start SECONDS', '--end SECONDS', '--noise-db DB', '--minimum-duration SECONDS', '--detach', '--timeout-ms N', '--project PATH', '--json'],
       output: ['job', 'result with noiseDb, minimumDuration, and silence intervals after completion'],
+    },
+    'vocal autotune': {
+      arguments: ['REQUEST_JSON'],
+      options: ['--output PATH', '--report PATH', '--python PATH', '--force', '--json'],
+      output: ['outputPath', 'reportPath', 'report with per-note pitch/onset measurements and confidence'],
+      status: 'synchronous standalone command; does not create a project revision or job',
     },
     'edit apply': {
       input: [

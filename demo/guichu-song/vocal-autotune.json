@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "source": "../../.tmp-guichu/zuotian.mp4",
+  "output": "song-vocals-autotuned.wav",
+  "report": "song-vocals-autotuned.report.json",
+  "duration": 24,
+  "sampleRate": 48000,
+  "framePeriodMs": 5,
+  "f0Floor": 65,
+  "f0Ceil": 500,
+  "consonantLeadMs": 25,
+  "portamentoMs": 35,
+  "vibrato": { "depthCents": 9, "rateHz": 5.2, "delayMs": 160 },
+  "phrases": [
+    {
+      "id": "all-hooks",
+      "notes": [
+        { "id": "h1-01", "text": "改", "source": { "start": 197.34, "end": 197.94 }, "target": { "start": 0, "duration": 0.5, "midi": 52 } },
+        { "id": "h1-02", "text": "革", "source": { "start": 197.94, "end": 198.22 }, "target": { "start": 0.5, "duration": 0.5, "midi": 50 } },
+        { "id": "h1-03", "text": "春", "source": { "start": 198.22, "end": 198.76 }, "target": { "start": 1, "duration": 0.5, "midi": 52 } },
+        { "id": "h1-04", "text": "风", "source": { "start": 198.76, "end": 198.98 }, "target": { "start": 1.5, "duration": 0.5, "midi": 55 } },
+        { "id": "h1-05", "text": "吹", "source": { "start": 198.98, "end": 199.52 }, "target": { "start": 2, "duration": 0.75, "midi": 57 } },
+        { "id": "h1-06", "text": "满", "source": { "start": 199.52, "end": 199.66 }, "target": { "start": 2.75, "duration": 0.5, "midi": 55 } },
+        { "id": "h1-07", "text": "地", "source": { "start": 199.66, "end": 199.86 }, "target": { "start": 3.25, "duration": 0.75, "midi": 52 } },
+
+        { "id": "h2-01", "text": "中", "source": { "start": 199.86, "end": 200.35 }, "target": { "start": 4, "duration": 0.5, "midi": 52 } },
+        { "id": "h2-02", "text": "国", "source": { "start": 200.35, "end": 200.84 }, "target": { "start": 4.5, "duration": 0.5, "midi": 52 } },
+        { "id": "h2-03", "text": "人", "source": { "start": 200.84, "end": 201.1 }, "target": { "start": 5, "duration": 0.5, "midi": 55 } },
+        { "id": "h2-04", "text": "民", "source": { "start": 201.1, "end": 201.36 }, "target": { "start": 5.5, "duration": 0.5, "midi": 57 } },
+        { "id": "h2-05", "text": "真", "source": { "start": 201.36, "end": 201.8 }, "target": { "start": 6, "duration": 0.75, "midi": 55 } },
+        { "id": "h2-06", "text": "争", "source": { "start": 201.8, "end": 202.1 }, "target": { "start": 6.75, "duration": 0.5, "midi": 52 } },
+        { "id": "h2-07", "text": "气", "source": { "start": 202.1, "end": 202.36 }, "target": { "start": 7.25, "duration": 0.75, "midi": 50 } },
+
+        { "id": "h3-01", "text": "齐", "source": { "start": 202.36, "end": 203.14 }, "target": { "start": 8, "duration": 0.5, "midi": 52 } },
+        { "id": "h3-02", "text": "心", "source": { "start": 203.14, "end": 203.36 }, "target": { "start": 8.5, "duration": 0.5, "midi": 55 } },
+        { "id": "h3-03", "text": "合", "source": { "start": 203.36, "end": 203.72 }, "target": { "start": 9, "duration": 0.5, "midi": 57 } },
+        { "id": "h3-04", "text": "力", "source": { "start": 203.72, "end": 203.92 }, "target": { "start": 9.5, "duration": 0.5, "midi": 55 } },
+        { "id": "h3-05", "text": "跨", "source": { "start": 203.92, "end": 204.26 }, "target": { "start": 10, "duration": 0.75, "midi": 52 } },
+        { "id": "h3-06", "text": "世", "source": { "start": 204.26, "end": 204.46 }, "target": { "start": 10.75, "duration": 0.5, "midi": 50 } },
+        { "id": "h3-07", "text": "纪", "source": { "start": 204.46, "end": 204.64 }, "target": { "start": 11.25, "duration": 0.75, "midi": 48 } },
+
+        { "id": "h4-01", "text": "一", "source": { "start": 204.64, "end": 205.18 }, "target": { "start": 12, "duration": 0.5, "midi": 50 } },
+        { "id": "h4-02", "text": "场", "source": { "start": 205.18, "end": 205.4 }, "target": { "start": 12.5, "duration": 0.5, "midi": 52 } },
+        { "id": "h4-03", "text": "大", "source": { "start": 205.4, "end": 205.74 }, "target": { "start": 13, "duration": 0.5, "midi": 55 } },
+        { "id": "h4-04", "text": "水", "source": { "start": 205.74, "end": 205.94 }, "target": { "start": 13.5, "duration": 0.5, "midi": 52 } },
+        { "id": "h4-05", "text": "没", "source": { "start": 205.94, "end": 206.32 }, "target": { "start": 14, "duration": 0.75, "midi": 50 } },
+        { "id": "h4-06", "text": "咋", "source": { "start": 206.32, "end": 206.52 }, "target": { "start": 14.75, "duration": 0.5, "midi": 48 } },
+        { "id": "h4-07", "text": "地", "source": { "start": 206.52, "end": 206.72 }, "target": { "start": 15.25, "duration": 0.75, "midi": 50 } },
+
+        { "id": "h5-01", "text": "改", "source": { "start": 197.34, "end": 197.94 }, "target": { "start": 16, "duration": 0.5, "midi": 52 } },
+        { "id": "h5-02", "text": "革", "source": { "start": 197.94, "end": 198.22 }, "target": { "start": 16.5, "duration": 0.5, "midi": 50 } },
+        { "id": "h5-03", "text": "春", "source": { "start": 198.22, "end": 198.76 }, "target": { "start": 17, "duration": 0.5, "midi": 52 } },
+        { "id": "h5-04", "text": "风", "source": { "start": 198.76, "end": 198.98 }, "target": { "start": 17.5, "duration": 0.5, "midi": 55 } },
+        { "id": "h5-05", "text": "吹", "source": { "start": 198.98, "end": 199.52 }, "target": { "start": 18, "duration": 0.75, "midi": 57 } },
+        { "id": "h5-06", "text": "满", "source": { "start": 199.52, "end": 199.66 }, "target": { "start": 18.75, "duration": 0.5, "midi": 55 } },
+        { "id": "h5-07", "text": "地", "source": { "start": 199.66, "end": 199.86 }, "target": { "start": 19.25, "duration": 0.75, "midi": 52 } },
+
+        { "id": "h6-01", "text": "中", "source": { "start": 199.86, "end": 200.35 }, "target": { "start": 20, "duration": 0.5, "midi": 52 } },
+        { "id": "h6-02", "text": "国", "source": { "start": 200.35, "end": 200.84 }, "target": { "start": 20.5, "duration": 0.5, "midi": 52 } },
+        { "id": "h6-03", "text": "人", "source": { "start": 200.84, "end": 201.1 }, "target": { "start": 21, "duration": 0.5, "midi": 55 } },
+        { "id": "h6-04", "text": "民", "source": { "start": 201.1, "end": 201.36 }, "target": { "start": 21.5, "duration": 0.5, "midi": 57 } },
+        { "id": "h6-05", "text": "真", "source": { "start": 201.36, "end": 201.8 }, "target": { "start": 22, "duration": 0.75, "midi": 55 } },
+        { "id": "h6-06", "text": "争", "source": { "start": 201.8, "end": 202.1 }, "target": { "start": 22.75, "duration": 0.5, "midi": 52 } },
+        { "id": "h6-07", "text": "气", "source": { "start": 202.1, "end": 202.36 }, "target": { "start": 23.25, "duration": 0.75, "midi": 48 } }
+      ]
+    }
+  ]
+}

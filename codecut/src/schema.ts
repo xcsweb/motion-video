@@ -339,6 +339,113 @@ export const AssetPreviewResultSchema = object({
 });
 Object.assign(AssetPreviewResultSchema, { $id: 'https://codecut.local/schemas/asset-preview-result-v1.json' });
 
+const VocalPathSchema = Type.String({
+  minLength: 1,
+  description: 'Absolute path, or a path relative to the autotune request JSON file.',
+});
+
+export const VocalAutotuneNoteSchema = object({
+  id: IdentifierSchema,
+  text: Type.String({ minLength: 1 }),
+  source: object({
+    start: Type.Number({ minimum: 0 }),
+    end: Type.Number({ exclusiveMinimum: 0 }),
+    vowelStart: Type.Optional(Type.Number({ minimum: 0, description: 'Optional manual override for the first stable voiced/vowel frame.' })),
+  }),
+  target: object({
+    start: Type.Number({ minimum: 0 }),
+    duration: Type.Number({ exclusiveMinimum: 0 }),
+    midi: Type.Integer({ minimum: 0, maximum: 127 }),
+    vowelOffset: Type.Optional(Type.Number({ minimum: 0, description: 'Seconds from the target syllable onset to its vowel; defaults to consonantLeadMs.' })),
+  }),
+});
+
+export const VocalAutotuneRequestSchema = object({
+  schemaVersion: Type.Literal(1),
+  source: VocalPathSchema,
+  output: VocalPathSchema,
+  report: Type.Optional(VocalPathSchema),
+  duration: Type.Optional(Type.Number({ exclusiveMinimum: 0, description: 'Output duration; defaults to the last target note end.' })),
+  sampleRate: Type.Optional(Type.Integer({ minimum: 8000, maximum: 192000, default: 48000 })),
+  framePeriodMs: Type.Optional(Type.Number({ minimum: 1, maximum: 20, default: 5 })),
+  f0Floor: Type.Optional(Type.Number({ exclusiveMinimum: 20, maximum: 1000, default: 50 })),
+  f0Ceil: Type.Optional(Type.Number({ exclusiveMinimum: 80, maximum: 4000, default: 1000 })),
+  portamentoMs: Type.Optional(Type.Number({ minimum: 0, maximum: 200, default: 35 })),
+  consonantLeadMs: Type.Optional(Type.Number({ minimum: 0, maximum: 200, default: 25 })),
+  vibrato: Type.Optional(object({
+    depthCents: Type.Number({ minimum: 0, maximum: 100, default: 0 }),
+    rateHz: Type.Number({ exclusiveMinimum: 0, maximum: 12, default: 5.2 }),
+    delayMs: Type.Number({ minimum: 0, maximum: 2000, default: 160 }),
+  })),
+  phrases: Type.Array(object({
+    id: IdentifierSchema,
+    notes: Type.Array(VocalAutotuneNoteSchema, { minItems: 1 }),
+  }), { minItems: 1 }),
+}, 'WORLD vocal resynthesis. Notes in a phrase must be target-contiguous; separate phrases may be separated by silence.');
+Object.assign(VocalAutotuneRequestSchema, {
+  $schema: JSON_SCHEMA_DIALECT,
+  $id: 'https://codecut.local/schemas/vocal-autotune-request-v1.json',
+});
+
+export const VocalAutotuneMeasurementSchema = object({
+  medianFrequencyHz: Type.Number({ exclusiveMinimum: 0 }),
+  centsError: Type.Number(),
+  octaveFoldedCentsError: Type.Number(),
+  voicedCoverage: Type.Number({ minimum: 0, maximum: 1 }),
+  voicedOnset: Type.Optional(Type.Number({ minimum: 0 })),
+  onsetErrorMs: Type.Optional(Type.Number()),
+  pitchConfidence: Type.Union([Type.Literal('high'), Type.Literal('low')]),
+  onsetConfidence: Type.Union([Type.Literal('high'), Type.Literal('low')]),
+});
+
+export const VocalAutotuneReportSchema = object({
+  schemaVersion: Type.Literal(1),
+  engine: Type.Literal('WORLD'),
+  source: Type.String({ minLength: 1 }),
+  output: Type.String({ minLength: 1 }),
+  generatedAt: Type.String({ format: 'date-time' }),
+  sampleRate: Type.Integer({ minimum: 1 }),
+  duration: Type.Number({ exclusiveMinimum: 0 }),
+  framePeriodMs: Type.Number({ exclusiveMinimum: 0 }),
+  dependencies: object({ numpy: Type.String(), scipy: Type.String(), pyworld: Type.String() }),
+  phrases: Type.Array(object({
+    id: IdentifierSchema,
+    start: Type.Number({ minimum: 0 }),
+    duration: Type.Number({ exclusiveMinimum: 0 }),
+    noteCount: Type.Integer({ minimum: 1 }),
+    voicedRatio: Type.Number({ minimum: 0, maximum: 1 }),
+  })),
+  notes: Type.Array(object({
+    id: IdentifierSchema,
+    phraseId: IdentifierSchema,
+    text: Type.String({ minLength: 1 }),
+    targetMidi: Type.Integer({ minimum: 0, maximum: 127 }),
+    targetFrequencyHz: Type.Number({ exclusiveMinimum: 0 }),
+    sourceVowelStart: Type.Number({ minimum: 0 }),
+    sourceVowelDetection: Type.Union([Type.Literal('provided'), Type.Literal('detected'), Type.Literal('fallback')]),
+    targetVowelStart: Type.Number({ minimum: 0 }),
+    measurement: Type.Optional(VocalAutotuneMeasurementSchema),
+    warnings: Type.Array(Type.String({ minLength: 1 })),
+  })),
+  summary: object({
+    noteCount: Type.Integer({ minimum: 1 }),
+    measuredNoteCount: Type.Integer({ minimum: 0 }),
+    reliablePitchNoteCount: Type.Integer({ minimum: 0 }),
+    reliableOnsetNoteCount: Type.Integer({ minimum: 0 }),
+    lowConfidenceNoteCount: Type.Integer({ minimum: 0 }),
+    warningCount: Type.Integer({ minimum: 0 }),
+    medianAbsoluteCentsError: Type.Optional(Type.Number({ minimum: 0 })),
+    p95AbsoluteCentsError: Type.Optional(Type.Number({ minimum: 0 })),
+    medianAbsoluteOnsetErrorMs: Type.Optional(Type.Number({ minimum: 0 })),
+    p95AbsoluteOnsetErrorMs: Type.Optional(Type.Number({ minimum: 0 })),
+  }),
+  warnings: Type.Array(Type.String({ minLength: 1 })),
+});
+Object.assign(VocalAutotuneReportSchema, {
+  $schema: JSON_SCHEMA_DIALECT,
+  $id: 'https://codecut.local/schemas/vocal-autotune-report-v1.json',
+});
+
 export const RenderRequestSchema = object({
   revision: Type.Optional(Type.Union([
     Type.Integer({ minimum: 0 }),
@@ -610,6 +717,9 @@ export type AssetPreviewRequest = Static<typeof AssetPreviewRequestSchema>;
 export type AssetAnalysisRequest = Static<typeof AssetAnalysisRequestSchema>;
 export type AssetAnalysisResult = Static<typeof AssetAnalysisResultSchema>;
 export type AssetPreviewResult = Static<typeof AssetPreviewResultSchema>;
+export type VocalAutotuneNote = Static<typeof VocalAutotuneNoteSchema>;
+export type VocalAutotuneRequest = Static<typeof VocalAutotuneRequestSchema>;
+export type VocalAutotuneReport = Static<typeof VocalAutotuneReportSchema>;
 export type RenderRequest = Static<typeof RenderRequestSchema>;
 export type TimelinePreviewRequestDocument = Static<typeof TimelinePreviewRequestSchema>;
 export type TimelinePreviewResultDocument = Static<typeof TimelinePreviewResultSchema>;

@@ -46,6 +46,7 @@ import {
 import { isTerminalJob, type JobRecord, type JobStatus } from './jobs-store.js';
 import { previewProject, type PreviewOptions, type TimelinePreviewRequest } from './preview.js';
 import { renderProject, type RenderOptions } from './render.js';
+import { autotuneVocal } from './vocal-autotune.js';
 import {
   AssetAnalysisRequestSchema,
   AssetAnalysisResultSchema,
@@ -65,6 +66,8 @@ import {
   RevisionSchema,
   TimelinePreviewRequestSchema,
   TimelinePreviewResultSchema,
+  VocalAutotuneReportSchema,
+  VocalAutotuneRequestSchema,
   type AssetAnalysisRequest,
   type AssetKind,
   type AssetPreviewRequest,
@@ -86,6 +89,7 @@ Usage:
   codecut asset thumbnail ASSET_ID [--at SECONDS] [--width N] [--height N] [--output PATH] [--force] [--detach] [--json]
   codecut asset sheet ASSET_ID [--start SECONDS] [--end SECONDS] [--interval SECONDS] [--columns N] [--rows N] [--width N] [--height N] [--output PATH] [--force] [--detach] [--json]
   codecut asset analyze scenes|silence ASSET_ID [--start SECONDS] [--end SECONDS] [--threshold RATIO|--noise-db DB --minimum-duration SECONDS] [--detach] [--json]
+  codecut vocal autotune REQUEST_JSON [--output PATH] [--report PATH] [--python PATH] [--force] [--json]
   codecut edit apply OPERATIONS_JSON|- [--project PATH] [--dry-run] [--summary TEXT] [--json]
   codecut edit apply --operations PATH [--project PATH] [--dry-run] [--summary TEXT] [--json]
   codecut edit apply --operations-json JSON [--project PATH] [--dry-run] [--summary TEXT] [--json]
@@ -121,7 +125,8 @@ Options:
   --json          Emit machine-readable JSON; logs --follow emits one JSON object per line
   --verbose       Write command/stage details to stderr without changing JSON stdout
   --debug         Include internal details and error stacks on stderr (implies --verbose)
-  --force         Replace an existing project.json, preview, or rendered output
+  --force         Replace an existing project.json, preview, rendered output, or autotune output/report
+  --python PATH   Python 3 executable for vocal autotune (or CODECUT_AUTOTUNE_PYTHON)
   --help          Show this help
   --version       Show the CLI version
 `;
@@ -1223,6 +1228,52 @@ async function executeDiagnose(args: string[]): Promise<CommandResult> {
   };
 }
 
+async function executeVocal(args: string[]): Promise<CommandResult> {
+  const action = args[0];
+  if (action !== 'autotune') throw usageError('Missing or unknown vocal action: autotune', 'vocal');
+  let requestPath: string | undefined;
+  let output: string | undefined;
+  let report: string | undefined;
+  let python: string | undefined;
+  let force = false;
+  for (let index = 1; index < args.length; index += 1) {
+    const argument = args[index];
+    if (argument === undefined) continue;
+    if (argument === '--force') {
+      force = true;
+      continue;
+    }
+    if (!argument.startsWith('-')) {
+      if (requestPath !== undefined) throw usageError('Only one autotune request JSON path is allowed', 'vocal.autotune');
+      requestPath = argument;
+      continue;
+    }
+    const separator = argument.indexOf('=');
+    const option = separator < 0 ? argument : argument.slice(0, separator);
+    const value = separator < 0 ? optionValue(args, index, option) : argument.slice(separator + 1);
+    if (separator < 0) index += 1;
+    if (!value) throw usageError(`${option} requires a value`, 'vocal.autotune');
+    if (option === '--output') output = value;
+    else if (option === '--report') report = value;
+    else if (option === '--python') python = value;
+    else throw usageError(`Unknown option for vocal autotune: ${option}`, 'vocal.autotune');
+  }
+  if (!requestPath) throw usageError('vocal autotune requires REQUEST_JSON', 'vocal.autotune');
+  const result = await autotuneVocal({
+    requestPath, force,
+    ...(output === undefined ? {} : { output }),
+    ...(report === undefined ? {} : { report }),
+    ...(python === undefined ? {} : { python }),
+  });
+  const summary = result.report.summary;
+  const pitch = summary.medianAbsoluteCentsError === undefined ? 'n/a' : `${summary.medianAbsoluteCentsError.toFixed(1)} cents`;
+  return {
+    command: 'vocal.autotune',
+    data: { ...result },
+    text: `Autotuned vocals: ${result.outputPath}\nReport: ${result.reportPath}\nNotes: ${summary.noteCount}; reliable pitch: ${summary.reliablePitchNoteCount}; median pitch error: ${pitch}; warnings: ${summary.warningCount}\n`,
+  };
+}
+
 async function executeUi(args: string[]): Promise<CommandResult> {
   if (!process.stdin.isTTY || !process.stdout.isTTY) {
     throw usageError('codecut ui requires an interactive TTY; use codecut jobs list --json and codecut logs --json instead', 'ui');
@@ -1251,6 +1302,7 @@ async function execute(args: string[]): Promise<CommandResult> {
   if (!command) throw usageError('Missing command; use --help for usage');
   if (command === 'project') return executeProject(rest);
   if (command === 'asset') return executeAsset(rest);
+  if (command === 'vocal') return executeVocal(rest);
   if (command === 'edit') return executeEdit(rest);
   if (command === 'history') return executeHistory(rest);
   if (command === 'render') return executeRender(rest);
@@ -1272,6 +1324,8 @@ async function execute(args: string[]): Promise<CommandResult> {
         assetPreviewResult: AssetPreviewResultSchema,
         assetAnalysisRequest: AssetAnalysisRequestSchema,
         assetAnalysisResult: AssetAnalysisResultSchema,
+        vocalAutotuneRequest: VocalAutotuneRequestSchema,
+        vocalAutotuneReport: VocalAutotuneReportSchema,
         editOperation: EditOperationSchema,
         doctorResult: DoctorResultSchema,
         jobLogEntry: JobLogEntrySchema,

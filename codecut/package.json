@@ -11,7 +11,7 @@
     "node": ">=22"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json && node -e \"require('node:fs').chmodSync('dist/cli.js', 0o755)\"",
+    "build": "tsc -p tsconfig.json && node -e \"const fs=require('node:fs');fs.mkdirSync('dist/workers',{recursive:true});fs.copyFileSync('src/workers/vocal_autotune.py','dist/workers/vocal_autotune.py');fs.chmodSync('dist/cli.js',0o755)\"", 
     "test": "npm run build && node --test test/*.test.js"
   },
   "dependencies": {
