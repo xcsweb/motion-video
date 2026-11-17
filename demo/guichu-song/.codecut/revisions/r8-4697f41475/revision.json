@@ -1,0 +1,44 @@
+{
+  "id": "r8-4697f41475",
+  "parentId": "r7-d6c1f8f019",
+  "projectRevision": 8,
+  "createdAt": "2026-11-17T06:57:58.080Z",
+  "summary": "使用连续整句合成的平滑人声并同步伴奏",
+  "operations": [
+    {
+      "type": "removeClip",
+      "clipId": "song-music"
+    },
+    {
+      "type": "removeClip",
+      "clipId": "song-vocals"
+    },
+    {
+      "type": "addClip",
+      "trackId": "a1",
+      "clip": {
+        "id": "song-music",
+        "type": "audio",
+        "assetId": "song-music-smooth",
+        "start": 0,
+        "duration": 48,
+        "sourceStart": 0,
+        "volume": 0.45
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "a2",
+      "clip": {
+        "id": "song-vocals",
+        "type": "audio",
+        "assetId": "song-vocals-smooth",
+        "start": 0,
+        "duration": 48,
+        "sourceStart": 0,
+        "volume": 0.82
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r8-4697f41475/project.json"
+}

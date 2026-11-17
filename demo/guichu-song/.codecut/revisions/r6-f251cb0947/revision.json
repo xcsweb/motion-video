@@ -1,0 +1,40 @@
+{
+  "id": "r6-f251cb0947",
+  "parentId": "r5-73df3c2538",
+  "projectRevision": 6,
+  "createdAt": "2026-11-17T06:57:42.506Z",
+  "summary": "Add asset song-music-smooth",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "song-music-smooth",
+        "kind": "audio",
+        "path": "../../.tmp-guichu/song-instrumental-smooth.wav",
+        "metadata": {
+          "probedAt": "2026-11-17T06:57:42.493Z",
+          "fingerprint": {
+            "size": 9216078,
+            "mtimeMs": 1794898642896.4758
+          },
+          "duration": 48,
+          "size": 9216078,
+          "formatName": "wav",
+          "bitRate": 1536013,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "audio",
+              "codecName": "pcm_s16le",
+              "sampleRate": 48000,
+              "channels": 2,
+              "duration": 48,
+              "bitRate": 1536000
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r6-f251cb0947/project.json"
+}

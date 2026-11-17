@@ -1,0 +1,40 @@
+{
+  "id": "r7-d6c1f8f019",
+  "parentId": "r6-f251cb0947",
+  "projectRevision": 7,
+  "createdAt": "2026-11-17T06:57:43.426Z",
+  "summary": "Add asset song-vocals-smooth",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "song-vocals-smooth",
+        "kind": "audio",
+        "path": "../../.tmp-guichu/song-vocals-smooth.wav",
+        "metadata": {
+          "probedAt": "2026-11-17T06:57:43.404Z",
+          "fingerprint": {
+            "size": 4607118,
+            "mtimeMs": 1794898590131.9087
+          },
+          "duration": 47.99,
+          "size": 4607118,
+          "formatName": "wav",
+          "bitRate": 768013,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "audio",
+              "codecName": "pcm_s16le",
+              "sampleRate": 48000,
+              "channels": 1,
+              "duration": 47.99,
+              "bitRate": 768000
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r7-d6c1f8f019/project.json"
+}

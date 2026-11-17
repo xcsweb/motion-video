@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "revision": 7,
+  "name": "白云黑土说唱 - 旋律歌曲版二创",
+  "assets": [
+    {
+      "id": "song-picture",
+      "kind": "video",
+      "path": "../../.tmp-guichu/song-picture.mp4",
+      "metadata": {
+        "probedAt": "2026-11-17T06:41:15.519Z",
+        "fingerprint": {
+          "size": 9803452,
+          "mtimeMs": 1794897648329.7366
+        },
+        "duration": 48,
+        "size": 9803452,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 1633908,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 960,
+            "height": 720,
+            "frameRate": 30,
+            "duration": 48,
+            "bitRate": 1631261
+          }
+        ]
+      }
+    },
+    {
+      "id": "song-music",
+      "kind": "audio",
+      "path": "../../.tmp-guichu/song-instrumental.wav",
+      "metadata": {
+        "probedAt": "2026-11-17T06:41:16.725Z",
+        "fingerprint": {
+          "size": 9216078,
+          "mtimeMs": 1794897451231.589
+        },
+        "duration": 48,
+        "size": 9216078,
+        "formatName": "wav",
+        "bitRate": 1536013,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "audio",
+            "codecName": "pcm_s16le",
+            "sampleRate": 48000,
+            "channels": 2,
+            "duration": 48,
+            "bitRate": 1536000
+          }
+        ]
+      }
+    },
+    {
+      "id": "song-vocals",
+      "kind": "audio",
+      "path": "../../.tmp-guichu/song-vocals.wav",
+      "metadata": {
+        "probedAt": "2026-11-17T06:41:17.736Z",
+        "fingerprint": {
+          "size": 4605198,
+          "mtimeMs": 1794897514992.284
+        },
+        "duration": 47.97,
+        "size": 4605198,
+        "formatName": "wav",
+        "bitRate": 768013,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "audio",
+            "codecName": "pcm_s16le",
+            "sampleRate": 48000,
+            "channels": 1,
+            "duration": 47.97,
+            "bitRate": 768000
+          }
+        ]
+      }
+    },
+    {
+      "id": "song-music-smooth",
+      "kind": "audio",
+      "path": "../../.tmp-guichu/song-instrumental-smooth.wav",
+      "metadata": {
+        "probedAt": "2026-11-17T06:57:42.493Z",
+        "fingerprint": {
+          "size": 9216078,
+          "mtimeMs": 1794898642896.4758
+        },
+        "duration": 48,
+        "size": 9216078,
+        "formatName": "wav",
+        "bitRate": 1536013,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "audio",
+            "codecName": "pcm_s16le",
+            "sampleRate": 48000,
+            "channels": 2,
+            "duration": 48,
+            "bitRate": 1536000
+          }
+        ]
+      }
+    },
+    {
+      "id": "song-vocals-smooth",
+      "kind": "audio",
+      "path": "../../.tmp-guichu/song-vocals-smooth.wav",
+      "metadata": {
+        "probedAt": "2026-11-17T06:57:43.404Z",
+        "fingerprint": {
+          "size": 4607118,
+          "mtimeMs": 1794898590131.9087
+        },
+        "duration": 47.99,
+        "size": 4607118,
+        "formatName": "wav",
+        "bitRate": 768013,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "audio",
+            "codecName": "pcm_s16le",
+            "sampleRate": 48000,
+            "channels": 1,
+            "duration": 47.99,
+            "bitRate": 768000
+          }
+        ]
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "id": "v1",
+      "kind": "video",
+      "name": "Video 1",
+      "clips": [
+        {
+          "id": "song-picture",
+          "type": "video",
+          "assetId": "song-picture",
+          "start": 0,
+          "duration": 48,
+          "sourceStart": 0,
+          "volume": 0
+        }
+      ]
+    },
+    {
+      "id": "v2",
+      "kind": "video",
+      "name": "Video 2",
+      "clips": []
+    },
+    {
+      "id": "a1",
+      "kind": "audio",
+      "name": "Audio 1",
+      "clips": [
+        {
+          "id": "song-music",
+          "type": "audio",
+          "assetId": "song-music",
+          "start": 0,
+          "duration": 48,
+          "sourceStart": 0,
+          "volume": 0.5
+        }
+      ]
+    },
+    {
+      "id": "a2",
+      "kind": "audio",
+      "name": "Audio 2",
+      "clips": [
+        {
+          "id": "song-vocals",
+          "type": "audio",
+          "assetId": "song-vocals",
+          "start": 0,
+          "duration": 48,
+          "sourceStart": 0,
+          "volume": 0.76
+        }
+      ]
+    }
+  ],
+  "output": {
+    "path": "guichu-song.mp4",
+    "format": "mp4",
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "width": 960,
+    "height": 720,
+    "frameRate": 30,
+    "pixelFormat": "yuv420p",
+    "audioSampleRate": 48000,
+    "audioChannels": 2
+  }
+}
