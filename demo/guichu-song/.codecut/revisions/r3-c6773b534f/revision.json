@@ -1,0 +1,40 @@
+{
+  "id": "r3-c6773b534f",
+  "parentId": "r2-89babf63e7",
+  "projectRevision": 3,
+  "createdAt": "2026-11-17T06:41:17.746Z",
+  "summary": "Add asset song-vocals",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "song-vocals",
+        "kind": "audio",
+        "path": "../../.tmp-guichu/song-vocals.wav",
+        "metadata": {
+          "probedAt": "2026-11-17T06:41:17.736Z",
+          "fingerprint": {
+            "size": 4605198,
+            "mtimeMs": 1794897514992.284
+          },
+          "duration": 47.97,
+          "size": 4605198,
+          "formatName": "wav",
+          "bitRate": 768013,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "audio",
+              "codecName": "pcm_s16le",
+              "sampleRate": 48000,
+              "channels": 1,
+              "duration": 47.97,
+              "bitRate": 768000
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r3-c6773b534f/project.json"
+}

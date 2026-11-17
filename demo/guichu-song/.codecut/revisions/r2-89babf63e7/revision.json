@@ -1,0 +1,40 @@
+{
+  "id": "r2-89babf63e7",
+  "parentId": "r1-a78d55d202",
+  "projectRevision": 2,
+  "createdAt": "2026-11-17T06:41:16.739Z",
+  "summary": "Add asset song-music",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "song-music",
+        "kind": "audio",
+        "path": "../../.tmp-guichu/song-instrumental.wav",
+        "metadata": {
+          "probedAt": "2026-11-17T06:41:16.725Z",
+          "fingerprint": {
+            "size": 9216078,
+            "mtimeMs": 1794897451231.589
+          },
+          "duration": 48,
+          "size": 9216078,
+          "formatName": "wav",
+          "bitRate": 1536013,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "audio",
+              "codecName": "pcm_s16le",
+              "sampleRate": 48000,
+              "channels": 2,
+              "duration": 48,
+              "bitRate": 1536000
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r2-89babf63e7/project.json"
+}

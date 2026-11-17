@@ -1,0 +1,49 @@
+{
+  "id": "r4-3455041884",
+  "parentId": "r3-c6773b534f",
+  "projectRevision": 4,
+  "createdAt": "2026-11-17T06:41:56.031Z",
+  "summary": "Build 48-second melodic song remix",
+  "operations": [
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "song-picture",
+        "type": "video",
+        "assetId": "song-picture",
+        "start": 0,
+        "duration": 48,
+        "sourceStart": 0,
+        "volume": 0
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "a1",
+      "clip": {
+        "id": "song-music",
+        "type": "audio",
+        "assetId": "song-music",
+        "start": 0,
+        "duration": 48,
+        "sourceStart": 0,
+        "volume": 0.62
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "a2",
+      "clip": {
+        "id": "song-vocals",
+        "type": "audio",
+        "assetId": "song-vocals",
+        "start": 0,
+        "duration": 48,
+        "sourceStart": 0,
+        "volume": 0.95
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r4-3455041884/project.json"
+}

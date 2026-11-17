@@ -1,0 +1,24 @@
+{
+  "id": "r5-73df3c2538",
+  "parentId": "r4-3455041884",
+  "projectRevision": 5,
+  "createdAt": "2026-11-17T06:45:51.687Z",
+  "summary": "降低歌曲版混音峰值并保留安全余量",
+  "operations": [
+    {
+      "type": "setClipParams",
+      "clipId": "song-music",
+      "params": {
+        "volume": 0.5
+      }
+    },
+    {
+      "type": "setClipParams",
+      "clipId": "song-vocals",
+      "params": {
+        "volume": 0.76
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r5-73df3c2538/project.json"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "r1-a78d55d202",
+  "projectRevision": 1,
+  "createdAt": "2026-11-17T06:41:15.529Z",
+  "summary": "Add asset song-picture",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "song-picture",
+        "kind": "video",
+        "path": "../../.tmp-guichu/song-picture.mp4",
+        "metadata": {
+          "probedAt": "2026-11-17T06:41:15.519Z",
+          "fingerprint": {
+            "size": 9803452,
+            "mtimeMs": 1794897648329.7366
+          },
+          "duration": 48,
+          "size": 9803452,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 1633908,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 960,
+              "height": 720,
+              "frameRate": 30,
+              "duration": 48,
+              "bitRate": 1631261
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r1-a78d55d202/project.json"
+}

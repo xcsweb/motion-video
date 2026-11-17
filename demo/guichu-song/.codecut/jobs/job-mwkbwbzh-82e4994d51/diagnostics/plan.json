@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "revision": 5,
+  "command": "ffmpeg",
+  "durationSeconds": 48,
+  "inputs": [
+    {
+      "index": 0,
+      "assetId": "song-picture",
+      "kind": "video",
+      "path": "/workspace/.tmp-guichu/song-picture.mp4",
+      "fingerprint": {
+        "size": 9803452,
+        "mtimeMs": 1794897648329.7366
+      },
+      "hasVideo": true,
+      "hasAudio": false,
+      "clips": [
+        "song-picture"
+      ]
+    },
+    {
+      "index": 1,
+      "assetId": "song-music",
+      "kind": "audio",
+      "path": "/workspace/.tmp-guichu/song-instrumental.wav",
+      "fingerprint": {
+        "size": 9216078,
+        "mtimeMs": 1794897451231.589
+      },
+      "hasVideo": false,
+      "hasAudio": true,
+      "clips": [
+        "song-music"
+      ]
+    },
+    {
+      "index": 2,
+      "assetId": "song-vocals",
+      "kind": "audio",
+      "path": "/workspace/.tmp-guichu/song-vocals.wav",
+      "fingerprint": {
+        "size": 4605198,
+        "mtimeMs": 1794897514992.284
+      },
+      "hasVideo": false,
+      "hasAudio": true,
+      "clips": [
+        "song-vocals"
+      ]
+    }
+  ],
+  "args": [
+    "-hide_banner",
+    "-nostdin",
+    "-progress",
+    "pipe:1",
+    "-nostats",
+    "-i",
+    "/workspace/.tmp-guichu/song-picture.mp4",
+    "-i",
+    "/workspace/.tmp-guichu/song-instrumental.wav",
+    "-i",
+    "/workspace/.tmp-guichu/song-vocals.wav",
+    "-filter_complex_script",
+    "{jobDirectory}/diagnostics/filter_complex.txt",
+    "-map",
+    "[vout]",
+    "-map",
+    "[aout]",
+    "-c:v",
+    "libx264",
+    "-preset",
+    "veryfast",
+    "-crf",
+    "18",
+    "-pix_fmt",
+    "yuv420p",
+    "-r",
+    "30",
+    "-video_track_timescale",
+    "90000",
+    "-c:a",
+    "aac",
+    "-b:a",
+    "192k",
+    "-ar",
+    "48000",
+    "-ac",
+    "2",
+    "-movflags",
+    "+faststart",
+    "-t",
+    "48",
+    "-f",
+    "mp4",
+    "-y",
+    "{output}"
+  ],
+  "filter_graph": "[0:v:0]trim=start=0:end=48,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=48,setpts=PTS-STARTPTS[cc_clip_0];\ncolor=c=black@0.0:s=960x720:r=30:d=48,format=rgba,setpts=PTS-STARTPTS[cc_transparent_1];\n[cc_transparent_1][cc_clip_0]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=48,setpts=PTS-STARTPTS[cc_positioned_2];\ncolor=c=black:s=960x720:r=30:d=48,format=rgba,setpts=PTS-STARTPTS[cc_black_3];\n[cc_black_3][cc_positioned_2]overlay=x=0:y=0:eof_action=pass:repeatlast=0:format=auto,setpts=PTS-STARTPTS[cc_composite_4];\n[cc_composite_4]fps=30,trim=duration=48,format=yuv420p,setpts=PTS-STARTPTS[vout];\n[1:a:0]atrim=start=0:end=48,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0.5,apad=pad_dur=48,atrim=duration=48,adelay=delays=0:all=1,asetpts=PTS-STARTPTS[cc_audio_5];\n[2:a:0]atrim=start=0:end=48,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0.76,apad=pad_dur=48,atrim=duration=48,adelay=delays=0:all=1,asetpts=PTS-STARTPTS[cc_audio_6];\nanullsrc=r=48000:cl=stereo:d=48[cc_silence_7];\n[cc_silence_7][cc_audio_5][cc_audio_6]amix=inputs=3:duration=longest:dropout_transition=0:normalize=0,aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,atrim=duration=48,asetpts=PTS-STARTPTS[aout]\n",
+  "output": {
+    "path": "/workspace/demo/guichu-song/guichu-song.mp4",
+    "temporaryPath": "{output}",
+    "format": "mp4",
+    "overwrite": true
+  },
+  "media": {
+    "durationSeconds": 48,
+    "width": 960,
+    "height": 720,
+    "frameRate": 30,
+    "pixelFormat": "yuv420p",
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "audioSampleRate": 48000,
+    "audioChannels": 2
+  },
+  "warnings": [],
+  "textFiles": []
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "currentId": "r5-73df3c2538",
+  "baseSnapshotPath": ".codecut/revisions/base.json",
+  "undoStack": [
+    null,
+    "r1-a78d55d202",
+    "r2-89babf63e7",
+    "r3-c6773b534f",
+    "r4-3455041884"
+  ],
+  "redoStack": [],
+  "revisionIds": [
+    "r1-a78d55d202",
+    "r2-89babf63e7",
+    "r3-c6773b534f",
+    "r4-3455041884",
+    "r5-73df3c2538"
+  ]
+}
