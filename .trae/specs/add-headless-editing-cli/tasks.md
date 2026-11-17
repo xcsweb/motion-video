@@ -4,7 +4,7 @@
   - [ ] SubTask 1.1: 建立 Node.js 22+、TypeScript、CLI 入口和 Node 内置测试结构，不改变旧 Python 工程。
   - [ ] SubTask 1.2: 实现 `project init/show/validate`、版本化 `project.json`、相对路径和稳定错误模型。
   - [ ] SubTask 1.3: 定义多轨、镜头、文本、参数、输出、任务和修订的单一 Schema 来源。
-  - [ ] SubTask 1.4: 实现 `schema`、`capabilities`、全命令 `--json`、退出码及 stdout/stderr 隔离。
+  - [ ] SubTask 1.4: 实现 `schema`、`capabilities`、所有非交互命令 `--json`、退出码及 stdout/stderr 隔离。
   - [ ] SubTask 1.5: 为工程解析、Schema、CLI 输出和错误码添加基础测试。
 
 - [ ] Task 2: 实现 Execa 异步子进程与持久化 job 运行时，先解决长任务、并发和异常生命周期。
@@ -45,11 +45,11 @@
   - [ ] SubTask 7.3: 实现保留完整音频的低分辨率代理 MP4。
   - [ ] SubTask 7.4: 对同一工程比较预览与正式渲染代表帧，验证字幕和跨轨合成一致。
 
-- [ ] Task 8: 实现排错命令和 Vue + Vite 本地诊断面板，使失败可定位而不是只返回“渲染失败”。
+- [ ] Task 8: 实现排错命令和 Vue TUI 终端诊断仪表盘，使失败可定位而不是只返回“渲染失败”。
   - [ ] SubTask 8.1: 实现 `doctor`、`logs`、`diagnose`、`--verbose`、`--debug` 和脱敏诊断目录。
-  - [ ] SubTask 8.2: 实现展示 jobs、进度、日志、诊断文件、素材/时间线预览和修订差异的本地只读视图。
-  - [ ] SubTask 8.3: 通过同一核心服务实现面板取消/重试，确保不在浏览器复制编辑或渲染逻辑。
-  - [ ] SubTask 8.4: 验证 CLI 与面板状态一致、默认仅本机监听，以及 CI 无面板时全部功能可用。
+  - [ ] SubTask 8.2: 使用 Vue TUI 稳定 CLI runtime 和基础组件实现 jobs、进度、诊断文件位置、预览文件位置及修订差异视图，并处理 TTY、resize 和终端清理。
+  - [ ] SubTask 8.3: 将实验性 `TLogView`/append-only log store 隔离在有界日志适配器中，保留普通 `logs --follow` 后备路径；取消/重试统一调用核心任务服务。
+  - [ ] SubTask 8.4: 用 headless terminal 测试验证 TUI/CLI 状态一致、键盘操作和日志洪峰；验证非 TTY 明确报错、CI 无 TUI 全功能可用、退出观察界面不取消 detached job。
 
 - [ ] Task 9: 提供从空工程到成品的完整示例和离线端到端测试。
   - [ ] SubTask 9.1: 新增使用 `media/railgun_omr_v4_preview.mp4` 的示例工程及可重放 CLI 操作序列。
@@ -66,6 +66,6 @@
 - Task 1 是所有任务的前置；Task 2 依赖 Task 1。
 - Task 3 依赖 Task 2；Task 4、Task 5 可在 Task 1 后并行，并通过同一项目写锁与修订接口集成。
 - Task 6 依赖 Task 2、Task 3、Task 4；Task 7 依赖 Task 6。
-- Task 8 的 doctor/logs/diagnose 可在 Task 2 后开始，完整面板集成依赖 Task 3、Task 5、Task 6、Task 7。
+- Task 8 的 doctor/logs/diagnose 可在 Task 2 后开始，完整 TUI 集成依赖 Task 3、Task 5、Task 6、Task 7。
 - Task 9 依赖 Task 2 至 Task 8 的集成功能；各模块必须先完成自己的局部测试。
 - Task 10 依赖 Task 9，任何失败检查项都必须先修复再复验。

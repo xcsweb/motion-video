@@ -4,7 +4,7 @@
 
 当前项目已经证明“代码时间线 + FFmpeg”可以剪辑普通视频，但示例仍把素材和镜头写死。下一步应做一套 **AI 能完整操作、也能自行排错的本地剪辑工具**：AI 可以认识素材、修改工程、检查画面、追踪异步任务、定位失败、撤销错误并导出成片，全程不需要人替它点剪辑界面。
 
-技术选择是“别人的成熟内核 + 我们的剪辑工程与自动化层”：FFmpeg / ffprobe 负责媒体处理；Node.js + TypeScript 负责 CLI、异步任务、工程状态和诊断；Vue + Vite 只负责可选的本地诊断面板。范围不按开发复杂度裁掉功能，而按**是否给 AI 操作或问题定位带来实际价值**划分。
+技术选择是“别人的成熟内核 + 我们的剪辑工程与自动化层”：FFmpeg / ffprobe 负责媒体处理；Node.js + TypeScript 负责 CLI、异步任务、工程状态和诊断；Vue TUI 只负责可选的本地终端诊断仪表盘。范围不按开发复杂度裁掉功能，而按**是否给 AI 操作或问题定位带来实际价值**划分。
 
 ## What Changes
 
@@ -17,7 +17,7 @@
 - 新增无界面预览：单帧 PNG、带时间码联系表、低码率可播放代理视频，预览与正式渲染共用时间线语义。
 - 新增异步任务系统：有界并发、前台等待或后台执行、进度、超时、取消、崩溃恢复和持久化任务记录。
 - 新增排错系统：`doctor`、`jobs`、`logs`、`diagnose`、详细错误码、诊断包和可重放 FFmpeg 参数/滤镜图。
-- 新增可选 `codecut ui` 本地诊断面板，展示任务、日志、进度、预览和修订差异；它不是第二套剪辑器。
+- 新增可选 `codecut ui` 终端诊断仪表盘，展示任务、日志、进度、预览文件位置和修订差异；它不是第二套剪辑器，也不是 AI 必须使用的接口。
 - 新增 AI 自发现能力：JSON Schema、能力清单、统一 `--json` 结果和稳定退出码。
 - 提供使用仓库现有素材的完整示例，以及覆盖异步与异常路径的离线端到端测试。
 - 保留现有 Python v1、v4 和 20 秒示例的行为，不重写旧工程。
@@ -35,7 +35,7 @@
 | 工程历史、差异、撤销、重做 | AI 可以尝试并恢复，不需要 GUI 撤销按钮。 |
 | 异步任务与取消 | 长渲染和批量素材分析不必阻塞其他工作，卡死任务可发现、可终止。 |
 | 结构化日志与诊断包 | 失败时能定位到工程字段、操作、FFmpeg 阶段和原始 stderr，而不是只得到“失败”。 |
-| 本地诊断面板 | 人类可快速看进度、日志、预览和差异；AI 也可通过同一 API/CLI 获取信息。 |
+| 本地终端诊断仪表盘 | 人类可在终端集中看进度、日志、诊断位置和差异；AI 仍使用同一核心服务的 JSON/CLI，不依赖终端界面。 |
 | Schema 与 capabilities | AI 能自行发现字段、操作和转场，不依赖记忆或阅读全部源码。 |
 | 原子写入、锁与覆盖保护 | 避免并发编辑、失败渲染或错误操作破坏已有工程和成片。 |
 
@@ -43,7 +43,8 @@
 
 | 不做的能力 | 理由（不是开发复杂度） |
 | --- | --- |
-| 剪辑 GUI、鼠标拖拽和按钮式参数面板 | 它们不增加 AI 的剪辑能力；对应操作全部由结构化命令提供。诊断面板只用于观察与排错，不维护第二套剪辑语义。 |
+| 剪辑 GUI、鼠标拖拽和按钮式参数面板 | 它们不增加 AI 的剪辑能力；对应操作全部由结构化命令提供。终端诊断仪表盘只用于观察与排错，不维护第二套剪辑语义。 |
+| 独立的 Vue + Vite 浏览器诊断面板 | Vue TUI 已覆盖任务与日志排错，视觉检查由 PNG、联系表和代理 MP4 承担；重复增加浏览器入口不带来新的 AI 操作能力，也不是用户指定工具的必要用途。 |
 | 实时交互播放器内核 | AI 更需要确定性抽帧、联系表和可播放代理文件；代理视频仍保留人工播放能力。 |
 | 内置 LLM、视觉理解、语音转文字或生成式模型 | 当前 AI agent 已负责理解和决策；转写结果可通过 SRT/文本镜头输入，避免绑定模型、账号和网络。 |
 | 通用关键帧动画引擎 | 这是 MotionGit / 现有程序化页面的动画领域；本工具负责剪辑，可接入外部渲染好的动画素材。 |
@@ -65,16 +66,20 @@
 | 异常信息 | Python traceback、ExceptionGroup 对并发异常很有价值。[cite:2] | Execa 错误带命令、时长、退出状态、超时/取消标记和输出，并支持 verbose/custom logging。[cite:5] | Node 更贴合“外部媒体进程排错”这一主场景。 |
 | 异步上下文 | 可用 `contextvars` 等机制。 | `AsyncLocalStorage` 可跨异步调用保存 job/stage 上下文，但仍需处理上下文丢失风险。[cite:6] | Node 可用，关键事件仍显式携带 job ID，不只依赖隐式上下文。 |
 | 现有代码协同 | 当前 v1/v4 和图像算法主要是 Python。 | 新工具主要编排 FFmpeg，不依赖 NumPy/Pillow；必要时可把旧 Python 脚本作为外部任务调用。 | 旧 Python 保留，新 CLI 不为复用语言而绑定进程模型。 |
-| Schema 与诊断 UI | 可独立提供 JSON Schema 和 Web 服务。 | CLI、任务 API 和 Vue 面板可共享 TypeScript 类型、Schema 和错误模型。 | Node 减少 CLI 与诊断面板之间的重复定义。 |
+| Schema 与诊断 UI | 可独立提供 JSON Schema 和 Web 服务。 | CLI、任务核心和 Vue TUI 仪表盘可共享 TypeScript 类型、Schema 和错误模型。 | Node 减少 CLI 与终端诊断视图之间的重复定义。 |
 
 **决定：新工具采用 Node.js 22+、TypeScript、Execa、JSON Schema 校验和 Node 内置测试能力；FFmpeg 仍是唯一媒体内核。** CLI 参数解析、Schema 校验和日志实现保持小型、明确，不为技术栈再引入一套应用框架。现有 Python 工程不迁移。
 
-### 对 Vue CLI / Vite 的核实
+### 对微信文章与 Vue TUI 的核实
 
-- 用户记得的工具与 **Vue CLI 的 `vue ui`** 相符：官方文档明确说明它提供创建、开发和管理项目的图形界面，CLI 与 GUI 是同一系统的不同入口。[cite:7]
-- Vue CLI 官方目前处于 **Maintenance Mode**，新项目被建议使用 `create-vue` 和 Vite，因此不直接把 Vue CLI 作为本项目依赖。[cite:7][cite:8]
-- Vite 是现代前端开发服务器与构建工具，其 CLI 面向 `dev/build/preview`，不是通用媒体任务 CLI；但它适合构建我们的本地诊断面板。[cite:9][cite:10]
-- 借鉴的是 **“CLI 权威状态 + 可选可视化观察入口”**，不是照搬 Vue CLI，也不是把诊断面板变成另一套剪辑器。
+- 用户给出的文章是《Vue 终于杀进终端界！这个开源项目让 CLI 开发像写网页一样简单》，所指工具为 **Vue TUI**，包名 `@simon_he/vue-tui`，官方仓库为 `Simon-He95/vue-tui`，作者是 **Simon He**；它不是尤雨溪的 Vue CLI，也不是 Vite。[cite:7][cite:8][cite:13]
+- Vue TUI 是 Vue 3 终端 UI 工具包，同一组件模型可渲染到浏览器 DOM、真实 CLI stdout 和 headless 测试；发布包支持 Node.js `>=16.17`、Vue `>=3.3.0 <4`，与本项目 Node.js 22+ 选型兼容。本项目只采用 **真实终端 stdout + headless 测试**，不再设置 Vue + Vite 浏览器诊断面板；视觉检查仍由 PNG、联系表和代理 MP4 文件承担。[cite:8][cite:9][cite:13]
+- 可直接复用稳定的 `createTerminalApp()`、`createStdoutRenderer()`、`createStdinDriver()`、`installTerminalCleanup()` 以及布局、文本、列表、选择和对话框组件，减少终端绘制、输入、resize 和终端状态恢复代码。[cite:9][cite:10]
+- `TLogView` 与 `createAppendOnlyLogStore()` 能提供保留窗口、可见行渲染、搜索和日志跟随，适合 FFmpeg 长日志；但它们目前位于 `/experimental`，必须隔离在日志视图适配器中，锁定依赖版本并做契约测试，普通 `logs --follow` 始终作为稳定后备路径。[cite:11]
+- 官方 agent console 示例证明日志、工具状态、markdown、overlay 与 stdout runner 可以组合，但本项目不照搬对话式 agent 界面，只复用任务状态、日志和诊断展示能力。[cite:12]
+- Vue TUI 官方明确把 renderer 定义为输出层，**不负责应用状态、命令执行或数据模型**；终端 cleanup 也只负责恢复 cursor、mouse mode、alt-screen 等终端状态。因此它不能替代 Execa、job store、FFmpeg progress 解析、子进程取消/强杀、锁、历史或诊断包。[cite:10]
+
+**决定：Node.js 22+、TypeScript、Execa 与 FFmpeg 的核心选型不变；新增可选 Vue TUI 终端仪表盘。** AI 的权威接口仍是非交互 JSON/CLI；Vue TUI 只减少人类诊断界面的自研工作，不进入媒体处理和任务状态机。
 
 ## 异步、异常与排错设计
 
@@ -105,20 +110,21 @@
 - `diagnose JOB_ID` 生成诊断目录，包含环境版本、错误、参数数组、滤镜图、stderr、进度事件、相关工程修订和素材元数据；默认不包含原媒体，也不收集环境变量中的凭据。
 - 退出码稳定区分：成功、用法错误、工程校验失败、媒体/FFmpeg 失败、超时、取消和内部错误；JSON 错误另含 `code/stage/jobId/path/operationIndex/retryable/diagnostics`。
 
-### 可选本地诊断面板
+### 可选终端诊断仪表盘
 
-- `codecut ui` 使用 Vue + Vite 构建，默认只监听本机地址并输出访问 URL。
-- 面板展示 job 进度、阶段、日志、诊断文件、素材/时间线预览和修订差异，通过本地 API 读取与 CLI 相同的 job store 和工程状态。
-- 可提供取消、重试等明确动作，但所有动作都调用同一 CLI 核心服务；禁止在浏览器内另写一套编辑或渲染逻辑。
-- 无面板时全部功能仍可完成，CI 不启动浏览器或前端服务。
+- `codecut ui` 使用 `@simon_he/vue-tui/cli` 的 stdout renderer 和 Vue 组件构建，只在交互式 TTY 中启动，不启动浏览器或 Web 服务。
+- 仪表盘展示 job 进度、阶段、日志、诊断文件位置、素材/时间线预览文件位置和修订差异，通过同一核心服务读取 job store 与工程状态；PNG、联系表和 MP4 仍由对应预览命令生成，不依赖终端图形协议或 Vue TUI 的实验性视频组件。
+- 可提供取消、重试等明确动作，但所有动作都调用同一 CLI 核心服务；退出观察界面只恢复终端并关闭视图，不默认取消 detached job。
+- 高频日志通过隔离的 Vue TUI 日志适配器显示有界保留窗口；该适配器失败或实验 API 不兼容时，`jobs`、`logs --follow`、`diagnose` 和普通 CLI 仍完整可用。
+- 非 TTY 下执行 `codecut ui` 返回明确用法错误并提示使用 `jobs/logs --json`；CI 不启动 TUI 时全部剪辑与诊断功能仍可完成。
 
 ## Impact
 
 - Affected specs: 新增无界面素材库、多轨时间线、结构化编辑、工程历史、异步任务、诊断、预览、渲染和 AI 自发现能力。
-- Affected code: 新增 `codecut/`（Node/TypeScript CLI、核心、任务、诊断、Vue 面板）、`examples/headless_demo.json`、`tests/`。
+- Affected code: 新增 `codecut/`（Node/TypeScript CLI、核心、任务、诊断、Vue TUI 终端仪表盘）、`examples/headless_demo.json`、`tests/`。
 - Project data: 新工程目录包含权威 `project.json`、工具管理的修订/任务记录和可删除缓存；原素材默认只引用、不复制。
 - Existing code: `scripts/`、`v4/`、现有 MV 配置及成片保持原行为。
-- Runtime dependencies: Node.js 22+、npm 依赖、系统 FFmpeg / ffprobe 和可配置字体；旧 Python 工程依赖不变。
+- Runtime dependencies: Node.js 22+、npm 依赖、系统 FFmpeg / ffprobe 和可配置字体；Vue 3 与 `@simon_he/vue-tui` 仅用于可选 TUI；旧 Python 工程依赖不变。
 
 ## ADDED Requirements
 
@@ -252,23 +258,33 @@
 - **WHEN** 工具缺失、字体不可用、目录不可写或锁异常
 - **THEN** doctor 给出具体检查项和修复方向，不把环境问题误报为剪辑内容错误
 
-### Requirement: 本地诊断面板与 CLI 同源
+### Requirement: 终端诊断仪表盘与 CLI 同源
 
-系统 SHALL 提供可选 `codecut ui` 展示任务、日志、预览和修订差异；面板的所有读取和动作 SHALL 使用 CLI 同一核心状态与服务，不另建工程或渲染语义。
+系统 SHALL 提供基于 Vue TUI 的可选 `codecut ui`，展示任务、日志、诊断与预览文件位置和修订差异；仪表盘的所有读取和动作 SHALL 使用 CLI 同一核心状态与服务，不另建工程、任务或渲染语义。
 
-#### Scenario: CLI 与面板观察同一任务
+#### Scenario: CLI 与仪表盘观察同一任务
 
-- **WHEN** 用户启动后台渲染并同时打开面板
-- **THEN** 两边看到相同 job ID、进度、状态和日志，面板取消后 CLI 也能观察到取消结果
+- **WHEN** 用户启动后台渲染并同时打开 `codecut ui`
+- **THEN** 两边看到相同 job ID、进度、状态和日志，仪表盘取消后 CLI 也能观察到取消结果
 
-#### Scenario: 无浏览器自动化环境
+#### Scenario: 退出观察界面
 
-- **WHEN** CI 不启动面板，仅使用 CLI
-- **THEN** 所有剪辑、任务和诊断能力仍完整可用
+- **WHEN** 用户关闭正在观察 detached job 的仪表盘
+- **THEN** 终端状态被恢复，后台 job 继续运行，只有显式取消动作才进入任务终止流程
+
+#### Scenario: 非 TTY 或无界面自动化环境
+
+- **WHEN** CI 不启动仪表盘，仅使用 CLI，或在非 TTY 中误执行 `codecut ui`
+- **THEN** 前者所有剪辑、任务和诊断能力完整可用，后者返回明确用法错误并提示 JSON/普通日志命令
+
+#### Scenario: 实验性日志组件不可用
+
+- **WHEN** Vue TUI 实验性日志适配器初始化失败或版本契约不满足
+- **THEN** 普通 `logs --follow`、诊断包和任务控制仍可使用，核心任务与媒体处理不加载该适配器
 
 ### Requirement: 非交互自动化与文件安全
 
-所有命令 SHALL 支持非交互执行、稳定退出码和 `--json`；机器可读 stdout 不得混入 FFmpeg 日志，错误 SHALL 写入 stderr。工程和媒体输出 SHALL 原子写入；默认拒绝覆盖，显式 `--force` 才允许覆盖，失败 SHALL 保留旧目标并清理临时文件。
+除交互式 `codecut ui` 外，所有命令 SHALL 支持非交互执行、稳定退出码和 `--json`；机器可读 stdout 不得混入 FFmpeg 日志或 TUI 重绘，错误 SHALL 写入 stderr。`codecut ui` 在非 TTY 中 SHALL 返回明确用法错误。工程和媒体输出 SHALL 原子写入；默认拒绝覆盖，显式 `--force` 才允许覆盖，失败 SHALL 保留旧目标并清理临时文件。
 
 #### Scenario: 批量自动剪辑
 
@@ -282,7 +298,7 @@
 
 ### Requirement: 完整示例与离线端到端测试
 
-项目 SHALL 提供使用 `media/railgun_omr_v4_preview.mp4` 的示例，演示素材、编辑、多轨、历史、异步任务、诊断、三类预览和渲染。测试 SHALL 使用临时合成素材，覆盖并发、取消、超时、崩溃、日志洪峰、锁冲突及 UI/CLI 状态一致性，不依赖网络。
+项目 SHALL 提供使用 `media/railgun_omr_v4_preview.mp4` 的示例，演示素材、编辑、多轨、历史、异步任务、诊断、三类预览和渲染。测试 SHALL 使用临时合成素材，覆盖并发、取消、超时、崩溃、日志洪峰、锁冲突及 TUI/CLI 状态一致性；TUI 使用 headless terminal 测试，不依赖网络、浏览器或真实 TTY。
 
 #### Scenario: 从空工程到成片及故障复现
 
@@ -302,7 +318,7 @@
 
 ## REMOVED Requirements
 
-无。本次不删除现有功能；上一版对素材库、多轨、历史等能力的排除已撤回，本期新增异步与诊断能力。
+无现有功能被删除。上一版尚未实现的 Vue + Vite 浏览器诊断面板由 Vue TUI 终端仪表盘替代：终端已覆盖任务/日志排错，视觉检查继续由预览文件承担，AI 的 JSON/CLI 接口不依赖任一 UI。
 
 ## Sources
 
@@ -312,7 +328,10 @@
 - [cite:4] [Execa 官方文档：Termination](https://github.com/sindresorhus/execa/blob/main/docs/termination.md)
 - [cite:5] [Execa 官方文档：Debugging](https://github.com/sindresorhus/execa/blob/main/docs/debugging.md)
 - [cite:6] [Node.js 官方文档：Asynchronous context tracking](https://nodejs.org/api/async_context.html)
-- [cite:7] [Vue CLI 官方文档：Overview / vue ui / Maintenance Mode](https://cli.vuejs.org/guide/)
-- [cite:8] [Vue CLI 官方仓库：Status](https://github.com/vuejs/vue-cli)
-- [cite:9] [Vite 官方文档：Getting Started](https://vite.dev/guide/)
-- [cite:10] [Vite 官方文档：Command Line Interface](https://vite.dev/guide/cli.html)
+- [cite:7] [微信文章：Vue 终于杀进终端界！这个开源项目让 CLI 开发像写网页一样简单](https://mp.weixin.qq.com/s/K1sjrTrxYOcAoHWJcXUYxA)
+- [cite:8] [Vue TUI 官方仓库与 README](https://github.com/Simon-He95/vue-tui)
+- [cite:9] [Vue TUI 官方文档：Vue CLI UI Components](https://github.com/Simon-He95/vue-tui/blob/main/docs/guide/vue-cli-ui.md)
+- [cite:10] [Vue TUI 官方文档：CLI Stdout Renderer](https://github.com/Simon-He95/vue-tui/blob/main/docs/guide/cli-stdout-renderer.md)
+- [cite:11] [Vue TUI 官方文档：Terminal Log Viewer](https://github.com/Simon-He95/vue-tui/blob/main/docs/guide/terminal-log-viewer.md)
+- [cite:12] [Vue TUI 官方文档：Agent Console Example](https://github.com/Simon-He95/vue-tui/blob/main/docs/agent-console.md)
+- [cite:13] [npm Registry：`@simon_he/vue-tui` 发布包元数据](https://registry.npmjs.org/@simon_he%2Fvue-tui/latest)
