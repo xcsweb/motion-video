@@ -1,0 +1,29 @@
+{
+  "type": "sheet",
+  "outputPath": "/workspace/demo/challenge-cut/challenge-sheet.png",
+  "revision": 14,
+  "parameters": {
+    "type": "sheet",
+    "start": 0,
+    "end": 25.12,
+    "interval": 2.1,
+    "columns": 4,
+    "rows": 4,
+    "width": 320,
+    "height": 180,
+    "sampleTimes": [
+      0,
+      2.1,
+      4.2,
+      6.3,
+      8.4,
+      10.5,
+      12.6,
+      14.7,
+      16.8,
+      18.9,
+      21,
+      23.1
+    ]
+  }
+}

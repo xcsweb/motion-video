@@ -1,0 +1,29 @@
+{
+  "id": "r14-7ae4051a6b",
+  "parentId": "r13-0c33f17eeb",
+  "projectRevision": 14,
+  "createdAt": "2026-11-17T06:04:27.360Z",
+  "summary": "Add true reverse motion after freeze",
+  "operations": [
+    {
+      "type": "setClipParams",
+      "clipId": "time-freeze",
+      "params": {
+        "duration": 0.35
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "rewind-motion",
+        "type": "video",
+        "assetId": "rewind",
+        "start": 2.55,
+        "duration": 0.65,
+        "sourceStart": 0
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r14-7ae4051a6b/project.json"
+}

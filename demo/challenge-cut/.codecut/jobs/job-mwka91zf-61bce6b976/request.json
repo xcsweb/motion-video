@@ -1,0 +1,35 @@
+{
+  "kind": "asset.analyze",
+  "projectPath": "/workspace/demo/challenge-cut/project.json",
+  "process": {
+    "command": "ffmpeg",
+    "args": [
+      "-hide_banner",
+      "-nostdin",
+      "-progress",
+      "pipe:1",
+      "-nostats",
+      "-ss",
+      "0",
+      "-t",
+      "21.938583",
+      "-i",
+      "/workspace/.tmp-travel/16119.mp4",
+      "-an",
+      "-vf",
+      "select='gt(scene,0.25)',metadata=mode=print",
+      "-f",
+      "null",
+      "-"
+    ],
+    "progress": "ffmpeg",
+    "durationSeconds": 21.938583
+  },
+  "analysis": {
+    "type": "scenes",
+    "assetId": "poles",
+    "start": 0,
+    "end": 21.938583,
+    "threshold": 0.25
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": "r5-314455d684",
+  "parentId": "r4-d1a23f7fd3",
+  "projectRevision": 5,
+  "createdAt": "2026-11-17T05:59:20.970Z",
+  "summary": "Add asset summit",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "summit",
+        "kind": "video",
+        "path": "../../.tmp-travel/16118.mp4",
+        "metadata": {
+          "probedAt": "2026-11-17T05:59:20.958Z",
+          "fingerprint": {
+            "size": 4699744,
+            "mtimeMs": 1794894373697.676
+          },
+          "duration": 15.181833,
+          "size": 4699744,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 2476509,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1280,
+              "height": 720,
+              "frameRate": 23.976023976023978,
+              "duration": 15.181833,
+              "bitRate": 2473701
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r5-314455d684/project.json"
+}

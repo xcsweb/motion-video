@@ -1,0 +1,41 @@
+{
+  "id": "r2-eca0aa9fb2",
+  "parentId": "r1-8d4d421417",
+  "projectRevision": 2,
+  "createdAt": "2026-11-17T05:59:18.002Z",
+  "summary": "Add asset range",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "range",
+        "kind": "video",
+        "path": "../../.tmp-travel/14016.mp4",
+        "metadata": {
+          "probedAt": "2026-11-17T05:59:17.990Z",
+          "fingerprint": {
+            "size": 8931268,
+            "mtimeMs": 1794894374613.6863
+          },
+          "duration": 27.68,
+          "size": 8931268,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 2581291,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1280,
+              "height": 720,
+              "frameRate": 25,
+              "duration": 27.68,
+              "bitRate": 2578583
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r2-eca0aa9fb2/project.json"
+}

@@ -1,0 +1,36 @@
+[
+  { "type": "addTrack", "track": { "id": "a3", "kind": "audio", "name": "Foley", "clips": [] } },
+  { "type": "addTrack", "track": { "id": "a4", "kind": "audio", "name": "Transitions", "clips": [] } },
+
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "cold-summit", "type": "video", "assetId": "summit", "start": 0, "duration": 2.2, "sourceStart": 4.2 } },
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "time-freeze", "type": "image", "assetId": "freeze", "start": 2.2, "duration": 1 } },
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "flashback-aerial", "type": "video", "assetId": "aerial", "start": 3.2, "duration": 2.6, "sourceStart": 12 } },
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "flashback-range", "type": "video", "assetId": "range", "start": 5.8, "duration": 2.4, "sourceStart": 8 } },
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "split-snow", "type": "video", "assetId": "climb", "start": 8.2, "duration": 3.2, "sourceStart": 2, "scale": 0.5, "position": { "x": 0, "y": 180 } } },
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "accelerate-1", "type": "video", "assetId": "climb", "start": 11.4, "duration": 1.6, "sourceStart": 10 } },
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "accelerate-2", "type": "video", "assetId": "poles", "start": 13, "duration": 1.2, "sourceStart": 12, "speed": 1.3 } },
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "accelerate-3", "type": "video", "assetId": "summit", "start": 14.2, "duration": 0.9, "sourceStart": 1 } },
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "accelerate-4", "type": "video", "assetId": "climb", "start": 15.1, "duration": 0.7, "sourceStart": 6, "speed": 1.4 } },
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "accelerate-5", "type": "video", "assetId": "poles", "start": 15.8, "duration": 0.55, "sourceStart": 16, "speed": 1.5 } },
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "accelerate-6", "type": "video", "assetId": "summit", "start": 16.35, "duration": 0.45, "sourceStart": 5.8, "speed": 1.2 } },
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "impact-black", "type": "color", "color": "#000000", "start": 16.8, "duration": 0.12 } },
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "return-summit", "type": "video", "assetId": "summit", "start": 16.92, "duration": 5, "sourceStart": 6.4 } },
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "closing-aerial", "type": "video", "assetId": "aerial", "start": 21.12, "duration": 4, "sourceStart": 30, "transition": { "type": "xfade", "duration": 0.8, "name": "fade" } } },
+
+  { "type": "addClip", "trackId": "v2", "clip": { "id": "split-rock", "type": "video", "assetId": "poles", "start": 8.2, "duration": 3.2, "sourceStart": 4, "scale": 0.5, "position": { "x": 640, "y": 180 } } },
+  { "type": "addText", "trackId": "v2", "clip": { "id": "cold-title", "type": "text", "text": "THE END?", "start": 0.35, "duration": 1.5, "fontSize": 48, "color": "#151515" } },
+  { "type": "addText", "trackId": "v2", "clip": { "id": "freeze-title", "type": "text", "text": "REWIND", "start": 2.25, "duration": 0.85, "fontSize": 64, "color": "#151515" } },
+  { "type": "addText", "trackId": "v2", "clip": { "id": "flashback-title", "type": "text", "text": "BEFORE THE SUMMIT", "start": 3.55, "duration": 1.8, "fontSize": 42, "color": "#151515" } },
+  { "type": "addText", "trackId": "v2", "clip": { "id": "final-title", "type": "text", "text": "NO SHORTCUTS.", "start": 18, "duration": 2.4, "fontSize": 56, "color": "#151515" } },
+  { "type": "addText", "trackId": "v2", "clip": { "id": "closing-title", "type": "text", "text": "ONE STEP. AGAIN.", "start": 22, "duration": 2.5, "fontSize": 48, "color": "#151515" } },
+
+  { "type": "addClip", "trackId": "a1", "clip": { "id": "score", "type": "audio", "assetId": "score", "start": 3, "duration": 22.12, "sourceStart": 30, "volume": 0.5, "fadeIn": 0.8, "fadeOut": 2 } },
+  { "type": "addClip", "trackId": "a2", "clip": { "id": "mountain-wind", "type": "audio", "assetId": "wind", "start": 0, "duration": 25.12, "sourceStart": 0, "volume": 0.35, "fadeIn": 0.4, "fadeOut": 1.5 } },
+  { "type": "addClip", "trackId": "a3", "clip": { "id": "climb-footsteps", "type": "audio", "assetId": "crunch", "start": 8, "duration": 8.8, "sourceStart": 4, "volume": 0.22, "fadeIn": 0.5, "fadeOut": 0.5 } },
+  { "type": "addClip", "trackId": "a4", "clip": { "id": "cold-impact", "type": "audio", "assetId": "impact", "start": 0, "duration": 2, "sourceStart": 0, "volume": 0.18, "fadeOut": 0.8 } },
+  { "type": "addClip", "trackId": "a4", "clip": { "id": "freeze-whoosh", "type": "audio", "assetId": "whoosh", "start": 2, "duration": 1.2, "sourceStart": 0, "volume": 0.4 } },
+  { "type": "addClip", "trackId": "a4", "clip": { "id": "split-whoosh", "type": "audio", "assetId": "whoosh", "start": 8, "duration": 1, "sourceStart": 0, "volume": 0.25 } },
+  { "type": "addClip", "trackId": "a4", "clip": { "id": "acceleration-whoosh", "type": "audio", "assetId": "whoosh", "start": 11.2, "duration": 1, "sourceStart": 0, "volume": 0.25 } },
+  { "type": "addClip", "trackId": "a4", "clip": { "id": "return-impact", "type": "audio", "assetId": "impact", "start": 16.7, "duration": 0.8, "sourceStart": 1, "volume": 0.25, "fadeOut": 0.4 } },
+  { "type": "addClip", "trackId": "a4", "clip": { "id": "outro-whoosh", "type": "audio", "assetId": "whoosh", "start": 20.95, "duration": 1.2, "sourceStart": 0, "volume": 0.25 } }
+]

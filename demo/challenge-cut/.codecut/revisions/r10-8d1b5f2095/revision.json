@@ -1,0 +1,41 @@
+{
+  "id": "r10-8d1b5f2095",
+  "parentId": "r9-41dee0844a",
+  "projectRevision": 10,
+  "createdAt": "2026-11-17T05:59:25.747Z",
+  "summary": "Add asset whoosh",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "whoosh",
+        "kind": "audio",
+        "path": "../../.tmp-challenge/whoosh.mp3",
+        "metadata": {
+          "probedAt": "2026-11-17T05:59:25.736Z",
+          "fingerprint": {
+            "size": 44574,
+            "mtimeMs": 1794895110869.8154
+          },
+          "duration": 1.38449,
+          "size": 44574,
+          "formatName": "mp3",
+          "bitRate": 257561,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "audio",
+              "codecName": "mp3",
+              "sampleRate": 44100,
+              "channels": 2,
+              "channelLayout": "stereo",
+              "duration": 1.38449,
+              "bitRate": 257562
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r10-8d1b5f2095/project.json"
+}

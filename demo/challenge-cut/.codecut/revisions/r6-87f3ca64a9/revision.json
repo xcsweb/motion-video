@@ -1,0 +1,38 @@
+{
+  "id": "r6-87f3ca64a9",
+  "parentId": "r5-314455d684",
+  "projectRevision": 6,
+  "createdAt": "2026-11-17T05:59:21.998Z",
+  "summary": "Add asset freeze",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "freeze",
+        "kind": "image",
+        "path": "../../.tmp-challenge/summit-freeze.png",
+        "metadata": {
+          "probedAt": "2026-11-17T05:59:21.987Z",
+          "fingerprint": {
+            "size": 1155812,
+            "mtimeMs": 1794895111685.8245
+          },
+          "duration": 0,
+          "size": 1155812,
+          "formatName": "png_pipe",
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "png",
+              "width": 1280,
+              "height": 720,
+              "frameRate": 25
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r6-87f3ca64a9/project.json"
+}

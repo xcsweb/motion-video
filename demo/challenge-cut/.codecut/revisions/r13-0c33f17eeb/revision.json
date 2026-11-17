@@ -1,0 +1,41 @@
+{
+  "id": "r13-0c33f17eeb",
+  "parentId": "r12-1fb1b348c7",
+  "projectRevision": 13,
+  "createdAt": "2026-11-17T06:04:26.564Z",
+  "summary": "Add asset rewind",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "rewind",
+        "kind": "video",
+        "path": "../../.tmp-challenge/summit-reverse.mp4",
+        "metadata": {
+          "probedAt": "2026-11-17T06:04:26.545Z",
+          "fingerprint": {
+            "size": 1169133,
+            "mtimeMs": 1794895465341.729
+          },
+          "duration": 2.210542,
+          "size": 1169133,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 4231117,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1280,
+              "height": 720,
+              "frameRate": 23.976023976023978,
+              "duration": 2.210542,
+              "bitRate": 4225462
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r13-0c33f17eeb/project.json"
+}

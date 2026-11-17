@@ -1,0 +1,41 @@
+{
+  "id": "r9-41dee0844a",
+  "parentId": "r8-0ce8ed41b4",
+  "projectRevision": 9,
+  "createdAt": "2026-11-17T05:59:24.813Z",
+  "summary": "Add asset crunch",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "crunch",
+        "kind": "audio",
+        "path": "../../.tmp-challenge/crunch.mp3",
+        "metadata": {
+          "probedAt": "2026-11-17T05:59:24.802Z",
+          "fingerprint": {
+            "size": 769899,
+            "mtimeMs": 1794895110193.8079
+          },
+          "duration": 23.24898,
+          "size": 769899,
+          "formatName": "mp3",
+          "bitRate": 264923,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "audio",
+              "codecName": "mp3",
+              "sampleRate": 44100,
+              "channels": 2,
+              "channelLayout": "stereo",
+              "duration": 23.24898,
+              "bitRate": 264923
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r9-41dee0844a/project.json"
+}

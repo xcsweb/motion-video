@@ -1,0 +1,41 @@
+{
+  "id": "r8-0ce8ed41b4",
+  "parentId": "r7-eea56803de",
+  "projectRevision": 8,
+  "createdAt": "2026-11-17T05:59:23.901Z",
+  "summary": "Add asset wind",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "wind",
+        "kind": "audio",
+        "path": "../../.tmp-challenge/wind.mp3",
+        "metadata": {
+          "probedAt": "2026-11-17T05:59:23.886Z",
+          "fingerprint": {
+            "size": 995006,
+            "mtimeMs": 1794895109697.8025
+          },
+          "duration": 31.843265,
+          "size": 995006,
+          "formatName": "mp3",
+          "bitRate": 249975,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "audio",
+              "codecName": "mp3",
+              "sampleRate": 44100,
+              "channels": 2,
+              "channelLayout": "stereo",
+              "duration": 31.843265,
+              "bitRate": 249976
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r8-0ce8ed41b4/project.json"
+}

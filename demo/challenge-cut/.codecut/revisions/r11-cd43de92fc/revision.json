@@ -1,0 +1,41 @@
+{
+  "id": "r11-cd43de92fc",
+  "parentId": "r10-8d1b5f2095",
+  "projectRevision": 11,
+  "createdAt": "2026-11-17T05:59:26.677Z",
+  "summary": "Add asset impact",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "impact",
+        "kind": "audio",
+        "path": "../../.tmp-challenge/impact.mp3",
+        "metadata": {
+          "probedAt": "2026-11-17T05:59:26.666Z",
+          "fingerprint": {
+            "size": 225505,
+            "mtimeMs": 1794895111245.8196
+          },
+          "duration": 7.967347,
+          "size": 225505,
+          "formatName": "mp3",
+          "bitRate": 226429,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "audio",
+              "codecName": "mp3",
+              "sampleRate": 44100,
+              "channels": 2,
+              "channelLayout": "stereo",
+              "duration": 7.967347,
+              "bitRate": 222316
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r11-cd43de92fc/project.json"
+}

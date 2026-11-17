@@ -1,0 +1,11 @@
+{
+  "type": "frame",
+  "outputPath": "/workspace/demo/challenge-cut/split-check.png",
+  "revision": 12,
+  "parameters": {
+    "type": "frame",
+    "at": 9.5,
+    "width": 1280,
+    "height": 720
+  }
+}

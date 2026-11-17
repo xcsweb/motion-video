@@ -1,0 +1,35 @@
+{
+  "kind": "asset.analyze",
+  "projectPath": "/workspace/demo/challenge-cut/project.json",
+  "process": {
+    "command": "ffmpeg",
+    "args": [
+      "-hide_banner",
+      "-nostdin",
+      "-progress",
+      "pipe:1",
+      "-nostats",
+      "-ss",
+      "0",
+      "-t",
+      "16.76675",
+      "-i",
+      "/workspace/.tmp-travel/16120.mp4",
+      "-an",
+      "-vf",
+      "select='gt(scene,0.25)',metadata=mode=print",
+      "-f",
+      "null",
+      "-"
+    ],
+    "progress": "ffmpeg",
+    "durationSeconds": 16.76675
+  },
+  "analysis": {
+    "type": "scenes",
+    "assetId": "climb",
+    "start": 0,
+    "end": 16.76675,
+    "threshold": 0.25
+  }
+}

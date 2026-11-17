@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "name": "TIMEFOLD - A Mountain in 25 Seconds",
+  "assets": [
+    {
+      "id": "aerial",
+      "kind": "video",
+      "path": "../../.tmp-travel/16130.mp4",
+      "metadata": {
+        "probedAt": "2026-11-17T05:59:17.006Z",
+        "fingerprint": {
+          "size": 13064821,
+          "mtimeMs": 1794894366505.5967
+        },
+        "duration": 42.167125,
+        "size": 13064821,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 2478674,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1280,
+            "height": 720,
+            "frameRate": 23.976023976023978,
+            "duration": 42.167125,
+            "bitRate": 2476144
+          }
+        ]
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "id": "v1",
+      "kind": "video",
+      "name": "Video 1",
+      "clips": []
+    },
+    {
+      "id": "v2",
+      "kind": "video",
+      "name": "Video 2",
+      "clips": []
+    },
+    {
+      "id": "a1",
+      "kind": "audio",
+      "name": "Audio 1",
+      "clips": []
+    },
+    {
+      "id": "a2",
+      "kind": "audio",
+      "name": "Audio 2",
+      "clips": []
+    }
+  ],
+  "output": {
+    "path": "output.mp4",
+    "format": "mp4",
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "width": 1920,
+    "height": 1080,
+    "frameRate": 30,
+    "pixelFormat": "yuv420p",
+    "audioSampleRate": 48000,
+    "audioChannels": 2
+  }
+}

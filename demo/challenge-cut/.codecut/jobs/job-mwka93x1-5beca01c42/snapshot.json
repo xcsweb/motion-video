@@ -1,0 +1,434 @@
+{
+  "version": 1,
+  "createdAt": "2026-11-17T05:59:49.523Z",
+  "projectRevision": 11,
+  "project": {
+    "schemaVersion": 1,
+    "revision": 11,
+    "name": "TIMEFOLD - A Mountain in 25 Seconds",
+    "assets": [
+      {
+        "id": "aerial",
+        "kind": "video",
+        "path": "../../.tmp-travel/16130.mp4",
+        "metadata": {
+          "probedAt": "2026-11-17T05:59:17.006Z",
+          "fingerprint": {
+            "size": 13064821,
+            "mtimeMs": 1794894366505.5967
+          },
+          "duration": 42.167125,
+          "size": 13064821,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 2478674,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1280,
+              "height": 720,
+              "frameRate": 23.976023976023978,
+              "duration": 42.167125,
+              "bitRate": 2476144
+            }
+          ]
+        }
+      },
+      {
+        "id": "range",
+        "kind": "video",
+        "path": "../../.tmp-travel/14016.mp4",
+        "metadata": {
+          "probedAt": "2026-11-17T05:59:17.990Z",
+          "fingerprint": {
+            "size": 8931268,
+            "mtimeMs": 1794894374613.6863
+          },
+          "duration": 27.68,
+          "size": 8931268,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 2581291,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1280,
+              "height": 720,
+              "frameRate": 25,
+              "duration": 27.68,
+              "bitRate": 2578583
+            }
+          ]
+        }
+      },
+      {
+        "id": "climb",
+        "kind": "video",
+        "path": "../../.tmp-travel/16120.mp4",
+        "metadata": {
+          "probedAt": "2026-11-17T05:59:18.999Z",
+          "fingerprint": {
+            "size": 5418200,
+            "mtimeMs": 1794894370021.6355
+          },
+          "duration": 16.76675,
+          "size": 5418200,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 2585211,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1280,
+              "height": 720,
+              "frameRate": 23.976023976023978,
+              "duration": 16.76675,
+              "bitRate": 2582446
+            }
+          ]
+        }
+      },
+      {
+        "id": "poles",
+        "kind": "video",
+        "path": "../../.tmp-travel/16119.mp4",
+        "metadata": {
+          "probedAt": "2026-11-17T05:59:20.092Z",
+          "fingerprint": {
+            "size": 7611916,
+            "mtimeMs": 1794894371425.651
+          },
+          "duration": 21.938583,
+          "size": 7611916,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 2775718,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1280,
+              "height": 720,
+              "frameRate": 23.976023976023978,
+              "duration": 21.938583,
+              "bitRate": 2773046
+            }
+          ]
+        }
+      },
+      {
+        "id": "summit",
+        "kind": "video",
+        "path": "../../.tmp-travel/16118.mp4",
+        "metadata": {
+          "probedAt": "2026-11-17T05:59:20.958Z",
+          "fingerprint": {
+            "size": 4699744,
+            "mtimeMs": 1794894373697.676
+          },
+          "duration": 15.181833,
+          "size": 4699744,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 2476509,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1280,
+              "height": 720,
+              "frameRate": 23.976023976023978,
+              "duration": 15.181833,
+              "bitRate": 2473701
+            }
+          ]
+        }
+      },
+      {
+        "id": "freeze",
+        "kind": "image",
+        "path": "../../.tmp-challenge/summit-freeze.png",
+        "metadata": {
+          "probedAt": "2026-11-17T05:59:21.987Z",
+          "fingerprint": {
+            "size": 1155812,
+            "mtimeMs": 1794895111685.8245
+          },
+          "duration": 0,
+          "size": 1155812,
+          "formatName": "png_pipe",
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "png",
+              "width": 1280,
+              "height": 720,
+              "frameRate": 25
+            }
+          ]
+        }
+      },
+      {
+        "id": "score",
+        "kind": "audio",
+        "path": "../../.tmp-travel/vastness.mp3",
+        "metadata": {
+          "probedAt": "2026-11-17T05:59:22.936Z",
+          "fingerprint": {
+            "size": 7356125,
+            "mtimeMs": 1794894427570.271
+          },
+          "duration": 229.851429,
+          "size": 7356125,
+          "formatName": "mp3",
+          "bitRate": 256030,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "audio",
+              "codecName": "mp3",
+              "sampleRate": 44100,
+              "channels": 2,
+              "channelLayout": "stereo",
+              "duration": 229.851429,
+              "bitRate": 256000
+            }
+          ]
+        }
+      },
+      {
+        "id": "wind",
+        "kind": "audio",
+        "path": "../../.tmp-challenge/wind.mp3",
+        "metadata": {
+          "probedAt": "2026-11-17T05:59:23.886Z",
+          "fingerprint": {
+            "size": 995006,
+            "mtimeMs": 1794895109697.8025
+          },
+          "duration": 31.843265,
+          "size": 995006,
+          "formatName": "mp3",
+          "bitRate": 249975,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "audio",
+              "codecName": "mp3",
+              "sampleRate": 44100,
+              "channels": 2,
+              "channelLayout": "stereo",
+              "duration": 31.843265,
+              "bitRate": 249976
+            }
+          ]
+        }
+      },
+      {
+        "id": "crunch",
+        "kind": "audio",
+        "path": "../../.tmp-challenge/crunch.mp3",
+        "metadata": {
+          "probedAt": "2026-11-17T05:59:24.802Z",
+          "fingerprint": {
+            "size": 769899,
+            "mtimeMs": 1794895110193.8079
+          },
+          "duration": 23.24898,
+          "size": 769899,
+          "formatName": "mp3",
+          "bitRate": 264923,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "audio",
+              "codecName": "mp3",
+              "sampleRate": 44100,
+              "channels": 2,
+              "channelLayout": "stereo",
+              "duration": 23.24898,
+              "bitRate": 264923
+            }
+          ]
+        }
+      },
+      {
+        "id": "whoosh",
+        "kind": "audio",
+        "path": "../../.tmp-challenge/whoosh.mp3",
+        "metadata": {
+          "probedAt": "2026-11-17T05:59:25.736Z",
+          "fingerprint": {
+            "size": 44574,
+            "mtimeMs": 1794895110869.8154
+          },
+          "duration": 1.38449,
+          "size": 44574,
+          "formatName": "mp3",
+          "bitRate": 257561,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "audio",
+              "codecName": "mp3",
+              "sampleRate": 44100,
+              "channels": 2,
+              "channelLayout": "stereo",
+              "duration": 1.38449,
+              "bitRate": 257562
+            }
+          ]
+        }
+      },
+      {
+        "id": "impact",
+        "kind": "audio",
+        "path": "../../.tmp-challenge/impact.mp3",
+        "metadata": {
+          "probedAt": "2026-11-17T05:59:26.666Z",
+          "fingerprint": {
+            "size": 225505,
+            "mtimeMs": 1794895111245.8196
+          },
+          "duration": 7.967347,
+          "size": 225505,
+          "formatName": "mp3",
+          "bitRate": 226429,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "audio",
+              "codecName": "mp3",
+              "sampleRate": 44100,
+              "channels": 2,
+              "channelLayout": "stereo",
+              "duration": 7.967347,
+              "bitRate": 222316
+            }
+          ]
+        }
+      }
+    ],
+    "tracks": [
+      {
+        "id": "v1",
+        "kind": "video",
+        "name": "Video 1",
+        "clips": []
+      },
+      {
+        "id": "v2",
+        "kind": "video",
+        "name": "Video 2",
+        "clips": []
+      },
+      {
+        "id": "a1",
+        "kind": "audio",
+        "name": "Audio 1",
+        "clips": []
+      },
+      {
+        "id": "a2",
+        "kind": "audio",
+        "name": "Audio 2",
+        "clips": []
+      }
+    ],
+    "output": {
+      "path": "output.mp4",
+      "format": "mp4",
+      "videoCodec": "h264",
+      "audioCodec": "aac",
+      "width": 1920,
+      "height": 1080,
+      "frameRate": 30,
+      "pixelFormat": "yuv420p",
+      "audioSampleRate": 48000,
+      "audioChannels": 2
+    }
+  },
+  "assets": [
+    {
+      "id": "aerial",
+      "path": "../../.tmp-travel/16130.mp4",
+      "exists": true,
+      "size": 13064821,
+      "mtimeMs": 1794894366505.5967
+    },
+    {
+      "id": "range",
+      "path": "../../.tmp-travel/14016.mp4",
+      "exists": true,
+      "size": 8931268,
+      "mtimeMs": 1794894374613.6863
+    },
+    {
+      "id": "climb",
+      "path": "../../.tmp-travel/16120.mp4",
+      "exists": true,
+      "size": 5418200,
+      "mtimeMs": 1794894370021.6355
+    },
+    {
+      "id": "poles",
+      "path": "../../.tmp-travel/16119.mp4",
+      "exists": true,
+      "size": 7611916,
+      "mtimeMs": 1794894371425.651
+    },
+    {
+      "id": "summit",
+      "path": "../../.tmp-travel/16118.mp4",
+      "exists": true,
+      "size": 4699744,
+      "mtimeMs": 1794894373697.676
+    },
+    {
+      "id": "freeze",
+      "path": "../../.tmp-challenge/summit-freeze.png",
+      "exists": true,
+      "size": 1155812,
+      "mtimeMs": 1794895111685.8245
+    },
+    {
+      "id": "score",
+      "path": "../../.tmp-travel/vastness.mp3",
+      "exists": true,
+      "size": 7356125,
+      "mtimeMs": 1794894427570.271
+    },
+    {
+      "id": "wind",
+      "path": "../../.tmp-challenge/wind.mp3",
+      "exists": true,
+      "size": 995006,
+      "mtimeMs": 1794895109697.8025
+    },
+    {
+      "id": "crunch",
+      "path": "../../.tmp-challenge/crunch.mp3",
+      "exists": true,
+      "size": 769899,
+      "mtimeMs": 1794895110193.8079
+    },
+    {
+      "id": "whoosh",
+      "path": "../../.tmp-challenge/whoosh.mp3",
+      "exists": true,
+      "size": 44574,
+      "mtimeMs": 1794895110869.8154
+    },
+    {
+      "id": "impact",
+      "path": "../../.tmp-challenge/impact.mp3",
+      "exists": true,
+      "size": 225505,
+      "mtimeMs": 1794895111245.8196
+    }
+  ]
+}

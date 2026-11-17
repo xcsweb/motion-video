@@ -1,0 +1,11 @@
+{
+  "type": "frame",
+  "outputPath": "/workspace/demo/challenge-cut/freeze-check.png",
+  "revision": 12,
+  "parameters": {
+    "type": "frame",
+    "at": 2.6,
+    "width": 1280,
+    "height": 720
+  }
+}
