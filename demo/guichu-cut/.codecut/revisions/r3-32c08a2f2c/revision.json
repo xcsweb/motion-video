@@ -1,0 +1,40 @@
+{
+  "id": "r3-32c08a2f2c",
+  "parentId": "r2-1a0f92398a",
+  "projectRevision": 3,
+  "createdAt": "2026-11-17T06:20:29.007Z",
+  "summary": "Add asset vocals",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "vocals",
+        "kind": "audio",
+        "path": "../../.tmp-guichu/vocal-remix.wav",
+        "metadata": {
+          "probedAt": "2026-11-17T06:20:28.999Z",
+          "fingerprint": {
+            "size": 3445518,
+            "mtimeMs": 1794896427808.372
+          },
+          "duration": 35.89,
+          "size": 3445518,
+          "formatName": "wav",
+          "bitRate": 768017,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "audio",
+              "codecName": "pcm_s16le",
+              "sampleRate": 48000,
+              "channels": 1,
+              "duration": 35.89,
+              "bitRate": 768000
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r3-32c08a2f2c/project.json"
+}

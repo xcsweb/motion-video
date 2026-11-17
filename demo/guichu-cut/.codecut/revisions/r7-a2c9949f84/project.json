@@ -1,0 +1,769 @@
+{
+  "schemaVersion": 1,
+  "revision": 7,
+  "name": "白云黑土说唱 - 原创二创",
+  "assets": [
+    {
+      "id": "zuotian",
+      "kind": "video",
+      "path": "../../.tmp-guichu/zuotian.mp4",
+      "metadata": {
+        "probedAt": "2026-11-17T06:16:46.511Z",
+        "fingerprint": {
+          "size": 58140562,
+          "mtimeMs": 1794896098396.7295
+        },
+        "duration": 1039.231333,
+        "size": 58140562,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 447565,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 480,
+            "height": 360,
+            "frameRate": 24.999037313720205,
+            "duration": 1038.76,
+            "bitRate": 412351
+          },
+          {
+            "index": 1,
+            "codecType": "audio",
+            "codecName": "aac",
+            "sampleRate": 48000,
+            "channels": 2,
+            "channelLayout": "stereo",
+            "duration": 1039.231333,
+            "bitRate": 32032
+          }
+        ]
+      }
+    },
+    {
+      "id": "beat",
+      "kind": "audio",
+      "path": "../../.tmp-guichu/original-beat.wav",
+      "metadata": {
+        "probedAt": "2026-11-17T06:16:47.847Z",
+        "fingerprint": {
+          "size": 3456044,
+          "mtimeMs": 1794896148929.2888
+        },
+        "duration": 36,
+        "size": 3456044,
+        "formatName": "wav",
+        "bitRate": 768009,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "audio",
+            "codecName": "pcm_s16le",
+            "sampleRate": 48000,
+            "channels": 1,
+            "duration": 36,
+            "bitRate": 768000
+          }
+        ]
+      }
+    },
+    {
+      "id": "vocals",
+      "kind": "audio",
+      "path": "../../.tmp-guichu/vocal-remix.wav",
+      "metadata": {
+        "probedAt": "2026-11-17T06:20:54.699Z",
+        "fingerprint": {
+          "size": 3455118,
+          "mtimeMs": 1794896453724.6582
+        },
+        "duration": 35.99,
+        "size": 3455118,
+        "formatName": "wav",
+        "bitRate": 768017,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "audio",
+            "codecName": "pcm_s16le",
+            "sampleRate": 48000,
+            "channels": 1,
+            "duration": 35.99,
+            "bitRate": 768000
+          }
+        ]
+      }
+    },
+    {
+      "id": "freeze",
+      "kind": "image",
+      "path": "../../.tmp-guichu/final-freeze.png",
+      "metadata": {
+        "probedAt": "2026-11-17T06:20:30.160Z",
+        "fingerprint": {
+          "size": 265886,
+          "mtimeMs": 1794896428072.375
+        },
+        "duration": 0,
+        "size": 265886,
+        "formatName": "png_pipe",
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "png",
+            "width": 480,
+            "height": 360,
+            "frameRate": 25
+          }
+        ]
+      }
+    },
+    {
+      "id": "picture",
+      "kind": "video",
+      "path": "../../.tmp-guichu/guichu-picture.mp4",
+      "metadata": {
+        "probedAt": "2026-11-17T06:26:00.782Z",
+        "fingerprint": {
+          "size": 9258321,
+          "mtimeMs": 1794896718767.5852
+        },
+        "duration": 36,
+        "size": 9258321,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 2057404,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 960,
+            "height": 720,
+            "frameRate": 30,
+            "duration": 36,
+            "bitRate": 2054794
+          }
+        ]
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "id": "v1",
+      "kind": "video",
+      "name": "Video 1",
+      "clips": [
+        {
+          "id": "voice-00",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 0,
+          "duration": 2,
+          "sourceStart": 1.59,
+          "speed": 0.945,
+          "volume": 0
+        },
+        {
+          "id": "voice-01",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 2,
+          "duration": 1,
+          "sourceStart": 90.73,
+          "speed": 1.55,
+          "volume": 0
+        },
+        {
+          "id": "voice-02",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 3,
+          "duration": 1,
+          "sourceStart": 92.17,
+          "speed": 1.45,
+          "volume": 0
+        },
+        {
+          "id": "voice-03",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 4,
+          "duration": 1,
+          "sourceStart": 94.03,
+          "speed": 1.59,
+          "volume": 0
+        },
+        {
+          "id": "voice-04",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 5,
+          "duration": 1,
+          "sourceStart": 95.51,
+          "speed": 1.07,
+          "volume": 0
+        },
+        {
+          "id": "voice-05",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 6,
+          "duration": 1,
+          "sourceStart": 96.47,
+          "speed": 1.15,
+          "volume": 0
+        },
+        {
+          "id": "voice-06",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 7,
+          "duration": 1,
+          "sourceStart": 97.51,
+          "speed": 1.03,
+          "volume": 0
+        },
+        {
+          "id": "voice-07",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 8,
+          "duration": 1,
+          "sourceStart": 98.43,
+          "speed": 1.23,
+          "volume": 0
+        },
+        {
+          "id": "voice-08",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 9,
+          "duration": 1,
+          "sourceStart": 99.55,
+          "speed": 1.15,
+          "volume": 0
+        },
+        {
+          "id": "voice-09",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 10,
+          "duration": 1,
+          "sourceStart": 190.7,
+          "speed": 1.39,
+          "volume": 0
+        },
+        {
+          "id": "voice-10",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 11,
+          "duration": 1,
+          "sourceStart": 213.55,
+          "speed": 1.33,
+          "volume": 0
+        },
+        {
+          "id": "voice-11",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 12,
+          "duration": 2,
+          "sourceStart": 197.31,
+          "speed": 1.315,
+          "volume": 0
+        },
+        {
+          "id": "voice-12",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 14,
+          "duration": 2,
+          "sourceStart": 199.83,
+          "speed": 1.305,
+          "volume": 0
+        },
+        {
+          "id": "voice-13",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 16,
+          "duration": 2,
+          "sourceStart": 197.31,
+          "speed": 1.315,
+          "volume": 0
+        },
+        {
+          "id": "voice-14",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 18,
+          "duration": 2,
+          "sourceStart": 199.83,
+          "speed": 1.305,
+          "volume": 0
+        },
+        {
+          "id": "voice-15",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 20,
+          "duration": 2,
+          "sourceStart": 202.33,
+          "speed": 1.195,
+          "volume": 0
+        },
+        {
+          "id": "voice-16",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 22,
+          "duration": 2,
+          "sourceStart": 204.61,
+          "speed": 1.095,
+          "volume": 0
+        },
+        {
+          "id": "voice-17",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 24,
+          "duration": 0.5,
+          "sourceStart": 198.51,
+          "speed": 1.1,
+          "volume": 0
+        },
+        {
+          "id": "voice-18",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 24.5,
+          "duration": 0.5,
+          "sourceStart": 198.51,
+          "speed": 1.1,
+          "volume": 0
+        },
+        {
+          "id": "voice-19",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 25,
+          "duration": 0.5,
+          "sourceStart": 199.29,
+          "speed": 1.3,
+          "volume": 0
+        },
+        {
+          "id": "voice-20",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 25.5,
+          "duration": 0.5,
+          "sourceStart": 199.29,
+          "speed": 1.3,
+          "volume": 0
+        },
+        {
+          "id": "voice-21",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 26,
+          "duration": 2,
+          "sourceStart": 197.31,
+          "speed": 1.315,
+          "volume": 0
+        },
+        {
+          "id": "voice-22",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 28,
+          "duration": 2,
+          "sourceStart": 199.83,
+          "speed": 1.305,
+          "volume": 0
+        },
+        {
+          "id": "voice-23",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 30,
+          "duration": 0.5,
+          "sourceStart": 206.69,
+          "speed": 1.3,
+          "volume": 0
+        },
+        {
+          "id": "voice-24",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 30.5,
+          "duration": 0.5,
+          "sourceStart": 206.69,
+          "speed": 1.3,
+          "volume": 0
+        },
+        {
+          "id": "voice-25",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 31,
+          "duration": 2,
+          "sourceStart": 295.77,
+          "speed": 1.055,
+          "volume": 0
+        },
+        {
+          "id": "voice-26",
+          "type": "video",
+          "assetId": "zuotian",
+          "start": 33,
+          "duration": 0.5,
+          "sourceStart": 297.77,
+          "speed": 1.5,
+          "volume": 0
+        },
+        {
+          "id": "final-freeze",
+          "type": "image",
+          "assetId": "freeze",
+          "start": 33.5,
+          "duration": 2.5
+        }
+      ]
+    },
+    {
+      "id": "v2",
+      "kind": "video",
+      "name": "Video 2",
+      "clips": [
+        {
+          "id": "caption-00",
+          "type": "text",
+          "text": "各位朋友，春节好",
+          "start": 0.02,
+          "duration": 1.96,
+          "fontSize": 50,
+          "fontFamily": "Noto Sans CJK SC",
+          "color": "#FFF200"
+        },
+        {
+          "id": "caption-01",
+          "type": "text",
+          "text": "我叫白云",
+          "start": 2.02,
+          "duration": 0.96,
+          "fontSize": 62,
+          "fontFamily": "Noto Sans CJK SC",
+          "color": "#FFFFFF"
+        },
+        {
+          "id": "caption-02",
+          "type": "text",
+          "text": "我叫黑土",
+          "start": 3.02,
+          "duration": 0.96,
+          "fontSize": 62,
+          "fontFamily": "Noto Sans CJK SC",
+          "color": "#FFF200"
+        },
+        {
+          "id": "caption-03",
+          "type": "text",
+          "text": "我七十一",
+          "start": 4.02,
+          "duration": 0.96,
+          "fontSize": 62,
+          "fontFamily": "Noto Sans CJK SC",
+          "color": "#FFFFFF"
+        },
+        {
+          "id": "caption-04",
+          "type": "text",
+          "text": "我七十五",
+          "start": 5.02,
+          "duration": 0.96,
+          "fontSize": 62,
+          "fontFamily": "Noto Sans CJK SC",
+          "color": "#FFF200"
+        },
+        {
+          "id": "caption-05",
+          "type": "text",
+          "text": "我属鸡",
+          "start": 6.02,
+          "duration": 0.96,
+          "fontSize": 62,
+          "fontFamily": "Noto Sans CJK SC",
+          "color": "#FFFFFF"
+        },
+        {
+          "id": "caption-06",
+          "type": "text",
+          "text": "我属虎",
+          "start": 7.02,
+          "duration": 0.96,
+          "fontSize": 62,
+          "fontFamily": "Noto Sans CJK SC",
+          "color": "#FFF200"
+        },
+        {
+          "id": "caption-07",
+          "type": "text",
+          "text": "这是我老公",
+          "start": 8.02,
+          "duration": 0.96,
+          "fontSize": 62,
+          "fontFamily": "Noto Sans CJK SC",
+          "color": "#FFFFFF"
+        },
+        {
+          "id": "caption-08",
+          "type": "text",
+          "text": "这是我老母",
+          "start": 9.02,
+          "duration": 0.96,
+          "fontSize": 62,
+          "fontFamily": "Noto Sans CJK SC",
+          "color": "#FFF200"
+        },
+        {
+          "id": "caption-09",
+          "type": "text",
+          "text": "准备好了",
+          "start": 10.02,
+          "duration": 0.96,
+          "fontSize": 62,
+          "fontFamily": "Noto Sans CJK SC",
+          "color": "#FFFFFF"
+        },
+        {
+          "id": "caption-10",
+          "type": "text",
+          "text": "该我了",
+          "start": 11.02,
+          "duration": 0.96,
+          "fontSize": 62,
+          "fontFamily": "Noto Sans CJK SC",
+          "color": "#FFF200"
+        },
+        {
+          "id": "caption-11",
+          "type": "text",
+          "text": "改革春风吹满地",
+          "start": 12.02,
+          "duration": 1.96,
+          "fontSize": 62,
+          "fontFamily": "Noto Sans CJK SC",
+          "color": "#FFFFFF"
+        },
+        {
+          "id": "caption-12",
+          "type": "text",
+          "text": "中国人民真争气",
+          "start": 14.02,
+          "duration": 1.96,
+          "fontSize": 62,
+          "fontFamily": "Noto Sans CJK SC",
+          "color": "#FFF200"
+        },
+        {
+          "id": "caption-13",
+          "type": "text",
+          "text": "改革春风吹满地",
+          "start": 16.02,
+          "duration": 1.96,
+          "fontSize": 62,
+          "fontFamily": "Noto Sans CJK SC",
+          "color": "#FFFFFF"
+        },
+        {
+          "id": "caption-14",
+          "type": "text",
+          "text": "中国人民真争气",
+          "start": 18.02,
+          "duration": 1.96,
+          "fontSize": 62,
+          "fontFamily": "Noto Sans CJK SC",
+          "color": "#FFF200"
+        },
+        {
+          "id": "caption-15",
+          "type": "text",
+          "text": "齐心合力跨世纪",
+          "start": 20.02,
+          "duration": 1.96,
+          "fontSize": 62,
+          "fontFamily": "Noto Sans CJK SC",
+          "color": "#FFFFFF"
+        },
+        {
+          "id": "caption-16",
+          "type": "text",
+          "text": "一场大水没咋地",
+          "start": 22.02,
+          "duration": 1.96,
+          "fontSize": 62,
+          "fontFamily": "Noto Sans CJK SC",
+          "color": "#FFF200"
+        },
+        {
+          "id": "caption-17",
+          "type": "text",
+          "text": "春风！",
+          "start": 24.02,
+          "duration": 0.46,
+          "fontSize": 78,
+          "fontFamily": "Noto Sans CJK SC",
+          "color": "#FFFFFF"
+        },
+        {
+          "id": "caption-18",
+          "type": "text",
+          "text": "春风！",
+          "start": 24.52,
+          "duration": 0.46,
+          "fontSize": 78,
+          "fontFamily": "Noto Sans CJK SC",
+          "color": "#FFF200"
+        },
+        {
+          "id": "caption-19",
+          "type": "text",
+          "text": "满地！",
+          "start": 25.02,
+          "duration": 0.46,
+          "fontSize": 78,
+          "fontFamily": "Noto Sans CJK SC",
+          "color": "#FFFFFF"
+        },
+        {
+          "id": "caption-20",
+          "type": "text",
+          "text": "满地！",
+          "start": 25.52,
+          "duration": 0.46,
+          "fontSize": 78,
+          "fontFamily": "Noto Sans CJK SC",
+          "color": "#FFF200"
+        },
+        {
+          "id": "caption-21",
+          "type": "text",
+          "text": "改革春风吹满地",
+          "start": 26.02,
+          "duration": 1.96,
+          "fontSize": 62,
+          "fontFamily": "Noto Sans CJK SC",
+          "color": "#FFFFFF"
+        },
+        {
+          "id": "caption-22",
+          "type": "text",
+          "text": "中国人民真争气",
+          "start": 28.02,
+          "duration": 1.96,
+          "fontSize": 62,
+          "fontFamily": "Noto Sans CJK SC",
+          "color": "#FFF200"
+        },
+        {
+          "id": "caption-23",
+          "type": "text",
+          "text": "谢谢！",
+          "start": 30.02,
+          "duration": 0.46,
+          "fontSize": 78,
+          "fontFamily": "Noto Sans CJK SC",
+          "color": "#FFFFFF"
+        },
+        {
+          "id": "caption-24",
+          "type": "text",
+          "text": "谢谢！",
+          "start": 30.52,
+          "duration": 0.46,
+          "fontSize": 78,
+          "fontFamily": "Noto Sans CJK SC",
+          "color": "#FFF200"
+        },
+        {
+          "id": "caption-25",
+          "type": "text",
+          "text": "风景这边更好",
+          "start": 31.02,
+          "duration": 1.96,
+          "fontSize": 62,
+          "fontFamily": "Noto Sans CJK SC",
+          "color": "#FFFFFF"
+        },
+        {
+          "id": "caption-26",
+          "type": "text",
+          "text": "多谢！",
+          "start": 33.02,
+          "duration": 0.46,
+          "fontSize": 78,
+          "fontFamily": "Noto Sans CJK SC",
+          "color": "#FFF200"
+        },
+        {
+          "id": "final-caption",
+          "type": "text",
+          "text": "原创二创 · 一键三连",
+          "start": 33.5,
+          "duration": 2.5,
+          "fontSize": 54,
+          "fontFamily": "Noto Sans CJK SC",
+          "color": "#FFF200"
+        }
+      ]
+    },
+    {
+      "id": "a1",
+      "kind": "audio",
+      "name": "Audio 1",
+      "clips": [
+        {
+          "id": "original-beat",
+          "type": "audio",
+          "assetId": "beat",
+          "start": 0,
+          "duration": 36,
+          "sourceStart": 0,
+          "volume": 0.38
+        }
+      ]
+    },
+    {
+      "id": "a2",
+      "kind": "audio",
+      "name": "Audio 2",
+      "clips": [
+        {
+          "id": "vocal-remix",
+          "type": "audio",
+          "assetId": "vocals",
+          "start": 0,
+          "duration": 36,
+          "sourceStart": 0,
+          "volume": 0.95
+        }
+      ]
+    }
+  ],
+  "output": {
+    "path": "guichu.mp4",
+    "format": "mp4",
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "width": 960,
+    "height": 720,
+    "frameRate": 30,
+    "pixelFormat": "yuv420p",
+    "audioSampleRate": 48000,
+    "audioChannels": 2
+  }
+}

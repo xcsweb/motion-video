@@ -1,0 +1,37 @@
+{
+  "id": "r8-b7d95c6b82",
+  "parentId": "r7-a2c9949f84",
+  "projectRevision": 8,
+  "createdAt": "2026-11-17T06:26:31.896Z",
+  "summary": "Replace segmented visuals with frame-accurate pre-rendered picture",
+  "operations": [
+    {
+      "type": "removeTrack",
+      "trackId": "v2"
+    },
+    {
+      "type": "addTrack",
+      "track": {
+        "id": "picture-track",
+        "kind": "video",
+        "name": "Pre-rendered picture",
+        "clips": [
+          {
+            "id": "picture",
+            "type": "video",
+            "assetId": "picture",
+            "start": 0,
+            "duration": 36,
+            "sourceStart": 0,
+            "volume": 0
+          }
+        ]
+      }
+    },
+    {
+      "type": "removeTrack",
+      "trackId": "v1"
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r8-b7d95c6b82/project.json"
+}

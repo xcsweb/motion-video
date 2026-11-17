@@ -1,0 +1,40 @@
+{
+  "id": "r2-1a0f92398a",
+  "parentId": "r1-2fc8f46792",
+  "projectRevision": 2,
+  "createdAt": "2026-11-17T06:16:47.858Z",
+  "summary": "Add asset beat",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "beat",
+        "kind": "audio",
+        "path": "../../.tmp-guichu/original-beat.wav",
+        "metadata": {
+          "probedAt": "2026-11-17T06:16:47.847Z",
+          "fingerprint": {
+            "size": 3456044,
+            "mtimeMs": 1794896148929.2888
+          },
+          "duration": 36,
+          "size": 3456044,
+          "formatName": "wav",
+          "bitRate": 768009,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "audio",
+              "codecName": "pcm_s16le",
+              "sampleRate": 48000,
+              "channels": 1,
+              "duration": 36,
+              "bitRate": 768000
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r2-1a0f92398a/project.json"
+}

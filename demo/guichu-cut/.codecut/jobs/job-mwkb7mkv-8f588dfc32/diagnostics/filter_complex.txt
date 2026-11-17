@@ -1,0 +1,10 @@
+[2:v:0]trim=start=0:end=36,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=36,setpts=PTS-STARTPTS[cc_clip_0];
+color=c=black@0.0:s=960x720:r=30:d=36,format=rgba,setpts=PTS-STARTPTS[cc_transparent_1];
+[cc_transparent_1][cc_clip_0]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=36,setpts=PTS-STARTPTS[cc_positioned_2];
+color=c=black:s=960x720:r=30:d=36,format=rgba,setpts=PTS-STARTPTS[cc_black_3];
+[cc_black_3][cc_positioned_2]overlay=x=0:y=0:eof_action=pass:repeatlast=0:format=auto,setpts=PTS-STARTPTS[cc_composite_4];
+[cc_composite_4]fps=30,trim=duration=36,format=yuv420p,setpts=PTS-STARTPTS[vout];
+[0:a:0]atrim=start=0:end=36,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0.38,apad=pad_dur=36,atrim=duration=36,adelay=delays=0:all=1,asetpts=PTS-STARTPTS[cc_audio_5];
+[1:a:0]atrim=start=0:end=36,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0.95,apad=pad_dur=36,atrim=duration=36,adelay=delays=0:all=1,asetpts=PTS-STARTPTS[cc_audio_6];
+anullsrc=r=48000:cl=stereo:d=36[cc_silence_7];
+[cc_silence_7][cc_audio_5][cc_audio_6]amix=inputs=3:duration=longest:dropout_transition=0:normalize=0,aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,atrim=duration=36,asetpts=PTS-STARTPTS[aout]

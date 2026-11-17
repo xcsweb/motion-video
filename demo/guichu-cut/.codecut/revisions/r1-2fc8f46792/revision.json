@@ -1,0 +1,50 @@
+{
+  "id": "r1-2fc8f46792",
+  "projectRevision": 1,
+  "createdAt": "2026-11-17T06:16:46.528Z",
+  "summary": "Add asset zuotian",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "zuotian",
+        "kind": "video",
+        "path": "../../.tmp-guichu/zuotian.mp4",
+        "metadata": {
+          "probedAt": "2026-11-17T06:16:46.511Z",
+          "fingerprint": {
+            "size": 58140562,
+            "mtimeMs": 1794896098396.7295
+          },
+          "duration": 1039.231333,
+          "size": 58140562,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 447565,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 480,
+              "height": 360,
+              "frameRate": 24.999037313720205,
+              "duration": 1038.76,
+              "bitRate": 412351
+            },
+            {
+              "index": 1,
+              "codecType": "audio",
+              "codecName": "aac",
+              "sampleRate": 48000,
+              "channels": 2,
+              "channelLayout": "stereo",
+              "duration": 1039.231333,
+              "bitRate": 32032
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r1-2fc8f46792/project.json"
+}

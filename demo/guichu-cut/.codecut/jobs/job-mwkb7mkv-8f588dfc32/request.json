@@ -1,0 +1,185 @@
+{
+  "kind": "render",
+  "projectPath": "/workspace/demo/guichu-cut/project.json",
+  "projectRevision": 8,
+  "process": {
+    "command": "ffmpeg",
+    "args": [
+      "-hide_banner",
+      "-nostdin",
+      "-progress",
+      "pipe:1",
+      "-nostats",
+      "-i",
+      "/workspace/.tmp-guichu/original-beat.wav",
+      "-i",
+      "/workspace/.tmp-guichu/vocal-remix.wav",
+      "-i",
+      "/workspace/.tmp-guichu/guichu-picture.mp4",
+      "-filter_complex_script",
+      "{jobDirectory}/diagnostics/filter_complex.txt",
+      "-map",
+      "[vout]",
+      "-map",
+      "[aout]",
+      "-c:v",
+      "libx264",
+      "-preset",
+      "veryfast",
+      "-crf",
+      "18",
+      "-pix_fmt",
+      "yuv420p",
+      "-r",
+      "30",
+      "-video_track_timescale",
+      "90000",
+      "-c:a",
+      "aac",
+      "-b:a",
+      "192k",
+      "-ar",
+      "48000",
+      "-ac",
+      "2",
+      "-movflags",
+      "+faststart",
+      "-t",
+      "36",
+      "-f",
+      "mp4",
+      "-y",
+      "{output}"
+    ],
+    "cwd": "/workspace/demo/guichu-cut",
+    "progress": "ffmpeg",
+    "durationSeconds": 36
+  },
+  "output": {
+    "path": "/workspace/demo/guichu-cut/guichu.mp4",
+    "overwrite": true,
+    "validation": "ffprobe"
+  },
+  "render": {
+    "plan": {
+      "version": 1,
+      "revision": 8,
+      "command": "ffmpeg",
+      "durationSeconds": 36,
+      "inputs": [
+        {
+          "index": 0,
+          "assetId": "beat",
+          "kind": "audio",
+          "path": "/workspace/.tmp-guichu/original-beat.wav",
+          "fingerprint": {
+            "size": 3456044,
+            "mtimeMs": 1794896148929.2888
+          },
+          "hasVideo": false,
+          "hasAudio": true,
+          "clips": [
+            "original-beat"
+          ]
+        },
+        {
+          "index": 1,
+          "assetId": "vocals",
+          "kind": "audio",
+          "path": "/workspace/.tmp-guichu/vocal-remix.wav",
+          "fingerprint": {
+            "size": 3455118,
+            "mtimeMs": 1794896453724.6582
+          },
+          "hasVideo": false,
+          "hasAudio": true,
+          "clips": [
+            "vocal-remix"
+          ]
+        },
+        {
+          "index": 2,
+          "assetId": "picture",
+          "kind": "video",
+          "path": "/workspace/.tmp-guichu/guichu-picture.mp4",
+          "fingerprint": {
+            "size": 9258321,
+            "mtimeMs": 1794896718767.5852
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "picture"
+          ]
+        }
+      ],
+      "args": [
+        "-hide_banner",
+        "-nostdin",
+        "-progress",
+        "pipe:1",
+        "-nostats",
+        "-i",
+        "/workspace/.tmp-guichu/original-beat.wav",
+        "-i",
+        "/workspace/.tmp-guichu/vocal-remix.wav",
+        "-i",
+        "/workspace/.tmp-guichu/guichu-picture.mp4",
+        "-filter_complex_script",
+        "{jobDirectory}/diagnostics/filter_complex.txt",
+        "-map",
+        "[vout]",
+        "-map",
+        "[aout]",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "veryfast",
+        "-crf",
+        "18",
+        "-pix_fmt",
+        "yuv420p",
+        "-r",
+        "30",
+        "-video_track_timescale",
+        "90000",
+        "-c:a",
+        "aac",
+        "-b:a",
+        "192k",
+        "-ar",
+        "48000",
+        "-ac",
+        "2",
+        "-movflags",
+        "+faststart",
+        "-t",
+        "36",
+        "-f",
+        "mp4",
+        "-y",
+        "{output}"
+      ],
+      "filter_graph": "[2:v:0]trim=start=0:end=36,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=36,setpts=PTS-STARTPTS[cc_clip_0];\ncolor=c=black@0.0:s=960x720:r=30:d=36,format=rgba,setpts=PTS-STARTPTS[cc_transparent_1];\n[cc_transparent_1][cc_clip_0]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=36,setpts=PTS-STARTPTS[cc_positioned_2];\ncolor=c=black:s=960x720:r=30:d=36,format=rgba,setpts=PTS-STARTPTS[cc_black_3];\n[cc_black_3][cc_positioned_2]overlay=x=0:y=0:eof_action=pass:repeatlast=0:format=auto,setpts=PTS-STARTPTS[cc_composite_4];\n[cc_composite_4]fps=30,trim=duration=36,format=yuv420p,setpts=PTS-STARTPTS[vout];\n[0:a:0]atrim=start=0:end=36,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0.38,apad=pad_dur=36,atrim=duration=36,adelay=delays=0:all=1,asetpts=PTS-STARTPTS[cc_audio_5];\n[1:a:0]atrim=start=0:end=36,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0.95,apad=pad_dur=36,atrim=duration=36,adelay=delays=0:all=1,asetpts=PTS-STARTPTS[cc_audio_6];\nanullsrc=r=48000:cl=stereo:d=36[cc_silence_7];\n[cc_silence_7][cc_audio_5][cc_audio_6]amix=inputs=3:duration=longest:dropout_transition=0:normalize=0,aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,atrim=duration=36,asetpts=PTS-STARTPTS[aout]\n",
+      "output": {
+        "path": "/workspace/demo/guichu-cut/guichu.mp4",
+        "temporaryPath": "{output}",
+        "format": "mp4",
+        "overwrite": true
+      },
+      "media": {
+        "durationSeconds": 36,
+        "width": 960,
+        "height": 720,
+        "frameRate": 30,
+        "pixelFormat": "yuv420p",
+        "videoCodec": "h264",
+        "audioCodec": "aac",
+        "audioSampleRate": 48000,
+        "audioChannels": 2
+      },
+      "warnings": [],
+      "textFiles": []
+    }
+  }
+}

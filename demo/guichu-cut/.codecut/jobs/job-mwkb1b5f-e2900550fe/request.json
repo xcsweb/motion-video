@@ -1,0 +1,432 @@
+{
+  "kind": "preview.sheet",
+  "projectPath": "/workspace/demo/guichu-cut/project.json",
+  "projectRevision": 6,
+  "process": {
+    "command": "ffmpeg",
+    "args": [
+      "-hide_banner",
+      "-nostdin",
+      "-progress",
+      "pipe:1",
+      "-nostats",
+      "-i",
+      "/workspace/.tmp-guichu/zuotian.mp4",
+      "-loop",
+      "1",
+      "-framerate",
+      "25",
+      "-i",
+      "/workspace/.tmp-guichu/final-freeze.png",
+      "-i",
+      "/workspace/.tmp-guichu/original-beat.wav",
+      "-i",
+      "/workspace/.tmp-guichu/vocal-remix.wav",
+      "-filter_complex_script",
+      "{jobDirectory}/diagnostics/filter_complex.txt",
+      "-map",
+      "[preview_vout]",
+      "-an",
+      "-frames:v",
+      "1",
+      "-c:v",
+      "png",
+      "-update",
+      "1",
+      "-f",
+      "image2",
+      "-y",
+      "{output}"
+    ],
+    "cwd": "/workspace/demo/guichu-cut",
+    "progress": "ffmpeg",
+    "durationSeconds": 36
+  },
+  "output": {
+    "path": "/workspace/demo/guichu-cut/guichu-sheet.png",
+    "overwrite": true,
+    "validation": "ffprobe"
+  },
+  "render": {
+    "plan": {
+      "version": 1,
+      "revision": 6,
+      "command": "ffmpeg",
+      "durationSeconds": 36,
+      "inputs": [
+        {
+          "index": 0,
+          "assetId": "zuotian",
+          "kind": "video",
+          "path": "/workspace/.tmp-guichu/zuotian.mp4",
+          "fingerprint": {
+            "size": 58140562,
+            "mtimeMs": 1794896098396.7295
+          },
+          "hasVideo": true,
+          "hasAudio": true,
+          "clips": [
+            "voice-00",
+            "voice-01",
+            "voice-02",
+            "voice-03",
+            "voice-04",
+            "voice-05",
+            "voice-06",
+            "voice-07",
+            "voice-08",
+            "voice-09",
+            "voice-10",
+            "voice-11",
+            "voice-12",
+            "voice-13",
+            "voice-14",
+            "voice-15",
+            "voice-16",
+            "voice-17",
+            "voice-18",
+            "voice-19",
+            "voice-20",
+            "voice-21",
+            "voice-22",
+            "voice-23",
+            "voice-24",
+            "voice-25",
+            "voice-26"
+          ]
+        },
+        {
+          "index": 1,
+          "assetId": "freeze",
+          "kind": "image",
+          "path": "/workspace/.tmp-guichu/final-freeze.png",
+          "fingerprint": {
+            "size": 265886,
+            "mtimeMs": 1794896428072.375
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "final-freeze"
+          ]
+        },
+        {
+          "index": 2,
+          "assetId": "beat",
+          "kind": "audio",
+          "path": "/workspace/.tmp-guichu/original-beat.wav",
+          "fingerprint": {
+            "size": 3456044,
+            "mtimeMs": 1794896148929.2888
+          },
+          "hasVideo": false,
+          "hasAudio": true,
+          "clips": [
+            "original-beat"
+          ]
+        },
+        {
+          "index": 3,
+          "assetId": "vocals",
+          "kind": "audio",
+          "path": "/workspace/.tmp-guichu/vocal-remix.wav",
+          "fingerprint": {
+            "size": 3455118,
+            "mtimeMs": 1794896453724.6582
+          },
+          "hasVideo": false,
+          "hasAudio": true,
+          "clips": [
+            "vocal-remix"
+          ]
+        }
+      ],
+      "args": [
+        "-hide_banner",
+        "-nostdin",
+        "-progress",
+        "pipe:1",
+        "-nostats",
+        "-i",
+        "/workspace/.tmp-guichu/zuotian.mp4",
+        "-loop",
+        "1",
+        "-framerate",
+        "25",
+        "-i",
+        "/workspace/.tmp-guichu/final-freeze.png",
+        "-i",
+        "/workspace/.tmp-guichu/original-beat.wav",
+        "-i",
+        "/workspace/.tmp-guichu/vocal-remix.wav",
+        "-filter_complex_script",
+        "{jobDirectory}/diagnostics/filter_complex.txt",
+        "-map",
+        "[preview_vout]",
+        "-an",
+        "-frames:v",
+        "1",
+        "-c:v",
+        "png",
+        "-update",
+        "1",
+        "-f",
+        "image2",
+        "-y",
+        "{output}"
+      ],
+      "filter_graph": "[0:v:0]trim=start=1.59:end=3.48,setpts=(PTS-STARTPTS)/0.945,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=2,setpts=PTS-STARTPTS[cc_clip_0];\ncolor=c=black@0.0:s=960x720:r=25:d=2,format=rgba,setpts=PTS-STARTPTS[cc_transparent_1];\n[cc_transparent_1][cc_clip_0]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=2,setpts=PTS-STARTPTS[cc_positioned_2];\n[0:v:0]trim=start=90.73:end=92.28,setpts=(PTS-STARTPTS)/1.55,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1,setpts=PTS-STARTPTS[cc_clip_3];\ncolor=c=black@0.0:s=960x720:r=25:d=1,format=rgba,setpts=PTS-STARTPTS[cc_transparent_4];\n[cc_transparent_4][cc_clip_3]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1,setpts=PTS-STARTPTS[cc_positioned_5];\n[cc_positioned_2][cc_positioned_5]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_6];\n[0:v:0]trim=start=92.17:end=93.62,setpts=(PTS-STARTPTS)/1.45,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1,setpts=PTS-STARTPTS[cc_clip_7];\ncolor=c=black@0.0:s=960x720:r=25:d=1,format=rgba,setpts=PTS-STARTPTS[cc_transparent_8];\n[cc_transparent_8][cc_clip_7]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1,setpts=PTS-STARTPTS[cc_positioned_9];\n[cc_concat_6][cc_positioned_9]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_10];\n[0:v:0]trim=start=94.03:end=95.62,setpts=(PTS-STARTPTS)/1.59,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1,setpts=PTS-STARTPTS[cc_clip_11];\ncolor=c=black@0.0:s=960x720:r=25:d=1,format=rgba,setpts=PTS-STARTPTS[cc_transparent_12];\n[cc_transparent_12][cc_clip_11]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1,setpts=PTS-STARTPTS[cc_positioned_13];\n[cc_concat_10][cc_positioned_13]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_14];\n[0:v:0]trim=start=95.51:end=96.58,setpts=(PTS-STARTPTS)/1.07,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1,setpts=PTS-STARTPTS[cc_clip_15];\ncolor=c=black@0.0:s=960x720:r=25:d=1,format=rgba,setpts=PTS-STARTPTS[cc_transparent_16];\n[cc_transparent_16][cc_clip_15]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1,setpts=PTS-STARTPTS[cc_positioned_17];\n[cc_concat_14][cc_positioned_17]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_18];\n[0:v:0]trim=start=96.47:end=97.62,setpts=(PTS-STARTPTS)/1.15,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1,setpts=PTS-STARTPTS[cc_clip_19];\ncolor=c=black@0.0:s=960x720:r=25:d=1,format=rgba,setpts=PTS-STARTPTS[cc_transparent_20];\n[cc_transparent_20][cc_clip_19]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1,setpts=PTS-STARTPTS[cc_positioned_21];\n[cc_concat_18][cc_positioned_21]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_22];\n[0:v:0]trim=start=97.51:end=98.54,setpts=(PTS-STARTPTS)/1.03,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1,setpts=PTS-STARTPTS[cc_clip_23];\ncolor=c=black@0.0:s=960x720:r=25:d=1,format=rgba,setpts=PTS-STARTPTS[cc_transparent_24];\n[cc_transparent_24][cc_clip_23]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1,setpts=PTS-STARTPTS[cc_positioned_25];\n[cc_concat_22][cc_positioned_25]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_26];\n[0:v:0]trim=start=98.43:end=99.66,setpts=(PTS-STARTPTS)/1.23,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1,setpts=PTS-STARTPTS[cc_clip_27];\ncolor=c=black@0.0:s=960x720:r=25:d=1,format=rgba,setpts=PTS-STARTPTS[cc_transparent_28];\n[cc_transparent_28][cc_clip_27]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1,setpts=PTS-STARTPTS[cc_positioned_29];\n[cc_concat_26][cc_positioned_29]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_30];\n[0:v:0]trim=start=99.55:end=100.7,setpts=(PTS-STARTPTS)/1.15,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1,setpts=PTS-STARTPTS[cc_clip_31];\ncolor=c=black@0.0:s=960x720:r=25:d=1,format=rgba,setpts=PTS-STARTPTS[cc_transparent_32];\n[cc_transparent_32][cc_clip_31]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1,setpts=PTS-STARTPTS[cc_positioned_33];\n[cc_concat_30][cc_positioned_33]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_34];\n[0:v:0]trim=start=190.7:end=192.09,setpts=(PTS-STARTPTS)/1.39,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1,setpts=PTS-STARTPTS[cc_clip_35];\ncolor=c=black@0.0:s=960x720:r=25:d=1,format=rgba,setpts=PTS-STARTPTS[cc_transparent_36];\n[cc_transparent_36][cc_clip_35]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1,setpts=PTS-STARTPTS[cc_positioned_37];\n[cc_concat_34][cc_positioned_37]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_38];\n[0:v:0]trim=start=213.55:end=214.88,setpts=(PTS-STARTPTS)/1.33,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1,setpts=PTS-STARTPTS[cc_clip_39];\ncolor=c=black@0.0:s=960x720:r=25:d=1,format=rgba,setpts=PTS-STARTPTS[cc_transparent_40];\n[cc_transparent_40][cc_clip_39]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1,setpts=PTS-STARTPTS[cc_positioned_41];\n[cc_concat_38][cc_positioned_41]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_42];\n[0:v:0]trim=start=197.31:end=199.94,setpts=(PTS-STARTPTS)/1.315,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=2,setpts=PTS-STARTPTS[cc_clip_43];\ncolor=c=black@0.0:s=960x720:r=25:d=2,format=rgba,setpts=PTS-STARTPTS[cc_transparent_44];\n[cc_transparent_44][cc_clip_43]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=2,setpts=PTS-STARTPTS[cc_positioned_45];\n[cc_concat_42][cc_positioned_45]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_46];\n[0:v:0]trim=start=199.83:end=202.44,setpts=(PTS-STARTPTS)/1.305,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=2,setpts=PTS-STARTPTS[cc_clip_47];\ncolor=c=black@0.0:s=960x720:r=25:d=2,format=rgba,setpts=PTS-STARTPTS[cc_transparent_48];\n[cc_transparent_48][cc_clip_47]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=2,setpts=PTS-STARTPTS[cc_positioned_49];\n[cc_concat_46][cc_positioned_49]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_50];\n[0:v:0]trim=start=197.31:end=199.94,setpts=(PTS-STARTPTS)/1.315,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=2,setpts=PTS-STARTPTS[cc_clip_51];\ncolor=c=black@0.0:s=960x720:r=25:d=2,format=rgba,setpts=PTS-STARTPTS[cc_transparent_52];\n[cc_transparent_52][cc_clip_51]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=2,setpts=PTS-STARTPTS[cc_positioned_53];\n[cc_concat_50][cc_positioned_53]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_54];\n[0:v:0]trim=start=199.83:end=202.44,setpts=(PTS-STARTPTS)/1.305,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=2,setpts=PTS-STARTPTS[cc_clip_55];\ncolor=c=black@0.0:s=960x720:r=25:d=2,format=rgba,setpts=PTS-STARTPTS[cc_transparent_56];\n[cc_transparent_56][cc_clip_55]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=2,setpts=PTS-STARTPTS[cc_positioned_57];\n[cc_concat_54][cc_positioned_57]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_58];\n[0:v:0]trim=start=202.33:end=204.72,setpts=(PTS-STARTPTS)/1.195,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=2,setpts=PTS-STARTPTS[cc_clip_59];\ncolor=c=black@0.0:s=960x720:r=25:d=2,format=rgba,setpts=PTS-STARTPTS[cc_transparent_60];\n[cc_transparent_60][cc_clip_59]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=2,setpts=PTS-STARTPTS[cc_positioned_61];\n[cc_concat_58][cc_positioned_61]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_62];\n[0:v:0]trim=start=204.61:end=206.8,setpts=(PTS-STARTPTS)/1.095,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=2,setpts=PTS-STARTPTS[cc_clip_63];\ncolor=c=black@0.0:s=960x720:r=25:d=2,format=rgba,setpts=PTS-STARTPTS[cc_transparent_64];\n[cc_transparent_64][cc_clip_63]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=2,setpts=PTS-STARTPTS[cc_positioned_65];\n[cc_concat_62][cc_positioned_65]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_66];\n[0:v:0]trim=start=198.51:end=199.06,setpts=(PTS-STARTPTS)/1.1,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5,setpts=PTS-STARTPTS[cc_clip_67];\ncolor=c=black@0.0:s=960x720:r=25:d=0.5,format=rgba,setpts=PTS-STARTPTS[cc_transparent_68];\n[cc_transparent_68][cc_clip_67]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5,setpts=PTS-STARTPTS[cc_positioned_69];\n[cc_concat_66][cc_positioned_69]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_70];\n[0:v:0]trim=start=198.51:end=199.06,setpts=(PTS-STARTPTS)/1.1,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5,setpts=PTS-STARTPTS[cc_clip_71];\ncolor=c=black@0.0:s=960x720:r=25:d=0.5,format=rgba,setpts=PTS-STARTPTS[cc_transparent_72];\n[cc_transparent_72][cc_clip_71]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5,setpts=PTS-STARTPTS[cc_positioned_73];\n[cc_concat_70][cc_positioned_73]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_74];\n[0:v:0]trim=start=199.29:end=199.94,setpts=(PTS-STARTPTS)/1.3,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5,setpts=PTS-STARTPTS[cc_clip_75];\ncolor=c=black@0.0:s=960x720:r=25:d=0.5,format=rgba,setpts=PTS-STARTPTS[cc_transparent_76];\n[cc_transparent_76][cc_clip_75]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5,setpts=PTS-STARTPTS[cc_positioned_77];\n[cc_concat_74][cc_positioned_77]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_78];\n[0:v:0]trim=start=199.29:end=199.94,setpts=(PTS-STARTPTS)/1.3,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5,setpts=PTS-STARTPTS[cc_clip_79];\ncolor=c=black@0.0:s=960x720:r=25:d=0.5,format=rgba,setpts=PTS-STARTPTS[cc_transparent_80];\n[cc_transparent_80][cc_clip_79]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5,setpts=PTS-STARTPTS[cc_positioned_81];\n[cc_concat_78][cc_positioned_81]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_82];\n[0:v:0]trim=start=197.31:end=199.94,setpts=(PTS-STARTPTS)/1.315,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=2,setpts=PTS-STARTPTS[cc_clip_83];\ncolor=c=black@0.0:s=960x720:r=25:d=2,format=rgba,setpts=PTS-STARTPTS[cc_transparent_84];\n[cc_transparent_84][cc_clip_83]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=2,setpts=PTS-STARTPTS[cc_positioned_85];\n[cc_concat_82][cc_positioned_85]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_86];\n[0:v:0]trim=start=199.83:end=202.44,setpts=(PTS-STARTPTS)/1.305,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=2,setpts=PTS-STARTPTS[cc_clip_87];\ncolor=c=black@0.0:s=960x720:r=25:d=2,format=rgba,setpts=PTS-STARTPTS[cc_transparent_88];\n[cc_transparent_88][cc_clip_87]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=2,setpts=PTS-STARTPTS[cc_positioned_89];\n[cc_concat_86][cc_positioned_89]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_90];\n[0:v:0]trim=start=206.69:end=207.34,setpts=(PTS-STARTPTS)/1.3,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5,setpts=PTS-STARTPTS[cc_clip_91];\ncolor=c=black@0.0:s=960x720:r=25:d=0.5,format=rgba,setpts=PTS-STARTPTS[cc_transparent_92];\n[cc_transparent_92][cc_clip_91]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5,setpts=PTS-STARTPTS[cc_positioned_93];\n[cc_concat_90][cc_positioned_93]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_94];\n[0:v:0]trim=start=206.69:end=207.34,setpts=(PTS-STARTPTS)/1.3,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5,setpts=PTS-STARTPTS[cc_clip_95];\ncolor=c=black@0.0:s=960x720:r=25:d=0.5,format=rgba,setpts=PTS-STARTPTS[cc_transparent_96];\n[cc_transparent_96][cc_clip_95]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5,setpts=PTS-STARTPTS[cc_positioned_97];\n[cc_concat_94][cc_positioned_97]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_98];\n[0:v:0]trim=start=295.77:end=297.88,setpts=(PTS-STARTPTS)/1.055,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=2,setpts=PTS-STARTPTS[cc_clip_99];\ncolor=c=black@0.0:s=960x720:r=25:d=2,format=rgba,setpts=PTS-STARTPTS[cc_transparent_100];\n[cc_transparent_100][cc_clip_99]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=2,setpts=PTS-STARTPTS[cc_positioned_101];\n[cc_concat_98][cc_positioned_101]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_102];\n[0:v:0]trim=start=297.77:end=298.52,setpts=(PTS-STARTPTS)/1.5,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.5,setpts=PTS-STARTPTS[cc_clip_103];\ncolor=c=black@0.0:s=960x720:r=25:d=0.5,format=rgba,setpts=PTS-STARTPTS[cc_transparent_104];\n[cc_transparent_104][cc_clip_103]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.5,setpts=PTS-STARTPTS[cc_positioned_105];\n[cc_concat_102][cc_positioned_105]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_106];\n[1:v:0]trim=duration=2.5,setpts=PTS-STARTPTS,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=2.5,setpts=PTS-STARTPTS[cc_clip_107];\ncolor=c=black@0.0:s=960x720:r=25:d=2.5,format=rgba,setpts=PTS-STARTPTS[cc_transparent_108];\n[cc_transparent_108][cc_clip_107]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=2.5,setpts=PTS-STARTPTS[cc_positioned_109];\n[cc_concat_106][cc_positioned_109]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_110];\ncolor=c=black@0.0:s=960x720:r=25:d=1.96,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-0.txt:expansion=none:fontsize=50:fontcolor=0xFFF200:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=Noto\\ Sans\\ CJK\\ SC,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1.96,setpts=PTS-STARTPTS[cc_clip_111];\ncolor=c=black@0.0:s=960x720:r=25:d=1.96,format=rgba,setpts=PTS-STARTPTS[cc_transparent_112];\n[cc_transparent_112][cc_clip_111]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1.96,setpts=PTS-STARTPTS[cc_positioned_113];\ncolor=c=black@0.0:s=960x720:r=25:d=0.02,format=rgba,setpts=PTS-STARTPTS[cc_transparent_114];\n[cc_transparent_114][cc_positioned_113]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_115];\ncolor=c=black@0.0:s=960x720:r=25:d=0.96,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-1.txt:expansion=none:fontsize=62:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=Noto\\ Sans\\ CJK\\ SC,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.96,setpts=PTS-STARTPTS[cc_clip_116];\ncolor=c=black@0.0:s=960x720:r=25:d=0.96,format=rgba,setpts=PTS-STARTPTS[cc_transparent_117];\n[cc_transparent_117][cc_clip_116]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.96,setpts=PTS-STARTPTS[cc_positioned_118];\ncolor=c=black@0.0:s=960x720:r=25:d=0.04,format=rgba,setpts=PTS-STARTPTS[cc_transparent_119];\n[cc_concat_115][cc_transparent_119]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_120];\n[cc_concat_120][cc_positioned_118]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_121];\ncolor=c=black@0.0:s=960x720:r=25:d=0.96,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-2.txt:expansion=none:fontsize=62:fontcolor=0xFFF200:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=Noto\\ Sans\\ CJK\\ SC,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.96,setpts=PTS-STARTPTS[cc_clip_122];\ncolor=c=black@0.0:s=960x720:r=25:d=0.96,format=rgba,setpts=PTS-STARTPTS[cc_transparent_123];\n[cc_transparent_123][cc_clip_122]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.96,setpts=PTS-STARTPTS[cc_positioned_124];\ncolor=c=black@0.0:s=960x720:r=25:d=0.04,format=rgba,setpts=PTS-STARTPTS[cc_transparent_125];\n[cc_concat_121][cc_transparent_125]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_126];\n[cc_concat_126][cc_positioned_124]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_127];\ncolor=c=black@0.0:s=960x720:r=25:d=0.96,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-3.txt:expansion=none:fontsize=62:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=Noto\\ Sans\\ CJK\\ SC,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.96,setpts=PTS-STARTPTS[cc_clip_128];\ncolor=c=black@0.0:s=960x720:r=25:d=0.96,format=rgba,setpts=PTS-STARTPTS[cc_transparent_129];\n[cc_transparent_129][cc_clip_128]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.96,setpts=PTS-STARTPTS[cc_positioned_130];\ncolor=c=black@0.0:s=960x720:r=25:d=0.04,format=rgba,setpts=PTS-STARTPTS[cc_transparent_131];\n[cc_concat_127][cc_transparent_131]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_132];\n[cc_concat_132][cc_positioned_130]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_133];\ncolor=c=black@0.0:s=960x720:r=25:d=0.96,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-4.txt:expansion=none:fontsize=62:fontcolor=0xFFF200:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=Noto\\ Sans\\ CJK\\ SC,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.96,setpts=PTS-STARTPTS[cc_clip_134];\ncolor=c=black@0.0:s=960x720:r=25:d=0.96,format=rgba,setpts=PTS-STARTPTS[cc_transparent_135];\n[cc_transparent_135][cc_clip_134]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.96,setpts=PTS-STARTPTS[cc_positioned_136];\ncolor=c=black@0.0:s=960x720:r=25:d=0.04,format=rgba,setpts=PTS-STARTPTS[cc_transparent_137];\n[cc_concat_133][cc_transparent_137]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_138];\n[cc_concat_138][cc_positioned_136]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_139];\ncolor=c=black@0.0:s=960x720:r=25:d=0.96,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-5.txt:expansion=none:fontsize=62:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=Noto\\ Sans\\ CJK\\ SC,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.96,setpts=PTS-STARTPTS[cc_clip_140];\ncolor=c=black@0.0:s=960x720:r=25:d=0.96,format=rgba,setpts=PTS-STARTPTS[cc_transparent_141];\n[cc_transparent_141][cc_clip_140]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.96,setpts=PTS-STARTPTS[cc_positioned_142];\ncolor=c=black@0.0:s=960x720:r=25:d=0.04,format=rgba,setpts=PTS-STARTPTS[cc_transparent_143];\n[cc_concat_139][cc_transparent_143]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_144];\n[cc_concat_144][cc_positioned_142]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_145];\ncolor=c=black@0.0:s=960x720:r=25:d=0.96,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-6.txt:expansion=none:fontsize=62:fontcolor=0xFFF200:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=Noto\\ Sans\\ CJK\\ SC,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.96,setpts=PTS-STARTPTS[cc_clip_146];\ncolor=c=black@0.0:s=960x720:r=25:d=0.96,format=rgba,setpts=PTS-STARTPTS[cc_transparent_147];\n[cc_transparent_147][cc_clip_146]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.96,setpts=PTS-STARTPTS[cc_positioned_148];\ncolor=c=black@0.0:s=960x720:r=25:d=0.04,format=rgba,setpts=PTS-STARTPTS[cc_transparent_149];\n[cc_concat_145][cc_transparent_149]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_150];\n[cc_concat_150][cc_positioned_148]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_151];\ncolor=c=black@0.0:s=960x720:r=25:d=0.96,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-7.txt:expansion=none:fontsize=62:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=Noto\\ Sans\\ CJK\\ SC,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.96,setpts=PTS-STARTPTS[cc_clip_152];\ncolor=c=black@0.0:s=960x720:r=25:d=0.96,format=rgba,setpts=PTS-STARTPTS[cc_transparent_153];\n[cc_transparent_153][cc_clip_152]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.96,setpts=PTS-STARTPTS[cc_positioned_154];\ncolor=c=black@0.0:s=960x720:r=25:d=0.04,format=rgba,setpts=PTS-STARTPTS[cc_transparent_155];\n[cc_concat_151][cc_transparent_155]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_156];\n[cc_concat_156][cc_positioned_154]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_157];\ncolor=c=black@0.0:s=960x720:r=25:d=0.96,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-8.txt:expansion=none:fontsize=62:fontcolor=0xFFF200:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=Noto\\ Sans\\ CJK\\ SC,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.96,setpts=PTS-STARTPTS[cc_clip_158];\ncolor=c=black@0.0:s=960x720:r=25:d=0.96,format=rgba,setpts=PTS-STARTPTS[cc_transparent_159];\n[cc_transparent_159][cc_clip_158]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.96,setpts=PTS-STARTPTS[cc_positioned_160];\ncolor=c=black@0.0:s=960x720:r=25:d=0.04,format=rgba,setpts=PTS-STARTPTS[cc_transparent_161];\n[cc_concat_157][cc_transparent_161]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_162];\n[cc_concat_162][cc_positioned_160]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_163];\ncolor=c=black@0.0:s=960x720:r=25:d=0.96,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-9.txt:expansion=none:fontsize=62:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=Noto\\ Sans\\ CJK\\ SC,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.96,setpts=PTS-STARTPTS[cc_clip_164];\ncolor=c=black@0.0:s=960x720:r=25:d=0.96,format=rgba,setpts=PTS-STARTPTS[cc_transparent_165];\n[cc_transparent_165][cc_clip_164]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.96,setpts=PTS-STARTPTS[cc_positioned_166];\ncolor=c=black@0.0:s=960x720:r=25:d=0.04,format=rgba,setpts=PTS-STARTPTS[cc_transparent_167];\n[cc_concat_163][cc_transparent_167]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_168];\n[cc_concat_168][cc_positioned_166]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_169];\ncolor=c=black@0.0:s=960x720:r=25:d=0.96,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-10.txt:expansion=none:fontsize=62:fontcolor=0xFFF200:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=Noto\\ Sans\\ CJK\\ SC,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.96,setpts=PTS-STARTPTS[cc_clip_170];\ncolor=c=black@0.0:s=960x720:r=25:d=0.96,format=rgba,setpts=PTS-STARTPTS[cc_transparent_171];\n[cc_transparent_171][cc_clip_170]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.96,setpts=PTS-STARTPTS[cc_positioned_172];\ncolor=c=black@0.0:s=960x720:r=25:d=0.04,format=rgba,setpts=PTS-STARTPTS[cc_transparent_173];\n[cc_concat_169][cc_transparent_173]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_174];\n[cc_concat_174][cc_positioned_172]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_175];\ncolor=c=black@0.0:s=960x720:r=25:d=1.96,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-11.txt:expansion=none:fontsize=62:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=Noto\\ Sans\\ CJK\\ SC,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1.96,setpts=PTS-STARTPTS[cc_clip_176];\ncolor=c=black@0.0:s=960x720:r=25:d=1.96,format=rgba,setpts=PTS-STARTPTS[cc_transparent_177];\n[cc_transparent_177][cc_clip_176]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1.96,setpts=PTS-STARTPTS[cc_positioned_178];\ncolor=c=black@0.0:s=960x720:r=25:d=0.04,format=rgba,setpts=PTS-STARTPTS[cc_transparent_179];\n[cc_concat_175][cc_transparent_179]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_180];\n[cc_concat_180][cc_positioned_178]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_181];\ncolor=c=black@0.0:s=960x720:r=25:d=1.96,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-12.txt:expansion=none:fontsize=62:fontcolor=0xFFF200:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=Noto\\ Sans\\ CJK\\ SC,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1.96,setpts=PTS-STARTPTS[cc_clip_182];\ncolor=c=black@0.0:s=960x720:r=25:d=1.96,format=rgba,setpts=PTS-STARTPTS[cc_transparent_183];\n[cc_transparent_183][cc_clip_182]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1.96,setpts=PTS-STARTPTS[cc_positioned_184];\ncolor=c=black@0.0:s=960x720:r=25:d=0.04,format=rgba,setpts=PTS-STARTPTS[cc_transparent_185];\n[cc_concat_181][cc_transparent_185]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_186];\n[cc_concat_186][cc_positioned_184]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_187];\ncolor=c=black@0.0:s=960x720:r=25:d=1.96,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-13.txt:expansion=none:fontsize=62:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=Noto\\ Sans\\ CJK\\ SC,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1.96,setpts=PTS-STARTPTS[cc_clip_188];\ncolor=c=black@0.0:s=960x720:r=25:d=1.96,format=rgba,setpts=PTS-STARTPTS[cc_transparent_189];\n[cc_transparent_189][cc_clip_188]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1.96,setpts=PTS-STARTPTS[cc_positioned_190];\ncolor=c=black@0.0:s=960x720:r=25:d=0.04,format=rgba,setpts=PTS-STARTPTS[cc_transparent_191];\n[cc_concat_187][cc_transparent_191]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_192];\n[cc_concat_192][cc_positioned_190]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_193];\ncolor=c=black@0.0:s=960x720:r=25:d=1.96,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-14.txt:expansion=none:fontsize=62:fontcolor=0xFFF200:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=Noto\\ Sans\\ CJK\\ SC,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1.96,setpts=PTS-STARTPTS[cc_clip_194];\ncolor=c=black@0.0:s=960x720:r=25:d=1.96,format=rgba,setpts=PTS-STARTPTS[cc_transparent_195];\n[cc_transparent_195][cc_clip_194]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1.96,setpts=PTS-STARTPTS[cc_positioned_196];\ncolor=c=black@0.0:s=960x720:r=25:d=0.04,format=rgba,setpts=PTS-STARTPTS[cc_transparent_197];\n[cc_concat_193][cc_transparent_197]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_198];\n[cc_concat_198][cc_positioned_196]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_199];\ncolor=c=black@0.0:s=960x720:r=25:d=1.96,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-15.txt:expansion=none:fontsize=62:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=Noto\\ Sans\\ CJK\\ SC,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1.96,setpts=PTS-STARTPTS[cc_clip_200];\ncolor=c=black@0.0:s=960x720:r=25:d=1.96,format=rgba,setpts=PTS-STARTPTS[cc_transparent_201];\n[cc_transparent_201][cc_clip_200]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1.96,setpts=PTS-STARTPTS[cc_positioned_202];\ncolor=c=black@0.0:s=960x720:r=25:d=0.04,format=rgba,setpts=PTS-STARTPTS[cc_transparent_203];\n[cc_concat_199][cc_transparent_203]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_204];\n[cc_concat_204][cc_positioned_202]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_205];\ncolor=c=black@0.0:s=960x720:r=25:d=1.96,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-16.txt:expansion=none:fontsize=62:fontcolor=0xFFF200:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=Noto\\ Sans\\ CJK\\ SC,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1.96,setpts=PTS-STARTPTS[cc_clip_206];\ncolor=c=black@0.0:s=960x720:r=25:d=1.96,format=rgba,setpts=PTS-STARTPTS[cc_transparent_207];\n[cc_transparent_207][cc_clip_206]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1.96,setpts=PTS-STARTPTS[cc_positioned_208];\ncolor=c=black@0.0:s=960x720:r=25:d=0.04,format=rgba,setpts=PTS-STARTPTS[cc_transparent_209];\n[cc_concat_205][cc_transparent_209]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_210];\n[cc_concat_210][cc_positioned_208]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_211];\ncolor=c=black@0.0:s=960x720:r=25:d=0.46,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-17.txt:expansion=none:fontsize=78:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=Noto\\ Sans\\ CJK\\ SC,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.46,setpts=PTS-STARTPTS[cc_clip_212];\ncolor=c=black@0.0:s=960x720:r=25:d=0.46,format=rgba,setpts=PTS-STARTPTS[cc_transparent_213];\n[cc_transparent_213][cc_clip_212]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.46,setpts=PTS-STARTPTS[cc_positioned_214];\ncolor=c=black@0.0:s=960x720:r=25:d=0.04,format=rgba,setpts=PTS-STARTPTS[cc_transparent_215];\n[cc_concat_211][cc_transparent_215]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_216];\n[cc_concat_216][cc_positioned_214]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_217];\ncolor=c=black@0.0:s=960x720:r=25:d=0.46,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-18.txt:expansion=none:fontsize=78:fontcolor=0xFFF200:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=Noto\\ Sans\\ CJK\\ SC,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.46,setpts=PTS-STARTPTS[cc_clip_218];\ncolor=c=black@0.0:s=960x720:r=25:d=0.46,format=rgba,setpts=PTS-STARTPTS[cc_transparent_219];\n[cc_transparent_219][cc_clip_218]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.46,setpts=PTS-STARTPTS[cc_positioned_220];\ncolor=c=black@0.0:s=960x720:r=25:d=0.04,format=rgba,setpts=PTS-STARTPTS[cc_transparent_221];\n[cc_concat_217][cc_transparent_221]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_222];\n[cc_concat_222][cc_positioned_220]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_223];\ncolor=c=black@0.0:s=960x720:r=25:d=0.46,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-19.txt:expansion=none:fontsize=78:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=Noto\\ Sans\\ CJK\\ SC,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.46,setpts=PTS-STARTPTS[cc_clip_224];\ncolor=c=black@0.0:s=960x720:r=25:d=0.46,format=rgba,setpts=PTS-STARTPTS[cc_transparent_225];\n[cc_transparent_225][cc_clip_224]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.46,setpts=PTS-STARTPTS[cc_positioned_226];\ncolor=c=black@0.0:s=960x720:r=25:d=0.04,format=rgba,setpts=PTS-STARTPTS[cc_transparent_227];\n[cc_concat_223][cc_transparent_227]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_228];\n[cc_concat_228][cc_positioned_226]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_229];\ncolor=c=black@0.0:s=960x720:r=25:d=0.46,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-20.txt:expansion=none:fontsize=78:fontcolor=0xFFF200:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=Noto\\ Sans\\ CJK\\ SC,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.46,setpts=PTS-STARTPTS[cc_clip_230];\ncolor=c=black@0.0:s=960x720:r=25:d=0.46,format=rgba,setpts=PTS-STARTPTS[cc_transparent_231];\n[cc_transparent_231][cc_clip_230]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.46,setpts=PTS-STARTPTS[cc_positioned_232];\ncolor=c=black@0.0:s=960x720:r=25:d=0.04,format=rgba,setpts=PTS-STARTPTS[cc_transparent_233];\n[cc_concat_229][cc_transparent_233]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_234];\n[cc_concat_234][cc_positioned_232]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_235];\ncolor=c=black@0.0:s=960x720:r=25:d=1.96,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-21.txt:expansion=none:fontsize=62:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=Noto\\ Sans\\ CJK\\ SC,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1.96,setpts=PTS-STARTPTS[cc_clip_236];\ncolor=c=black@0.0:s=960x720:r=25:d=1.96,format=rgba,setpts=PTS-STARTPTS[cc_transparent_237];\n[cc_transparent_237][cc_clip_236]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1.96,setpts=PTS-STARTPTS[cc_positioned_238];\ncolor=c=black@0.0:s=960x720:r=25:d=0.04,format=rgba,setpts=PTS-STARTPTS[cc_transparent_239];\n[cc_concat_235][cc_transparent_239]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_240];\n[cc_concat_240][cc_positioned_238]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_241];\ncolor=c=black@0.0:s=960x720:r=25:d=1.96,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-22.txt:expansion=none:fontsize=62:fontcolor=0xFFF200:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=Noto\\ Sans\\ CJK\\ SC,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1.96,setpts=PTS-STARTPTS[cc_clip_242];\ncolor=c=black@0.0:s=960x720:r=25:d=1.96,format=rgba,setpts=PTS-STARTPTS[cc_transparent_243];\n[cc_transparent_243][cc_clip_242]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1.96,setpts=PTS-STARTPTS[cc_positioned_244];\ncolor=c=black@0.0:s=960x720:r=25:d=0.04,format=rgba,setpts=PTS-STARTPTS[cc_transparent_245];\n[cc_concat_241][cc_transparent_245]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_246];\n[cc_concat_246][cc_positioned_244]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_247];\ncolor=c=black@0.0:s=960x720:r=25:d=0.46,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-23.txt:expansion=none:fontsize=78:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=Noto\\ Sans\\ CJK\\ SC,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.46,setpts=PTS-STARTPTS[cc_clip_248];\ncolor=c=black@0.0:s=960x720:r=25:d=0.46,format=rgba,setpts=PTS-STARTPTS[cc_transparent_249];\n[cc_transparent_249][cc_clip_248]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.46,setpts=PTS-STARTPTS[cc_positioned_250];\ncolor=c=black@0.0:s=960x720:r=25:d=0.04,format=rgba,setpts=PTS-STARTPTS[cc_transparent_251];\n[cc_concat_247][cc_transparent_251]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_252];\n[cc_concat_252][cc_positioned_250]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_253];\ncolor=c=black@0.0:s=960x720:r=25:d=0.46,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-24.txt:expansion=none:fontsize=78:fontcolor=0xFFF200:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=Noto\\ Sans\\ CJK\\ SC,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.46,setpts=PTS-STARTPTS[cc_clip_254];\ncolor=c=black@0.0:s=960x720:r=25:d=0.46,format=rgba,setpts=PTS-STARTPTS[cc_transparent_255];\n[cc_transparent_255][cc_clip_254]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.46,setpts=PTS-STARTPTS[cc_positioned_256];\ncolor=c=black@0.0:s=960x720:r=25:d=0.04,format=rgba,setpts=PTS-STARTPTS[cc_transparent_257];\n[cc_concat_253][cc_transparent_257]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_258];\n[cc_concat_258][cc_positioned_256]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_259];\ncolor=c=black@0.0:s=960x720:r=25:d=1.96,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-25.txt:expansion=none:fontsize=62:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=Noto\\ Sans\\ CJK\\ SC,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=1.96,setpts=PTS-STARTPTS[cc_clip_260];\ncolor=c=black@0.0:s=960x720:r=25:d=1.96,format=rgba,setpts=PTS-STARTPTS[cc_transparent_261];\n[cc_transparent_261][cc_clip_260]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=1.96,setpts=PTS-STARTPTS[cc_positioned_262];\ncolor=c=black@0.0:s=960x720:r=25:d=0.04,format=rgba,setpts=PTS-STARTPTS[cc_transparent_263];\n[cc_concat_259][cc_transparent_263]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_264];\n[cc_concat_264][cc_positioned_262]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_265];\ncolor=c=black@0.0:s=960x720:r=25:d=0.46,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-26.txt:expansion=none:fontsize=78:fontcolor=0xFFF200:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=Noto\\ Sans\\ CJK\\ SC,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=0.46,setpts=PTS-STARTPTS[cc_clip_266];\ncolor=c=black@0.0:s=960x720:r=25:d=0.46,format=rgba,setpts=PTS-STARTPTS[cc_transparent_267];\n[cc_transparent_267][cc_clip_266]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=0.46,setpts=PTS-STARTPTS[cc_positioned_268];\ncolor=c=black@0.0:s=960x720:r=25:d=0.04,format=rgba,setpts=PTS-STARTPTS[cc_transparent_269];\n[cc_concat_265][cc_transparent_269]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_270];\n[cc_concat_270][cc_positioned_268]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_271];\ncolor=c=black@0.0:s=960x720:r=25:d=2.5,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-27.txt:expansion=none:fontsize=54:fontcolor=0xFFF200:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=Noto\\ Sans\\ CJK\\ SC,fps=25,format=rgba,scale=w=960:h=720:force_original_aspect_ratio=decrease,trim=duration=2.5,setpts=PTS-STARTPTS[cc_clip_272];\ncolor=c=black@0.0:s=960x720:r=25:d=2.5,format=rgba,setpts=PTS-STARTPTS[cc_transparent_273];\n[cc_transparent_273][cc_clip_272]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=2.5,setpts=PTS-STARTPTS[cc_positioned_274];\ncolor=c=black@0.0:s=960x720:r=25:d=0.02,format=rgba,setpts=PTS-STARTPTS[cc_transparent_275];\n[cc_concat_271][cc_transparent_275]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_276];\n[cc_concat_276][cc_positioned_274]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_277];\ncolor=c=black:s=960x720:r=25:d=36,format=rgba,setpts=PTS-STARTPTS[cc_black_278];\n[cc_black_278][cc_concat_110]overlay=x=0:y=0:eof_action=pass:repeatlast=0:format=auto,setpts=PTS-STARTPTS[cc_composite_279];\n[cc_composite_279][cc_concat_277]overlay=x=0:y=0:eof_action=pass:repeatlast=0:format=auto,setpts=PTS-STARTPTS[cc_composite_280];\n[cc_composite_280]fps=25,trim=duration=36,format=yuv420p,setpts=PTS-STARTPTS[vout];\n[0:a:0]atrim=start=1.59:end=3.48,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,atempo=0.945,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=2,atrim=duration=2,adelay=delays=0:all=1,asetpts=PTS-STARTPTS[cc_source_audio_281];\n[0:a:0]atrim=start=90.73:end=92.28,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,atempo=1.55,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=1,atrim=duration=1,adelay=delays=2000:all=1,asetpts=PTS-STARTPTS[cc_source_audio_282];\n[0:a:0]atrim=start=92.17:end=93.62,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,atempo=1.45,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=1,atrim=duration=1,adelay=delays=3000:all=1,asetpts=PTS-STARTPTS[cc_source_audio_283];\n[0:a:0]atrim=start=94.03:end=95.62,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,atempo=1.59,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=1,atrim=duration=1,adelay=delays=4000:all=1,asetpts=PTS-STARTPTS[cc_source_audio_284];\n[0:a:0]atrim=start=95.51:end=96.58,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,atempo=1.07,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=1,atrim=duration=1,adelay=delays=5000:all=1,asetpts=PTS-STARTPTS[cc_source_audio_285];\n[0:a:0]atrim=start=96.47:end=97.62,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,atempo=1.15,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=1,atrim=duration=1,adelay=delays=6000:all=1,asetpts=PTS-STARTPTS[cc_source_audio_286];\n[0:a:0]atrim=start=97.51:end=98.54,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,atempo=1.03,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=1,atrim=duration=1,adelay=delays=7000:all=1,asetpts=PTS-STARTPTS[cc_source_audio_287];\n[0:a:0]atrim=start=98.43:end=99.66,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,atempo=1.23,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=1,atrim=duration=1,adelay=delays=8000:all=1,asetpts=PTS-STARTPTS[cc_source_audio_288];\n[0:a:0]atrim=start=99.55:end=100.7,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,atempo=1.15,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=1,atrim=duration=1,adelay=delays=9000:all=1,asetpts=PTS-STARTPTS[cc_source_audio_289];\n[0:a:0]atrim=start=190.7:end=192.09,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,atempo=1.39,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=1,atrim=duration=1,adelay=delays=10000:all=1,asetpts=PTS-STARTPTS[cc_source_audio_290];\n[0:a:0]atrim=start=213.55:end=214.88,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,atempo=1.33,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=1,atrim=duration=1,adelay=delays=11000:all=1,asetpts=PTS-STARTPTS[cc_source_audio_291];\n[0:a:0]atrim=start=197.31:end=199.94,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,atempo=1.315,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=2,atrim=duration=2,adelay=delays=12000:all=1,asetpts=PTS-STARTPTS[cc_source_audio_292];\n[0:a:0]atrim=start=199.83:end=202.44,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,atempo=1.305,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=2,atrim=duration=2,adelay=delays=14000:all=1,asetpts=PTS-STARTPTS[cc_source_audio_293];\n[0:a:0]atrim=start=197.31:end=199.94,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,atempo=1.315,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=2,atrim=duration=2,adelay=delays=16000:all=1,asetpts=PTS-STARTPTS[cc_source_audio_294];\n[0:a:0]atrim=start=199.83:end=202.44,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,atempo=1.305,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=2,atrim=duration=2,adelay=delays=18000:all=1,asetpts=PTS-STARTPTS[cc_source_audio_295];\n[0:a:0]atrim=start=202.33:end=204.72,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,atempo=1.195,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=2,atrim=duration=2,adelay=delays=20000:all=1,asetpts=PTS-STARTPTS[cc_source_audio_296];\n[0:a:0]atrim=start=204.61:end=206.8,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,atempo=1.095,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=2,atrim=duration=2,adelay=delays=22000:all=1,asetpts=PTS-STARTPTS[cc_source_audio_297];\n[0:a:0]atrim=start=198.51:end=199.06,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,atempo=1.1,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5,atrim=duration=0.5,adelay=delays=24000:all=1,asetpts=PTS-STARTPTS[cc_source_audio_298];\n[0:a:0]atrim=start=198.51:end=199.06,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,atempo=1.1,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5,atrim=duration=0.5,adelay=delays=24500:all=1,asetpts=PTS-STARTPTS[cc_source_audio_299];\n[0:a:0]atrim=start=199.29:end=199.94,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,atempo=1.3,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5,atrim=duration=0.5,adelay=delays=25000:all=1,asetpts=PTS-STARTPTS[cc_source_audio_300];\n[0:a:0]atrim=start=199.29:end=199.94,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,atempo=1.3,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5,atrim=duration=0.5,adelay=delays=25500:all=1,asetpts=PTS-STARTPTS[cc_source_audio_301];\n[0:a:0]atrim=start=197.31:end=199.94,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,atempo=1.315,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=2,atrim=duration=2,adelay=delays=26000:all=1,asetpts=PTS-STARTPTS[cc_source_audio_302];\n[0:a:0]atrim=start=199.83:end=202.44,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,atempo=1.305,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=2,atrim=duration=2,adelay=delays=28000:all=1,asetpts=PTS-STARTPTS[cc_source_audio_303];\n[0:a:0]atrim=start=206.69:end=207.34,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,atempo=1.3,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5,atrim=duration=0.5,adelay=delays=30000:all=1,asetpts=PTS-STARTPTS[cc_source_audio_304];\n[0:a:0]atrim=start=206.69:end=207.34,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,atempo=1.3,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5,atrim=duration=0.5,adelay=delays=30500:all=1,asetpts=PTS-STARTPTS[cc_source_audio_305];\n[0:a:0]atrim=start=295.77:end=297.88,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,atempo=1.055,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=2,atrim=duration=2,adelay=delays=31000:all=1,asetpts=PTS-STARTPTS[cc_source_audio_306];\n[0:a:0]atrim=start=297.77:end=298.52,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,atempo=1.5,asetpts=PTS-STARTPTS,volume=0,apad=pad_dur=0.5,atrim=duration=0.5,adelay=delays=33000:all=1,asetpts=PTS-STARTPTS[cc_source_audio_307];\n[2:a:0]atrim=start=0:end=36,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0.38,apad=pad_dur=36,atrim=duration=36,adelay=delays=0:all=1,asetpts=PTS-STARTPTS[cc_audio_308];\n[3:a:0]atrim=start=0:end=36,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0.95,apad=pad_dur=36,atrim=duration=36,adelay=delays=0:all=1,asetpts=PTS-STARTPTS[cc_audio_309];\nanullsrc=r=48000:cl=stereo:d=36[cc_silence_310];\n[cc_silence_310][cc_source_audio_281][cc_source_audio_282][cc_source_audio_283][cc_source_audio_284][cc_source_audio_285][cc_source_audio_286][cc_source_audio_287][cc_source_audio_288][cc_source_audio_289][cc_source_audio_290][cc_source_audio_291][cc_source_audio_292][cc_source_audio_293][cc_source_audio_294][cc_source_audio_295][cc_source_audio_296][cc_source_audio_297][cc_source_audio_298][cc_source_audio_299][cc_source_audio_300][cc_source_audio_301][cc_source_audio_302][cc_source_audio_303][cc_source_audio_304][cc_source_audio_305][cc_source_audio_306][cc_source_audio_307][cc_audio_308][cc_audio_309]amix=inputs=30:duration=longest:dropout_transition=0:normalize=0,aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,atrim=duration=36,asetpts=PTS-STARTPTS[aout];\n[aout]anullsink;\n[vout]trim=start=0:end=36,setpts=PTS-STARTPTS,fps=fps=0.416666667:start_time=0:round=near,scale=w=240:h=180:force_original_aspect_ratio=decrease,pad=240:180:(ow-iw)/2:(oh-ih)/2:color=black,format=rgb24,setpts=PTS+0/TB,drawtext=text='%{pts\\:hms}':fontcolor=white:fontsize=18:box=1:boxcolor=black@0.65:boxborderw=1:x=2:y=4,tile=4x4:nb_frames=15:margin=8:padding=4:color=0x202020[preview_vout]\n",
+      "output": {
+        "path": "/workspace/demo/guichu-cut/guichu-sheet.png",
+        "temporaryPath": "{output}",
+        "format": "png",
+        "overwrite": true
+      },
+      "media": {
+        "durationSeconds": 36,
+        "width": 960,
+        "height": 720,
+        "frameRate": 25,
+        "pixelFormat": "yuv420p",
+        "videoCodec": "h264",
+        "audioCodec": "aac",
+        "audioSampleRate": 48000,
+        "audioChannels": 2
+      },
+      "warnings": [],
+      "textFiles": [
+        {
+          "clipId": "caption-00",
+          "path": "{jobDirectory}/diagnostics/text-0.txt",
+          "content": "各位朋友，春节好"
+        },
+        {
+          "clipId": "caption-01",
+          "path": "{jobDirectory}/diagnostics/text-1.txt",
+          "content": "我叫白云"
+        },
+        {
+          "clipId": "caption-02",
+          "path": "{jobDirectory}/diagnostics/text-2.txt",
+          "content": "我叫黑土"
+        },
+        {
+          "clipId": "caption-03",
+          "path": "{jobDirectory}/diagnostics/text-3.txt",
+          "content": "我七十一"
+        },
+        {
+          "clipId": "caption-04",
+          "path": "{jobDirectory}/diagnostics/text-4.txt",
+          "content": "我七十五"
+        },
+        {
+          "clipId": "caption-05",
+          "path": "{jobDirectory}/diagnostics/text-5.txt",
+          "content": "我属鸡"
+        },
+        {
+          "clipId": "caption-06",
+          "path": "{jobDirectory}/diagnostics/text-6.txt",
+          "content": "我属虎"
+        },
+        {
+          "clipId": "caption-07",
+          "path": "{jobDirectory}/diagnostics/text-7.txt",
+          "content": "这是我老公"
+        },
+        {
+          "clipId": "caption-08",
+          "path": "{jobDirectory}/diagnostics/text-8.txt",
+          "content": "这是我老母"
+        },
+        {
+          "clipId": "caption-09",
+          "path": "{jobDirectory}/diagnostics/text-9.txt",
+          "content": "准备好了"
+        },
+        {
+          "clipId": "caption-10",
+          "path": "{jobDirectory}/diagnostics/text-10.txt",
+          "content": "该我了"
+        },
+        {
+          "clipId": "caption-11",
+          "path": "{jobDirectory}/diagnostics/text-11.txt",
+          "content": "改革春风吹满地"
+        },
+        {
+          "clipId": "caption-12",
+          "path": "{jobDirectory}/diagnostics/text-12.txt",
+          "content": "中国人民真争气"
+        },
+        {
+          "clipId": "caption-13",
+          "path": "{jobDirectory}/diagnostics/text-13.txt",
+          "content": "改革春风吹满地"
+        },
+        {
+          "clipId": "caption-14",
+          "path": "{jobDirectory}/diagnostics/text-14.txt",
+          "content": "中国人民真争气"
+        },
+        {
+          "clipId": "caption-15",
+          "path": "{jobDirectory}/diagnostics/text-15.txt",
+          "content": "齐心合力跨世纪"
+        },
+        {
+          "clipId": "caption-16",
+          "path": "{jobDirectory}/diagnostics/text-16.txt",
+          "content": "一场大水没咋地"
+        },
+        {
+          "clipId": "caption-17",
+          "path": "{jobDirectory}/diagnostics/text-17.txt",
+          "content": "春风！"
+        },
+        {
+          "clipId": "caption-18",
+          "path": "{jobDirectory}/diagnostics/text-18.txt",
+          "content": "春风！"
+        },
+        {
+          "clipId": "caption-19",
+          "path": "{jobDirectory}/diagnostics/text-19.txt",
+          "content": "满地！"
+        },
+        {
+          "clipId": "caption-20",
+          "path": "{jobDirectory}/diagnostics/text-20.txt",
+          "content": "满地！"
+        },
+        {
+          "clipId": "caption-21",
+          "path": "{jobDirectory}/diagnostics/text-21.txt",
+          "content": "改革春风吹满地"
+        },
+        {
+          "clipId": "caption-22",
+          "path": "{jobDirectory}/diagnostics/text-22.txt",
+          "content": "中国人民真争气"
+        },
+        {
+          "clipId": "caption-23",
+          "path": "{jobDirectory}/diagnostics/text-23.txt",
+          "content": "谢谢！"
+        },
+        {
+          "clipId": "caption-24",
+          "path": "{jobDirectory}/diagnostics/text-24.txt",
+          "content": "谢谢！"
+        },
+        {
+          "clipId": "caption-25",
+          "path": "{jobDirectory}/diagnostics/text-25.txt",
+          "content": "风景这边更好"
+        },
+        {
+          "clipId": "caption-26",
+          "path": "{jobDirectory}/diagnostics/text-26.txt",
+          "content": "多谢！"
+        },
+        {
+          "clipId": "final-caption",
+          "path": "{jobDirectory}/diagnostics/text-27.txt",
+          "content": "原创二创 · 一键三连"
+        }
+      ],
+      "preview": {
+        "type": "sheet",
+        "start": 0,
+        "end": 36,
+        "interval": 2.4,
+        "columns": 4,
+        "rows": 4,
+        "width": 240,
+        "height": 180,
+        "sampleTimes": [
+          0,
+          2.4,
+          4.8,
+          7.2,
+          9.6,
+          12,
+          14.4,
+          16.8,
+          19.2,
+          21.6,
+          24,
+          26.4,
+          28.8,
+          31.2,
+          33.6
+        ]
+      }
+    }
+  },
+  "preview": {
+    "type": "sheet",
+    "parameters": {
+      "type": "sheet",
+      "start": 0,
+      "end": 36,
+      "interval": 2.4,
+      "columns": 4,
+      "rows": 4,
+      "width": 240,
+      "height": 180,
+      "sampleTimes": [
+        0,
+        2.4,
+        4.8,
+        7.2,
+        9.6,
+        12,
+        14.4,
+        16.8,
+        19.2,
+        21.6,
+        24,
+        26.4,
+        28.8,
+        31.2,
+        33.6
+      ]
+    }
+  },
+  "result": {
+    "data": {
+      "type": "sheet",
+      "outputPath": "/workspace/demo/guichu-cut/guichu-sheet.png",
+      "revision": 6,
+      "parameters": {
+        "type": "sheet",
+        "start": 0,
+        "end": 36,
+        "interval": 2.4,
+        "columns": 4,
+        "rows": 4,
+        "width": 240,
+        "height": 180,
+        "sampleTimes": [
+          0,
+          2.4,
+          4.8,
+          7.2,
+          9.6,
+          12,
+          14.4,
+          16.8,
+          19.2,
+          21.6,
+          24,
+          26.4,
+          28.8,
+          31.2,
+          33.6
+        ]
+      }
+    }
+  }
+}

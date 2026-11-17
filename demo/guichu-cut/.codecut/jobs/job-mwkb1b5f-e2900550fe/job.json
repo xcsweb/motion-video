@@ -1,0 +1,108 @@
+{
+  "id": "job-mwkb1b5f-e2900550fe",
+  "kind": "preview.sheet",
+  "status": "failed",
+  "health": "ok",
+  "stage": "ffmpeg.progress",
+  "projectRevision": 6,
+  "createdAt": "2026-11-17T06:21:45.268Z",
+  "outputPath": "/workspace/demo/guichu-cut/guichu-sheet.png",
+  "temporaryOutputPath": "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/temporary-output.png",
+  "preview": {
+    "type": "sheet",
+    "parameters": {
+      "type": "sheet",
+      "start": 0,
+      "end": 36,
+      "interval": 2.4,
+      "columns": 4,
+      "rows": 4,
+      "width": 240,
+      "height": 180,
+      "sampleTimes": [
+        0,
+        2.4,
+        4.8,
+        7.2,
+        9.6,
+        12,
+        14.4,
+        16.8,
+        19.2,
+        21.6,
+        24,
+        26.4,
+        28.8,
+        31.2,
+        33.6
+      ]
+    }
+  },
+  "logs": {
+    "stdout": "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/logs/stdout.log",
+    "stderr": "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/logs/stderr.log",
+    "progress": "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/logs/progress.log",
+    "progressEvents": "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/logs/progress.jsonl"
+  },
+  "diagnostics": {
+    "directory": "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics",
+    "request": "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/request.json",
+    "snapshot": "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/snapshot.json",
+    "arguments": "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/arguments.json",
+    "filterGraph": "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/filter_complex.txt",
+    "plan": "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/plan.json",
+    "textFiles": [
+      "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/text-0.txt",
+      "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/text-1.txt",
+      "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/text-2.txt",
+      "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/text-3.txt",
+      "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/text-4.txt",
+      "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/text-5.txt",
+      "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/text-6.txt",
+      "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/text-7.txt",
+      "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/text-8.txt",
+      "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/text-9.txt",
+      "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/text-10.txt",
+      "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/text-11.txt",
+      "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/text-12.txt",
+      "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/text-13.txt",
+      "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/text-14.txt",
+      "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/text-15.txt",
+      "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/text-16.txt",
+      "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/text-17.txt",
+      "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/text-18.txt",
+      "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/text-19.txt",
+      "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/text-20.txt",
+      "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/text-21.txt",
+      "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/text-22.txt",
+      "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/text-23.txt",
+      "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/text-24.txt",
+      "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/text-25.txt",
+      "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/text-26.txt",
+      "/workspace/demo/guichu-cut/.codecut/jobs/job-mwkb1b5f-e2900550fe/diagnostics/text-27.txt"
+    ]
+  },
+  "workerPid": 282073,
+  "heartbeatAt": "2026-11-17T06:22:06.495Z",
+  "pid": 282087,
+  "startedAt": "2026-11-17T06:21:45.319Z",
+  "progress": {
+    "percent": 0
+  },
+  "finishedAt": "2026-11-17T06:22:06.495Z",
+  "logTail": {
+    "stdout": "",
+    "stderr": "Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/workspace/.tmp-guichu/zuotian.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Duration: 00:17:19.23, start: 0.000000, bitrate: 447 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 480x360, 412 kb/s, 25 fps, 25 tbr, 90k tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 32 kb/s (default)\n    Metadata:\n      handler_name    : SoundHandler\n      vendor_id       : [0][0][0][0]\nInput #1, png_pipe, from '/workspace/.tmp-guichu/final-freeze.png':\n  Duration: N/A, bitrate: N/A\n  Stream #1:0: Video: png, rgb24(pc, gbr/unknown/unknown), 480x360, 25 fps, 25 tbr, 25 tbn\n[aist#2:0/pcm_s16le @ 0x55d8b1309ac0] Guessed Channel Layout: mono\nInput #2, wav, from '/workspace/.tmp-guichu/original-beat.wav':\n  Duration: 00:00:36.00, bitrate: 768 kb/s\n  Stream #2:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 48000 Hz, 1 channels, s16, 768 kb/s\n[aist#3:0/pcm_s16le @ 0x55d8b11bf3c0] Guessed Channel Layout: mono\nInput #3, wav, from '/workspace/.tmp-guichu/vocal-remix.wav':\n  Metadata:\n    encoder         : Lavf60.16.100\n  Duration: 00:00:35.99, bitrate: 768 kb/s\n  Stream #3:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 48000 Hz, 1 channels, s16, 768 kb/s\nStream mapping:\n  Stream #0:0 (h264) -> trim:default\n  Stream #0:0 (h264) -> trim:default\n  Stream #0:0 (h264) -> trim:default\n  Stream #0:0 (h264) -> trim:default\n  Stream #0:0 (h264) -> trim:default\n  Stream #0:0 (h264) -> trim:default\n  Stream #0:0 (h264) -> trim:default\n  Stream #0:0 (h264) -> trim:default\n  Stream #0:0 (h264) -> trim:default\n  Stream #0:0 (h264) -> trim:default\n  Stream #0:0 (h264) -> trim:default\n  Stream #0:0 (h264) -> trim:default\n  Stream #0:0 (h264) -> trim:default\n  Stream #0:0 (h264) -> trim:default\n  Stream #0:0 (h264) -> trim:default\n  Stream #0:0 (h264) -> trim:default\n  Stream #0:0 (h264) -> trim:default\n  Stream #0:0 (h264) -> trim:default\n  Stream #0:0 (h264) -> trim:default\n  Stream #0:0 (h264) -> trim:default\n  Stream #0:0 (h264) -> trim:default\n  Stream #0:0 (h264) -> trim:default\n  Stream #0:0 (h264) -> trim:default\n  Stream #0:0 (h264) -> trim:default\n  Stream #0:0 (h264) -> trim:default\n  Stream #0:0 (h264) -> trim:default\n  Stream #0:0 (h264) -> trim:default\n  Stream #0:1 (aac) -> atrim:default\n  Stream #0:1 (aac) -> atrim:default\n  Stream #0:1 (aac) -> atrim:default\n  Stream #0:1 (aac) -> atrim:default\n  Stream #0:1 (aac) -> atrim:default\n  Stream #0:1 (aac) -> atrim:default\n  Stream #0:1 (aac) -> atrim:default\n  Stream #0:1 (aac) -> atrim:default\n  Stream #0:1 (aac) -> atrim:default\n  Stream #0:1 (aac) -> atrim:default\n  Stream #0:1 (aac) -> atrim:default\n  Stream #0:1 (aac) -> atrim:default\n  Stream #0:1 (aac) -> atrim:default\n  Stream #0:1 (aac) -> atrim:default\n  Stream #0:1 (aac) -> atrim:default\n  Stream #0:1 (aac) -> atrim:default\n  Stream #0:1 (aac) -> atrim:default\n  Stream #0:1 (aac) -> atrim:default\n  Stream #0:1 (aac) -> atrim:default\n  Stream #0:1 (aac) -> atrim:default\n  Stream #0:1 (aac) -> atrim:default\n  Stream #0:1 (aac) -> atrim:default\n  Stream #0:1 (aac) -> atrim:default\n  Stream #0:1 (aac) -> atrim:default\n  Stream #0:1 (aac) -> atrim:default\n  Stream #0:1 (aac) -> atrim:default\n  Stream #0:1 (aac) -> atrim:default\n  Stream #1:0 (png) -> trim:default\n  Stream #2:0 (pcm_s16le) -> atrim:default\n  Stream #3:0 (pcm_s16le) -> atrim:default\n  tile:default -> Stream #0:0 (png)\n"
+  },
+  "error": {
+    "code": "FFMPEG_PROGRESS_INVALID",
+    "message": "Invalid FFmpeg progress: stream ended without progress=end",
+    "stage": "ffmpeg.progress",
+    "retryable": false,
+    "diagnostics": {
+      "line": "",
+      "reason": "stream ended without progress=end"
+    },
+    "jobId": "job-mwkb1b5f-e2900550fe"
+  }
+}

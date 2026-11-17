@@ -1,0 +1,38 @@
+{
+  "id": "r4-53d9dee3fd",
+  "parentId": "r3-32c08a2f2c",
+  "projectRevision": 4,
+  "createdAt": "2026-11-17T06:20:30.171Z",
+  "summary": "Add asset freeze",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "freeze",
+        "kind": "image",
+        "path": "../../.tmp-guichu/final-freeze.png",
+        "metadata": {
+          "probedAt": "2026-11-17T06:20:30.160Z",
+          "fingerprint": {
+            "size": 265886,
+            "mtimeMs": 1794896428072.375
+          },
+          "duration": 0,
+          "size": 265886,
+          "formatName": "png_pipe",
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "png",
+              "width": 480,
+              "height": 360,
+              "frameRate": 25
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r4-53d9dee3fd/project.json"
+}

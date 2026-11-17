@@ -1,0 +1,36 @@
+{
+  "id": "r5-ce7c1cd861",
+  "parentId": "r4-53d9dee3fd",
+  "projectRevision": 5,
+  "createdAt": "2026-11-17T06:20:54.711Z",
+  "summary": "Probe asset vocals",
+  "operations": [
+    {
+      "type": "probeAsset",
+      "assetId": "vocals",
+      "metadata": {
+        "probedAt": "2026-11-17T06:20:54.699Z",
+        "fingerprint": {
+          "size": 3455118,
+          "mtimeMs": 1794896453724.6582
+        },
+        "duration": 35.99,
+        "size": 3455118,
+        "formatName": "wav",
+        "bitRate": 768017,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "audio",
+            "codecName": "pcm_s16le",
+            "sampleRate": 48000,
+            "channels": 1,
+            "duration": 35.99,
+            "bitRate": 768000
+          }
+        ]
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r5-ce7c1cd861/project.json"
+}

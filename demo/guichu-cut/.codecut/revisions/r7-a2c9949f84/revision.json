@@ -1,0 +1,41 @@
+{
+  "id": "r7-a2c9949f84",
+  "parentId": "r6-384a81525c",
+  "projectRevision": 7,
+  "createdAt": "2026-11-17T06:26:00.794Z",
+  "summary": "Add asset picture",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "picture",
+        "kind": "video",
+        "path": "../../.tmp-guichu/guichu-picture.mp4",
+        "metadata": {
+          "probedAt": "2026-11-17T06:26:00.782Z",
+          "fingerprint": {
+            "size": 9258321,
+            "mtimeMs": 1794896718767.5852
+          },
+          "duration": 36,
+          "size": 9258321,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 2057404,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 960,
+              "height": 720,
+              "frameRate": 30,
+              "duration": 36,
+              "bitRate": 2054794
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r7-a2c9949f84/project.json"
+}

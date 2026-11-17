@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 1,
+  "revision": 8,
+  "name": "白云黑土说唱 - 原创二创",
+  "assets": [
+    {
+      "id": "zuotian",
+      "kind": "video",
+      "path": "../../.tmp-guichu/zuotian.mp4",
+      "metadata": {
+        "probedAt": "2026-11-17T06:16:46.511Z",
+        "fingerprint": {
+          "size": 58140562,
+          "mtimeMs": 1794896098396.7295
+        },
+        "duration": 1039.231333,
+        "size": 58140562,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 447565,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 480,
+            "height": 360,
+            "frameRate": 24.999037313720205,
+            "duration": 1038.76,
+            "bitRate": 412351
+          },
+          {
+            "index": 1,
+            "codecType": "audio",
+            "codecName": "aac",
+            "sampleRate": 48000,
+            "channels": 2,
+            "channelLayout": "stereo",
+            "duration": 1039.231333,
+            "bitRate": 32032
+          }
+        ]
+      }
+    },
+    {
+      "id": "beat",
+      "kind": "audio",
+      "path": "../../.tmp-guichu/original-beat.wav",
+      "metadata": {
+        "probedAt": "2026-11-17T06:16:47.847Z",
+        "fingerprint": {
+          "size": 3456044,
+          "mtimeMs": 1794896148929.2888
+        },
+        "duration": 36,
+        "size": 3456044,
+        "formatName": "wav",
+        "bitRate": 768009,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "audio",
+            "codecName": "pcm_s16le",
+            "sampleRate": 48000,
+            "channels": 1,
+            "duration": 36,
+            "bitRate": 768000
+          }
+        ]
+      }
+    },
+    {
+      "id": "vocals",
+      "kind": "audio",
+      "path": "../../.tmp-guichu/vocal-remix.wav",
+      "metadata": {
+        "probedAt": "2026-11-17T06:20:54.699Z",
+        "fingerprint": {
+          "size": 3455118,
+          "mtimeMs": 1794896453724.6582
+        },
+        "duration": 35.99,
+        "size": 3455118,
+        "formatName": "wav",
+        "bitRate": 768017,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "audio",
+            "codecName": "pcm_s16le",
+            "sampleRate": 48000,
+            "channels": 1,
+            "duration": 35.99,
+            "bitRate": 768000
+          }
+        ]
+      }
+    },
+    {
+      "id": "freeze",
+      "kind": "image",
+      "path": "../../.tmp-guichu/final-freeze.png",
+      "metadata": {
+        "probedAt": "2026-11-17T06:20:30.160Z",
+        "fingerprint": {
+          "size": 265886,
+          "mtimeMs": 1794896428072.375
+        },
+        "duration": 0,
+        "size": 265886,
+        "formatName": "png_pipe",
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "png",
+            "width": 480,
+            "height": 360,
+            "frameRate": 25
+          }
+        ]
+      }
+    },
+    {
+      "id": "picture",
+      "kind": "video",
+      "path": "../../.tmp-guichu/guichu-picture.mp4",
+      "metadata": {
+        "probedAt": "2026-11-17T06:26:00.782Z",
+        "fingerprint": {
+          "size": 9258321,
+          "mtimeMs": 1794896718767.5852
+        },
+        "duration": 36,
+        "size": 9258321,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 2057404,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 960,
+            "height": 720,
+            "frameRate": 30,
+            "duration": 36,
+            "bitRate": 2054794
+          }
+        ]
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "id": "a1",
+      "kind": "audio",
+      "name": "Audio 1",
+      "clips": [
+        {
+          "id": "original-beat",
+          "type": "audio",
+          "assetId": "beat",
+          "start": 0,
+          "duration": 36,
+          "sourceStart": 0,
+          "volume": 0.38
+        }
+      ]
+    },
+    {
+      "id": "a2",
+      "kind": "audio",
+      "name": "Audio 2",
+      "clips": [
+        {
+          "id": "vocal-remix",
+          "type": "audio",
+          "assetId": "vocals",
+          "start": 0,
+          "duration": 36,
+          "sourceStart": 0,
+          "volume": 0.95
+        }
+      ]
+    },
+    {
+      "id": "picture-track",
+      "kind": "video",
+      "name": "Pre-rendered picture",
+      "clips": [
+        {
+          "id": "picture",
+          "type": "video",
+          "assetId": "picture",
+          "start": 0,
+          "duration": 36,
+          "sourceStart": 0,
+          "volume": 0
+        }
+      ]
+    }
+  ],
+  "output": {
+    "path": "guichu.mp4",
+    "format": "mp4",
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "width": 960,
+    "height": 720,
+    "frameRate": 30,
+    "pixelFormat": "yuv420p",
+    "audioSampleRate": 48000,
+    "audioChannels": 2
+  }
+}
