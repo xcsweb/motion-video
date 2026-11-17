@@ -1,0 +1,26 @@
+{
+  "type": "sheet",
+  "outputPath": "/workspace/demo/cut/sheet.png",
+  "revision": 6,
+  "parameters": {
+    "type": "sheet",
+    "start": 0,
+    "end": 13.5,
+    "interval": 1.5,
+    "columns": 3,
+    "rows": 3,
+    "width": 480,
+    "height": 270,
+    "sampleTimes": [
+      0,
+      1.5,
+      3,
+      4.5,
+      6,
+      7.5,
+      9,
+      10.5,
+      12
+    ]
+  }
+}

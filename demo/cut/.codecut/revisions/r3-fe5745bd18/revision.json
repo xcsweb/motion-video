@@ -1,0 +1,41 @@
+{
+  "id": "r3-fe5745bd18",
+  "parentId": "r2-b08a53d933",
+  "projectRevision": 3,
+  "createdAt": "2026-11-17T05:35:40.086Z",
+  "summary": "Add asset jelly",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "jelly",
+        "kind": "video",
+        "path": "../../.tmp-footage/jellyfish.mp4",
+        "metadata": {
+          "probedAt": "2026-11-17T05:35:39.936Z",
+          "fingerprint": {
+            "size": 1047967,
+            "mtimeMs": 1794893682874.048
+          },
+          "duration": 10.01001,
+          "size": 1047967,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 837535,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1280,
+              "height": 720,
+              "frameRate": 29.97,
+              "duration": 10.01001,
+              "bitRate": 834016
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r3-fe5745bd18/project.json"
+}

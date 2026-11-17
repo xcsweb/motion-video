@@ -1,0 +1,31 @@
+{
+  "id": "r9-245e1ae701",
+  "parentId": "r8-a17a2b1b59",
+  "projectRevision": 9,
+  "createdAt": "2026-11-17T05:38:16.047Z",
+  "summary": "Final audio balance",
+  "operations": [
+    {
+      "type": "setClipParams",
+      "clipId": "bgm",
+      "params": {
+        "volume": 0.8
+      }
+    },
+    {
+      "type": "setClipParams",
+      "clipId": "sintel-end",
+      "params": {
+        "volume": 0.3
+      }
+    },
+    {
+      "type": "setClipParams",
+      "clipId": "flower-mid",
+      "params": {
+        "volume": 0.3
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r9-245e1ae701/project.json"
+}

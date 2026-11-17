@@ -1,0 +1,127 @@
+{
+  "id": "r6-610d04b7f9",
+  "parentId": "r5-d7788c233b",
+  "projectRevision": 6,
+  "createdAt": "2026-11-17T05:36:13.308Z",
+  "summary": "Build online-footage montage",
+  "operations": [
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "bbb-open",
+        "type": "video",
+        "assetId": "bbb",
+        "start": 0,
+        "duration": 3,
+        "sourceStart": 0.5
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "jelly-mid",
+        "type": "video",
+        "assetId": "jelly",
+        "start": 2.5,
+        "duration": 3,
+        "sourceStart": 1,
+        "transition": {
+          "type": "xfade",
+          "duration": 0.5,
+          "name": "fade"
+        }
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "flower-mid",
+        "type": "video",
+        "assetId": "flower",
+        "start": 5,
+        "duration": 3,
+        "sourceStart": 0.5,
+        "transition": {
+          "type": "xfade",
+          "duration": 0.5,
+          "name": "fade"
+        }
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "sintel-end",
+        "type": "video",
+        "assetId": "sintel",
+        "start": 7.5,
+        "duration": 6,
+        "sourceStart": 30,
+        "transition": {
+          "type": "xfade",
+          "duration": 0.5,
+          "name": "fade"
+        }
+      }
+    },
+    {
+      "type": "addText",
+      "trackId": "v2",
+      "clip": {
+        "id": "title",
+        "type": "text",
+        "text": "MOTION MIX",
+        "start": 0.4,
+        "duration": 2.6,
+        "fontSize": 96,
+        "color": "#FFFFFF"
+      }
+    },
+    {
+      "type": "addText",
+      "trackId": "v2",
+      "clip": {
+        "id": "subtitle",
+        "type": "text",
+        "text": "public sample footage, cut headlessly",
+        "start": 3.2,
+        "duration": 2.5,
+        "fontSize": 40,
+        "color": "#E8E8E8"
+      }
+    },
+    {
+      "type": "addText",
+      "trackId": "v2",
+      "clip": {
+        "id": "credits",
+        "type": "text",
+        "text": "Sintel - Blender Foundation / Big Buck Bunny / Jellyfish / Flower",
+        "start": 8.2,
+        "duration": 3.2,
+        "fontSize": 32,
+        "color": "#FFFFFF"
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "a1",
+      "clip": {
+        "id": "bgm",
+        "type": "audio",
+        "assetId": "music",
+        "start": 0,
+        "duration": 13.5,
+        "sourceStart": 0.5,
+        "volume": 0.85,
+        "fadeIn": 0.8,
+        "fadeOut": 2
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r6-610d04b7f9/project.json"
+}

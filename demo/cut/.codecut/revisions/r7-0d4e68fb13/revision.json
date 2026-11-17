@@ -1,0 +1,17 @@
+{
+  "id": "r7-0d4e68fb13",
+  "parentId": "r6-610d04b7f9",
+  "projectRevision": 7,
+  "createdAt": "2026-11-17T05:37:23.133Z",
+  "summary": "Lower music to avoid clipping",
+  "operations": [
+    {
+      "type": "setClipParams",
+      "clipId": "bgm",
+      "params": {
+        "volume": 0.7
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r7-0d4e68fb13/project.json"
+}

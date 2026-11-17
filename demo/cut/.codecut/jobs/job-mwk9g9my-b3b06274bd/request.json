@@ -1,0 +1,239 @@
+{
+  "kind": "render",
+  "projectPath": "/workspace/demo/cut/project.json",
+  "projectRevision": 7,
+  "process": {
+    "command": "ffmpeg",
+    "args": [
+      "-hide_banner",
+      "-nostdin",
+      "-progress",
+      "pipe:1",
+      "-nostats",
+      "-i",
+      "/workspace/.tmp-footage/bbb-10s.mp4",
+      "-i",
+      "/workspace/.tmp-footage/jellyfish.mp4",
+      "-i",
+      "/workspace/.tmp-footage/flower.mp4",
+      "-i",
+      "/workspace/.tmp-footage/sintel-trailer.mp4",
+      "-i",
+      "/workspace/.tmp-footage/music.mp3",
+      "-filter_complex_script",
+      "{jobDirectory}/diagnostics/filter_complex.txt",
+      "-map",
+      "[vout]",
+      "-map",
+      "[aout]",
+      "-c:v",
+      "libx264",
+      "-preset",
+      "veryfast",
+      "-crf",
+      "18",
+      "-pix_fmt",
+      "yuv420p",
+      "-r",
+      "30",
+      "-video_track_timescale",
+      "90000",
+      "-c:a",
+      "aac",
+      "-b:a",
+      "192k",
+      "-ar",
+      "48000",
+      "-ac",
+      "2",
+      "-movflags",
+      "+faststart",
+      "-t",
+      "13.5",
+      "-f",
+      "mp4",
+      "-y",
+      "{output}"
+    ],
+    "cwd": "/workspace/demo/cut",
+    "progress": "ffmpeg",
+    "durationSeconds": 13.5
+  },
+  "output": {
+    "path": "/workspace/demo/cut/output.mp4",
+    "overwrite": true,
+    "validation": "ffprobe"
+  },
+  "render": {
+    "plan": {
+      "version": 1,
+      "revision": 7,
+      "command": "ffmpeg",
+      "durationSeconds": 13.5,
+      "inputs": [
+        {
+          "index": 0,
+          "assetId": "bbb",
+          "kind": "video",
+          "path": "/workspace/.tmp-footage/bbb-10s.mp4",
+          "fingerprint": {
+            "size": 969201,
+            "mtimeMs": 1794893675169.9631
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "bbb-open"
+          ]
+        },
+        {
+          "index": 1,
+          "assetId": "jelly",
+          "kind": "video",
+          "path": "/workspace/.tmp-footage/jellyfish.mp4",
+          "fingerprint": {
+            "size": 1047967,
+            "mtimeMs": 1794893682874.048
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "jelly-mid"
+          ]
+        },
+        {
+          "index": 2,
+          "assetId": "flower",
+          "kind": "video",
+          "path": "/workspace/.tmp-footage/flower.mp4",
+          "fingerprint": {
+            "size": 1128375,
+            "mtimeMs": 1794893677305.9868
+          },
+          "hasVideo": true,
+          "hasAudio": true,
+          "clips": [
+            "flower-mid"
+          ]
+        },
+        {
+          "index": 3,
+          "assetId": "sintel",
+          "kind": "video",
+          "path": "/workspace/.tmp-footage/sintel-trailer.mp4",
+          "fingerprint": {
+            "size": 4372373,
+            "mtimeMs": 1794893671245.92
+          },
+          "hasVideo": true,
+          "hasAudio": true,
+          "clips": [
+            "sintel-end"
+          ]
+        },
+        {
+          "index": 4,
+          "assetId": "music",
+          "kind": "audio",
+          "path": "/workspace/.tmp-footage/music.mp3",
+          "fingerprint": {
+            "size": 307453,
+            "mtimeMs": 1794893704054.2815
+          },
+          "hasVideo": false,
+          "hasAudio": true,
+          "clips": [
+            "bgm"
+          ]
+        }
+      ],
+      "args": [
+        "-hide_banner",
+        "-nostdin",
+        "-progress",
+        "pipe:1",
+        "-nostats",
+        "-i",
+        "/workspace/.tmp-footage/bbb-10s.mp4",
+        "-i",
+        "/workspace/.tmp-footage/jellyfish.mp4",
+        "-i",
+        "/workspace/.tmp-footage/flower.mp4",
+        "-i",
+        "/workspace/.tmp-footage/sintel-trailer.mp4",
+        "-i",
+        "/workspace/.tmp-footage/music.mp3",
+        "-filter_complex_script",
+        "{jobDirectory}/diagnostics/filter_complex.txt",
+        "-map",
+        "[vout]",
+        "-map",
+        "[aout]",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "veryfast",
+        "-crf",
+        "18",
+        "-pix_fmt",
+        "yuv420p",
+        "-r",
+        "30",
+        "-video_track_timescale",
+        "90000",
+        "-c:a",
+        "aac",
+        "-b:a",
+        "192k",
+        "-ar",
+        "48000",
+        "-ac",
+        "2",
+        "-movflags",
+        "+faststart",
+        "-t",
+        "13.5",
+        "-f",
+        "mp4",
+        "-y",
+        "{output}"
+      ],
+      "filter_graph": "[0:v:0]trim=start=0.5:end=3.5,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=1280:h=720:force_original_aspect_ratio=decrease,trim=duration=3,setpts=PTS-STARTPTS[cc_clip_0];\ncolor=c=black@0.0:s=1280x720:r=30:d=3,format=rgba,setpts=PTS-STARTPTS[cc_transparent_1];\n[cc_transparent_1][cc_clip_0]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=3,setpts=PTS-STARTPTS[cc_positioned_2];\n[1:v:0]trim=start=1:end=4,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=1280:h=720:force_original_aspect_ratio=decrease,trim=duration=3,setpts=PTS-STARTPTS[cc_clip_3];\ncolor=c=black@0.0:s=1280x720:r=30:d=3,format=rgba,setpts=PTS-STARTPTS[cc_transparent_4];\n[cc_transparent_4][cc_clip_3]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=3,setpts=PTS-STARTPTS[cc_positioned_5];\n[cc_positioned_2]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_left_7];\n[cc_positioned_5]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_right_8];\n[cc_xfade_left_7][cc_xfade_right_8]xfade=transition=fade:duration=0.5:offset=2.5,fps=30,setpts=PTS-STARTPTS[cc_xfade_6];\n[2:v:0]trim=start=0.5:end=3.5,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=1280:h=720:force_original_aspect_ratio=decrease,trim=duration=3,setpts=PTS-STARTPTS[cc_clip_9];\ncolor=c=black@0.0:s=1280x720:r=30:d=3,format=rgba,setpts=PTS-STARTPTS[cc_transparent_10];\n[cc_transparent_10][cc_clip_9]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=3,setpts=PTS-STARTPTS[cc_positioned_11];\n[cc_xfade_6]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_left_13];\n[cc_positioned_11]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_right_14];\n[cc_xfade_left_13][cc_xfade_right_14]xfade=transition=fade:duration=0.5:offset=5,fps=30,setpts=PTS-STARTPTS[cc_xfade_12];\n[3:v:0]trim=start=30:end=36,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=1280:h=720:force_original_aspect_ratio=decrease,trim=duration=6,setpts=PTS-STARTPTS[cc_clip_15];\ncolor=c=black@0.0:s=1280x720:r=30:d=6,format=rgba,setpts=PTS-STARTPTS[cc_transparent_16];\n[cc_transparent_16][cc_clip_15]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=6,setpts=PTS-STARTPTS[cc_positioned_17];\n[cc_xfade_12]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_left_19];\n[cc_positioned_17]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_right_20];\n[cc_xfade_left_19][cc_xfade_right_20]xfade=transition=fade:duration=0.5:offset=7.5,fps=30,setpts=PTS-STARTPTS[cc_xfade_18];\ncolor=c=black@0.0:s=1280x720:r=30:d=2.6,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-0.txt:expansion=none:fontsize=96:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=sans,fps=30,format=rgba,scale=w=1280:h=720:force_original_aspect_ratio=decrease,trim=duration=2.6,setpts=PTS-STARTPTS[cc_clip_21];\ncolor=c=black@0.0:s=1280x720:r=30:d=2.6,format=rgba,setpts=PTS-STARTPTS[cc_transparent_22];\n[cc_transparent_22][cc_clip_21]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=2.6,setpts=PTS-STARTPTS[cc_positioned_23];\ncolor=c=black@0.0:s=1280x720:r=30:d=0.4,format=rgba,setpts=PTS-STARTPTS[cc_transparent_24];\n[cc_transparent_24][cc_positioned_23]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_25];\ncolor=c=black@0.0:s=1280x720:r=30:d=2.5,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-1.txt:expansion=none:fontsize=40:fontcolor=0xE8E8E8:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=sans,fps=30,format=rgba,scale=w=1280:h=720:force_original_aspect_ratio=decrease,trim=duration=2.5,setpts=PTS-STARTPTS[cc_clip_26];\ncolor=c=black@0.0:s=1280x720:r=30:d=2.5,format=rgba,setpts=PTS-STARTPTS[cc_transparent_27];\n[cc_transparent_27][cc_clip_26]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=2.5,setpts=PTS-STARTPTS[cc_positioned_28];\ncolor=c=black@0.0:s=1280x720:r=30:d=0.2,format=rgba,setpts=PTS-STARTPTS[cc_transparent_29];\n[cc_concat_25][cc_transparent_29]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_30];\n[cc_concat_30][cc_positioned_28]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_31];\ncolor=c=black@0.0:s=1280x720:r=30:d=3.2,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-2.txt:expansion=none:fontsize=32:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:font=sans,fps=30,format=rgba,scale=w=1280:h=720:force_original_aspect_ratio=decrease,trim=duration=3.2,setpts=PTS-STARTPTS[cc_clip_32];\ncolor=c=black@0.0:s=1280x720:r=30:d=3.2,format=rgba,setpts=PTS-STARTPTS[cc_transparent_33];\n[cc_transparent_33][cc_clip_32]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=3.2,setpts=PTS-STARTPTS[cc_positioned_34];\ncolor=c=black@0.0:s=1280x720:r=30:d=2.5,format=rgba,setpts=PTS-STARTPTS[cc_transparent_35];\n[cc_concat_31][cc_transparent_35]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_36];\n[cc_concat_36][cc_positioned_34]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_37];\ncolor=c=black:s=1280x720:r=30:d=13.5,format=rgba,setpts=PTS-STARTPTS[cc_black_38];\n[cc_black_38][cc_xfade_18]overlay=x=0:y=0:eof_action=pass:repeatlast=0:format=auto,setpts=PTS-STARTPTS[cc_composite_39];\n[cc_composite_39][cc_concat_37]overlay=x=0:y=0:eof_action=pass:repeatlast=0:format=auto,setpts=PTS-STARTPTS[cc_composite_40];\n[cc_composite_40]fps=30,trim=duration=13.5,format=yuv420p,setpts=PTS-STARTPTS[vout];\n[2:a:0]atrim=start=0.5:end=3.5,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,apad=pad_dur=3,atrim=duration=3,adelay=delays=5000:all=1,asetpts=PTS-STARTPTS[cc_source_audio_41];\n[3:a:0]atrim=start=30:end=36,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,apad=pad_dur=6,atrim=duration=6,adelay=delays=7500:all=1,asetpts=PTS-STARTPTS[cc_source_audio_42];\n[4:a:0]atrim=start=0.5:end=14,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,volume=0.7,afade=t=in:st=0:d=0.8,afade=t=out:st=11.5:d=2,apad=pad_dur=13.5,atrim=duration=13.5,adelay=delays=0:all=1,asetpts=PTS-STARTPTS[cc_audio_43];\nanullsrc=r=48000:cl=stereo:d=13.5[cc_silence_44];\n[cc_silence_44][cc_source_audio_41][cc_source_audio_42][cc_audio_43]amix=inputs=4:duration=longest:dropout_transition=0:normalize=0,aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,atrim=duration=13.5,asetpts=PTS-STARTPTS[aout]\n",
+      "output": {
+        "path": "/workspace/demo/cut/output.mp4",
+        "temporaryPath": "{output}",
+        "format": "mp4",
+        "overwrite": true
+      },
+      "media": {
+        "durationSeconds": 13.5,
+        "width": 1280,
+        "height": 720,
+        "frameRate": 30,
+        "pixelFormat": "yuv420p",
+        "videoCodec": "h264",
+        "audioCodec": "aac",
+        "audioSampleRate": 48000,
+        "audioChannels": 2
+      },
+      "warnings": [],
+      "textFiles": [
+        {
+          "clipId": "title",
+          "path": "{jobDirectory}/diagnostics/text-0.txt",
+          "content": "MOTION MIX"
+        },
+        {
+          "clipId": "subtitle",
+          "path": "{jobDirectory}/diagnostics/text-1.txt",
+          "content": "public sample footage, cut headlessly"
+        },
+        {
+          "clipId": "credits",
+          "path": "{jobDirectory}/diagnostics/text-2.txt",
+          "content": "Sintel - Blender Foundation / Big Buck Bunny / Jellyfish / Flower"
+        }
+      ]
+    }
+  }
+}

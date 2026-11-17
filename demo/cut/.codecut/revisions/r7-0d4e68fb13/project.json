@@ -1,0 +1,293 @@
+{
+  "schemaVersion": 1,
+  "revision": 7,
+  "name": "Online Footage Montage",
+  "assets": [
+    {
+      "id": "sintel",
+      "kind": "video",
+      "path": "../../.tmp-footage/sintel-trailer.mp4",
+      "metadata": {
+        "probedAt": "2026-11-17T05:35:38.255Z",
+        "fingerprint": {
+          "size": 4372373,
+          "mtimeMs": 1794893671245.92
+        },
+        "duration": 52.208333,
+        "size": 4372373,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 669988,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 854,
+            "height": 480,
+            "frameRate": 24,
+            "duration": 52.208333,
+            "bitRate": 537875
+          },
+          {
+            "index": 1,
+            "codecType": "audio",
+            "codecName": "aac",
+            "sampleRate": 48000,
+            "channels": 2,
+            "channelLayout": "stereo",
+            "duration": 51.946667,
+            "bitRate": 126694
+          }
+        ]
+      }
+    },
+    {
+      "id": "bbb",
+      "kind": "video",
+      "path": "../../.tmp-footage/bbb-10s.mp4",
+      "metadata": {
+        "probedAt": "2026-11-17T05:35:39.017Z",
+        "fingerprint": {
+          "size": 969201,
+          "mtimeMs": 1794893675169.9631
+        },
+        "duration": 10,
+        "size": 969201,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 775360,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1280,
+            "height": 720,
+            "frameRate": 30,
+            "duration": 10,
+            "bitRate": 772159
+          }
+        ]
+      }
+    },
+    {
+      "id": "jelly",
+      "kind": "video",
+      "path": "../../.tmp-footage/jellyfish.mp4",
+      "metadata": {
+        "probedAt": "2026-11-17T05:35:39.936Z",
+        "fingerprint": {
+          "size": 1047967,
+          "mtimeMs": 1794893682874.048
+        },
+        "duration": 10.01001,
+        "size": 1047967,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 837535,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1280,
+            "height": 720,
+            "frameRate": 29.97,
+            "duration": 10.01001,
+            "bitRate": 834016
+          }
+        ]
+      }
+    },
+    {
+      "id": "flower",
+      "kind": "video",
+      "path": "../../.tmp-footage/flower.mp4",
+      "metadata": {
+        "probedAt": "2026-11-17T05:35:40.977Z",
+        "fingerprint": {
+          "size": 1128375,
+          "mtimeMs": 1794893677305.9868
+        },
+        "duration": 5.055,
+        "size": 1128375,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 1785756,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 960,
+            "height": 540,
+            "frameRate": 29.97002997002997,
+            "duration": 5.005,
+            "bitRate": 1538137
+          },
+          {
+            "index": 1,
+            "codecType": "audio",
+            "codecName": "aac",
+            "sampleRate": 48000,
+            "channels": 2,
+            "channelLayout": "stereo",
+            "duration": 5.055,
+            "bitRate": 256000
+          }
+        ]
+      }
+    },
+    {
+      "id": "music",
+      "kind": "audio",
+      "path": "../../.tmp-footage/music.mp3",
+      "metadata": {
+        "probedAt": "2026-11-17T05:35:41.955Z",
+        "fingerprint": {
+          "size": 307453,
+          "mtimeMs": 1794893704054.2815
+        },
+        "duration": 19.2,
+        "size": 307453,
+        "formatName": "mp3",
+        "bitRate": 128105,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "audio",
+            "codecName": "mp3",
+            "sampleRate": 44100,
+            "channels": 2,
+            "channelLayout": "stereo",
+            "duration": 19.2,
+            "bitRate": 128000
+          }
+        ]
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "id": "v1",
+      "kind": "video",
+      "name": "Video 1",
+      "clips": [
+        {
+          "id": "bbb-open",
+          "type": "video",
+          "assetId": "bbb",
+          "start": 0,
+          "duration": 3,
+          "sourceStart": 0.5
+        },
+        {
+          "id": "jelly-mid",
+          "type": "video",
+          "assetId": "jelly",
+          "start": 2.5,
+          "duration": 3,
+          "sourceStart": 1,
+          "transition": {
+            "type": "xfade",
+            "duration": 0.5,
+            "name": "fade"
+          }
+        },
+        {
+          "id": "flower-mid",
+          "type": "video",
+          "assetId": "flower",
+          "start": 5,
+          "duration": 3,
+          "sourceStart": 0.5,
+          "transition": {
+            "type": "xfade",
+            "duration": 0.5,
+            "name": "fade"
+          }
+        },
+        {
+          "id": "sintel-end",
+          "type": "video",
+          "assetId": "sintel",
+          "start": 7.5,
+          "duration": 6,
+          "sourceStart": 30,
+          "transition": {
+            "type": "xfade",
+            "duration": 0.5,
+            "name": "fade"
+          }
+        }
+      ]
+    },
+    {
+      "id": "v2",
+      "kind": "video",
+      "name": "Video 2",
+      "clips": [
+        {
+          "id": "title",
+          "type": "text",
+          "text": "MOTION MIX",
+          "start": 0.4,
+          "duration": 2.6,
+          "fontSize": 96,
+          "color": "#FFFFFF"
+        },
+        {
+          "id": "subtitle",
+          "type": "text",
+          "text": "public sample footage, cut headlessly",
+          "start": 3.2,
+          "duration": 2.5,
+          "fontSize": 40,
+          "color": "#E8E8E8"
+        },
+        {
+          "id": "credits",
+          "type": "text",
+          "text": "Sintel - Blender Foundation / Big Buck Bunny / Jellyfish / Flower",
+          "start": 8.2,
+          "duration": 3.2,
+          "fontSize": 32,
+          "color": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "id": "a1",
+      "kind": "audio",
+      "name": "Audio 1",
+      "clips": [
+        {
+          "id": "bgm",
+          "type": "audio",
+          "assetId": "music",
+          "start": 0,
+          "duration": 13.5,
+          "sourceStart": 0.5,
+          "volume": 0.7,
+          "fadeIn": 0.8,
+          "fadeOut": 2
+        }
+      ]
+    },
+    {
+      "id": "a2",
+      "kind": "audio",
+      "name": "Audio 2",
+      "clips": []
+    }
+  ],
+  "output": {
+    "path": "output.mp4",
+    "format": "mp4",
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "width": 1280,
+    "height": 720,
+    "frameRate": 30,
+    "pixelFormat": "yuv420p",
+    "audioSampleRate": 48000,
+    "audioChannels": 2
+  }
+}

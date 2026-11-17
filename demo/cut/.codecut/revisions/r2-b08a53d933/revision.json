@@ -1,0 +1,41 @@
+{
+  "id": "r2-b08a53d933",
+  "parentId": "r1-3490f99ca9",
+  "projectRevision": 2,
+  "createdAt": "2026-11-17T05:35:39.027Z",
+  "summary": "Add asset bbb",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "bbb",
+        "kind": "video",
+        "path": "../../.tmp-footage/bbb-10s.mp4",
+        "metadata": {
+          "probedAt": "2026-11-17T05:35:39.017Z",
+          "fingerprint": {
+            "size": 969201,
+            "mtimeMs": 1794893675169.9631
+          },
+          "duration": 10,
+          "size": 969201,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 775360,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1280,
+              "height": 720,
+              "frameRate": 30,
+              "duration": 10,
+              "bitRate": 772159
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r2-b08a53d933/project.json"
+}

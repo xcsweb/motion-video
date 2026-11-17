@@ -1,0 +1,50 @@
+{
+  "id": "r1-3490f99ca9",
+  "projectRevision": 1,
+  "createdAt": "2026-11-17T05:35:38.268Z",
+  "summary": "Add asset sintel",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "sintel",
+        "kind": "video",
+        "path": "../../.tmp-footage/sintel-trailer.mp4",
+        "metadata": {
+          "probedAt": "2026-11-17T05:35:38.255Z",
+          "fingerprint": {
+            "size": 4372373,
+            "mtimeMs": 1794893671245.92
+          },
+          "duration": 52.208333,
+          "size": 4372373,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 669988,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 854,
+              "height": 480,
+              "frameRate": 24,
+              "duration": 52.208333,
+              "bitRate": 537875
+            },
+            {
+              "index": 1,
+              "codecType": "audio",
+              "codecName": "aac",
+              "sampleRate": 48000,
+              "channels": 2,
+              "channelLayout": "stereo",
+              "duration": 51.946667,
+              "bitRate": 126694
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r1-3490f99ca9/project.json"
+}

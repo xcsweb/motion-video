@@ -1,0 +1,41 @@
+{
+  "id": "r5-d7788c233b",
+  "parentId": "r4-c7fb158973",
+  "projectRevision": 5,
+  "createdAt": "2026-11-17T05:35:41.965Z",
+  "summary": "Add asset music",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "music",
+        "kind": "audio",
+        "path": "../../.tmp-footage/music.mp3",
+        "metadata": {
+          "probedAt": "2026-11-17T05:35:41.955Z",
+          "fingerprint": {
+            "size": 307453,
+            "mtimeMs": 1794893704054.2815
+          },
+          "duration": 19.2,
+          "size": 307453,
+          "formatName": "mp3",
+          "bitRate": 128105,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "audio",
+              "codecName": "mp3",
+              "sampleRate": 44100,
+              "channels": 2,
+              "channelLayout": "stereo",
+              "duration": 19.2,
+              "bitRate": 128000
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r5-d7788c233b/project.json"
+}

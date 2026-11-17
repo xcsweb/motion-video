@@ -1,0 +1,31 @@
+{
+  "id": "r8-a17a2b1b59",
+  "parentId": "r7-0d4e68fb13",
+  "projectRevision": 8,
+  "createdAt": "2026-11-17T05:37:54.119Z",
+  "summary": "Balance source ambience against music",
+  "operations": [
+    {
+      "type": "setClipParams",
+      "clipId": "sintel-end",
+      "params": {
+        "volume": 0.35
+      }
+    },
+    {
+      "type": "setClipParams",
+      "clipId": "flower-mid",
+      "params": {
+        "volume": 0.35
+      }
+    },
+    {
+      "type": "setClipParams",
+      "clipId": "bgm",
+      "params": {
+        "volume": 0.55
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r8-a17a2b1b59/project.json"
+}

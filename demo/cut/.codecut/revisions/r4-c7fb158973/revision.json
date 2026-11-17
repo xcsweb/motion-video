@@ -1,0 +1,51 @@
+{
+  "id": "r4-c7fb158973",
+  "parentId": "r3-fe5745bd18",
+  "projectRevision": 4,
+  "createdAt": "2026-11-17T05:35:40.988Z",
+  "summary": "Add asset flower",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "flower",
+        "kind": "video",
+        "path": "../../.tmp-footage/flower.mp4",
+        "metadata": {
+          "probedAt": "2026-11-17T05:35:40.977Z",
+          "fingerprint": {
+            "size": 1128375,
+            "mtimeMs": 1794893677305.9868
+          },
+          "duration": 5.055,
+          "size": 1128375,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 1785756,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 960,
+              "height": 540,
+              "frameRate": 29.97002997002997,
+              "duration": 5.005,
+              "bitRate": 1538137
+            },
+            {
+              "index": 1,
+              "codecType": "audio",
+              "codecName": "aac",
+              "sampleRate": 48000,
+              "channels": 2,
+              "channelLayout": "stereo",
+              "duration": 5.055,
+              "bitRate": 256000
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r4-c7fb158973/project.json"
+}
