@@ -1,0 +1,50 @@
+{
+  "id": "r1-b4b81ce5fb",
+  "projectRevision": 1,
+  "createdAt": "2026-11-18T11:21:54.366Z",
+  "summary": "Add asset ref",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "ref",
+        "kind": "video",
+        "path": "../assets/ref.mp4",
+        "metadata": {
+          "probedAt": "2026-11-18T11:21:54.344Z",
+          "fingerprint": {
+            "size": 4348278,
+            "mtimeMs": 1795000883052.4504
+          },
+          "duration": 22.753991,
+          "size": 4348278,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 1528796,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 960,
+              "height": 720,
+              "frameRate": 56.161764705882355,
+              "duration": 22.666667,
+              "bitRate": 1392837
+            },
+            {
+              "index": 1,
+              "codecType": "audio",
+              "codecName": "aac",
+              "sampleRate": 44100,
+              "channels": 2,
+              "channelLayout": "stereo",
+              "duration": 22.753991,
+              "bitRate": 128269
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r1-b4b81ce5fb/project.json"
+}
