@@ -10,6 +10,7 @@ the score changes section at the turn, and there is air at the end.
 import argparse
 import json
 import os
+import subprocess
 import wave
 
 import numpy as np
@@ -294,6 +295,47 @@ def build_ambience(total, events, rng):
     return out
 
 
+# ------------------------------------------------------------------ real beds
+def decode(path, ss=0.0, dur=None):
+    cmd = ["ffmpeg", "-v", "quiet"]
+    if ss:
+        cmd += ["-ss", f"{ss:.3f}"]
+    cmd += ["-i", path]
+    if dur:
+        cmd += ["-t", f"{dur:.3f}"]
+    cmd += ["-ac", "2", "-ar", str(SR), "-f", "f32le", "-"]
+    raw = subprocess.run(cmd, capture_output=True).stdout
+    return np.frombuffer(raw, np.float32).astype(np.float64).reshape(-1, 2)
+
+
+def place_ev(out, seg, t, rms_db, fi, fo):
+    seg = seg.copy()
+    cur = np.sqrt(np.mean(seg ** 2)) + 1e-12
+    seg *= 10 ** (rms_db / 20) / cur
+    n = len(seg)
+    a, b = int(min(fi, n / 3) * SR), int(min(fo, n / 3) * SR)
+    if a:
+        seg[:a] *= np.linspace(0, 1, a)[:, None]
+    if b:
+        seg[-b:] *= np.linspace(1, 0, b)[:, None]
+    place(out, seg, t)
+
+
+def build_bed_real(spec, total):
+    """Music + ambience from real files, each event levelled by its own RMS."""
+    out = np.zeros((total, 2))
+    for ev in spec.get("music", []) + spec.get("sfx", []):
+        seg = decode(os.path.join(ROOT, ev["file"]), ev.get("in", 0.0), ev.get("dur"))
+        if ev.get("loop") and ev.get("dur") and len(seg) < ev["dur"] * SR - 4800:
+            reps = int(np.ceil(ev["dur"] * SR / len(seg)))
+            seg = np.tile(seg, (reps, 1))[: int(ev["dur"] * SR)]
+        place_ev(out, seg, ev["at"], ev["rms_db"],
+                 ev.get("fade_in", 1.0), ev.get("fade_out", 2.0))
+        print(f"  bed {os.path.basename(ev['file'])} @{ev['at']:5.1f}s "
+              f"{ev['rms_db']:6.1f} dB  len {len(seg) / SR:5.1f}s")
+    return out
+
+
 # ------------------------------------------------------------------ reverb
 def make_ir(rng, seconds=3.0):
     n = int(seconds * SR)
@@ -421,20 +463,27 @@ def main():
     print(f"total {total_s:.2f}s, score turns at {b_start:.2f}s")
 
     rng = np.random.default_rng(20261118)
-    print("score ...")
-    score = build_score(total, b_start, rng)
     ir = make_ir(rng)
-    score = reverb(score, ir, 0.32)
-    print("ambience ...")
-    s = {r["i"]: r for r in rows}
-    events = [
-        ("station", 0.0, s[4]["start"] + 1.2, 0.55),
-        ("street", s[3]["start"] - 1.0, s[5]["start"] + 1.0, 0.60),
-        ("market", s[6]["start"] - 1.2, s[7]["start"] + 0.6, 0.65),
-        ("rain", s[7]["start"] - 1.0, s[8]["start"] + 1.6, 0.85),
-        ("night", s[8]["start"] - 1.0, s[9]["start"] + 2.0, 0.60),
-    ]
-    amb = build_ambience(total, events, rng)
+    spec_path = os.path.join(proj, "audio.json")
+    if os.path.exists(spec_path):
+        print("bed from real assets ...")
+        bed = build_bed_real(json.load(open(spec_path, encoding="utf-8")), total)
+    else:
+        print("score ...")
+        score = build_score(total, b_start, rng)
+        score = reverb(score, ir, 0.32)
+        print("ambience ...")
+        s = {r["i"]: r for r in rows}
+        events = [
+            ("station", 0.0, s[4]["start"] + 1.2, 0.55),
+            ("street", s[3]["start"] - 1.0, s[5]["start"] + 1.0, 0.60),
+            ("market", s[6]["start"] - 1.2, s[7]["start"] + 0.6, 0.65),
+            ("rain", s[7]["start"] - 1.0, s[8]["start"] + 1.6, 0.85),
+            ("night", s[8]["start"] - 1.0, s[9]["start"] + 2.0, 0.60),
+        ]
+        amb = build_ambience(total, events, rng)
+        bed = np.tanh((score * 0.50 + amb) * 1.05) / 1.05
+        bed = bed / (np.max(np.abs(bed)) + 1e-9) * 0.33
 
     print("mix ...")
     voice = np.zeros((total, 2))
@@ -453,9 +502,7 @@ def main():
     env = env / (env.max() + 1e-9)
     duck = 1.0 - 0.66 * np.clip(env * 1.8, 0, 1)
 
-    bed = np.tanh((score * 0.50 + amb) * 1.05) / 1.05
-    bed_peak = np.max(np.abs(bed)) + 1e-9
-    bed = bed / bed_peak * 0.33
+    bed = np.tanh(bed * 1.05) / 1.05
     mix = bed * duck[:, None] + voice * 1.10
 
     fi, fo = int(1.2 * SR), int(2.6 * SR)

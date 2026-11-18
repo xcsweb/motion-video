@@ -34,3 +34,8 @@ travel/assets/vo/
 
 # 离线 TTS 模型（本地缓存）
 travel/assets/models/
+
+# 第三方授权素材：可下载，但不随仓库分发
+travel/assets/music/
+travel/assets/sfx/
+travel/projects/*/audio/

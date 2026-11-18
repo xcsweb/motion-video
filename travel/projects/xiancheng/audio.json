@@ -1,0 +1,75 @@
+{
+  "source": "Mixkit Stock Music / Sound Effects Free License (no attribution, commercial ok)",
+  "music": [
+    {
+      "file": "assets/music/Rebecca_on_the_Shore.mp3",
+      "in": 0.0,
+      "dur": 42.4,
+      "at": 0.0,
+      "rms_db": -27.0,
+      "fade_in": 2.0,
+      "fade_out": 0.5
+    },
+    {
+      "file": "assets/music/Old_Letter.mp3",
+      "in": 55.0,
+      "dur": 26.0,
+      "at": 42.1,
+      "rms_db": -25.5,
+      "fade_in": 0.2,
+      "fade_out": 3.0
+    }
+  ],
+  "sfx": [
+    {
+      "file": "assets/sfx/1633.mp3",
+      "at": 0.2,
+      "dur": 24.0,
+      "rms_db": -36.0,
+      "fade_in": 0.6,
+      "fade_out": 7.0
+    },
+    {
+      "file": "assets/sfx/2472.mp3",
+      "at": 9.0,
+      "dur": 12.0,
+      "rms_db": -37.0,
+      "fade_in": 2.0,
+      "fade_out": 2.5
+    },
+    {
+      "file": "assets/sfx/444.mp3",
+      "at": 17.0,
+      "dur": 14.0,
+      "rms_db": -38.0,
+      "fade_in": 2.0,
+      "fade_out": 2.5
+    },
+    {
+      "file": "assets/sfx/1247.mp3",
+      "at": 29.0,
+      "dur": 13.0,
+      "rms_db": -34.0,
+      "fade_in": 2.5,
+      "fade_out": 2.5
+    },
+    {
+      "file": "assets/sfx/424.mp3",
+      "at": 38.5,
+      "dur": 9.0,
+      "loop": true,
+      "rms_db": -39.0,
+      "fade_in": 1.5,
+      "fade_out": 2.0
+    },
+    {
+      "file": "assets/sfx/1247.mp3",
+      "in": 60.0,
+      "at": 50.5,
+      "dur": 15.0,
+      "rms_db": -41.0,
+      "fade_in": 3.0,
+      "fade_out": 4.0
+    }
+  ]
+}
