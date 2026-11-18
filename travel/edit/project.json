@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 17,
+  "revision": 18,
   "name": "世界走不完",
   "assets": [
     {
@@ -372,10 +372,10 @@
       "kind": "audio",
       "path": "../assets/audio/mix.wav",
       "metadata": {
-        "probedAt": "2026-11-18T06:13:42.342Z",
+        "probedAt": "2026-11-18T06:41:46.328Z",
         "fingerprint": {
           "size": 9984044,
-          "mtimeMs": 1794981002711.4854
+          "mtimeMs": 1794984091927.8977
         },
         "duration": 52,
         "size": 9984044,
