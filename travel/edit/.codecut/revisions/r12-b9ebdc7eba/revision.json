@@ -1,0 +1,41 @@
+{
+  "id": "r12-b9ebdc7eba",
+  "parentId": "r11-1ceabebac7",
+  "projectRevision": 12,
+  "createdAt": "2026-11-18T06:13:39.198Z",
+  "summary": "Add asset 12_station",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "12_station",
+        "kind": "video",
+        "path": "../assets/motion/12_station.mp4",
+        "metadata": {
+          "probedAt": "2026-11-18T06:13:39.181Z",
+          "fingerprint": {
+            "size": 1772558,
+            "mtimeMs": 1794982353800.6765
+          },
+          "duration": 4.8,
+          "size": 1772558,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 2954263,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1080,
+              "height": 1920,
+              "frameRate": 30,
+              "duration": 4.8,
+              "bitRate": 2949910
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r12-b9ebdc7eba/project.json"
+}

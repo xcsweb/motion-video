@@ -1,0 +1,565 @@
+{
+  "kind": "preview.frame",
+  "projectPath": "/workspace/travel/edit/project.json",
+  "projectRevision": 15,
+  "process": {
+    "command": "ffmpeg",
+    "args": [
+      "-hide_banner",
+      "-nostdin",
+      "-progress",
+      "pipe:1",
+      "-nostats",
+      "-i",
+      "/workspace/travel/assets/motion/01_mist_valley.mp4",
+      "-i",
+      "/workspace/travel/assets/motion/02_snow_mountain.mp4",
+      "-i",
+      "/workspace/travel/assets/motion/03_coastal_road.mp4",
+      "-i",
+      "/workspace/travel/assets/motion/11_lake_canoe.mp4",
+      "-i",
+      "/workspace/travel/assets/motion/04_black_sand.mp4",
+      "-i",
+      "/workspace/travel/assets/motion/05_plateau.mp4",
+      "-i",
+      "/workspace/travel/assets/motion/06_night_train.mp4",
+      "-i",
+      "/workspace/travel/assets/motion/10_old_town.mp4",
+      "-i",
+      "/workspace/travel/assets/motion/08_rain_city.mp4",
+      "-i",
+      "/workspace/travel/assets/motion/07_desert_stars.mp4",
+      "-i",
+      "/workspace/travel/assets/motion/09_cloud_sea.mp4",
+      "-i",
+      "/workspace/travel/assets/motion/12_station.mp4",
+      "-i",
+      "/workspace/travel/assets/motion/13_starry_road.mp4",
+      "-i",
+      "/workspace/travel/assets/audio/mix.wav",
+      "-filter_complex_script",
+      "{jobDirectory}/diagnostics/filter_complex.txt",
+      "-map",
+      "[preview_vout]",
+      "-an",
+      "-frames:v",
+      "1",
+      "-c:v",
+      "png",
+      "-update",
+      "1",
+      "-f",
+      "image2",
+      "-y",
+      "{output}"
+    ],
+    "cwd": "/workspace/travel/edit",
+    "progress": "ffmpeg",
+    "durationSeconds": 6
+  },
+  "output": {
+    "path": "/workspace/travel/previews/cc_frame_06.png",
+    "overwrite": true,
+    "validation": "ffprobe"
+  },
+  "render": {
+    "plan": {
+      "version": 1,
+      "revision": 15,
+      "command": "ffmpeg",
+      "durationSeconds": 52,
+      "inputs": [
+        {
+          "index": 0,
+          "assetId": "01_mist_valley",
+          "kind": "video",
+          "path": "/workspace/travel/assets/motion/01_mist_valley.mp4",
+          "fingerprint": {
+            "size": 1801549,
+            "mtimeMs": 1794982174255.4558
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot01"
+          ]
+        },
+        {
+          "index": 1,
+          "assetId": "02_snow_mountain",
+          "kind": "video",
+          "path": "/workspace/travel/assets/motion/02_snow_mountain.mp4",
+          "fingerprint": {
+            "size": 2269728,
+            "mtimeMs": 1794982190051.564
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot02"
+          ]
+        },
+        {
+          "index": 2,
+          "assetId": "03_coastal_road",
+          "kind": "video",
+          "path": "/workspace/travel/assets/motion/03_coastal_road.mp4",
+          "fingerprint": {
+            "size": 2983289,
+            "mtimeMs": 1794982207795.685
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot03"
+          ]
+        },
+        {
+          "index": 3,
+          "assetId": "11_lake_canoe",
+          "kind": "video",
+          "path": "/workspace/travel/assets/motion/11_lake_canoe.mp4",
+          "fingerprint": {
+            "size": 1583745,
+            "mtimeMs": 1794982223371.7915
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot04"
+          ]
+        },
+        {
+          "index": 4,
+          "assetId": "04_black_sand",
+          "kind": "video",
+          "path": "/workspace/travel/assets/motion/04_black_sand.mp4",
+          "fingerprint": {
+            "size": 2328017,
+            "mtimeMs": 1794982241659.9165
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot05"
+          ]
+        },
+        {
+          "index": 5,
+          "assetId": "05_plateau",
+          "kind": "video",
+          "path": "/workspace/travel/assets/motion/05_plateau.mp4",
+          "fingerprint": {
+            "size": 2127005,
+            "mtimeMs": 1794982257544.0251
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot06"
+          ]
+        },
+        {
+          "index": 6,
+          "assetId": "06_night_train",
+          "kind": "video",
+          "path": "/workspace/travel/assets/motion/06_night_train.mp4",
+          "fingerprint": {
+            "size": 2801446,
+            "mtimeMs": 1794982274308.1396
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot07"
+          ]
+        },
+        {
+          "index": 7,
+          "assetId": "10_old_town",
+          "kind": "video",
+          "path": "/workspace/travel/assets/motion/10_old_town.mp4",
+          "fingerprint": {
+            "size": 1898724,
+            "mtimeMs": 1794982290240.2485
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot08"
+          ]
+        },
+        {
+          "index": 8,
+          "assetId": "08_rain_city",
+          "kind": "video",
+          "path": "/workspace/travel/assets/motion/08_rain_city.mp4",
+          "fingerprint": {
+            "size": 2856832,
+            "mtimeMs": 1794982306548.36
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot09"
+          ]
+        },
+        {
+          "index": 9,
+          "assetId": "07_desert_stars",
+          "kind": "video",
+          "path": "/workspace/travel/assets/motion/07_desert_stars.mp4",
+          "fingerprint": {
+            "size": 3321810,
+            "mtimeMs": 1794982322852.471
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot10"
+          ]
+        },
+        {
+          "index": 10,
+          "assetId": "09_cloud_sea",
+          "kind": "video",
+          "path": "/workspace/travel/assets/motion/09_cloud_sea.mp4",
+          "fingerprint": {
+            "size": 1892407,
+            "mtimeMs": 1794982338380.574
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot11"
+          ]
+        },
+        {
+          "index": 11,
+          "assetId": "12_station",
+          "kind": "video",
+          "path": "/workspace/travel/assets/motion/12_station.mp4",
+          "fingerprint": {
+            "size": 1772558,
+            "mtimeMs": 1794982353800.6765
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot12"
+          ]
+        },
+        {
+          "index": 12,
+          "assetId": "13_starry_road",
+          "kind": "video",
+          "path": "/workspace/travel/assets/motion/13_starry_road.mp4",
+          "fingerprint": {
+            "size": 2143306,
+            "mtimeMs": 1794982367728.769
+          },
+          "hasVideo": true,
+          "hasAudio": false,
+          "clips": [
+            "shot13"
+          ]
+        },
+        {
+          "index": 13,
+          "assetId": "mix",
+          "kind": "audio",
+          "path": "/workspace/travel/assets/audio/mix.wav",
+          "fingerprint": {
+            "size": 9984044,
+            "mtimeMs": 1794981002711.4854
+          },
+          "hasVideo": false,
+          "hasAudio": true,
+          "clips": [
+            "mix"
+          ]
+        }
+      ],
+      "args": [
+        "-hide_banner",
+        "-nostdin",
+        "-progress",
+        "pipe:1",
+        "-nostats",
+        "-i",
+        "/workspace/travel/assets/motion/01_mist_valley.mp4",
+        "-i",
+        "/workspace/travel/assets/motion/02_snow_mountain.mp4",
+        "-i",
+        "/workspace/travel/assets/motion/03_coastal_road.mp4",
+        "-i",
+        "/workspace/travel/assets/motion/11_lake_canoe.mp4",
+        "-i",
+        "/workspace/travel/assets/motion/04_black_sand.mp4",
+        "-i",
+        "/workspace/travel/assets/motion/05_plateau.mp4",
+        "-i",
+        "/workspace/travel/assets/motion/06_night_train.mp4",
+        "-i",
+        "/workspace/travel/assets/motion/10_old_town.mp4",
+        "-i",
+        "/workspace/travel/assets/motion/08_rain_city.mp4",
+        "-i",
+        "/workspace/travel/assets/motion/07_desert_stars.mp4",
+        "-i",
+        "/workspace/travel/assets/motion/09_cloud_sea.mp4",
+        "-i",
+        "/workspace/travel/assets/motion/12_station.mp4",
+        "-i",
+        "/workspace/travel/assets/motion/13_starry_road.mp4",
+        "-i",
+        "/workspace/travel/assets/audio/mix.wav",
+        "-filter_complex_script",
+        "{jobDirectory}/diagnostics/filter_complex.txt",
+        "-map",
+        "[preview_vout]",
+        "-an",
+        "-frames:v",
+        "1",
+        "-c:v",
+        "png",
+        "-update",
+        "1",
+        "-f",
+        "image2",
+        "-y",
+        "{output}"
+      ],
+      "filter_graph": "[0:v:0]trim=start=0:end=4.8,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=4.8,setpts=PTS-STARTPTS[cc_clip_0];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4.8,format=rgba,setpts=PTS-STARTPTS[cc_transparent_1];\n[cc_transparent_1][cc_clip_0]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.8,setpts=PTS-STARTPTS[cc_positioned_2];\n[1:v:0]trim=start=0:end=4.8,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=4.8,setpts=PTS-STARTPTS[cc_clip_3];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4.8,format=rgba,setpts=PTS-STARTPTS[cc_transparent_4];\n[cc_transparent_4][cc_clip_3]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.8,setpts=PTS-STARTPTS[cc_positioned_5];\n[cc_positioned_2]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_left_7];\n[cc_positioned_5]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_right_8];\n[cc_xfade_left_7][cc_xfade_right_8]xfade=transition=fade:duration=0.8:offset=4,fps=30,setpts=PTS-STARTPTS[cc_xfade_6];\n[2:v:0]trim=start=0:end=4.8,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=4.8,setpts=PTS-STARTPTS[cc_clip_9];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4.8,format=rgba,setpts=PTS-STARTPTS[cc_transparent_10];\n[cc_transparent_10][cc_clip_9]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.8,setpts=PTS-STARTPTS[cc_positioned_11];\n[cc_xfade_6]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_left_13];\n[cc_positioned_11]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_right_14];\n[cc_xfade_left_13][cc_xfade_right_14]xfade=transition=fade:duration=0.8:offset=8,fps=30,setpts=PTS-STARTPTS[cc_xfade_12];\n[3:v:0]trim=start=0:end=4.8,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=4.8,setpts=PTS-STARTPTS[cc_clip_15];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4.8,format=rgba,setpts=PTS-STARTPTS[cc_transparent_16];\n[cc_transparent_16][cc_clip_15]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.8,setpts=PTS-STARTPTS[cc_positioned_17];\n[cc_xfade_12]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_left_19];\n[cc_positioned_17]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_right_20];\n[cc_xfade_left_19][cc_xfade_right_20]xfade=transition=fade:duration=0.8:offset=12,fps=30,setpts=PTS-STARTPTS[cc_xfade_18];\n[4:v:0]trim=start=0:end=4.8,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=4.8,setpts=PTS-STARTPTS[cc_clip_21];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4.8,format=rgba,setpts=PTS-STARTPTS[cc_transparent_22];\n[cc_transparent_22][cc_clip_21]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.8,setpts=PTS-STARTPTS[cc_positioned_23];\n[cc_xfade_18]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_left_25];\n[cc_positioned_23]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_right_26];\n[cc_xfade_left_25][cc_xfade_right_26]xfade=transition=fade:duration=0.8:offset=16,fps=30,setpts=PTS-STARTPTS[cc_xfade_24];\n[5:v:0]trim=start=0:end=4.8,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=4.8,setpts=PTS-STARTPTS[cc_clip_27];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4.8,format=rgba,setpts=PTS-STARTPTS[cc_transparent_28];\n[cc_transparent_28][cc_clip_27]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.8,setpts=PTS-STARTPTS[cc_positioned_29];\n[cc_xfade_24]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_left_31];\n[cc_positioned_29]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_right_32];\n[cc_xfade_left_31][cc_xfade_right_32]xfade=transition=fade:duration=0.8:offset=20,fps=30,setpts=PTS-STARTPTS[cc_xfade_30];\n[6:v:0]trim=start=0:end=4.8,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=4.8,setpts=PTS-STARTPTS[cc_clip_33];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4.8,format=rgba,setpts=PTS-STARTPTS[cc_transparent_34];\n[cc_transparent_34][cc_clip_33]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.8,setpts=PTS-STARTPTS[cc_positioned_35];\n[cc_xfade_30]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_left_37];\n[cc_positioned_35]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_right_38];\n[cc_xfade_left_37][cc_xfade_right_38]xfade=transition=fade:duration=0.8:offset=24,fps=30,setpts=PTS-STARTPTS[cc_xfade_36];\n[7:v:0]trim=start=0:end=4.8,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=4.8,setpts=PTS-STARTPTS[cc_clip_39];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4.8,format=rgba,setpts=PTS-STARTPTS[cc_transparent_40];\n[cc_transparent_40][cc_clip_39]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.8,setpts=PTS-STARTPTS[cc_positioned_41];\n[cc_xfade_36]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_left_43];\n[cc_positioned_41]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_right_44];\n[cc_xfade_left_43][cc_xfade_right_44]xfade=transition=fade:duration=0.8:offset=28,fps=30,setpts=PTS-STARTPTS[cc_xfade_42];\n[8:v:0]trim=start=0:end=4.8,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=4.8,setpts=PTS-STARTPTS[cc_clip_45];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4.8,format=rgba,setpts=PTS-STARTPTS[cc_transparent_46];\n[cc_transparent_46][cc_clip_45]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.8,setpts=PTS-STARTPTS[cc_positioned_47];\n[cc_xfade_42]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_left_49];\n[cc_positioned_47]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_right_50];\n[cc_xfade_left_49][cc_xfade_right_50]xfade=transition=fade:duration=0.8:offset=32,fps=30,setpts=PTS-STARTPTS[cc_xfade_48];\n[9:v:0]trim=start=0:end=4.8,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=4.8,setpts=PTS-STARTPTS[cc_clip_51];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4.8,format=rgba,setpts=PTS-STARTPTS[cc_transparent_52];\n[cc_transparent_52][cc_clip_51]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.8,setpts=PTS-STARTPTS[cc_positioned_53];\n[cc_xfade_48]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_left_55];\n[cc_positioned_53]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_right_56];\n[cc_xfade_left_55][cc_xfade_right_56]xfade=transition=fade:duration=0.8:offset=36,fps=30,setpts=PTS-STARTPTS[cc_xfade_54];\n[10:v:0]trim=start=0:end=4.8,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=4.8,setpts=PTS-STARTPTS[cc_clip_57];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4.8,format=rgba,setpts=PTS-STARTPTS[cc_transparent_58];\n[cc_transparent_58][cc_clip_57]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.8,setpts=PTS-STARTPTS[cc_positioned_59];\n[cc_xfade_54]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_left_61];\n[cc_positioned_59]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_right_62];\n[cc_xfade_left_61][cc_xfade_right_62]xfade=transition=fade:duration=0.8:offset=40,fps=30,setpts=PTS-STARTPTS[cc_xfade_60];\n[11:v:0]trim=start=0:end=4.8,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=4.8,setpts=PTS-STARTPTS[cc_clip_63];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4.8,format=rgba,setpts=PTS-STARTPTS[cc_transparent_64];\n[cc_transparent_64][cc_clip_63]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4.8,setpts=PTS-STARTPTS[cc_positioned_65];\n[cc_xfade_60]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_left_67];\n[cc_positioned_65]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_right_68];\n[cc_xfade_left_67][cc_xfade_right_68]xfade=transition=fade:duration=0.8:offset=44,fps=30,setpts=PTS-STARTPTS[cc_xfade_66];\n[12:v:0]trim=start=0:end=4,setpts=(PTS-STARTPTS)/1,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=4,setpts=PTS-STARTPTS[cc_clip_69];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4,format=rgba,setpts=PTS-STARTPTS[cc_transparent_70];\n[cc_transparent_70][cc_clip_69]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=4,setpts=PTS-STARTPTS[cc_positioned_71];\n[cc_xfade_66]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_left_73];\n[cc_positioned_71]settb=AVTB,setpts=PTS-STARTPTS[cc_xfade_right_74];\n[cc_xfade_left_73][cc_xfade_right_74]xfade=transition=fade:duration=0.8:offset=48,fps=30,setpts=PTS-STARTPTS[cc_xfade_72];\ncolor=c=0x000000:s=1080x1920:r=30:d=3.35,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.24,trim=duration=3.35,setpts=PTS-STARTPTS[cc_clip_75];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.35,format=rgba,setpts=PTS-STARTPTS[cc_transparent_76];\n[cc_transparent_76][cc_clip_75]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=3.35,setpts=PTS-STARTPTS[cc_positioned_77];\ncolor=c=black@0.0:s=1080x1920:r=30:d=0.9,format=rgba,setpts=PTS-STARTPTS[cc_transparent_78];\n[cc_transparent_78][cc_positioned_77]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_79];\ncolor=c=0x000000:s=1080x1920:r=30:d=3.6,setpts=PTS-STARTPTS,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.24,trim=duration=3.6,setpts=PTS-STARTPTS[cc_clip_80];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.6,format=rgba,setpts=PTS-STARTPTS[cc_transparent_81];\n[cc_transparent_81][cc_clip_80]overlay=x=0:y=0:shortest=1:format=auto,trim=duration=3.6,setpts=PTS-STARTPTS[cc_positioned_82];\ncolor=c=black@0.0:s=1080x1920:r=30:d=44.15,format=rgba,setpts=PTS-STARTPTS[cc_transparent_83];\n[cc_concat_79][cc_transparent_83]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_84];\n[cc_concat_84][cc_positioned_82]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_85];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.95,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-0.txt:expansion=none:fontsize=46:fontcolor=0x000000:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.55,trim=duration=3.95,setpts=PTS-STARTPTS[cc_clip_86];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.95,format=rgba,setpts=PTS-STARTPTS[cc_transparent_87];\n[cc_transparent_87][cc_clip_86]overlay=x=0:y=594:shortest=1:format=auto,trim=duration=3.95,setpts=PTS-STARTPTS[cc_positioned_88];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4.3,format=rgba,setpts=PTS-STARTPTS[cc_transparent_89];\n[cc_transparent_89][cc_positioned_88]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_90];\ncolor=c=black@0.0:s=1080x1920:r=30:d=2.3,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-1.txt:expansion=none:fontsize=46:fontcolor=0x000000:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.55,trim=duration=2.3,setpts=PTS-STARTPTS[cc_clip_91];\ncolor=c=black@0.0:s=1080x1920:r=30:d=2.3,format=rgba,setpts=PTS-STARTPTS[cc_transparent_92];\n[cc_transparent_92][cc_clip_91]overlay=x=0:y=628:shortest=1:format=auto,trim=duration=2.3,setpts=PTS-STARTPTS[cc_positioned_93];\ncolor=c=black@0.0:s=1080x1920:r=30:d=1.35,format=rgba,setpts=PTS-STARTPTS[cc_transparent_94];\n[cc_concat_90][cc_transparent_94]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_95];\n[cc_concat_95][cc_positioned_93]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_96];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.2,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-2.txt:expansion=none:fontsize=46:fontcolor=0x000000:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.55,trim=duration=3.2,setpts=PTS-STARTPTS[cc_clip_97];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.2,format=rgba,setpts=PTS-STARTPTS[cc_transparent_98];\n[cc_transparent_98][cc_clip_97]overlay=x=0:y=628:shortest=1:format=auto,trim=duration=3.2,setpts=PTS-STARTPTS[cc_positioned_99];\ncolor=c=black@0.0:s=1080x1920:r=30:d=1.4,format=rgba,setpts=PTS-STARTPTS[cc_transparent_100];\n[cc_concat_96][cc_transparent_100]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_101];\n[cc_concat_101][cc_positioned_99]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_102];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.45,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-3.txt:expansion=none:fontsize=46:fontcolor=0x000000:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.55,trim=duration=3.45,setpts=PTS-STARTPTS[cc_clip_103];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.45,format=rgba,setpts=PTS-STARTPTS[cc_transparent_104];\n[cc_transparent_104][cc_clip_103]overlay=x=0:y=594:shortest=1:format=auto,trim=duration=3.45,setpts=PTS-STARTPTS[cc_positioned_105];\ncolor=c=black@0.0:s=1080x1920:r=30:d=0.8,format=rgba,setpts=PTS-STARTPTS[cc_transparent_106];\n[cc_concat_102][cc_transparent_106]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_107];\n[cc_concat_107][cc_positioned_105]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_108];\ncolor=c=black@0.0:s=1080x1920:r=30:d=2.65,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-4.txt:expansion=none:fontsize=46:fontcolor=0x000000:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.55,trim=duration=2.65,setpts=PTS-STARTPTS[cc_clip_109];\ncolor=c=black@0.0:s=1080x1920:r=30:d=2.65,format=rgba,setpts=PTS-STARTPTS[cc_transparent_110];\n[cc_transparent_110][cc_clip_109]overlay=x=0:y=628:shortest=1:format=auto,trim=duration=2.65,setpts=PTS-STARTPTS[cc_positioned_111];\ncolor=c=black@0.0:s=1080x1920:r=30:d=0.85,format=rgba,setpts=PTS-STARTPTS[cc_transparent_112];\n[cc_concat_108][cc_transparent_112]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_113];\n[cc_concat_113][cc_positioned_111]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_114];\ncolor=c=black@0.0:s=1080x1920:r=30:d=2.8,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-5.txt:expansion=none:fontsize=46:fontcolor=0x000000:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.55,trim=duration=2.8,setpts=PTS-STARTPTS[cc_clip_115];\ncolor=c=black@0.0:s=1080x1920:r=30:d=2.8,format=rgba,setpts=PTS-STARTPTS[cc_transparent_116];\n[cc_transparent_116][cc_clip_115]overlay=x=0:y=594:shortest=1:format=auto,trim=duration=2.8,setpts=PTS-STARTPTS[cc_positioned_117];\ncolor=c=black@0.0:s=1080x1920:r=30:d=0.35,format=rgba,setpts=PTS-STARTPTS[cc_transparent_118];\n[cc_concat_114][cc_transparent_118]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_119];\n[cc_concat_119][cc_positioned_117]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_120];\ncolor=c=black@0.0:s=1080x1920:r=30:d=2.2,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-6.txt:expansion=none:fontsize=46:fontcolor=0x000000:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.55,trim=duration=2.2,setpts=PTS-STARTPTS[cc_clip_121];\ncolor=c=black@0.0:s=1080x1920:r=30:d=2.2,format=rgba,setpts=PTS-STARTPTS[cc_transparent_122];\n[cc_transparent_122][cc_clip_121]overlay=x=0:y=628:shortest=1:format=auto,trim=duration=2.2,setpts=PTS-STARTPTS[cc_positioned_123];\ncolor=c=black@0.0:s=1080x1920:r=30:d=1,format=rgba,setpts=PTS-STARTPTS[cc_transparent_124];\n[cc_concat_120][cc_transparent_124]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_125];\n[cc_concat_125][cc_positioned_123]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_126];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4.1,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-7.txt:expansion=none:fontsize=46:fontcolor=0x000000:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.55,trim=duration=4.1,setpts=PTS-STARTPTS[cc_clip_127];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4.1,format=rgba,setpts=PTS-STARTPTS[cc_transparent_128];\n[cc_transparent_128][cc_clip_127]overlay=x=0:y=594:shortest=1:format=auto,trim=duration=4.1,setpts=PTS-STARTPTS[cc_positioned_129];\ncolor=c=black@0.0:s=1080x1920:r=30:d=1.6,format=rgba,setpts=PTS-STARTPTS[cc_transparent_130];\n[cc_concat_126][cc_transparent_130]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_131];\n[cc_concat_131][cc_positioned_129]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_132];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.95,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-8.txt:expansion=none:fontsize=46:fontcolor=0x000000:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.55,trim=duration=3.95,setpts=PTS-STARTPTS[cc_clip_133];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.95,format=rgba,setpts=PTS-STARTPTS[cc_transparent_134];\n[cc_transparent_134][cc_clip_133]overlay=x=0:y=594:shortest=1:format=auto,trim=duration=3.95,setpts=PTS-STARTPTS[cc_positioned_135];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4,format=rgba,setpts=PTS-STARTPTS[cc_transparent_136];\n[cc_concat_132][cc_transparent_136]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_137];\n[cc_concat_137][cc_positioned_135]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_138];\ncolor=c=black@0.0:s=1080x1920:r=30:d=2,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-9.txt:expansion=none:fontsize=46:fontcolor=0x000000:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.55,trim=duration=2,setpts=PTS-STARTPTS[cc_clip_139];\ncolor=c=black@0.0:s=1080x1920:r=30:d=2,format=rgba,setpts=PTS-STARTPTS[cc_transparent_140];\n[cc_transparent_140][cc_clip_139]overlay=x=0:y=628:shortest=1:format=auto,trim=duration=2,setpts=PTS-STARTPTS[cc_positioned_141];\ncolor=c=black@0.0:s=1080x1920:r=30:d=1.75,format=rgba,setpts=PTS-STARTPTS[cc_transparent_142];\n[cc_concat_138][cc_transparent_142]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_143];\n[cc_concat_143][cc_positioned_141]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_144];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.35,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-10.txt:expansion=none:fontsize=20:fontcolor=0xC9C3B6:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSansCJK-Light.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=3.35,setpts=PTS-STARTPTS[cc_clip_145];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.35,format=rgba,setpts=PTS-STARTPTS[cc_transparent_146];\n[cc_transparent_146][cc_clip_145]overlay=x=0:y=-249:shortest=1:format=auto,trim=duration=3.35,setpts=PTS-STARTPTS[cc_positioned_147];\ncolor=c=black@0.0:s=1080x1920:r=30:d=0.9,format=rgba,setpts=PTS-STARTPTS[cc_transparent_148];\n[cc_transparent_148][cc_positioned_147]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_149];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.95,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-11.txt:expansion=none:fontsize=46:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=3.95,setpts=PTS-STARTPTS[cc_clip_150];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.95,format=rgba,setpts=PTS-STARTPTS[cc_transparent_151];\n[cc_transparent_151][cc_clip_150]overlay=x=0:y=590:shortest=1:format=auto,trim=duration=3.95,setpts=PTS-STARTPTS[cc_positioned_152];\ncolor=c=black@0.0:s=1080x1920:r=30:d=0.05,format=rgba,setpts=PTS-STARTPTS[cc_transparent_153];\n[cc_concat_149][cc_transparent_153]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_154];\n[cc_concat_154][cc_positioned_152]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_155];\ncolor=c=black@0.0:s=1080x1920:r=30:d=2.3,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-12.txt:expansion=none:fontsize=46:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=2.3,setpts=PTS-STARTPTS[cc_clip_156];\ncolor=c=black@0.0:s=1080x1920:r=30:d=2.3,format=rgba,setpts=PTS-STARTPTS[cc_transparent_157];\n[cc_transparent_157][cc_clip_156]overlay=x=0:y=624:shortest=1:format=auto,trim=duration=2.3,setpts=PTS-STARTPTS[cc_positioned_158];\ncolor=c=black@0.0:s=1080x1920:r=30:d=1.35,format=rgba,setpts=PTS-STARTPTS[cc_transparent_159];\n[cc_concat_155][cc_transparent_159]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_160];\n[cc_concat_160][cc_positioned_158]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_161];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.2,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-13.txt:expansion=none:fontsize=46:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=3.2,setpts=PTS-STARTPTS[cc_clip_162];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.2,format=rgba,setpts=PTS-STARTPTS[cc_transparent_163];\n[cc_transparent_163][cc_clip_162]overlay=x=0:y=624:shortest=1:format=auto,trim=duration=3.2,setpts=PTS-STARTPTS[cc_positioned_164];\ncolor=c=black@0.0:s=1080x1920:r=30:d=1.4,format=rgba,setpts=PTS-STARTPTS[cc_transparent_165];\n[cc_concat_161][cc_transparent_165]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_166];\n[cc_concat_166][cc_positioned_164]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_167];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.45,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-14.txt:expansion=none:fontsize=46:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=3.45,setpts=PTS-STARTPTS[cc_clip_168];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.45,format=rgba,setpts=PTS-STARTPTS[cc_transparent_169];\n[cc_transparent_169][cc_clip_168]overlay=x=0:y=590:shortest=1:format=auto,trim=duration=3.45,setpts=PTS-STARTPTS[cc_positioned_170];\ncolor=c=black@0.0:s=1080x1920:r=30:d=0.8,format=rgba,setpts=PTS-STARTPTS[cc_transparent_171];\n[cc_concat_167][cc_transparent_171]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_172];\n[cc_concat_172][cc_positioned_170]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_173];\ncolor=c=black@0.0:s=1080x1920:r=30:d=2.65,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-15.txt:expansion=none:fontsize=46:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=2.65,setpts=PTS-STARTPTS[cc_clip_174];\ncolor=c=black@0.0:s=1080x1920:r=30:d=2.65,format=rgba,setpts=PTS-STARTPTS[cc_transparent_175];\n[cc_transparent_175][cc_clip_174]overlay=x=0:y=624:shortest=1:format=auto,trim=duration=2.65,setpts=PTS-STARTPTS[cc_positioned_176];\ncolor=c=black@0.0:s=1080x1920:r=30:d=0.85,format=rgba,setpts=PTS-STARTPTS[cc_transparent_177];\n[cc_concat_173][cc_transparent_177]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_178];\n[cc_concat_178][cc_positioned_176]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_179];\ncolor=c=black@0.0:s=1080x1920:r=30:d=2.8,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-16.txt:expansion=none:fontsize=46:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=2.8,setpts=PTS-STARTPTS[cc_clip_180];\ncolor=c=black@0.0:s=1080x1920:r=30:d=2.8,format=rgba,setpts=PTS-STARTPTS[cc_transparent_181];\n[cc_transparent_181][cc_clip_180]overlay=x=0:y=590:shortest=1:format=auto,trim=duration=2.8,setpts=PTS-STARTPTS[cc_positioned_182];\ncolor=c=black@0.0:s=1080x1920:r=30:d=0.35,format=rgba,setpts=PTS-STARTPTS[cc_transparent_183];\n[cc_concat_179][cc_transparent_183]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_184];\n[cc_concat_184][cc_positioned_182]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_185];\ncolor=c=black@0.0:s=1080x1920:r=30:d=2.2,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-17.txt:expansion=none:fontsize=46:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=2.2,setpts=PTS-STARTPTS[cc_clip_186];\ncolor=c=black@0.0:s=1080x1920:r=30:d=2.2,format=rgba,setpts=PTS-STARTPTS[cc_transparent_187];\n[cc_transparent_187][cc_clip_186]overlay=x=0:y=624:shortest=1:format=auto,trim=duration=2.2,setpts=PTS-STARTPTS[cc_positioned_188];\ncolor=c=black@0.0:s=1080x1920:r=30:d=1,format=rgba,setpts=PTS-STARTPTS[cc_transparent_189];\n[cc_concat_185][cc_transparent_189]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_190];\n[cc_concat_190][cc_positioned_188]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_191];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4.1,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-18.txt:expansion=none:fontsize=46:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=4.1,setpts=PTS-STARTPTS[cc_clip_192];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4.1,format=rgba,setpts=PTS-STARTPTS[cc_transparent_193];\n[cc_transparent_193][cc_clip_192]overlay=x=0:y=590:shortest=1:format=auto,trim=duration=4.1,setpts=PTS-STARTPTS[cc_positioned_194];\ncolor=c=black@0.0:s=1080x1920:r=30:d=1.6,format=rgba,setpts=PTS-STARTPTS[cc_transparent_195];\n[cc_concat_191][cc_transparent_195]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_196];\n[cc_concat_196][cc_positioned_194]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_197];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.95,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-19.txt:expansion=none:fontsize=46:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=3.95,setpts=PTS-STARTPTS[cc_clip_198];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.95,format=rgba,setpts=PTS-STARTPTS[cc_transparent_199];\n[cc_transparent_199][cc_clip_198]overlay=x=0:y=590:shortest=1:format=auto,trim=duration=3.95,setpts=PTS-STARTPTS[cc_positioned_200];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4,format=rgba,setpts=PTS-STARTPTS[cc_transparent_201];\n[cc_concat_197][cc_transparent_201]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_202];\n[cc_concat_202][cc_positioned_200]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_203];\ncolor=c=black@0.0:s=1080x1920:r=30:d=2,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-20.txt:expansion=none:fontsize=46:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=2,setpts=PTS-STARTPTS[cc_clip_204];\ncolor=c=black@0.0:s=1080x1920:r=30:d=2,format=rgba,setpts=PTS-STARTPTS[cc_transparent_205];\n[cc_transparent_205][cc_clip_204]overlay=x=0:y=624:shortest=1:format=auto,trim=duration=2,setpts=PTS-STARTPTS[cc_positioned_206];\ncolor=c=black@0.0:s=1080x1920:r=30:d=1.75,format=rgba,setpts=PTS-STARTPTS[cc_transparent_207];\n[cc_concat_203][cc_transparent_207]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_208];\n[cc_concat_208][cc_positioned_206]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_209];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.6,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-21.txt:expansion=none:fontsize=82:fontcolor=0xF7F2E8:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=3.6,setpts=PTS-STARTPTS[cc_clip_210];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.6,format=rgba,setpts=PTS-STARTPTS[cc_transparent_211];\n[cc_transparent_211][cc_clip_210]overlay=x=0:y=-58:shortest=1:format=auto,trim=duration=3.6,setpts=PTS-STARTPTS[cc_positioned_212];\ncolor=c=black@0.0:s=1080x1920:r=30:d=0.4,format=rgba,setpts=PTS-STARTPTS[cc_transparent_213];\n[cc_concat_209][cc_transparent_213]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_214];\n[cc_concat_214][cc_positioned_212]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_215];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.95,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-22.txt:expansion=none:fontsize=46:fontcolor=0x000000:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.55,trim=duration=3.95,setpts=PTS-STARTPTS[cc_clip_216];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.95,format=rgba,setpts=PTS-STARTPTS[cc_transparent_217];\n[cc_transparent_217][cc_clip_216]overlay=x=0:y=664:shortest=1:format=auto,trim=duration=3.95,setpts=PTS-STARTPTS[cc_positioned_218];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4.3,format=rgba,setpts=PTS-STARTPTS[cc_transparent_219];\n[cc_transparent_219][cc_positioned_218]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_220];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.45,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-23.txt:expansion=none:fontsize=46:fontcolor=0x000000:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.55,trim=duration=3.45,setpts=PTS-STARTPTS[cc_clip_221];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.45,format=rgba,setpts=PTS-STARTPTS[cc_transparent_222];\n[cc_transparent_222][cc_clip_221]overlay=x=0:y=664:shortest=1:format=auto,trim=duration=3.45,setpts=PTS-STARTPTS[cc_positioned_223];\ncolor=c=black@0.0:s=1080x1920:r=30:d=9.05,format=rgba,setpts=PTS-STARTPTS[cc_transparent_224];\n[cc_concat_220][cc_transparent_224]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_225];\n[cc_concat_225][cc_positioned_223]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_226];\ncolor=c=black@0.0:s=1080x1920:r=30:d=2.8,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-24.txt:expansion=none:fontsize=46:fontcolor=0x000000:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.55,trim=duration=2.8,setpts=PTS-STARTPTS[cc_clip_227];\ncolor=c=black@0.0:s=1080x1920:r=30:d=2.8,format=rgba,setpts=PTS-STARTPTS[cc_transparent_228];\n[cc_transparent_228][cc_clip_227]overlay=x=0:y=664:shortest=1:format=auto,trim=duration=2.8,setpts=PTS-STARTPTS[cc_positioned_229];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.85,format=rgba,setpts=PTS-STARTPTS[cc_transparent_230];\n[cc_concat_226][cc_transparent_230]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_231];\n[cc_concat_231][cc_positioned_229]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_232];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4.1,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-25.txt:expansion=none:fontsize=46:fontcolor=0x000000:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.55,trim=duration=4.1,setpts=PTS-STARTPTS[cc_clip_233];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4.1,format=rgba,setpts=PTS-STARTPTS[cc_transparent_234];\n[cc_transparent_234][cc_clip_233]overlay=x=0:y=664:shortest=1:format=auto,trim=duration=4.1,setpts=PTS-STARTPTS[cc_positioned_235];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4.8,format=rgba,setpts=PTS-STARTPTS[cc_transparent_236];\n[cc_concat_232][cc_transparent_236]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_237];\n[cc_concat_237][cc_positioned_235]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_238];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.95,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-26.txt:expansion=none:fontsize=46:fontcolor=0x000000:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,colorchannelmixer=aa=0.55,trim=duration=3.95,setpts=PTS-STARTPTS[cc_clip_239];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.95,format=rgba,setpts=PTS-STARTPTS[cc_transparent_240];\n[cc_transparent_240][cc_clip_239]overlay=x=0:y=664:shortest=1:format=auto,trim=duration=3.95,setpts=PTS-STARTPTS[cc_positioned_241];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4,format=rgba,setpts=PTS-STARTPTS[cc_transparent_242];\n[cc_concat_238][cc_transparent_242]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_243];\n[cc_concat_243][cc_positioned_241]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_244];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.35,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-27.txt:expansion=none:fontsize=88:fontcolor=0xF7F2E8:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=3.35,setpts=PTS-STARTPTS[cc_clip_245];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.35,format=rgba,setpts=PTS-STARTPTS[cc_transparent_246];\n[cc_transparent_246][cc_clip_245]overlay=x=0:y=-83:shortest=1:format=auto,trim=duration=3.35,setpts=PTS-STARTPTS[cc_positioned_247];\ncolor=c=black@0.0:s=1080x1920:r=30:d=0.9,format=rgba,setpts=PTS-STARTPTS[cc_transparent_248];\n[cc_transparent_248][cc_positioned_247]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_249];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.95,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-28.txt:expansion=none:fontsize=46:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=3.95,setpts=PTS-STARTPTS[cc_clip_250];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.95,format=rgba,setpts=PTS-STARTPTS[cc_transparent_251];\n[cc_transparent_251][cc_clip_250]overlay=x=0:y=660:shortest=1:format=auto,trim=duration=3.95,setpts=PTS-STARTPTS[cc_positioned_252];\ncolor=c=black@0.0:s=1080x1920:r=30:d=0.05,format=rgba,setpts=PTS-STARTPTS[cc_transparent_253];\n[cc_concat_249][cc_transparent_253]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_254];\n[cc_concat_254][cc_positioned_252]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_255];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.45,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-29.txt:expansion=none:fontsize=46:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=3.45,setpts=PTS-STARTPTS[cc_clip_256];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.45,format=rgba,setpts=PTS-STARTPTS[cc_transparent_257];\n[cc_transparent_257][cc_clip_256]overlay=x=0:y=660:shortest=1:format=auto,trim=duration=3.45,setpts=PTS-STARTPTS[cc_positioned_258];\ncolor=c=black@0.0:s=1080x1920:r=30:d=9.05,format=rgba,setpts=PTS-STARTPTS[cc_transparent_259];\n[cc_concat_255][cc_transparent_259]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_260];\n[cc_concat_260][cc_positioned_258]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_261];\ncolor=c=black@0.0:s=1080x1920:r=30:d=2.8,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-30.txt:expansion=none:fontsize=46:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=2.8,setpts=PTS-STARTPTS[cc_clip_262];\ncolor=c=black@0.0:s=1080x1920:r=30:d=2.8,format=rgba,setpts=PTS-STARTPTS[cc_transparent_263];\n[cc_transparent_263][cc_clip_262]overlay=x=0:y=660:shortest=1:format=auto,trim=duration=2.8,setpts=PTS-STARTPTS[cc_positioned_264];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.85,format=rgba,setpts=PTS-STARTPTS[cc_transparent_265];\n[cc_concat_261][cc_transparent_265]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_266];\n[cc_concat_266][cc_positioned_264]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_267];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4.1,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-31.txt:expansion=none:fontsize=46:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=4.1,setpts=PTS-STARTPTS[cc_clip_268];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4.1,format=rgba,setpts=PTS-STARTPTS[cc_transparent_269];\n[cc_transparent_269][cc_clip_268]overlay=x=0:y=660:shortest=1:format=auto,trim=duration=4.1,setpts=PTS-STARTPTS[cc_positioned_270];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4.8,format=rgba,setpts=PTS-STARTPTS[cc_transparent_271];\n[cc_concat_267][cc_transparent_271]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_272];\n[cc_concat_272][cc_positioned_270]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_273];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.95,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-32.txt:expansion=none:fontsize=46:fontcolor=0xFFFFFF:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=3.95,setpts=PTS-STARTPTS[cc_clip_274];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.95,format=rgba,setpts=PTS-STARTPTS[cc_transparent_275];\n[cc_transparent_275][cc_clip_274]overlay=x=0:y=660:shortest=1:format=auto,trim=duration=3.95,setpts=PTS-STARTPTS[cc_positioned_276];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4,format=rgba,setpts=PTS-STARTPTS[cc_transparent_277];\n[cc_concat_273][cc_transparent_277]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_278];\n[cc_concat_278][cc_positioned_276]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_279];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.6,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-33.txt:expansion=none:fontsize=46:fontcolor=0xF7F2E8:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSerifCJK-Medium.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=3.6,setpts=PTS-STARTPTS[cc_clip_280];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.6,format=rgba,setpts=PTS-STARTPTS[cc_transparent_281];\n[cc_transparent_281][cc_clip_280]overlay=x=0:y=23:shortest=1:format=auto,trim=duration=3.6,setpts=PTS-STARTPTS[cc_positioned_282];\ncolor=c=black@0.0:s=1080x1920:r=30:d=4.15,format=rgba,setpts=PTS-STARTPTS[cc_transparent_283];\n[cc_concat_279][cc_transparent_283]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_284];\n[cc_concat_284][cc_positioned_282]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_285];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.35,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-34.txt:expansion=none:fontsize=18:fontcolor=0xC9C3B6:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSansCJK-Light.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=3.35,setpts=PTS-STARTPTS[cc_clip_286];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.35,format=rgba,setpts=PTS-STARTPTS[cc_transparent_287];\n[cc_transparent_287][cc_clip_286]overlay=x=0:y=17:shortest=1:format=auto,trim=duration=3.35,setpts=PTS-STARTPTS[cc_positioned_288];\ncolor=c=black@0.0:s=1080x1920:r=30:d=0.9,format=rgba,setpts=PTS-STARTPTS[cc_transparent_289];\n[cc_transparent_289][cc_positioned_288]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_290];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.6,setpts=PTS-STARTPTS,drawtext=textfile={jobDirectory}/diagnostics/text-35.txt:expansion=none:fontsize=22:fontcolor=0xC9C3B6:x=(w-text_w)/2:y=(h-text_h)/2:fix_bounds=1:fontfile=/workspace/travel/edit/fonts/NotoSansCJK-Light.ttc,fps=30,format=rgba,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,trim=duration=3.6,setpts=PTS-STARTPTS[cc_clip_291];\ncolor=c=black@0.0:s=1080x1920:r=30:d=3.6,format=rgba,setpts=PTS-STARTPTS[cc_transparent_292];\n[cc_transparent_292][cc_clip_291]overlay=x=0:y=103:shortest=1:format=auto,trim=duration=3.6,setpts=PTS-STARTPTS[cc_positioned_293];\ncolor=c=black@0.0:s=1080x1920:r=30:d=44.15,format=rgba,setpts=PTS-STARTPTS[cc_transparent_294];\n[cc_concat_290][cc_transparent_294]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_295];\n[cc_concat_295][cc_positioned_293]concat=n=2:v=1:a=0,setpts=PTS-STARTPTS[cc_concat_296];\ncolor=c=black:s=1080x1920:r=30:d=52,format=rgba,setpts=PTS-STARTPTS[cc_black_297];\n[cc_black_297][cc_xfade_72]overlay=x=0:y=0:eof_action=pass:repeatlast=0:format=auto,setpts=PTS-STARTPTS[cc_composite_298];\n[cc_composite_298][cc_concat_85]overlay=x=0:y=0:eof_action=pass:repeatlast=0:format=auto,setpts=PTS-STARTPTS[cc_composite_299];\n[cc_composite_299][cc_concat_144]overlay=x=0:y=0:eof_action=pass:repeatlast=0:format=auto,setpts=PTS-STARTPTS[cc_composite_300];\n[cc_composite_300][cc_concat_215]overlay=x=0:y=0:eof_action=pass:repeatlast=0:format=auto,setpts=PTS-STARTPTS[cc_composite_301];\n[cc_composite_301][cc_concat_244]overlay=x=0:y=0:eof_action=pass:repeatlast=0:format=auto,setpts=PTS-STARTPTS[cc_composite_302];\n[cc_composite_302][cc_concat_285]overlay=x=0:y=0:eof_action=pass:repeatlast=0:format=auto,setpts=PTS-STARTPTS[cc_composite_303];\n[cc_composite_303][cc_concat_296]overlay=x=0:y=0:eof_action=pass:repeatlast=0:format=auto,setpts=PTS-STARTPTS[cc_composite_304];\n[cc_composite_304]fps=30,trim=duration=52,format=yuv420p,setpts=PTS-STARTPTS[vout];\n[13:a:0]atrim=start=0:end=52,asetpts=PTS-STARTPTS,aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,asetpts=PTS-STARTPTS,afade=t=in:st=0:d=0.6,afade=t=out:st=50.8:d=1.2,apad=pad_dur=52,atrim=duration=52,adelay=delays=0:all=1,asetpts=PTS-STARTPTS[cc_audio_305];\nanullsrc=r=48000:cl=stereo:d=52[cc_silence_306];\n[cc_silence_306][cc_audio_305]amix=inputs=2:duration=longest:dropout_transition=0:normalize=0,aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,atrim=duration=52,asetpts=PTS-STARTPTS[aout];\n[aout]anullsink;\n[vout]trim=start=6:end=52,setpts=PTS-STARTPTS,scale=w=1080:h=1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:color=black,format=rgb24[preview_vout]\n",
+      "output": {
+        "path": "/workspace/travel/previews/cc_frame_06.png",
+        "temporaryPath": "{output}",
+        "format": "png",
+        "overwrite": true
+      },
+      "media": {
+        "durationSeconds": 52,
+        "width": 1080,
+        "height": 1920,
+        "frameRate": 30,
+        "pixelFormat": "yuv420p",
+        "videoCodec": "h264",
+        "audioCodec": "aac",
+        "audioSampleRate": 48000,
+        "audioChannels": 2
+      },
+      "warnings": [],
+      "textFiles": [
+        {
+          "clipId": "sub01_1_1_sh",
+          "path": "{jobDirectory}/diagnostics/text-0.txt",
+          "content": "走得越远，"
+        },
+        {
+          "clipId": "sub02_1_1_sh",
+          "path": "{jobDirectory}/diagnostics/text-1.txt",
+          "content": "后来我不再急着赶路。"
+        },
+        {
+          "clipId": "sub03_1_1_sh",
+          "path": "{jobDirectory}/diagnostics/text-2.txt",
+          "content": "在陌生的山谷里，等一场雾散。"
+        },
+        {
+          "clipId": "sub04_1_1_sh",
+          "path": "{jobDirectory}/diagnostics/text-3.txt",
+          "content": "在无人的海边，"
+        },
+        {
+          "clipId": "sub05_1_1_sh",
+          "path": "{jobDirectory}/diagnostics/text-4.txt",
+          "content": "旅行不是去更多的地方，"
+        },
+        {
+          "clipId": "sub06_1_1_sh",
+          "path": "{jobDirectory}/diagnostics/text-5.txt",
+          "content": "而是让一个地方，"
+        },
+        {
+          "clipId": "sub07_1_1_sh",
+          "path": "{jobDirectory}/diagnostics/text-6.txt",
+          "content": "世界很大，我们很小。"
+        },
+        {
+          "clipId": "sub08_1_1_sh",
+          "path": "{jobDirectory}/diagnostics/text-7.txt",
+          "content": "但每一次出发，"
+        },
+        {
+          "clipId": "sub09_1_1_sh",
+          "path": "{jobDirectory}/diagnostics/text-8.txt",
+          "content": "所以走吧，"
+        },
+        {
+          "clipId": "sub10_1_1_sh",
+          "path": "{jobDirectory}/diagnostics/text-9.txt",
+          "content": "剩下的路，交给风。"
+        },
+        {
+          "clipId": "open_eyebrow",
+          "path": "{jobDirectory}/diagnostics/text-10.txt",
+          "content": "TRAVEL  NOTES  ·  2026"
+        },
+        {
+          "clipId": "sub01_1",
+          "path": "{jobDirectory}/diagnostics/text-11.txt",
+          "content": "走得越远，"
+        },
+        {
+          "clipId": "sub02_1",
+          "path": "{jobDirectory}/diagnostics/text-12.txt",
+          "content": "后来我不再急着赶路。"
+        },
+        {
+          "clipId": "sub03_1",
+          "path": "{jobDirectory}/diagnostics/text-13.txt",
+          "content": "在陌生的山谷里，等一场雾散。"
+        },
+        {
+          "clipId": "sub04_1",
+          "path": "{jobDirectory}/diagnostics/text-14.txt",
+          "content": "在无人的海边，"
+        },
+        {
+          "clipId": "sub05_1",
+          "path": "{jobDirectory}/diagnostics/text-15.txt",
+          "content": "旅行不是去更多的地方，"
+        },
+        {
+          "clipId": "sub06_1",
+          "path": "{jobDirectory}/diagnostics/text-16.txt",
+          "content": "而是让一个地方，"
+        },
+        {
+          "clipId": "sub07_1",
+          "path": "{jobDirectory}/diagnostics/text-17.txt",
+          "content": "世界很大，我们很小。"
+        },
+        {
+          "clipId": "sub08_1",
+          "path": "{jobDirectory}/diagnostics/text-18.txt",
+          "content": "但每一次出发，"
+        },
+        {
+          "clipId": "sub09_1",
+          "path": "{jobDirectory}/diagnostics/text-19.txt",
+          "content": "所以走吧，"
+        },
+        {
+          "clipId": "sub10_1",
+          "path": "{jobDirectory}/diagnostics/text-20.txt",
+          "content": "剩下的路，交给风。"
+        },
+        {
+          "clipId": "close_title",
+          "path": "{jobDirectory}/diagnostics/text-21.txt",
+          "content": "世界走不完"
+        },
+        {
+          "clipId": "sub01_2_2_sh",
+          "path": "{jobDirectory}/diagnostics/text-22.txt",
+          "content": "越知道自己走不完这个世界。"
+        },
+        {
+          "clipId": "sub04_2_2_sh",
+          "path": "{jobDirectory}/diagnostics/text-23.txt",
+          "content": "看浪把脚印抹平。"
+        },
+        {
+          "clipId": "sub06_2_2_sh",
+          "path": "{jobDirectory}/diagnostics/text-24.txt",
+          "content": "真正经过你。"
+        },
+        {
+          "clipId": "sub08_2_2_sh",
+          "path": "{jobDirectory}/diagnostics/text-25.txt",
+          "content": "都是把自己重新交还给世界。"
+        },
+        {
+          "clipId": "sub09_2_2_sh",
+          "path": "{jobDirectory}/diagnostics/text-26.txt",
+          "content": "哪怕只能走到下一次日落。"
+        },
+        {
+          "clipId": "open_title",
+          "path": "{jobDirectory}/diagnostics/text-27.txt",
+          "content": "世界走不完"
+        },
+        {
+          "clipId": "sub01_2",
+          "path": "{jobDirectory}/diagnostics/text-28.txt",
+          "content": "越知道自己走不完这个世界。"
+        },
+        {
+          "clipId": "sub04_2",
+          "path": "{jobDirectory}/diagnostics/text-29.txt",
+          "content": "看浪把脚印抹平。"
+        },
+        {
+          "clipId": "sub06_2",
+          "path": "{jobDirectory}/diagnostics/text-30.txt",
+          "content": "真正经过你。"
+        },
+        {
+          "clipId": "sub08_2",
+          "path": "{jobDirectory}/diagnostics/text-31.txt",
+          "content": "都是把自己重新交还给世界。"
+        },
+        {
+          "clipId": "sub09_2",
+          "path": "{jobDirectory}/diagnostics/text-32.txt",
+          "content": "哪怕只能走到下一次日落。"
+        },
+        {
+          "clipId": "close_line2",
+          "path": "{jobDirectory}/diagnostics/text-33.txt",
+          "content": "那就一直走。"
+        },
+        {
+          "clipId": "open_en",
+          "path": "{jobDirectory}/diagnostics/text-34.txt",
+          "content": "THE WORLD IS TOO BIG TO FINISH"
+        },
+        {
+          "clipId": "close_line3",
+          "path": "{jobDirectory}/diagnostics/text-35.txt",
+          "content": "写给还在路上的你"
+        }
+      ],
+      "preview": {
+        "type": "frame",
+        "at": 6,
+        "width": 1080,
+        "height": 1920
+      }
+    }
+  },
+  "preview": {
+    "type": "frame",
+    "parameters": {
+      "type": "frame",
+      "at": 6,
+      "width": 1080,
+      "height": 1920
+    }
+  },
+  "result": {
+    "data": {
+      "type": "frame",
+      "outputPath": "/workspace/travel/previews/cc_frame_06.png",
+      "revision": 15,
+      "parameters": {
+        "type": "frame",
+        "at": 6,
+        "width": 1080,
+        "height": 1920
+      }
+    }
+  }
+}

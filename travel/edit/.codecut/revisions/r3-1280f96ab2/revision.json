@@ -1,0 +1,41 @@
+{
+  "id": "r3-1280f96ab2",
+  "parentId": "r2-959c7d284e",
+  "projectRevision": 3,
+  "createdAt": "2026-11-18T06:13:24.981Z",
+  "summary": "Add asset 03_coastal_road",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "03_coastal_road",
+        "kind": "video",
+        "path": "../assets/motion/03_coastal_road.mp4",
+        "metadata": {
+          "probedAt": "2026-11-18T06:13:24.969Z",
+          "fingerprint": {
+            "size": 2983289,
+            "mtimeMs": 1794982207795.685
+          },
+          "duration": 4.8,
+          "size": 2983289,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 4972148,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1080,
+              "height": 1920,
+              "frameRate": 30,
+              "duration": 4.8,
+              "bitRate": 4967768
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r3-1280f96ab2/project.json"
+}

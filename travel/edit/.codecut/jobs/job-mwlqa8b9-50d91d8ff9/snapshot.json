@@ -1,0 +1,1311 @@
+{
+  "version": 1,
+  "createdAt": "2026-11-18T06:16:21.903Z",
+  "projectRevision": 15,
+  "project": {
+    "schemaVersion": 1,
+    "revision": 15,
+    "name": "世界走不完",
+    "assets": [
+      {
+        "id": "01_mist_valley",
+        "kind": "video",
+        "path": "../assets/motion/01_mist_valley.mp4",
+        "metadata": {
+          "probedAt": "2026-11-18T06:13:21.678Z",
+          "fingerprint": {
+            "size": 1801549,
+            "mtimeMs": 1794982174255.4558
+          },
+          "duration": 4.8,
+          "size": 1801549,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 3002581,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1080,
+              "height": 1920,
+              "frameRate": 30,
+              "duration": 4.8,
+              "bitRate": 2998228
+            }
+          ]
+        }
+      },
+      {
+        "id": "02_snow_mountain",
+        "kind": "video",
+        "path": "../assets/motion/02_snow_mountain.mp4",
+        "metadata": {
+          "probedAt": "2026-11-18T06:13:23.260Z",
+          "fingerprint": {
+            "size": 2269728,
+            "mtimeMs": 1794982190051.564
+          },
+          "duration": 4.8,
+          "size": 2269728,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 3782880,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1080,
+              "height": 1920,
+              "frameRate": 30,
+              "duration": 4.8,
+              "bitRate": 3778500
+            }
+          ]
+        }
+      },
+      {
+        "id": "03_coastal_road",
+        "kind": "video",
+        "path": "../assets/motion/03_coastal_road.mp4",
+        "metadata": {
+          "probedAt": "2026-11-18T06:13:24.969Z",
+          "fingerprint": {
+            "size": 2983289,
+            "mtimeMs": 1794982207795.685
+          },
+          "duration": 4.8,
+          "size": 2983289,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 4972148,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1080,
+              "height": 1920,
+              "frameRate": 30,
+              "duration": 4.8,
+              "bitRate": 4967768
+            }
+          ]
+        }
+      },
+      {
+        "id": "04_black_sand",
+        "kind": "video",
+        "path": "../assets/motion/04_black_sand.mp4",
+        "metadata": {
+          "probedAt": "2026-11-18T06:13:26.679Z",
+          "fingerprint": {
+            "size": 2328017,
+            "mtimeMs": 1794982241659.9165
+          },
+          "duration": 4.8,
+          "size": 2328017,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 3880028,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1080,
+              "height": 1920,
+              "frameRate": 30,
+              "duration": 4.8,
+              "bitRate": 3875648
+            }
+          ]
+        }
+      },
+      {
+        "id": "05_plateau",
+        "kind": "video",
+        "path": "../assets/motion/05_plateau.mp4",
+        "metadata": {
+          "probedAt": "2026-11-18T06:13:28.143Z",
+          "fingerprint": {
+            "size": 2127005,
+            "mtimeMs": 1794982257544.0251
+          },
+          "duration": 4.8,
+          "size": 2127005,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 3545008,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1080,
+              "height": 1920,
+              "frameRate": 30,
+              "duration": 4.8,
+              "bitRate": 3540628
+            }
+          ]
+        }
+      },
+      {
+        "id": "06_night_train",
+        "kind": "video",
+        "path": "../assets/motion/06_night_train.mp4",
+        "metadata": {
+          "probedAt": "2026-11-18T06:13:29.767Z",
+          "fingerprint": {
+            "size": 2801446,
+            "mtimeMs": 1794982274308.1396
+          },
+          "duration": 4.8,
+          "size": 2801446,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 4669076,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1080,
+              "height": 1920,
+              "frameRate": 30,
+              "duration": 4.8,
+              "bitRate": 4664696
+            }
+          ]
+        }
+      },
+      {
+        "id": "07_desert_stars",
+        "kind": "video",
+        "path": "../assets/motion/07_desert_stars.mp4",
+        "metadata": {
+          "probedAt": "2026-11-18T06:13:31.396Z",
+          "fingerprint": {
+            "size": 3321810,
+            "mtimeMs": 1794982322852.471
+          },
+          "duration": 4.8,
+          "size": 3321810,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 5536350,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1080,
+              "height": 1920,
+              "frameRate": 30,
+              "duration": 4.8,
+              "bitRate": 5531963
+            }
+          ]
+        }
+      },
+      {
+        "id": "08_rain_city",
+        "kind": "video",
+        "path": "../assets/motion/08_rain_city.mp4",
+        "metadata": {
+          "probedAt": "2026-11-18T06:13:32.787Z",
+          "fingerprint": {
+            "size": 2856832,
+            "mtimeMs": 1794982306548.36
+          },
+          "duration": 4.8,
+          "size": 2856832,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 4761386,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1080,
+              "height": 1920,
+              "frameRate": 30,
+              "duration": 4.8,
+              "bitRate": 4757006
+            }
+          ]
+        }
+      },
+      {
+        "id": "09_cloud_sea",
+        "kind": "video",
+        "path": "../assets/motion/09_cloud_sea.mp4",
+        "metadata": {
+          "probedAt": "2026-11-18T06:13:34.370Z",
+          "fingerprint": {
+            "size": 1892407,
+            "mtimeMs": 1794982338380.574
+          },
+          "duration": 4.8,
+          "size": 1892407,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 3154011,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1080,
+              "height": 1920,
+              "frameRate": 30,
+              "duration": 4.8,
+              "bitRate": 3149658
+            }
+          ]
+        }
+      },
+      {
+        "id": "10_old_town",
+        "kind": "video",
+        "path": "../assets/motion/10_old_town.mp4",
+        "metadata": {
+          "probedAt": "2026-11-18T06:13:36.062Z",
+          "fingerprint": {
+            "size": 1898724,
+            "mtimeMs": 1794982290240.2485
+          },
+          "duration": 4.8,
+          "size": 1898724,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 3164540,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1080,
+              "height": 1920,
+              "frameRate": 30,
+              "duration": 4.8,
+              "bitRate": 3160186
+            }
+          ]
+        }
+      },
+      {
+        "id": "11_lake_canoe",
+        "kind": "video",
+        "path": "../assets/motion/11_lake_canoe.mp4",
+        "metadata": {
+          "probedAt": "2026-11-18T06:13:37.577Z",
+          "fingerprint": {
+            "size": 1583745,
+            "mtimeMs": 1794982223371.7915
+          },
+          "duration": 4.8,
+          "size": 1583745,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 2639575,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1080,
+              "height": 1920,
+              "frameRate": 30,
+              "duration": 4.8,
+              "bitRate": 2635221
+            }
+          ]
+        }
+      },
+      {
+        "id": "12_station",
+        "kind": "video",
+        "path": "../assets/motion/12_station.mp4",
+        "metadata": {
+          "probedAt": "2026-11-18T06:13:39.181Z",
+          "fingerprint": {
+            "size": 1772558,
+            "mtimeMs": 1794982353800.6765
+          },
+          "duration": 4.8,
+          "size": 1772558,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 2954263,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1080,
+              "height": 1920,
+              "frameRate": 30,
+              "duration": 4.8,
+              "bitRate": 2949910
+            }
+          ]
+        }
+      },
+      {
+        "id": "13_starry_road",
+        "kind": "video",
+        "path": "../assets/motion/13_starry_road.mp4",
+        "metadata": {
+          "probedAt": "2026-11-18T06:13:40.807Z",
+          "fingerprint": {
+            "size": 2143306,
+            "mtimeMs": 1794982367728.769
+          },
+          "duration": 4,
+          "size": 2143306,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 4286612,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1080,
+              "height": 1920,
+              "frameRate": 30,
+              "duration": 4,
+              "bitRate": 4281948
+            }
+          ]
+        }
+      },
+      {
+        "id": "mix",
+        "kind": "audio",
+        "path": "../assets/audio/mix.wav",
+        "metadata": {
+          "probedAt": "2026-11-18T06:13:42.342Z",
+          "fingerprint": {
+            "size": 9984044,
+            "mtimeMs": 1794981002711.4854
+          },
+          "duration": 52,
+          "size": 9984044,
+          "formatName": "wav",
+          "bitRate": 1536006,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "audio",
+              "codecName": "pcm_s16le",
+              "sampleRate": 48000,
+              "channels": 2,
+              "duration": 52,
+              "bitRate": 1536000
+            }
+          ]
+        }
+      }
+    ],
+    "tracks": [
+      {
+        "id": "v1",
+        "kind": "video",
+        "name": "Video 1",
+        "clips": [
+          {
+            "id": "shot01",
+            "type": "video",
+            "assetId": "01_mist_valley",
+            "start": 0,
+            "duration": 4.8
+          },
+          {
+            "id": "shot02",
+            "type": "video",
+            "assetId": "02_snow_mountain",
+            "start": 4,
+            "duration": 4.8,
+            "transition": {
+              "type": "xfade",
+              "duration": 0.8,
+              "name": "fade"
+            }
+          },
+          {
+            "id": "shot03",
+            "type": "video",
+            "assetId": "03_coastal_road",
+            "start": 8,
+            "duration": 4.8,
+            "transition": {
+              "type": "xfade",
+              "duration": 0.8,
+              "name": "fade"
+            }
+          },
+          {
+            "id": "shot04",
+            "type": "video",
+            "assetId": "11_lake_canoe",
+            "start": 12,
+            "duration": 4.8,
+            "transition": {
+              "type": "xfade",
+              "duration": 0.8,
+              "name": "fade"
+            }
+          },
+          {
+            "id": "shot05",
+            "type": "video",
+            "assetId": "04_black_sand",
+            "start": 16,
+            "duration": 4.8,
+            "transition": {
+              "type": "xfade",
+              "duration": 0.8,
+              "name": "fade"
+            }
+          },
+          {
+            "id": "shot06",
+            "type": "video",
+            "assetId": "05_plateau",
+            "start": 20,
+            "duration": 4.8,
+            "transition": {
+              "type": "xfade",
+              "duration": 0.8,
+              "name": "fade"
+            }
+          },
+          {
+            "id": "shot07",
+            "type": "video",
+            "assetId": "06_night_train",
+            "start": 24,
+            "duration": 4.8,
+            "transition": {
+              "type": "xfade",
+              "duration": 0.8,
+              "name": "fade"
+            }
+          },
+          {
+            "id": "shot08",
+            "type": "video",
+            "assetId": "10_old_town",
+            "start": 28,
+            "duration": 4.8,
+            "transition": {
+              "type": "xfade",
+              "duration": 0.8,
+              "name": "fade"
+            }
+          },
+          {
+            "id": "shot09",
+            "type": "video",
+            "assetId": "08_rain_city",
+            "start": 32,
+            "duration": 4.8,
+            "transition": {
+              "type": "xfade",
+              "duration": 0.8,
+              "name": "fade"
+            }
+          },
+          {
+            "id": "shot10",
+            "type": "video",
+            "assetId": "07_desert_stars",
+            "start": 36,
+            "duration": 4.8,
+            "transition": {
+              "type": "xfade",
+              "duration": 0.8,
+              "name": "fade"
+            }
+          },
+          {
+            "id": "shot11",
+            "type": "video",
+            "assetId": "09_cloud_sea",
+            "start": 40,
+            "duration": 4.8,
+            "transition": {
+              "type": "xfade",
+              "duration": 0.8,
+              "name": "fade"
+            }
+          },
+          {
+            "id": "shot12",
+            "type": "video",
+            "assetId": "12_station",
+            "start": 44,
+            "duration": 4.8,
+            "transition": {
+              "type": "xfade",
+              "duration": 0.8,
+              "name": "fade"
+            }
+          },
+          {
+            "id": "shot13",
+            "type": "video",
+            "assetId": "13_starry_road",
+            "start": 48,
+            "duration": 4,
+            "transition": {
+              "type": "xfade",
+              "duration": 0.8,
+              "name": "fade"
+            }
+          }
+        ]
+      },
+      {
+        "id": "v2",
+        "kind": "video",
+        "name": "Video 2",
+        "clips": [
+          {
+            "id": "dim_open",
+            "type": "color",
+            "color": "#000000",
+            "start": 0.9,
+            "duration": 3.35,
+            "opacity": 0.24
+          },
+          {
+            "id": "dim_close",
+            "type": "color",
+            "color": "#000000",
+            "start": 48.4,
+            "duration": 3.6,
+            "opacity": 0.24
+          }
+        ]
+      },
+      {
+        "id": "a1",
+        "kind": "audio",
+        "name": "Audio 1",
+        "clips": [
+          {
+            "id": "mix",
+            "type": "audio",
+            "assetId": "mix",
+            "start": 0,
+            "duration": 52,
+            "volume": 1,
+            "fadeIn": 0.6,
+            "fadeOut": 1.2
+          }
+        ]
+      },
+      {
+        "id": "sh1",
+        "kind": "video",
+        "name": "Shadow 1",
+        "clips": [
+          {
+            "id": "sub01_1_1_sh",
+            "type": "text",
+            "text": "走得越远，",
+            "start": 4.3,
+            "duration": 3.95,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#000000",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 594
+            },
+            "opacity": 0.55
+          },
+          {
+            "id": "sub02_1_1_sh",
+            "type": "text",
+            "text": "后来我不再急着赶路。",
+            "start": 9.6,
+            "duration": 2.3,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#000000",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 628
+            },
+            "opacity": 0.55
+          },
+          {
+            "id": "sub03_1_1_sh",
+            "type": "text",
+            "text": "在陌生的山谷里，等一场雾散。",
+            "start": 13.3,
+            "duration": 3.2,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#000000",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 628
+            },
+            "opacity": 0.55
+          },
+          {
+            "id": "sub04_1_1_sh",
+            "type": "text",
+            "text": "在无人的海边，",
+            "start": 17.3,
+            "duration": 3.45,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#000000",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 594
+            },
+            "opacity": 0.55
+          },
+          {
+            "id": "sub05_1_1_sh",
+            "type": "text",
+            "text": "旅行不是去更多的地方，",
+            "start": 21.6,
+            "duration": 2.65,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#000000",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 628
+            },
+            "opacity": 0.55
+          },
+          {
+            "id": "sub06_1_1_sh",
+            "type": "text",
+            "text": "而是让一个地方，",
+            "start": 24.6,
+            "duration": 2.8,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#000000",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 594
+            },
+            "opacity": 0.55
+          },
+          {
+            "id": "sub07_1_1_sh",
+            "type": "text",
+            "text": "世界很大，我们很小。",
+            "start": 28.4,
+            "duration": 2.2,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#000000",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 628
+            },
+            "opacity": 0.55
+          },
+          {
+            "id": "sub08_1_1_sh",
+            "type": "text",
+            "text": "但每一次出发，",
+            "start": 32.2,
+            "duration": 4.1,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#000000",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 594
+            },
+            "opacity": 0.55
+          },
+          {
+            "id": "sub09_1_1_sh",
+            "type": "text",
+            "text": "所以走吧，",
+            "start": 40.3,
+            "duration": 3.95,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#000000",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 594
+            },
+            "opacity": 0.55
+          },
+          {
+            "id": "sub10_1_1_sh",
+            "type": "text",
+            "text": "剩下的路，交给风。",
+            "start": 46,
+            "duration": 2,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#000000",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 628
+            },
+            "opacity": 0.55
+          }
+        ]
+      },
+      {
+        "id": "t1",
+        "kind": "video",
+        "name": "Title 1",
+        "clips": [
+          {
+            "id": "open_eyebrow",
+            "type": "text",
+            "text": "TRAVEL  NOTES  ·  2026",
+            "start": 0.9,
+            "duration": 3.35,
+            "fontFile": "fonts/NotoSansCJK-Light.ttc",
+            "fontSize": 20,
+            "color": "#C9C3B6",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": -249
+            }
+          },
+          {
+            "id": "sub01_1",
+            "type": "text",
+            "text": "走得越远，",
+            "start": 4.3,
+            "duration": 3.95,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#FFFFFF",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 590
+            }
+          },
+          {
+            "id": "sub02_1",
+            "type": "text",
+            "text": "后来我不再急着赶路。",
+            "start": 9.6,
+            "duration": 2.3,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#FFFFFF",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 624
+            }
+          },
+          {
+            "id": "sub03_1",
+            "type": "text",
+            "text": "在陌生的山谷里，等一场雾散。",
+            "start": 13.3,
+            "duration": 3.2,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#FFFFFF",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 624
+            }
+          },
+          {
+            "id": "sub04_1",
+            "type": "text",
+            "text": "在无人的海边，",
+            "start": 17.3,
+            "duration": 3.45,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#FFFFFF",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 590
+            }
+          },
+          {
+            "id": "sub05_1",
+            "type": "text",
+            "text": "旅行不是去更多的地方，",
+            "start": 21.6,
+            "duration": 2.65,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#FFFFFF",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 624
+            }
+          },
+          {
+            "id": "sub06_1",
+            "type": "text",
+            "text": "而是让一个地方，",
+            "start": 24.6,
+            "duration": 2.8,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#FFFFFF",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 590
+            }
+          },
+          {
+            "id": "sub07_1",
+            "type": "text",
+            "text": "世界很大，我们很小。",
+            "start": 28.4,
+            "duration": 2.2,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#FFFFFF",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 624
+            }
+          },
+          {
+            "id": "sub08_1",
+            "type": "text",
+            "text": "但每一次出发，",
+            "start": 32.2,
+            "duration": 4.1,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#FFFFFF",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 590
+            }
+          },
+          {
+            "id": "sub09_1",
+            "type": "text",
+            "text": "所以走吧，",
+            "start": 40.3,
+            "duration": 3.95,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#FFFFFF",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 590
+            }
+          },
+          {
+            "id": "sub10_1",
+            "type": "text",
+            "text": "剩下的路，交给风。",
+            "start": 46,
+            "duration": 2,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#FFFFFF",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 624
+            }
+          },
+          {
+            "id": "close_title",
+            "type": "text",
+            "text": "世界走不完",
+            "start": 48.4,
+            "duration": 3.6,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 82,
+            "color": "#F7F2E8",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": -58
+            }
+          }
+        ]
+      },
+      {
+        "id": "sh2",
+        "kind": "video",
+        "name": "Shadow 2",
+        "clips": [
+          {
+            "id": "sub01_2_2_sh",
+            "type": "text",
+            "text": "越知道自己走不完这个世界。",
+            "start": 4.3,
+            "duration": 3.95,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#000000",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 664
+            },
+            "opacity": 0.55
+          },
+          {
+            "id": "sub04_2_2_sh",
+            "type": "text",
+            "text": "看浪把脚印抹平。",
+            "start": 17.3,
+            "duration": 3.45,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#000000",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 664
+            },
+            "opacity": 0.55
+          },
+          {
+            "id": "sub06_2_2_sh",
+            "type": "text",
+            "text": "真正经过你。",
+            "start": 24.6,
+            "duration": 2.8,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#000000",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 664
+            },
+            "opacity": 0.55
+          },
+          {
+            "id": "sub08_2_2_sh",
+            "type": "text",
+            "text": "都是把自己重新交还给世界。",
+            "start": 32.2,
+            "duration": 4.1,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#000000",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 664
+            },
+            "opacity": 0.55
+          },
+          {
+            "id": "sub09_2_2_sh",
+            "type": "text",
+            "text": "哪怕只能走到下一次日落。",
+            "start": 40.3,
+            "duration": 3.95,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#000000",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 664
+            },
+            "opacity": 0.55
+          }
+        ]
+      },
+      {
+        "id": "t2",
+        "kind": "video",
+        "name": "Title 2",
+        "clips": [
+          {
+            "id": "open_title",
+            "type": "text",
+            "text": "世界走不完",
+            "start": 0.9,
+            "duration": 3.35,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 88,
+            "color": "#F7F2E8",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": -83
+            }
+          },
+          {
+            "id": "sub01_2",
+            "type": "text",
+            "text": "越知道自己走不完这个世界。",
+            "start": 4.3,
+            "duration": 3.95,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#FFFFFF",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 660
+            }
+          },
+          {
+            "id": "sub04_2",
+            "type": "text",
+            "text": "看浪把脚印抹平。",
+            "start": 17.3,
+            "duration": 3.45,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#FFFFFF",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 660
+            }
+          },
+          {
+            "id": "sub06_2",
+            "type": "text",
+            "text": "真正经过你。",
+            "start": 24.6,
+            "duration": 2.8,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#FFFFFF",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 660
+            }
+          },
+          {
+            "id": "sub08_2",
+            "type": "text",
+            "text": "都是把自己重新交还给世界。",
+            "start": 32.2,
+            "duration": 4.1,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#FFFFFF",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 660
+            }
+          },
+          {
+            "id": "sub09_2",
+            "type": "text",
+            "text": "哪怕只能走到下一次日落。",
+            "start": 40.3,
+            "duration": 3.95,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#FFFFFF",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 660
+            }
+          },
+          {
+            "id": "close_line2",
+            "type": "text",
+            "text": "那就一直走。",
+            "start": 48.4,
+            "duration": 3.6,
+            "fontFile": "fonts/NotoSerifCJK-Medium.ttc",
+            "fontSize": 46,
+            "color": "#F7F2E8",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 23
+            }
+          }
+        ]
+      },
+      {
+        "id": "sh3",
+        "kind": "video",
+        "name": "Shadow 3",
+        "clips": []
+      },
+      {
+        "id": "t3",
+        "kind": "video",
+        "name": "Title 3",
+        "clips": [
+          {
+            "id": "open_en",
+            "type": "text",
+            "text": "THE WORLD IS TOO BIG TO FINISH",
+            "start": 0.9,
+            "duration": 3.35,
+            "fontFile": "fonts/NotoSansCJK-Light.ttc",
+            "fontSize": 18,
+            "color": "#C9C3B6",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 17
+            }
+          },
+          {
+            "id": "close_line3",
+            "type": "text",
+            "text": "写给还在路上的你",
+            "start": 48.4,
+            "duration": 3.6,
+            "fontFile": "fonts/NotoSansCJK-Light.ttc",
+            "fontSize": 22,
+            "color": "#C9C3B6",
+            "align": "center",
+            "position": {
+              "x": 0,
+              "y": 103
+            }
+          }
+        ]
+      }
+    ],
+    "output": {
+      "path": "out/travel_world_is_too_big_1080x1920.mp4",
+      "format": "mp4",
+      "videoCodec": "h264",
+      "audioCodec": "aac",
+      "width": 1080,
+      "height": 1920,
+      "frameRate": 30,
+      "pixelFormat": "yuv420p",
+      "audioSampleRate": 48000,
+      "audioChannels": 2
+    }
+  },
+  "assets": [
+    {
+      "id": "01_mist_valley",
+      "path": "../assets/motion/01_mist_valley.mp4",
+      "exists": true,
+      "size": 1801549,
+      "mtimeMs": 1794982174255.4558
+    },
+    {
+      "id": "02_snow_mountain",
+      "path": "../assets/motion/02_snow_mountain.mp4",
+      "exists": true,
+      "size": 2269728,
+      "mtimeMs": 1794982190051.564
+    },
+    {
+      "id": "03_coastal_road",
+      "path": "../assets/motion/03_coastal_road.mp4",
+      "exists": true,
+      "size": 2983289,
+      "mtimeMs": 1794982207795.685
+    },
+    {
+      "id": "04_black_sand",
+      "path": "../assets/motion/04_black_sand.mp4",
+      "exists": true,
+      "size": 2328017,
+      "mtimeMs": 1794982241659.9165
+    },
+    {
+      "id": "05_plateau",
+      "path": "../assets/motion/05_plateau.mp4",
+      "exists": true,
+      "size": 2127005,
+      "mtimeMs": 1794982257544.0251
+    },
+    {
+      "id": "06_night_train",
+      "path": "../assets/motion/06_night_train.mp4",
+      "exists": true,
+      "size": 2801446,
+      "mtimeMs": 1794982274308.1396
+    },
+    {
+      "id": "07_desert_stars",
+      "path": "../assets/motion/07_desert_stars.mp4",
+      "exists": true,
+      "size": 3321810,
+      "mtimeMs": 1794982322852.471
+    },
+    {
+      "id": "08_rain_city",
+      "path": "../assets/motion/08_rain_city.mp4",
+      "exists": true,
+      "size": 2856832,
+      "mtimeMs": 1794982306548.36
+    },
+    {
+      "id": "09_cloud_sea",
+      "path": "../assets/motion/09_cloud_sea.mp4",
+      "exists": true,
+      "size": 1892407,
+      "mtimeMs": 1794982338380.574
+    },
+    {
+      "id": "10_old_town",
+      "path": "../assets/motion/10_old_town.mp4",
+      "exists": true,
+      "size": 1898724,
+      "mtimeMs": 1794982290240.2485
+    },
+    {
+      "id": "11_lake_canoe",
+      "path": "../assets/motion/11_lake_canoe.mp4",
+      "exists": true,
+      "size": 1583745,
+      "mtimeMs": 1794982223371.7915
+    },
+    {
+      "id": "12_station",
+      "path": "../assets/motion/12_station.mp4",
+      "exists": true,
+      "size": 1772558,
+      "mtimeMs": 1794982353800.6765
+    },
+    {
+      "id": "13_starry_road",
+      "path": "../assets/motion/13_starry_road.mp4",
+      "exists": true,
+      "size": 2143306,
+      "mtimeMs": 1794982367728.769
+    },
+    {
+      "id": "mix",
+      "path": "../assets/audio/mix.wav",
+      "exists": true,
+      "size": 9984044,
+      "mtimeMs": 1794981002711.4854
+    }
+  ]
+}

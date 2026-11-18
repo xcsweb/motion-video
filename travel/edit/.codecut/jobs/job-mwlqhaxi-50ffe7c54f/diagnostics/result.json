@@ -1,0 +1,30 @@
+{
+  "type": "sheet",
+  "outputPath": "/workspace/travel/previews/cc_sheet.png",
+  "revision": 17,
+  "parameters": {
+    "type": "sheet",
+    "start": 0,
+    "end": 52,
+    "interval": 4,
+    "columns": 4,
+    "rows": 4,
+    "width": 360,
+    "height": 640,
+    "sampleTimes": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "frame",
+  "outputPath": "/workspace/travel/previews/cc_frame_06.png",
+  "revision": 15,
+  "parameters": {
+    "type": "frame",
+    "at": 6,
+    "width": 1080,
+    "height": 1920
+  }
+}
