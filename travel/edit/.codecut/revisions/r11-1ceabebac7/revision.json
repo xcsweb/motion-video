@@ -1,0 +1,41 @@
+{
+  "id": "r11-1ceabebac7",
+  "parentId": "r10-58c05db53c",
+  "projectRevision": 11,
+  "createdAt": "2026-11-18T06:13:37.592Z",
+  "summary": "Add asset 11_lake_canoe",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "11_lake_canoe",
+        "kind": "video",
+        "path": "../assets/motion/11_lake_canoe.mp4",
+        "metadata": {
+          "probedAt": "2026-11-18T06:13:37.577Z",
+          "fingerprint": {
+            "size": 1583745,
+            "mtimeMs": 1794982223371.7915
+          },
+          "duration": 4.8,
+          "size": 1583745,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 2639575,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1080,
+              "height": 1920,
+              "frameRate": 30,
+              "duration": 4.8,
+              "bitRate": 2635221
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r11-1ceabebac7/project.json"
+}

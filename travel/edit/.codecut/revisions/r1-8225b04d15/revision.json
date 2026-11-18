@@ -1,0 +1,40 @@
+{
+  "id": "r1-8225b04d15",
+  "projectRevision": 1,
+  "createdAt": "2026-11-18T06:13:21.690Z",
+  "summary": "Add asset 01_mist_valley",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "01_mist_valley",
+        "kind": "video",
+        "path": "../assets/motion/01_mist_valley.mp4",
+        "metadata": {
+          "probedAt": "2026-11-18T06:13:21.678Z",
+          "fingerprint": {
+            "size": 1801549,
+            "mtimeMs": 1794982174255.4558
+          },
+          "duration": 4.8,
+          "size": 1801549,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 3002581,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1080,
+              "height": 1920,
+              "frameRate": 30,
+              "duration": 4.8,
+              "bitRate": 2998228
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r1-8225b04d15/project.json"
+}

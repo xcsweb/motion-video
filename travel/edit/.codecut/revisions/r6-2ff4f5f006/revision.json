@@ -1,0 +1,41 @@
+{
+  "id": "r6-2ff4f5f006",
+  "parentId": "r5-bea6f37e06",
+  "projectRevision": 6,
+  "createdAt": "2026-11-18T06:13:29.784Z",
+  "summary": "Add asset 06_night_train",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "06_night_train",
+        "kind": "video",
+        "path": "../assets/motion/06_night_train.mp4",
+        "metadata": {
+          "probedAt": "2026-11-18T06:13:29.767Z",
+          "fingerprint": {
+            "size": 2801446,
+            "mtimeMs": 1794982274308.1396
+          },
+          "duration": 4.8,
+          "size": 2801446,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 4669076,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1080,
+              "height": 1920,
+              "frameRate": 30,
+              "duration": 4.8,
+              "bitRate": 4664696
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r6-2ff4f5f006/project.json"
+}

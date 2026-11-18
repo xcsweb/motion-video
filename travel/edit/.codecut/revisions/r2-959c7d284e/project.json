@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "revision": 2,
+  "name": "世界走不完",
+  "assets": [
+    {
+      "id": "01_mist_valley",
+      "kind": "video",
+      "path": "../assets/motion/01_mist_valley.mp4",
+      "metadata": {
+        "probedAt": "2026-11-18T06:13:21.678Z",
+        "fingerprint": {
+          "size": 1801549,
+          "mtimeMs": 1794982174255.4558
+        },
+        "duration": 4.8,
+        "size": 1801549,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 3002581,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1080,
+            "height": 1920,
+            "frameRate": 30,
+            "duration": 4.8,
+            "bitRate": 2998228
+          }
+        ]
+      }
+    },
+    {
+      "id": "02_snow_mountain",
+      "kind": "video",
+      "path": "../assets/motion/02_snow_mountain.mp4",
+      "metadata": {
+        "probedAt": "2026-11-18T06:13:23.260Z",
+        "fingerprint": {
+          "size": 2269728,
+          "mtimeMs": 1794982190051.564
+        },
+        "duration": 4.8,
+        "size": 2269728,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 3782880,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1080,
+            "height": 1920,
+            "frameRate": 30,
+            "duration": 4.8,
+            "bitRate": 3778500
+          }
+        ]
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "id": "v1",
+      "kind": "video",
+      "name": "Video 1",
+      "clips": []
+    },
+    {
+      "id": "v2",
+      "kind": "video",
+      "name": "Video 2",
+      "clips": []
+    },
+    {
+      "id": "a1",
+      "kind": "audio",
+      "name": "Audio 1",
+      "clips": []
+    },
+    {
+      "id": "a2",
+      "kind": "audio",
+      "name": "Audio 2",
+      "clips": []
+    }
+  ],
+  "output": {
+    "path": "out/travel_world_is_too_big_1080x1920.mp4",
+    "format": "mp4",
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "width": 1080,
+    "height": 1920,
+    "frameRate": 30,
+    "pixelFormat": "yuv420p",
+    "audioSampleRate": 48000,
+    "audioChannels": 2
+  }
+}

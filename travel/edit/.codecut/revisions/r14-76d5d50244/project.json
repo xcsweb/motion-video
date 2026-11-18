@@ -1,0 +1,436 @@
+{
+  "schemaVersion": 1,
+  "revision": 14,
+  "name": "世界走不完",
+  "assets": [
+    {
+      "id": "01_mist_valley",
+      "kind": "video",
+      "path": "../assets/motion/01_mist_valley.mp4",
+      "metadata": {
+        "probedAt": "2026-11-18T06:13:21.678Z",
+        "fingerprint": {
+          "size": 1801549,
+          "mtimeMs": 1794982174255.4558
+        },
+        "duration": 4.8,
+        "size": 1801549,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 3002581,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1080,
+            "height": 1920,
+            "frameRate": 30,
+            "duration": 4.8,
+            "bitRate": 2998228
+          }
+        ]
+      }
+    },
+    {
+      "id": "02_snow_mountain",
+      "kind": "video",
+      "path": "../assets/motion/02_snow_mountain.mp4",
+      "metadata": {
+        "probedAt": "2026-11-18T06:13:23.260Z",
+        "fingerprint": {
+          "size": 2269728,
+          "mtimeMs": 1794982190051.564
+        },
+        "duration": 4.8,
+        "size": 2269728,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 3782880,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1080,
+            "height": 1920,
+            "frameRate": 30,
+            "duration": 4.8,
+            "bitRate": 3778500
+          }
+        ]
+      }
+    },
+    {
+      "id": "03_coastal_road",
+      "kind": "video",
+      "path": "../assets/motion/03_coastal_road.mp4",
+      "metadata": {
+        "probedAt": "2026-11-18T06:13:24.969Z",
+        "fingerprint": {
+          "size": 2983289,
+          "mtimeMs": 1794982207795.685
+        },
+        "duration": 4.8,
+        "size": 2983289,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 4972148,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1080,
+            "height": 1920,
+            "frameRate": 30,
+            "duration": 4.8,
+            "bitRate": 4967768
+          }
+        ]
+      }
+    },
+    {
+      "id": "04_black_sand",
+      "kind": "video",
+      "path": "../assets/motion/04_black_sand.mp4",
+      "metadata": {
+        "probedAt": "2026-11-18T06:13:26.679Z",
+        "fingerprint": {
+          "size": 2328017,
+          "mtimeMs": 1794982241659.9165
+        },
+        "duration": 4.8,
+        "size": 2328017,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 3880028,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1080,
+            "height": 1920,
+            "frameRate": 30,
+            "duration": 4.8,
+            "bitRate": 3875648
+          }
+        ]
+      }
+    },
+    {
+      "id": "05_plateau",
+      "kind": "video",
+      "path": "../assets/motion/05_plateau.mp4",
+      "metadata": {
+        "probedAt": "2026-11-18T06:13:28.143Z",
+        "fingerprint": {
+          "size": 2127005,
+          "mtimeMs": 1794982257544.0251
+        },
+        "duration": 4.8,
+        "size": 2127005,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 3545008,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1080,
+            "height": 1920,
+            "frameRate": 30,
+            "duration": 4.8,
+            "bitRate": 3540628
+          }
+        ]
+      }
+    },
+    {
+      "id": "06_night_train",
+      "kind": "video",
+      "path": "../assets/motion/06_night_train.mp4",
+      "metadata": {
+        "probedAt": "2026-11-18T06:13:29.767Z",
+        "fingerprint": {
+          "size": 2801446,
+          "mtimeMs": 1794982274308.1396
+        },
+        "duration": 4.8,
+        "size": 2801446,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 4669076,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1080,
+            "height": 1920,
+            "frameRate": 30,
+            "duration": 4.8,
+            "bitRate": 4664696
+          }
+        ]
+      }
+    },
+    {
+      "id": "07_desert_stars",
+      "kind": "video",
+      "path": "../assets/motion/07_desert_stars.mp4",
+      "metadata": {
+        "probedAt": "2026-11-18T06:13:31.396Z",
+        "fingerprint": {
+          "size": 3321810,
+          "mtimeMs": 1794982322852.471
+        },
+        "duration": 4.8,
+        "size": 3321810,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 5536350,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1080,
+            "height": 1920,
+            "frameRate": 30,
+            "duration": 4.8,
+            "bitRate": 5531963
+          }
+        ]
+      }
+    },
+    {
+      "id": "08_rain_city",
+      "kind": "video",
+      "path": "../assets/motion/08_rain_city.mp4",
+      "metadata": {
+        "probedAt": "2026-11-18T06:13:32.787Z",
+        "fingerprint": {
+          "size": 2856832,
+          "mtimeMs": 1794982306548.36
+        },
+        "duration": 4.8,
+        "size": 2856832,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 4761386,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1080,
+            "height": 1920,
+            "frameRate": 30,
+            "duration": 4.8,
+            "bitRate": 4757006
+          }
+        ]
+      }
+    },
+    {
+      "id": "09_cloud_sea",
+      "kind": "video",
+      "path": "../assets/motion/09_cloud_sea.mp4",
+      "metadata": {
+        "probedAt": "2026-11-18T06:13:34.370Z",
+        "fingerprint": {
+          "size": 1892407,
+          "mtimeMs": 1794982338380.574
+        },
+        "duration": 4.8,
+        "size": 1892407,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 3154011,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1080,
+            "height": 1920,
+            "frameRate": 30,
+            "duration": 4.8,
+            "bitRate": 3149658
+          }
+        ]
+      }
+    },
+    {
+      "id": "10_old_town",
+      "kind": "video",
+      "path": "../assets/motion/10_old_town.mp4",
+      "metadata": {
+        "probedAt": "2026-11-18T06:13:36.062Z",
+        "fingerprint": {
+          "size": 1898724,
+          "mtimeMs": 1794982290240.2485
+        },
+        "duration": 4.8,
+        "size": 1898724,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 3164540,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1080,
+            "height": 1920,
+            "frameRate": 30,
+            "duration": 4.8,
+            "bitRate": 3160186
+          }
+        ]
+      }
+    },
+    {
+      "id": "11_lake_canoe",
+      "kind": "video",
+      "path": "../assets/motion/11_lake_canoe.mp4",
+      "metadata": {
+        "probedAt": "2026-11-18T06:13:37.577Z",
+        "fingerprint": {
+          "size": 1583745,
+          "mtimeMs": 1794982223371.7915
+        },
+        "duration": 4.8,
+        "size": 1583745,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 2639575,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1080,
+            "height": 1920,
+            "frameRate": 30,
+            "duration": 4.8,
+            "bitRate": 2635221
+          }
+        ]
+      }
+    },
+    {
+      "id": "12_station",
+      "kind": "video",
+      "path": "../assets/motion/12_station.mp4",
+      "metadata": {
+        "probedAt": "2026-11-18T06:13:39.181Z",
+        "fingerprint": {
+          "size": 1772558,
+          "mtimeMs": 1794982353800.6765
+        },
+        "duration": 4.8,
+        "size": 1772558,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 2954263,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1080,
+            "height": 1920,
+            "frameRate": 30,
+            "duration": 4.8,
+            "bitRate": 2949910
+          }
+        ]
+      }
+    },
+    {
+      "id": "13_starry_road",
+      "kind": "video",
+      "path": "../assets/motion/13_starry_road.mp4",
+      "metadata": {
+        "probedAt": "2026-11-18T06:13:40.807Z",
+        "fingerprint": {
+          "size": 2143306,
+          "mtimeMs": 1794982367728.769
+        },
+        "duration": 4,
+        "size": 2143306,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 4286612,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1080,
+            "height": 1920,
+            "frameRate": 30,
+            "duration": 4,
+            "bitRate": 4281948
+          }
+        ]
+      }
+    },
+    {
+      "id": "mix",
+      "kind": "audio",
+      "path": "../assets/audio/mix.wav",
+      "metadata": {
+        "probedAt": "2026-11-18T06:13:42.342Z",
+        "fingerprint": {
+          "size": 9984044,
+          "mtimeMs": 1794981002711.4854
+        },
+        "duration": 52,
+        "size": 9984044,
+        "formatName": "wav",
+        "bitRate": 1536006,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "audio",
+            "codecName": "pcm_s16le",
+            "sampleRate": 48000,
+            "channels": 2,
+            "duration": 52,
+            "bitRate": 1536000
+          }
+        ]
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "id": "v1",
+      "kind": "video",
+      "name": "Video 1",
+      "clips": []
+    },
+    {
+      "id": "v2",
+      "kind": "video",
+      "name": "Video 2",
+      "clips": []
+    },
+    {
+      "id": "a1",
+      "kind": "audio",
+      "name": "Audio 1",
+      "clips": []
+    },
+    {
+      "id": "a2",
+      "kind": "audio",
+      "name": "Audio 2",
+      "clips": []
+    }
+  ],
+  "output": {
+    "path": "out/travel_world_is_too_big_1080x1920.mp4",
+    "format": "mp4",
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "width": 1080,
+    "height": 1920,
+    "frameRate": 30,
+    "pixelFormat": "yuv420p",
+    "audioSampleRate": 48000,
+    "audioChannels": 2
+  }
+}

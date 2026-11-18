@@ -1,0 +1,41 @@
+{
+  "id": "r4-ad2b6ff170",
+  "parentId": "r3-1280f96ab2",
+  "projectRevision": 4,
+  "createdAt": "2026-11-18T06:13:26.706Z",
+  "summary": "Add asset 04_black_sand",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "04_black_sand",
+        "kind": "video",
+        "path": "../assets/motion/04_black_sand.mp4",
+        "metadata": {
+          "probedAt": "2026-11-18T06:13:26.679Z",
+          "fingerprint": {
+            "size": 2328017,
+            "mtimeMs": 1794982241659.9165
+          },
+          "duration": 4.8,
+          "size": 2328017,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 3880028,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1080,
+              "height": 1920,
+              "frameRate": 30,
+              "duration": 4.8,
+              "bitRate": 3875648
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r4-ad2b6ff170/project.json"
+}

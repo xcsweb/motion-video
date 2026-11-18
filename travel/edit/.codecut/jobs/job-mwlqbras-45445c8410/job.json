@@ -1,0 +1,114 @@
+{
+  "id": "job-mwlqbras-45445c8410",
+  "kind": "preview.sheet",
+  "status": "failed",
+  "health": "ok",
+  "stage": "ffmpeg.progress",
+  "projectRevision": 15,
+  "createdAt": "2026-11-18T06:17:33.173Z",
+  "outputPath": "/workspace/travel/previews/cc_sheet.png",
+  "temporaryOutputPath": "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/temporary-output.png",
+  "preview": {
+    "type": "sheet",
+    "parameters": {
+      "type": "sheet",
+      "start": 0,
+      "end": 52,
+      "interval": 4,
+      "columns": 4,
+      "rows": 4,
+      "width": 360,
+      "height": 640,
+      "sampleTimes": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        36,
+        40,
+        44,
+        48
+      ]
+    }
+  },
+  "logs": {
+    "stdout": "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/logs/stdout.log",
+    "stderr": "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/logs/stderr.log",
+    "progress": "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/logs/progress.log",
+    "progressEvents": "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/logs/progress.jsonl"
+  },
+  "diagnostics": {
+    "directory": "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics",
+    "request": "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/request.json",
+    "snapshot": "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/snapshot.json",
+    "arguments": "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/arguments.json",
+    "filterGraph": "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/filter_complex.txt",
+    "plan": "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/plan.json",
+    "textFiles": [
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-0.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-1.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-2.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-3.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-4.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-5.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-6.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-7.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-8.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-9.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-10.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-11.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-12.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-13.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-14.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-15.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-16.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-17.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-18.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-19.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-20.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-21.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-22.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-23.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-24.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-25.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-26.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-27.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-28.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-29.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-30.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-31.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-32.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-33.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-34.txt",
+      "/workspace/travel/edit/.codecut/jobs/job-mwlqbras-45445c8410/diagnostics/text-35.txt"
+    ]
+  },
+  "workerPid": 123772,
+  "heartbeatAt": "2026-11-18T06:18:37.405Z",
+  "pid": 123828,
+  "startedAt": "2026-11-18T06:17:33.280Z",
+  "progress": {
+    "percent": 0
+  },
+  "finishedAt": "2026-11-18T06:18:37.405Z",
+  "logTail": {
+    "stdout": "",
+    "stderr": "Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/workspace/travel/assets/motion/01_mist_valley.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Duration: 00:00:04.80, start: 0.000000, bitrate: 3002 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1080x1920 [SAR 1:1 DAR 9:16], 2998 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\nInput #1, mov,mp4,m4a,3gp,3g2,mj2, from '/workspace/travel/assets/motion/02_snow_mountain.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Duration: 00:00:04.80, start: 0.000000, bitrate: 3782 kb/s\n  Stream #1:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1080x1920 [SAR 1:1 DAR 9:16], 3778 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\nInput #2, mov,mp4,m4a,3gp,3g2,mj2, from '/workspace/travel/assets/motion/03_coastal_road.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Duration: 00:00:04.80, start: 0.000000, bitrate: 4972 kb/s\n  Stream #2:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1080x1920 [SAR 1:1 DAR 9:16], 4967 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\nInput #3, mov,mp4,m4a,3gp,3g2,mj2, from '/workspace/travel/assets/motion/11_lake_canoe.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Duration: 00:00:04.80, start: 0.000000, bitrate: 2639 kb/s\n  Stream #3:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1080x1920 [SAR 1:1 DAR 9:16], 2635 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\nInput #4, mov,mp4,m4a,3gp,3g2,mj2, from '/workspace/travel/assets/motion/04_black_sand.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Duration: 00:00:04.80, start: 0.000000, bitrate: 3880 kb/s\n  Stream #4:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1080x1920 [SAR 1:1 DAR 9:16], 3875 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\nInput #5, mov,mp4,m4a,3gp,3g2,mj2, from '/workspace/travel/assets/motion/05_plateau.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Duration: 00:00:04.80, start: 0.000000, bitrate: 3545 kb/s\n  Stream #5:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1080x1920 [SAR 1:1 DAR 9:16], 3540 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\nInput #6, mov,mp4,m4a,3gp,3g2,mj2, from '/workspace/travel/assets/motion/06_night_train.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Duration: 00:00:04.80, start: 0.000000, bitrate: 4669 kb/s\n  Stream #6:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1080x1920 [SAR 1:1 DAR 9:16], 4664 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\nInput #7, mov,mp4,m4a,3gp,3g2,mj2, from '/workspace/travel/assets/motion/10_old_town.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Duration: 00:00:04.80, start: 0.000000, bitrate: 3164 kb/s\n  Stream #7:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1080x1920 [SAR 1:1 DAR 9:16], 3160 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\nInput #8, mov,mp4,m4a,3gp,3g2,mj2, from '/workspace/travel/assets/motion/08_rain_city.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Duration: 00:00:04.80, start: 0.000000, bitrate: 4761 kb/s\n  Stream #8:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1080x1920 [SAR 1:1 DAR 9:16], 4757 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\nInput #9, mov,mp4,m4a,3gp,3g2,mj2, from '/workspace/travel/assets/motion/07_desert_stars.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Duration: 00:00:04.80, start: 0.000000, bitrate: 5536 kb/s\n  Stream #9:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1080x1920 [SAR 1:1 DAR 9:16], 5531 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\nInput #10, mov,mp4,m4a,3gp,3g2,mj2, from '/workspace/travel/assets/motion/09_cloud_sea.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Duration: 00:00:04.80, start: 0.000000, bitrate: 3154 kb/s\n  Stream #10:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1080x1920 [SAR 1:1 DAR 9:16], 3149 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\nInput #11, mov,mp4,m4a,3gp,3g2,mj2, from '/workspace/travel/assets/motion/12_station.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Duration: 00:00:04.80, start: 0.000000, bitrate: 2954 kb/s\n  Stream #11:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1080x1920 [SAR 1:1 DAR 9:16], 2949 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\nInput #12, mov,mp4,m4a,3gp,3g2,mj2, from '/workspace/travel/assets/motion/13_starry_road.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Duration: 00:00:04.00, start: 0.000000, bitrate: 4286 kb/s\n  Stream #12:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1080x1920 [SAR 1:1 DAR 9:16], 4281 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\n[aist#13:0/pcm_s16le @ 0x555fe542d600] Guessed Channel Layout: stereo\nInput #13, wav, from '/workspace/travel/assets/audio/mix.wav':\n  Duration: 00:00:52.00, bitrate: 1536 kb/s\n  Stream #13:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 48000 Hz, 2 channels, s16, 1536 kb/s\nStream mapping:\n  Stream #0:0 (h264) -> trim:default\n  Stream #1:0 (h264) -> trim:default\n  Stream #2:0 (h264) -> trim:default\n  Stream #3:0 (h264) -> trim:default\n  Stream #4:0 (h264) -> trim:default\n  Stream #5:0 (h264) -> trim:default\n  Stream #6:0 (h264) -> trim:default\n  Stream #7:0 (h264) -> trim:default\n  Stream #8:0 (h264) -> trim:default\n  Stream #9:0 (h264) -> trim:default\n  Stream #10:0 (h264) -> trim:default\n  Stream #11:0 (h264) -> trim:default\n  Stream #12:0 (h264) -> trim:default\n  Stream #13:0 (pcm_s16le) -> atrim:default\n  tile:default -> Stream #0:0 (png)\n"
+  },
+  "error": {
+    "code": "FFMPEG_PROGRESS_INVALID",
+    "message": "Invalid FFmpeg progress: stream ended without progress=end",
+    "stage": "ffmpeg.progress",
+    "retryable": false,
+    "diagnostics": {
+      "line": "",
+      "reason": "stream ended without progress=end"
+    },
+    "jobId": "job-mwlqbras-45445c8410"
+  }
+}

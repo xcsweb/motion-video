@@ -1,0 +1,29 @@
+{
+  "name": "codecut",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Headless JSON-first editing project CLI",
+  "bin": {
+    "codecut": "dist/cli.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node -e \"const fs=require('node:fs');fs.mkdirSync('dist/workers',{recursive:true});fs.copyFileSync('src/workers/vocal_autotune.py','dist/workers/vocal_autotune.py');fs.chmodSync('dist/cli.js',0o755)\"", 
+    "test": "npm run build && node --test test/*.test.js"
+  },
+  "dependencies": {
+    "@simon_he/vue-tui": "1.1.25",
+    "@sinclair/typebox": "^0.34.0",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "execa": "^9.6.1",
+    "vue": "3.5.45"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.9.3"
+  }
+}
