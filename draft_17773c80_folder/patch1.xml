@@ -1,0 +1,10 @@
+<p>不要只看“有没有工具”。先按三个问题分类：<b>有没有成片</b>、<b>有没有工具代码</b>、<b>工具是通用剪辑器还是项目专用脚本</b>。这三件事决定了仓库该放什么、该怎么维护。</p>
+<h2>三种“有工具”不要混淆</h2>
+<table>
+<thead><tr><th><p>工具</p></th><th><p>位置</p></th><th><p>性质与复用方式</p></th></tr></thead>
+<tbody>
+<tr><td><p>codecut</p></td><td><p>独立仓库</p></td><td><p><b>通用剪辑工具</b>。JSON 时间线、多轨、字幕、转场、混音、渲染；有版本和测试，任何项目都能用，升级不影响内容工程。</p></td></tr>
+<tr><td><p>make_motion.py / audio.py / voice.py</p></td><td><p>travel/build</p></td><td><p><b>项目专用生成工具</b>。只服务这一支短片，负责把静图变成运镜、把文案变成旁白和混音；换项目要重写，不追求通用。</p></td></tr>
+<tr><td><p>render.py / encode.sh</p></td><td><p>ai-mv、motion-video</p></td><td><p><b>项目专用渲染与编码</b>。render.py 绑定该项目的画面逻辑；encode.sh 只是 ffmpeg 参数封装，不算工具。</p></td></tr>
+</tbody>
+</table>

@@ -1,0 +1,9 @@
+<table>
+<thead><tr><th><p>项目</p></th><th><p>仓库类型</p></th><th><p>成片</p></th><th><p>工具</p></th><th><p>工具属性</p></th><th><p>依赖 codecut</p></th></tr></thead>
+<tbody>
+<tr><td><p>codecut</p></td><td><p><b>纯工具仓</b></p></td><td><p>无</p></td><td><p>有</p></td><td><p>通用剪辑 CLI</p></td><td><p>—</p></td></tr>
+<tr><td><p>travel</p></td><td><p><b>成片 + 工程仓</b></p></td><td><p>52s 竖屏</p></td><td><p>有</p></td><td><p>项目专用生成脚本</p></td><td><p>是（渲染）</p></td></tr>
+<tr><td><p>ai-mv</p></td><td><p><b>成片仓</b></p></td><td><p>15s / 91s 横屏</p></td><td><p>有</p></td><td><p>项目专用渲染脚本</p></td><td><p>否</p></td></tr>
+<tr><td><p>motion-video</p></td><td><p><b>成片 + 专用工具仓</b></p></td><td><p>24s / 85s 横屏</p></td><td><p>有</p></td><td><p>程序化渲染与截帧</p></td><td><p>否</p></td></tr>
+</tbody>
+</table>
