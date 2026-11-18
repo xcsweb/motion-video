@@ -1,0 +1,23 @@
+{
+  "id": "r2-e91a950685",
+  "parentId": "r1-b4b81ce5fb",
+  "projectRevision": 2,
+  "createdAt": "2026-11-18T11:22:00.753Z",
+  "summary": "addClip",
+  "operations": [
+    {
+      "type": "addClip",
+      "trackId": "a1",
+      "clip": {
+        "id": "refaudio",
+        "type": "audio",
+        "assetId": "ref",
+        "start": 0,
+        "duration": 22.75,
+        "volume": 1,
+        "fadeOut": 0.6
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r2-e91a950685/project.json"
+}

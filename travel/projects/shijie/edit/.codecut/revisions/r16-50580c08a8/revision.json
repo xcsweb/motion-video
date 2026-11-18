@@ -1,0 +1,153 @@
+{
+  "id": "r16-50580c08a8",
+  "parentId": "r15-bf09cb7349",
+  "projectRevision": 16,
+  "createdAt": "2026-11-18T11:24:39.182Z",
+  "summary": "13 shots on 133bpm grid",
+  "operations": [
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "s01",
+        "type": "video",
+        "assetId": "sj01",
+        "start": 0,
+        "duration": 1.8
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "s02",
+        "type": "video",
+        "assetId": "sj02",
+        "start": 1.8,
+        "duration": 1.8
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "s03",
+        "type": "video",
+        "assetId": "sj03",
+        "start": 3.6,
+        "duration": 1.8
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "s04",
+        "type": "video",
+        "assetId": "sj04",
+        "start": 5.4,
+        "duration": 1.8
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "s05",
+        "type": "video",
+        "assetId": "sj05",
+        "start": 7.2,
+        "duration": 1.8
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "s06",
+        "type": "video",
+        "assetId": "sj06",
+        "start": 9,
+        "duration": 1.8
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "s07",
+        "type": "video",
+        "assetId": "sj07",
+        "start": 10.8,
+        "duration": 1.8
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "s08",
+        "type": "video",
+        "assetId": "sj08",
+        "start": 12.6,
+        "duration": 1.8
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "s09",
+        "type": "video",
+        "assetId": "sj09",
+        "start": 14.4,
+        "duration": 1.8
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "s10",
+        "type": "video",
+        "assetId": "sj10",
+        "start": 16.2,
+        "duration": 1.8
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "s11",
+        "type": "video",
+        "assetId": "sj11",
+        "start": 18,
+        "duration": 1.8
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "s12",
+        "type": "video",
+        "assetId": "sj12",
+        "start": 19.8,
+        "duration": 1.8
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "s13",
+        "type": "video",
+        "assetId": "sj13",
+        "start": 21.6,
+        "duration": 1.15
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r16-50580c08a8/project.json"
+}

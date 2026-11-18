@@ -1,0 +1,41 @@
+{
+  "id": "r13-3a2aecfabb",
+  "parentId": "r12-6ff6030a23",
+  "projectRevision": 13,
+  "createdAt": "2026-11-18T11:24:22.419Z",
+  "summary": "Add asset sj11",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "sj11",
+        "kind": "video",
+        "path": "../../../assets/motion/sj11.mp4",
+        "metadata": {
+          "probedAt": "2026-11-18T11:24:22.405Z",
+          "fingerprint": {
+            "size": 765195,
+            "mtimeMs": 1795001027589.0627
+          },
+          "duration": 1.8,
+          "size": 765195,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 3400866,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1080,
+              "height": 1920,
+              "frameRate": 30,
+              "duration": 1.8,
+              "bitRate": 3394093
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r13-3a2aecfabb/project.json"
+}

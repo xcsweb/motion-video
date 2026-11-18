@@ -1,0 +1,41 @@
+{
+  "id": "r6-9574365e68",
+  "parentId": "r5-c604d574b2",
+  "projectRevision": 6,
+  "createdAt": "2026-11-18T11:24:10.943Z",
+  "summary": "Add asset sj04",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "sj04",
+        "kind": "video",
+        "path": "../../../assets/motion/sj04.mp4",
+        "metadata": {
+          "probedAt": "2026-11-18T11:24:10.929Z",
+          "fingerprint": {
+            "size": 1166798,
+            "mtimeMs": 1795000981968.867
+          },
+          "duration": 1.8,
+          "size": 1166798,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 5185768,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1080,
+              "height": 1920,
+              "frameRate": 30,
+              "duration": 1.8,
+              "bitRate": 5178924
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r6-9574365e68/project.json"
+}

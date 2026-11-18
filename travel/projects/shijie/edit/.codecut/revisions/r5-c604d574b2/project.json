@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "revision": 5,
+  "name": "shijie",
+  "assets": [
+    {
+      "id": "ref",
+      "kind": "video",
+      "path": "../assets/ref.mp4",
+      "metadata": {
+        "probedAt": "2026-11-18T11:21:54.344Z",
+        "fingerprint": {
+          "size": 4348278,
+          "mtimeMs": 1795000883052.4504
+        },
+        "duration": 22.753991,
+        "size": 4348278,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 1528796,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 960,
+            "height": 720,
+            "frameRate": 56.161764705882355,
+            "duration": 22.666667,
+            "bitRate": 1392837
+          },
+          {
+            "index": 1,
+            "codecType": "audio",
+            "codecName": "aac",
+            "sampleRate": 44100,
+            "channels": 2,
+            "channelLayout": "stereo",
+            "duration": 22.753991,
+            "bitRate": 128269
+          }
+        ]
+      }
+    },
+    {
+      "id": "sj01",
+      "kind": "video",
+      "path": "../../../assets/motion/sj01.mp4",
+      "metadata": {
+        "probedAt": "2026-11-18T11:24:05.949Z",
+        "fingerprint": {
+          "size": 752591,
+          "mtimeMs": 1795000962376.7842
+        },
+        "duration": 1.8,
+        "size": 752591,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 3344848,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1080,
+            "height": 1920,
+            "frameRate": 30,
+            "duration": 1.8,
+            "bitRate": 3338075
+          }
+        ]
+      }
+    },
+    {
+      "id": "sj02",
+      "kind": "video",
+      "path": "../../../assets/motion/sj02.mp4",
+      "metadata": {
+        "probedAt": "2026-11-18T11:24:07.724Z",
+        "fingerprint": {
+          "size": 1355308,
+          "mtimeMs": 1795000968944.812
+        },
+        "duration": 1.8,
+        "size": 1355308,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 6023591,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1080,
+            "height": 1920,
+            "frameRate": 30,
+            "duration": 1.8,
+            "bitRate": 6016746
+          }
+        ]
+      }
+    },
+    {
+      "id": "sj03",
+      "kind": "video",
+      "path": "../../../assets/motion/sj03.mp4",
+      "metadata": {
+        "probedAt": "2026-11-18T11:24:09.261Z",
+        "fingerprint": {
+          "size": 1295550,
+          "mtimeMs": 1795000975516.8398
+        },
+        "duration": 1.8,
+        "size": 1295550,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 5758000,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1080,
+            "height": 1920,
+            "frameRate": 30,
+            "duration": 1.8,
+            "bitRate": 5751155
+          }
+        ]
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "id": "v1",
+      "kind": "video",
+      "name": "Video 1",
+      "clips": []
+    },
+    {
+      "id": "v2",
+      "kind": "video",
+      "name": "Video 2",
+      "clips": []
+    },
+    {
+      "id": "a1",
+      "kind": "audio",
+      "name": "Audio 1",
+      "clips": [
+        {
+          "id": "refaudio",
+          "type": "audio",
+          "assetId": "ref",
+          "start": 0,
+          "duration": 22.75,
+          "volume": 1,
+          "fadeOut": 0.6
+        }
+      ]
+    },
+    {
+      "id": "a2",
+      "kind": "audio",
+      "name": "Audio 2",
+      "clips": []
+    }
+  ],
+  "output": {
+    "path": "output.mp4",
+    "format": "mp4",
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "width": 1920,
+    "height": 1080,
+    "frameRate": 30,
+    "pixelFormat": "yuv420p",
+    "audioSampleRate": 48000,
+    "audioChannels": 2
+  }
+}
