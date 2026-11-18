@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
-"""Generate the Chinese voice-over lines with Piper and record their durations."""
+"""Generate the Chinese voice-over lines with Matcha-TTS and record their durations."""
 import json
 import os
-import subprocess
 import wave
 
+import numpy as np
+import sherpa_onnx
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MODEL = os.path.join(ROOT, "assets", "tts", "zh_CN-huayan-medium.onnx")
+MODEL_DIR = os.path.join(ROOT, "assets", "models", "matcha-icefall-zh-baker")
+VOCODER = os.path.join(ROOT, "assets", "models", "vocos-22khz-univ.onnx")
 OUT = os.path.join(ROOT, "assets", "vo")
 TEXT = os.path.join(ROOT, "config", "narration.txt")
 
@@ -29,21 +32,41 @@ def wav_duration(path):
         return f.getnframes() / f.getframerate()
 
 
+def build_tts():
+    cfg = sherpa_onnx.OfflineTtsConfig(
+        model=sherpa_onnx.OfflineTtsModelConfig(
+            matcha=sherpa_onnx.OfflineTtsMatchaModelConfig(
+                acoustic_model=os.path.join(MODEL_DIR, "model-steps-3.onnx"),
+                vocoder=VOCODER,
+                lexicon=os.path.join(MODEL_DIR, "lexicon.txt"),
+                tokens=os.path.join(MODEL_DIR, "tokens.txt"),
+                dict_dir=os.path.join(MODEL_DIR, "dict"),
+            ),
+            num_threads=2,
+            provider="cpu",
+        ),
+        max_num_sentences=1,
+    )
+    return sherpa_onnx.OfflineTts(cfg)
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     os.makedirs(os.path.dirname(TEXT), exist_ok=True)
     with open(TEXT, "w", encoding="utf-8") as f:
         f.write("\n".join(LINES) + "\n")
 
+    tts = build_tts()
     timing = []
     for i, line in enumerate(LINES, 1):
         path = os.path.join(OUT, f"line_{i:02d}.wav")
-        subprocess.run(
-            ["python3", "-m", "piper", "--model", MODEL,
-             "--length-scale", "1.12", "--sentence-silence", "0.18",
-             "--output_file", path],
-            input=line.encode("utf-8"), check=True,
-        )
+        audio = tts.generate(line, sid=0, speed=0.95)
+        samples = np.clip(np.array(audio.samples, dtype=np.float32), -1.0, 1.0)
+        with wave.open(path, "wb") as f:
+            f.setnchannels(1)
+            f.setsampwidth(2)
+            f.setframerate(audio.sample_rate)
+            f.writeframes((samples * 32767).astype("<i2").tobytes())
         dur = wav_duration(path)
         timing.append({"i": i, "text": line, "file": os.path.basename(path),
                        "duration": round(dur, 3)})
