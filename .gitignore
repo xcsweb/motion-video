@@ -19,3 +19,15 @@ v4/assets/audio/
 v4/out_*.mp4
 v4/check_*.png
 v4/check/
+
+# codecut 本地运行产物与字体
+travel/edit/fonts/
+travel/edit/.codecut/
+travel/edit/out/
+
+# 可再生成的媒体中间件（成片走 Release）
+travel/assets/audio/
+travel/assets/motion/
+travel/assets/plates/
+travel/assets/tts/
+travel/assets/vo/
