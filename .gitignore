@@ -31,3 +31,6 @@ travel/assets/motion/
 travel/assets/plates/
 travel/assets/tts/
 travel/assets/vo/
+
+# 离线 TTS 模型（本地缓存）
+travel/assets/models/
