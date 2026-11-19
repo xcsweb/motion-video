@@ -134,6 +134,48 @@ function uniqueId(ids: Set<string>, preferred: string): string {
   return `${preferred}-${suffix}`;
 }
 
+function uniqueClipId(track: Track, preferred: string): string {
+  return uniqueId(new Set(track.clips.map((clip) => clip.id)), preferred);
+}
+
+type SpeedPoint = { at: number; speed: number };
+
+function normalizeSpeedPoints(points: SpeedPoint[], clipId: string): SpeedPoint[] {
+  const sorted = [...points].sort((left, right) => left.at - right.at);
+  if (sorted.length < 2) {
+    throw editError('EDIT_SPEED_RAMP_INVALID', `Clip "${clipId}" needs at least two speed points`, {
+      path: `clips.${clipId}.points`,
+    });
+  }
+  for (let index = 1; index < sorted.length; index += 1) {
+    const previous = sorted[index - 1]!;
+    const current = sorted[index]!;
+    if (current.at - previous.at <= 1e-6) {
+      throw editError('EDIT_SPEED_RAMP_INVALID', `Clip "${clipId}" speed points must use distinct positions`, {
+        path: `clips.${clipId}.points`,
+      });
+    }
+  }
+  const first = sorted[0]!;
+  const last = sorted[sorted.length - 1]!;
+  const inner = sorted.filter((point) => point.at > 0 && point.at < 1);
+  return [{ at: 0, speed: first.speed }, ...inner, { at: 1, speed: last.speed }];
+}
+
+function speedAt(points: SpeedPoint[], at: number): number {
+  for (let index = 1; index < points.length; index += 1) {
+    const left = points[index - 1]!;
+    const right = points[index]!;
+    if (at <= right.at) {
+      const span = right.at - left.at;
+      if (span <= 0) return right.speed;
+      const ratio = Math.min(1, Math.max(0, (at - left.at) / span));
+      return left.speed + (right.speed - left.speed) * ratio;
+    }
+  }
+  return points[points.length - 1]!.speed;
+}
+
 function decodeEntity(entity: string): string {
   const named: Record<string, string> = {
     amp: '&',
@@ -333,8 +375,45 @@ async function applyOperationInPlace(
     }
     case 'setClipParams': {
       const { clip } = findClip(project, operation.clipId);
+      if (operation.params.effects && clip.type === 'audio') {
+        throw editError('EDIT_EFFECT_UNSUPPORTED', `Clip "${clip.id}" is audio; visual effects need a video, image, color or text clip`, {
+          path: `clips.${clip.id}.effects`,
+        });
+      }
       const target = clip as unknown as Record<string, unknown>;
       for (const [key, value] of Object.entries(operation.params)) target[key] = structuredClone(value);
+      return;
+    }
+    case 'setSpeedRamp': {
+      const { clip, track, index } = findClip(project, operation.clipId);
+      if (clip.type !== 'video' && clip.type !== 'audio') {
+        throw editError('EDIT_SPEED_RAMP_UNSUPPORTED', `Clip "${clip.id}" has no running source; speed ramps apply to video or audio clips only`, {
+          path: `clips.${clip.id}`,
+        });
+      }
+      const points = normalizeSpeedPoints(operation.points, clip.id);
+      const steps = operation.steps ?? 8;
+      const sourceStart = clip.sourceStart ?? 0;
+      const sourceSpan = clip.duration * (clip.speed ?? 1);
+      const slices: Clip[] = [];
+      let cursor = clip.start;
+      for (let step = 0; step < steps; step += 1) {
+        const from = step / steps;
+        const to = (step + 1) / steps;
+        const speed = speedAt(points, (from + to) / 2);
+        const slice = structuredClone(clip) as Clip & { transition?: unknown };
+        const id = step === 0 ? clip.id : uniqueClipId(track, `${clip.id}-r${step}`);
+        slice.id = id;
+        slice.sourceStart = sourceStart + sourceSpan * from;
+        slice.speed = speed;
+        slice.duration = (sourceSpan * (to - from)) / speed;
+        slice.start = cursor;
+        if (step < steps - 1) delete slice.transition;
+        cursor += slice.duration;
+        slices.push(slice);
+      }
+      const clips = track.clips as Clip[];
+      clips.splice(index, 1, ...slices);
       return;
     }
     case 'importSrt': {
