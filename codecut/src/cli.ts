@@ -424,10 +424,16 @@ async function executeAsset(args: string[]): Promise<CommandResult> {
       ...(kind ? { kind: kind as AssetKind } : {}),
       dryRun: options.dryRun,
     });
+    const normalization = result.normalization;
+    const suffix = normalization
+      ? normalization.applied
+        ? `\nNormalized to H.264: ${normalization.target}\n`
+        : `\nWould normalize to H.264: ${normalization.target} (dry-run)\n`
+      : '';
     return {
       command: 'asset.add',
       data: { ...result },
-      text: `${options.dryRun ? 'Asset add dry-run' : 'Registered asset'}: ${id}\n`,
+      text: `${options.dryRun ? 'Asset add dry-run' : 'Registered asset'}: ${id}${suffix}`,
     };
   }
   if (action === 'list') {
