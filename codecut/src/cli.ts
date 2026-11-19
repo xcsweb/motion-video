@@ -46,6 +46,7 @@ import {
 import { isTerminalJob, type JobRecord, type JobStatus } from './jobs-store.js';
 import { previewProject, type PreviewOptions, type TimelinePreviewRequest } from './preview.js';
 import { renderProject, type RenderOptions } from './render.js';
+import { checkTranscript } from './transcript.js';
 import { autotuneVocal } from './vocal-autotune.js';
 import {
   AssetAnalysisRequestSchema,
@@ -66,6 +67,7 @@ import {
   RevisionSchema,
   TimelinePreviewRequestSchema,
   TimelinePreviewResultSchema,
+  TranscriptReportSchema,
   VocalAutotuneReportSchema,
   VocalAutotuneRequestSchema,
   type AssetAnalysisRequest,
@@ -90,6 +92,7 @@ Usage:
   codecut asset sheet ASSET_ID [--start SECONDS] [--end SECONDS] [--interval SECONDS] [--columns N] [--rows N] [--width N] [--height N] [--output PATH] [--force] [--detach] [--json]
   codecut asset analyze scenes|silence ASSET_ID [--start SECONDS] [--end SECONDS] [--threshold RATIO|--noise-db DB --minimum-duration SECONDS] [--detach] [--json]
   codecut vocal autotune REQUEST_JSON [--output PATH] [--report PATH] [--python PATH] [--force] [--json]
+  codecut transcript check --srt PATH [--max-gap SECONDS] [--max-chars N] [--max-duration SECONDS] [--json]
   codecut edit apply OPERATIONS_JSON|- [--project PATH] [--dry-run] [--summary TEXT] [--json]
   codecut edit apply --operations PATH [--project PATH] [--dry-run] [--summary TEXT] [--json]
   codecut edit apply --operations-json JSON [--project PATH] [--dry-run] [--summary TEXT] [--json]
@@ -1280,6 +1283,64 @@ async function executeVocal(args: string[]): Promise<CommandResult> {
   };
 }
 
+function formatTimecode(seconds: number): string {
+  const milliseconds = Math.max(0, Math.round(seconds * 1000));
+  const hours = Math.floor(milliseconds / 3_600_000);
+  const minutes = Math.floor(milliseconds / 60_000) % 60;
+  const wholeSeconds = Math.floor(milliseconds / 1000) % 60;
+  const rest = milliseconds % 1000;
+  return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(wholeSeconds).padStart(2, '0')}.${String(rest).padStart(3, '0')}`;
+}
+
+async function executeTranscript(args: string[]): Promise<CommandResult> {
+  const action = args[0];
+  if (action !== 'check') throw usageError('Missing or unknown transcript action: check', 'transcript');
+  let srtPath: string | undefined;
+  let maxGap: number | undefined;
+  let maxCharacters: number | undefined;
+  let maxDuration: number | undefined;
+  for (let index = 1; index < args.length; index += 1) {
+    const argument = args[index];
+    if (argument === undefined) continue;
+    const separator = argument.indexOf('=');
+    const option = separator < 0 ? argument : argument.slice(0, separator);
+    const value = separator < 0 ? optionValue(args, index, option) : argument.slice(separator + 1);
+    if (separator < 0) index += 1;
+    if (!value) throw usageError(`${option} requires a value`, 'transcript.check');
+    if (option === '--srt') {
+      srtPath = value;
+      continue;
+    }
+    const parsed = Number(value);
+    if (!Number.isFinite(parsed) || parsed <= 0) throw usageError(`${option} must be a positive number`, 'transcript.check');
+    if (option === '--max-gap') maxGap = parsed;
+    else if (option === '--max-chars') {
+      if (!Number.isInteger(parsed)) throw usageError('--max-chars must be a positive integer', 'transcript.check');
+      maxCharacters = parsed;
+    } else if (option === '--max-duration') maxDuration = parsed;
+    else throw usageError(`Unknown option for transcript check: ${option}`, 'transcript.check');
+  }
+  if (!srtPath) throw usageError('transcript check requires --srt PATH', 'transcript.check');
+  const report = await checkTranscript({
+    srtPath,
+    ...(maxGap === undefined ? {} : { maxGap }),
+    ...(maxCharacters === undefined ? {} : { maxCharacters }),
+    ...(maxDuration === undefined ? {} : { maxDuration }),
+  });
+  const lines = [
+    `Transcript: ${report.path}`,
+    `Cues: ${report.cueCount}; duration: ${formatTimecode(report.duration)}; issues: ${report.issues.length} (${report.warnings} warnings, ${report.errors} errors)`,
+  ];
+  for (const entry of report.issues) {
+    lines.push(`  [${entry.severity}] cue ${entry.cue} ${formatTimecode(entry.start)}-${formatTimecode(entry.end)} ${entry.type}: ${entry.message}`);
+  }
+  return {
+    command: 'transcript.check',
+    data: { ...report },
+    text: `${lines.join('\n')}\n`,
+  };
+}
+
 async function executeUi(args: string[]): Promise<CommandResult> {
   if (!process.stdin.isTTY || !process.stdout.isTTY) {
     throw usageError('codecut ui requires an interactive TTY; use codecut jobs list --json and codecut logs --json instead', 'ui');
@@ -1309,6 +1370,7 @@ async function execute(args: string[]): Promise<CommandResult> {
   if (command === 'project') return executeProject(rest);
   if (command === 'asset') return executeAsset(rest);
   if (command === 'vocal') return executeVocal(rest);
+  if (command === 'transcript') return executeTranscript(rest);
   if (command === 'edit') return executeEdit(rest);
   if (command === 'history') return executeHistory(rest);
   if (command === 'render') return executeRender(rest);
@@ -1342,6 +1404,7 @@ async function execute(args: string[]): Promise<CommandResult> {
         renderPlan: RenderPlanSchema,
         timelinePreviewRequest: TimelinePreviewRequestSchema,
         timelinePreviewResult: TimelinePreviewResultSchema,
+        transcriptReport: TranscriptReportSchema,
         revision: RevisionSchema,
       },
       alwaysJson: true,

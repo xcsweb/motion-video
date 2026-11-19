@@ -110,6 +110,7 @@ export const CAPABILITIES = {
       'asset thumbnail/sheet',
       'asset analyze scenes/silence',
       'vocal autotune',
+      'transcript check',
       'edit apply',
       'history list/diff/undo/redo',
       'render',
@@ -174,6 +175,12 @@ export const CAPABILITIES = {
       options: ['--output PATH', '--report PATH', '--python PATH', '--force', '--json'],
       output: ['outputPath', 'reportPath', 'report with per-note pitch/onset measurements and confidence'],
       status: 'synchronous standalone command; does not create a project revision or job',
+    },
+    'transcript check': {
+      arguments: ['--srt PATH'],
+      options: ['--max-gap SECONDS', '--max-chars N', '--max-duration SECONDS', '--json'],
+      output: ['cueCount and duration', 'issues for overlap, long-gap, duplicate, filler, and too-long cues', 'warning and error totals'],
+      status: 'synchronous offline SRT review; no ASR, no project revision, no job',
     },
     'edit apply': {
       input: [

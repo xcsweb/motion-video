@@ -413,6 +413,31 @@ export const AssetPreviewResultSchema = object({
 });
 Object.assign(AssetPreviewResultSchema, { $id: 'https://codecut.local/schemas/asset-preview-result-v1.json' });
 
+export const TranscriptIssueSchema = object({
+  type: Type.Union([
+    Type.Literal('overlap'),
+    Type.Literal('long-gap'),
+    Type.Literal('duplicate'),
+    Type.Literal('filler'),
+    Type.Literal('too-long'),
+  ]),
+  severity: Type.Union([Type.Literal('warning'), Type.Literal('error')]),
+  cue: Type.Integer({ minimum: 1, description: 'One-based subtitle cue number.' }),
+  start: Type.Number({ minimum: 0 }),
+  end: Type.Number({ minimum: 0 }),
+  message: Type.String({ minLength: 1 }),
+}, 'A transcript quality finding produced by transcript check.');
+
+export const TranscriptReportSchema = object({
+  path: Type.String({ minLength: 1 }),
+  cueCount: Type.Integer({ minimum: 0 }),
+  duration: Type.Number({ minimum: 0 }),
+  warnings: Type.Integer({ minimum: 0 }),
+  errors: Type.Integer({ minimum: 0 }),
+  issues: Type.Array(TranscriptIssueSchema),
+});
+Object.assign(TranscriptReportSchema, { $id: 'https://codecut.local/schemas/transcript-report-v1.json' });
+
 const VocalPathSchema = Type.String({
   minLength: 1,
   description: 'Absolute path, or a path relative to the autotune request JSON file.',
@@ -794,6 +819,8 @@ export type AssetPreviewRequest = Static<typeof AssetPreviewRequestSchema>;
 export type AssetAnalysisRequest = Static<typeof AssetAnalysisRequestSchema>;
 export type AssetAnalysisResult = Static<typeof AssetAnalysisResultSchema>;
 export type AssetPreviewResult = Static<typeof AssetPreviewResultSchema>;
+export type TranscriptIssue = Static<typeof TranscriptIssueSchema>;
+export type TranscriptReport = Static<typeof TranscriptReportSchema>;
 export type VocalAutotuneNote = Static<typeof VocalAutotuneNoteSchema>;
 export type VocalAutotuneRequest = Static<typeof VocalAutotuneRequestSchema>;
 export type VocalAutotuneReport = Static<typeof VocalAutotuneReportSchema>;
