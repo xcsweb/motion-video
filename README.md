@@ -59,6 +59,30 @@ ffmpeg -y -framerate 30 -i frames/f_%04d.jpg -i music.wav \
 
 `render.py` 也支持快速样帧：`python scripts/render.py --mode sample --times 6.0`。
 
+## 快速开始（v4，85 秒复刻版）
+
+依赖：Python 3、ffmpeg、Playwright（Chromium）、Pillow / numpy / scipy。
+
+```bash
+# 1. 安装浏览器（首次）
+python -m playwright install chromium
+
+# 2. 逐帧截取网页特效页 → assets/web/<page>/f_%04d.jpg
+python v4/build/capture_web.py                 # 全部 10 个页面
+python v4/build/capture_web.py 05_glitch       # 只截某一页
+
+# 3. 合成三类素材 + UI 层 → frames/f_%04d.jpg
+python v4/build/render.py --mode all --workers 4
+python v4/build/render.py --mode sample --times 6.0   # 只出样帧
+
+# 4. 编码成片（同时输出 540p 预览）
+bash v4/build/encode.sh
+```
+
+产物：`v4/out_railgun_v4_rebuild.mp4` 与 `out_railgun_v4_rebuild_preview.mp4`。音轨需放在 `v4/assets/audio/source.wav`（不入库）。
+
+网页特效页的约定：每页在固定画布上实现 `window.__seek(t)`，给定同一时间点画面完全一致，因此可以和音轨逐帧对齐；`capture_web.py` 里 `PAGES` 列表就是「页面 → 时长」的映射，新增特效页要同时改这里。
+
 ## 三条技术路线
 
 | 路线 | 实现 | 用在哪 |
