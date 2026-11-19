@@ -271,6 +271,21 @@ function semanticIssues(project: Project): ValidationIssue[] {
       }
     }
     issues.push(...validateTrackTiming(track, trackIndex));
+    if (track.ducking) {
+      if (track.ducking.by === track.id) {
+        issues.push({
+          path: `/tracks/${trackIndex}/ducking/by`,
+          message: `track "${track.id}" cannot duck under itself`,
+          keyword: 'duckingReference',
+        });
+      } else if (!project.tracks.some((candidate) => candidate.id === track.ducking!.by)) {
+        issues.push({
+          path: `/tracks/${trackIndex}/ducking/by`,
+          message: `track "${track.id}" ducks under unknown track "${track.ducking.by}"`,
+          keyword: 'duckingReference',
+        });
+      }
+    }
   }
   return issues;
 }

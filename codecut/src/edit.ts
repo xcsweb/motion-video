@@ -319,6 +319,24 @@ async function applyOperationInPlace(
       project.tracks.splice(index, 1);
       return;
     }
+    case 'setTrackParams': {
+      const track = findTrack(project, operation.trackId);
+      if (operation.params.name !== undefined) track.name = operation.params.name;
+      if (operation.params.muted !== undefined) track.muted = operation.params.muted;
+      if (operation.params.hidden !== undefined) {
+        if (track.kind !== 'video') {
+          throw editError('EDIT_TRACK_PARAMS_UNSUPPORTED', `Track "${track.id}" is audio; only video tracks can be hidden`, {
+            path: `tracks.${track.id}.hidden`,
+          });
+        }
+        track.hidden = operation.params.hidden;
+      }
+      if (operation.params.ducking !== undefined) {
+        if (operation.params.ducking === null) delete track.ducking;
+        else track.ducking = structuredClone(operation.params.ducking);
+      }
+      return;
+    }
     case 'addClip':
     case 'addText': {
       const track = findTrack(project, operation.trackId);

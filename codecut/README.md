@@ -9,7 +9,7 @@
 ## 环境
 
 - Node.js 22+
-- 系统安装 `ffmpeg` / `ffprobe`（含 libass，字幕依赖它）
+- 系统安装 `ffmpeg` / `ffprobe`（字幕用 `drawtext`，依赖 fontconfig）
 - 无需数据库，无需服务端
 
 ```bash
@@ -71,7 +71,7 @@ node dist/cli.js render --project my-video
 
 ## 编辑操作
 
-`addTrack`、`removeTrack`、`addClip`、`addText`、`trimClip`、`moveClip`、`splitClip`、`removeClip`、`setClipParams`、`setSpeedRamp`、`importSrt`。
+`addTrack`、`removeTrack`、`setTrackParams`、`addClip`、`addText`、`trimClip`、`moveClip`、`splitClip`、`removeClip`、`setClipParams`、`setSpeedRamp`、`importSrt`。
 
 关键字段：
 
@@ -79,7 +79,19 @@ node dist/cli.js render --project my-video
 - `speed` 恒定变速；曲线变速用 `setSpeedRamp`，把分段线性的 `points` 物化成等速子片段（`steps` 越大越平滑，但滤镜分支也越多）
 - `effects` 只挂在视觉片段上：`shake`（`amplitude` 像素、`frequency` 次/秒）、`flash`（`at` 相对片段起点）
 - 同轨片段必须顺序拼接；重叠要么拆轨，要么用 `transition: { type: "xfade", duration }`
-- 字幕可拆到多条轨道叠放，避免重叠校验
+- 字幕可拆到多条轨道叠放，避免重叠校验；`importSrt` 会按时间码把每条字幕落成 `text` 片段，样式走 `fontSize` / `color` / `fontFile`
+- 人声压 BGM 用轨道级 `ducking`，不用手动写音量曲线：
+
+```json
+{ "type": "setTrackParams", "trackId": "a1",
+  "params": { "ducking": { "by": "a2", "threshold": 0.05, "ratio": 8, "attack": 20, "release": 400 } } }
+```
+
+  `a1`（BGM）在 `a2`（人声）出声时自动让位；`by` 取的是该轨道压之前的原始混音，所以两条轨道互相引用也不会成环。传 `ducking: null` 取消。
+
+## 音效对位检查
+
+渲染（含 `--dry-run`）会检查时长 ≤ 3 秒的音频片段：若起点距离最近的画面切点不到 250ms、但又超过 2 帧，就写一条 warning，提示音效可能没卡准。离切点很远的片段视为有意为之，不报警。
 
 ## 素材自动转码
 

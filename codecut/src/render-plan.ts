@@ -218,6 +218,13 @@ class FilterGraph {
     this.lines.push(`${inputs.join('')}${filters.join(',')}${output}`);
     return output;
   }
+
+  addSplit(inputs: string[], filters: string[], outputs: string[]): string[] {
+    if (filters.length === 0) throw new TypeError('A filter chain must contain at least one filter');
+    if (outputs.length === 0) throw new TypeError('A split filter chain must expose at least one output');
+    this.lines.push(`${inputs.join('')}${filters.join(',')}${outputs.join('')}`);
+    return outputs;
+  }
 }
 
 function transformFilters(clip: Clip, width: number, height: number): string[] {
@@ -438,6 +445,42 @@ function audioClipFilters(clip: Clip): string[] {
   return filters;
 }
 
+const SFX_MAX_DURATION = 3;
+const SFX_NEAR_MISS_WINDOW = 0.25;
+const SFX_TOLERANCE_FRAMES = 2;
+
+function roundTime(value: number): number {
+  return Number(value.toFixed(6));
+}
+
+function audioSyncWarnings(project: Project): string[] {
+  const cuts: number[] = [];
+  for (const track of project.tracks) {
+    if (track.kind !== 'video' || track.hidden) continue;
+    for (const clip of track.clips) {
+      cuts.push(roundTime(clip.start), roundTime(clip.start + clip.duration));
+    }
+  }
+  if (cuts.length === 0) return [];
+  const tolerance = SFX_TOLERANCE_FRAMES / project.output.frameRate;
+  const warnings: string[] = [];
+  for (const track of project.tracks) {
+    if (track.kind !== 'audio' || track.muted) continue;
+    for (const clip of track.clips) {
+      if (clip.type !== 'audio' || clip.duration > SFX_MAX_DURATION) continue;
+      const start = roundTime(clip.start);
+      const nearest = cuts.reduce((best, cut) => Math.min(best, Math.abs(cut - start)), Number.POSITIVE_INFINITY);
+      if (nearest > tolerance && nearest <= SFX_NEAR_MISS_WINDOW) {
+        warnings.push(
+          `Audio clip "${clip.id}" starts ${(nearest * 1000).toFixed(0)}ms after the nearest visual cut; `
+          + `short sound effects are usually placed within ${SFX_TOLERANCE_FRAMES} frames of a cut.`,
+        );
+      }
+    }
+  }
+  return warnings;
+}
+
 function fitFilters(width: number, height: number, pixelFormat: string): string[] {
   return [
     `scale=w=${width}:h=${height}:force_original_aspect_ratio=decrease`,
@@ -632,25 +675,77 @@ export function compileRenderPlan(projectInput: Project, options: CompileRenderP
     'setpts=PTS-STARTPTS',
   ], '[vout]');
 
-  const audioStreams: string[] = [];
+  const warnings: string[] = [];
+  const trackAudio = new Map<string, string>();
   for (const track of project.tracks) {
     if (track.muted) continue;
+    const streams: string[] = [];
     for (const clip of track.clips) {
       if (track.kind === 'audio' && clip.type === 'audio') {
         const input = inputForClip(clip, 'a');
         const output = graph.label('audio');
         graph.add([input], audioClipFilters(clip), output);
-        audioStreams.push(output);
+        streams.push(output);
       } else if (track.kind === 'video' && clip.type === 'video') {
         const source = options.sources.get(clip.assetId)!;
         if (!source.hasAudio) continue;
         const input = inputForClip(clip, 'a');
         const output = graph.label('source_audio');
         graph.add([input], audioClipFilters(clip), output);
-        audioStreams.push(output);
+        streams.push(output);
       }
     }
+    if (streams.length === 0) continue;
+    const mixed = graph.label('track_mix');
+    graph.add(streams, [
+      ...(streams.length > 1 ? [`amix=inputs=${streams.length}:duration=longest:dropout_transition=0:normalize=0`] : []),
+      'aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo',
+      `apad=whole_dur=${number(timeline.duration)}`,
+      `atrim=duration=${number(timeline.duration)}`,
+      'asetpts=PTS-STARTPTS',
+    ], mixed);
+    trackAudio.set(track.id, mixed);
   }
+
+  const duckingUsers = new Map<string, string[]>();
+  for (const track of project.tracks) {
+    if (!track.ducking || !trackAudio.has(track.id)) continue;
+    const users = duckingUsers.get(track.ducking.by) ?? [];
+    users.push(track.id);
+    duckingUsers.set(track.ducking.by, users);
+  }
+  const keyStreams = new Map<string, string[]>();
+  for (const [keyId, users] of duckingUsers) {
+    const key = trackAudio.get(keyId);
+    if (!key) {
+      warnings.push(`Track(s) ${users.map((id) => `"${id}"`).join(', ')} duck under "${keyId}", but that track has no audible clips.`);
+      continue;
+    }
+    const outputs = graph.addSplit(
+      [key],
+      [`asplit=${users.length + 1}`],
+      Array.from({ length: users.length + 1 }, () => graph.label('duck_key')),
+    );
+    trackAudio.set(keyId, outputs[0]!);
+    keyStreams.set(keyId, outputs.slice(1));
+  }
+  for (const track of project.tracks) {
+    const ducking = track.ducking;
+    if (!ducking) continue;
+    const main = trackAudio.get(track.id);
+    const key = keyStreams.get(ducking.by)?.shift();
+    if (!main || !key) continue;
+    const ducked = graph.label('ducked');
+    graph.add([main, key], [
+      `sidechaincompress=threshold=${number(ducking.threshold ?? 0.05)}:ratio=${number(ducking.ratio ?? 8)}:attack=${number(ducking.attack ?? 20)}:release=${number(ducking.release ?? 400)}:makeup=${number(ducking.makeup ?? 1)}`,
+      'aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo',
+      `atrim=duration=${number(timeline.duration)}`,
+      'asetpts=PTS-STARTPTS',
+    ], ducked);
+    trackAudio.set(track.id, ducked);
+  }
+
+  const audioStreams = [...trackAudio.values()];
   const silence = graph.label('silence');
   graph.add([], [`anullsrc=r=48000:cl=stereo:d=${number(timeline.duration)}`], silence);
   if (audioStreams.length === 0) {
@@ -672,9 +767,9 @@ export function compileRenderPlan(projectInput: Project, options: CompileRenderP
   const overwrite = options.overwrite ?? false;
   if (options.postprocess) appendPostprocess(graph, options.postprocess, timeline.duration);
   appendOutputArguments(args, options.postprocess, project, timeline.duration);
-  const warnings: string[] = [];
   if (videoTracks.length === 0) warnings.push('No visible video clips; rendering a black video for the full timeline.');
   if (audioStreams.length === 0) warnings.push('No audible source clips; rendering stereo silence for the full timeline.');
+  warnings.push(...audioSyncWarnings(project));
   for (const track of project.tracks) {
     for (const clip of track.clips) {
       if ((clip.type === 'image' || clip.type === 'color' || clip.type === 'text') && ((clip.sourceStart ?? 0) !== 0 || (clip.speed ?? 1) !== 1)) {

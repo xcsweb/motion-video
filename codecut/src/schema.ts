@@ -195,12 +195,22 @@ export const VisualClipSchema = Type.Union([
 
 export const ClipSchema = Type.Union([VisualClipSchema, AudioClipSchema]);
 
+export const DuckingSchema = object({
+  by: IdentifierSchema,
+  threshold: Type.Optional(Type.Number({ minimum: 0.000976563, maximum: 1, default: 0.05 })),
+  ratio: Type.Optional(Type.Number({ minimum: 1, maximum: 20, default: 8 })),
+  attack: Type.Optional(Type.Number({ minimum: 0.01, maximum: 2000, default: 20 })),
+  release: Type.Optional(Type.Number({ minimum: 0.01, maximum: 9000, default: 400 })),
+  makeup: Type.Optional(Type.Number({ minimum: 1, maximum: 64, default: 1 })),
+}, 'Lower this track under the key signal of another track with sidechain compression.');
+
 export const VideoTrackSchema = object({
   id: IdentifierSchema,
   kind: Type.Literal('video'),
   name: Type.Optional(Type.String({ minLength: 1 })),
   hidden: Type.Optional(Type.Boolean({ default: false })),
   muted: Type.Optional(Type.Boolean({ default: false })),
+  ducking: Type.Optional(DuckingSchema),
   clips: Type.Array(VisualClipSchema),
 });
 
@@ -209,6 +219,7 @@ export const AudioTrackSchema = object({
   kind: Type.Literal('audio'),
   name: Type.Optional(Type.String({ minLength: 1 })),
   muted: Type.Optional(Type.Boolean({ default: false })),
+  ducking: Type.Optional(DuckingSchema),
   clips: Type.Array(AudioClipSchema),
 });
 
@@ -259,9 +270,19 @@ const ClipParamsSchema = object({
   })),
 });
 
+const TrackParamsSchema = object({
+  name: Type.Optional(Type.String({ minLength: 1 })),
+  muted: Type.Optional(Type.Boolean()),
+  hidden: Type.Optional(Type.Boolean()),
+  ducking: Type.Optional(Type.Union([DuckingSchema, Type.Null()], {
+    description: 'Replace the track ducking configuration; pass null to clear it.',
+  })),
+});
+
 export const EditOperationSchema = Type.Union([
   object({ type: Type.Literal('addTrack'), track: TrackSchema }),
   object({ type: Type.Literal('removeTrack'), trackId: IdentifierSchema }),
+  object({ type: Type.Literal('setTrackParams'), trackId: IdentifierSchema, params: TrackParamsSchema }),
   object({ type: Type.Literal('addClip'), trackId: IdentifierSchema, clip: ClipSchema }),
   object({
     type: Type.Literal('trimClip'),
