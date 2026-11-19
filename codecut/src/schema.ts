@@ -175,6 +175,15 @@ export const TextClipSchema = object({
   fontFamily: Type.Optional(Type.String({ minLength: 1, default: 'sans' })),
   fontFile: Type.Optional(RelativePathSchema),
   fontSize: Type.Optional(Type.Number({ exclusiveMinimum: 0, default: 48 })),
+  borderWidth: Type.Optional(Type.Number({
+    minimum: 0,
+    default: 0,
+    description: 'Text outline width in pixels; 0 disables the outline.',
+  })),
+  borderColor: Type.Optional(Type.String({
+    pattern: '^#[0-9A-Fa-f]{6}([0-9A-Fa-f]{2})?$',
+    default: '#000000',
+  })),
   color: Type.Optional(Type.String({
     pattern: '^#[0-9A-Fa-f]{6}([0-9A-Fa-f]{2})?$',
     default: '#FFFFFF',

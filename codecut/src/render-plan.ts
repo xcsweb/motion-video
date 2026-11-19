@@ -281,16 +281,25 @@ function quotedFilterValue(value: string): string {
 
 function textFilter(clip: TextClip, textPath: string, projectDirectory: string): string {
   const align = clip.align ?? 'center';
-  const x = align === 'left' ? '0' : align === 'right' ? 'w-text_w' : '(w-text_w)/2';
+  const position = clip.position;
+  const offsetX = position === undefined ? 0 : position.x;
+  const baseX = align === 'left' ? '0' : align === 'right' ? 'w-text_w' : '(w-text_w)/2';
+  const x = offsetX === 0 ? baseX : `${baseX}+${number(offsetX)}`;
+  const y = position === undefined ? '(h-text_h)/2' : number(position.y);
   const options = [
     `textfile=${quotedFilterValue(textPath)}`,
     'expansion=none',
     `fontsize=${number(clip.fontSize ?? 48)}`,
     `fontcolor=${ffmpegColor(clip.color ?? '#FFFFFF')}`,
     `x=${x}`,
-    `y=(h-text_h)/2`,
+    `y=${y}`,
     'fix_bounds=1',
   ];
+  const borderWidth = clip.borderWidth ?? 0;
+  if (borderWidth > 0) {
+    options.push(`borderw=${number(borderWidth)}`);
+    options.push(`bordercolor=${ffmpegColor(clip.borderColor ?? '#000000')}`);
+  }
   if (clip.fontFile) options.push(`fontfile=${quotedFilterValue(resolve(projectDirectory, clip.fontFile))}`);
   else options.push(`font=${quotedFilterValue(clip.fontFamily ?? 'sans')}`);
   return `drawtext=${options.join(':')}`;
@@ -346,7 +355,8 @@ function addVisualClip(
 
   const canvas = addTransparent(graph, clip.duration, width, height, frameRate);
   const positioned = graph.label('positioned');
-  const position = clip.position ?? { x: 0, y: 0 };
+  // Text placement is already baked into drawtext, so overlay it at the canvas origin.
+  const position = clip.type === 'text' ? { x: 0, y: 0 } : clip.position ?? { x: 0, y: 0 };
   graph.add([canvas, transformed], [
     `overlay=x=${number(position.x)}:y=${number(position.y)}:shortest=1:format=auto`,
     `trim=duration=${number(clip.duration)}`,
