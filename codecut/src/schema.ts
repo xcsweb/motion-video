@@ -116,6 +116,18 @@ export const FlashEffectSchema = object({
   strength: Type.Optional(Type.Number({ minimum: 0, maximum: 1, default: 0.55 })),
 }, 'Brightness flash over a clip-relative time window.');
 
+export const ColorGradeSchema = object({
+  warmth: Type.Optional(Type.Number({
+    minimum: -1,
+    maximum: 1,
+    default: 0,
+    description: 'Red/blue balance; positive values warm the image, negative values cool it.',
+  })),
+  contrast: Type.Optional(Type.Number({ minimum: 0.5, maximum: 1.5, default: 1 })),
+  saturation: Type.Optional(Type.Number({ minimum: 0, maximum: 2, default: 1 })),
+  brightness: Type.Optional(Type.Number({ minimum: -1, maximum: 1, default: 0 })),
+}, 'Uniform colour grade applied to a visual clip before it is scaled.');
+
 export const EffectSchema = Type.Union([ShakeEffectSchema, FlashEffectSchema]);
 
 const clipProperties = {
@@ -129,6 +141,13 @@ const clipProperties = {
   position: Type.Optional(PositionSchema),
   opacity: Type.Optional(Type.Number({ minimum: 0, maximum: 1, default: 1 })),
   volume: Type.Optional(Type.Number({ minimum: 0, default: 1 })),
+  volumePoints: Type.Optional(Type.Array(object({
+    at: Type.Number({ minimum: 0, description: 'Clip-relative time in seconds.' }),
+    volume: Type.Number({ minimum: 0 }),
+  }), {
+    minItems: 2,
+    description: 'Piecewise-linear volume automation; overrides volume. Values hold before the first and after the last point.',
+  })),
   fadeIn: Type.Optional(Type.Number({ minimum: 0, default: 0, description: 'Audio fade-in seconds.' })),
   fadeOut: Type.Optional(Type.Number({ minimum: 0, default: 0, description: 'Audio fade-out seconds.' })),
   transition: Type.Optional(TransitionSchema),
@@ -136,6 +155,7 @@ const clipProperties = {
 
 const visualClipProperties = {
   ...clipProperties,
+  grade: Type.Optional(ColorGradeSchema),
   effects: Type.Optional(Type.Array(EffectSchema, {
     description: 'Visual effects applied to the clip after its normal transform chain; an empty array means none.',
   })),
@@ -245,6 +265,11 @@ export const OutputSchema = object({
   pixelFormat: Type.Literal('yuv420p', { default: 'yuv420p' }),
   audioSampleRate: Type.Literal(48000, { default: 48000 }),
   audioChannels: Type.Literal(2, { default: 2 }),
+  loudness: Type.Optional(object({
+    target: Type.Number({ minimum: -70, maximum: 0, default: -14, description: 'Integrated loudness target in LUFS.' }),
+    truePeak: Type.Optional(Type.Number({ minimum: -9, maximum: 0, default: -1.5 })),
+    range: Type.Optional(Type.Number({ minimum: 1, maximum: 50, default: 11 })),
+  }, 'Normalizes the final mix with loudnorm when present.')),
 });
 
 export const ProjectSchema = object({

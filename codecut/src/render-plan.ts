@@ -227,12 +227,29 @@ class FilterGraph {
   }
 }
 
+function gradeFilters(clip: Clip): string[] {
+  const grade = 'grade' in clip ? clip.grade : undefined;
+  if (!grade) return [];
+  const filters: string[] = [];
+  const eq: string[] = [];
+  if ((grade.contrast ?? 1) !== 1) eq.push(`contrast=${number(grade.contrast ?? 1)}`);
+  if ((grade.saturation ?? 1) !== 1) eq.push(`saturation=${number(grade.saturation ?? 1)}`);
+  if ((grade.brightness ?? 0) !== 0) eq.push(`brightness=${number(grade.brightness ?? 0)}`);
+  if (eq.length > 0) filters.push(`eq=${eq.join(':')}`);
+  const warmth = grade.warmth ?? 0;
+  if (warmth !== 0) {
+    filters.push(`colorbalance=rm=${number(warmth * 0.15)}:gm=${number(warmth * 0.05)}:bm=${number(-warmth * 0.15)}`);
+  }
+  return filters;
+}
+
 function transformFilters(clip: Clip, width: number, height: number): string[] {
   const filters: string[] = [];
   if (clip.crop) {
     const { x, y, width: cropWidth, height: cropHeight } = clip.crop;
     filters.push(`crop=w=${number(cropWidth)}:h=${number(cropHeight)}:x=${number(x)}:y=${number(y)}`);
   }
+  filters.push(...gradeFilters(clip));
   filters.push('format=rgba');
   filters.push(`scale=w=${width}:h=${height}:force_original_aspect_ratio=decrease`);
   const scale = clip.scale ?? 1;
@@ -433,6 +450,30 @@ function compileVideoTrack(
   return current;
 }
 
+function volumePointExpression(points: ReadonlyArray<{ at: number; volume: number }>): string {
+  const sorted = [...points].sort((left, right) => left.at - right.at);
+  const first = sorted[0]!;
+  let expression = number(sorted[sorted.length - 1]!.volume);
+  for (let index = sorted.length - 1; index > 0; index -= 1) {
+    const previous = sorted[index - 1]!;
+    const current = sorted[index]!;
+    const span = current.at - previous.at;
+    const ramp = span <= EPSILON
+      ? number(current.volume)
+      : `${number(previous.volume)}+${number(current.volume - previous.volume)}*(t-${number(previous.at)})/${number(span)}`;
+    expression = `if(lt(t,${number(current.at)}),${ramp},${expression})`;
+  }
+  return `if(lt(t,${number(first.at)}),${number(first.volume)},${expression})`;
+}
+
+function loudnessFilters(loudness: Project['output']['loudness']): string[] {
+  if (!loudness) return [];
+  return [
+    `loudnorm=I=${number(loudness.target)}:TP=${number(loudness.truePeak ?? -1.5)}:LRA=${number(loudness.range ?? 11)}`,
+    'aresample=48000',
+  ];
+}
+
 function audioClipFilters(clip: Clip): string[] {
   const range = sourceRange(clip);
   const filters = [
@@ -443,7 +484,12 @@ function audioClipFilters(clip: Clip): string[] {
     ...atempoFilters(range.speed),
     'asetpts=PTS-STARTPTS',
   ];
-  if ((clip.volume ?? 1) !== 1) filters.push(`volume=${number(clip.volume ?? 1)}`);
+  const volumePoints = 'volumePoints' in clip ? clip.volumePoints : undefined;
+  if (volumePoints && volumePoints.length > 0) {
+    filters.push(`volume=eval=frame:volume='${volumePointExpression(volumePoints)}'`);
+  } else if ((clip.volume ?? 1) !== 1) {
+    filters.push(`volume=${number(clip.volume ?? 1)}`);
+  }
   if ((clip.fadeIn ?? 0) > 0) filters.push(`afade=t=in:st=0:d=${number(clip.fadeIn ?? 0)}`);
   if ((clip.fadeOut ?? 0) > 0) filters.push(`afade=t=out:st=${number(clip.duration - (clip.fadeOut ?? 0))}:d=${number(clip.fadeOut ?? 0)}`);
   filters.push(
@@ -767,6 +813,7 @@ export function compileRenderPlan(projectInput: Project, options: CompileRenderP
   } else {
     graph.add([silence, ...audioStreams], [
       `amix=inputs=${audioStreams.length + 1}:duration=longest:dropout_transition=0:normalize=0`,
+      ...loudnessFilters(project.output.loudness),
       'aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo',
       `atrim=duration=${number(timeline.duration)}`,
       'asetpts=PTS-STARTPTS',

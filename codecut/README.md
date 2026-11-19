@@ -80,6 +80,26 @@ node dist/cli.js render --project my-video
 - `effects` 只挂在视觉片段上：`shake`（`amplitude` 像素、`frequency` 次/秒）、`flash`（`at` 相对片段起点）
 - 同轨片段必须顺序拼接；重叠要么拆轨，要么用 `transition: { type: "xfade", duration }`
 - 字幕可拆到多条轨道叠放，避免重叠校验；`importSrt` 会按时间码把每条字幕落成 `text` 片段，样式走 `fontSize` / `color` / `fontFile`
+- 视觉片段可加统一调色，`warmth` 正数偏暖、负数偏冷，其余按倍数/增量生效：
+
+```json
+{ "type": "setClipParams", "clipId": "c1",
+  "params": { "grade": { "warmth": 0.4, "contrast": 1.08, "saturation": 1.12 } } }
+```
+
+- 音频音量可以按关键点走曲线，单位是片段内相对秒；曲线外按首尾值保持，设了 `volumePoints` 就忽略 `volume`：
+
+```json
+{ "type": "setClipParams", "clipId": "bgm",
+  "params": { "volumePoints": [{ "at": 0, "volume": 0 }, { "at": 2, "volume": 0.22 }, { "at": 26, "volume": 0.12 }, { "at": 30, "volume": 0 }] } }
+```
+
+- 整片响度归一在 `project.json` 的 `output.loudness` 里开，渲染时走单遍 `loudnorm`：
+
+```json
+{ "output": { "loudness": { "target": -14, "truePeak": -1.5, "range": 11 } } }
+```
+
 - 人声压 BGM 用轨道级 `ducking`，不用手动写音量曲线：
 
 ```json
