@@ -160,10 +160,12 @@ test('invalid effects are rejected with field paths', () => {
   }
 });
 
-test('malformed effects fail TypeBox validation and effects stay off audio clips', () => {
+test('malformed effects fail TypeBox validation; empty array clears and audio stays unaffected', () => {
+  const empty = validateProjectData(projectWithClip({ effects: [] }));
+  assert.deepEqual(empty.tracks[0].clips[0].effects, [], 'an empty chain is valid and means no effects');
+
   for (const clip of [
     { effects: [{ type: 'blur' }] },
-    { effects: [] },
     { effects: [{ type: 'shake', amplitude: -1 }] },
     { effects: [{ type: 'flash', strength: 2 }] },
     { effects: [{ type: 'flash', at: 0.5 }], type: 'audio', assetId: 'video' },

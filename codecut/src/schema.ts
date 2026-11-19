@@ -129,8 +129,7 @@ const clipProperties = {
 const visualClipProperties = {
   ...clipProperties,
   effects: Type.Optional(Type.Array(EffectSchema, {
-    minItems: 1,
-    description: 'Visual effects applied to the clip after its normal transform chain.',
+    description: 'Visual effects applied to the clip after its normal transform chain; an empty array means none.',
   })),
 };
 
@@ -247,6 +246,9 @@ const ClipParamsSchema = object({
   fadeIn: Type.Optional(Type.Number({ minimum: 0 })),
   fadeOut: Type.Optional(Type.Number({ minimum: 0 })),
   transition: Type.Optional(TransitionSchema),
+  effects: Type.Optional(Type.Array(EffectSchema, {
+    description: 'Replace the clip effect chain; pass an empty array to clear.',
+  })),
 });
 
 export const EditOperationSchema = Type.Union([
@@ -274,6 +276,15 @@ export const EditOperationSchema = Type.Union([
   }),
   object({ type: Type.Literal('removeClip'), clipId: IdentifierSchema }),
   object({ type: Type.Literal('setClipParams'), clipId: IdentifierSchema, params: ClipParamsSchema }),
+  object({
+    type: Type.Literal('setSpeedRamp'),
+    clipId: IdentifierSchema,
+    points: Type.Array(object({
+      at: Type.Number({ minimum: 0, maximum: 1, description: 'Normalized position inside the clip source span.' }),
+      speed: Type.Number({ minimum: 0.1, maximum: 10 }),
+    }), { minItems: 2 }),
+    steps: Type.Optional(Type.Integer({ minimum: 2, maximum: 48, default: 8 })),
+  }, 'Approximate a piecewise-linear speed curve by splitting the clip into constant-speed slices.'),
   object({ type: Type.Literal('addText'), trackId: IdentifierSchema, clip: TextClipSchema }),
   object({ type: Type.Literal('importSrt'), trackId: IdentifierSchema, path: RelativePathSchema }),
 ], { $id: 'https://codecut.local/schemas/edit-operation-v1.json' });
