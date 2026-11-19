@@ -39,3 +39,7 @@ travel/assets/models/
 travel/assets/music/
 travel/assets/sfx/
 travel/projects/*/audio/
+
+# 视频/音频素材与成片：统一归档到飞书素材文档，不进仓库
+demo30/
+refs/
