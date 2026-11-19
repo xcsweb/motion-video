@@ -37,7 +37,7 @@ function isDuplicate(previous: string, current: string): boolean {
   if (left === right) return true;
   const shorter = left.length <= right.length ? left : right;
   const longer = left.length <= right.length ? right : left;
-  return shorter.length >= 4 && longer.startsWith(shorter);
+  return shorter.length >= 5 && (longer.startsWith(shorter) || longer.endsWith(shorter));
 }
 
 function isFiller(text: string): boolean {
@@ -87,7 +87,7 @@ export async function checkTranscript(options: TranscriptCheckOptions): Promise<
           cueNumber,
           cue.start,
           cue.end,
-          `Cue overlaps the previous cue by ${Math.abs(gap).toFixed(3)}s; rectime it before importing.`,
+          `Cue overlaps the previous cue by ${Math.abs(gap).toFixed(3)}s; retime it before importing.`,
         ));
       } else if (gap > maxGap) {
         issues.push(issue(

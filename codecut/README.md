@@ -93,6 +93,17 @@ node dist/cli.js render --project my-video
 
 渲染（含 `--dry-run`）会检查时长 ≤ 3 秒的音频片段：若起点距离最近的画面切点不到 250ms、但又超过 2 帧，就写一条 warning，提示音效可能没卡准。离切点很远的片段视为有意为之，不报警。
 
+## 转录/字幕质检
+
+导入字幕后先跑一遍离线检查，不用接 ASR：
+
+```bash
+codecut transcript check --srt talk.srt
+codecut transcript check --srt talk.srt --max-gap 1.5 --max-chars 20 --max-duration 6 --json
+```
+
+会报告 5 类问题：`overlap`（字幕重叠，error）、`long-gap`（句间停顿过长）、`duplicate`（相邻句重复/说错重说，保留更完整的一句）、`filler`（嗯/呃/那个等语气词）、`too-long`（单条字幕超时或超字数）。阈值都可以用参数调，`--json` 输出结构化报告，方便 agent 或脚本继续处理。
+
 ## 素材自动转码
 
 `asset add` 探测到**非 H.264** 或**带 rotation 元数据**的视频时，会自动转成 H.264 / yuv420p，把旋转烘进像素，登记 `media/<id>.mp4`，并在 metadata 里记录 `normalizedFrom`。
