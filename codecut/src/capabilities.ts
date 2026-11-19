@@ -44,6 +44,7 @@ export const CAPABILITIES = {
     'fadeIn',
     'fadeOut',
     'transition',
+    'effects',
   ],
   textParameters: ['text', 'fontFamily', 'fontFile', 'fontSize', 'color', 'align'],
   operations: [
@@ -75,7 +76,7 @@ export const CAPABILITIES = {
   render: {
     options: ['revision', 'output', 'force', 'detach', 'timeoutMs', 'dryRun'],
     sourceTiming: 'sourceStart to sourceStart + duration * speed, placed at timeline start with timeline duration',
-    video: ['crop', 'reorder', 'cut', 'speed', 'fit', 'scale', 'position', 'opacity', 'overlay', 'image', 'color', 'text', 'xfade'],
+    video: ['crop', 'reorder', 'cut', 'speed', 'fit', 'scale', 'position', 'opacity', 'overlay', 'image', 'color', 'text', 'xfade', 'shake', 'flash'],
     audio: ['all audio tracks', 'video source audio', 'gap silence', 'atempo chains', 'volume', 'fadeIn', 'fadeOut', '48kHz stereo mix'],
     text: 'UTF-8 job diagnostic text files with drawtext textfile and expansion=none',
     dryRun: 'Returns the complete argument array and filter graph without creating a job, starting FFmpeg, publishing output, or writing a revision',

@@ -5,7 +5,10 @@ import type {
   Asset,
   AssetFingerprint,
   Clip,
+  Effect,
+  FlashEffect,
   Project,
+  ShakeEffect,
   TextClip,
   Track,
 } from './schema.js';
@@ -233,6 +236,38 @@ function transformFilters(clip: Clip, width: number, height: number): string[] {
   return filters;
 }
 
+function clipEffects(clip: Clip): Effect[] {
+  return 'effects' in clip && clip.effects ? clip.effects : [];
+}
+
+function shakeFilters(effect: ShakeEffect): string[] {
+  const amplitude = effect.amplitude ?? 20;
+  if (amplitude <= EPSILON) return [];
+  const frequency = effect.frequency ?? 8;
+  const base = number(amplitude);
+  const span = number(amplitude * 2);
+  const step = `floor(t*${number(frequency)})`;
+  return [
+    `crop=w=iw-${span}:h=ih-${span}:x='${base}+${base}*sin(${step}*12.9898)':y='${base}+${base}*sin(${step}*78.233+1.7)'`,
+    `scale=w=iw+${span}:h=ih+${span}:flags=bicubic`,
+  ];
+}
+
+function flashFilter(effect: FlashEffect): string {
+  const start = effect.at;
+  const end = start + (effect.duration ?? 0.12);
+  return `eq=brightness='if(between(t,${number(start)},${number(end)}),${number(effect.strength ?? 0.55)},0)':eval=frame`;
+}
+
+function effectFilters(clip: Clip): string[] {
+  const filters: string[] = [];
+  for (const effect of clipEffects(clip)) {
+    if (effect.type === 'shake') filters.push(...shakeFilters(effect));
+    else filters.push(flashFilter(effect));
+  }
+  return filters;
+}
+
 function quotedFilterValue(value: string): string {
   return escapeFilterValue(value).replace(/ /g, '\\ ');
 }
@@ -297,6 +332,7 @@ function addVisualClip(
   }
   filters.push(`fps=${number(frameRate)}`);
   filters.push(...transformFilters(clip, width, height));
+  filters.push(...effectFilters(clip));
   filters.push(`trim=duration=${number(clip.duration)}`, 'setpts=PTS-STARTPTS');
   const transformed = graph.label('clip');
   graph.add(inputs, filters, transformed);
