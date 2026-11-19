@@ -10,9 +10,14 @@ import argparse
 import base64
 import json
 import os
+import re
+import shutil
+import subprocess
 import sys
+import tempfile
 import urllib.request
 import uuid
+import wave
 
 API = "https://openspeech.bytedance.com/api/v3/tts/unidirectional"
 
@@ -79,6 +84,48 @@ def synthesize(text, speaker, api_key, resource_id, fmt, sample_rate, speech_rat
     return b"".join(chunks)
 
 
+def split_segments(text):
+    parts = re.split(r"(?<=[。！？!?：:])|\n+", text)
+    return [part.strip() for part in parts if part.strip()]
+
+
+def decode_to_wav(audio, path, sample_rate, fmt):
+    ffmpeg = shutil.which("ffmpeg")
+    if ffmpeg is None:
+        raise SystemExit("ffmpeg is required for gap synthesis")
+    source = f"{path}.{fmt}"
+    with open(source, "wb") as handle:
+        handle.write(audio)
+    subprocess.run(
+        [ffmpeg, "-v", "error", "-y", "-i", source, "-ar", str(sample_rate), "-ac", "1", "-c:a", "pcm_s16le", path],
+        check=True,
+    )
+    os.remove(source)
+
+
+def join_with_gaps(wav_paths, gap, sample_rate, out, fmt):
+    frames = []
+    for index, path in enumerate(wav_paths):
+        with wave.open(path, "rb") as handle:
+            frames.append(handle.readframes(handle.getnframes()))
+        if gap > 0 and index < len(wav_paths) - 1:
+            frames.append(b"\x00" * int(sample_rate * 2 * gap))
+    combined = os.path.join(tempfile.mkdtemp(prefix="doubao-"), "joined.wav")
+    with wave.open(combined, "wb") as handle:
+        handle.setnchannels(1)
+        handle.setsampwidth(2)
+        handle.setframerate(sample_rate)
+        handle.writeframes(b"".join(frames))
+    if fmt == "wav":
+        os.replace(combined, out)
+        return
+    ffmpeg = shutil.which("ffmpeg")
+    subprocess.run(
+        [ffmpeg, "-v", "error", "-y", "-i", combined, "-c:a", "libmp3lame", "-b:a", "128k", out],
+        check=True,
+    )
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--text", required=True)
@@ -86,7 +133,18 @@ def main():
     parser.add_argument("--env-file", default=os.path.expanduser("~/.volc_local/cred.env"))
     parser.add_argument("--format", default="mp3")
     parser.add_argument("--sample-rate", type=int, default=24000)
-    parser.add_argument("--speech-rate", type=int, default=0)
+    parser.add_argument(
+        "--speech-rate",
+        type=int,
+        default=0,
+        help="Doubao speech rate; negative values slow the voice down.",
+    )
+    parser.add_argument(
+        "--gap",
+        type=float,
+        default=0,
+        help="Silence in seconds inserted at every sentence end; enables segmented synthesis.",
+    )
     parser.add_argument("--uid", default="codecut-local")
     args = parser.parse_args()
 
@@ -96,17 +154,32 @@ def main():
     if not api_key or not speaker:
         raise SystemExit("VOLC_API_KEY and VOLC_SPEAKER are required (env or --env-file)")
 
-    audio = synthesize(
-        args.text,
-        speaker,
-        api_key,
-        env.get("VOLC_RESOURCE_ID", "seed-icl-2.0"),
-        args.format,
-        args.sample_rate,
-        args.speech_rate,
-        args.uid,
-    )
+    def render(text):
+        return synthesize(
+            text,
+            speaker,
+            api_key,
+            env.get("VOLC_RESOURCE_ID", "seed-icl-2.0"),
+            args.format,
+            args.sample_rate,
+            args.speech_rate,
+            args.uid,
+        )
+
     os.makedirs(os.path.dirname(os.path.abspath(args.out)), exist_ok=True)
+    segments = split_segments(args.text) if args.gap > 0 else []
+    if len(segments) > 1:
+        workdir = tempfile.mkdtemp(prefix="doubao-")
+        wav_paths = []
+        for index, segment in enumerate(segments):
+            wav_path = os.path.join(workdir, f"seg{index:02d}.wav")
+            decode_to_wav(render(segment), wav_path, args.sample_rate, args.format)
+            wav_paths.append(wav_path)
+        join_with_gaps(wav_paths, args.gap, args.sample_rate, args.out, args.format)
+        print(f"wrote {args.out} ({len(segments)} segments, gap {args.gap}s)")
+        return
+
+    audio = render(args.text)
     with open(args.out, "wb") as handle:
         handle.write(audio)
     print(f"wrote {args.out} ({len(audio)} bytes)")
