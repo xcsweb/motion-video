@@ -165,6 +165,45 @@ function validateTrackTiming(track: Track, trackIndex: number): ValidationIssue[
   return issues;
 }
 
+function effectIssues(
+  clip: Clip,
+  basePath: string,
+  outputWidth: number,
+  outputHeight: number,
+): ValidationIssue[] {
+  if (!('effects' in clip) || !clip.effects) return [];
+  const issues: ValidationIssue[] = [];
+  for (const [index, effect] of clip.effects.entries()) {
+    const effectPath = `${basePath}/effects/${index}`;
+    if (effect.type === 'flash') {
+      const duration = effect.duration ?? 0.12;
+      if (effect.at >= clip.duration - EPSILON) {
+        issues.push({
+          path: `${effectPath}/at`,
+          message: `flash effect on clip "${clip.id}" starts at ${effect.at}s but the clip lasts ${clip.duration}s`,
+          keyword: 'effectTiming',
+        });
+      } else if (effect.at + duration > clip.duration + EPSILON) {
+        issues.push({
+          path: `${effectPath}/duration`,
+          message: `flash effect on clip "${clip.id}" spans ${effect.at}s-${effect.at + duration}s but the clip lasts ${clip.duration}s`,
+          keyword: 'effectTiming',
+        });
+      }
+      continue;
+    }
+    const amplitude = effect.amplitude ?? 20;
+    if (amplitude > 0 && (amplitude * 2 >= outputWidth || amplitude * 2 >= outputHeight)) {
+      issues.push({
+        path: `${effectPath}/amplitude`,
+        message: `shake amplitude ${amplitude} on clip "${clip.id}" must be less than half of the ${outputWidth}x${outputHeight} output`,
+        keyword: 'effectAmplitude',
+      });
+    }
+  }
+  return issues;
+}
+
 function semanticIssues(project: Project): ValidationIssue[] {
   const issues: ValidationIssue[] = [];
   issues.push(...duplicateIssues(project.assets.map((asset) => asset.id), '/assets', 'asset'));
@@ -207,6 +246,7 @@ function semanticIssues(project: Project): ValidationIssue[] {
       if ((clip.fadeIn ?? 0) > clip.duration || (clip.fadeOut ?? 0) > clip.duration) {
         issues.push({ path: basePath, message: 'fade duration cannot exceed clip duration', keyword: 'fadeDuration' });
       }
+      issues.push(...effectIssues(clip, basePath, project.output.width, project.output.height));
       if (clip.type === 'text' && clip.fontFile !== undefined && !isRelativeProjectPath(clip.fontFile)) {
         issues.push({ path: `${basePath}/fontFile`, message: 'font path must be relative to the project directory', keyword: 'relativePath' });
       }
