@@ -432,3 +432,47 @@ test('asset CLI keeps JSON stdout clean and exposes detached preview results thr
   assert.equal(duplicate.stdout, '');
   assert.equal(JSON.parse(duplicate.stderr).error.code, 'ASSET_ID_EXISTS');
 });
+
+test('asset add transcodes non-H.264 video and records the original source', async (t) => {
+  const { projectDirectory } = await mediaProject(t);
+  const legacyPath = join(projectDirectory, 'legacy.avi');
+  await execute('ffmpeg', [
+    '-v', 'error', '-y',
+    '-f', 'lavfi', '-i', 'color=c=navy:s=160x120:r=10:d=1',
+    '-c:v', 'mpeg4', '-pix_fmt', 'yuv420p', legacyPath,
+  ]);
+
+  const result = await addAsset(projectDirectory, { id: 'legacy', path: 'legacy.avi' });
+  assert.equal(result.asset.path, 'media/legacy.mp4', 'registered path points at the transcoded copy');
+  assert.deepEqual(result.normalization, { target: 'media/legacy.mp4', applied: true });
+
+  const video = result.asset.metadata.streams.find((stream) => stream.codecType === 'video');
+  assert.equal(video.codecName, 'h264');
+  assert.equal(result.asset.metadata.normalizedFrom.path, 'legacy.avi');
+  assert.equal(result.asset.metadata.normalizedFrom.codecName, 'mpeg4');
+  const transcoded = await stat(join(projectDirectory, 'media', 'legacy.mp4'));
+  assert.ok(transcoded.size > 0);
+});
+
+test('asset add leaves H.264 video untouched', async (t) => {
+  const { projectDirectory } = await mediaProject(t);
+  const result = await addAsset(projectDirectory, { id: 'source', path: 'source.mp4' });
+  assert.equal(result.asset.path, 'source.mp4');
+  assert.equal(result.normalization, undefined);
+  assert.equal(result.asset.metadata.normalizedFrom, undefined);
+});
+
+test('asset add dry-run reports normalization without writing a transcoded file', async (t) => {
+  const { projectDirectory } = await mediaProject(t);
+  const legacyPath = join(projectDirectory, 'legacy.avi');
+  await execute('ffmpeg', [
+    '-v', 'error', '-y',
+    '-f', 'lavfi', '-i', 'color=c=navy:s=160x120:r=10:d=1',
+    '-c:v', 'mpeg4', '-pix_fmt', 'yuv420p', legacyPath,
+  ]);
+
+  const result = await addAsset(projectDirectory, { id: 'legacy', path: 'legacy.avi', dryRun: true });
+  assert.deepEqual(result.normalization, { target: 'media/legacy.mp4', applied: false });
+  assert.equal(result.asset.path, 'legacy.avi');
+  await assert.rejects(stat(join(projectDirectory, 'media', 'legacy.mp4')), (error) => error.code === 'ENOENT');
+});

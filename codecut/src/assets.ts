@@ -1,5 +1,5 @@
 import { execa } from 'execa';
-import { access, stat } from 'node:fs/promises';
+import { access, mkdir, stat } from 'node:fs/promises';
 import { constants } from 'node:fs';
 import { dirname, relative, resolve, sep } from 'node:path';
 import { CodeCutError, ExitCode } from './errors.js';
@@ -41,6 +41,7 @@ export interface AssetReference {
 
 export interface AssetWriteResult extends ProjectTransactionResult {
   asset: Asset;
+  normalization?: { target: string; applied: boolean };
 }
 
 export interface AssetAddOptions {
@@ -69,6 +70,8 @@ interface FfprobeStream {
   channel_layout?: unknown;
   duration?: unknown;
   bit_rate?: unknown;
+  tags?: { rotate?: unknown } | unknown;
+  side_data_list?: unknown;
 }
 
 interface FfprobeDocument {
@@ -131,6 +134,21 @@ function frameRate(stream: FfprobeStream): number | undefined {
   return undefined;
 }
 
+function streamRotation(stream: FfprobeStream): number | undefined {
+  if (Array.isArray(stream.side_data_list)) {
+    for (const entry of stream.side_data_list) {
+      if (typeof entry !== 'object' || entry === null) continue;
+      const rotation = optionalNumber((entry as { rotation?: unknown }).rotation);
+      if (rotation !== undefined) return rotation;
+    }
+  }
+  if (typeof stream.tags === 'object' && stream.tags !== null) {
+    const tagged = optionalNumber((stream.tags as { rotate?: unknown }).rotate);
+    if (tagged !== undefined) return tagged;
+  }
+  return undefined;
+}
+
 function mapStream(value: unknown, fallbackIndex: number): AssetStream | undefined {
   if (typeof value !== 'object' || value === null) return undefined;
   const stream = value as FfprobeStream;
@@ -148,6 +166,7 @@ function mapStream(value: unknown, fallbackIndex: number): AssetStream | undefin
     channelLayout: optionalString(stream.channel_layout),
     duration: optionalNumber(stream.duration),
     bitRate: optionalInteger(stream.bit_rate),
+    rotation: streamRotation(stream),
   };
   for (const [key, entry] of Object.entries(assignments)) {
     if (entry !== undefined) (result as unknown as Record<string, unknown>)[key] = entry;
@@ -334,6 +353,42 @@ export function assetReferences(project: Project, id: string): AssetReference[] 
   return references;
 }
 
+function needsNormalization(streams: AssetStream[]): boolean {
+  const video = streams.find((stream) => stream.codecType === 'video');
+  if (!video) return false;
+  if ((video.codecName ?? '') !== 'h264') return true;
+  return Math.abs((video.rotation ?? 0) % 360) > 0.01;
+}
+
+async function normalizeVideoSource(
+  sourcePath: string,
+  outputPath: string,
+  stage: string,
+  ffmpegPath = 'ffmpeg',
+): Promise<void> {
+  await mkdir(dirname(outputPath), { recursive: true });
+  const result = await execa(ffmpegPath, [
+    '-y', '-v', 'error',
+    '-i', sourcePath,
+    '-map', '0:v:0',
+    '-map', '0:a?',
+    '-c:v', 'libx264',
+    '-preset', 'veryfast',
+    '-crf', '18',
+    '-pix_fmt', 'yuv420p',
+    '-c:a', 'aac',
+    '-b:a', '192k',
+    '-movflags', '+faststart',
+    outputPath,
+  ], { reject: false, timeout: 15 * 60 * 1000, maxBuffer: 16 * 1024 * 1024 });
+  if (result.failed) {
+    throw assetError('ASSET_NORMALIZE_FAILED', 'ffmpeg could not transcode the asset to H.264', ExitCode.Media, stage, sourcePath, {
+      diagnostics: { exitCode: result.exitCode, stderr: result.stderr?.slice(-4096), timedOut: result.timedOut },
+      retryable: result.timedOut,
+    });
+  }
+}
+
 export async function addAsset(projectPath: string, options: AssetAddOptions): Promise<AssetWriteResult> {
   assertIdentifier(options.id);
   const { project, path } = await loadProject(projectPath, 'asset.add');
@@ -342,11 +397,38 @@ export async function addAsset(projectPath: string, options: AssetAddOptions): P
   const absolutePath = resolve(projectDirectory, assetPath);
   duplicateChecks(project, options.id, absolutePath, projectDirectory, 'asset.add');
   const probed = await probeAssetFile(absolutePath, 'asset.add', options.ffprobePath, options.kind);
+  const detectedKind = options.kind ?? probed.detectedKind;
+  const normalizationTarget = `media/${options.id}.mp4`;
+  const needsTranscode = detectedKind === 'video' && needsNormalization(probed.metadata.streams);
+  const shouldNormalize = needsTranscode && options.dryRun !== true;
+
+  let registeredPath = assetPath;
+  let registeredAbsolute = absolutePath;
+  let registeredMetadata = probed.metadata;
+  let registeredIdentity = probed.identity;
+  let normalizedFrom: AssetMetadata['normalizedFrom'];
+
+  if (shouldNormalize) {
+    const outputPath = resolve(projectDirectory, normalizationTarget);
+    await normalizeVideoSource(absolutePath, outputPath, 'asset.add');
+    const normalized = await probeAssetFile(outputPath, 'asset.add');
+    const sourceVideo = probed.metadata.streams.find((stream) => stream.codecType === 'video');
+    normalizedFrom = {
+      path: assetPath,
+      ...(sourceVideo?.codecName === undefined ? {} : { codecName: sourceVideo.codecName }),
+      ...(sourceVideo?.rotation === undefined ? {} : { rotation: sourceVideo.rotation }),
+    };
+    registeredPath = normalizationTarget;
+    registeredAbsolute = outputPath;
+    registeredIdentity = normalized.identity;
+    registeredMetadata = { ...normalized.metadata, normalizedFrom };
+  }
+
   const asset: Asset = {
     id: options.id,
-    kind: options.kind ?? probed.detectedKind,
-    path: assetPath,
-    metadata: probed.metadata,
+    kind: detectedKind,
+    path: registeredPath,
+    metadata: registeredMetadata,
   };
   const result = await commitProjectTransaction(path, {
     ...(options.dryRun === undefined ? {} : { dryRun: options.dryRun }),
@@ -354,15 +436,20 @@ export async function addAsset(projectPath: string, options: AssetAddOptions): P
     operations: [{ type: 'addAsset', asset }],
   }, async (draft) => {
     duplicateChecks(draft, options.id, absolutePath, projectDirectory, 'asset.add');
-    const current = await inspectAssetFile(absolutePath, 'asset.add');
-    if (!sameFingerprint(current, probed.identity)) {
-      throw assetError('ASSET_FILE_CHANGED', 'Asset changed before the registration transaction', ExitCode.Media, 'asset.add', absolutePath, {
+    const current = await inspectAssetFile(registeredAbsolute, 'asset.add');
+    if (!sameFingerprint(current, registeredIdentity)) {
+      throw assetError('ASSET_FILE_CHANGED', 'Asset changed before the registration transaction', ExitCode.Media, 'asset.add', registeredAbsolute, {
         retryable: true,
       });
     }
     draft.assets.push(asset);
   });
-  return { ...result, asset: result.project.assets.find((candidate) => candidate.id === options.id)! };
+  const written = result.project.assets.find((candidate) => candidate.id === options.id)!;
+  return {
+    ...result,
+    asset: written,
+    ...(needsTranscode ? { normalization: { target: normalizationTarget, applied: shouldNormalize } } : {}),
+  };
 }
 
 export async function probeAsset(projectPath: string, id: string, options: AssetProbeOptions = {}): Promise<AssetWriteResult> {

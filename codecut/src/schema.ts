@@ -44,7 +44,14 @@ export const AssetStreamSchema = object({
   channelLayout: Type.Optional(Type.String({ minLength: 1 })),
   duration: Type.Optional(Type.Number({ minimum: 0 })),
   bitRate: Type.Optional(Type.Integer({ minimum: 0 })),
+  rotation: Type.Optional(Type.Number({ description: 'Display rotation in degrees reported by ffprobe, if any.' })),
 });
+
+export const NormalizedSourceSchema = object({
+  path: Type.String({ minLength: 1, description: 'Project-relative path of the original source that was transcoded.' }),
+  codecName: Type.Optional(Type.String({ minLength: 1 })),
+  rotation: Type.Optional(Type.Number()),
+}, 'Records that this asset was transcoded to H.264 with rotation baked in.');
 
 export const AssetMetadataSchema = object({
   probedAt: Type.String({ format: 'date-time' }),
@@ -54,6 +61,7 @@ export const AssetMetadataSchema = object({
   formatName: Type.Optional(Type.String({ minLength: 1 })),
   bitRate: Type.Optional(Type.Integer({ minimum: 0 })),
   streams: Type.Array(AssetStreamSchema),
+  normalizedFrom: Type.Optional(NormalizedSourceSchema),
 }, 'Selected ffprobe metadata; probedAt and fingerprint describe when it was captured.');
 
 export const AssetSchema = object({
