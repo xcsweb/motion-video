@@ -112,14 +112,20 @@ def synth_rumble(dur=3.0):
 
 def main():
     os.makedirs(os.path.join(ROOT, 'audio'), exist_ok=True)
-    # BGM -> wav
+    # BGM -> wav, normalized so the bed level is predictable
     bgm_wav = os.path.join(ROOT, 'audio', 'bgm.wav')
     subprocess.run([
         'ffmpeg', '-y', '-hide_banner', '-loglevel', 'error',
         '-i', os.path.join(ROOT, 'audio', 'bgm.mp3'),
         '-t', str(DUR), '-ar', str(SR), '-ac', '2', bgm_wav,
     ], check=True)
-    _, bgm = read_wav(bgm_wav)
+    bgm_norm = os.path.join(ROOT, 'audio', 'bgm_norm.wav')
+    subprocess.run([
+        'ffmpeg', '-y', '-hide_banner', '-loglevel', 'error',
+        '-i', bgm_wav, '-af', 'loudnorm=I=-23:TP=-2.0:LRA=8',
+        '-ar', str(SR), '-ac', '2', bgm_norm,
+    ], check=True)
+    _, bgm = read_wav(bgm_norm)
     bgm = resample_linear(bgm, SR, SR, 2)[:N]
     if len(bgm) < N:
         bgm = np.pad(bgm, ((0, N - len(bgm)), (0, 0)))
@@ -142,14 +148,14 @@ def main():
     duck = np.convolve(vo_mask, kernel, mode='same')
     duck = np.clip(duck * 1.8, 0, 1)
 
-    # BGM volume envelope: opening, lift at 29s, resolve at 73s
+    # BGM volume envelope: audible from the first line, lift at 29s, resolve at 73s
     t = np.arange(N) / SR
-    vol = np.interp(t, [0, 1.5, 8, 29, 54, 73, 77.5, 80], [0.0, 0.15, 0.20, 0.26, 0.28, 0.28, 0.12, 0.0])
-    bed = bgm * vol[:, None] * (1.0 - 0.62 * duck[:, None])
+    vol = np.interp(t, [0, 0.6, 8, 29, 54, 73, 77.5, 80], [0.0, 0.85, 0.82, 0.86, 0.90, 0.90, 0.45, 0.0])
+    bed = bgm * vol[:, None] * (1.0 - 0.50 * duck[:, None])
 
     drone = synth_drone()
     denv = np.interp(t[:len(drone)], [0, 2, 16, 22], [0.0, 1.0, 0.75, 0.0])
-    bed[:len(drone)] += drone * denv[:, None] * 0.16
+    bed[:len(drone)] += drone * denv[:, None] * 0.10
 
     mix = vo + bed
     # SFX
