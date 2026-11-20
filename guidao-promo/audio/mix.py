@@ -165,6 +165,8 @@ def main():
     add_at(mix, tick, 44.0, 0.8)
     add_at(mix, riser, 27.0, 0.6)
     add_at(mix, boom, 29.0, 0.55)
+    add_at(mix, rumble, 31.35, 0.5)
+    add_at(mix, riser, 33.35, 0.45)
     add_at(mix, riser, 52.0, 0.5)
     add_at(mix, boom, 54.0, 0.5)
     add_at(mix, rumble, 73.0, 0.35)

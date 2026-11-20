@@ -30,6 +30,7 @@ WHITE = (236, 246, 250)
 DIM = (150, 170, 182)
 INK = (4, 7, 11)
 INK2 = (7, 14, 20)
+LINE6 = (219, 90, 123)
 
 rng = np.random.default_rng(7)
 
@@ -95,6 +96,18 @@ def grade_3d(img):
     # fine static grain
     arr = arr + rng.normal(0, 0.006, arr.shape).astype(np.float32)
     return Image.fromarray((np.clip(arr, 0, 1) * 255).astype(np.uint8))
+
+
+def clip_frame(name, local, dur, count):
+    """Load one graded frame from a rendered 3D clip."""
+    i = int(round(clamp(local / dur) * (count - 1)))
+    hit = CLIP_CACHE.get(name)
+    if hit and hit[0] == i:
+        return hit[1]
+    im = Image.open(os.path.join(ROOT, 'assets', '3d', name, f'f_{i:04d}.jpg')).convert('RGB')
+    im = grade_3d(im)
+    CLIP_CACHE[name] = (i, im)
+    return im
 
 
 def text_card(items, align='left', pad=24, shadow=True):
@@ -181,6 +194,36 @@ def bottom_scrim():
 ASSETS = {}
 SUBS = None
 SCRIM = None
+CLIP_CACHE = {}
+
+
+def rounded_img(im, radius=20):
+    im = im.convert('RGBA')
+    mask = Image.new('L', im.size, 0)
+    ImageDraw.Draw(mask).rounded_rectangle([0, 0, im.width - 1, im.height - 1], radius=radius, fill=255)
+    im.putalpha(mask)
+    return im
+
+
+def timetable_card():
+    card = Image.new('RGBA', (640, 820), (0, 0, 0, 0))
+    d = ImageDraw.Draw(card)
+    d.rounded_rectangle([0, 0, 639, 819], radius=22, fill=(6, 15, 21, 228), outline=(70, 105, 112, 255), width=2)
+    d.rectangle([40, 48, 46, 150], fill=TEAL + (255,))
+    d.text((70, 50), '运营组织 / SERVICE', font=ImageFont.truetype(F_BODY, 24), fill=TEAL)
+    d.text((66, 120), '15 条线', font=ImageFont.truetype(F_DISPLAY, 76), fill=WHITE)
+    d.text((70, 225), '共用同一运营时段', font=ImageFont.truetype(F_BODY, 30), fill=DIM)
+    d.text((70, 300), '06:00 – 23:00', font=ImageFont.truetype(F_MONO, 52), fill=AMBER)
+    d.line([(70, 390), (570, 390)], fill=(60, 90, 98, 255), width=2)
+    for i, (label, value) in enumerate([('首班', '06:00'), ('末班', '23:00')]):
+        x = 70 + i * 250
+        d.text((x, 430), label, font=ImageFont.truetype(F_BODY, 26), fill=DIM)
+        d.text((x, 470), value, font=ImageFont.truetype(F_MONO, 58), fill=WHITE)
+    d.text((70, 590), '高峰 5 分 · 平峰 8 分', font=ImageFont.truetype(F_BODY, 28), fill=TEAL)
+    d.text((70, 650), '运营时段 + 首末班 + 发车间隔', font=ImageFont.truetype(F_BODY, 24), fill=DIM)
+    d.rounded_rectangle([70, 720, 250, 762], radius=21, fill=(60, 44, 6, 255), outline=AMBER + (180,), width=1)
+    d.text((92, 728), '模拟班次', font=ImageFont.truetype(F_BOLD, 22), fill=AMBER)
+    return card
 
 
 def init_assets():
@@ -207,7 +250,7 @@ def init_assets():
     ])
     C['s04'] = text_card([
         ('打开浏览器', F_DISPLAY, 76, WHITE, 0.16),
-        ('你就是指挥使', F_DISPLAY, 116, TEAL, 0),
+        ('你就是指挥官', F_DISPLAY, 116, TEAL, 0),
     ])
     C['title'] = text_card([
         ('山城轨道', F_DISPLAY, 126, WHITE, 0.10),
@@ -230,9 +273,13 @@ def init_assets():
         ('运行图', F_DISPLAY, 64, WHITE, 0.10),
         ('全在掌握', F_DISPLAY, 64, TEAL, 0),
     ])
-    C['s11'] = text_card([
-        ('较场口', F_DISPLAY, 64, WHITE, 0.10),
-        ('1 号线 · 2 号线', F_BODY, 28, TEAL, 0),
+    C['s08b'] = text_card([
+        ('6 号线 · 小什字', F_BODY, 25, LINE6, 0.06),
+        ('隧道进站', F_DISPLAY, 44, WHITE, 0),
+    ])
+    C['s08c'] = text_card([
+        ('6 号线 · 小什字', F_BODY, 25, LINE6, 0.06),
+        ('站台视角', F_DISPLAY, 44, WHITE, 0),
     ])
     C['s13'] = text_card([('一座正在运行的城市', F_BODY, 34, DIM, 0)])
     C['brand'] = text_card([
@@ -255,6 +302,16 @@ def init_assets():
     ASSETS['ui_line'] = rounded_ui('assets/ui/line_panel.png', 384)
     ASSETS['ui_train'] = rounded_ui('assets/ui/train_panel.png', 412)
     ASSETS['ui_station'] = rounded_ui('assets/ui/station_card_jc.png', 330)
+    ASSETS['tt_card'] = timetable_card().resize((560, 718), Image.LANCZOS)
+    tt = Image.open(os.path.join(ROOT, 'assets/ui/timetable.png')).convert('RGB')
+    tt = tt.crop((0, int(tt.height * 0.435), tt.width, tt.height))
+    tt = tt.resize((660, int(tt.height * 660 / tt.width)), Image.LANCZOS)
+    raw = tt.crop((0, 0, 660, 1000)).resize((528, 800), Image.LANCZOS).convert('RGBA')
+    grad = Image.new('RGBA', raw.size, (0, 0, 0, 0))
+    gd = ImageDraw.Draw(grad)
+    for i in range(80):
+        gd.rectangle([0, 720 + i, 528, 721 + i], fill=(6, 15, 21, int(245 * (i / 80) ** 1.4)))
+    ASSETS['tt_panel'] = rounded_img(Image.alpha_composite(raw, grad), 18)
 
 
 # ---------------------------------------------------------------- shots
@@ -414,15 +471,35 @@ def s08(t):
     return base
 
 
+def s08b(t):
+    """6 号线小什字：第一视角隧道进站。"""
+    C = ASSETS['C']
+    local = t - 31.5
+    img = clip_frame('line6_arrival_hd', local, 2.5, 60)
+    base = fit(img, zoom=1.0 + 0.02 * ease(local / 2.5)).convert('RGBA')
+    put(base, C['s08b'], (120, 96), smooth(31.62, 31.95, t))
+    return base
+
+
+def s08c(t):
+    """6 号线小什字：站台视角看进站列车。"""
+    C = ASSETS['C']
+    local = t - 34.0
+    img = clip_frame('line6_platform_hd', local, 2.5, 66)
+    base = fit(img, zoom=1.0 + 0.025 * ease(local / 2.5), panx=0.006).convert('RGBA')
+    put(base, C['s08c'], (120, 96), smooth(34.12, 34.45, t))
+    return base
+
+
 def s09(t):
     C = ASSETS['C']
-    p = smooth(34.0, 35.4, t)
+    p = smooth(36.5, 37.8, t)
     a = fit(ASSETS['exag14_c'], zoom=1.01).convert('RGBA')
     b = fit(ASSETS['exag18_c'], zoom=1.01).convert('RGBA')
     base = Image.blend(a, b, p)
     # big 1.8
     big = text_card([('×1.8', F_MONO, 120, AMBER, 0)], align='center')
-    put(base, big, (1300, 560), smooth(35.0, 35.4, t))
+    put(base, big, (1300, 560), smooth(37.4, 37.8, t))
     return base
 
 
@@ -439,12 +516,25 @@ def s10(t):
 
 
 def s11(t):
-    C = ASSETS['C']
-    base = fit(ASSETS['hero_b'], zoom=1.03 + 0.03 * ease((t - 44) / 5)).convert('RGBA')
-    p = ease((t - 44.2) / 0.6)
-    x = lerp(W + 20, W - 390, p)
-    put(base, ASSETS['ui_station'], (x, 190), p, shadow=True)
-    put(base, C['s11'], (120, 780), smooth(44.3, 44.7, t))
+    """运营时段 + 首末班 + 每站到站时刻。"""
+    base = fit(ASSETS['hero_b'], zoom=1.02 + 0.03 * ease((t - 44) / 5)).convert('RGBA')
+    base.alpha_composite(Image.new('RGBA', (W, H), (4, 10, 14, 150)))
+
+    p = ease((t - 44.15) / 0.7)
+    x = lerp(-580, 70, p)
+    y = 64
+    put(base, ASSETS['tt_card'], (x, y), p, shadow=True)
+    if x > -500:
+        d = ImageDraw.Draw(base)
+        pulse = 0.55 + 0.45 * math.sin((t - 44.5) * 4.2)
+        d.rounded_rectangle([x + 52, y + 252, x + 525, y + 326], radius=11,
+                            outline=AMBER + (int(150 * pulse),), width=2)
+
+    q = ease((t - 44.3) / 0.7)
+    px = lerp(W + 20, 1240, q)
+    put(base, ASSETS['tt_panel'], (px, 56), q, shadow=True)
+    label = text_card([('2 号线 · 各站到站时刻', F_BOLD, 25, TEAL, 0)])
+    put(base, label, (1240, 18), q)
     return base
 
 
@@ -571,7 +661,9 @@ def render_frame(t):
     elif t < 23: base = s05(t)
     elif t < 26: base = s06(t)
     elif t < 29: base = s07(t)
-    elif t < 34: base = s08(t)
+    elif t < 31.5: base = s08(t)
+    elif t < 34: base = s08b(t)
+    elif t < 36.5: base = s08c(t)
     elif t < 39: base = s09(t)
     elif t < 44: base = s10(t)
     elif t < 49: base = s11(t)
