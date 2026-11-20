@@ -86,7 +86,7 @@ async def wait_event(ws, wanted):
             raise SystemExit(f"event {event}: {payload.decode('utf-8', 'ignore')[:600]}")
 
 
-async def synthesize(text, speaker, resource, out_path, sample_rate=24000):
+async def synthesize(text, speaker, resource, out_path, sample_rate=24000, speech_rate=0):
     key = os.environ.get("VOLC_API_KEY")
     if not key:
         raise SystemExit("VOLC_API_KEY is not set")
@@ -97,7 +97,8 @@ async def synthesize(text, speaker, resource, out_path, sample_rate=24000):
     }
     req = {
         "speaker": speaker,
-        "audio_params": {"format": "mp3", "sample_rate": sample_rate},
+        "audio_params": {"format": "mp3", "sample_rate": sample_rate,
+                         "speech_rate": speech_rate},
         "text": text,
     }
     session_id = str(uuid.uuid4())
@@ -109,7 +110,8 @@ async def synthesize(text, speaker, resource, out_path, sample_rate=24000):
         await wait_event(ws, CONNECTION_STARTED)
 
         start = {"req_params": {"speaker": speaker,
-                                "audio_params": {"format": "mp3", "sample_rate": sample_rate}},
+                                "audio_params": {"format": "mp3", "sample_rate": sample_rate,
+                                                 "speech_rate": speech_rate}},
                  "event": START_SESSION}
         await ws.send(pack(FULL_CLIENT, START_SESSION, json.dumps(start).encode(), session_id))
         await wait_event(ws, SESSION_STARTED)
@@ -149,9 +151,11 @@ def main():
     ap.add_argument("--text", required=True)
     ap.add_argument("--speaker", required=True)
     ap.add_argument("--resource", default="seed-tts-2.0")
+    ap.add_argument("--speech-rate", type=int, default=0)
     ap.add_argument("--out", required=True)
     args = ap.parse_args()
-    n = asyncio.run(synthesize(args.text, args.speaker, args.resource, args.out))
+    n = asyncio.run(synthesize(args.text, args.speaker, args.resource, args.out,
+                               speech_rate=args.speech_rate))
     print(f"{args.out}: {n} bytes")
 
 

@@ -5,7 +5,7 @@ import os
 import subprocess
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DIR = os.path.join(ROOT, 'audio', 'vo_seed')
+DIR = os.path.join(ROOT, 'audio', os.environ.get('VO_DIR', 'vo_seed'))
 
 TEXTS = [
     (1, '我点了一下重庆，整座城市站起来了。', '我点了一下重庆，\n整座城市站起来了。', 0.0),

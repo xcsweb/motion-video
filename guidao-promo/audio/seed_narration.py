@@ -1,18 +1,20 @@
 #!/usr/bin/env python3
-"""Generate the 11-line narration with the cloned Seed TTS voice."""
+"""Generate the 11-line narration with the official Liufei Seed TTS voice."""
+import asyncio
 import json
 import os
 import subprocess
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from seed_tts import synthesize
+from seed_ws_tts import synthesize
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUT = os.path.join(ROOT, 'audio', 'vo_seed')
+OUT = os.path.join(ROOT, 'audio', 'vo_liufei')
 SR = 48000
-SPEAKER = 'S_J0yK2jJl2'
-RESOURCE = 'seed-icl-2.0'
+SPEAKER = 'zh_male_liufei_uranus_bigtts'
+RESOURCE = 'seed-tts-2.0'
+SPEECH_RATE = -5
 
 LINES = [
     (1, '我点了一下重庆，整座城市站起来了。', '我点了一下重庆，\n整座城市站起来了。'),
@@ -42,7 +44,8 @@ def main():
     for idx, text, subtitle in LINES:
         mp3 = os.path.join(OUT, f'line_{idx:02d}.mp3')
         if not os.path.exists(mp3) or os.path.getsize(mp3) == 0:
-            synthesize(text, SPEAKER, RESOURCE, mp3)
+            asyncio.run(synthesize(text, SPEAKER, RESOURCE, mp3,
+                                   speech_rate=SPEECH_RATE))
         wav = os.path.join(OUT, f'line_{idx:02d}.wav')
         subprocess.run(
             ['ffmpeg', '-y', '-loglevel', 'error', '-i', mp3, '-ar', str(SR), '-ac', '1',

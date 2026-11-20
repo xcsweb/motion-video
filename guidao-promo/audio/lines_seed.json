@@ -1,0 +1,79 @@
+[
+  {
+    "index": 1,
+    "duration": 2.568,
+    "text": "我点了一下重庆，整座城市站起来了。",
+    "subtitle": "我点了一下重庆，\n整座城市站起来了。",
+    "file": "audio/vo_liufei/line_01.wav"
+  },
+  {
+    "index": 2,
+    "duration": 3.648,
+    "text": "从现在起，整座城市听你指挥。",
+    "subtitle": "从现在起，\n整座城市听你指挥。",
+    "file": "audio/vo_liufei/line_02.wav"
+  },
+  {
+    "index": 3,
+    "duration": 5.328,
+    "text": "十五条线路，二百七十座车站，五百六十二公里，铺在真实地形上。",
+    "subtitle": "十五条线路，二百七十座车站，\n五百六十二公里，铺在真实地形上。",
+    "file": "audio/vo_liufei/line_03.wav"
+  },
+  {
+    "index": 4,
+    "duration": 4.248,
+    "text": "打开浏览器，你就是重庆轨道交通的指挥官。",
+    "subtitle": "打开浏览器，\n你就是重庆轨道交通的指挥官。",
+    "file": "audio/vo_liufei/line_04.wav"
+  },
+  {
+    "index": 5,
+    "duration": 2.376,
+    "text": "点开一条线，镜头带你飞过去。",
+    "subtitle": "点开一条线，\n镜头带你飞过去。",
+    "file": "audio/vo_liufei/line_05.wav"
+  },
+  {
+    "index": 6,
+    "duration": 5.328,
+    "text": "把山城拉高，看清每一条线怎么穿过江面、桥梁和隧道。",
+    "subtitle": "把山城拉高，\n看清每一条线怎么穿过江面、桥梁和隧道。",
+    "file": "audio/vo_liufei/line_06.wav"
+  },
+  {
+    "index": 7,
+    "duration": 3.84,
+    "text": "几点发车，几点进站，几点折返，全在掌握。",
+    "subtitle": "几点发车，几点进站，几点折返，\n全在掌握。",
+    "file": "audio/vo_liufei/line_07.wav"
+  },
+  {
+    "index": 8,
+    "duration": 3.216,
+    "text": "每一座车站的到发时刻，都在你眼前。",
+    "subtitle": "每一座车站的到发时刻，\n都在你眼前。",
+    "file": "audio/vo_liufei/line_08.wav"
+  },
+  {
+    "index": 9,
+    "duration": 3.408,
+    "text": "这不是一张地图，是一座正在运行的城市。",
+    "subtitle": "这不是一张地图，\n是一座正在运行的城市。",
+    "file": "audio/vo_liufei/line_09.wav"
+  },
+  {
+    "index": 10,
+    "duration": 6.576,
+    "text": "从开放地图数据，到可接入的实时列车；一整座城市，在你手里运转。",
+    "subtitle": "从开放地图数据，到可接入的实时列车；\n一整座城市，在你手里运转。",
+    "file": "audio/vo_liufei/line_10.wav"
+  },
+  {
+    "index": 11,
+    "duration": 3.408,
+    "text": "山城轨道。打开浏览器，走马上任。",
+    "subtitle": "山城轨道。\n打开浏览器，走马上任。",
+    "file": "audio/vo_liufei/line_11.wav"
+  }
+]

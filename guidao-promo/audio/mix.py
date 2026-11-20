@@ -193,7 +193,7 @@ def main():
     subprocess.run([
         'ffmpeg', '-y', '-hide_banner', '-loglevel', 'error',
         '-i', loud,
-        '-af', 'volume=2.8dB,alimiter=limit=0.68:level=false',
+        '-af', 'volume=3.3dB,alimiter=limit=0.68:level=false',
         '-ar', str(SR), '-ac', '2', out,
     ], check=True)
     print('wrote', out)

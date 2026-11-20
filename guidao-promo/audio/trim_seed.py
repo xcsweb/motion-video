@@ -7,7 +7,7 @@ import wave
 import numpy as np
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DIR = os.path.join(ROOT, 'audio', 'vo_seed')
+DIR = os.path.join(ROOT, 'audio', os.environ.get('VO_DIR', 'vo_seed'))
 
 meta = []
 for i in range(1, 12):
