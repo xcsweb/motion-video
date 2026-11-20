@@ -3,8 +3,8 @@
 > **Gate：Task 0 未确认前，不执行 Task 1 及以后的任何采集、配音、合成工作。**
 
 - [ ] Task 0: 确认文案与画面规划（当前阶段）。
-  - [ ] SubTask 0.1: 确认 11 句旁白全文、字幕断行、语气/停顿。
-  - [ ] SubTask 0.2: 确认 20 个镜头的画面、运镜、文字/UI、声音/旁白对应关系。
+  - [ ] SubTask 0.1: 确认 11 句“指挥使”版旁白全文、字幕断行、语气/停顿。
+  - [ ] SubTask 0.2: 确认 19 个镜头的画面、运镜、文字/UI、声音/旁白对应关系。
   - [ ] SubTask 0.3: 确认视觉基调（色彩、字体、质感、转场）与画面禁区。
   - [ ] SubTask 0.4: 用户明确回复“文案和画面规划 OK”后，才把本项勾选并进入 Task 1。
 
@@ -37,13 +37,13 @@
   - [ ] SubTask 5.3: 实测每句时长，生成 `audio/lines.json` 与 `out/guidao_promo.srt`；误差 ≤ 100ms。
 
 - [ ] Task 6: 音乐与音效设计、混音。
-  - [ ] SubTask 6.1: 下载 Mixkit `A New Life`（首选）和 `Piano Reflections`（备选），分析段落/响度，确定 80 秒剪辑点。
+  - [ ] SubTask 6.1: 下载 Mixkit `A New Life`（首选）、`We'll Be Okay` / `Possible Dreams`（备选），分析段落/响度，选择最昂扬但不抢旁白的一首，确定 80 秒剪辑点。
   - [ ] SubTask 6.2: 准备列车轰鸣、轮轨、whoosh、boom、UI tick、高程 riser 等音效（Mixkit 或程序化合成）。
   - [ ] SubTask 6.3: 混音：BGM 在旁白下压 14–16dB，音量曲线/轻 ducking；输出 48kHz `audio/mix.wav`。
   - [ ] SubTask 6.4: 整片 `loudnorm=I=-14:TP=-1.5:LRA=11`，用 `ebur128` 复核。
 
 - [ ] Task 7: 合成、调色、字幕与输出。
-  - [ ] SubTask 7.1: 写 `edit/timeline.json`：20 个镜头、背景类型、入出点、叠加层、字幕、唯一 xfade。
+  - [ ] SubTask 7.1: 写 `edit/timeline.json`：19 个镜头、背景类型、入出点、叠加层、字幕、唯一 xfade。
   - [ ] SubTask 7.2: `edit/build.py` 用 ffmpeg 完成裁切/缩放/调色/bloom/暗角/颗粒/字幕/混音。
   - [ ] SubTask 7.3: 输出 `out/guidao_promo_1080p.mp4`、`poster.jpg`、`contact_sheet.jpg`。
 
