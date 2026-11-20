@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="use-iframe" content="true">
+<meta name="html-box-height-mode" content="auto">
+<meta name="description" content="不登录抖音小红书账号时获取热搜数据的三种场景路径对比图">
+<title>无登录获取热搜数据路径</title>
+</head>
+<body style="margin:0;padding:0;background:#fff;">
+<div style="font-family:system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;max-width:820px;margin:0 auto;padding:12px 4px;box-sizing:border-box;">
+<p style="font-size:16px;font-weight:600;color:#1A2B4A;margin:0 0 4px;">不登录账号，热搜数据怎么拿：三种场景 × 双平台路径</p>
+<p style="font-size:13px;color:#646A73;margin:0 0 10px;">按「成本→稳定性」自下而上选择：零成本看大概 → 登录一次自部署 → 付费要稳定和历史数据。</p>
+<svg viewBox="0 0 820 470" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <!-- 场景A -->
+  <rect x="16" y="20" width="200" height="120" rx="8" fill="#1A2B4A"/>
+  <text x="116" y="46" text-anchor="middle" font-size="14" font-weight="600" fill="#ffffff">场景A</text>
+  <text x="116" y="66" text-anchor="middle" font-size="13" fill="#ffffff">零成本 · 不登录</text>
+  <text x="116" y="92" text-anchor="middle" font-size="12" fill="#DDE0E4">时效：5–10分钟延迟</text>
+  <text x="116" y="112" text-anchor="middle" font-size="12" fill="#DDE0E4">风险：几乎为零</text>
+
+  <rect x="236" y="20" width="280" height="120" rx="8" fill="#F2F5F9" stroke="#BABFC9"/>
+  <text x="376" y="44" text-anchor="middle" font-size="13" font-weight="600" fill="#1A2B4A">抖音路径</text>
+  <text x="256" y="66" font-size="12" fill="#1F2329">① tophub.today 网页看热点榜（TOP50）</text>
+  <text x="256" y="86" font-size="12" fill="#1F2329">② 60s API 拉 JSON（零 Key）</text>
+  <text x="256" y="106" font-size="12" fill="#1F2329">③ douyin.com/hot 游客模式肉眼看</text>
+  <text x="256" y="128" font-size="12" fill="#646A73">能拿到：热搜标题 + 热度值</text>
+
+  <rect x="536" y="20" width="268" height="120" rx="8" fill="#F2F5F9" stroke="#BABFC9"/>
+  <text x="670" y="44" text-anchor="middle" font-size="13" font-weight="600" fill="#1A2B4A">小红书路径</text>
+  <text x="556" y="66" font-size="12" fill="#1F2329">① explore 首屏推荐流（SSR 匿名可读）</text>
+  <text x="556" y="86" font-size="12" fill="#1F2329">② 60s /v2/rednote 热点词列表</text>
+  <text x="556" y="106" font-size="12" fill="#1F2329">③ tophub 小红书类目</text>
+  <text x="556" y="128" font-size="12" fill="#646A73">能拿到：推荐流 + 第三方聚合热点词</text>
+
+  <!-- 场景B -->
+  <rect x="16" y="160" width="200" height="120" rx="8" fill="#1A2B4A"/>
+  <text x="116" y="186" text-anchor="middle" font-size="14" font-weight="600" fill="#ffffff">场景B</text>
+  <text x="116" y="206" text-anchor="middle" font-size="13" fill="#ffffff">登录一次 · 自部署</text>
+  <text x="116" y="232" text-anchor="middle" font-size="12" fill="#DDE0E4">时效：近实时（分钟级）</text>
+  <text x="116" y="252" text-anchor="middle" font-size="12" fill="#DDE0E4">风险：Cookie失效/风控</text>
+
+  <rect x="236" y="160" width="280" height="120" rx="8" fill="#F2F5F9" stroke="#BABFC9"/>
+  <text x="376" y="184" text-anchor="middle" font-size="13" font-weight="600" fill="#1A2B4A">抖音路径</text>
+  <text x="256" y="206" font-size="12" fill="#1F2329">① douyin-cli：no login 拉热搜榜</text>
+  <text x="256" y="226" font-size="12" fill="#1F2329">② MediaCrawler：扫码登录后采内容</text>
+  <text x="256" y="246" font-size="12" fill="#1F2329">③ TikTokDownloader：热榜免登录（已停更）</text>
+  <text x="256" y="268" font-size="12" fill="#646A73">成本：0 元（服务器/代理另算）</text>
+
+  <rect x="536" y="160" width="268" height="120" rx="8" fill="#F2F5F9" stroke="#BABFC9"/>
+  <text x="670" y="184" text-anchor="middle" font-size="13" font-weight="600" fill="#1A2B4A">小红书路径</text>
+  <text x="556" y="206" font-size="12" fill="#1F2329">① MediaCrawler：扫码登录采笔记/评论</text>
+  <text x="556" y="226" font-size="12" fill="#1F2329">② XHS-Downloader：作品下载（Cookie非强制）</text>
+  <text x="556" y="246" font-size="12" fill="#1F2329">③ 热搜词榜本身无开源主打工具</text>
+  <text x="556" y="268" font-size="12" fill="#646A73">成本：0 元（自部署）</text>
+
+  <!-- 场景C -->
+  <rect x="16" y="300" width="200" height="120" rx="8" fill="#1A2B4A"/>
+  <text x="116" y="326" text-anchor="middle" font-size="14" font-weight="600" fill="#ffffff">场景C</text>
+  <text x="116" y="346" text-anchor="middle" font-size="13" fill="#ffffff">付费 · 要稳定和历史</text>
+  <text x="116" y="372" text-anchor="middle" font-size="12" fill="#DDE0E4">时效：准实时 + 历史回溯</text>
+  <text x="116" y="392" text-anchor="middle" font-size="12" fill="#DDE0E4">风险：合规低、成本高</text>
+
+  <rect x="236" y="300" width="280" height="120" rx="8" fill="#F2F5F9" stroke="#BABFC9"/>
+  <text x="376" y="324" text-anchor="middle" font-size="13" font-weight="600" fill="#1A2B4A">抖音路径</text>
+  <text x="256" y="346" font-size="12" fill="#1F2329">飞瓜 ¥399/月起 · 蝉妈妈 ¥299/月起</text>
+  <text x="256" y="366" font-size="12" fill="#1F2329">新榜同档位 · 榜单+达人+带货全量</text>
+  <text x="256" y="388" font-size="12" fill="#1F2329">TikHub API：$0.001/次起</text>
+  <text x="256" y="408" font-size="12" fill="#646A73">适合：正经运营监控/竞品分析</text>
+
+  <rect x="536" y="300" width="268" height="120" rx="8" fill="#F2F5F9" stroke="#BABFC9"/>
+  <text x="670" y="324" text-anchor="middle" font-size="13" font-weight="600" fill="#1A2B4A">小红书路径</text>
+  <text x="556" y="346" font-size="12" fill="#1F2329">千瓜 ¥1599/月起 · 新红/灰豚同档</text>
+  <text x="556" y="366" font-size="12" fill="#1F2329">热搜+笔记+达人画像+品牌投放</text>
+  <text x="556" y="388" font-size="12" fill="#1F2329">TikHub / SocialDataX 等 API</text>
+  <text x="556" y="408" font-size="12" fill="#646A73">适合：小红书深度运营基本必须上付费</text>
+</svg>
+<p style="font-size:12px;color:#646A73;margin:8px 0 0;">结论：抖音不登录能拿到「热搜标题+热度」最小可用集；小红书没有官方公开热搜页，零成本只能拿到推荐流与第三方聚合热点词，深度运营需登录或付费。详见第6章。</p>
+</div>
+</body>
+</html>

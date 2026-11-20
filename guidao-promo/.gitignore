@@ -1,0 +1,10 @@
+.work/
+node_modules/
+out/frames/
+out/preview/
+out/*.mp4
+out/*.wav
+audio/bgm.wav
+audio/mix_raw.wav
+audio/mix_norm.wav
+__pycache__/
