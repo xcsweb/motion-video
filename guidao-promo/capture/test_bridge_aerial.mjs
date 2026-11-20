@@ -1,0 +1,22 @@
+import { chromium } from 'playwright';
+import fs from 'node:fs';
+const browser=await chromium.launch({args:['--enable-unsafe-swiftshader','--ignore-gpu-blocklist']});
+const page=await browser.newPage({viewport:{width:1280,height:720},deviceScaleFactor:1});
+await page.goto('http://localhost:5173/',{waitUntil:'domcontentloaded',timeout:60000});
+await page.waitForFunction(()=>window.__viewer?.running && window.__api,null,{timeout:120000});
+await page.waitForTimeout(2500);
+const d=await page.evaluate(()=>{
+  const v=window.__viewer;
+  cancelAnimationFrame(v.raf); v.running=false; v.clock.paused=true;
+  v.autoDegraded=true; v.applyQuality('medium'); v.renderer.setPixelRatio(1); v.resize();
+  v.clock.timeSec=24220;
+  const tr=v.timetable.sample(24220).find(x=>x.id==='3-0-21600');
+  const pose=v.trains.poseOf(tr,v.transit.geometries);
+  v.camera.position.set(pose.x-pose.tx*380,pose.y+240,pose.z-pose.tz*380);
+  v.camera.lookAt(pose.x+pose.tx*300,pose.y,pose.z+pose.tz*300);
+  v.camera.updateProjectionMatrix();
+  v.renderer.render(v.scene,v.camera);
+  return v.renderer.domElement.toDataURL('image/jpeg',0.95);
+});
+fs.writeFileSync('/workspace/guidao-promo/assets/3d/bridge_aerial.jpg',Buffer.from(d.split(',')[1],'base64'));
+await browser.close();

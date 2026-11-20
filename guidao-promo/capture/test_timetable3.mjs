@@ -1,0 +1,16 @@
+import { chromium } from 'playwright';
+const browser=await chromium.launch({args:['--enable-unsafe-swiftshader','--ignore-gpu-blocklist']});
+const page=await browser.newPage({viewport:{width:1920,height:1080},deviceScaleFactor:2});
+await page.goto('http://localhost:5173/',{waitUntil:'domcontentloaded',timeout:60000});
+await page.waitForFunction(()=>window.__viewer?.running && window.__api,null,{timeout:120000});
+await page.waitForTimeout(3000);
+await page.evaluate(()=>window.__api.selectLine('2'));
+await page.waitForTimeout(1200);
+const tabs=page.locator('[role=tab]');
+console.log('count',await tabs.count());
+await tabs.nth(1).evaluate(b=>b.click());
+await page.waitForTimeout(1500);
+console.log('panel text',await page.evaluate(()=>document.querySelector('.train-panel')?.innerText.slice(0,600)));
+await page.locator('.train-panel').screenshot({path:'/workspace/guidao-promo/assets/ui/timetable.png'});
+await page.screenshot({path:'/workspace/guidao-promo/assets/ui/timetable_full.png'});
+await browser.close();
