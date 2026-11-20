@@ -7,6 +7,7 @@ import subprocess
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), 'tools', 'volc-tts'))
 from seed_ws_tts import synthesize
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

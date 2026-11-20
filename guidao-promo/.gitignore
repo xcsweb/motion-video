@@ -7,4 +7,18 @@ out/*.wav
 audio/bgm.wav
 audio/mix_raw.wav
 audio/mix_norm.wav
+
+# generated audio (regenerate with the TTS scripts / mix.py)
+audio/*.wav
+audio/vo/
+audio/vo_seed/
+audio/vo_liufei/
+
+# third-party music: fetch with audio/fetch_bgm.sh
+audio/bgm*.mp3
+audio/bgm_candidates/
+
+# local Feishu authoring drafts
+draft_*/
+
 __pycache__/

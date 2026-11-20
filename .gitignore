@@ -7,6 +7,10 @@ dist/
 *.log
 .DS_Store
 
+# local work files and Feishu authoring drafts
+.work/
+draft_*/
+
 # 渲染中间产物
 frames/
 previews/
