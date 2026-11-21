@@ -1,0 +1,41 @@
+{
+  "id": "r44-fc4ff2e1fc",
+  "parentId": "r43-597292d306",
+  "projectRevision": 44,
+  "createdAt": "2026-11-21T14:47:23.818Z",
+  "summary": "Add asset s03a",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "s03a",
+        "kind": "video",
+        "path": "../build/s03a.mp4",
+        "metadata": {
+          "probedAt": "2026-11-21T14:47:23.809Z",
+          "fingerprint": {
+            "size": 1221714,
+            "mtimeMs": 1795272431243.438
+          },
+          "duration": 2,
+          "size": 1221714,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 4886856,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1920,
+              "height": 1080,
+              "frameRate": 30,
+              "duration": 2,
+              "bitRate": 4880436
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r44-fc4ff2e1fc/project.json"
+}

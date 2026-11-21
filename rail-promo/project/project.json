@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 43,
+  "revision": 46,
   "name": "rail-ep02",
   "assets": [
     {
@@ -288,10 +288,10 @@
       "kind": "audio",
       "path": "../out/audio_mix.wav",
       "metadata": {
-        "probedAt": "2026-11-21T13:23:02.571Z",
+        "probedAt": "2026-11-21T14:47:24.814Z",
         "fingerprint": {
           "size": 4592104,
-          "mtimeMs": 1795265936038.2546
+          "mtimeMs": 1795272403103.398
         },
         "duration": 23.916563,
         "size": 4592104,
@@ -515,6 +515,34 @@
           }
         ]
       }
+    },
+    {
+      "id": "s03a",
+      "kind": "video",
+      "path": "../build/s03a.mp4",
+      "metadata": {
+        "probedAt": "2026-11-21T14:47:23.809Z",
+        "fingerprint": {
+          "size": 1221714,
+          "mtimeMs": 1795272431243.438
+        },
+        "duration": 2,
+        "size": 1221714,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 4886856,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1920,
+            "height": 1080,
+            "frameRate": 30,
+            "duration": 2,
+            "bitRate": 4880436
+          }
+        ]
+      }
     }
   ],
   "tracks": [
@@ -538,9 +566,9 @@
           "duration": 3
         },
         {
-          "id": "c03",
+          "id": "c03a",
           "type": "video",
-          "assetId": "s03",
+          "assetId": "s03a",
           "start": 4.6,
           "duration": 2
         },

@@ -1,0 +1,25 @@
+{
+  "id": "r46-28fd03ea3d",
+  "parentId": "r45-ea3ec5f1e4",
+  "projectRevision": 46,
+  "createdAt": "2026-11-21T14:47:25.593Z",
+  "summary": "aerial replaces 2D reveal",
+  "operations": [
+    {
+      "type": "removeClip",
+      "clipId": "c03"
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "c03a",
+        "type": "video",
+        "assetId": "s03a",
+        "start": 4.6,
+        "duration": 2
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r46-28fd03ea3d/project.json"
+}
