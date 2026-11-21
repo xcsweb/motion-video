@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 54,
+  "revision": 55,
   "name": "rail-ep02",
   "assets": [
     {
@@ -549,15 +549,15 @@
       "kind": "video",
       "path": "../build/s11.mp4",
       "metadata": {
-        "probedAt": "2026-11-21T15:55:19.027Z",
+        "probedAt": "2026-11-21T16:21:57.529Z",
         "fingerprint": {
-          "size": 895633,
-          "mtimeMs": 1795276503697.2852
+          "size": 887561,
+          "mtimeMs": 1795278116595.5999
         },
         "duration": 2,
-        "size": 895633,
+        "size": 887561,
         "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
-        "bitRate": 3582532,
+        "bitRate": 3550244,
         "streams": [
           {
             "index": 0,
@@ -567,7 +567,7 @@
             "height": 1080,
             "frameRate": 30,
             "duration": 2,
-            "bitRate": 3576164
+            "bitRate": 3543876
           }
         ]
       }
