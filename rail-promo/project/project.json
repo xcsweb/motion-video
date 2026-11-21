@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 21,
+  "revision": 37,
   "name": "rail-ep02",
   "assets": [
     {
@@ -8,7 +8,7 @@
       "kind": "video",
       "path": "../build/s01.mp4",
       "metadata": {
-        "probedAt": "2026-11-21T13:22:53.367Z",
+        "probedAt": "2026-11-21T13:53:09.869Z",
         "fingerprint": {
           "size": 1212940,
           "mtimeMs": 1795267269016.1433
@@ -36,7 +36,7 @@
       "kind": "video",
       "path": "../build/s02.mp4",
       "metadata": {
-        "probedAt": "2026-11-21T13:22:54.349Z",
+        "probedAt": "2026-11-21T13:53:10.783Z",
         "fingerprint": {
           "size": 2586356,
           "mtimeMs": 1795267278908.157
@@ -64,7 +64,7 @@
       "kind": "video",
       "path": "../build/s03.mp4",
       "metadata": {
-        "probedAt": "2026-11-21T13:22:55.237Z",
+        "probedAt": "2026-11-21T13:53:11.649Z",
         "fingerprint": {
           "size": 404846,
           "mtimeMs": 1795267280404.1592
@@ -92,7 +92,7 @@
       "kind": "video",
       "path": "../build/s04.mp4",
       "metadata": {
-        "probedAt": "2026-11-21T13:22:56.190Z",
+        "probedAt": "2026-11-21T13:53:12.561Z",
         "fingerprint": {
           "size": 2408466,
           "mtimeMs": 1795267286480.1677
@@ -120,7 +120,7 @@
       "kind": "video",
       "path": "../build/s05.mp4",
       "metadata": {
-        "probedAt": "2026-11-21T13:22:57.032Z",
+        "probedAt": "2026-11-21T13:53:13.449Z",
         "fingerprint": {
           "size": 2132028,
           "mtimeMs": 1795267293724.1777
@@ -148,15 +148,15 @@
       "kind": "video",
       "path": "../build/s06.mp4",
       "metadata": {
-        "probedAt": "2026-11-21T13:33:26.370Z",
+        "probedAt": "2026-11-21T13:53:14.485Z",
         "fingerprint": {
-          "size": 35732,
-          "mtimeMs": 1795268005393.1873
+          "size": 34935,
+          "mtimeMs": 1795269067542.6912
         },
         "duration": 0.966667,
-        "size": 35732,
+        "size": 34935,
         "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
-        "bitRate": 295713,
+        "bitRate": 289117,
         "streams": [
           {
             "index": 0,
@@ -166,7 +166,7 @@
             "height": 1080,
             "frameRate": 30,
             "duration": 0.966667,
-            "bitRate": 285550
+            "bitRate": 278954
           }
         ]
       }
@@ -176,7 +176,7 @@
       "kind": "video",
       "path": "../build/s07.mp4",
       "metadata": {
-        "probedAt": "2026-11-21T13:22:58.859Z",
+        "probedAt": "2026-11-21T13:53:15.338Z",
         "fingerprint": {
           "size": 1684535,
           "mtimeMs": 1795267303104.191
@@ -204,7 +204,7 @@
       "kind": "video",
       "path": "../build/s08.mp4",
       "metadata": {
-        "probedAt": "2026-11-21T13:22:59.738Z",
+        "probedAt": "2026-11-21T13:53:16.253Z",
         "fingerprint": {
           "size": 3065239,
           "mtimeMs": 1795267313084.2048
@@ -232,7 +232,7 @@
       "kind": "video",
       "path": "../build/s09.mp4",
       "metadata": {
-        "probedAt": "2026-11-21T13:23:00.723Z",
+        "probedAt": "2026-11-21T13:53:17.095Z",
         "fingerprint": {
           "size": 1222456,
           "mtimeMs": 1795267316052.209
@@ -260,7 +260,7 @@
       "kind": "video",
       "path": "../build/s10.mp4",
       "metadata": {
-        "probedAt": "2026-11-21T13:23:01.694Z",
+        "probedAt": "2026-11-21T13:53:18.031Z",
         "fingerprint": {
           "size": 52743,
           "mtimeMs": 1795267317992.212
@@ -315,10 +315,10 @@
       "kind": "image",
       "path": "../out/gfx/title.png",
       "metadata": {
-        "probedAt": "2026-11-21T13:23:03.453Z",
+        "probedAt": "2026-11-21T13:54:43.088Z",
         "fingerprint": {
           "size": 56347,
-          "mtimeMs": 1795266027538.3857
+          "mtimeMs": 1795269066222.6892
         },
         "duration": 0,
         "size": 56347,
@@ -340,10 +340,10 @@
       "kind": "image",
       "path": "../out/gfx/sub_city_radio.png",
       "metadata": {
-        "probedAt": "2026-11-21T13:23:04.406Z",
+        "probedAt": "2026-11-21T13:54:44.037Z",
         "fingerprint": {
           "size": 66346,
-          "mtimeMs": 1795266027686.386
+          "mtimeMs": 1795269066346.6895
         },
         "duration": 0,
         "size": 66346,
@@ -365,10 +365,10 @@
       "kind": "image",
       "path": "../out/gfx/sub_old_friend.png",
       "metadata": {
-        "probedAt": "2026-11-21T13:23:05.272Z",
+        "probedAt": "2026-11-21T13:54:45.007Z",
         "fingerprint": {
           "size": 50634,
-          "mtimeMs": 1795266027838.3862
+          "mtimeMs": 1795269066454.6895
         },
         "duration": 0,
         "size": 50634,
@@ -390,10 +390,10 @@
       "kind": "image",
       "path": "../out/gfx/sub_how_are_you.png",
       "metadata": {
-        "probedAt": "2026-11-21T13:23:06.224Z",
+        "probedAt": "2026-11-21T13:54:45.901Z",
         "fingerprint": {
           "size": 60190,
-          "mtimeMs": 1795266027982.3865
+          "mtimeMs": 1795269066570.6897
         },
         "duration": 0,
         "size": 60190,
@@ -415,10 +415,10 @@
       "kind": "image",
       "path": "../out/gfx/sub_new_friend.png",
       "metadata": {
-        "probedAt": "2026-11-21T13:23:07.058Z",
+        "probedAt": "2026-11-21T13:54:46.810Z",
         "fingerprint": {
           "size": 55891,
-          "mtimeMs": 1795266028146.3867
+          "mtimeMs": 1795269066686.69
         },
         "duration": 0,
         "size": 55891,

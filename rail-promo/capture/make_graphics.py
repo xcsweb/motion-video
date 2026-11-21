@@ -93,7 +93,7 @@ def make_dial(n=29, w=1280, h=720):
         img = Image.blend(img, Image.composite(gl, img, gl.convert("L")), 0.55)
         dd = ImageDraw.Draw(img)
         # name
-        tracked(dd, (w / 2, 590), "陈 伯 伯", F(54), WHITE, 10, True)
+        tracked(dd, (w / 2, 590), "陈 末", F(54), WHITE, 16, True)
         tracked(dd, (w / 2, 662), "「从你的全世界路过」", Fr(22), (150, 156, 166), 2, True)
         # vignette + scanline
         vig = Image.new("L", (w, h), 0)

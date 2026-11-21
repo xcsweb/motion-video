@@ -1,0 +1,34 @@
+{
+  "id": "r35-be35cec356",
+  "parentId": "r34-e9bd29d31b",
+  "projectRevision": 35,
+  "createdAt": "2026-11-21T13:54:45.016Z",
+  "summary": "Probe asset p_sub_old_friend",
+  "operations": [
+    {
+      "type": "probeAsset",
+      "assetId": "p_sub_old_friend",
+      "metadata": {
+        "probedAt": "2026-11-21T13:54:45.007Z",
+        "fingerprint": {
+          "size": 50634,
+          "mtimeMs": 1795269066454.6895
+        },
+        "duration": 0,
+        "size": 50634,
+        "formatName": "png_pipe",
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "png",
+            "width": 1920,
+            "height": 1080,
+            "frameRate": 25
+          }
+        ]
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r35-be35cec356/project.json"
+}

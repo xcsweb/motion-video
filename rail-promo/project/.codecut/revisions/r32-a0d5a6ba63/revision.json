@@ -1,0 +1,37 @@
+{
+  "id": "r32-a0d5a6ba63",
+  "parentId": "r31-3ea46e67a9",
+  "projectRevision": 32,
+  "createdAt": "2026-11-21T13:53:18.041Z",
+  "summary": "Probe asset s10",
+  "operations": [
+    {
+      "type": "probeAsset",
+      "assetId": "s10",
+      "metadata": {
+        "probedAt": "2026-11-21T13:53:18.031Z",
+        "fingerprint": {
+          "size": 52743,
+          "mtimeMs": 1795267317992.212
+        },
+        "duration": 3.1,
+        "size": 52743,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 136110,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1920,
+            "height": 1080,
+            "frameRate": 30,
+            "duration": 3.1,
+            "bitRate": 131011
+          }
+        ]
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r32-a0d5a6ba63/project.json"
+}

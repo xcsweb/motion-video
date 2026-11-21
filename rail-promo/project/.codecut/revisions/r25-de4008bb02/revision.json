@@ -1,0 +1,37 @@
+{
+  "id": "r25-de4008bb02",
+  "parentId": "r24-35edf5ea01",
+  "projectRevision": 25,
+  "createdAt": "2026-11-21T13:53:11.657Z",
+  "summary": "Probe asset s03",
+  "operations": [
+    {
+      "type": "probeAsset",
+      "assetId": "s03",
+      "metadata": {
+        "probedAt": "2026-11-21T13:53:11.649Z",
+        "fingerprint": {
+          "size": 404846,
+          "mtimeMs": 1795267280404.1592
+        },
+        "duration": 2,
+        "size": 404846,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 1619384,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1920,
+            "height": 1080,
+            "frameRate": 30,
+            "duration": 2,
+            "bitRate": 1613016
+          }
+        ]
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r25-de4008bb02/project.json"
+}

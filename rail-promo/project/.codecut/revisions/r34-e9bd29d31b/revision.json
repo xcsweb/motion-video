@@ -1,0 +1,34 @@
+{
+  "id": "r34-e9bd29d31b",
+  "parentId": "r33-778627e1b5",
+  "projectRevision": 34,
+  "createdAt": "2026-11-21T13:54:44.048Z",
+  "summary": "Probe asset p_sub_city_radio",
+  "operations": [
+    {
+      "type": "probeAsset",
+      "assetId": "p_sub_city_radio",
+      "metadata": {
+        "probedAt": "2026-11-21T13:54:44.037Z",
+        "fingerprint": {
+          "size": 66346,
+          "mtimeMs": 1795269066346.6895
+        },
+        "duration": 0,
+        "size": 66346,
+        "formatName": "png_pipe",
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "png",
+            "width": 1920,
+            "height": 1080,
+            "frameRate": 25
+          }
+        ]
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r34-e9bd29d31b/project.json"
+}
