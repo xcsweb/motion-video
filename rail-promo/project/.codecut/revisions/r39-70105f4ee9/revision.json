@@ -1,0 +1,30 @@
+{
+  "id": "r39-70105f4ee9",
+  "parentId": "r38-ea86a9ca3a",
+  "projectRevision": 39,
+  "createdAt": "2026-11-21T14:25:10.228Z",
+  "summary": "insert guidao platform shot before map",
+  "operations": [
+    {
+      "type": "setClipParams",
+      "clipId": "c09",
+      "params": {
+        "start": 18.100001,
+        "duration": 2.8,
+        "sourceStart": 1.4
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "c09a",
+        "type": "video",
+        "assetId": "s05b",
+        "start": 16.700001,
+        "duration": 1.4
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r39-70105f4ee9/project.json"
+}

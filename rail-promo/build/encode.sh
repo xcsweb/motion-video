@@ -35,6 +35,11 @@ ffmpeg -y -v error -ss 15.0 -t 1.05 -i "$SRC" \
   -vf "setpts=2.0*PTS,fps=30,crop=1280:510:0:0,scale=1920:765:flags=lanczos,$GRADE,pad=1920:1080:0:157:black" \
   $ENC "$OUT/s05.mp4"
 
+# 05b platform insert (3D station detail, 1920x1080 -> crop 765 from y=90)
+ffmpeg -y -v error -framerate 30 -i "$FR/05b_platform/f_%04d.jpg" \
+  -vf "crop=1920:765:0:90,eq=contrast=1.08:brightness=0.012:saturation=1.10:gamma=1.02,colorbalance=rs=-0.02:gs=0.0:bs=0.05,vignette=a=PI/5,noise=alls=5:allf=t+u,pad=1920:1080:0:157:black" \
+  $ENC "$OUT/s05b.mp4"
+
 # 06 dial graphic (1280x720 -> fit 765 high, navy side bars)
 ffmpeg -y -v error -framerate 30 -i "$DIAL/f_%04d.jpg" \
   -vf "scale=-2:766,pad=1920:766:(ow-iw)/2:0:0x05080D,pad=1920:1080:0:157:black" \
