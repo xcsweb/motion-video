@@ -1,0 +1,37 @@
+{
+  "id": "r43-597292d306",
+  "parentId": "r42-e1307171c9",
+  "projectRevision": 43,
+  "createdAt": "2026-11-21T14:33:32.417Z",
+  "summary": "old station arrival + platform clips",
+  "operations": [
+    {
+      "type": "setClipParams",
+      "clipId": "c09",
+      "params": {
+        "start": 19.200001,
+        "duration": 1.7,
+        "sourceStart": 2.5
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "c09b",
+        "type": "video",
+        "assetId": "s05c",
+        "start": 18.200001,
+        "duration": 1
+      }
+    },
+    {
+      "type": "setClipParams",
+      "clipId": "c09a",
+      "params": {
+        "duration": 1.5
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r43-597292d306/project.json"
+}

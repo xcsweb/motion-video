@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 39,
+  "revision": 43,
   "name": "rail-ep02",
   "assets": [
     {
@@ -465,15 +465,15 @@
       "kind": "video",
       "path": "../build/s05b.mp4",
       "metadata": {
-        "probedAt": "2026-11-21T14:24:38.943Z",
+        "probedAt": "2026-11-21T14:33:20.641Z",
         "fingerprint": {
-          "size": 722616,
-          "mtimeMs": 1795271062597.5022
+          "size": 1342831,
+          "mtimeMs": 1795271578222.226
         },
-        "duration": 1.4,
-        "size": 722616,
+        "duration": 1.5,
+        "size": 1342831,
         "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
-        "bitRate": 4129234,
+        "bitRate": 7161765,
         "streams": [
           {
             "index": 0,
@@ -482,8 +482,36 @@
             "width": 1920,
             "height": 1080,
             "frameRate": 30,
-            "duration": 1.4,
-            "bitRate": 4121337
+            "duration": 1.5,
+            "bitRate": 7154224
+          }
+        ]
+      }
+    },
+    {
+      "id": "s05c",
+      "kind": "video",
+      "path": "../build/s05c.mp4",
+      "metadata": {
+        "probedAt": "2026-11-21T14:33:21.502Z",
+        "fingerprint": {
+          "size": 307199,
+          "mtimeMs": 1795271580898.2297
+        },
+        "duration": 1,
+        "size": 307199,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 2457592,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1920,
+            "height": 1080,
+            "frameRate": 30,
+            "duration": 1,
+            "bitRate": 2447592
           }
         ]
       }
@@ -556,15 +584,22 @@
           "type": "video",
           "assetId": "s05b",
           "start": 16.700001,
-          "duration": 1.4
+          "duration": 1.5
+        },
+        {
+          "id": "c09b",
+          "type": "video",
+          "assetId": "s05c",
+          "start": 18.200001,
+          "duration": 1
         },
         {
           "id": "c09",
           "type": "video",
           "assetId": "s09",
-          "start": 18.100001,
-          "duration": 2.8,
-          "sourceStart": 1.4
+          "start": 19.200001,
+          "duration": 1.7,
+          "sourceStart": 2.5
         },
         {
           "id": "c10",

@@ -1,0 +1,37 @@
+{
+  "id": "r42-e1307171c9",
+  "parentId": "r41-86cd26a470",
+  "projectRevision": 42,
+  "createdAt": "2026-11-21T14:33:21.513Z",
+  "summary": "Probe asset s05c",
+  "operations": [
+    {
+      "type": "probeAsset",
+      "assetId": "s05c",
+      "metadata": {
+        "probedAt": "2026-11-21T14:33:21.502Z",
+        "fingerprint": {
+          "size": 307199,
+          "mtimeMs": 1795271580898.2297
+        },
+        "duration": 1,
+        "size": 307199,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 2457592,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1920,
+            "height": 1080,
+            "frameRate": 30,
+            "duration": 1,
+            "bitRate": 2447592
+          }
+        ]
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r42-e1307171c9/project.json"
+}
