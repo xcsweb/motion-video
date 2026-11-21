@@ -56,12 +56,12 @@ with sync_playwright() as p:
         flush=True,
     )
 
-    pg.screenshot(path=f"{OUT}/app_base.png")
+    pg.screenshot(path=f"{OUT}/app_base.png", timeout=180000)
     print("base ok", flush=True)
     pg.evaluate(LOCK)
     pg.evaluate("() => window.__api.selectLine('3')")
     pg.wait_for_timeout(12000)
-    pg.screenshot(path=f"{OUT}/app_click.png")
+    pg.screenshot(path=f"{OUT}/app_click.png", timeout=180000)
     print(
         "click cam",
         pg.evaluate("() => window.__viewer.camera.position.toArray().map(n=>Math.round(n))"),

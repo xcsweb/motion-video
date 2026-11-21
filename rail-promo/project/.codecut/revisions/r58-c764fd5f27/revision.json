@@ -1,0 +1,25 @@
+{
+  "id": "r58-c764fd5f27",
+  "parentId": "r57-5887ca7691",
+  "projectRevision": 58,
+  "createdAt": "2026-11-21T17:00:47.819Z",
+  "summary": "开场改为进站驾驶室视角",
+  "operations": [
+    {
+      "type": "removeClip",
+      "clipId": "c01"
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "c01",
+        "type": "video",
+        "assetId": "s01cab",
+        "start": 0,
+        "duration": 1.6
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r58-c764fd5f27/project.json"
+}

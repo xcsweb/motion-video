@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 56,
+  "revision": 59,
   "name": "rail-ep02",
   "assets": [
     {
@@ -549,15 +549,15 @@
       "kind": "video",
       "path": "../build/s11.mp4",
       "metadata": {
-        "probedAt": "2026-11-21T16:29:59.429Z",
+        "probedAt": "2026-11-21T17:01:31.610Z",
         "fingerprint": {
-          "size": 879156,
-          "mtimeMs": 1795278561892.2263
+          "size": 883889,
+          "mtimeMs": 1795279017792.884
         },
         "duration": 2,
-        "size": 879156,
+        "size": 883889,
         "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
-        "bitRate": 3516624,
+        "bitRate": 3535556,
         "streams": [
           {
             "index": 0,
@@ -567,7 +567,35 @@
             "height": 1080,
             "frameRate": 30,
             "duration": 2,
-            "bitRate": 3510256
+            "bitRate": 3529188
+          }
+        ]
+      }
+    },
+    {
+      "id": "s01cab",
+      "kind": "video",
+      "path": "../build/s01cab.mp4",
+      "metadata": {
+        "probedAt": "2026-11-21T17:00:34.508Z",
+        "fingerprint": {
+          "size": 1128117,
+          "mtimeMs": 1795280405518.8867
+        },
+        "duration": 1.6,
+        "size": 1128117,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 5640585,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1920,
+            "height": 1080,
+            "frameRate": 30,
+            "duration": 1.6,
+            "bitRate": 5633265
           }
         ]
       }
@@ -582,7 +610,7 @@
         {
           "id": "c01",
           "type": "video",
-          "assetId": "s01",
+          "assetId": "s01cab",
           "start": 0,
           "duration": 1.6
         },

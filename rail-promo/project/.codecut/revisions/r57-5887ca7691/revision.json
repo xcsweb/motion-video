@@ -1,0 +1,41 @@
+{
+  "id": "r57-5887ca7691",
+  "parentId": "r56-abefd85226",
+  "projectRevision": 57,
+  "createdAt": "2026-11-21T17:00:34.518Z",
+  "summary": "Add asset s01cab",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "s01cab",
+        "kind": "video",
+        "path": "../build/s01cab.mp4",
+        "metadata": {
+          "probedAt": "2026-11-21T17:00:34.508Z",
+          "fingerprint": {
+            "size": 1128117,
+            "mtimeMs": 1795280405518.8867
+          },
+          "duration": 1.6,
+          "size": 1128117,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 5640585,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1920,
+              "height": 1080,
+              "frameRate": 30,
+              "duration": 1.6,
+              "bitRate": 5633265
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r57-5887ca7691/project.json"
+}
