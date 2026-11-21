@@ -1,0 +1,40 @@
+{
+  "id": "r1-fc5d796e93",
+  "projectRevision": 1,
+  "createdAt": "2026-11-21T13:22:53.376Z",
+  "summary": "Add asset s01",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "s01",
+        "kind": "video",
+        "path": "../build/s01.mp4",
+        "metadata": {
+          "probedAt": "2026-11-21T13:22:53.367Z",
+          "fingerprint": {
+            "size": 1212940,
+            "mtimeMs": 1795267269016.1433
+          },
+          "duration": 1.6,
+          "size": 1212940,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 6064700,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1920,
+              "height": 1080,
+              "frameRate": 30,
+              "duration": 1.6,
+              "bitRate": 6057390
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r1-fc5d796e93/project.json"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "r7-767144c010",
+  "parentId": "r6-cf7ddab72e",
+  "projectRevision": 7,
+  "createdAt": "2026-11-21T13:22:58.869Z",
+  "summary": "Add asset s07",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "s07",
+        "kind": "video",
+        "path": "../build/s07.mp4",
+        "metadata": {
+          "probedAt": "2026-11-21T13:22:58.859Z",
+          "fingerprint": {
+            "size": 1684535,
+            "mtimeMs": 1795267303104.191
+          },
+          "duration": 2.466667,
+          "size": 1684535,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 5463356,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1920,
+              "height": 1080,
+              "frameRate": 30,
+              "duration": 2.466667,
+              "bitRate": 5457577
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r7-767144c010/project.json"
+}

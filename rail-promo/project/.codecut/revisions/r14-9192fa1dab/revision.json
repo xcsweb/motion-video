@@ -1,0 +1,38 @@
+{
+  "id": "r14-9192fa1dab",
+  "parentId": "r13-cbfd82b154",
+  "projectRevision": 14,
+  "createdAt": "2026-11-21T13:23:05.284Z",
+  "summary": "Add asset p_sub_old_friend",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "p_sub_old_friend",
+        "kind": "image",
+        "path": "../out/gfx/sub_old_friend.png",
+        "metadata": {
+          "probedAt": "2026-11-21T13:23:05.272Z",
+          "fingerprint": {
+            "size": 50634,
+            "mtimeMs": 1795266027838.3862
+          },
+          "duration": 0,
+          "size": 50634,
+          "formatName": "png_pipe",
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "png",
+              "width": 1920,
+              "height": 1080,
+              "frameRate": 25
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r14-9192fa1dab/project.json"
+}

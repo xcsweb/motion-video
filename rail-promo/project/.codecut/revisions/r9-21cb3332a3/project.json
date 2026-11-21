@@ -1,0 +1,297 @@
+{
+  "schemaVersion": 1,
+  "revision": 9,
+  "name": "rail-ep02",
+  "assets": [
+    {
+      "id": "s01",
+      "kind": "video",
+      "path": "../build/s01.mp4",
+      "metadata": {
+        "probedAt": "2026-11-21T13:22:53.367Z",
+        "fingerprint": {
+          "size": 1212940,
+          "mtimeMs": 1795267269016.1433
+        },
+        "duration": 1.6,
+        "size": 1212940,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 6064700,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1920,
+            "height": 1080,
+            "frameRate": 30,
+            "duration": 1.6,
+            "bitRate": 6057390
+          }
+        ]
+      }
+    },
+    {
+      "id": "s02",
+      "kind": "video",
+      "path": "../build/s02.mp4",
+      "metadata": {
+        "probedAt": "2026-11-21T13:22:54.349Z",
+        "fingerprint": {
+          "size": 2586356,
+          "mtimeMs": 1795267278908.157
+        },
+        "duration": 3,
+        "size": 2586356,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 6896949,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1920,
+            "height": 1080,
+            "frameRate": 30,
+            "duration": 3,
+            "bitRate": 6891466
+          }
+        ]
+      }
+    },
+    {
+      "id": "s03",
+      "kind": "video",
+      "path": "../build/s03.mp4",
+      "metadata": {
+        "probedAt": "2026-11-21T13:22:55.237Z",
+        "fingerprint": {
+          "size": 404846,
+          "mtimeMs": 1795267280404.1592
+        },
+        "duration": 2,
+        "size": 404846,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 1619384,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1920,
+            "height": 1080,
+            "frameRate": 30,
+            "duration": 2,
+            "bitRate": 1613016
+          }
+        ]
+      }
+    },
+    {
+      "id": "s04",
+      "kind": "video",
+      "path": "../build/s04.mp4",
+      "metadata": {
+        "probedAt": "2026-11-21T13:22:56.190Z",
+        "fingerprint": {
+          "size": 2408466,
+          "mtimeMs": 1795267286480.1677
+        },
+        "duration": 1.7,
+        "size": 2408466,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 11333957,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1920,
+            "height": 1080,
+            "frameRate": 30,
+            "duration": 1.7,
+            "bitRate": 11326597
+          }
+        ]
+      }
+    },
+    {
+      "id": "s05",
+      "kind": "video",
+      "path": "../build/s05.mp4",
+      "metadata": {
+        "probedAt": "2026-11-21T13:22:57.032Z",
+        "fingerprint": {
+          "size": 2132028,
+          "mtimeMs": 1795267293724.1777
+        },
+        "duration": 2.1,
+        "size": 2132028,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 8122011,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1920,
+            "height": 1080,
+            "frameRate": 30,
+            "duration": 2.1,
+            "bitRate": 8115443
+          }
+        ]
+      }
+    },
+    {
+      "id": "s06",
+      "kind": "video",
+      "path": "../build/s06.mp4",
+      "metadata": {
+        "probedAt": "2026-11-21T13:22:57.968Z",
+        "fingerprint": {
+          "size": 40071,
+          "mtimeMs": 1795267294496.1787
+        },
+        "duration": 0.966667,
+        "size": 40071,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 331621,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1920,
+            "height": 1080,
+            "frameRate": 30,
+            "duration": 0.966667,
+            "bitRate": 321426
+          }
+        ]
+      }
+    },
+    {
+      "id": "s07",
+      "kind": "video",
+      "path": "../build/s07.mp4",
+      "metadata": {
+        "probedAt": "2026-11-21T13:22:58.859Z",
+        "fingerprint": {
+          "size": 1684535,
+          "mtimeMs": 1795267303104.191
+        },
+        "duration": 2.466667,
+        "size": 1684535,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 5463356,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1920,
+            "height": 1080,
+            "frameRate": 30,
+            "duration": 2.466667,
+            "bitRate": 5457577
+          }
+        ]
+      }
+    },
+    {
+      "id": "s08",
+      "kind": "video",
+      "path": "../build/s08.mp4",
+      "metadata": {
+        "probedAt": "2026-11-21T13:22:59.738Z",
+        "fingerprint": {
+          "size": 3065239,
+          "mtimeMs": 1795267313084.2048
+        },
+        "duration": 2.866667,
+        "size": 3065239,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 8554154,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1920,
+            "height": 1080,
+            "frameRate": 30,
+            "duration": 2.866667,
+            "bitRate": 8548551
+          }
+        ]
+      }
+    },
+    {
+      "id": "s09",
+      "kind": "video",
+      "path": "../build/s09.mp4",
+      "metadata": {
+        "probedAt": "2026-11-21T13:23:00.723Z",
+        "fingerprint": {
+          "size": 1222456,
+          "mtimeMs": 1795267316052.209
+        },
+        "duration": 4.2,
+        "size": 1222456,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 2328487,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1920,
+            "height": 1080,
+            "frameRate": 30,
+            "duration": 4.2,
+            "bitRate": 2323916
+          }
+        ]
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "id": "v1",
+      "kind": "video",
+      "name": "Video 1",
+      "clips": []
+    },
+    {
+      "id": "v2",
+      "kind": "video",
+      "name": "Video 2",
+      "clips": []
+    },
+    {
+      "id": "a1",
+      "kind": "audio",
+      "name": "Audio 1",
+      "clips": []
+    },
+    {
+      "id": "a2",
+      "kind": "audio",
+      "name": "Audio 2",
+      "clips": []
+    }
+  ],
+  "output": {
+    "path": "output.mp4",
+    "format": "mp4",
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "width": 1920,
+    "height": 1080,
+    "frameRate": 30,
+    "pixelFormat": "yuv420p",
+    "audioSampleRate": 48000,
+    "audioChannels": 2
+  }
+}

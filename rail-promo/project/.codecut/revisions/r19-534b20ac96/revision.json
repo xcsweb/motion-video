@@ -1,0 +1,15 @@
+{
+  "id": "r19-534b20ac96",
+  "parentId": "r18-231dacf1f3",
+  "projectRevision": 19,
+  "createdAt": "2026-11-21T13:29:15.559Z",
+  "summary": "trimClip",
+  "operations": [
+    {
+      "type": "trimClip",
+      "clipId": "o_old",
+      "duration": 1.7
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r19-534b20ac96/project.json"
+}

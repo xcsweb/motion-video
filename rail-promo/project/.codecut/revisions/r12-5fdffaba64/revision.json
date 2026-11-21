@@ -1,0 +1,38 @@
+{
+  "id": "r12-5fdffaba64",
+  "parentId": "r11-3e756946d4",
+  "projectRevision": 12,
+  "createdAt": "2026-11-21T13:23:03.464Z",
+  "summary": "Add asset p_title",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "p_title",
+        "kind": "image",
+        "path": "../out/gfx/title.png",
+        "metadata": {
+          "probedAt": "2026-11-21T13:23:03.453Z",
+          "fingerprint": {
+            "size": 56347,
+            "mtimeMs": 1795266027538.3857
+          },
+          "duration": 0,
+          "size": 56347,
+          "formatName": "png_pipe",
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "png",
+              "width": 1920,
+              "height": 1080,
+              "frameRate": 25
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r12-5fdffaba64/project.json"
+}

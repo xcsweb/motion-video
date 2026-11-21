@@ -1,0 +1,41 @@
+{
+  "id": "r9-21cb3332a3",
+  "parentId": "r8-2f5b532cf3",
+  "projectRevision": 9,
+  "createdAt": "2026-11-21T13:23:00.734Z",
+  "summary": "Add asset s09",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "s09",
+        "kind": "video",
+        "path": "../build/s09.mp4",
+        "metadata": {
+          "probedAt": "2026-11-21T13:23:00.723Z",
+          "fingerprint": {
+            "size": 1222456,
+            "mtimeMs": 1795267316052.209
+          },
+          "duration": 4.2,
+          "size": 1222456,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 2328487,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1920,
+              "height": 1080,
+              "frameRate": 30,
+              "duration": 4.2,
+              "bitRate": 2323916
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r9-21cb3332a3/project.json"
+}

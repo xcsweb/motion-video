@@ -1,0 +1,141 @@
+{
+  "id": "job-mwqfvf9g-abd791ce3d",
+  "kind": "preview.frame",
+  "status": "failed",
+  "health": "ok",
+  "stage": "output.publish",
+  "projectRevision": 18,
+  "createdAt": "2026-11-21T13:23:45.796Z",
+  "outputPath": "/tmp/pf_7.5.jpg",
+  "temporaryOutputPath": "/workspace/rail-promo/project/.codecut/jobs/job-mwqfvf9g-abd791ce3d/temporary-output.jpg",
+  "preview": {
+    "type": "frame",
+    "parameters": {
+      "type": "frame",
+      "at": 7.5,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "logs": {
+    "stdout": "/workspace/rail-promo/project/.codecut/jobs/job-mwqfvf9g-abd791ce3d/logs/stdout.log",
+    "stderr": "/workspace/rail-promo/project/.codecut/jobs/job-mwqfvf9g-abd791ce3d/logs/stderr.log",
+    "progress": "/workspace/rail-promo/project/.codecut/jobs/job-mwqfvf9g-abd791ce3d/logs/progress.log",
+    "progressEvents": "/workspace/rail-promo/project/.codecut/jobs/job-mwqfvf9g-abd791ce3d/logs/progress.jsonl"
+  },
+  "diagnostics": {
+    "directory": "/workspace/rail-promo/project/.codecut/jobs/job-mwqfvf9g-abd791ce3d/diagnostics",
+    "request": "/workspace/rail-promo/project/.codecut/jobs/job-mwqfvf9g-abd791ce3d/request.json",
+    "snapshot": "/workspace/rail-promo/project/.codecut/jobs/job-mwqfvf9g-abd791ce3d/snapshot.json",
+    "arguments": "/workspace/rail-promo/project/.codecut/jobs/job-mwqfvf9g-abd791ce3d/diagnostics/arguments.json",
+    "filterGraph": "/workspace/rail-promo/project/.codecut/jobs/job-mwqfvf9g-abd791ce3d/diagnostics/filter_complex.txt",
+    "plan": "/workspace/rail-promo/project/.codecut/jobs/job-mwqfvf9g-abd791ce3d/diagnostics/plan.json",
+    "textFiles": [],
+    "validation": "/workspace/rail-promo/project/.codecut/jobs/job-mwqfvf9g-abd791ce3d/diagnostics/validation.json"
+  },
+  "workerPid": 313382,
+  "heartbeatAt": "2026-11-21T13:23:52.085Z",
+  "pid": 313400,
+  "startedAt": "2026-11-21T13:23:45.840Z",
+  "progress": {
+    "percent": 100,
+    "end": true,
+    "frame": 1,
+    "timeSeconds": 0,
+    "speed": 0
+  },
+  "validation": {
+    "type": "preview.frame",
+    "size": 1283914,
+    "width": 1280,
+    "height": 720,
+    "video": {
+      "index": 0,
+      "codec_name": "png",
+      "codec_long_name": "PNG (Portable Network Graphics) image",
+      "codec_type": "video",
+      "codec_tag_string": "[0][0][0][0]",
+      "codec_tag": "0x0000",
+      "width": 1280,
+      "height": 720,
+      "coded_width": 1280,
+      "coded_height": 720,
+      "closed_captions": 0,
+      "film_grain": 0,
+      "has_b_frames": 0,
+      "sample_aspect_ratio": "1:1",
+      "display_aspect_ratio": "16:9",
+      "pix_fmt": "rgb24",
+      "level": -99,
+      "color_range": "pc",
+      "color_space": "gbr",
+      "refs": 1,
+      "r_frame_rate": "25/1",
+      "avg_frame_rate": "25/1",
+      "time_base": "1/25",
+      "nb_read_frames": "1",
+      "disposition": {
+        "default": 0,
+        "dub": 0,
+        "original": 0,
+        "comment": 0,
+        "lyrics": 0,
+        "karaoke": 0,
+        "forced": 0,
+        "hearing_impaired": 0,
+        "visual_impaired": 0,
+        "clean_effects": 0,
+        "attached_pic": 0,
+        "timed_thumbnails": 0,
+        "non_diegetic": 0,
+        "captions": 0,
+        "descriptions": 0,
+        "metadata": 0,
+        "dependent": 0,
+        "still_image": 0
+      }
+    },
+    "format": {
+      "filename": "/workspace/rail-promo/project/.codecut/jobs/job-mwqfvf9g-abd791ce3d/temporary-output.jpg",
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "format_name": "png_pipe",
+      "format_long_name": "piped png sequence",
+      "size": "1283914",
+      "probe_score": 99
+    },
+    "completeDecode": true,
+    "parameters": {
+      "type": "frame",
+      "at": 7.5,
+      "width": 1280,
+      "height": 720
+    },
+    "timelineTimeSeconds": 7.5
+  },
+  "finishedAt": "2026-11-21T13:23:52.085Z",
+  "logTail": {
+    "stdout": "frame=0\nfps=0.00\nstream_0_0_q=-0.0\nbitrate=N/A\ntotal_size=0\nout_time_us=0\nout_time_ms=0\nout_time=00:00:00.000000\ndup_frames=0\ndrop_frames=0\nspeed=   0x\nprogress=continue\nframe=1\nfps=0.18\nstream_0_0_q=-0.0\nbitrate=N/A\ntotal_size=N/A\nout_time_us=0\nout_time_ms=0\nout_time=00:00:00.000000\ndup_frames=0\ndrop_frames=0\nspeed=   0x\nprogress=end\n",
+    "stderr": "Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/workspace/rail-promo/build/s01.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Duration: 00:00:01.60, start: 0.000000, bitrate: 6064 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1920x1080 [SAR 1:1 DAR 16:9], 6057 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\nInput #1, mov,mp4,m4a,3gp,3g2,mj2, from '/workspace/rail-promo/build/s02.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n    comment         : vid:v0200fg10000daafoanog65vegacmg0g\n  Duration: 00:00:03.00, start: 0.000000, bitrate: 6896 kb/s\n  Stream #1:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, unknown/bt709/bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 6891 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\nInput #2, mov,mp4,m4a,3gp,3g2,mj2, from '/workspace/rail-promo/build/s03.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Duration: 00:00:02.00, start: 0.000000, bitrate: 1619 kb/s\n  Stream #2:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 1613 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\nInput #3, mov,mp4,m4a,3gp,3g2,mj2, from '/workspace/rail-promo/build/s04.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n    comment         : vid:v0200fg10000daafoanog65vegacmg0g\n  Duration: 00:00:01.70, start: 0.000000, bitrate: 11333 kb/s\n  Stream #3:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, unknown/bt709/bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 11326 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\nInput #4, mov,mp4,m4a,3gp,3g2,mj2, from '/workspace/rail-promo/build/s05.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n    comment         : vid:v0200fg10000daafoanog65vegacmg0g\n  Duration: 00:00:02.10, start: 0.000000, bitrate: 8122 kb/s\n  Stream #4:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, unknown/bt709/bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 8115 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\nInput #5, mov,mp4,m4a,3gp,3g2,mj2, from '/workspace/rail-promo/build/s06.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Duration: 00:00:00.97, start: 0.000000, bitrate: 331 kb/s\n  Stream #5:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1920x1080 [SAR 4095:4096 DAR 455:256], 321 kb/s, SAR 6128:6129 DAR 98048:55161, 30 fps, 30 tbr, 15360 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\nInput #6, mov,mp4,m4a,3gp,3g2,mj2, from '/workspace/rail-promo/build/s07.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Duration: 00:00:02.47, start: 0.000000, bitrate: 5463 kb/s\n  Stream #6:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1920x1080 [SAR 1:1 DAR 16:9], 5457 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\nInput #7, mov,mp4,m4a,3gp,3g2,mj2, from '/workspace/rail-promo/build/s08.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n    comment         : vid:v0200fg10000daafoanog65vegacmg0g\n  Duration: 00:00:02.87, start: 0.000000, bitrate: 8554 kb/s\n  Stream #7:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, unknown/bt709/bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 8548 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\nInput #8, mov,mp4,m4a,3gp,3g2,mj2, from '/workspace/rail-promo/build/s09.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Duration: 00:00:04.20, start: 0.000000, bitrate: 2328 kb/s\n  Stream #8:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 2323 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\nInput #9, mov,mp4,m4a,3gp,3g2,mj2, from '/workspace/rail-promo/build/s10.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Duration: 00:00:03.10, start: 0.000000, bitrate: 136 kb/s\n  Stream #9:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1920x1080, 131 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n      encoder         : Lavc60.31.102 libx264\nInput #10, png_pipe, from '/workspace/rail-promo/out/gfx/sub_city_radio.png':\n  Duration: N/A, bitrate: N/A\n  Stream #10:0: Video: png, rgba(pc, gbr/unknown/unknown), 1920x1080, 30 fps, 30 tbr, 30 tbn\nInput #11, png_pipe, from '/workspace/rail-promo/out/gfx/title.png':\n  Duration: N/A, bitrate: N/A\n  Stream #11:0: Video: png, rgba(pc, gbr/unknown/unknown), 1920x1080, 30 fps, 30 tbr, 30 tbn\nInput #12, png_pipe, from '/workspace/rail-promo/out/gfx/sub_old_friend.png':\n  Duration: N/A, bitrate: N/A\n  Stream #12:0: Video: png, rgba(pc, gbr/unknown/unknown), 1920x1080, 30 fps, 30 tbr, 30 tbn\nInput #13, png_pipe, from '/workspace/rail-promo/out/gfx/sub_how_are_you.png':\n  Duration: N/A, bitrate: N/A\n  Stream #13:0: Video: png, rgba(pc, gbr/unknown/unknown), 1920x1080, 30 fps, 30 tbr, 30 tbn\nInput #14, png_pipe, from '/workspace/rail-promo/out/gfx/sub_new_friend.png':\n  Duration: N/A, bitrate: N/A\n  Stream #14:0: Video: png, rgba(pc, gbr/unknown/unknown), 1920x1080, 30 fps, 30 tbr, 30 tbn\n[aist#15:0/pcm_s16le @ 0x55b3867876c0] Guessed Channel Layout: stereo\nInput #15, wav, from '/workspace/rail-promo/out/audio_mix.wav':\n  Metadata:\n    comment         : vid:v0200fg10000daafoanog65vegacmg0g\n    encoder         : Lavf60.16.100\n  Duration: 00:00:23.92, bitrate: 1536 kb/s\n  Stream #15:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 48000 Hz, 2 channels, s16, 1536 kb/s\nStream mapping:\n  Stream #0:0 (h264) -> trim:default\n  Stream #1:0 (h264) -> trim:default\n  Stream #2:0 (h264) -> trim:default\n  Stream #3:0 (h264) -> trim:default\n  Stream #4:0 (h264) -> trim:default\n  Stream #5:0 (h264) -> trim:default\n  Stream #6:0 (h264) -> trim:default\n  Stream #7:0 (h264) -> trim:default\n  Stream #8:0 (h264) -> trim:default\n  Stream #9:0 (h264) -> trim:default\n  Stream #10:0 (png) -> trim:default\n  Stream #11:0 (png) -> trim:default\n  Stream #12:0 (png) -> trim:default\n  Stream #13:0 (png) -> trim:default\n  Stream #14:0 (png) -> trim:default\n  Stream #15:0 (pcm_s16le) -> atrim:default\n  format:default -> Stream #0:0 (png)\nOutput #0, image2, to '/workspace/rail-promo/project/.codecut/jobs/job-mwqfvf9g-abd791ce3d/temporary-output.jpg':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf60.16.100\n  Stream #0:0: Video: png, rgb24(pc, gbr/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 30 fps, 30 tbn\n    Metadata:\n      encoder         : Lavc60.31.102 png\n[out#0/image2 @ 0x55b38ac8d600] video:1254kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown\nframe=    1 fps=0.2 q=-0.0 Lsize=N/A time=00:00:00.00 bitrate=N/A speed=   0x    \n"
+  },
+  "error": {
+    "code": "DISK_WRITE_FAILED",
+    "message": "Could not atomically publish the job output",
+    "stage": "output.publish",
+    "jobId": "job-mwqfvf9g-abd791ce3d",
+    "path": "/tmp/pf_7.5.jpg",
+    "retryable": true,
+    "diagnostics": {
+      "logs": {
+        "stdout": "/workspace/rail-promo/project/.codecut/jobs/job-mwqfvf9g-abd791ce3d/logs/stdout.log",
+        "stderr": "/workspace/rail-promo/project/.codecut/jobs/job-mwqfvf9g-abd791ce3d/logs/stderr.log",
+        "progress": "/workspace/rail-promo/project/.codecut/jobs/job-mwqfvf9g-abd791ce3d/logs/progress.log",
+        "progressEvents": "/workspace/rail-promo/project/.codecut/jobs/job-mwqfvf9g-abd791ce3d/logs/progress.jsonl"
+      }
+    }
+  },
+  "result": {
+    "exitCode": 0,
+    "durationMs": 5901.909777
+  }
+}

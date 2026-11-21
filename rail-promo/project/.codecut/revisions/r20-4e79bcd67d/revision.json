@@ -1,0 +1,37 @@
+{
+  "id": "r20-4e79bcd67d",
+  "parentId": "r19-534b20ac96",
+  "projectRevision": 20,
+  "createdAt": "2026-11-21T13:31:56.618Z",
+  "summary": "Probe asset s06",
+  "operations": [
+    {
+      "type": "probeAsset",
+      "assetId": "s06",
+      "metadata": {
+        "probedAt": "2026-11-21T13:31:56.610Z",
+        "fingerprint": {
+          "size": 35934,
+          "mtimeMs": 1795267900881.0393
+        },
+        "duration": 0.966667,
+        "size": 35934,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 297384,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1920,
+            "height": 1080,
+            "frameRate": 30,
+            "duration": 0.966667,
+            "bitRate": 287222
+          }
+        ]
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r20-4e79bcd67d/project.json"
+}

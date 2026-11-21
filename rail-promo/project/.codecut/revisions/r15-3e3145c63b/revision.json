@@ -1,0 +1,38 @@
+{
+  "id": "r15-3e3145c63b",
+  "parentId": "r14-9192fa1dab",
+  "projectRevision": 15,
+  "createdAt": "2026-11-21T13:23:06.234Z",
+  "summary": "Add asset p_sub_how_are_you",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "p_sub_how_are_you",
+        "kind": "image",
+        "path": "../out/gfx/sub_how_are_you.png",
+        "metadata": {
+          "probedAt": "2026-11-21T13:23:06.224Z",
+          "fingerprint": {
+            "size": 60190,
+            "mtimeMs": 1795266027982.3865
+          },
+          "duration": 0,
+          "size": 60190,
+          "formatName": "png_pipe",
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "png",
+              "width": 1920,
+              "height": 1080,
+              "frameRate": 25
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r15-3e3145c63b/project.json"
+}

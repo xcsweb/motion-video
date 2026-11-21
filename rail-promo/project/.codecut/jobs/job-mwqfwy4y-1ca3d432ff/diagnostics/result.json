@@ -1,0 +1,11 @@
+{
+  "type": "frame",
+  "outputPath": "/workspace/rail-promo/out/pf75.png",
+  "revision": 18,
+  "parameters": {
+    "type": "frame",
+    "at": 7.5,
+    "width": 1280,
+    "height": 720
+  }
+}

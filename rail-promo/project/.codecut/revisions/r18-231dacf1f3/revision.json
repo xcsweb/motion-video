@@ -1,0 +1,187 @@
+{
+  "id": "r18-231dacf1f3",
+  "parentId": "r17-5d2ccb6f8f",
+  "projectRevision": 18,
+  "createdAt": "2026-11-21T13:23:35.638Z",
+  "summary": "addClip ×16",
+  "operations": [
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "c01",
+        "type": "video",
+        "assetId": "s01",
+        "start": 0,
+        "duration": 1.6
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "c02",
+        "type": "video",
+        "assetId": "s02",
+        "start": 1.6,
+        "duration": 3
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "c03",
+        "type": "video",
+        "assetId": "s03",
+        "start": 4.6,
+        "duration": 2
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "c04",
+        "type": "video",
+        "assetId": "s04",
+        "start": 6.6,
+        "duration": 1.7
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "c05",
+        "type": "video",
+        "assetId": "s05",
+        "start": 8.3,
+        "duration": 2.1
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "c06",
+        "type": "video",
+        "assetId": "s06",
+        "start": 10.4,
+        "duration": 0.966667
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "c07",
+        "type": "video",
+        "assetId": "s07",
+        "start": 11.366667,
+        "duration": 2.466667
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "c08",
+        "type": "video",
+        "assetId": "s08",
+        "start": 13.833334,
+        "duration": 2.866667
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "c09",
+        "type": "video",
+        "assetId": "s09",
+        "start": 16.700001,
+        "duration": 4.2
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "c10",
+        "type": "video",
+        "assetId": "s10",
+        "start": 20.900001,
+        "duration": 3.1
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v2",
+      "clip": {
+        "id": "o_city",
+        "type": "image",
+        "assetId": "p_sub_city_radio",
+        "start": 1.04,
+        "duration": 6.14
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v2",
+      "clip": {
+        "id": "o_title",
+        "type": "image",
+        "assetId": "p_title",
+        "start": 7.18,
+        "duration": 1.48
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v2",
+      "clip": {
+        "id": "o_old",
+        "type": "image",
+        "assetId": "p_sub_old_friend",
+        "start": 8.7,
+        "duration": 1.72
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v2",
+      "clip": {
+        "id": "o_how",
+        "type": "image",
+        "assetId": "p_sub_how_are_you",
+        "start": 12.42,
+        "duration": 1.44
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "v2",
+      "clip": {
+        "id": "o_new",
+        "type": "image",
+        "assetId": "p_sub_new_friend",
+        "start": 14.5,
+        "duration": 2.2
+      }
+    },
+    {
+      "type": "addClip",
+      "trackId": "a1",
+      "clip": {
+        "id": "a_mix",
+        "type": "audio",
+        "assetId": "mix",
+        "start": 0,
+        "duration": 23.916563,
+        "fadeOut": 0.4
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r18-231dacf1f3/project.json"
+}

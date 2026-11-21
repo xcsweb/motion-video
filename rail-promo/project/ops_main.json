@@ -1,0 +1,20 @@
+[
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "c01", "type": "video", "assetId": "s01", "start": 0.000000, "duration": 1.600000 } },
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "c02", "type": "video", "assetId": "s02", "start": 1.600000, "duration": 3.000000 } },
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "c03", "type": "video", "assetId": "s03", "start": 4.600000, "duration": 2.000000 } },
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "c04", "type": "video", "assetId": "s04", "start": 6.600000, "duration": 1.700000 } },
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "c05", "type": "video", "assetId": "s05", "start": 8.300000, "duration": 2.100000 } },
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "c06", "type": "video", "assetId": "s06", "start": 10.400000, "duration": 0.966667 } },
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "c07", "type": "video", "assetId": "s07", "start": 11.366667, "duration": 2.466667 } },
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "c08", "type": "video", "assetId": "s08", "start": 13.833334, "duration": 2.866667 } },
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "c09", "type": "video", "assetId": "s09", "start": 16.700001, "duration": 4.200000 } },
+  { "type": "addClip", "trackId": "v1", "clip": { "id": "c10", "type": "video", "assetId": "s10", "start": 20.900001, "duration": 3.100000 } },
+
+  { "type": "addClip", "trackId": "v2", "clip": { "id": "o_city", "type": "image", "assetId": "p_sub_city_radio", "start": 1.040000, "duration": 6.140000 } },
+  { "type": "addClip", "trackId": "v2", "clip": { "id": "o_title", "type": "image", "assetId": "p_title", "start": 7.180000, "duration": 1.480000 } },
+  { "type": "addClip", "trackId": "v2", "clip": { "id": "o_old", "type": "image", "assetId": "p_sub_old_friend", "start": 8.700000, "duration": 1.720000 } },
+  { "type": "addClip", "trackId": "v2", "clip": { "id": "o_how", "type": "image", "assetId": "p_sub_how_are_you", "start": 12.420000, "duration": 1.440000 } },
+  { "type": "addClip", "trackId": "v2", "clip": { "id": "o_new", "type": "image", "assetId": "p_sub_new_friend", "start": 14.500000, "duration": 2.200000 } },
+
+  { "type": "addClip", "trackId": "a1", "clip": { "id": "a_mix", "type": "audio", "assetId": "mix", "start": 0.000000, "duration": 23.916563, "fadeOut": 0.4 } }
+]

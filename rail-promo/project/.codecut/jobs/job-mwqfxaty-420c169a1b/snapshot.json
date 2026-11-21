@@ -1,0 +1,744 @@
+{
+  "version": 1,
+  "createdAt": "2026-11-21T13:25:13.364Z",
+  "projectRevision": 18,
+  "project": {
+    "schemaVersion": 1,
+    "revision": 18,
+    "name": "rail-ep02",
+    "assets": [
+      {
+        "id": "s01",
+        "kind": "video",
+        "path": "../build/s01.mp4",
+        "metadata": {
+          "probedAt": "2026-11-21T13:22:53.367Z",
+          "fingerprint": {
+            "size": 1212940,
+            "mtimeMs": 1795267269016.1433
+          },
+          "duration": 1.6,
+          "size": 1212940,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 6064700,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1920,
+              "height": 1080,
+              "frameRate": 30,
+              "duration": 1.6,
+              "bitRate": 6057390
+            }
+          ]
+        }
+      },
+      {
+        "id": "s02",
+        "kind": "video",
+        "path": "../build/s02.mp4",
+        "metadata": {
+          "probedAt": "2026-11-21T13:22:54.349Z",
+          "fingerprint": {
+            "size": 2586356,
+            "mtimeMs": 1795267278908.157
+          },
+          "duration": 3,
+          "size": 2586356,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 6896949,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1920,
+              "height": 1080,
+              "frameRate": 30,
+              "duration": 3,
+              "bitRate": 6891466
+            }
+          ]
+        }
+      },
+      {
+        "id": "s03",
+        "kind": "video",
+        "path": "../build/s03.mp4",
+        "metadata": {
+          "probedAt": "2026-11-21T13:22:55.237Z",
+          "fingerprint": {
+            "size": 404846,
+            "mtimeMs": 1795267280404.1592
+          },
+          "duration": 2,
+          "size": 404846,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 1619384,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1920,
+              "height": 1080,
+              "frameRate": 30,
+              "duration": 2,
+              "bitRate": 1613016
+            }
+          ]
+        }
+      },
+      {
+        "id": "s04",
+        "kind": "video",
+        "path": "../build/s04.mp4",
+        "metadata": {
+          "probedAt": "2026-11-21T13:22:56.190Z",
+          "fingerprint": {
+            "size": 2408466,
+            "mtimeMs": 1795267286480.1677
+          },
+          "duration": 1.7,
+          "size": 2408466,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 11333957,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1920,
+              "height": 1080,
+              "frameRate": 30,
+              "duration": 1.7,
+              "bitRate": 11326597
+            }
+          ]
+        }
+      },
+      {
+        "id": "s05",
+        "kind": "video",
+        "path": "../build/s05.mp4",
+        "metadata": {
+          "probedAt": "2026-11-21T13:22:57.032Z",
+          "fingerprint": {
+            "size": 2132028,
+            "mtimeMs": 1795267293724.1777
+          },
+          "duration": 2.1,
+          "size": 2132028,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 8122011,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1920,
+              "height": 1080,
+              "frameRate": 30,
+              "duration": 2.1,
+              "bitRate": 8115443
+            }
+          ]
+        }
+      },
+      {
+        "id": "s06",
+        "kind": "video",
+        "path": "../build/s06.mp4",
+        "metadata": {
+          "probedAt": "2026-11-21T13:22:57.968Z",
+          "fingerprint": {
+            "size": 40071,
+            "mtimeMs": 1795267294496.1787
+          },
+          "duration": 0.966667,
+          "size": 40071,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 331621,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1920,
+              "height": 1080,
+              "frameRate": 30,
+              "duration": 0.966667,
+              "bitRate": 321426
+            }
+          ]
+        }
+      },
+      {
+        "id": "s07",
+        "kind": "video",
+        "path": "../build/s07.mp4",
+        "metadata": {
+          "probedAt": "2026-11-21T13:22:58.859Z",
+          "fingerprint": {
+            "size": 1684535,
+            "mtimeMs": 1795267303104.191
+          },
+          "duration": 2.466667,
+          "size": 1684535,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 5463356,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1920,
+              "height": 1080,
+              "frameRate": 30,
+              "duration": 2.466667,
+              "bitRate": 5457577
+            }
+          ]
+        }
+      },
+      {
+        "id": "s08",
+        "kind": "video",
+        "path": "../build/s08.mp4",
+        "metadata": {
+          "probedAt": "2026-11-21T13:22:59.738Z",
+          "fingerprint": {
+            "size": 3065239,
+            "mtimeMs": 1795267313084.2048
+          },
+          "duration": 2.866667,
+          "size": 3065239,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 8554154,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1920,
+              "height": 1080,
+              "frameRate": 30,
+              "duration": 2.866667,
+              "bitRate": 8548551
+            }
+          ]
+        }
+      },
+      {
+        "id": "s09",
+        "kind": "video",
+        "path": "../build/s09.mp4",
+        "metadata": {
+          "probedAt": "2026-11-21T13:23:00.723Z",
+          "fingerprint": {
+            "size": 1222456,
+            "mtimeMs": 1795267316052.209
+          },
+          "duration": 4.2,
+          "size": 1222456,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 2328487,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1920,
+              "height": 1080,
+              "frameRate": 30,
+              "duration": 4.2,
+              "bitRate": 2323916
+            }
+          ]
+        }
+      },
+      {
+        "id": "s10",
+        "kind": "video",
+        "path": "../build/s10.mp4",
+        "metadata": {
+          "probedAt": "2026-11-21T13:23:01.694Z",
+          "fingerprint": {
+            "size": 52743,
+            "mtimeMs": 1795267317992.212
+          },
+          "duration": 3.1,
+          "size": 52743,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 136110,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1920,
+              "height": 1080,
+              "frameRate": 30,
+              "duration": 3.1,
+              "bitRate": 131011
+            }
+          ]
+        }
+      },
+      {
+        "id": "mix",
+        "kind": "audio",
+        "path": "../out/audio_mix.wav",
+        "metadata": {
+          "probedAt": "2026-11-21T13:23:02.571Z",
+          "fingerprint": {
+            "size": 4592104,
+            "mtimeMs": 1795265936038.2546
+          },
+          "duration": 23.916563,
+          "size": 4592104,
+          "formatName": "wav",
+          "bitRate": 1536041,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "audio",
+              "codecName": "pcm_s16le",
+              "sampleRate": 48000,
+              "channels": 2,
+              "duration": 23.916562,
+              "bitRate": 1536000
+            }
+          ]
+        }
+      },
+      {
+        "id": "p_title",
+        "kind": "image",
+        "path": "../out/gfx/title.png",
+        "metadata": {
+          "probedAt": "2026-11-21T13:23:03.453Z",
+          "fingerprint": {
+            "size": 56347,
+            "mtimeMs": 1795266027538.3857
+          },
+          "duration": 0,
+          "size": 56347,
+          "formatName": "png_pipe",
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "png",
+              "width": 1920,
+              "height": 1080,
+              "frameRate": 25
+            }
+          ]
+        }
+      },
+      {
+        "id": "p_sub_city_radio",
+        "kind": "image",
+        "path": "../out/gfx/sub_city_radio.png",
+        "metadata": {
+          "probedAt": "2026-11-21T13:23:04.406Z",
+          "fingerprint": {
+            "size": 66346,
+            "mtimeMs": 1795266027686.386
+          },
+          "duration": 0,
+          "size": 66346,
+          "formatName": "png_pipe",
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "png",
+              "width": 1920,
+              "height": 1080,
+              "frameRate": 25
+            }
+          ]
+        }
+      },
+      {
+        "id": "p_sub_old_friend",
+        "kind": "image",
+        "path": "../out/gfx/sub_old_friend.png",
+        "metadata": {
+          "probedAt": "2026-11-21T13:23:05.272Z",
+          "fingerprint": {
+            "size": 50634,
+            "mtimeMs": 1795266027838.3862
+          },
+          "duration": 0,
+          "size": 50634,
+          "formatName": "png_pipe",
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "png",
+              "width": 1920,
+              "height": 1080,
+              "frameRate": 25
+            }
+          ]
+        }
+      },
+      {
+        "id": "p_sub_how_are_you",
+        "kind": "image",
+        "path": "../out/gfx/sub_how_are_you.png",
+        "metadata": {
+          "probedAt": "2026-11-21T13:23:06.224Z",
+          "fingerprint": {
+            "size": 60190,
+            "mtimeMs": 1795266027982.3865
+          },
+          "duration": 0,
+          "size": 60190,
+          "formatName": "png_pipe",
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "png",
+              "width": 1920,
+              "height": 1080,
+              "frameRate": 25
+            }
+          ]
+        }
+      },
+      {
+        "id": "p_sub_new_friend",
+        "kind": "image",
+        "path": "../out/gfx/sub_new_friend.png",
+        "metadata": {
+          "probedAt": "2026-11-21T13:23:07.058Z",
+          "fingerprint": {
+            "size": 55891,
+            "mtimeMs": 1795266028146.3867
+          },
+          "duration": 0,
+          "size": 55891,
+          "formatName": "png_pipe",
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "png",
+              "width": 1920,
+              "height": 1080,
+              "frameRate": 25
+            }
+          ]
+        }
+      },
+      {
+        "id": "p_endcard",
+        "kind": "image",
+        "path": "../out/gfx/endcard.png",
+        "metadata": {
+          "probedAt": "2026-11-21T13:23:07.995Z",
+          "fingerprint": {
+            "size": 73364,
+            "mtimeMs": 1795266028246.387
+          },
+          "duration": 0,
+          "size": 73364,
+          "formatName": "png_pipe",
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "png",
+              "width": 1920,
+              "height": 1080,
+              "frameRate": 25
+            }
+          ]
+        }
+      }
+    ],
+    "tracks": [
+      {
+        "id": "v1",
+        "kind": "video",
+        "name": "Video 1",
+        "clips": [
+          {
+            "id": "c01",
+            "type": "video",
+            "assetId": "s01",
+            "start": 0,
+            "duration": 1.6
+          },
+          {
+            "id": "c02",
+            "type": "video",
+            "assetId": "s02",
+            "start": 1.6,
+            "duration": 3
+          },
+          {
+            "id": "c03",
+            "type": "video",
+            "assetId": "s03",
+            "start": 4.6,
+            "duration": 2
+          },
+          {
+            "id": "c04",
+            "type": "video",
+            "assetId": "s04",
+            "start": 6.6,
+            "duration": 1.7
+          },
+          {
+            "id": "c05",
+            "type": "video",
+            "assetId": "s05",
+            "start": 8.3,
+            "duration": 2.1
+          },
+          {
+            "id": "c06",
+            "type": "video",
+            "assetId": "s06",
+            "start": 10.4,
+            "duration": 0.966667
+          },
+          {
+            "id": "c07",
+            "type": "video",
+            "assetId": "s07",
+            "start": 11.366667,
+            "duration": 2.466667
+          },
+          {
+            "id": "c08",
+            "type": "video",
+            "assetId": "s08",
+            "start": 13.833334,
+            "duration": 2.866667
+          },
+          {
+            "id": "c09",
+            "type": "video",
+            "assetId": "s09",
+            "start": 16.700001,
+            "duration": 4.2
+          },
+          {
+            "id": "c10",
+            "type": "video",
+            "assetId": "s10",
+            "start": 20.900001,
+            "duration": 3.1
+          }
+        ]
+      },
+      {
+        "id": "v2",
+        "kind": "video",
+        "name": "Video 2",
+        "clips": [
+          {
+            "id": "o_city",
+            "type": "image",
+            "assetId": "p_sub_city_radio",
+            "start": 1.04,
+            "duration": 6.14
+          },
+          {
+            "id": "o_title",
+            "type": "image",
+            "assetId": "p_title",
+            "start": 7.18,
+            "duration": 1.48
+          },
+          {
+            "id": "o_old",
+            "type": "image",
+            "assetId": "p_sub_old_friend",
+            "start": 8.7,
+            "duration": 1.72
+          },
+          {
+            "id": "o_how",
+            "type": "image",
+            "assetId": "p_sub_how_are_you",
+            "start": 12.42,
+            "duration": 1.44
+          },
+          {
+            "id": "o_new",
+            "type": "image",
+            "assetId": "p_sub_new_friend",
+            "start": 14.5,
+            "duration": 2.2
+          }
+        ]
+      },
+      {
+        "id": "a1",
+        "kind": "audio",
+        "name": "Audio 1",
+        "clips": [
+          {
+            "id": "a_mix",
+            "type": "audio",
+            "assetId": "mix",
+            "start": 0,
+            "duration": 23.916563,
+            "fadeOut": 0.4
+          }
+        ]
+      },
+      {
+        "id": "a2",
+        "kind": "audio",
+        "name": "Audio 2",
+        "clips": []
+      }
+    ],
+    "output": {
+      "path": "output.mp4",
+      "format": "mp4",
+      "videoCodec": "h264",
+      "audioCodec": "aac",
+      "width": 1920,
+      "height": 1080,
+      "frameRate": 30,
+      "pixelFormat": "yuv420p",
+      "audioSampleRate": 48000,
+      "audioChannels": 2
+    }
+  },
+  "assets": [
+    {
+      "id": "s01",
+      "path": "../build/s01.mp4",
+      "exists": true,
+      "size": 1212940,
+      "mtimeMs": 1795267269016.1433
+    },
+    {
+      "id": "s02",
+      "path": "../build/s02.mp4",
+      "exists": true,
+      "size": 2586356,
+      "mtimeMs": 1795267278908.157
+    },
+    {
+      "id": "s03",
+      "path": "../build/s03.mp4",
+      "exists": true,
+      "size": 404846,
+      "mtimeMs": 1795267280404.1592
+    },
+    {
+      "id": "s04",
+      "path": "../build/s04.mp4",
+      "exists": true,
+      "size": 2408466,
+      "mtimeMs": 1795267286480.1677
+    },
+    {
+      "id": "s05",
+      "path": "../build/s05.mp4",
+      "exists": true,
+      "size": 2132028,
+      "mtimeMs": 1795267293724.1777
+    },
+    {
+      "id": "s06",
+      "path": "../build/s06.mp4",
+      "exists": true,
+      "size": 40071,
+      "mtimeMs": 1795267294496.1787
+    },
+    {
+      "id": "s07",
+      "path": "../build/s07.mp4",
+      "exists": true,
+      "size": 1684535,
+      "mtimeMs": 1795267303104.191
+    },
+    {
+      "id": "s08",
+      "path": "../build/s08.mp4",
+      "exists": true,
+      "size": 3065239,
+      "mtimeMs": 1795267313084.2048
+    },
+    {
+      "id": "s09",
+      "path": "../build/s09.mp4",
+      "exists": true,
+      "size": 1222456,
+      "mtimeMs": 1795267316052.209
+    },
+    {
+      "id": "s10",
+      "path": "../build/s10.mp4",
+      "exists": true,
+      "size": 52743,
+      "mtimeMs": 1795267317992.212
+    },
+    {
+      "id": "mix",
+      "path": "../out/audio_mix.wav",
+      "exists": true,
+      "size": 4592104,
+      "mtimeMs": 1795265936038.2546
+    },
+    {
+      "id": "p_title",
+      "path": "../out/gfx/title.png",
+      "exists": true,
+      "size": 56347,
+      "mtimeMs": 1795266027538.3857
+    },
+    {
+      "id": "p_sub_city_radio",
+      "path": "../out/gfx/sub_city_radio.png",
+      "exists": true,
+      "size": 66346,
+      "mtimeMs": 1795266027686.386
+    },
+    {
+      "id": "p_sub_old_friend",
+      "path": "../out/gfx/sub_old_friend.png",
+      "exists": true,
+      "size": 50634,
+      "mtimeMs": 1795266027838.3862
+    },
+    {
+      "id": "p_sub_how_are_you",
+      "path": "../out/gfx/sub_how_are_you.png",
+      "exists": true,
+      "size": 60190,
+      "mtimeMs": 1795266027982.3865
+    },
+    {
+      "id": "p_sub_new_friend",
+      "path": "../out/gfx/sub_new_friend.png",
+      "exists": true,
+      "size": 55891,
+      "mtimeMs": 1795266028146.3867
+    },
+    {
+      "id": "p_endcard",
+      "path": "../out/gfx/endcard.png",
+      "exists": true,
+      "size": 73364,
+      "mtimeMs": 1795266028246.387
+    }
+  ]
+}

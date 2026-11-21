@@ -1,0 +1,40 @@
+{
+  "id": "r11-3e756946d4",
+  "parentId": "r10-393ef3110d",
+  "projectRevision": 11,
+  "createdAt": "2026-11-21T13:23:02.582Z",
+  "summary": "Add asset mix",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "mix",
+        "kind": "audio",
+        "path": "../out/audio_mix.wav",
+        "metadata": {
+          "probedAt": "2026-11-21T13:23:02.571Z",
+          "fingerprint": {
+            "size": 4592104,
+            "mtimeMs": 1795265936038.2546
+          },
+          "duration": 23.916563,
+          "size": 4592104,
+          "formatName": "wav",
+          "bitRate": 1536041,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "audio",
+              "codecName": "pcm_s16le",
+              "sampleRate": 48000,
+              "channels": 2,
+              "duration": 23.916562,
+              "bitRate": 1536000
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r11-3e756946d4/project.json"
+}

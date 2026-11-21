@@ -1,0 +1,11 @@
+{
+  "type": "frame",
+  "outputPath": "/workspace/rail-promo/out/preview/t15.4.png",
+  "revision": 18,
+  "parameters": {
+    "type": "frame",
+    "at": 15.4,
+    "width": 1600,
+    "height": 900
+  }
+}

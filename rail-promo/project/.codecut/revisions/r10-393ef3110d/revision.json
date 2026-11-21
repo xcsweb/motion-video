@@ -1,0 +1,41 @@
+{
+  "id": "r10-393ef3110d",
+  "parentId": "r9-21cb3332a3",
+  "projectRevision": 10,
+  "createdAt": "2026-11-21T13:23:01.704Z",
+  "summary": "Add asset s10",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "s10",
+        "kind": "video",
+        "path": "../build/s10.mp4",
+        "metadata": {
+          "probedAt": "2026-11-21T13:23:01.694Z",
+          "fingerprint": {
+            "size": 52743,
+            "mtimeMs": 1795267317992.212
+          },
+          "duration": 3.1,
+          "size": 52743,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 136110,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1920,
+              "height": 1080,
+              "frameRate": 30,
+              "duration": 3.1,
+              "bitRate": 131011
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r10-393ef3110d/project.json"
+}

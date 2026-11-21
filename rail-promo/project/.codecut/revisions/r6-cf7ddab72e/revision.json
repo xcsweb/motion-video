@@ -1,0 +1,41 @@
+{
+  "id": "r6-cf7ddab72e",
+  "parentId": "r5-4499b0f51e",
+  "projectRevision": 6,
+  "createdAt": "2026-11-21T13:22:57.980Z",
+  "summary": "Add asset s06",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "s06",
+        "kind": "video",
+        "path": "../build/s06.mp4",
+        "metadata": {
+          "probedAt": "2026-11-21T13:22:57.968Z",
+          "fingerprint": {
+            "size": 40071,
+            "mtimeMs": 1795267294496.1787
+          },
+          "duration": 0.966667,
+          "size": 40071,
+          "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+          "bitRate": 331621,
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "h264",
+              "width": 1920,
+              "height": 1080,
+              "frameRate": 30,
+              "duration": 0.966667,
+              "bitRate": 321426
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r6-cf7ddab72e/project.json"
+}

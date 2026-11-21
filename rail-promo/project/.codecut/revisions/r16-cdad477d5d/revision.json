@@ -1,0 +1,38 @@
+{
+  "id": "r16-cdad477d5d",
+  "parentId": "r15-3e3145c63b",
+  "projectRevision": 16,
+  "createdAt": "2026-11-21T13:23:07.068Z",
+  "summary": "Add asset p_sub_new_friend",
+  "operations": [
+    {
+      "type": "addAsset",
+      "asset": {
+        "id": "p_sub_new_friend",
+        "kind": "image",
+        "path": "../out/gfx/sub_new_friend.png",
+        "metadata": {
+          "probedAt": "2026-11-21T13:23:07.058Z",
+          "fingerprint": {
+            "size": 55891,
+            "mtimeMs": 1795266028146.3867
+          },
+          "duration": 0,
+          "size": 55891,
+          "formatName": "png_pipe",
+          "streams": [
+            {
+              "index": 0,
+              "codecType": "video",
+              "codecName": "png",
+              "width": 1920,
+              "height": 1080,
+              "frameRate": 25
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r16-cdad477d5d/project.json"
+}
