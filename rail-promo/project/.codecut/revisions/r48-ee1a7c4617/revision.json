@@ -1,0 +1,36 @@
+{
+  "id": "r48-ee1a7c4617",
+  "parentId": "r47-ad3c3549cd",
+  "projectRevision": 48,
+  "createdAt": "2026-11-21T15:00:19.153Z",
+  "summary": "Probe asset mix",
+  "operations": [
+    {
+      "type": "probeAsset",
+      "assetId": "mix",
+      "metadata": {
+        "probedAt": "2026-11-21T15:00:19.145Z",
+        "fingerprint": {
+          "size": 4592104,
+          "mtimeMs": 1795273212780.5774
+        },
+        "duration": 23.916563,
+        "size": 4592104,
+        "formatName": "wav",
+        "bitRate": 1536041,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "audio",
+            "codecName": "pcm_s16le",
+            "sampleRate": 48000,
+            "channels": 2,
+            "duration": 23.916562,
+            "bitRate": 1536000
+          }
+        ]
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r48-ee1a7c4617/project.json"
+}

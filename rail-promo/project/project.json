@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 46,
+  "revision": 49,
   "name": "rail-ep02",
   "assets": [
     {
@@ -288,10 +288,10 @@
       "kind": "audio",
       "path": "../out/audio_mix.wav",
       "metadata": {
-        "probedAt": "2026-11-21T14:47:24.814Z",
+        "probedAt": "2026-11-21T15:01:22.131Z",
         "fingerprint": {
           "size": 4592104,
-          "mtimeMs": 1795272403103.398
+          "mtimeMs": 1795273277432.6719
         },
         "duration": 23.916563,
         "size": 4592104,
