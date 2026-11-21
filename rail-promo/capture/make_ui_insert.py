@@ -48,7 +48,7 @@ def cursor(d, x, y, s=1.0, alpha=255):
     d.polygon(pts, fill=(250, 250, 250, alpha), outline=(20, 22, 26, alpha))
 
 
-CROP_Y = 45  # keep the app's top bar, drop the playback controls
+CROP_Y = 0  # full app chrome, playback bar falls outside the 765 band
 
 
 for i in range(N):
