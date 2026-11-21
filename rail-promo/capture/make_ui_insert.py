@@ -48,32 +48,37 @@ def cursor(d, x, y, s=1.0, alpha=255):
     d.polygon(pts, fill=(250, 250, 250, alpha), outline=(20, 22, 26, alpha))
 
 
+CROP_Y = 45  # keep the app's top bar, drop the playback controls
+
+
 for i in range(N):
-    zoom = 1.0 + 0.035 * (i / (N - 1))
+    zoom = 1.0 + 0.012 * (i / (N - 1))
     img = base if i < CLICK_F else click
-    nw, nh = int(1360 * zoom), int(int(765 * zoom))
-    sc = img.resize((nw, nh), Image.LANCZOS)
-    fx, fy = 1700, 380
-    px = int(280 + fx * 1360 / 1920 - fx * nw / 1920)
-    py = int(CY + fy * 765 / 1080 - fy * nh / 1080)
+    sc = img.crop((0, CROP_Y, 1920, CROP_Y + 765))
+    nw, nh = int(1920 * zoom), int(765 * zoom)
+    sc = sc.resize((nw, nh), Image.LANCZOS)
+    scale = nw / 1920
+    px = (W - nw) // 2
+    py = CY - int((nh - 765) / 2)
     canvas = Image.new("RGB", (W, H), (5, 8, 13))
     canvas.paste(sc, (px, py))
-    ImageDraw.Draw(canvas).rectangle(
-        [px, py, px + nw - 1, py + nh - 1], outline=(34, 39, 46), width=2
-    )
     ov = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(ov)
+
+    def place(x, y, s=1.0):
+        return px + x * scale, py + (y - CROP_Y) * scale, s
+
     if i < CLICK_F:
         t = ease(min(1.0, i / (CLICK_F - 1)))
         cx = START[0] + (TARGET[0] - START[0]) * t
         cy = START[1] + (TARGET[1] - START[1]) * t
-        cursor(d, cx, cy, 1.0)
+        cursor(d, *place(cx, cy))
     else:
         t = ease(min(1.0, (i - CLICK_F) / 22))
         cx = TARGET[0] + (END[0] - TARGET[0]) * t
         cy = TARGET[1] + (END[1] - TARGET[1]) * t
         s = 0.86 if i < CLICK_F + 3 else 1.0
-        cursor(d, cx, cy, s)
+        cursor(d, *place(cx, cy, s))
     canvas = Image.alpha_composite(canvas.convert("RGBA"), ov).convert("RGB")
     canvas.save(f"{OUT}/f_{i:04d}.jpg", quality=95)
 
