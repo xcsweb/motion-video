@@ -1,0 +1,25 @@
+{
+  "id": "r52-d3fbb58494",
+  "parentId": "r51-fa5bf9e809",
+  "projectRevision": 52,
+  "createdAt": "2026-11-21T15:46:51.861Z",
+  "summary": "removeClip, addClip",
+  "operations": [
+    {
+      "type": "removeClip",
+      "clipId": "c03a"
+    },
+    {
+      "type": "addClip",
+      "trackId": "v1",
+      "clip": {
+        "id": "c03a",
+        "type": "video",
+        "assetId": "s11",
+        "start": 4.6,
+        "duration": 2
+      }
+    }
+  ],
+  "snapshotPath": ".codecut/revisions/r52-d3fbb58494/project.json"
+}

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 50,
+  "revision": 53,
   "name": "rail-ep02",
   "assets": [
     {
@@ -543,6 +543,34 @@
           }
         ]
       }
+    },
+    {
+      "id": "s11",
+      "kind": "video",
+      "path": "../build/s11.mp4",
+      "metadata": {
+        "probedAt": "2026-11-21T15:48:43.525Z",
+        "fingerprint": {
+          "size": 916798,
+          "mtimeMs": 1795276122508.74
+        },
+        "duration": 2,
+        "size": 916798,
+        "formatName": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 3667192,
+        "streams": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "codecName": "h264",
+            "width": 1920,
+            "height": 1080,
+            "frameRate": 30,
+            "duration": 2,
+            "bitRate": 3660824
+          }
+        ]
+      }
     }
   ],
   "tracks": [
@@ -568,7 +596,7 @@
         {
           "id": "c03a",
           "type": "video",
-          "assetId": "s03a",
+          "assetId": "s11",
           "start": 4.6,
           "duration": 2
         },
