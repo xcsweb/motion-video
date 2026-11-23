@@ -1,0 +1,11 @@
+{
+  "name": "zhentu-promo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "capture": "node capture/capture_states.mjs"
+  },
+  "dependencies": {
+    "playwright": "1.55.0"
+  }
+}
