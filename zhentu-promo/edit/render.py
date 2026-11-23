@@ -58,7 +58,10 @@ _font_cache = {}
 def font(path, size):
     key = (path, size)
     if key not in _font_cache:
-        _font_cache[key] = ImageFont.truetype(path, size)
+        # Noto CJK 的 .ttc 默认第 0 个 face 是 JP，会把「门」等简体字渲染错；
+        # TTC 里第 2 个 face 是 SC（简体），统一用它。
+        index = 2 if path.endswith('.ttc') else 0
+        _font_cache[key] = ImageFont.truetype(path, size, index=index)
     return _font_cache[key]
 
 
@@ -575,7 +578,7 @@ def scene_brand(t, lt, dur):
     if p > 0:
         layer = Image.new('RGBA', (W, 120), (0, 0, 0, 0))
         d = ImageDraw.Draw(layer)
-        d.text((W / 2, 10), '每一条攻略，都有人替你走过', font=font(F_SERIF_B, 42), fill=(238, 233, 220, int(245 * p)), anchor='ma')
+        d.text((W / 2, 10), '只推没失效的攻略', font=font(F_SERIF_B, 42), fill=(238, 233, 220, int(245 * p)), anchor='ma')
         layer.putalpha(layer.getchannel('A').point(lambda v: int(v * p)))
         CUR.paste(layer, (0, int(1150 + (1 - p) * 14)), layer)
 
@@ -590,7 +593,7 @@ def scene_brand(t, lt, dur):
     if p > 0:
         layer = Image.new('RGBA', (W, 60), (0, 0, 0, 0))
         d = ImageDraw.Draw(layer)
-        d.text((W / 2, 0), '旅 行 攻 略  ·  网 友 核 实', font=font(F_MED, 24), fill=(14, 158, 130, int(210 * p)), anchor='ma')
+        d.text((W / 2, 0), '旅 行 攻 略  ·  实 时 核 实', font=font(F_MED, 24), fill=(14, 158, 130, int(210 * p)), anchor='ma')
         layer.putalpha(layer.getchannel('A').point(lambda v: int(v * p)))
         CUR.paste(layer, (0, 1245), layer)
 
@@ -729,10 +732,8 @@ def scene_messages(t, lt, dur):
 
     scr = screen_slice('09_messages', 640, 1386, 1.03, (0.5, 0.40))
     rect = paste_phone(CUR, scr, 220, 380, 640, 1386, bezel=10, radius=52)
-    callout(CUR, (1042, 96), (rect[2] - 40, 760), '800m', '2 小时前有人核实', color=BLUE,
+    callout(CUR, (1042, 96), (rect[2] - 40, 620), '2 小时前', '客栈涨价，补了房价截图', color=BLUE,
             align='right', p=ease_out((lt - 0.75) / 0.45))
-    callout(CUR, (1042, 196), (rect[2] - 40, 1030), '兴趣推荐', '为什么推给你，写清楚', color=GREEN,
-            align='right', p=ease_out((lt - 1.45) / 0.45))
 
 
 def scene_destination(t, lt, dur):
@@ -780,7 +781,7 @@ def scene_fact(t, lt, dur):
     # 底部证据提示
     pp = ease_out((lt - 1.35) / 0.5)
     if pp > 0:
-        pill(CUR, 540, 1818, '3 份证据 · 时间 / 地点 / 票据', fg=GREEN, bg=(232, 241, 234), size=24,
+        pill(CUR, 540, 1818, '1 份证据 · 时间 / 地点 / 票据', fg=GREEN, bg=(232, 241, 234), size=24,
              alpha=int(230 * pp), padx=28, pady=14)
 
 
@@ -798,7 +799,7 @@ def scene_vote(t, lt, dur):
         scr = screen_slice('06_vote_sheet', 640, 1386, 1.05, (0.5, 0.56))
         rect = paste_phone(CUR, scr, 220, 380, 640, 1386, bezel=10, radius=52)
         tp = ease_out((lt - 0.10) / 0.25)
-        tap(CUR, 540, 1640, tp)
+        tap(CUR, 420, 1000, tp)
         flash(CUR, max(0, 255 * (lt - 0.5) / 0.12))
     else:
         # 结果卡片
@@ -808,7 +809,7 @@ def scene_vote(t, lt, dur):
         cd.rounded_rectangle([0, 0, 939, 1199], radius=34, fill=(252, 249, 241, 255),
                              outline=(214, 205, 189, 255), width=2)
         cd.text((54, 46), '核实结果', font=font(F_MED, 24), fill=(128, 134, 125, 255))
-        cd.text((54, 84), '兴教寺门票 · 20 元 / 人', font=font(F_BOLD, 32), fill=INK + (255,))
+        cd.text((54, 84), '古镇客栈旺季 · 约平时 3 倍', font=font(F_BOLD, 32), fill=INK + (255,))
         cd.line([(54, 140), (886, 140)], fill=(222, 214, 198, 255), width=2)
 
         ring_p = ease_out((lt - cut - 0.08) / 0.62)
@@ -832,7 +833,7 @@ def scene_vote(t, lt, dur):
         if sp > 0:
             cd.rounded_rectangle([330, 820, 750, 892], radius=36, fill=(232, 242, 233, 255))
             cd.text((540, 850), '新鲜 · 30 天内有效', font=font(F_BOLD, 28), fill=GREEN + (int(255 * sp),), anchor='mm')
-        cd.text((54, 1036), '已同步给 214 位近期到访者', font=font(F_BOLD, 24), fill=GREEN + (255,))
+        cd.text((54, 1036), '已同步给近期到访者', font=font(F_BOLD, 24), fill=GREEN + (255,))
         cd.text((54, 1080), '5 位到访者 + 1 位本地人', font=font(F_MED, 22), fill=(140, 145, 136, 255))
         cd.text((886, 1080), '真途 · 信息卡 #sx-4', font=font(F_MED, 19), fill=(170, 170, 160, 255), anchor='ra')
         card.putalpha(card.getchannel('A').point(lambda v: int(v * p)))
@@ -908,7 +909,7 @@ def scene_trip(t, lt, dur):
     scr = screen_slice('14_trip', 640, 1386, 1.09, (0.5, 0.34))
     rect = paste_phone(CUR, scr, 220, 380, 640, 1386, bezel=10, radius=52)
     target = (rect[2] - 62, 980)
-    callout(CUR, (1042, 96), target, '3 条', '出发前要确认', color=RED,
+    callout(CUR, (1042, 96), target, '2 条', '出发前要确认', color=RED,
             align='right', p=ease_out((lt - 0.65) / 0.45))
     # 脉冲
     pp = ease_out((lt - 0.8) / 0.4)
@@ -1023,25 +1024,25 @@ def scene_end(t, lt, dur):
     if p > 0:
         layer = Image.new('RGBA', (W, 80), (0, 0, 0, 0))
         ld = ImageDraw.Draw(layer)
-        ld.text((W / 2, 0), '每一条攻略，都有人替你走过', font=font(F_SERIF_B, 40), fill=(236, 231, 218, int(245 * p)), anchor='ma')
+        ld.text((W / 2, 0), '只推没失效的攻略', font=font(F_SERIF_B, 40), fill=(236, 231, 218, int(245 * p)), anchor='ma')
         layer.putalpha(layer.getchannel('A').point(lambda v: int(v * p)))
         CUR.paste(layer, (0, int(1122 + (1 - p) * 12)), layer)
 
     p = ease_out((lt - 1.15) / 0.5)
     if p > 0:
-        pill(CUR, 540, 1272, '内测预约 · 评论区见', fg=(12, 40, 32), bg=(232, 226, 210), size=32,
-             alpha=int(245 * p), padx=40, pady=20)
+        pill(CUR, 540, 1272, '点赞 · 评论 · 收藏破 1000，就上架', fg=(12, 40, 32), bg=(232, 226, 210), size=30,
+             alpha=int(245 * p), padx=36, pady=20)
     p = ease_out((lt - 1.5) / 0.5)
     if p > 0:
         layer = Image.new('RGBA', (W, 60), (0, 0, 0, 0))
         ld = ImageDraw.Draw(layer)
-        ld.text((W / 2, 0), '如果它真能用，你想先去哪？', font=font(F_MED, 26), fill=(168, 184, 174, int(210 * p)), anchor='ma')
+        ld.text((W / 2, 0), '想看它上线，就留一句你想去哪', font=font(F_MED, 26), fill=(168, 184, 174, int(210 * p)), anchor='ma')
         layer.putalpha(layer.getchannel('A').point(lambda v: int(v * p)))
         CUR.paste(layer, (0, 1360), layer)
 
     d = ImageDraw.Draw(CUR, 'RGBA')
     d.line([(W / 2 - 70, 1480), (W / 2 + 70, 1480)], fill=(14, 158, 130, int(140 * p)), width=2)
-    d.text((W / 2, 1760), '微信小程序  ·  内测中', font=font(F_MED, 22), fill=(128, 148, 138, 200), anchor='mm')
+    d.text((W / 2, 1760), '微信小程序  ·  达标后上线', font=font(F_MED, 22), fill=(128, 148, 138, 200), anchor='mm')
 
 
 # ---------------- static scene table ----------------
