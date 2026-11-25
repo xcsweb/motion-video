@@ -1,0 +1,68 @@
+[
+  {
+    "id": "v1",
+    "text": "西语 nana，是摇篮曲。",
+    "tts_text": "西语 娜娜，是摇篮曲。",
+    "start": 4.2,
+    "duration": 2.7108,
+    "end": 6.9108,
+    "file": "nana/assets/audio/voice/v1.wav",
+    "peak": -3.0,
+    "speed": 1.06
+  },
+  {
+    "id": "v2",
+    "text": "中文 nana，是——奶奶。",
+    "tts_text": "中文 娜娜，是——奶奶。",
+    "start": 17.0,
+    "duration": 2.4692,
+    "end": 19.4692,
+    "file": "nana/assets/audio/voice/v2.wav",
+    "peak": -3.0,
+    "speed": 1.04
+  },
+  {
+    "id": "v3",
+    "text": "一个哄你睡。",
+    "tts_text": "一个哄你睡。",
+    "start": 24.6,
+    "duration": 1.4764,
+    "end": 26.0764,
+    "file": "nana/assets/audio/voice/v3.wav",
+    "peak": -3.0,
+    "speed": 1.08
+  },
+  {
+    "id": "v4",
+    "text": "一个催你睡。",
+    "tts_text": "一个催你睡。",
+    "start": 26.4,
+    "duration": 1.3858,
+    "end": 27.7858,
+    "file": "nana/assets/audio/voice/v4.wav",
+    "peak": -3.0,
+    "speed": 1.08
+  },
+  {
+    "id": "v5",
+    "text": "同一个 nana，两种命。",
+    "tts_text": "同一个 娜娜，两种命。",
+    "start": 28.4,
+    "duration": 2.9865,
+    "end": 31.3865,
+    "file": "nana/assets/audio/voice/v5.wav",
+    "peak": -3.0,
+    "speed": 1.04
+  },
+  {
+    "id": "v6",
+    "text": "晚安，做个好梦。",
+    "tts_text": "晚安，做个好梦。",
+    "start": 32.0,
+    "duration": 2.2542,
+    "end": 34.2542,
+    "file": "nana/assets/audio/voice/v6.wav",
+    "peak": -3.0,
+    "speed": 0.96
+  }
+]

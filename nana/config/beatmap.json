@@ -1,0 +1,496 @@
+{
+  "title": "同一个 nana，两种命",
+  "bpm": 128,
+  "bar_seconds": 1.875,
+  "beat_seconds": 0.46875,
+  "eighth_seconds": 0.234375,
+  "sixteenth_seconds": 0.117188,
+  "duration": 35.0,
+  "sample_rate": 48000,
+  "channels": 2,
+  "loudness_lufs": -14.0,
+  "true_peak_dbtp": -1.4,
+  "loudness_range_lu": 2.6,
+  "bars": [
+    {
+      "index": 1,
+      "start": 0.0,
+      "end": 1.875
+    },
+    {
+      "index": 2,
+      "start": 1.875,
+      "end": 3.75
+    },
+    {
+      "index": 3,
+      "start": 3.75,
+      "end": 5.625
+    },
+    {
+      "index": 4,
+      "start": 5.625,
+      "end": 7.5
+    },
+    {
+      "index": 5,
+      "start": 7.5,
+      "end": 9.375
+    },
+    {
+      "index": 6,
+      "start": 9.375,
+      "end": 11.25
+    },
+    {
+      "index": 7,
+      "start": 11.25,
+      "end": 13.125
+    },
+    {
+      "index": 8,
+      "start": 13.125,
+      "end": 15.0
+    },
+    {
+      "index": 9,
+      "start": 15.0,
+      "end": 16.875
+    },
+    {
+      "index": 10,
+      "start": 16.875,
+      "end": 18.75
+    },
+    {
+      "index": 11,
+      "start": 18.75,
+      "end": 20.625
+    },
+    {
+      "index": 12,
+      "start": 20.625,
+      "end": 22.5
+    },
+    {
+      "index": 13,
+      "start": 22.5,
+      "end": 24.375
+    },
+    {
+      "index": 14,
+      "start": 24.375,
+      "end": 26.25
+    },
+    {
+      "index": 15,
+      "start": 26.25,
+      "end": 28.125
+    },
+    {
+      "index": 16,
+      "start": 28.125,
+      "end": 30.0
+    },
+    {
+      "index": 17,
+      "start": 30.0,
+      "end": 31.875
+    },
+    {
+      "index": 18,
+      "start": 31.875,
+      "end": 33.75
+    },
+    {
+      "index": 19,
+      "start": 33.75,
+      "end": 35.0
+    }
+  ],
+  "sections": [
+    {
+      "name": "intro",
+      "start": 0.0,
+      "end": 3.75
+    },
+    {
+      "name": "drop1",
+      "start": 3.75,
+      "end": 15.0
+    },
+    {
+      "name": "break",
+      "start": 15.0,
+      "end": 16.875
+    },
+    {
+      "name": "drop2",
+      "start": 16.875,
+      "end": 28.125
+    },
+    {
+      "name": "split",
+      "start": 28.125,
+      "end": 31.875
+    },
+    {
+      "name": "outro",
+      "start": 31.875,
+      "end": 35.0
+    }
+  ],
+  "drops": [
+    {
+      "name": "drop1_house",
+      "start": 3.75,
+      "end": 16.875
+    },
+    {
+      "name": "drop2_trap",
+      "start": 16.875,
+      "end": 31.875
+    }
+  ],
+  "cuts": [
+    {
+      "t": 0.0,
+      "kind": "shot",
+      "shot": "s01"
+    },
+    {
+      "t": 3.75,
+      "kind": "shot",
+      "shot": "s02"
+    },
+    {
+      "t": 7.5,
+      "kind": "shot",
+      "shot": "s03"
+    },
+    {
+      "t": 11.25,
+      "kind": "shot",
+      "shot": "s04"
+    },
+    {
+      "t": 15.0,
+      "kind": "shot",
+      "shot": "s05"
+    },
+    {
+      "t": 16.875,
+      "kind": "shot",
+      "shot": "s06"
+    },
+    {
+      "t": 20.625,
+      "kind": "montage_8th",
+      "shot": "s07",
+      "montage_shot": "clock_2347"
+    },
+    {
+      "t": 20.625,
+      "kind": "shot",
+      "shot": "s07"
+    },
+    {
+      "t": 20.859375,
+      "kind": "montage_8th",
+      "shot": "s07",
+      "montage_shot": "clock_2347"
+    },
+    {
+      "t": 21.09375,
+      "kind": "montage_8th",
+      "shot": "s07",
+      "montage_shot": "clock_2347"
+    },
+    {
+      "t": 21.328125,
+      "kind": "montage_8th",
+      "shot": "s07",
+      "montage_shot": "clock_2347"
+    },
+    {
+      "t": 21.5625,
+      "kind": "montage_8th",
+      "shot": "s07",
+      "montage_shot": "clock_2347"
+    },
+    {
+      "t": 21.796875,
+      "kind": "montage_8th",
+      "shot": "s07",
+      "montage_shot": "clock_2347"
+    },
+    {
+      "t": 22.03125,
+      "kind": "montage_8th",
+      "shot": "s07",
+      "montage_shot": "clock_2347"
+    },
+    {
+      "t": 22.265625,
+      "kind": "montage_8th",
+      "shot": "s07",
+      "montage_shot": "router"
+    },
+    {
+      "t": 22.5,
+      "kind": "montage_8th",
+      "shot": "s07",
+      "montage_shot": "router"
+    },
+    {
+      "t": 22.734375,
+      "kind": "montage_8th",
+      "shot": "s07",
+      "montage_shot": "router"
+    },
+    {
+      "t": 22.96875,
+      "kind": "montage_8th",
+      "shot": "s07",
+      "montage_shot": "phone"
+    },
+    {
+      "t": 23.203125,
+      "kind": "montage_8th",
+      "shot": "s07",
+      "montage_shot": "phone"
+    },
+    {
+      "t": 23.4375,
+      "kind": "montage_8th",
+      "shot": "s07",
+      "montage_shot": "slipper"
+    },
+    {
+      "t": 23.671875,
+      "kind": "montage_8th",
+      "shot": "s07",
+      "montage_shot": "slipper"
+    },
+    {
+      "t": 23.90625,
+      "kind": "montage_8th",
+      "shot": "s07",
+      "montage_shot": "point"
+    },
+    {
+      "t": 24.140625,
+      "kind": "montage_8th",
+      "shot": "s07",
+      "montage_shot": "point"
+    },
+    {
+      "t": 24.375,
+      "kind": "shot",
+      "shot": "s08"
+    },
+    {
+      "t": 28.125,
+      "kind": "shot",
+      "shot": "s09"
+    },
+    {
+      "t": 31.875,
+      "kind": "shot",
+      "shot": "s10"
+    }
+  ],
+  "sfx_cues": [
+    {
+      "name": "keyboard",
+      "t": 0.3
+    },
+    {
+      "name": "riser",
+      "t": 1.875
+    },
+    {
+      "name": "snare_roll_build",
+      "t": 2.8125
+    },
+    {
+      "name": "impact",
+      "t": 3.75
+    },
+    {
+      "name": "shimmer",
+      "t": 3.75
+    },
+    {
+      "name": "shaker",
+      "t": 7.5
+    },
+    {
+      "name": "vocal_chop",
+      "t": 8.671875
+    },
+    {
+      "name": "vocal_chop",
+      "t": 9.140625
+    },
+    {
+      "name": "vocal_chop",
+      "t": 10.078125
+    },
+    {
+      "name": "vocal_chop",
+      "t": 10.664062
+    },
+    {
+      "name": "riser",
+      "t": 11.25
+    },
+    {
+      "name": "vocal_chop",
+      "t": 12.421875
+    },
+    {
+      "name": "vocal_chop",
+      "t": 12.890625
+    },
+    {
+      "name": "snare_roll",
+      "t": 13.125
+    },
+    {
+      "name": "vocal_chop",
+      "t": 13.828125
+    },
+    {
+      "name": "vocal_chop",
+      "t": 14.414062
+    },
+    {
+      "name": "heartbeat",
+      "t": 16.055
+    },
+    {
+      "name": "silence",
+      "t": 16.725
+    },
+    {
+      "name": "impact",
+      "t": 16.875
+    },
+    {
+      "name": "glitch",
+      "t": 16.875
+    },
+    {
+      "name": "drop2",
+      "t": 16.875
+    },
+    {
+      "name": "whoosh",
+      "t": 20.625
+    },
+    {
+      "name": "snare_fill",
+      "t": 20.625
+    },
+    {
+      "name": "whoosh",
+      "t": 20.859375
+    },
+    {
+      "name": "whoosh",
+      "t": 21.09375
+    },
+    {
+      "name": "whoosh",
+      "t": 21.328125
+    },
+    {
+      "name": "whoosh",
+      "t": 21.5625
+    },
+    {
+      "name": "whoosh",
+      "t": 21.796875
+    },
+    {
+      "name": "whoosh",
+      "t": 22.03125
+    },
+    {
+      "name": "whoosh",
+      "t": 22.265625
+    },
+    {
+      "name": "whoosh",
+      "t": 22.5
+    },
+    {
+      "name": "whoosh",
+      "t": 22.734375
+    },
+    {
+      "name": "whoosh",
+      "t": 22.96875
+    },
+    {
+      "name": "whoosh",
+      "t": 23.203125
+    },
+    {
+      "name": "whoosh",
+      "t": 23.4375
+    },
+    {
+      "name": "whoosh",
+      "t": 23.671875
+    },
+    {
+      "name": "whoosh",
+      "t": 23.90625
+    },
+    {
+      "name": "whoosh",
+      "t": 24.140625
+    },
+    {
+      "name": "whoosh",
+      "t": 24.375
+    },
+    {
+      "name": "light_switch",
+      "t": 24.375
+    },
+    {
+      "name": "slipper",
+      "t": 25.3125
+    },
+    {
+      "name": "slipper",
+      "t": 26.4375
+    },
+    {
+      "name": "piano",
+      "t": 28.125
+    },
+    {
+      "name": "wind",
+      "t": 31.875
+    },
+    {
+      "name": "piano_tail",
+      "t": 31.875
+    },
+    {
+      "name": "sub_hit",
+      "t": 34.5
+    }
+  ],
+  "notes": {
+    "intro": "滤波 pluck 琶音 + 键盘 click + 反向 riser，第 2 小节 build",
+    "break": "第 9 小节收束，16.0-16.875 仅心跳，16.725-16.875 完全静音",
+    "montage": "20.625-24.375 按 8 分音符网格切，snare fill + whoosh",
+    "split": "28.125-31.875 鼓组减半，钢琴单音 + 暖 pad",
+    "outro": "鼓组退出，钢琴尾音 + 风声 + 34.5s sub hit"
+  }
+}

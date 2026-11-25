@@ -1,0 +1,159 @@
+{
+  "title": "中文会说吧？就是——奶奶。",
+  "concept": "西语 nana = 摇篮曲，哄你睡；中文 nana ≈ 奶奶，催你睡。同一个发音，两种命运。",
+  "caption": "西语 nana，是摇篮曲；中文 nana，是奶奶。一个哄你睡，一个催你睡。AI 生成画面 / 原创音乐。#中文 #AI动画 #原创音乐 #奶奶",
+  "hashtags": ["中文", "AI动画", "原创音乐", "奶奶"],
+  "duration": 35.0,
+  "fps": 30,
+  "size": [1080, 1920],
+  "bpm": 128,
+  "bar_seconds": 1.875,
+  "style": {
+    "a_act": "Pixar 风 3D 育婴房，薰衣草粉 + 月光 + 星尘 + 柔光；缓慢推近，2.5D 视差。",
+    "b_act": "中式客厅，冷白灯 + 电视蓝光 + 花睡衣奶奶 + 拖鞋 + 暖水瓶；手持感、快推、甩镜。",
+    "fonts": {
+      "cjk_black": "/usr/share/fonts/opentype/noto/NotoSansCJK-Black.ttc",
+      "cjk_smiley": "/usr/share/fonts/opentype/smiley-sans/SmileySans-Oblique.otf",
+      "latin": "/usr/share/fonts/truetype/lato/Lato-Black.ttf"
+    }
+  },
+  "voice_lines": [
+    {"id": "v1", "t": 4.20, "text": "西语 nana，是摇篮曲。", "speaker": "zf_xiaoxiao", "rate": 1.06},
+    {"id": "v2", "t": 17.00, "text": "中文 nana，是——奶奶。", "speaker": "zf_xiaoxiao", "rate": 1.04},
+    {"id": "v3", "t": 24.60, "text": "一个哄你睡。", "speaker": "zf_xiaoxiao", "rate": 1.08},
+    {"id": "v4", "t": 26.40, "text": "一个催你睡。", "speaker": "zf_xiaoxiao", "rate": 1.08},
+    {"id": "v5", "t": 28.40, "text": "同一个 nana，两种命。", "speaker": "zf_xiaoxiao", "rate": 1.04},
+    {"id": "v6", "t": 32.00, "text": "晚安，做个好梦。", "speaker": "zf_xiaoxiao", "rate": 0.96}
+  ],
+  "shots": [
+    {
+      "id": "s01",
+      "start": 0.0,
+      "end": 3.75,
+      "act": "intro",
+      "visual": "黑底仿 AI 输入框，光标逐字打出：西语会说吧？就是 nana；回车白闪。",
+      "text": "西语会说吧？就是 nana",
+      "voice": null,
+      "sfx": ["keyboard", "riser"]
+    },
+    {
+      "id": "s02",
+      "start": 3.75,
+      "end": 7.5,
+      "act": "a",
+      "visual": "粉色月光育婴房，摇篮、旋转床铃、星尘；巨大 nana 从深处推近。",
+      "text": "nana = 摇篮曲",
+      "voice": "v1",
+      "sfx": ["impact", "shimmer"]
+    },
+    {
+      "id": "s03",
+      "start": 7.5,
+      "end": 11.25,
+      "act": "a",
+      "visual": "推近摇篮，宝宝熟睡，星光粒子上升；星星变成汉字「哄」「你」「睡」。",
+      "text": "哄你睡",
+      "voice": null,
+      "sfx": ["shaker"]
+    },
+    {
+      "id": "s04",
+      "start": 11.25,
+      "end": 15.0,
+      "act": "a",
+      "visual": "床铃加速旋转，月亮变大，画面过曝；nana 开始变形。",
+      "text": "一个词，两种命",
+      "voice": null,
+      "sfx": ["riser", "snare_roll"]
+    },
+    {
+      "id": "s05",
+      "start": 15.0,
+      "end": 16.875,
+      "act": "break",
+      "visual": "突然黑场 0.2s，一行白字「那中文呢？」；只剩心跳。",
+      "text": "那中文呢？",
+      "voice": null,
+      "sfx": ["heartbeat", "silence"]
+    },
+    {
+      "id": "s06",
+      "start": 16.875,
+      "end": 20.625,
+      "act": "b",
+      "visual": "硬切中式客厅：冷白灯、电视蓝光、花睡衣奶奶、拖鞋、遥控器；奶奶转头看镜头。",
+      "text": "nana = 奶奶",
+      "voice": "v2",
+      "sfx": ["impact", "glitch"]
+    },
+    {
+      "id": "s07",
+      "start": 20.625,
+      "end": 24.375,
+      "act": "b_montage",
+      "visual": "8 分音符快切：时钟 23:47 → 路由器被拔 → 手机被收走 → 拖鞋特写 → 奶奶指镜头。",
+      "text": "几点了？/ 还不睡？/ 手机拿来。",
+      "voice": null,
+      "sfx": ["whoosh", "snare_fill"]
+    },
+    {
+      "id": "s08",
+      "start": 24.375,
+      "end": 28.125,
+      "act": "b",
+      "visual": "奶奶关灯，房间只剩电视蓝光；镜头甩到床上，被子被掀开。",
+      "text": "催你睡",
+      "voice": "v3,v4",
+      "sfx": ["light_switch", "slipper"]
+    },
+    {
+      "id": "s09",
+      "start": 28.125,
+      "end": 31.875,
+      "act": "split",
+      "visual": "分屏：左边西语育婴房，右边中式客厅；两边同时关灯，只剩两盏小夜灯。",
+      "text": "同一个 nana，两种命",
+      "voice": "v5",
+      "sfx": ["piano"]
+    },
+    {
+      "id": "s10",
+      "start": 31.875,
+      "end": 35.0,
+      "act": "outro",
+      "visual": "奶奶给镜头盖被子，表情变温柔；渐黑，end card。",
+      "text": "晚安，做个好梦。/ 中文会说吧？就是——奶奶。",
+      "voice": "v6",
+      "sfx": ["wind", "piano_tail"]
+    }
+  ],
+  "text_overlays": [
+    {"start": 0.3, "end": 3.7, "text": "西语会说吧？就是 nana", "style": "input"},
+    {"start": 3.9, "end": 7.3, "text": "nana = 摇篮曲", "style": "a_title"},
+    {"start": 7.6, "end": 11.2, "text": "哄你睡", "style": "a_punch"},
+    {"start": 11.3, "end": 14.9, "text": "一个词，两种命", "style": "a_punch"},
+    {"start": 15.1, "end": 16.8, "text": "那中文呢？", "style": "break"},
+    {"start": 17.0, "end": 20.5, "text": "nana = 奶奶", "style": "b_title"},
+    {"start": 20.7, "end": 22.1, "text": "几点了？", "style": "b_sticker"},
+    {"start": 22.2, "end": 23.3, "text": "还不睡？", "style": "b_sticker"},
+    {"start": 23.4, "end": 24.3, "text": "手机拿来。", "style": "b_sticker"},
+    {"start": 24.5, "end": 28.0, "text": "催你睡", "style": "b_punch"},
+    {"start": 28.4, "end": 31.7, "text": "同一个 nana，两种命", "style": "split"},
+    {"start": 32.2, "end": 33.9, "text": "晚安，做个好梦。", "style": "outro"},
+    {"start": 33.9, "end": 35.0, "text": "中文会说吧？就是——奶奶。", "style": "endcard"}
+  ],
+  "audio": {
+    "bgm": "nana/assets/audio/bgm.wav",
+    "voice_dir": "nana/assets/audio/voice",
+    "mix": "nana/assets/audio/mix.wav",
+    "sfx_dir": "nana/assets/audio/sfx",
+    "lufs": -14,
+    "true_peak_db": -1.0
+  },
+  "output": {
+    "video": "nana/out/nana_cn_35s.mp4",
+    "cover": "nana/out/cover.jpg",
+    "contact_sheet": "nana/out/contact_sheet.jpg",
+    "frames_dir": "nana/frames"
+  }
+}
