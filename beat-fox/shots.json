@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "title": "九尾狐首段口型卡点样片",
+    "sample_duration_seconds": 5.0,
+    "target_ratio": "9:16",
+    "target_fps": 30,
+    "lip_sync_note": "生成视频只能让嘴部开合大致跟随台词词首；当前工具不保证音素级口型逐帧对齐。精确口型需专用音频驱动口型模型或后期嘴型帧修正。"
+  },
+  "source": {
+    "video_file": "source.mp4",
+    "audio_file": "source-audio.mp3",
+    "beat_analysis": "beat-analysis.json",
+    "speech_alignment": "speech-alignment.json",
+    "source_duration_seconds": 38.43,
+    "detected_bpm": 74.9
+  },
+  "references": {
+    "base_character_sheet": "https://aka.doubaocdn.com/s/I9o7Rjnn3C",
+    "idle_frame": "https://aka.doubaocdn.com/s/qhe3KojXem",
+    "lean_frame": "https://aka.doubaocdn.com/s/WBRxgYuWzi",
+    "return_frame": "https://aka.doubaocdn.com/s/2TqSKs3X6p"
+  },
+  "first_five_seconds_beats": [
+    0.232, 0.998, 1.660, 2.368, 3.158, 4.145
+  ],
+  "speech_words_sample": [
+    {"word": "Sp", "start": 0.0, "end": 0.42},
+    {"word": "ider", "start": 0.42, "end": 0.6},
+    {"word": "is", "start": 0.6, "end": 0.88},
+    {"word": "easy", "start": 0.88, "end": 1.2},
+    {"word": "right", "start": 1.4, "end": 1.54},
+    {"word": "How", "start": 3.1, "end": 3.58},
+    {"word": "do", "start": 3.58, "end": 3.72},
+    {"word": "you", "start": 3.72, "end": 3.84},
+    {"word": "say", "start": 3.84, "end": 4.02},
+    {"word": "tomorrow", "start": 4.02, "end": 4.44},
+    {"word": "in", "start": 4.44, "end": 4.8},
+    {"word": "Spanish", "start": 4.8, "end": 5.16}
+  ],
+  "shots": [
+    {
+      "id": "shot-1",
+      "time_range": [0.0, 1.0],
+      "reference_frame": "idle_frame",
+      "action": "待机舞步，身体轻摆，纱袖、裙摆和尾巴随律动晃动；嘴部随英语词首做自然开合。",
+      "audio_trigger": "Sp / ider / is / easy 词首",
+      "beat_sync": "弱拍铺垫，角色居中，不推近",
+      "mouth_state": "词首张嘴，词中收小，词尾闭合；不做大嘴型"
+    },
+    {
+      "id": "shot-2",
+      "time_range": [1.0, 2.0],
+      "reference_frame": "lean_frame",
+      "action": "瞳孔放大，上身凑近镜头，尾巴和轻纱向后拉开；嘴部跟随 right 词首开合。",
+      "audio_trigger": "right 词首 1.400s",
+      "beat_sync": "重拍反应，小幅推近，眼神定住 2–3 帧",
+      "mouth_state": "凑近瞬间嘴部动作收小，避免大张遮挡神态"
+    },
+    {
+      "id": "shot-3",
+      "time_range": [2.0, 3.158],
+      "reference_frame": "return_frame",
+      "action": "退回画面中心，切换舞步手势，裙摆、飘带和尾巴回摆；停顿段嘴部闭合。",
+      "audio_trigger": "台词停顿 1.540–3.100s",
+      "beat_sync": "回位拍点，恢复正常构图",
+      "mouth_state": "闭口待机，随呼吸有极小起伏"
+    },
+    {
+      "id": "shot-4",
+      "time_range": [3.158, 5.0],
+      "reference_frame": "return_frame",
+      "action": "继续舞步律动，跟随 How / do / you / say / tomorrow / in / Spanish 词首做嘴部开合；手势和身体小幅交替。",
+      "audio_trigger": "3.100–5.16 台词段",
+      "beat_sync": "弱拍保持舞步；强 onset 时眼神和手势轻微反应",
+      "mouth_state": "词首张嘴，词中半合，词尾闭合；不额外夸张嘴型"
+    }
+  ],
+  "generation_constraints": [
+    "角色外观以 base_character_sheet 为准：狐耳、毛色分区、琥珀眼、额间金纹、纱裙飘带、修长体态保持一致。",
+    "单段视频只保留主要舞步、凑近反应和嘴部跟随；不要新增转圈、跳跃、甩尾等多个大动作。",
+    "尾束和轻纱动态只做摆动，不要在视频中新增或减少尾巴。",
+    "嘴部开合跟随英语台词词首；不保证音素级精确口型。",
+    "输出竖屏 9:16，30fps 目标；样片先核对动作、台词词首和切点节奏。"
+  ]
+}
